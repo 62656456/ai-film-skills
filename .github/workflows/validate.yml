@@ -15,5 +15,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate repository
+      - name: Validate portable repository
         run: python scripts/validate_repository.py
+      - name: Build deterministic standalone packages
+        run: python scripts/build_skill_packages.py --include-experimental --output dist/skills
+      - name: Smoke-install the same Skill into native layouts
+        run: |
+          python scripts/install_skill.py director-agent --platform codex --target "$RUNNER_TEMP/codex/skills"
+          python scripts/install_skill.py director-agent --platform claude-code --target "$RUNNER_TEMP/claude/skills"
+          python scripts/install_skill.py director-agent --platform trae --target "$RUNNER_TEMP/trae/.agents/skills"
+          python scripts/install_skill.py director-agent --platform codebuddy --target "$RUNNER_TEMP/codebuddy/skills"
+          test -f "$RUNNER_TEMP/codex/skills/director-agent/SKILL.md"
+          test -f "$RUNNER_TEMP/claude/skills/director-agent/SKILL.md"
+          test -f "$RUNNER_TEMP/trae/.agents/skills/director-agent/SKILL.md"
+          test -f "$RUNNER_TEMP/codebuddy/skills/director-agent/SKILL.md"
+      - name: Check release manifest
+        run: python -c "import json,pathlib; p=pathlib.Path('dist/skills/manifest.json'); d=json.loads(p.read_text()); assert d['stable_skill_count']==18; assert d['experimental_skill_count']==1; assert d['package_standard']=='Agent Skills compatible SKILL.md folder'"

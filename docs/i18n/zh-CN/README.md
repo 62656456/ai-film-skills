@@ -4,7 +4,7 @@
 
 # 开放影视 Skill
 
-**面向 AI 原生影视创作的可复用导演能力。**
+**可独立安装、可组合使用，适配 Codex、Claude Code、TRAE、CodeBuddy、WorkBuddy 与其他 Agent 工具。**
 
 [English](../../../README.md) · **简体中文** · [日本語](../ja/README.md) · [한국어](../ko/README.md)
 
@@ -30,28 +30,18 @@
 
 <img src="../../assets/skill-map.svg" width="100%" alt="从故事与资产到视觉语言、镜头、生产和验证的能力地图" />
 
-## 快速安装
+## 跨 Agent 安装
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
+python scripts/install_skill.py --list
+python scripts/install_skill.py ai-storyboard-director --platform claude-code
 ```
 
-macOS 或 Linux：
+同一个 Skill 文件夹可安装到：Codex 的 `.codex/skills/`、Claude Code 的 `.claude/skills/`、TRAE 项目的 `.agents/skills/`、CodeBuddy 的 `.codebuddy/skills/`；WorkBuddy 可在“添加技能 → 上传技能”中导入独立 ZIP。其他 Agent 若没有原生 Skill 加载器，可以把 `SKILL.md` 与本地引用文件作为指令导入。
 
-```bash
-mkdir -p ~/.codex/skills
-cp -R skills/* ~/.codex/skills/
-```
-
-Windows PowerShell：
-
-```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills" | Out-Null
-Copy-Item -Recurse -Force .\skills\* "$env:USERPROFILE\.codex\skills\"
-```
-
-安装单个 Skill 时，需要同时复制它依赖的共享 `skills/references`。`experimental/` 中的实验 Skill 不会被上述命令自动安装。
+每个模块已经自带所需引用，不依赖共享目录。`agents/openai.yaml` 只是 Codex 可选界面元数据，其他 Agent 可以安全忽略。具体产品名核对、官方依据和限制见 [Agent 兼容说明](../../COMPATIBILITY.md)，完整步骤见 [安装指南](../../INSTALLATION.md)。
 
 ## 状态不是装饰
 
@@ -66,6 +56,10 @@ Copy-Item -Recurse -Force .\skills\* "$env:USERPROFILE\.codex\skills\"
 ## 仓库设计来源
 
 仓库借鉴了 [OmniRoute](https://github.com/diegosouzapw/OmniRoute) 的信息组织优点：清晰首屏、快速导航、多语种入口、可复制安装命令、状态展示、图解、贡献入口、安全规则和第三方说明。没有复制其品牌、图片、文案或代码。
+
+## 反馈与联系
+
+欢迎通过 [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions)、[GitHub Issues](https://github.com/62656456/ai-film-skills/issues) 或邮件 [haldissita@gmail.com](mailto:haldissita@gmail.com) 提供真实使用反馈。
 
 ## 开源协议
 

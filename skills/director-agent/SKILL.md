@@ -114,7 +114,7 @@ Load only the references required by the active mode:
 - Independent screenplay audit: a fresh reader loads only `references/screenplay-cold-read-protocol.md` plus the raw allowed inputs.
 - Director analysis or pre-storyboard interpretation: `references/verified-director-logic.md`, `references/director-thinking-spine.md`, and `references/anti-laziness-contract.md`.
 - Full project or staged scene package: add `references/director-workbench-protocol.md`.
-- Local knowledge support is mandatory for screenplay work, not optional decoration: use `references/local-knowledge-map.md` to resolve the current A3 paths and read the routed cards themselves.
+- The bundled references are sufficient for standalone use. When the public companion knowledge repository is available, `references/local-knowledge-map.md` may route deeper A3 cards; never treat that optional repository as a runtime requirement.
 
 When the user says "打开工作台", "继续上次", "基于全局工作台", "全局导演工作台", or asks to continue a project across conversations, read the global workbench state before acting:
 

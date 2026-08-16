@@ -135,7 +135,7 @@ A面+B面+侧面+手持比例图，柔光控制反射，锁定按钮/接口/屏�
 第二层（prop）：穿模、漂浮、变多张、方向错误、崭新无磨损、发光、错误文字、尺寸漂移。  
 第三层（画质）：CG感、3D animation、cartoon、anime、game render、plastic texture、waxy surface、low resolution、过曝、欠曝、过度锐化。
 
-十条通用反面案例与三层负向写法详见 NEGATIVE-CASE-BOOK.md；本节的专属负向与之叠加，不可互相替代。
+十条通用反面案例与三层负向写法详见 `references/NEGATIVE-CASE-BOOK.md`；本节的专属负向与之叠加，不可互相替代。
 
 ## 10. 注入接口
 

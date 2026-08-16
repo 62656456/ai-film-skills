@@ -4,17 +4,26 @@
 
 # Open Film Skills
 
-**Reusable directing intelligence for AI-native filmmaking.**
+**Portable, modular directing intelligence for Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy, and other Agent software.**
 
 [简体中文](docs/i18n/zh-CN/README.md) · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · **English**
 
 ![Packaged skills](https://img.shields.io/badge/packaged_skills-18-FF6B35?style=flat-square)
 ![Experimental skills](https://img.shields.io/badge/experimental-1-D6A756?style=flat-square)
+![Standalone packages](https://img.shields.io/badge/standalone_packages-19-7ED6A5?style=flat-square)
+![Agent hosts](https://img.shields.io/badge/agent_hosts-5%20native%20%2B%20generic-46C2CB?style=flat-square)
 ![Languages](https://img.shields.io/badge/readme_languages-4-46C2CB?style=flat-square)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
 [![Validate Skills](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml)
 
 </div>
+
+## Two ways in
+
+| I need one craft | I want the complete studio |
+|---|---|
+| Pick one self-contained Skill, download one ZIP, and install one folder. No shared repository directory is required. | Install all 18 packaged Skills in the Agent host you already use, then move from script through assets, shots, production, and validation. |
+| [Choose one Skill](SKILL_CATALOG.md) · [Installation guide](docs/INSTALLATION.md) | [Download the complete package](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip) · [Architecture](docs/ARCHITECTURE.md) |
 
 ## Start here
 
@@ -45,21 +54,51 @@ git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
 ```
 
-Install all packaged Skills into Codex on macOS or Linux:
+See every available module:
 
 ```bash
-mkdir -p ~/.codex/skills
-cp -R skills/* ~/.codex/skills/
+python scripts/install_skill.py --list
 ```
 
-Install all packaged Skills on Windows PowerShell:
+Install one Skill:
 
-```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills" | Out-Null
-Copy-Item -Recurse -Force .\skills\* "$env:USERPROFILE\.codex\skills\"
+```bash
+python scripts/install_skill.py ai-storyboard-director --platform claude-code
 ```
 
-To install one Skill, copy its directory and the shared `skills/references` directory. Experimental Skills are never installed by the commands above.
+Or download one ready-to-extract ZIP from the [latest release](https://github.com/62656456/ai-film-skills/releases/latest). Each archive contains one complete Skill folder.
+
+Choose the host explicitly:
+
+```bash
+python scripts/install_skill.py ai-storyboard-director --platform codex
+python scripts/install_skill.py ai-storyboard-director --platform claude-code
+python scripts/install_skill.py ai-storyboard-director --platform codebuddy
+```
+
+TRAE uses a project-level `.agents/skills/` folder. WorkBuddy imports the release ZIP through **Add Skill → Upload Skill**. Every packaged folder carries its own required references; experimental Skills are excluded from the normal complete package. See [Installation](docs/INSTALLATION.md) and [Agent compatibility](docs/COMPATIBILITY.md).
+
+## Designed to travel alone
+
+- Every package contains a portable `SKILL.md` plus its own scripts and required references. `agents/openai.yaml` is optional Codex metadata and is never a runtime dependency.
+- The repository validator rejects missing local dependencies and a return of the old shared-reference folder.
+- Releases publish one ZIP per Skill plus one complete-studio ZIP and a SHA-256 manifest.
+- Structural portability is checked automatically; real-project quality remains a separate status claim.
+
+Try a module immediately with the [quick-start prompts](examples/quick-start-prompts.md).
+
+## Works with your Agent
+
+| Host | Native route |
+|---|---|
+| Codex | `~/.codex/skills/<name>/` |
+| Claude Code | `~/.claude/skills/<name>/` or `.claude/skills/<name>/` |
+| TRAE | `<project>/.agents/skills/<name>/` |
+| CodeBuddy | `~/.codebuddy/skills/<name>/` or `.codebuddy/skills/<name>/` |
+| WorkBuddy | Import the standalone ZIP in **Add Skill → Upload Skill** |
+| Other Agents | Use the Agent Skills loader, or attach `SKILL.md` and its local resources as instructions |
+
+The canonical content is shared across every host. Native discovery and tool permissions still belong to the host, so the repository distinguishes native support from a prompt-only fallback. The exact product-name checks—including “Cloud Code,” “Trint,” and “WorkerBilly”—are documented in [Agent compatibility](docs/COMPATIBILITY.md).
 
 ## Skill map
 
@@ -96,6 +135,15 @@ The information architecture was informed by [OmniRoute](https://github.com/dieg
 - See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for excluded and adapted material.
 - Check the exact public boundary in [PUBLICATION_SCOPE.md](PUBLICATION_SCOPE.md).
 - Run `python scripts/validate_repository.py` before submitting changes.
+
+## Feedback and contact
+
+The project grows through concrete use, not promotional claims. Share the request you tried, the Skill used, what worked, and the one improvement that would matter most.
+
+- Discuss workflows in [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions).
+- Report reproducible problems or proposals in [GitHub Issues](https://github.com/62656456/ai-film-skills/issues).
+- Contact the maintainer at [haldissita@gmail.com](mailto:haldissita@gmail.com).
+- Use the structured [feedback guide](docs/FEEDBACK.md) when possible.
 
 ## License
 

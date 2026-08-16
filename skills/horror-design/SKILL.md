@@ -6,7 +6,7 @@ description: >
 
 # 恐怖类型视觉设计预设
 
-> 共享细则：COMMON-12-SECTION-PROTOCOL.md；色值来源：SOURCE-LEDGER.md。
+> 独立执行细则：`references/COMMON-12-SECTION-PROTOCOL.md`；色值来源：`references/SOURCE-LEDGER.md`。
 
 ## 0. 加载规则与映射表
 
@@ -116,7 +116,7 @@ IF 对话 THEN 不推不拉不绕行、不变焦；IF 建立 走廊、凶宅、�
 
 第一层：共享通用防崩。第二层（类型专属）：死黑不可读、绿光过饱和、怪物全程全露、廉价跳吓。第三层：共享画质负面。
 
-十条反例详见 NEGATIVE-CASE-BOOK.md：空质量词、无动机运镜、无光源光影、色彩无功能、导演名替代参数、未锁景别、未锁空间、道具无状态、材质无交互、尾帧未衔接。
+十条反例详见 `references/NEGATIVE-CASE-BOOK.md`：空质量词、无动机运镜、无光源光影、色彩无功能、导演名替代参数、未锁景别、未锁空间、道具无状态、材质无交互、尾帧未衔接。
 
 ## 10. 平台适配与注入接口
 

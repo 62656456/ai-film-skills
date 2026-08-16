@@ -4,7 +4,7 @@
 
 # Open Film Skills
 
-**AI 네이티브 영화 제작을 위한 재사용 가능한 연출 지능.**
+**Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy 및 기타 Agent에서 재사용할 수 있는 모듈형 연출 지능.**
 
 [English](../../../README.md) · [简体中文](../zh-CN/README.md) · [日本語](../ja/README.md) · **한국어**
 
@@ -27,13 +27,14 @@
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
-mkdir -p ~/.codex/skills
-cp -R skills/* ~/.codex/skills/
+python scripts/install_skill.py ai-storyboard-director --platform claude-code
 ```
 
-`experimental/`은 기본 설치에 포함되지 않습니다. 자세한 상태는 [Skill catalog](../../../SKILL_CATALOG.md)를 확인하세요.
+동일한 자체 완결형 폴더를 Codex, Claude Code, TRAE, CodeBuddy에 설치할 수 있고 WorkBuddy에서는 ZIP으로 업로드할 수 있습니다. 다른 Agent에서는 `SKILL.md`와 로컬 리소스를 지침으로 가져올 수 있습니다. 자세한 내용은 [Compatibility](../../COMPATIBILITY.md)와 [Installation](../../INSTALLATION.md)을 참조하세요. `experimental/`은 기본 전체 패키지에 포함되지 않습니다.
 
 표현 구조는 [OmniRoute](https://github.com/diegosouzapw/OmniRoute)의 명확한 탐색, 다국어 진입점, 다이어그램, 빠른 시작, 상태 표시를 참고했지만 브랜드, 이미지, 문구, 코드는 복제하지 않았습니다.
+
+연락처: [haldissita@gmail.com](mailto:haldissita@gmail.com)
 
 ## 라이선스
 

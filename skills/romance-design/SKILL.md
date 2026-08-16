@@ -6,7 +6,7 @@ description: >
 
 # 爱情类型视觉设计预设
 
-> 共享细则：COMMON-12-SECTION-PROTOCOL.md；色值来源：SOURCE-LEDGER.md。
+> 独立执行细则：`references/COMMON-12-SECTION-PROTOCOL.md`；色值来源：`references/SOURCE-LEDGER.md`。
 
 ## 0. 加载规则与映射表
 
@@ -116,7 +116,7 @@ IF 对话 THEN 不推不拉不绕行、不变焦；IF 建立 家中、咖啡馆�
 
 第一层：共享通用防崩。第二层（类型专属）：甜腻粉滤镜、无缘由柔焦、人物抢台词、强行拥抱。第三层：共享画质负面。
 
-十条反例详见 NEGATIVE-CASE-BOOK.md：空质量词、无动机运镜、无光源光影、色彩无功能、导演名替代参数、未锁景别、未锁空间、道具无状态、材质无交互、尾帧未衔接。
+十条反例详见 `references/NEGATIVE-CASE-BOOK.md`：空质量词、无动机运镜、无光源光影、色彩无功能、导演名替代参数、未锁景别、未锁空间、道具无状态、材质无交互、尾帧未衔接。
 
 ## 10. 平台适配与注入接口
 

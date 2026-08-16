@@ -137,7 +137,7 @@ description: >
 第二层（character）：塑料皮肤、蜡像感、假发块、服装塑料感、面部镜像对称、背景杂乱、多人物。  
 第三层（画质）：CG感、3D animation、cartoon、anime、game render、plastic texture、waxy surface、low resolution、过曝、欠曝、过度锐化。
 
-十条通用反面案例与三层负向写法详见 NEGATIVE-CASE-BOOK.md；本节的专属负向与之叠加，不可互相替代。
+十条通用反面案例与三层负向写法详见 `references/NEGATIVE-CASE-BOOK.md`；本节的专属负向与之叠加，不可互相替代。
 
 ## 10. 注入接口
 
