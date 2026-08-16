@@ -50,7 +50,14 @@ def rel_link(source_page: Path, destination: Path) -> str:
 
 def resources(page: Path, skill: Path, locale: str) -> list[str]:
     groups: dict[str, list[Path]] = {"runtime": [], "references": [], "scripts": [], "versions": [], "other": []}
-    for path in sorted(p for p in skill.rglob("*") if p.is_file()):
+    # Sort by normalized relative paths so generated guides are identical across hosts.
+    for path in sorted(
+        (candidate for candidate in skill.rglob("*") if candidate.is_file()),
+        key=lambda candidate: (
+            candidate.relative_to(skill).as_posix().casefold(),
+            candidate.relative_to(skill).as_posix(),
+        ),
+    ):
         rel = path.relative_to(skill)
         if rel.as_posix() in {"SKILL.md", "agents/openai.yaml"}:
             key = "runtime"
