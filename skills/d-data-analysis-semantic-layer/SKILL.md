@@ -9,7 +9,7 @@ description: 审核并版本化写入 D｜数据分析知识语义层，只用�
 
 ## 已写入知识的读取入口
 
-执行D市场分析、剧本市场评估或查询既有市场结论时，先读取 `references/semantic-layer.md`，再按其中的有效期、证据等级和来源边界使用。结构化记录位于 `references/records-v1.0.0.json`，来源覆盖位于 `references/source-inventory.md`。保存结论不能替代时效性核验；到达复查日期后必须重新抓取或标记待复查。
+执行D市场分析、剧本市场评估或查询既有市场结论时，先读取 [semantic-layer.md](references/semantic-layer.md)，再按其中的有效期、证据等级和来源边界使用。结构化记录位于 [records-v1.0.0.json](references/records-v1.0.0.json)，来源覆盖位于 [source-inventory.md](references/source-inventory.md)，逐条证据状态位于 [evidence.md](references/evidence.md)。保存结论不能替代时效性核验；到达复查日期后必须重新抓取或标记待复查。
 
 ## 写入闸门
 

@@ -2,15 +2,27 @@
 
 Repository: https://github.com/62656456/ai-film-skills
 
-Purpose: reusable Skills for AI film writing, directing, asset definition, visual language, storyboard design, production, web design, and source-backed research.
+Purpose: reusable, standalone Skills for AI film writing, directing, asset definition, visual language, storyboard design, production, web design, and source-backed research.
 
-Primary entry points:
+Human-readable GitHub entry points:
+- docs/skills/INDEX.md — all 19 modules, 19 English guides, 19 Simplified Chinese guides, and direct runtime links
+- docs/SKILL_DESIGN_SYSTEM.md — shared purpose/input/workflow/return/review/pass/output/boundary model
+- SKILL_CATALOG.md — task selection, human design guide, runtime SKILL.md, standalone ZIP, and evidence state
+- docs/ARCHITECTURE.md — runtime package and generated reading-layer architecture
+- docs/COMPATIBILITY.md — native discovery, official package import, and instructions-only fallback boundaries
+
+Canonical runtime entry points:
 - skills/director-agent/SKILL.md
 - skills/ai-storyboard-director/SKILL.md
 - skills/character-asset/SKILL.md
 - skills/scene-asset/SKILL.md
 - skills/prop-asset/SKILL.md
 - skills/produce-ai-video/SKILL.md
-- SKILL_CATALOG.md
 
-Status rule: do not describe packaged or experimental Skills as production-stable. Do not restore retired Skills. Read each selected SKILL.md completely before use, then load only the references it explicitly requires.
+Reading rule: open the selected human design guide to understand its purpose, principles, standalone scope, inputs, workflow, directed return path, review gates, pass evidence, outputs, boundaries, and host requirements. Then read the linked runtime SKILL.md completely and load only the local resources it requires. The design guide explains the runtime contract; it does not replace it.
+
+Standalone rule: every module can deliver its named bounded outcome without a shared repository directory. This does not grant missing media tools, web access, script execution, payment authority, redistribution rights, publication authority, or user acceptance.
+
+Language rule: full per-module guides currently exist in English and Simplified Chinese. Japanese and Korean are repository entry pages only and explicitly disclose this boundary.
+
+Status rule: do not describe packaged or experimental Skills as production-stable. Keep structural validity, host execution, real-task evidence, and explicit user acceptance separate. Do not restore retired Skills.

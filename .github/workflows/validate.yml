@@ -15,6 +15,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Regenerate GitHub-readable Skill guides
+        run: |
+          python scripts/generate_skill_guides.py
+          git diff --exit-code -- docs/skills
+      - name: Validate 38 bilingual Skill design guides
+        run: python scripts/validate_skill_docs.py
       - name: Validate portable repository
         run: python scripts/validate_repository.py
       - name: Build deterministic standalone packages

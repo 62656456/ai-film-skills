@@ -1,0 +1,593 @@
+{
+  "schema_version": 1,
+  "families": {
+    "director": {
+      "principles": [
+        {"en": "Tell a clear story through character action and causality before using state engines, checklists, or visual polish.", "zh-CN": "先用人物行动和因果把故事讲清楚，再使用状态引擎、检查表和视觉润色。"},
+        {"en": "Attach every directing decision to audience effect, story function, actor action, or a physical image.", "zh-CN": "每个导演决定都必须落到观众效果、剧情功能、演员动作或物理画面。"},
+        {"en": "An independent cold read tests the actual screenplay; it does not replace writing or guarantee taste.", "zh-CN": "独立冷读审核真实剧本，但不能替代写作，也不能保证审美接受。"}
+      ],
+      "inputs": [
+        {"en": "A screenplay, story, outline, dialogue-only passage, novel passage, or abstract material plus the requested mode.", "zh-CN": "剧本、故事、梗概、纯对白、小说段落或抽象材料，以及点名的工作模式。"},
+        {"en": "Locked facts, format, length, audience, production constraints, and any approved or forbidden decisions.", "zh-CN": "已锁定事实、格式、长度、受众、生产约束，以及已批准或禁止的决定。"},
+        {"en": "Unknown story facts remain marked as assumptions instead of being silently invented.", "zh-CN": "未知故事事实保持为假设，不能静默补成设定。"}
+      ],
+      "workflow": [
+        {"en": "Load only the relevant writing and directing references.", "zh-CN": "只加载与当前任务有关的写作和导演引用。"},
+        {"en": "Read the material in story, character, and directing layers; verify stimulus, objective, strategy, state change, and dialogue response.", "zh-CN": "按故事、人物、导演三层读材料，核对刺激、目标、策略、状态变化和对白回应。"},
+        {"en": "Choose creation, diagnosis, treatment, workbench, or pre-storyboard mode.", "zh-CN": "选择创作、诊断、导演方案、工作台或分镜前设计模式。"},
+        {"en": "Build the visual idea, actor actions, sound, time, editing, theme, and subtext from the causal reading.", "zh-CN": "从因果判断生成视觉概念、表演动作、声音、时间、剪辑、主题和潜台词。"},
+        {"en": "Cold-read the actual output, repair the earliest upstream failure, and deliver the requested readable artifact first.", "zh-CN": "冷读真实产物，修复最早的上游断裂，并优先交付用户点名的可读成品。"}
+      ],
+      "returns": [
+        {"en": "If causality, character knowledge, or scene purpose fails, return to the earliest broken scene before polishing dialogue or visuals.", "zh-CN": "因果、人物知识或场景目的失败时，先退回最早断裂的场景，不先润色台词或视觉。"},
+        {"en": "If the request actually needs production storyboard detail, hand the approved directing decisions to `ai-storyboard-director` instead of stretching this module beyond its contract.", "zh-CN": "若任务实际需要完整生产分镜，把已批准的导演判断交给 `ai-storyboard-director`，不让本模块越界。"},
+        {"en": "Cold-read PASS is a screenplay review state, not proof that the user likes the work.", "zh-CN": "冷读 PASS 只是剧本审阅状态，不是用户喜欢或采用的证明。"}
+      ],
+      "review": [
+        {"en": "Every consequential action and line has a prior stimulus, an objective, a tactic, a listener effect, and a state change.", "zh-CN": "每个关键动作和台词都有前置刺激、目的、策略、对方影响和状态变化。"},
+        {"en": "The protagonist does not ignore an obvious safer or easier option without a demonstrated cost or blockage.", "zh-CN": "主角不会为了制造冲突而无理由忽略明显更安全、更容易的选择。"},
+        {"en": "Scenes hand a changed state to the next scene; setup and payoff change meaning, power, possibility, choice, or result.", "zh-CN": "场景把变化后的状态交给下一场；铺垫与回收会改变意义、权力、可能性、选择或结果。"}
+      ],
+      "pass": [
+        {"en": "The requested script, diagnosis, treatment, workbench, or pre-storyboard draft is complete enough to use without hidden rationale.", "zh-CN": "点名的剧本、诊断、导演方案、工作台或分镜前稿无需隐藏解释即可使用。"},
+        {"en": "The earliest blocking story failures are repaired or explicitly left as unresolved boundaries.", "zh-CN": "最早的阻塞级故事问题已修复，或被明确标为未解决边界。"}
+      ],
+      "outputs": [
+        {"en": "A readable screenplay or replacement passage, not merely an outline when full writing was requested.", "zh-CN": "可直接阅读的完整剧本或替换段落；用户要正文时不能只交大纲。"},
+        {"en": "Director treatment, workbench package, diagnosis, or pre-storyboard directing draft when that mode is requested.", "zh-CN": "按任务交付导演方案、工作台、诊断或分镜前导演设计稿。"}
+      ],
+      "boundaries": [
+        {"en": "Do not invent film history, citations, director methods, or missing story facts.", "zh-CN": "不编造影史、引用、导演方法或缺失的故事事实。"},
+        {"en": "Do not describe director analysis as full storyboard production or a cold read as user acceptance.", "zh-CN": "不把导演分析冒充完整分镜，也不把冷读通过冒充用户接受。"}
+      ],
+      "requires": {"en": "Text-only creation and diagnosis work in any host that can read the complete folder; current or source-sensitive claims require web access and citation capability.", "zh-CN": "只要宿主能读取完整文件夹即可做文本创作与诊断；涉及当前事实或来源敏感内容时，需要联网与引用能力。"}
+    },
+    "storyboard": {
+      "principles": [
+        {"en": "Story causality, character purpose, blocking, and spatial action come before shot terminology.", "zh-CN": "剧情因果、人物目的、调度和空间行动先于镜头术语。"},
+        {"en": "Blocking and camera are designed as one event; a complex move needs a visible start, trigger, phases, and endpoint.", "zh-CN": "人物调度与摄影机共同设计；复合运镜必须有可见起点、触发、阶段和终点。"},
+        {"en": "World state stays fixed while each camera position recomputes the frame projection.", "zh-CN": "世界状态固定；每次换机位都重新计算当前画面的投影。"}
+      ],
+      "inputs": [
+        {"en": "An approved script or passage with complete story facts, dialogue, and the user's locked shot decisions.", "zh-CN": "已批准的剧本或片段，包含完整剧情事实、台词和用户锁定的镜头决定。"},
+        {"en": "Total duration, aspect ratio, platform when known, approved assets, and entering world state.", "zh-CN": "总时长、画幅、已知平台、批准资产和入场世界状态。"},
+        {"en": "Any unresolved director decision must be identified instead of hidden inside shot jargon.", "zh-CN": "尚未解决的导演判断必须明确，不能藏进镜头术语。"}
+      ],
+      "workflow": [
+        {"en": "Read causality, character goals, relationships, emotion, space, action, and continuity.", "zh-CN": "先读因果、人物目标、关系、情绪、空间、动作和连续性。"},
+        {"en": "Fix the world state and design blocking before selecting camera projection.", "zh-CN": "先固定世界状态并设计调度，再选择摄影机投影。"},
+        {"en": "Build shot sentences, varied coverage, and phased camera events that visibly carry the beat.", "zh-CN": "构建镜头句、丰富覆盖和分阶段摄影机事件，让剧情拍点可见。"},
+        {"en": "Write the human-readable storyboard and compile Digital-10 information into the six visible prompt modules.", "zh-CN": "输出人读分镜，并把数字10信息编译进六个可见提示词模块。"},
+        {"en": "Run the twelve-item completion gate and return only the requested creative artifact plus genuine unresolved limits.", "zh-CN": "执行十二项完成门，只返回点名创作成果和真正未解决的边界。"}
+      ],
+      "returns": [
+        {"en": "Story or director failures return upstream; spatial, blocking, camera, timing, or prompt-encoding failures return to their responsible design stage.", "zh-CN": "故事或导演问题退回上游；空间、调度、摄影机、时长或提示词编译问题退回对应设计阶段。"},
+        {"en": "Version rollback is distinct from creative rework and exists only for the documented 5.4.1 hash-verified snapshot when explicitly requested.", "zh-CN": "版本回滚不同于创作回炉；只有用户明确要求时，才可使用已有的 5.4.1 哈希快照。"},
+        {"en": "A continuity failure is repaired from fixed world coordinates, never by moving the room to preserve screen-left labels.", "zh-CN": "连续性失败从固定世界坐标修复，不能为了保持画面左右而移动房间。"}
+      ],
+      "review": [
+        {"en": "The shots preserve script facts, character purpose, action results, dialogue, and user-locked order.", "zh-CN": "镜头保留剧本事实、人物目的、动作结果、台词和用户锁定顺序。"},
+        {"en": "Camera, blocking, depth, focus, movement, and editing form shot sentences rather than rotate terminology.", "zh-CN": "摄影机、调度、纵深、焦点、运动与剪辑形成镜头句，而不是轮换术语。"},
+        {"en": "Duration closes exactly; dialogue timing, world projection, off-frame subjects, light direction, props, and end states remain continuous.", "zh-CN": "时长闭合；台词、世界投影、出框主体、光向、道具和尾帧状态连续。"}
+      ],
+      "pass": [
+        {"en": "All twelve completion checks pass and the storyboard is readable without engineering-only fields.", "zh-CN": "十二项完成检查全部通过，且人读分镜不依赖工程字段。"},
+        {"en": "Prompt modules contain all ten information categories, but this still does not prove that a platform generated a successful video.", "zh-CN": "六模块包含数字10全部信息，但这仍不证明平台已经成功生成视频。"}
+      ],
+      "outputs": [
+        {"en": "A human-readable multi-shot storyboard with time, shot/camera, visible action, dialogue, and sound.", "zh-CN": "包含时间、景别/摄影机、可见动作、台词与声音的人读多镜头分镜。"},
+        {"en": "Copy-ready prompts using the required six-module outer structure and Digital-10 information core.", "zh-CN": "使用六模块外层和数字10信息内核的可复制正式提示词。"}
+      ],
+      "boundaries": [
+        {"en": "Do not rewrite locked story facts or dialogue and do not invent platform capability or generation success.", "zh-CN": "不改写锁定剧情事实或台词，不虚构平台能力或生成成功。"},
+        {"en": "Storyboard completion is not a finished video or user-approved visual result.", "zh-CN": "分镜完成不等于成片，也不等于用户通过视觉结果。"}
+      ],
+      "requires": {"en": "The complete folder is usable for text storyboard design in any reading host; file access helps with references and hash-verified rollback, while actual generation requires separate media tools and permissions.", "zh-CN": "任何能读取完整文件夹的宿主都可做文本分镜；文件能力用于引用和哈希回滚，真实生成另需媒体工具与权限。"}
+    },
+    "asset": {
+      "principles": [
+        {"en": "Establish an auditable, versioned asset identity before storyboard or video production.", "zh-CN": "先建立可审核、可版本化的资产身份，再进入分镜或视频生产。"},
+        {"en": "Platform adaptation may change syntax, never approved `locked_features` or state history.", "zh-CN": "平台适配可以改变语法，但不能改变已批准的 `locked_features` 和状态历史。"},
+        {"en": "A static asset contract separates identity, allowed state changes, materials, geometry, lighting, and downstream references.", "zh-CN": "静态资产合同把身份、允许状态变化、材质、几何、布光和下游引用分开。"}
+      ],
+      "inputs": [
+        {"en": "A unique asset ID, version, purpose, known source facts, and fields that remain unknown.", "zh-CN": "唯一资产编号、版本、用途、已知来源事实和仍未知字段。"},
+        {"en": "Required views, states, scale references, target platform, and any approved reference images.", "zh-CN": "所需视图、状态、尺度参照、目标平台和已批准参考图。"},
+        {"en": "Downstream continuity needs such as locked features, variable states, orientation, handling, or spatial anchors.", "zh-CN": "下游连续性所需的锁定特征、可变状态、朝向、持用关系或空间锚点。"}
+      ],
+      "workflow": [
+        {"en": "Extract required dimensions and mark missing facts instead of inventing them.", "zh-CN": "提取必填维度，缺失事实明确标记，不臆造。"},
+        {"en": "Lock identity, geometry, materials, physical behavior, lighting, and state rules.", "zh-CN": "锁定身份、几何、材质、物理行为、布光和状态规则。"},
+        {"en": "Choose the necessary views or state plates and compile a platform-aware generation task.", "zh-CN": "选择必要视图或状态图，编译平台适配的生成任务。"},
+        {"en": "Run the module checklist and create the machine-readable asset contract.", "zh-CN": "执行模块质检并生成机读资产合同。"},
+        {"en": "Mark failures `rework`; only human-reviewed assets may enter `assets_approved` and downstream shots.", "zh-CN": "失败标记为 `rework`；只有经人审的资产才能进入 `assets_approved` 和下游镜头。"}
+      ],
+      "returns": [
+        {"en": "Missing identity or state facts return to intake; geometry, material, lighting, or interaction failures return to the responsible contract field.", "zh-CN": "身份或状态缺失退回输入；几何、材质、布光或交互失败退回对应合同字段。"},
+        {"en": "Cross-view drift returns to locked features and the primary reference; it is not repaired by adding unrelated style words.", "zh-CN": "跨视图漂移退回锁定特征与主参考图，不能靠无关风格词修复。"},
+        {"en": "A failed review remains `rework`; structural completion cannot auto-promote it.", "zh-CN": "审核失败保持 `rework`，结构完成不能自动晋级。"}
+      ],
+      "review": [
+        {"en": "ID, version, purpose, required dimensions, locked features, and unknowns are explicit.", "zh-CN": "编号、版本、用途、必填维度、锁定特征和未知项明确。"},
+        {"en": "Proportion, perspective, geometry, materials, contact, weight, shadows, and readable key faces are physically coherent.", "zh-CN": "比例、透视、几何、材质、接触、重量、阴影和关键面物理自洽。"},
+        {"en": "No extra limbs, objects, text, watermark, drift, or background competition compromises the reference.", "zh-CN": "无多余肢体、物件、文字、水印、漂移或抢主体的背景。"}
+      ],
+      "pass": [
+        {"en": "The asset task and JSON contract pass the module checklist with no unresolved blocking field.", "zh-CN": "资产任务和 JSON 合同通过模块检查，且没有未解决阻塞字段。"},
+        {"en": "`assets_approved` requires inspection of the actual reference images; a text contract alone remains pending review.", "zh-CN": "`assets_approved` 必须检查真实参考图；只有文本合同仍是待审状态。"}
+      ],
+      "outputs": [
+        {"en": "A primary reference-image task plus only the necessary alternate views or state plates.", "zh-CN": "主参考图任务，以及确有必要的多视图或状态图任务。"},
+        {"en": "A versioned JSON asset contract for storyboard, prompts, and QC.", "zh-CN": "供分镜、提示词和质检使用的版本化 JSON 资产合同。"}
+      ],
+      "boundaries": [
+        {"en": "Do not invent missing source facts, overwrite approved features, or put video action and dialogue into a static asset identity.", "zh-CN": "不臆造缺失事实、不覆盖批准特征，也不把视频动作和台词写进静态资产身份。"},
+        {"en": "Without an image tool and visual review, this module delivers a generation task and contract, not finished reference images.", "zh-CN": "没有生图工具和视觉审核时，本模块交付生成任务与合同，不能声称完成参考图。"}
+      ],
+      "requires": {"en": "Text contracts work in any host that can read the folder. Producing and approving actual reference images additionally requires an image tool, file access, and human visual review.", "zh-CN": "任何能读取文件夹的宿主都可输出文本合同；真实参考图还需要生图工具、文件能力和人类视觉审核。"}
+    },
+    "genre": {
+      "principles": [
+        {"en": "Translate genre feeling into observable camera, color, space, action, material, sound, and continuity parameters.", "zh-CN": "把类型感翻译成可观察的镜头、色彩、空间、动作、材质、声音和连续性参数。"},
+        {"en": "Genre parameters support an approved story and assets; they do not rewrite either one.", "zh-CN": "类型参数服务已批准的故事和资产，不改写它们。"},
+        {"en": "Director names and color values are sources or starting points, never imitation commands or universal laws.", "zh-CN": "导演名和色值只是来源或起点，不是模仿命令或普适定律。"}
+      ],
+      "inputs": [
+        {"en": "Genre request, scene function, duration, subjects, approved Cxx/Sxx/Pxx assets, and target platform when known.", "zh-CN": "类型要求、场景功能、时长、主体、批准的 Cxx/Sxx/Pxx 资产和已知目标平台。"},
+        {"en": "Existing director, blocking, lighting, continuity, and end-state decisions.", "zh-CN": "已有导演、调度、布光、连续性和尾帧决定。"},
+        {"en": "Missing fields remain open; generic words such as 'cinematic' cannot fill them.", "zh-CN": "缺失字段保持开放，不能用“电影感”等空词补全。"}
+      ],
+      "workflow": [
+        {"en": "Load the genre camera and composition route.", "zh-CN": "加载类型镜头与构图路线。"},
+        {"en": "Derive functional color, light sources, spatial structure, and scene parameters.", "zh-CN": "推导有功能的色彩、光源、空间结构和场景参数。"},
+        {"en": "Attach action, material, physical interaction, sound, continuity, and approved asset IDs.", "zh-CN": "挂接动作、材质、物理交互、声音、连续性和批准资产编号。"},
+        {"en": "Compile the ten information categories and platform translation without changing upstream decisions.", "zh-CN": "编译数字10信息和平台转译，不改变上游决定。"},
+        {"en": "Run shared and genre-specific review; emit `ready_for_prompt` or a field-specific `rework` result.", "zh-CN": "执行共享与类型专项审核，输出 `ready_for_prompt` 或具体字段的 `rework`。"}
+      ],
+      "returns": [
+        {"en": "Story, asset, or blocking failures return to their owning layer; style failures return to the camera, color, space, action, material, or continuity field that caused them.", "zh-CN": "故事、资产或调度失败退回责任层；风格失败退回造成问题的镜头、色彩、空间、动作、材质或连续性字段。"},
+        {"en": "Review failure produces `rework` with the failed field; it cannot be bypassed by another generation attempt.", "zh-CN": "审核失败必须输出带具体字段的 `rework`，不能靠再生成一次绕过。"},
+        {"en": "These modules have design rework, not historical version rollback.", "zh-CN": "这些模块有设计回炉，但没有历史版本回滚机制。"}
+      ],
+      "review": [
+        {"en": "Camera, color, light source, spatial anchors, asset IDs, action causality, material interaction, sound, and end state are all present and mutually consistent.", "zh-CN": "镜头、色彩、光源、空间锚点、资产编号、动作因果、材质交互、声音和尾帧齐全且一致。"},
+        {"en": "The shared anti-fake-cinema checks reject empty quality words, unmotivated camera moves, source-less light, decorative color, and unstable props or space.", "zh-CN": "共享假电影感检查会拦截空质量词、无动机运镜、无源光、装饰性色彩和不稳定道具/空间。"},
+        {"en": "Genre-specific negative constraints target only likely failures and do not suppress story-authorized color, scale, stillness, or motion.", "zh-CN": "类型专项负向只针对高概率失败，不压制剧情允许的色彩、尺度、静止或运动。"}
+      ],
+      "pass": [
+        {"en": "All shared and genre-specific checks pass, approved assets remain unchanged, and the module can emit `ready_for_prompt`.", "zh-CN": "共享与类型检查全部通过，批准资产未被改写，模块可输出 `ready_for_prompt`。"},
+        {"en": "`ready_for_prompt` means the visual parameter package is ready; it does not prove that an image, clip, or final film passed.", "zh-CN": "`ready_for_prompt` 只表示视觉参数包就绪，不证明图片、片段或成片已经通过。"}
+      ],
+      "outputs": [
+        {"en": "A genre-specific `style_route`, `style_module`, and `qc_contract` that can stand alone as a visual parameter package.", "zh-CN": "可独立使用的类型 `style_route`、`style_module` 和 `qc_contract` 视觉参数包。"},
+        {"en": "Scene-ready prompt fields, negative constraints, continuity state, and sound cues.", "zh-CN": "可进入场景生产的提示词字段、负向约束、连续性状态和声音提示。"}
+      ],
+      "boundaries": [
+        {"en": "Do not write the screenplay, replace director judgment, or modify approved asset appearance.", "zh-CN": "不写剧本、不替代导演判断、不修改批准资产外观。"},
+        {"en": "Do not claim universal genre color laws, living-artist imitation, or generation success.", "zh-CN": "不宣称普适类型配色、不模仿在世创作者，也不宣称生成成功。"}
+      ],
+      "requires": {"en": "The visual parameter and QC package is text-only and host-neutral. Actual image or video output requires the host's media tools, model access, permissions, and visual review.", "zh-CN": "视觉参数与质检包是宿主无关的文本合同；真实图片或视频另需媒体工具、模型权限和视觉审核。"}
+    },
+    "video-production": {
+      "principles": [
+        {"en": "The final, watchable video is the outcome; prompts, clips, edit projects, and QC reports are intermediate artifacts.", "zh-CN": "最终可观看视频才是结果；提示词、片段、剪辑工程和 QC 报告只是中间产物。"},
+        {"en": "Preserve locked source facts and review the whole final render, not isolated attractive frames.", "zh-CN": "保留锁定源事实，审核完整最终渲染，不用漂亮单帧代替。"},
+        {"en": "Repair the earliest point where the audience loses trust and distinguish candidate from qualified delivery.", "zh-CN": "修复观众最早失去信任的位置，并严格区分候选成片和合格成片。"}
+      ],
+      "inputs": [
+        {"en": "Current approved script, assets, visual rules, decisions, checkpoints, delivery format, and qualification definition.", "zh-CN": "当前批准剧本、资产、视觉规则、决定、检查点、交付格式和合格定义。"},
+        {"en": "Explicit authority for paid generation, external services, music, voices, publishing, or other consequential actions.", "zh-CN": "付费生成、外部服务、音乐、声音、发布等重要动作的明确权限。"},
+        {"en": "A choice between autonomous production and user-directed execution when existing storyboards or structures are locked.", "zh-CN": "在自主生产与用户直接导演模式之间明确选择，尤其已有锁定分镜或结构时。"}
+      ],
+      "workflow": [
+        {"en": "Lock source, acceptance, permissions, and mode; interpret the script and make director decisions.", "zh-CN": "锁定来源、验收、权限与模式；理解剧本并完成导演判断。"},
+        {"en": "Design shot groups and use `ai-storyboard-director` for the downstream shot and prompt contract.", "zh-CN": "设计镜头组，并使用 `ai-storyboard-director` 完成下游分镜与提示词合同。"},
+        {"en": "Choose a generation route, create genuine motion, edit, build sound, and render the real final file.", "zh-CN": "选择生成路线，产生真实运动，完成剪辑、声音和最终文件渲染。"},
+        {"en": "Watch the whole render at least twice: once for story/emotion, once for technical and continuity defects.", "zh-CN": "至少完整观看两遍：一遍看故事与情绪，一遍看技术与连续性。"},
+        {"en": "Repair blocking failures and deliver with the honest status `qualified`, `candidate`, or `unfinished/needs validation`.", "zh-CN": "修复阻塞问题，并以“合格成片 / 候选成片 / 未完成或待验证”诚实交付。"}
+      ],
+      "returns": [
+        {"en": "Return to the earliest wrong layer: script/directing, shot design, prompt, source clip, edit, sound, or final render.", "zh-CN": "退回最早错误层：剧本/导演、分镜、提示词、源片段、剪辑、声音或最终渲染。"},
+        {"en": "A platform task success, valid duration, or good still frame cannot bypass full-playback review.", "zh-CN": "平台任务成功、时长正确或单帧好看都不能绕过完整回放审核。"},
+        {"en": "User-locked storyboards remain locked unless revision authority is explicit.", "zh-CN": "用户锁定的分镜保持不变，除非明确授权修改。"}
+      ],
+      "review": [
+        {"en": "Story, shot design, spatial and asset continuity, generation quality, edit, sound, and delivery all pass their applicable hard gates.", "zh-CN": "故事、镜头、空间与资产连续性、生成质量、剪辑、声音和交付通过适用硬门。"},
+        {"en": "The actual final file opens and has been watched from beginning to end; no hidden replacement file is reviewed instead.", "zh-CN": "真实最终文件可打开并已从头看到尾，没有用其他文件代替审核。"},
+        {"en": "Rights, costs, permissions, and unresolved limitations are explicit.", "zh-CN": "版权、费用、权限和未解决边界明确。"}
+      ],
+      "pass": [
+        {"en": "Only a fully watched render that passes every applicable hard gate may be called a qualified final video.", "zh-CN": "只有完整观看并通过全部适用硬门的渲染文件，才能叫合格成片。"},
+        {"en": "Anything missing a key gate remains candidate or unfinished even when files and project artifacts exist.", "zh-CN": "即使文件和工程存在，缺关键审核门也只能是候选或未完成。"}
+      ],
+      "outputs": [
+        {"en": "An actual playable final video plus its exact status and delivery path.", "zh-CN": "真实可播放的最终视频、精确状态和交付入口。"},
+        {"en": "Only the necessary supporting artifacts and a concise record of review, repairs, rights, and remaining limits.", "zh-CN": "必要的中间产物，以及审核、修复、权利和剩余边界的简明记录。"}
+      ],
+      "boundaries": [
+        {"en": "Installing this method does not grant video models, paid credits, music rights, voice rights, or publishing authority.", "zh-CN": "安装本方法不会自动获得视频模型、付费额度、音乐权、声音权或发布权。"},
+        {"en": "Never describe a storyboard, prompt, generated clip, edit timeline, or unreviewed render as the finished film.", "zh-CN": "不把分镜、提示词、生成片段、剪辑时间线或未审渲染冒充成片。"}
+      ],
+      "requires": {"en": "Real production requires media-generation tools, editing and audio capabilities, file access, sufficient permissions or budget, and full-playback review. A text-only host can inspect the method but cannot claim a finished video.", "zh-CN": "真实生产需要媒体生成、剪辑、声音、文件能力、足够权限或预算以及完整回放；纯文本宿主只能读方法，不能声称成片。"}
+    },
+    "short-drama": {
+      "principles": [
+        {"en": "This is a control-contract layer that connects approved directing, assets, visual language, shots, prompts, and QC without replacing their specialist modules.", "zh-CN": "这是控制合同层，把批准的导演、资产、视觉、分镜、提示词和 QC 接起来，但不替代专业模块。"},
+        {"en": "Every assumption, version, blocking map, lighting source, action state, and end frame remains traceable.", "zh-CN": "每个假设、版本、调度图、光源、动作状态和尾帧都可追溯。"},
+        {"en": "Actual image QC decides readiness; another blind generation attempt does not.", "zh-CN": "是否就绪由实际画面 QC 决定，不能靠盲目再生成。"}
+      ],
+      "inputs": [
+        {"en": "Audience, duration, script form, character objective and obstacle, scenes, main genre, target platform, and existing assets or sketches.", "zh-CN": "受众、时长、剧本形态、人物目标与阻力、场景、主类型、目标平台和已有资产/草图。"},
+        {"en": "Approved director decisions and asset versions when available; missing values are `pending`, inferred values are `assumed`.", "zh-CN": "已有批准的导演判断和资产版本；缺失值标 `pending`，推断值标 `assumed`。"},
+        {"en": "The specific control gap: beat, asset registry, blocking, lighting, action, sketch translation, or pre-generation QC.", "zh-CN": "点名控制缺口：节拍、资产索引、调度、布光、动作、草图转镜头或生成前 QC。"}
+      ],
+      "workflow": [
+        {"en": "Obtain current director and beat decisions; do not recreate them with a generic formula.", "zh-CN": "取得现行导演与节拍决定，不用通用公式重做。"},
+        {"en": "Build or reference human-approved Cxx/Sxx/Pxx assets and their versions.", "zh-CN": "建立或引用经人审的 Cxx/Sxx/Pxx 资产及版本。"},
+        {"en": "Create blocking, lighting, action, and sketch-to-shot control contracts only where needed.", "zh-CN": "按需建立调度、布光、动作和草图转镜头控制合同。"},
+        {"en": "Compile contracts into one continuous-camera AG-CLIP with bounded action density and a usable end state.", "zh-CN": "把合同装入一个连续机位 AG-CLIP，控制动作密度并留下可接续尾帧。"},
+        {"en": "Review actual images and emit `ready_for_prompt` only when all eight pre-generation gates pass.", "zh-CN": "审核实际画面，只有八项生成前门全部通过才输出 `ready_for_prompt`。"}
+      ],
+      "returns": [
+        {"en": "Story, concept, beat, or dialogue returns to the directing/writing layer; asset drift returns to asset design.", "zh-CN": "故事、概念、节拍或台词退回导演/编剧层；资产漂移退回资产层。"},
+        {"en": "Space, axis, or action returns to storyboard control; field compilation returns to prompt engineering; actual-image mismatch returns to QC.", "zh-CN": "空间、轴线或动作退回分镜控制；字段编译退回提示词；实际画面不符退回 QC。"},
+        {"en": "The module routes the failure; it never substitutes 'generate again' for diagnosis.", "zh-CN": "本模块负责路由失败，绝不把“再生成一次”当诊断。"}
+      ],
+      "review": [
+        {"en": "Hook, objective, obstacle, information gap, power turn, cost, and end hook are visible rather than adjective labels.", "zh-CN": "钩子、目标、阻力、信息差、权力转折、代价和结尾钩子可观察，不是形容词。"},
+        {"en": "Every asset version is human-reviewed; blocking explains people, props, camera and axis; lighting has visible sources; action has start, path, end and reaction.", "zh-CN": "资产版本均经人审；调度能解释人物、道具、摄影机与轴线；布光有来源；动作有起点、路径、终点和反应。"},
+        {"en": "Each clip has no hidden hard cut, respects dialogue timing and action density, and ends in a continuous next-shot state.", "zh-CN": "每段无隐藏硬切，台词时序与动作密度成立，并以连续尾帧接下一镜。"}
+      ],
+      "pass": [
+        {"en": "All eight `ready_for_prompt` conditions pass with traceable contract IDs and actual-image review where required.", "zh-CN": "八项 `ready_for_prompt` 条件全部通过，合同编号可追溯，并完成所需真实画面审核。"},
+        {"en": "This state means the controlled task is ready for prompt production; it is not a finished clip or film.", "zh-CN": "该状态只表示控制任务可进入提示词生产，不是片段或成片通过。"}
+      ],
+      "outputs": [
+        {"en": "A narrative beat contract, asset registry, blocking map, lighting plan, action ledger, or sketch-to-shot brief as needed.", "zh-CN": "按需交付节拍合同、资产索引、调度图、布光图、动作账本或草图转镜头说明。"},
+        {"en": "A traceable `ready_for_prompt` package or a responsibility-specific rework record.", "zh-CN": "可追溯的 `ready_for_prompt` 包，或按责任层分类的回炉记录。"}
+      ],
+      "boundaries": [
+        {"en": "It can organize approved decisions or audit missing controls by itself; it does not copy every directing, asset, genre, generation, or QC capability into one module.", "zh-CN": "它可以单独整理已批准决定或审计控制缺口，但不会复制导演、资产、类型、生成和 QC 的全部能力。"},
+        {"en": "From-zero end-to-end production still needs the relevant specialist Skills and host tools.", "zh-CN": "从零完成全流程仍需要相应专业 Skill 和宿主工具。"}
+      ],
+      "requires": {"en": "Contract design is text/file based. Full orchestration benefits from the companion specialist Skills, while actual image review and generation require media tools and permissions.", "zh-CN": "合同设计依赖文本/文件；完整编排需要相关专业 Skill，真实画面审核和生成还需媒体工具与权限。"}
+    },
+    "web": {
+      "principles": [
+        {"en": "Make product and design decisions before implementation; the interface direction must come from the product's real subject, audience, and job.", "zh-CN": "先做产品与设计判断，再实施；界面方向必须来自真实产品、受众和页面任务。"},
+        {"en": "Spend visual boldness in one justified signature element and keep the surrounding system disciplined.", "zh-CN": "把视觉大胆用在一个有依据的标志性元素上，其余系统保持克制。"},
+        {"en": "Source inspection and implementation tests do not replace rendered visual, state, responsive, and accessibility review.", "zh-CN": "源码检查和实现测试不能替代真实渲染、状态、响应式与无障碍审核。"}
+      ],
+      "inputs": [
+        {"en": "Product type, audience, the page's single job, primary journey, real content, brand/design system, and technical stack.", "zh-CN": "产品类型、受众、页面唯一任务、主路径、真实内容、品牌/设计系统和技术栈。"},
+        {"en": "Existing interface, screenshots or repository when reviewing or modifying an existing product.", "zh-CN": "审核或修改现有产品时，需要现有界面、截图或仓库。"},
+        {"en": "Required states, devices, accessibility constraints, performance limits, and authorization to change code.", "zh-CN": "所需状态、设备、无障碍约束、性能边界和代码修改授权。"}
+      ],
+      "workflow": [
+        {"en": "Ground the product, audience, single job, and vocabulary.", "zh-CN": "锁定产品、受众、页面唯一任务和词汇。"},
+        {"en": "Inspect the actual interface and system before inventing a direction.", "zh-CN": "提出方向前先检查真实界面与系统。"},
+        {"en": "Choose a product-native color, type, layout, and one signature element; reject generic defaults.", "zh-CN": "选择产品原生的色彩、字体、布局和一个标志元素，排除模板化默认。"},
+        {"en": "Design the user journey, empty/loading/error/success states, responsive behavior, and engineering contract.", "zh-CN": "设计用户路径、空/载入/失败/成功状态、响应式和工程合同。"},
+        {"en": "Implement one coherent slice, render it, and verify visual quality, interaction, keyboard use, mobile layout, and regressions.", "zh-CN": "实现一个完整切片，真实渲染并审核视觉、交互、键盘、移动端和回归。"}
+      ],
+      "returns": [
+        {"en": "If product truth or the journey is unclear, return to grounding; do not solve it with decoration.", "zh-CN": "产品事实或路径不清时退回产品定义，不能靠装饰解决。"},
+        {"en": "If the direction could belong to any product, return to subject-native direction and signature.", "zh-CN": "方向可套在任何产品上时，退回产品原生方向与标志元素。"},
+        {"en": "Missing states return to workflow design; implementation or rendering blockers return to the engineering contract and are re-verified in the actual interface.", "zh-CN": "状态缺失退回流程设计；实现或渲染阻塞退回工程合同，并在真实界面重新验证。"}
+      ],
+      "review": [
+        {"en": "Product truth, information architecture, distinctiveness, visual system, interaction, accessibility, responsive behavior, and engineering quality all pass.", "zh-CN": "产品真实、信息架构、独特性、视觉系统、交互、无障碍、响应式和工程质量全部通过。"},
+        {"en": "All required states are visible and direct the user; errors explain recovery and controls use consistent action names.", "zh-CN": "所有必要状态可见并能指导用户；错误说明恢复方式，操作命名一致。"},
+        {"en": "The actual rendered result is inspected at desktop and mobile widths with keyboard focus and reduced-motion behavior.", "zh-CN": "真实渲染在桌面和移动宽度下检查，包含键盘焦点与减少动画行为。"}
+      ],
+      "pass": [
+        {"en": "Direction mode passes when the decision system and workflow are specific and implementable; build mode additionally requires rendered evidence.", "zh-CN": "方向模式在设计系统与流程具体可实施时通过；构建模式还必须有真实渲染证据。"},
+        {"en": "Without rendered and interaction evidence, report a design or source review—not visual implementation acceptance.", "zh-CN": "没有渲染和交互证据时，只能写设计/源码审查，不能写视觉实现通过。"}
+      ],
+      "outputs": [
+        {"en": "A product-native design direction and engineering contract, an evidence-backed review, or a verified implemented slice.", "zh-CN": "产品原生设计方向与工程合同、带证据的审查，或经验证的实现切片。"},
+        {"en": "Concrete decisions, blocker-ranked findings, exact changed files when building, and remaining verification limits.", "zh-CN": "具体设计决定、按阻塞级排序的问题、实施时的准确变更文件和剩余验证边界。"}
+      ],
+      "boundaries": [
+        {"en": "Do not migrate frameworks, add dependencies, or redesign unrelated surfaces merely for aesthetic uniformity.", "zh-CN": "不为审美统一擅自迁移框架、增加依赖或重做无关界面。"},
+        {"en": "Do not call source inspection, tests, or a static mockup proof of user-accepted visual quality.", "zh-CN": "不把源码检查、测试或静态稿冒充用户通过的视觉质量。"}
+      ],
+      "requires": {"en": "Direction and review can be text-based; build and visual-pass claims require repository/file access, the project's runtime, browser rendering or screenshots, and interaction checks.", "zh-CN": "方向和审查可用文本完成；构建和视觉通过还需仓库/文件权限、项目运行环境、浏览器渲染或截图及交互检查。"}
+    },
+    "market": {
+      "principles": [
+        {"en": "State only what current, public, verifiable evidence supports; keep inference separate from official fact.", "zh-CN": "只说当前公开可验证证据能支持的结论，推断与官方事实分开。"},
+        {"en": "Data date, statistical period, region, platform, definition, and source authority travel with every conclusion.", "zh-CN": "每个结论都携带数据日期、统计周期、地区、平台、口径和来源等级。"},
+        {"en": "A report may produce a knowledge candidate, but only explicit later approval can authorize semantic-layer writing.", "zh-CN": "报告可以生成知识候选，但只有后续明确批准才能授权语义层写入。"}
+      ],
+      "inputs": [
+        {"en": "Research date, region, platform, content type, decision use, budget, team, and constraints.", "zh-CN": "研究日期、地区、平台、内容类型、决策用途、预算、团队和限制。"},
+        {"en": "Definitions for metrics and comparisons, including what cannot be inferred from rankings or heat values.", "zh-CN": "指标与比较口径，包括榜单值或热度值不能推导什么。"},
+        {"en": "Access to current primary or authoritative sources; otherwise the task remains a framework and source-gap report.", "zh-CN": "需要当前一手或权威来源；否则只能交研究框架和来源缺口。"}
+      ],
+      "workflow": [
+        {"en": "Plan sources and open the actual primary or authoritative evidence.", "zh-CN": "规划来源并实际打开一手或权威证据。"},
+        {"en": "Build a data contract, clean records, run quality checks, and preserve definitions and missingness.", "zh-CN": "建立数据合同、清洗记录、执行质量检查并保留口径与缺失。"},
+        {"en": "Compare periods and segments, test counterexamples, and separate facts, calculations, inferences, and unknowns.", "zh-CN": "比较周期与分区、检查反例，并区分事实、计算、推断和未知。"},
+        {"en": "Write the fixed report sections with evidence tables and decision implications.", "zh-CN": "按固定章节输出报告、证据表和决策影响。"},
+        {"en": "Create a knowledge candidate only; route any approved write through the separate semantic-layer Skill.", "zh-CN": "只生成知识候选；批准写入必须走独立语义层 Skill。"}
+      ],
+      "returns": [
+        {"en": "Missing current evidence returns to source collection; definition conflicts return to the data contract; validation errors return to cleaning or calculation.", "zh-CN": "缺当前证据退回采集，口径冲突退回数据合同，校验错误退回清洗或计算。"},
+        {"en": "Warnings remain explicit evidence limits; they are not erased to force a strong conclusion.", "zh-CN": "warning 保持为证据边界，不能为了强结论而消失。"},
+        {"en": "No explicit approval means no knowledge write, even when a candidate is complete.", "zh-CN": "没有明确批准就不写知识层，即使候选已经完整。"}
+      ],
+      "review": [
+        {"en": "Sources are opened, authoritative for the claim, dated, and linked; inaccessible evidence is marked instead of reconstructed from memory.", "zh-CN": "来源已实际打开、与结论匹配、有日期和链接；读不到时明确标记，不靠记忆重构。"},
+        {"en": "Metric definitions, cleaning, calculations, sample limits, counterevidence, time sensitivity, and unknowns are visible.", "zh-CN": "指标口径、清洗、计算、样本边界、反证、时效与未知可见。"},
+        {"en": "Charts and conclusions do not turn heat, rank, marketing copy, or a single case into sales, plays, market size, or success probability.", "zh-CN": "图表和结论不把热度、排名、营销文案或单例冒充销售、播放、市场规模或成功率。"}
+      ],
+      "pass": [
+        {"en": "The report passes structural and evidence checks, and every conclusion is labeled by fact type and strength.", "zh-CN": "报告通过结构与证据检查，每个结论标明事实类型和强度。"},
+        {"en": "Limited evidence is reported as limited; report completion does not mean the market conclusion is timeless or officially endorsed.", "zh-CN": "有限证据按有限报告；报告完成不代表结论永久有效或得到官方背书。"}
+      ],
+      "outputs": [
+        {"en": "A source-backed market report with scope, methodology, evidence table, findings, counterevidence, implications, and limits.", "zh-CN": "包含范围、方法、证据表、发现、反证、决策影响和边界的来源化市场报告。"},
+        {"en": "A separately labeled semantic-layer candidate, never an automatic write.", "zh-CN": "单独标记的语义层候选，绝不自动写入。"}
+      ],
+      "boundaries": [
+        {"en": "Do not use search snippets, marketing pages, unverifiable screenshots, or stale repository data as current official evidence.", "zh-CN": "不把搜索摘要、营销页、不可核截图或仓库旧数据当当前官方证据。"},
+        {"en": "Do not convert inference into official fact or write to the semantic layer without explicit approval.", "zh-CN": "不把推断变成官方事实，也不在无明确批准时写入语义层。"}
+      ],
+      "requires": {"en": "Current analysis requires web or connector access to primary sources plus Python/file capability for data validation. Offline use can design the research and list missing evidence, not fabricate current findings.", "zh-CN": "当前市场分析需要联网/连接器访问一手来源，并用 Python/文件能力校验数据；离线只能设计研究和列缺口，不能补造当前结论。"}
+    },
+    "semantic": {
+      "principles": [
+        {"en": "The current conversation's explicit approval is the only write authority; old messages and approval-looking fields do not count.", "zh-CN": "当前对话中的明确批准是唯一写入授权；旧消息和看似审批的字段都不算。"},
+        {"en": "Validation, versioning, expiry, conflict, history, and write receipt remain separate facts.", "zh-CN": "校验、版本、有效期、冲突、历史和写入回执是不同事实。"},
+        {"en": "If the write capability is unavailable, produce a pending package and state that nothing was written.", "zh-CN": "写入能力不可用时只生成待写入包，并明确没有实际写入。"}
+      ],
+      "inputs": [
+        {"en": "A formal report and candidate records that the user has already seen.", "zh-CN": "用户已经看到的正式报告和候选记录。"},
+        {"en": "Explicit current approval such as approval to absorb, update, or write the data knowledge layer.", "zh-CN": "本轮明确的吸纳、更新或写入数据知识层批准。"},
+        {"en": "Source, data date, statistical period, platform, region, evidence grade, expiry, review date, status, version, limits, and monitoring fields.", "zh-CN": "来源、数据日期、统计周期、平台、地区、证据等级、有效期、复查日期、状态、版本、限制和观察字段。"}
+      ],
+      "workflow": [
+        {"en": "Verify that the current user approval covers the exact candidate and action.", "zh-CN": "核对本轮用户批准是否覆盖准确候选与动作。"},
+        {"en": "Read the semantic contract, evidence register, current layer, source inventory, and version/expiry rules.", "zh-CN": "读取语义合同、证据登记、现行语义层、来源清单和版本/有效期规则。"},
+        {"en": "Validate candidate JSON or JSONL and repair all errors without hiding conflicts or weak evidence.", "zh-CN": "校验候选 JSON/JSONL，修复全部 error，不隐藏冲突或弱证据。"},
+        {"en": "Apply version, expiry, dispute, replacement, and history rules.", "zh-CN": "执行版本、过期、争议、替代和历史规则。"},
+        {"en": "Write through the authorized capability or emit a pending-write package; then reconcile the receipt with actual state.", "zh-CN": "通过授权能力写入，或生成待写入包；随后把回执与真实状态核对。"}
+      ],
+      "returns": [
+        {"en": "No explicit current approval stops the workflow before any mutation.", "zh-CN": "没有本轮明确批准时，在任何写入前停止。"},
+        {"en": "Validation errors return to the exact field; source conflicts remain disputed records rather than silent overwrites.", "zh-CN": "校验错误退回准确字段；来源冲突保留争议记录，不静默覆盖。"},
+        {"en": "Unavailable write capability returns a pending package, not a false completion claim.", "zh-CN": "写入能力不可用时退回待写入包，不能虚报完成。"}
+      ],
+      "review": [
+        {"en": "Every record contains the required conclusion, fact type, source, dates, period, platform, region, grade, expiry, status, version, limits, and indicators.", "zh-CN": "每条记录都有结论、事实类型、来源、日期、周期、平台、地区、等级、有效期、状态、版本、限制和观察指标。"},
+        {"en": "Weak evidence enters only the waiting-for-validation area; expired or replaced records preserve history.", "zh-CN": "弱证据只进入待验证区；过期或被替代记录保留历史。"},
+        {"en": "The write receipt, version, review date, conflict state, and actual semantic layer agree.", "zh-CN": "写入回执、版本、复查日期、冲突状态和真实语义层一致。"}
+      ],
+      "pass": [
+        {"en": "Candidate validation passes and the actual write or pending-write state is reported exactly.", "zh-CN": "候选校验通过，实际写入或待写入状态被准确报告。"},
+        {"en": "Only a reconciled write receipt proves an update; a valid package by itself does not.", "zh-CN": "只有与真实状态一致的写入回执才能证明更新；有效包本身不能。"}
+      ],
+      "outputs": [
+        {"en": "Lists of added, superseded, disputed, historicized, rejected, and unwritten records.", "zh-CN": "新增、替代、争议、历史化、拒绝和未写入条目清单。"},
+        {"en": "A version and next-review receipt, or a clearly labeled pending-write package.", "zh-CN": "版本与下次复查回执，或明确标记的待写入包。"}
+      ],
+      "boundaries": [
+        {"en": "Do not trigger on analysis, reading, candidate generation, or historical approval.", "zh-CN": "不因分析、读取、生成候选或历史批准而触发写入。"},
+        {"en": "Do not delete history, silently overwrite conflicts, promote inference to official fact, or claim an unavailable write occurred.", "zh-CN": "不删除历史、不静默覆盖冲突、不把推断升为官方事实，也不虚报不可用的写入。"}
+      ],
+      "requires": {"en": "Review and pending-package creation require file/Python capability. Actual writing additionally requires the installed semantic-layer workflow and explicit current user approval.", "zh-CN": "审核和待写入包需要文件/Python 能力；真实写入还需要已安装语义层工作流和本轮明确批准。"}
+    },
+    "hard-scifi": {
+      "principles": [
+        {"en": "The method stays fixed while each project's visual identity is derived from source truth, evidence, physics, production, and story legibility.", "zh-CN": "方法固定，但每个项目的视觉身份必须从原文事实、证据、物理、制作和叙事可读性推导。"},
+        {"en": "Script fact, necessary extrapolation, proposal, approved decision, and locked decision remain distinct states.", "zh-CN": "剧本事实、必要外推、提案、批准决定和锁定决定保持不同状态。"},
+        {"en": "Research sets an evidence floor, not a creativity ceiling; high-amplitude design must expose its speculative rule and cost.", "zh-CN": "研究设证据底线，不设创意上限；高振幅设计必须暴露推测规则与代价。"}
+      ],
+      "inputs": [
+        {"en": "Current script or scene, approved world bible, explicit premise, existing visual assets or prompts, and requested operating mode.", "zh-CN": "当前剧本/场景、批准世界圣经、明确前提、已有视觉资产或提示词，以及点名模式。"},
+        {"en": "Must-keep source facts, forbidden rewrites, open identity decisions, and the authority state of each existing choice.", "zh-CN": "必须保留事实、禁止改写项、开放身份决定和每个既有选择的权限状态。"},
+        {"en": "The requested medium and function: world, environment, interface, organism, machine, ordinary equipment, defense/rescue system, or continuity work.", "zh-CN": "点名媒介与功能：世界、环境、界面、生物、机器、普通设备、防御/救援系统或连续性。"}
+      ],
+      "workflow": [
+        {"en": "Establish source authority, protect the dramatic beat, and select the applicable function contract.", "zh-CN": "建立来源权威、保护剧情拍点并选择适用功能合同。"},
+        {"en": "Form research questions, open evidence, and separate fact, extrapolation, hypothesis, and unknown.", "zh-CN": "提出研究问题、打开证据并区分事实、外推、假设和未知。"},
+        {"en": "Derive physical boundaries, world/environment systems, candidate routes only for open decisions, and a spatial model.", "zh-CN": "推导物理边界、世界/环境系统；只为开放决定提出候选路线，并建立空间模型。"},
+        {"en": "Design bodies or systems, production route, camera, color, interface, family grammar, and continuity from function and history.", "zh-CN": "从功能与历史推导身体/系统、制作路线、摄影机、色彩、界面、家族语法和连续性。"},
+        {"en": "Build the full prompt and scene-specific exclusions, run applicable universal and conditional gates, and generate only after authority is clear.", "zh-CN": "生成完整提示词和场景专项负向，执行适用通用/条件门，只在权限明确后生成。"}
+      ],
+      "returns": [
+        {"en": "A failed gate returns to the corresponding source, research, physics, world, system, camera, color, interface, or continuity derivation stage.", "zh-CN": "审核门失败退回对应的来源、研究、物理、世界、系统、摄影机、色彩、界面或连续性推导阶段。"},
+        {"en": "A locked identity decision cannot be reopened by visual iteration without explicit authority; an open decision may receive genuinely different candidates.", "zh-CN": "锁定身份不能被视觉迭代擅自重开；开放决定可以获得真正不同的候选。"},
+        {"en": "This experimental module has design rework but no documented version rollback manifest.", "zh-CN": "该实验模块有设计回炉，但没有已登记的版本回滚清单。"}
+      ],
+      "review": [
+        {"en": "All applicable universal gates protect source truth, dramatic legibility, evidence boundaries, originality, physical relations, production route, camera, color, interfaces, and continuity.", "zh-CN": "所有适用通用门保护原文事实、剧情可读性、证据边界、原创性、物理关系、制作路线、摄影机、色彩、界面和连续性。"},
+        {"en": "Function-specific gates agree across ecology, organisms, machinery, equipment, defense/rescue systems, or interface topology only where applicable.", "zh-CN": "按实际功能检查生态、生物、机械、设备、防御/救援系统或界面拓扑的内部一致。"},
+        {"en": "Named living-artist imitation, franchise defaults, decorative technology, and actionable weapon-building detail are excluded.", "zh-CN": "排除在世创作者模仿、既有 IP 默认、装饰性科技和可操作武器制造细节。"}
+      ],
+      "pass": [
+        {"en": "Applicable gates pass and the output states what is fact, inference, candidate, approved, locked, unknown, generated, and user-reviewed.", "zh-CN": "适用审核门通过，输出明确事实、推断、候选、批准、锁定、未知、已生成和用户审核状态。"},
+        {"en": "Internal or generated status never upgrades this Experimental module to deployed, stable, or user-approved.", "zh-CN": "内部通过或生成文件都不能把该实验模块升级为已部署、稳定或用户通过。"}
+      ],
+      "outputs": [
+        {"en": "Source and gap card, evidence-based derivation, candidate/decision record, visual or asset bible, directing plan, full prompt, exclusions, and status audit.", "zh-CN": "来源与空白卡、证据化推导、候选/决定记录、视觉或资产圣经、导演方案、完整提示词、负向和状态审计。"},
+        {"en": "For diagnosis, a concise chain from visible failure to source/physics/camera/design cause and one correction.", "zh-CN": "诊断模式输出“可见失败 → 来源/物理/摄影机/设计原因 → 一个修正”的简明链。"}
+      ],
+      "boundaries": [
+        {"en": "Do not copy protected IP, imitate named living artists, provide actionable weapons construction, or generate without authorization.", "zh-CN": "不复制受保护 IP、不模仿在世创作者、不提供可操作武器制造，也不在无授权时生成。"},
+        {"en": "This is Experimental, not deployed; substantial research and internal checks do not equal user visual approval.", "zh-CN": "这是实验模块而非已部署模块；大量研究和内部检查不等于用户视觉通过。"}
+      ],
+      "requires": {"en": "Text diagnosis and prompt design work in a reading host; evidence-sensitive use needs web/source access, continuity work needs files, and image generation requires an authorized media tool plus user visual review.", "zh-CN": "文本诊断与提示词可在阅读宿主使用；证据敏感任务需联网，连续性需文件，生图需授权媒体工具和用户视觉审核。"}
+    }
+  },
+  "skills": [
+    {
+      "name": "director-agent", "family": "director", "status": "deployed",
+      "status_label": {"en": "Deployed; long-term practice evidence remains separate", "zh-CN": "已部署；长期实战证据单独记录"},
+      "title": {"en": "director-agent — script and directing design", "zh-CN": "director-agent｜剧本与导演设计"},
+      "purpose": {"en": "Create, revise, or diagnose scripts and make the directing decisions that must exist before full storyboard production.", "zh-CN": "创作、修改或诊断剧本，并完成进入完整分镜前必须成立的导演判断。"},
+      "standalone": {"en": "A script, replacement passage, diagnosis, director treatment, workbench, or pre-storyboard directing draft.", "zh-CN": "剧本、替换段落、诊断、导演方案、工作台或分镜前导演设计稿。"},
+      "cannot": {"en": "It does not by itself produce a full production storyboard, generated media, or proof of user acceptance.", "zh-CN": "不能单独交付完整生产分镜、真实生成媒体或用户接受证明。"}
+    },
+    {
+      "name": "ai-storyboard-director", "family": "storyboard", "status": "deployed",
+      "status_label": {"en": "Deployed; 5.4.2 candidate over the 5.4.1 continuity contract", "zh-CN": "已部署；5.4.2 候选基线继承 5.4.1 连续性合同"},
+      "title": {"en": "ai-storyboard-director — script to shots and prompts", "zh-CN": "ai-storyboard-director｜剧本转分镜与提示词"},
+      "purpose": {"en": "Turn an approved script into human-readable multi-shot design and production prompts while preserving causality, blocking, timing, and world-space continuity.", "zh-CN": "把已批准剧本变成人读多镜头设计和生产提示词，同时守住因果、调度、时长和世界空间连续性。"},
+      "standalone": {"en": "A complete storyboard and copy-ready prompt package for an existing approved script.", "zh-CN": "针对已有批准剧本的完整分镜和可复制提示词包。"},
+      "cannot": {"en": "It does not rewrite the script, directly generate the video, or prove platform success.", "zh-CN": "不改写剧本、不直接生成视频，也不证明平台生成成功。"}
+    },
+    {
+      "name": "character-asset", "family": "asset", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "character-asset — character identity contract", "zh-CN": "character-asset｜人物身份资产合同"},
+      "purpose": {"en": "Define a character's stable identity, views, expressions, actions, clothing, materials, and allowed state changes for downstream continuity.", "zh-CN": "定义人物稳定身份、多视角、表情、动作、服装、材质和允许状态变化，供下游连续性使用。"},
+      "standalone": {"en": "A character reference-image task, view plan, locked-feature checklist, negative constraints, and JSON contract.", "zh-CN": "人物参考图任务、视图计划、锁定特征清单、负向约束和 JSON 合同。"},
+      "cannot": {"en": "Without an image tool and visual review, it cannot claim that character images exist or are approved.", "zh-CN": "没有生图工具和视觉审核时，不能声称人物图已存在或已批准。"},
+      "extra_principles": [{"en": "Character continuity prioritizes face, body, hair, clothing layers, accessories, age, and nonhuman anatomy over decorative style.", "zh-CN": "人物连续性优先锁定五官、体型、发型、服装层次、配饰、年龄和非人结构，不让装饰风格压过身份。"}],
+      "extra_review": [{"en": "Face, body, hairline, clothing, age, limb count, expressions, and all required views remain the same identity.", "zh-CN": "五官、体型、发际线、服装、年龄、肢体数量、表情和所需视图保持同一身份。"}]
+    },
+    {
+      "name": "scene-asset", "family": "asset", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "scene-asset — environment and spatial contract", "zh-CN": "scene-asset｜场景与空间资产合同"},
+      "purpose": {"en": "Define a reusable environment through layout, entrances, exits, landmarks, scale, lighting, materials, camera access, and continuity states.", "zh-CN": "用布局、出入口、固定标志、尺度、光源、材质、摄影机可达区和连续状态定义可复用场景。"},
+      "standalone": {"en": "A scene reference task, spatial anchor and reverse-view plan, lighting/material rules, and JSON contract.", "zh-CN": "场景参考图任务、空间锚点与反向视图计划、光影材质规则和 JSON 合同。"},
+      "cannot": {"en": "It does not decide story blocking or prove that generated scene images are spatially consistent without inspection.", "zh-CN": "不替代剧情调度，也不能在未检查真实图片时证明场景空间一致。"},
+      "extra_principles": [{"en": "A scene is a navigable world model, not one attractive angle; reverse views must derive from the same layout.", "zh-CN": "场景是可行走的世界模型，不是一张漂亮角度；反向视图必须来自同一布局。"}],
+      "extra_review": [{"en": "Entrances, exits, fixed landmarks, light sources, scale, navigable routes, and reverse views agree in one spatial model.", "zh-CN": "出入口、固定标志、光源、尺度、可通行路径和反向视图在同一空间模型中一致。"}]
+    },
+    {
+      "name": "prop-asset", "family": "asset", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "prop-asset — prop identity and state contract", "zh-CN": "prop-asset｜道具身份与状态合同"},
+      "purpose": {"en": "Define a prop's identity, scale, materials, usable faces, interfaces, holder, orientation, wear, operation, and state transitions.", "zh-CN": "定义道具身份、尺度、材质、可用面、接口、持有人、朝向、磨损、操作和状态变化。"},
+      "standalone": {"en": "A prop reference task, interaction/state views, locked handling rules, negative constraints, and JSON contract.", "zh-CN": "道具参考图任务、交互/状态视图、锁定持用规则、负向约束和 JSON 合同。"},
+      "cannot": {"en": "It does not choreograph the full scene or prove correct handling until actual reference and shot images are reviewed.", "zh-CN": "不负责完整场面调度，也不能在真实参考图和镜头未审时证明持用正确。"},
+      "extra_principles": [{"en": "A prop is tracked by usable faces, holder, orientation, open/closed or damaged state, and physical contact—not by name alone.", "zh-CN": "道具通过可用面、持有人、朝向、开合/损伤状态和物理接触追踪，不能只靠名称。"}],
+      "extra_review": [{"en": "A/B faces, dimensions, holder, orientation, interfaces, open/closed condition, materials, wear, and state changes are unambiguous.", "zh-CN": "A/B 面、尺寸、持有人、朝向、接口、开合状态、材质、磨损和状态变化无歧义。"}]
+    },
+    {
+      "name": "cyberpunk-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "cyberpunk-design — cyberpunk visual parameters", "zh-CN": "cyberpunk-design｜赛博朋克视觉参数"},
+      "purpose": {"en": "Translate cyberpunk into motivated artificial light, layered city space, body/technology relations, wet-surface behavior, material wear, and readable continuity.", "zh-CN": "把赛博朋克转成有来源的人造光、城市层级、身体/技术关系、湿面反馈、材质磨损和可读连续性。"},
+      "standalone": {"en": "A cyberpunk `style_route`, prompt fields, negative constraints, sound/continuity state, and QC contract.", "zh-CN": "赛博朋克 `style_route`、提示词字段、负向约束、声音/连续状态和 QC 合同。"},
+      "cannot": {"en": "It does not create the story or assets and does not make multicolor neon automatically coherent.", "zh-CN": "不创作剧本或资产，也不会让多色霓虹自动变得合理。"},
+      "extra_review": [{"en": "Neon and reflections have visible sources; city layers remain navigable; augmentation does not multiply without function.", "zh-CN": "霓虹与反射有可见来源，城市层级可读，义体不会无功能增殖。"}]
+    },
+    {
+      "name": "epic-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "epic-design — epic scale and spectacle parameters", "zh-CN": "epic-design｜史诗尺度与奇观参数"},
+      "purpose": {"en": "Translate epic scale into human references, terrain, formation, layered spectacle, motivated camera distance, light, material, and movement.", "zh-CN": "把史诗尺度转成真实人物参照、地形、阵列、分层奇观、有动机的机位距离、光影、材质和运动。"},
+      "standalone": {"en": "An epic-scale `style_route`, scene and movement parameters, negative constraints, and QC contract.", "zh-CN": "史诗尺度 `style_route`、场景与运动参数、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not make scale believable through a wide shot alone or replace story stakes with spectacle.", "zh-CN": "不能只靠大远景让尺度可信，也不能用奇观替代故事代价。"},
+      "extra_review": [{"en": "People, terrain, architecture, formations, and atmospheric depth provide scale proof; crowds are not duplicated wallpaper and aerial moves have a dramatic purpose.", "zh-CN": "人物、地形、建筑、阵列和空气纵深共同证明尺度；群像不是复制贴图，航拍有剧情目的。"}]
+    },
+    {
+      "name": "fantasy-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "fantasy-design — fantasy world and magic parameters", "zh-CN": "fantasy-design｜奇幻世界与魔法参数"},
+      "purpose": {"en": "Translate fantasy into coherent world rules, magical cause and light, spatial behavior, materials, creatures, action, and continuity.", "zh-CN": "把奇幻转成自洽世界规则、魔法因果与光源、空间行为、材质、生物、动作和连续性。"},
+      "standalone": {"en": "A fantasy `style_route`, world and magic prompt fields, negative constraints, and QC contract.", "zh-CN": "奇幻 `style_route`、世界与魔法提示词字段、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not justify arbitrary glow, modern objects, or copied franchise creatures merely because the genre is fantasy.", "zh-CN": "不会因为是奇幻就允许任意泛光、现代物件或复制既有 IP 生物。"},
+      "extra_review": [{"en": "Magic has a visible source, rule, cost, target, and environment response; wings, bodies, and materials avoid plastic or gravity-free behavior.", "zh-CN": "魔法有可见来源、规则、代价、目标和环境反馈；翅膀、身体与材质不塑料、不失重。"}]
+    },
+    {
+      "name": "horror-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "horror-design — threat, reveal, and readable darkness", "zh-CN": "horror-design｜威胁、显露与可读暗部"},
+      "purpose": {"en": "Translate horror into threat placement, reveal timing, readable darkness, spatial uncertainty, physical traces, sound, and continuity.", "zh-CN": "把恐怖转成威胁位置、显露时机、可读暗部、空间不确定性、物理痕迹、声音和连续性。"},
+      "standalone": {"en": "A horror `style_route`, reveal and darkness parameters, negative constraints, and QC contract.", "zh-CN": "恐怖 `style_route`、显露与暗部参数、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not make a scene frightening by crushing blacks, exposing the monster too early, or adding a generic jump scare.", "zh-CN": "不能靠死黑、过早全露怪物或通用跳吓让场景成立。"},
+      "extra_review": [{"en": "Dark areas preserve required information; threat reveal changes understanding; suspense is built through space, action, trace, and sound rather than empty darkness.", "zh-CN": "暗部保留必要信息，威胁显露会改变理解，悬念由空间、动作、痕迹和声音建立。"}]
+    },
+    {
+      "name": "noir-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "noir-design — noir and crime visual parameters", "zh-CN": "noir-design｜黑色与犯罪视觉参数"},
+      "purpose": {"en": "Translate noir and crime tension into readable contrast, motivated practical light, obstruction, power geometry, wet or worn materials, restrained action, and sound.", "zh-CN": "把黑色与犯罪张力转成可读对比、有来源实用光、遮挡、权力几何、湿旧材质、克制动作和声音。"},
+      "standalone": {"en": "A noir `style_route`, scene and light parameters, negative constraints, and QC contract.", "zh-CN": "黑色 `style_route`、场景与光影参数、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not equal a blue-black filter, source-less smoke, random blind shadows, or exaggerated Dutch angles.", "zh-CN": "不等于蓝黑滤镜、无来源烟雾、乱向百叶阴影或夸张荷兰角。"},
+      "extra_review": [{"en": "Practical light and shadow directions agree; dark areas remain readable; obstruction and contrast express information or power rather than decoration.", "zh-CN": "实用光与阴影方向一致，暗部可读，遮挡与反差承担信息或权力功能。"}]
+    },
+    {
+      "name": "romance-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "romance-design — distance, intimacy, and restrained warmth", "zh-CN": "romance-design｜距离、亲密与克制暖意"},
+      "purpose": {"en": "Translate romance into interpersonal distance, micro-actions, gaze, warm practical light, material intimacy, rhythm, restraint, and continuity.", "zh-CN": "把爱情转成人际距离、微动作、视线、暖色实用光、亲密材质、节奏、克制和连续性。"},
+      "standalone": {"en": "A romance `style_route`, intimacy and light parameters, negative constraints, and QC contract.", "zh-CN": "爱情 `style_route`、亲密与光影参数、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not manufacture intimacy with a pink filter, constant soft focus, or an unmotivated embrace.", "zh-CN": "不能用粉色滤镜、全程柔焦或无动机拥抱制造亲密。"},
+      "extra_review": [{"en": "Distance, gaze, touch, pauses, and light respond to the characters' actual relationship change; softness never erases readable action or material.", "zh-CN": "距离、视线、接触、停顿和光线响应真实关系变化；柔和不抹掉动作与材质。"}]
+    },
+    {
+      "name": "war-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "war-design — terrain, force, and combat causality", "zh-CN": "war-design｜地形、受力与战斗因果"},
+      "purpose": {"en": "Translate war into terrain, formation, weapon direction, cover, movement, impact, smoke and debris physics, logistics traces, sound, and continuity.", "zh-CN": "把战争转成地形、阵列、武器方向、掩体、运动、受力、烟尘物理、后勤痕迹、声音和连续性。"},
+      "standalone": {"en": "A war `style_route`, terrain/action parameters, negative constraints, and QC contract.", "zh-CN": "战争 `style_route`、地形/动作参数、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not provide real weapon-building instruction or make combat credible through clean hero posing and decorative explosions.", "zh-CN": "不提供真实武器制造指导，也不能靠整洁英雄姿势和装饰性爆炸让战斗可信。"},
+      "extra_review": [{"en": "Terrain, cover, weapon direction, action cause and reaction, debris, smoke, injuries, and movement routes agree; slow motion has a dramatic reason.", "zh-CN": "地形、掩体、武器方向、动作因果、碎屑、烟尘、伤情和移动路线一致；慢镜有剧情理由。"}]
+    },
+    {
+      "name": "wuxia-design", "family": "genre", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "wuxia-design — wuxia force, weapons, and Eastern space", "zh-CN": "wuxia-design｜武侠发力、兵器与东方空间"},
+      "purpose": {"en": "Translate wuxia into grounded force, weapon paths, footwork, cloth and hair response, architecture, Eastern materials, rhythm, sound, and continuity.", "zh-CN": "把武侠转成有支撑的发力、兵器路径、步法、衣发反馈、建筑、东方材质、节奏、声音和连续性。"},
+      "standalone": {"en": "A wuxia `style_route`, action/material parameters, negative constraints, and QC contract.", "zh-CN": "武侠 `style_route`、动作/材质参数、负向约束和 QC 合同。"},
+      "cannot": {"en": "It does not make action wuxia by removing gravity, allowing weapon intersections, or adding weightless cloth.", "zh-CN": "不能用失重轻功、兵器穿模或无重量衣摆冒充武侠。"},
+      "extra_review": [{"en": "Force begins from support and travels through the body and weapon; contact, reaction, cloth, hair, dust, and landing preserve weight and direction.", "zh-CN": "力量从支撑点出发，经身体传到兵器；接触、反应、衣发、尘土和落地保持重量与方向。"}]
+    },
+    {
+      "name": "produce-ai-video", "family": "video-production", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "produce-ai-video — qualified final video production", "zh-CN": "produce-ai-video｜合格成片生产"},
+      "purpose": {"en": "Turn an approved script or passage into a qualified, watchable AI-generated final video through directing, shots, generation, edit, sound, full playback, and repair.", "zh-CN": "通过导演、分镜、生成、剪辑、声音、完整回放和修复，把批准剧本或片段做成合格可观看 AI 成片。"},
+      "standalone": {"en": "A full production and validation contract; with the required host tools and permissions, an actual reviewed final video.", "zh-CN": "完整生产与验收合同；宿主工具和权限齐全时，可交付真实审核后的最终视频。"},
+      "cannot": {"en": "Installing the Skill alone does not supply models, credits, rights, editing tools, or a qualified video.", "zh-CN": "只安装 Skill 不会自动获得模型、额度、版权、剪辑工具或合格成片。"}
+    },
+    {
+      "name": "ai-short-drama-production", "family": "short-drama", "status": "packaged",
+      "status_label": {"en": "Packaged; not deployed", "zh-CN": "已打包；未部署"},
+      "title": {"en": "ai-short-drama-production — short-drama control contracts", "zh-CN": "ai-short-drama-production｜AI短剧控制合同"},
+      "purpose": {"en": "Turn approved creative decisions into traceable beat, asset, blocking, lighting, action, sketch, prompt, and QC control contracts for AI short-drama production.", "zh-CN": "把批准的创作决定编排为可追溯的节拍、资产、调度、布光、动作、草图、提示词和 QC 控制合同。"},
+      "standalone": {"en": "Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts.", "zh-CN": "针对已有决定的生产控制编排与缺口审计，也可单独交付六类控制合同中的任意一类。"},
+      "cannot": {"en": "It does not duplicate all director, asset, genre, generation, and QC abilities in one folder.", "zh-CN": "不会在一个文件夹里复制导演、资产、类型、生成和 QC 的全部能力。"}
+    },
+    {
+      "name": "web-design-director", "family": "web", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "web-design-director — product-native interface direction", "zh-CN": "web-design-director｜产品原生网页设计"},
+      "purpose": {"en": "Direct, review, or build a distinctive production-grade web interface from product truth through rendered verification.", "zh-CN": "从产品真实出发，完成有辨识度的生产级网页方向、审查或构建，并以真实渲染验证。"},
+      "standalone": {"en": "A complete interface direction or review; with code and browser access, a verified implementation slice.", "zh-CN": "完整界面方向或审查；有代码与浏览器能力时，可交付经验证的实现切片。"},
+      "cannot": {"en": "Without actual rendering and interaction review, it cannot claim visual implementation or user acceptance passed.", "zh-CN": "没有真实渲染和交互审核时，不能声称视觉实现或用户接受通过。"}
+    },
+    {
+      "name": "d-official-market-analysis", "family": "market", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "d-official-market-analysis — source-backed media research", "zh-CN": "d-official-market-analysis｜官方影视市场研究"},
+      "purpose": {"en": "Research film, short drama, animation, AI film, and adjacent media markets from current official and authoritative evidence for a defined decision.", "zh-CN": "围绕明确决策，用当前官方与权威证据研究影视、短剧、动画、AI影视及相邻市场。"},
+      "standalone": {"en": "A source plan, validated dataset, evidence table, analysis, report, and separately labeled knowledge candidate.", "zh-CN": "来源计划、校验数据集、证据表、分析报告和单独标记的知识候选。"},
+      "cannot": {"en": "Offline use cannot fabricate current market facts, and a completed report does not authorize semantic-layer writing.", "zh-CN": "离线时不能补造当前市场事实，报告完成也不授权语义层写入。"}
+    },
+    {
+      "name": "d-data-analysis-semantic-layer", "family": "semantic", "status": "deployed",
+      "status_label": {"en": "Deployed", "zh-CN": "已部署"},
+      "title": {"en": "d-data-analysis-semantic-layer — approved knowledge writing", "zh-CN": "d-data-analysis-semantic-layer｜批准后的知识写入"},
+      "purpose": {"en": "Validate, version, expire, preserve conflicts, and write approved analytical candidates into a semantic knowledge layer with a reconciled receipt.", "zh-CN": "校验、版本化、管理有效期、保留冲突，并把已批准分析候选写入语义知识层，核对真实回执。"},
+      "standalone": {"en": "Candidate review, validation, version/expiry planning, and a pending-write package; actual writing when the host capability and current approval exist.", "zh-CN": "候选审核、校验、版本/有效期规划和待写入包；宿主能力与本轮批准齐全时可实际写入。"},
+      "cannot": {"en": "No current approval or no write capability means it cannot claim that the knowledge base was updated.", "zh-CN": "没有本轮批准或没有写入能力时，不能声称知识库已经更新。"}
+    },
+    {
+      "name": "hard-sci-fi-visual-director", "family": "hard-scifi", "status": "experimental",
+      "status_label": {"en": "Experimental; not deployed; user visual review pending", "zh-CN": "实验；未部署；用户视觉审核待完成"},
+      "title": {"en": "hard-sci-fi-visual-director — evidence-grounded speculative design", "zh-CN": "hard-sci-fi-visual-director｜证据化硬科幻视觉设计"},
+      "purpose": {"en": "Derive original hard-science-fiction worlds, systems, organisms, equipment, interfaces, camera, and prompts from script truth, evidence, physics, production, and continuity.", "zh-CN": "从剧本事实、证据、物理、制作和连续性推导原创硬科幻世界、系统、生物、设备、界面、摄影机和提示词。"},
+      "standalone": {"en": "Research-driven visual diagnosis, derivation, bible, directing plan, and copy-ready prompt package for a defined scene or asset.", "zh-CN": "针对明确场景或资产的研究驱动视觉诊断、推导、圣经、导演方案和可复制提示词包。"},
+      "cannot": {"en": "It remains Experimental and cannot claim deployment, stable practice validation, generation success, or user visual approval.", "zh-CN": "仍是实验模块，不能声称已部署、实战稳定、生成成功或用户视觉通过。"}
+    }
+  ]
+}

@@ -17,8 +17,14 @@ REQUIRED_REPOSITORY_FILES = {
     "CONTACT.md",
     "docs/COMPATIBILITY.md",
     "docs/INSTALLATION.md",
+    "docs/SKILL_DESIGN_SYSTEM.md",
+    "docs/assets/review-loop.svg",
+    "docs/skill-contracts.json",
+    "docs/skills/INDEX.md",
     "scripts/build_skill_packages.py",
+    "scripts/generate_skill_guides.py",
     "scripts/install_skill.py",
+    "scripts/validate_skill_docs.py",
 }
 REQUIRED_COMPATIBILITY_TERMS = {
     ".codex/skills",
@@ -91,6 +97,41 @@ def validate_local_dependencies(skill: Path) -> list[str]:
     return errors
 
 
+def validate_public_reading_routes(skills: list[Path]) -> list[str]:
+    """Keep the GitHub reading guide, runtime source, and ZIP visible for every module."""
+    errors: list[str] = []
+    catalog_path = ROOT / "SKILL_CATALOG.md"
+    index_path = ROOT / "docs" / "skills" / "INDEX.md"
+    readme_path = ROOT / "README.md"
+    if not all(path.is_file() for path in (catalog_path, index_path, readme_path)):
+        return errors
+
+    catalog = catalog_path.read_text(encoding="utf-8-sig")
+    index = index_path.read_text(encoding="utf-8-sig")
+    readme = readme_path.read_text(encoding="utf-8-sig")
+    for skill in skills:
+        name = skill.name
+        runtime = skill.relative_to(ROOT).as_posix() + "/SKILL.md"
+        design_en = f"docs/skills/en/{name}.md"
+        design_zh = f"zh-CN/{name}.md"
+        zip_name = f"{name}.zip"
+        if design_en not in catalog:
+            errors.append(f"SKILL_CATALOG.md missing human design route for {name}")
+        if runtime not in catalog:
+            errors.append(f"SKILL_CATALOG.md missing runtime SKILL.md route for {name}")
+        if zip_name not in catalog:
+            errors.append(f"SKILL_CATALOG.md missing standalone ZIP route for {name}")
+        if f"en/{name}.md" not in index or design_zh not in index:
+            errors.append(f"docs/skills/INDEX.md missing bilingual routes for {name}")
+        if runtime not in index:
+            errors.append(f"docs/skills/INDEX.md missing runtime route for {name}")
+
+    for required in ("docs/skills/INDEX.md", "docs/SKILL_DESIGN_SYSTEM.md", "38"):
+        if required not in readme:
+            errors.append(f"README.md missing GitHub reading term: {required}")
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
@@ -159,6 +200,8 @@ def main() -> int:
                 errors.append(f"{agent_file.relative_to(ROOT)}: default_prompt must mention ${skill.name}")
         errors.extend(validate_local_dependencies(skill))
 
+    errors.extend(validate_public_reading_routes(skills))
+
     markdown_files = sorted(
         path for path in ROOT.rglob("*.md") if ".git" not in path.parts and not path.name.endswith(".next.md")
     )
@@ -183,6 +226,7 @@ def main() -> int:
     experimental_count = sum(1 for path in skills if path.parent.name == "experimental")
     print(f"Skills checked: {len(skills)} (stable={stable_count}, experimental={experimental_count})")
     print(f"Markdown files checked: {len(markdown_files)}")
+    print("GitHub design guides required: 38 (19 English + 19 Simplified Chinese)")
     print("Portable hosts documented: Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy, generic")
     print(f"Warnings: {len(warnings)}")
     for warning in sorted(set(warnings)):
