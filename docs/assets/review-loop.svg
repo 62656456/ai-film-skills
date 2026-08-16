@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Open Film Skills review and return loop</title>
+  <desc id="desc">Five stages run from bounded input to an evidence-backed handoff. A red return line sends failed review back to the earliest broken decision.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1">
+      <stop offset="0" stop-color="#F7F2E8"/>
+      <stop offset="1" stop-color="#EEE4D3"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37A6B5"/>
+    </marker>
+    <marker id="returnArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D94B3D"/>
+    </marker>
+    <style>
+      .label{font:700 20px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#182025}
+      .small{font:500 14px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#47545B}
+      .index{font:700 14px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#F7F2E8}
+      .gate{fill:#182025;stroke:#2B3940;stroke-width:2}
+      .paper{fill:url(#paper);stroke:#B9AA91;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1200" height="420" rx="22" fill="#11181C"/>
+  <path d="M80 205 H1120" stroke="#37A6B5" stroke-width="5" marker-end="url(#arrow)"/>
+  <g transform="translate(55 112)">
+    <rect class="paper" width="180" height="150" rx="8"/>
+    <circle cx="28" cy="28" r="17" fill="#182025"/><text x="28" y="33" text-anchor="middle" class="index">01</text>
+    <text x="90" y="64" text-anchor="middle" class="label">BOUND INPUT</text>
+    <text x="90" y="91" text-anchor="middle" class="small">scope · authority · facts</text>
+  </g>
+  <g transform="translate(285 112)">
+    <rect class="paper" width="180" height="150" rx="8"/>
+    <circle cx="28" cy="28" r="17" fill="#182025"/><text x="28" y="33" text-anchor="middle" class="index">02</text>
+    <text x="90" y="64" text-anchor="middle" class="label">DESIGN</text>
+    <text x="90" y="91" text-anchor="middle" class="small">causal decisions</text>
+  </g>
+  <g transform="translate(515 112)">
+    <rect class="paper" width="180" height="150" rx="8"/>
+    <circle cx="28" cy="28" r="17" fill="#182025"/><text x="28" y="33" text-anchor="middle" class="index">03</text>
+    <text x="90" y="64" text-anchor="middle" class="label">VISIBLE DRAFT</text>
+    <text x="90" y="91" text-anchor="middle" class="small">something judgeable</text>
+  </g>
+  <g transform="translate(745 112)">
+    <rect class="gate" width="180" height="150" rx="8"/>
+    <circle cx="28" cy="28" r="17" fill="#D94B3D"/><text x="28" y="33" text-anchor="middle" class="index">04</text>
+    <text x="90" y="64" text-anchor="middle" class="label" fill="#F7F2E8" style="fill:#F7F2E8">REVIEW GATE</text>
+    <text x="90" y="91" text-anchor="middle" class="small" fill="#C8D2D6" style="fill:#C8D2D6">fail → locate cause</text>
+  </g>
+  <g transform="translate(975 112)">
+    <rect class="paper" width="180" height="150" rx="8"/>
+    <circle cx="28" cy="28" r="17" fill="#182025"/><text x="28" y="33" text-anchor="middle" class="index">05</text>
+    <text x="90" y="64" text-anchor="middle" class="label">PASS + HANDOFF</text>
+    <text x="90" y="91" text-anchor="middle" class="small">named evidence</text>
+  </g>
+  <path d="M835 280 V342 H375 V282" fill="none" stroke="#D94B3D" stroke-width="4" stroke-dasharray="10 8" marker-end="url(#returnArrow)"/>
+  <text x="605" y="374" text-anchor="middle" class="small" fill="#F08A7E" style="fill:#F08A7E;font-weight:700">RETURN TO THE EARLIEST BROKEN DECISION — KEEP APPROVED CONSTRAINTS</text>
+</svg>

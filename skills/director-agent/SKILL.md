@@ -372,7 +372,7 @@ When filesystem access is available, use:
 - `references/screenplay-exemplar-benchmarks.md` for source-backed calibration against real excellent screenplays without copying their characters, plots, or dialogue.
 - `references/screenplay-cold-read-protocol.md` for an isolated reader auditing the raw screenplay without the writer's rationale.
 - `references/local-knowledge-map.md` for the user's local knowledge base.
-- `../ai-film-knowledge-base/knowledge` (when checked out beside this repository) as an optional local knowledge base.
+- A user-configured checkout of the companion `ai-film-knowledge-base/knowledge` corpus, when its location is explicitly supplied. Do not assume a sibling runtime path.
 - Bundled references under `skills/director-agent/references/` as the public reasoning spine.
 - A user-configured workbench state file; this repository does not ship personal runtime state.
 
