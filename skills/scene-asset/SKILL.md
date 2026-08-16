@@ -143,7 +143,7 @@ description: >
 第二层（scene）：空间折叠、门窗/楼梯不连通、透视错误、无来源雾光、无尺度参照、固定标志漂移。  
 第三层（画质）：CG感、3D animation、cartoon、anime、game render、plastic texture、waxy surface、low resolution、过曝、欠曝、过度锐化。
 
-十条通用反面案例与三层负向写法详见 NEGATIVE-CASE-BOOK.md；本节的专属负向与之叠加，不可互相替代。
+十条通用反面案例与三层负向写法详见 `references/NEGATIVE-CASE-BOOK.md`；本节的专属负向与之叠加，不可互相替代。
 
 ## 10. 注入接口
 
