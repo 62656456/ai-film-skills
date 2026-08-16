@@ -95,6 +95,7 @@ The information architecture was informed by [OmniRoute](https://github.com/dieg
 - Report accidental secrets or private information through [SECURITY.md](SECURITY.md), not a public issue.
 - See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for excluded and adapted material.
 - Check the exact public boundary in [PUBLICATION_SCOPE.md](PUBLICATION_SCOPE.md).
+- Run `python scripts/validate_repository.py` before submitting changes.
 
 ## License
 
