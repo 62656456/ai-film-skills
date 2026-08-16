@@ -1,0 +1,4 @@
+interface:
+  display_name: "战争视觉设计"
+  short_description: "为战争场景提供可观察的镜头、空间、爆炸、动作、材质与连续性参数。"
+  default_prompt: "Use $war-design to design an observable war visual direction."

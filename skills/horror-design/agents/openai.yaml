@@ -1,0 +1,4 @@
+interface:
+  display_name: "恐怖视觉设计"
+  short_description: "为恐怖场景提供可观察的镜头、空间、光线、动作、材质与连续性参数。"
+  default_prompt: "Use $horror-design to design an observable horror visual direction."

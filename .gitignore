@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+build/
+_scratch/
+_temp/
+.env
+.env.*
+!.env.example
+*.log

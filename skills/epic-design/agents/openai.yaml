@@ -1,0 +1,4 @@
+interface:
+  display_name: "史诗视觉设计"
+  short_description: "为史诗场景提供可观察的尺度、构图、光线、空间、动作、材质与连续性参数。"
+  default_prompt: "Use $epic-design to design an observable epic visual direction."

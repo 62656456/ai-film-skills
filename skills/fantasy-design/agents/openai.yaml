@@ -1,0 +1,4 @@
+interface:
+  display_name: "奇幻视觉设计"
+  short_description: "为奇幻世界提供可观察的镜头、色彩、空间、动作、材质与连续性参数。"
+  default_prompt: "Use $fantasy-design to design an observable fantasy visual direction."

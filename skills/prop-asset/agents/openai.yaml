@@ -1,0 +1,4 @@
+interface:
+  display_name: "道具资产设计"
+  short_description: "生成可用于连续叙事的道具设定与物品参考图任务合同。"
+  default_prompt: "Use $prop-asset to define a continuity-safe prop reference asset."

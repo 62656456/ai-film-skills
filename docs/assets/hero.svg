@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">Open Film Skills</title>
+  <desc id="desc">A cinematic production route connecting story, assets, visual language, shots, production, and validation.</desc>
+  <rect width="1200" height="460" fill="#0B0F14"/>
+  <g stroke="#1F2935" stroke-width="1" opacity="0.7"><path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200"/><path d="M120 0V460M300 0V460M480 0V460M660 0V460M840 0V460M1020 0V460"/></g>
+  <rect x="54" y="42" width="148" height="28" rx="14" fill="#FF6B35"/>
+  <text x="128" y="61" text-anchor="middle" fill="#0B0F14" font-family="Arial, Noto Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="1.4">OPEN TOOLKIT</text>
+  <text x="54" y="132" fill="#F4F0E8" font-family="Arial, Noto Sans, sans-serif" font-size="58" font-weight="800" letter-spacing="-1.5">OPEN FILM SKILLS</text>
+  <text x="56" y="174" fill="#AAB4C0" font-family="Arial, Noto Sans, sans-serif" font-size="20">Directing intelligence for AI-native filmmaking</text>
+  <text x="56" y="206" fill="#6F7C8C" font-family="Arial, Noto Sans, sans-serif" font-size="15">故事因果 · 角色行动 · 空间连续 · 镜头设计 · 生产验证</text>
+  <path d="M78 320H1122" stroke="#455260" stroke-width="3"/>
+  <g font-family="Arial, Noto Sans, sans-serif">
+    <g transform="translate(88 320)"><circle r="14" fill="#FF6B35"/><circle r="4" fill="#0B0F14"/><text x="0" y="48" text-anchor="middle" fill="#F4F0E8" font-size="14" font-weight="700">STORY</text><text x="0" y="69" text-anchor="middle" fill="#7F8C9B" font-size="11">cause · choice</text></g>
+    <g transform="translate(292 320)"><circle r="14" fill="#46C2CB"/><circle r="4" fill="#0B0F14"/><text x="0" y="48" text-anchor="middle" fill="#F4F0E8" font-size="14" font-weight="700">ASSETS</text><text x="0" y="69" text-anchor="middle" fill="#7F8C9B" font-size="11">person · place · prop</text></g>
+    <g transform="translate(496 320)"><circle r="14" fill="#D6A756"/><circle r="4" fill="#0B0F14"/><text x="0" y="48" text-anchor="middle" fill="#F4F0E8" font-size="14" font-weight="700">VISUAL DNA</text><text x="0" y="69" text-anchor="middle" fill="#7F8C9B" font-size="11">light · material · space</text></g>
+    <g transform="translate(700 320)"><circle r="14" fill="#F4F0E8"/><circle r="4" fill="#0B0F14"/><text x="0" y="48" text-anchor="middle" fill="#F4F0E8" font-size="14" font-weight="700">SHOTS</text><text x="0" y="69" text-anchor="middle" fill="#7F8C9B" font-size="11">blocking · camera</text></g>
+    <g transform="translate(904 320)"><circle r="14" fill="#5B8CFF"/><circle r="4" fill="#0B0F14"/><text x="0" y="48" text-anchor="middle" fill="#F4F0E8" font-size="14" font-weight="700">PRODUCTION</text><text x="0" y="69" text-anchor="middle" fill="#7F8C9B" font-size="11">generate · edit</text></g>
+    <g transform="translate(1112 320)"><circle r="14" fill="#7EE2A8"/><circle r="4" fill="#0B0F14"/><text x="0" y="48" text-anchor="middle" fill="#F4F0E8" font-size="14" font-weight="700">VALIDATE</text><text x="0" y="69" text-anchor="middle" fill="#7F8C9B" font-size="11">evidence · review</text></g>
+  </g>
+  <text x="1146" y="54" text-anchor="end" fill="#596675" font-family="Consolas, monospace" font-size="12">18 PACKAGED / 1 EXPERIMENTAL</text>
+  <rect x="54" y="422" width="1092" height="2" fill="#1F2935"/>
+</svg>

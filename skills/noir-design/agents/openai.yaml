@@ -1,0 +1,4 @@
+interface:
+  display_name: "黑色类型视觉设计"
+  short_description: "为犯罪悬疑场景提供可观察的镜头、光线、空间、动作、材质与连续性参数。"
+  default_prompt: "Use $noir-design to design an observable noir visual direction."

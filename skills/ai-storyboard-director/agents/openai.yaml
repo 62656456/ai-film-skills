@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI分镜导演"
+  short_description: "理解剧本因果并设计可读分镜、多机位与视频生成提示词。"
+  default_prompt: "Use $ai-storyboard-director to turn an approved script into readable shots and production prompts."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "赛博朋克视觉设计"
+  short_description: "为赛博朋克场景提供可观察的镜头、色彩、空间、动作、材质与连续性参数。"
+  default_prompt: "Use $cyberpunk-design to design an observable cyberpunk visual direction."

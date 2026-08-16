@@ -1,0 +1,21 @@
+{
+  "version": "5.4.1",
+  "snapshot_date": "2026-08-07",
+  "status": "exact_pre-5.4.2_snapshot",
+  "files": [
+    {
+      "target": "../../SKILL.md",
+      "snapshot": "SKILL.snapshot.md",
+      "sha256": "BD458DD1BAB20185896C33321E9BBB94EADC624DC2F1AE136EFC56969362B225"
+    },
+    {
+      "target": "../../references/production-contract.md",
+      "snapshot": "production-contract.snapshot.md",
+      "sha256": "09C8118A42AF9071D4BDECA2033C344B36ED230DB37A1831FEF1890D9CE1FFCB"
+    }
+  ],
+  "remove_on_full_rollback": [
+    "../../references/shot-design-engine.md"
+  ],
+  "rollback_rule": "Only restore on explicit user request. Verify snapshot hashes before copying, remove only listed 5.4.2-only files, and verify target hashes after copying."
+}

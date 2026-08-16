@@ -1,0 +1,7 @@
+interface:
+  display_name: "网页设计总监"
+  short_description: "负责独特视觉方向、产品体验、响应式与前端工程质量的统一决策"
+  default_prompt: "使用 $web-design-director 对这个网页产品做设计总监级评审，并提出独特且可实现的方案。"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,42 @@
+name: Skill proposal
+description: Propose a new Skill or a bounded improvement to an existing one.
+title: "[Skill]: "
+labels: [enhancement]
+body:
+  - type: input
+    id: outcome
+    attributes:
+      label: Observable outcome
+      description: What should a user be able to produce or decide?
+    validations:
+      required: true
+  - type: textarea
+    id: trigger
+    attributes:
+      label: Triggering request
+      description: Give one realistic user request that should invoke this Skill.
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Proposed output contract
+      description: List the required deliverables and minimum evidence.
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Requested starting status
+      options:
+        - Experimental
+        - Packaged
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Publication boundary
+      options:
+        - label: I confirm this proposal contains no private, company, client, credential, or unlicensed third-party material.
+          required: true

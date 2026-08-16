@@ -1,0 +1,4 @@
+interface:
+  display_name: "爱情视觉设计"
+  short_description: "为爱情场景提供可观察的镜头距离、光线、动作、材质、情绪与连续性参数。"
+  default_prompt: "Use $romance-design to design an observable romance visual direction."

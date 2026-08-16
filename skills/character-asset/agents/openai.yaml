@@ -1,0 +1,4 @@
+interface:
+  display_name: "角色资产设计"
+  short_description: "生成可用于AI影视生产的人物设定与角色参考图任务合同。"
+  default_prompt: "Use $character-asset to define a production-ready character reference asset."

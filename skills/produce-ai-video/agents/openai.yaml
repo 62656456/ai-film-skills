@@ -1,0 +1,6 @@
+interface:
+  display_name: "自主AI成片导演"
+  short_description: "从剧本理解、导演分镜、生成剪辑到合格视频交付的完整自主工作流"
+  default_prompt: "Use $produce-ai-video to turn this script into a qualified, watchable final video."
+policy:
+  allow_implicit_invocation: true

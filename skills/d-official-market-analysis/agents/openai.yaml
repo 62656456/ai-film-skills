@@ -1,0 +1,4 @@
+interface:
+  display_name: "D｜官方市场分析"
+  short_description: "抓取、核验并分析影视市场官方与权威数据，生成可追溯报告"
+  default_prompt: "使用 $d-official-market-analysis 基于最新可验证证据分析当前影视内容市场。"

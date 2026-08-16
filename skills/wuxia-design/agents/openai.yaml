@@ -1,0 +1,4 @@
+interface:
+  display_name: "武侠视觉设计"
+  short_description: "提供武侠场景的镜头空间动作兵器材质与东方视觉参数。"
+  default_prompt: "Use $wuxia-design to design an observable wuxia visual direction."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "导演智能体"
+  short_description: "负责剧本创作修改、人物因果、自然对白与分镜前导演判断。"
+  default_prompt: "Use $director-agent to develop or revise a script before storyboard production."

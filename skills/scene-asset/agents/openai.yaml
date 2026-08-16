@@ -1,0 +1,4 @@
+interface:
+  display_name: "场景资产设计"
+  short_description: "生成可用于多机位连续拍摄的场景设定与环境参考图合同。"
+  default_prompt: "Use $scene-asset to define a reusable scene reference asset."

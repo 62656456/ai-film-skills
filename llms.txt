@@ -1,0 +1,16 @@
+# Open Film Skills
+
+Repository: https://github.com/62656456/ai-film-skills
+
+Purpose: reusable Skills for AI film writing, directing, asset definition, visual language, storyboard design, production, web design, and source-backed research.
+
+Primary entry points:
+- skills/director-agent/SKILL.md
+- skills/ai-storyboard-director/SKILL.md
+- skills/character-asset/SKILL.md
+- skills/scene-asset/SKILL.md
+- skills/prop-asset/SKILL.md
+- skills/produce-ai-video/SKILL.md
+- SKILL_CATALOG.md
+
+Status rule: do not describe packaged or experimental Skills as production-stable. Do not restore retired Skills. Read each selected SKILL.md completely before use, then load only the references it explicitly requires.

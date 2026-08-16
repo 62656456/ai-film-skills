@@ -1,0 +1,4 @@
+interface:
+  display_name: "D｜数据分析语义层"
+  short_description: "仅在用户明确审批后版本化吸纳已验证的影视市场研究结论"
+  default_prompt: "使用 $d-data-analysis-semantic-layer 审核并写入我已明确批准的 D 知识库候选内容。"

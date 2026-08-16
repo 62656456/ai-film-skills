@@ -1,0 +1,5 @@
+interface:
+  display_name: "AI Short Drama Production"
+  short_description: "Controllable AI short-drama production workflow"
+  default_prompt: "Use $ai-short-drama-production to plan a controllable AI short-drama scene from story to QC."
+
