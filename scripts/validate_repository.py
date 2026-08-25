@@ -3,10 +3,16 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
 from pathlib import Path
 from urllib.parse import unquote
+
+import yaml
+from yaml.constructor import ConstructorError
+
+from repository_safety import SafetyError, is_link_like, is_within, safe_source_files
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,7 +20,15 @@ SKILL_ROOTS = (ROOT / "skills", ROOT / "experimental")
 FORBIDDEN_SKILL_DIRS = {"frontend-design", "sci-fi-design", "xianxia-visual-director"}
 ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
 REQUIRED_REPOSITORY_FILES = {
+    ".github/workflows/package-release.yml",
+    ".github/workflows/validate.yml",
     "CONTACT.md",
+    "CONTRIBUTING.md",
+    "PUBLICATION_SCOPE.md",
+    "README.md",
+    "RELEASE_NOTES.md",
+    "SECURITY.md",
+    "SKILL_CATALOG.md",
     "docs/COMPATIBILITY.md",
     "docs/INSTALLATION.md",
     "docs/SKILL_DESIGN_SYSTEM.md",
@@ -24,7 +38,9 @@ REQUIRED_REPOSITORY_FILES = {
     "scripts/build_skill_packages.py",
     "scripts/generate_skill_guides.py",
     "scripts/install_skill.py",
+    "scripts/repository_safety.py",
     "scripts/validate_skill_docs.py",
+    "requirements-dev.txt",
 }
 REQUIRED_COMPATIBILITY_TERMS = {
     ".codex/skills",
@@ -48,9 +64,38 @@ MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 LOCAL_DEPENDENCY = re.compile(
     r"(?<![A-Za-z0-9_/-])((?:references|scripts)/[A-Za-z0-9_.\-/]+\.(?:md|json|jsonl|py|sh|ps1))"
 )
+EXCLUDED_REPOSITORY_PARTS = {
+    ".git", ".venv", ".pytest_cache", "__pycache__", "build", "dist", "_scratch", "_temp"
+}
 
 
-def parse_frontmatter(path: Path) -> tuple[dict[str, str], set[str], str | None]:
+class UniqueKeyLoader(yaml.SafeLoader):
+    """Safe YAML loader that rejects duplicate mapping keys."""
+
+
+def _construct_unique_mapping(
+    loader: UniqueKeyLoader, node: yaml.nodes.MappingNode, deep: bool = False
+) -> dict[object, object]:
+    mapping: dict[object, object] = {}
+    for key_node, value_node in node.value:
+        key = loader.construct_object(key_node, deep=deep)
+        if key in mapping:
+            raise ConstructorError(
+                "while constructing a mapping",
+                node.start_mark,
+                f"found duplicate key {key!r}",
+                key_node.start_mark,
+            )
+        mapping[key] = loader.construct_object(value_node, deep=deep)
+    return mapping
+
+
+UniqueKeyLoader.add_constructor(
+    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, _construct_unique_mapping
+)
+
+
+def parse_frontmatter(path: Path) -> tuple[dict[str, object], set[str], str | None]:
     text = path.read_text(encoding="utf-8-sig")
     lines = text.splitlines()
     if not lines or lines[0].strip() != "---":
@@ -60,15 +105,32 @@ def parse_frontmatter(path: Path) -> tuple[dict[str, str], set[str], str | None]
     except StopIteration:
         return {}, set(), "missing closing frontmatter delimiter"
 
-    values: dict[str, str] = {}
-    keys: set[str] = set()
-    for line in lines[1:end]:
-        match = re.match(r"^([A-Za-z0-9_-]+):\s*(.*)$", line)
-        if match:
-            key, value = match.groups()
-            keys.add(key)
-            values[key] = value.strip().strip("'\"")
-    return values, keys, None
+    try:
+        payload = yaml.load("\n".join(lines[1:end]), Loader=UniqueKeyLoader)
+    except yaml.YAMLError as exc:
+        return {}, set(), f"invalid YAML frontmatter: {exc}"
+    if not isinstance(payload, dict):
+        return {}, set(), "frontmatter must be a YAML mapping"
+    if not all(isinstance(key, str) for key in payload):
+        return {}, set(), "frontmatter keys must be strings"
+    values = {str(key): value for key, value in payload.items()}
+    return values, set(values), None
+
+
+def expected_skill_locations() -> dict[str, str]:
+    data = json.loads((ROOT / "docs" / "skill-contracts.json").read_text(encoding="utf-8"))
+    items = data.get("skills")
+    if not isinstance(items, list):
+        raise ValueError("docs/skill-contracts.json must contain a skills list")
+    expected: dict[str, str] = {}
+    for item in items:
+        if not isinstance(item, dict) or not isinstance(item.get("name"), str):
+            raise ValueError("every skill contract must be an object with a string name")
+        name = item["name"]
+        if name in expected:
+            raise ValueError(f"duplicate skill contract: {name}")
+        expected[name] = "experimental" if item.get("status") == "experimental" else "skills"
+    return expected
 
 
 def validate_markdown_links(markdown_files: list[Path]) -> list[str]:
@@ -80,8 +142,14 @@ def validate_markdown_links(markdown_files: list[Path]) -> list[str]:
             if not target or target.startswith(("#", "http://", "https://", "mailto:")):
                 continue
             target = unquote(target.split("#", 1)[0])
-            if target and not (path.parent / target).resolve().exists():
-                errors.append(f"broken relative link: {path.relative_to(ROOT)} -> {raw_target}")
+            if target:
+                resolved = (path.parent / target).resolve()
+                if not is_within(resolved, ROOT.resolve()):
+                    errors.append(
+                        f"relative link escapes repository: {path.relative_to(ROOT)} -> {raw_target}"
+                    )
+                elif not resolved.exists():
+                    errors.append(f"broken relative link: {path.relative_to(ROOT)} -> {raw_target}")
     return errors
 
 
@@ -103,7 +171,10 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
     catalog_path = ROOT / "SKILL_CATALOG.md"
     index_path = ROOT / "docs" / "skills" / "INDEX.md"
     readme_path = ROOT / "README.md"
-    if not all(path.is_file() for path in (catalog_path, index_path, readme_path)):
+    missing_routes = [path for path in (catalog_path, index_path, readme_path) if not path.is_file()]
+    if missing_routes:
+        for path in missing_routes:
+            errors.append(f"missing public reading route: {path.relative_to(ROOT)}")
         return errors
 
     catalog = catalog_path.read_text(encoding="utf-8-sig")
@@ -126,7 +197,8 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
         if runtime not in index:
             errors.append(f"docs/skills/INDEX.md missing runtime route for {name}")
 
-    for required in ("docs/skills/INDEX.md", "docs/SKILL_DESIGN_SYSTEM.md", "38"):
+    guide_count = str(len(skills) * 2)
+    for required in ("docs/skills/INDEX.md", "docs/SKILL_DESIGN_SYSTEM.md", guide_count):
         if required not in readme:
             errors.append(f"README.md missing GitHub reading term: {required}")
     return errors
@@ -150,6 +222,7 @@ def main() -> int:
             if term not in compatibility_text:
                 errors.append(f"compatibility guide is missing: {term}")
 
+    actual_locations: dict[str, str] = {}
     for skill_root in SKILL_ROOTS:
         if not skill_root.is_dir():
             errors.append(f"missing directory: {skill_root.relative_to(ROOT)}")
@@ -157,13 +230,29 @@ def main() -> int:
         for child in sorted(p for p in skill_root.iterdir() if p.is_dir()):
             if (child / "SKILL.md").exists():
                 skills.append(child)
+                actual_locations[child.name] = skill_root.name
 
     names = {path.name for path in skills}
     forbidden = sorted(names & FORBIDDEN_SKILL_DIRS)
     if forbidden:
         errors.append("forbidden Skill directories present: " + ", ".join(forbidden))
-    if len(skills) != 19:
-        errors.append(f"expected 19 Skills (18 stable + 1 experimental), found {len(skills)}")
+    try:
+        expected_locations = expected_skill_locations()
+    except (OSError, json.JSONDecodeError, ValueError) as exc:
+        expected_locations = {}
+        errors.append(f"invalid skill contract registry: {exc}")
+    missing_skills = sorted(set(expected_locations) - set(actual_locations))
+    extra_skills = sorted(set(actual_locations) - set(expected_locations))
+    if missing_skills:
+        errors.append("contracted Skills missing from repository: " + ", ".join(missing_skills))
+    if extra_skills:
+        errors.append("unregistered Skill directories present: " + ", ".join(extra_skills))
+    for name in sorted(set(expected_locations) & set(actual_locations)):
+        if expected_locations[name] != actual_locations[name]:
+            errors.append(
+                f"Skill status location mismatch for {name}: expected "
+                f"{expected_locations[name]}, found {actual_locations[name]}"
+            )
 
     for skill in skills:
         rel = skill.relative_to(ROOT)
@@ -186,7 +275,7 @@ def main() -> int:
                 f"{skill_file.relative_to(ROOT)}: name {values.get('name')!r} does not match directory"
             )
         description = values.get("description", "")
-        if not description or len(description) > 1024:
+        if not isinstance(description, str) or not description.strip() or len(description) > 1024:
             errors.append(f"{skill_file.relative_to(ROOT)}: description must be 1-1024 characters")
 
         # Optional Codex metadata must never become a dependency for other hosts.
@@ -199,17 +288,29 @@ def main() -> int:
             if f"${skill.name}" not in agent_text:
                 errors.append(f"{agent_file.relative_to(ROOT)}: default_prompt must mention ${skill.name}")
         errors.extend(validate_local_dependencies(skill))
+        try:
+            safe_source_files(skill)
+        except (OSError, SafetyError) as exc:
+            errors.append(f"unsafe Skill source tree {rel}: {exc}")
 
     errors.extend(validate_public_reading_routes(skills))
 
+    repository_paths = [
+        path
+        for path in ROOT.rglob("*")
+        if not (set(path.relative_to(ROOT).parts) & EXCLUDED_REPOSITORY_PARTS)
+    ]
+    for path in repository_paths:
+        if is_link_like(path):
+            errors.append(f"repository links and junctions are forbidden: {path.relative_to(ROOT)}")
     markdown_files = sorted(
-        path for path in ROOT.rglob("*.md") if ".git" not in path.parts and not path.name.endswith(".next.md")
+        path for path in repository_paths if path.is_file() and path.suffix.lower() == ".md" and not path.name.endswith(".next.md")
     )
     errors.extend(validate_markdown_links(markdown_files))
 
     scan_files = [
         path
-        for path in ROOT.rglob("*")
+        for path in repository_paths
         if path.is_file()
         and ".git" not in path.parts
         and path.suffix.lower() in {".md", ".yaml", ".yml", ".json", ".py", ".txt"}
@@ -226,7 +327,10 @@ def main() -> int:
     experimental_count = sum(1 for path in skills if path.parent.name == "experimental")
     print(f"Skills checked: {len(skills)} (stable={stable_count}, experimental={experimental_count})")
     print(f"Markdown files checked: {len(markdown_files)}")
-    print("GitHub design guides required: 38 (19 English + 19 Simplified Chinese)")
+    print(
+        f"GitHub design guides required: {len(skills) * 2} "
+        f"({len(skills)} English + {len(skills)} Simplified Chinese)"
+    )
     print("Portable hosts documented: Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy, generic")
     print(f"Warnings: {len(warnings)}")
     for warning in sorted(set(warnings)):

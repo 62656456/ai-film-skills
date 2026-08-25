@@ -9,6 +9,8 @@ import sys
 from pathlib import Path
 from urllib.parse import unquote
 
+from repository_safety import SafetyError, is_within, package_source_files
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACTS = ROOT / "docs" / "skill-contracts.json"
@@ -73,10 +75,17 @@ def main() -> int:
                 if not target or target.startswith(("http://", "https://", "mailto:")):
                     continue
                 resolved = (page.parent / target).resolve()
-                if not resolved.exists():
+                if not is_within(resolved, ROOT.resolve()):
+                    errors.append(f"guide link escapes repository: {page.relative_to(ROOT)} -> {raw}")
+                elif not resolved.exists():
                     errors.append(f"broken guide link: {page.relative_to(ROOT)} -> {raw}")
                 linked.add(resolved)
-            for source in sorted(path for path in skill.rglob("*") if path.is_file()):
+            try:
+                sources = package_source_files(skill)
+            except (OSError, SafetyError) as exc:
+                errors.append(f"unsafe Skill source tree {skill.relative_to(ROOT)}: {exc}")
+                sources = []
+            for source in sources:
                 if source.resolve() not in linked:
                     errors.append(f"{page.relative_to(ROOT)}: packaged file is not linked: {source.relative_to(skill)}")
 
@@ -102,7 +111,11 @@ def main() -> int:
 
     print(f"Contract entries: {len(manifest)}")
     print(f"Guides expected: {len(manifest) * len(LOCALES)}")
-    print(f"Packaged source files covered: {sum(1 for skill in skills.values() for path in skill.rglob('*') if path.is_file())}")
+    try:
+        packaged_count = sum(len(package_source_files(skill)) for skill in skills.values())
+    except (OSError, SafetyError):
+        packaged_count = 0
+    print(f"Packaged source files covered: {packaged_count}")
     print(f"Errors: {len(errors)}")
     for error in errors:
         print(f"ERROR: {error}")

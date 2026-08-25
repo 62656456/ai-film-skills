@@ -12,16 +12,28 @@ jobs:
   package:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: "3.12"
+      - name: Install repository validation dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Run negative and regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Regenerate and verify Skill guides
+        run: |
+          python scripts/generate_skill_guides.py
+          git diff --exit-code -- docs/skills
+      - name: Validate bilingual Skill guides
+        run: python scripts/validate_skill_docs.py
       - name: Validate repository
         run: python scripts/validate_repository.py
       - name: Build standalone packages
         run: python scripts/build_skill_packages.py --include-experimental --output dist/skills
+      - name: Check release manifest
+        run: python -c "import json,pathlib; c=json.loads(pathlib.Path('docs/skill-contracts.json').read_text()); d=json.loads(pathlib.Path('dist/skills/manifest.json').read_text()); assert d['stable_skill_count']==sum(x['status']!='experimental' for x in c['skills']); assert d['experimental_skill_count']==sum(x['status']=='experimental' for x in c['skills']); assert d['source_tree_state']=='clean'; assert d['source_commit']; assert d['contract_sha256']"
       - name: Upload workflow artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: standalone-skills
           path: dist/skills/*
@@ -29,4 +41,4 @@ jobs:
         if: github.event_name == 'release'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "${{ github.event.release.tag_name }}" dist/skills/* --clobber
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/skills/*

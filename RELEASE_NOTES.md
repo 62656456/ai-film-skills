@@ -1,5 +1,27 @@
 # Release notes
 
+## v1.2.0 — 2026-08-25
+
+Safety hardening and 5.4.3 testing-candidate release.
+
+- Promoted the existing `ai-storyboard-director` 5.4.2 source label from candidate wording to the current formal default while preserving the complete 5.4.1 rollback snapshot and the pre-formalization 5.4.2 candidate snapshot.
+- Added `ai-storyboard-director-motion-lab` 5.4.3 under `experimental/`, visibly labeled **Testing**. It keeps `policy.allow_implicit_invocation: false`, requires deliberate experimental installation, stays outside the complete-studio ZIP, and does not replace formal 5.4.2.
+- Expanded the public contract registry and generated design system to 20 modules and 40 English / Simplified Chinese guides.
+- Release packaging now produces 20 individual Skill ZIPs, one stable-only complete-studio ZIP, and one manifest; both experimental ZIPs remain opt-in and outside the complete archive.
+- Replaced unrestricted package-output deletion with an owned-output boundary, dangerous-root rejection, staging builds, atomic replacement, and rollback on swap failure.
+- Packaging and installation now reject symbolic links, Windows junctions, and any resolved source path outside its standalone Skill root.
+- Hardened the semantic-candidate validator against empty datasets, non-object JSON, blank required values, malformed URLs, non-strict dates, duplicate IDs, invalid version/section formats, and inconsistent date order. Optional `--as-of` validation checks review and expiry state without granting knowledge-write approval.
+- Corrected the existing urban-romance saturation record from `有效` to `待复查` because its recorded `review_on` date had passed; the conclusion itself was not silently refreshed or re-approved.
+- Hardened the market-dataset validator against all-blank records, missing usable source identity, malformed hostless URLs, non-strict dates, and evidence-free rows.
+- Replaced regular-expression frontmatter parsing with safe YAML parsing and duplicate-key rejection.
+- Made the reviewed contract registry the source of truth for expected Skill names and stable/experimental locations instead of hard-coded repository counts.
+- Added negative regression tests for destructive output paths, unowned directories, source-tree links, folded/duplicate YAML, empty and malformed candidates, strict dates, hostless URLs, and unusable market records.
+- CI and release workflows now install pinned validation dependencies, run the regression suite, verify regenerated guides, and derive package counts from the contract registry.
+- Pinned GitHub Actions to full commit SHAs and removed release-asset `--clobber`; a published tag can no longer silently overwrite existing ZIP assets.
+- Release manifests now record schema v3, the source commit, clean/dirty source-tree state, and the SHA-256 of `docs/skill-contracts.json`.
+
+This release proves repository structure, negative safety properties, deterministic packaging within the declared toolchain, and explicit experimental isolation. It does not claim that 5.4.3 has passed video-model generation, real-project evaluation, or user acceptance.
+
 ## v1.1.0 — 2026-08-16
 
 Cross-Agent, standalone packaging and GitHub-reading release.

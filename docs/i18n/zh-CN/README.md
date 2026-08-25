@@ -12,11 +12,11 @@
 
 ## 在 GitHub 直接阅读
 
-19 个模块都已经提供英文和简体中文设计说明，共 **38 个逐模块页面**。每页讲清设计目的、理念、输入、流程、定向退回、审核门、过关证据、输出、边界、跨 Agent 条件和随包文件。
+20 个模块都已经提供英文和简体中文设计说明，共 **40 个逐模块页面**。每页讲清设计目的、理念、输入、流程、定向退回、审核门、过关证据、输出、边界、跨 Agent 条件和随包文件。
 
-- [浏览全部 38 个设计说明](../../skills/INDEX.md)
+- [浏览全部 40 个设计说明](../../skills/INDEX.md)
 - [阅读共同的定向退回、审核与过关逻辑](../../SKILL_DESIGN_SYSTEM.md)
-- [按任务比较 19 个模块、运行正文和独立 ZIP](../../../SKILL_CATALOG.md)
+- [按任务比较 20 个模块、运行正文和独立 ZIP](../../../SKILL_CATALOG.md)
 
 设计说明是给人在 GitHub 上阅读的入口；`SKILL.md` 仍是 Agent 的运行真相。结构通过、宿主执行、真实任务证据和用户接受必须分开记录。
 
@@ -31,6 +31,10 @@
 | 把批准内容生产成可观看 AI 视频 | [`produce-ai-video`](../../skills/zh-CN/produce-ai-video.md) | [`SKILL.md`](../../../skills/produce-ai-video/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
 | 编排 AI 短剧完整生产流程 | [`ai-short-drama-production`](../../skills/zh-CN/ai-short-drama-production.md) | [`SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) |
 | 设计、实现或审查网页界面 | [`web-design-director`](../../skills/zh-CN/web-design-director.md) | [`SKILL.md`](../../../skills/web-design-director/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
+
+### 测试中：分镜复杂运镜候选 5.4.3
+
+[`ai-storyboard-director-motion-lab`](../../skills/zh-CN/ai-storyboard-director-motion-lab.md) 是仅限显式调用的实验测试线，用于复杂摄影机路径、运镜参考视频、视觉变换和 3D 预演职责裁决。它不替换正式 `ai-storyboard-director` 5.4.2，不进入完整工作室 ZIP，本地安装必须添加 `--experimental`。[阅读运行合同](../../../experimental/ai-storyboard-director-motion-lab/SKILL.md) · [下载实验 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director-motion-lab.zip)
 
 ## 这套 Skill 解决什么
 

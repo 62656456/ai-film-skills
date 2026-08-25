@@ -433,11 +433,45 @@
     },
     {
       "name": "ai-storyboard-director", "family": "storyboard", "status": "deployed",
-      "status_label": {"en": "Deployed; 5.4.2 candidate over the 5.4.1 continuity contract", "zh-CN": "已部署；5.4.2 候选基线继承 5.4.1 连续性合同"},
+      "status_label": {"en": "Deployed; 5.4.2 is the current formal default over the 5.4.1 continuity contract", "zh-CN": "已部署；5.4.2 是当前正式默认版，继承 5.4.1 连续性合同"},
       "title": {"en": "ai-storyboard-director — script to shots and prompts", "zh-CN": "ai-storyboard-director｜剧本转分镜与提示词"},
       "purpose": {"en": "Turn an approved script into human-readable multi-shot design and production prompts while preserving causality, blocking, timing, and world-space continuity.", "zh-CN": "把已批准剧本变成人读多镜头设计和生产提示词，同时守住因果、调度、时长和世界空间连续性。"},
       "standalone": {"en": "A complete storyboard and copy-ready prompt package for an existing approved script.", "zh-CN": "针对已有批准剧本的完整分镜和可复制提示词包。"},
       "cannot": {"en": "It does not rewrite the script, directly generate the video, or prove platform success.", "zh-CN": "不改写剧本、不直接生成视频，也不证明平台生成成功。"}
+    },
+    {
+      "name": "ai-storyboard-director-motion-lab", "family": "storyboard", "status": "experimental",
+      "status_label": {"en": "Testing; 5.4.3 experimental candidate; explicit invocation only", "zh-CN": "测试中；5.4.3 实验候选；仅限显式调用"},
+      "title": {"en": "ai-storyboard-director-motion-lab — 5.4.3 complex-motion test line", "zh-CN": "ai-storyboard-director-motion-lab｜5.4.3 复杂运镜测试线"},
+      "purpose": {"en": "Test whether complex camera paths, visual transformations, motion-reference video, and 3D previs can add necessary visible information without replacing the formal 5.4.2 storyboard contract.", "zh-CN": "测试复杂摄影机路径、视觉变换、运镜参考视频和 3D 预演能否在不替换正式 5.4.2 分镜合同的前提下增加必要可见信息。"},
+      "standalone": {"en": "An explicitly requested 5.4.3 test storyboard, input-duty decision, and six-module prompt package for complex camera motion.", "zh-CN": "用户显式点名后交付 5.4.3 测试分镜、输入职责裁决和复杂运镜六模块提示词包。"},
+      "cannot": {"en": "It is not the default storyboard Skill and cannot claim formal promotion, stable model generation, finished-video quality, or user acceptance.", "zh-CN": "它不是默认分镜 Skill，不能声称已经转正、模型稳定生成、成片合格或用户接受。"},
+      "extra_principles": [
+        {"en": "Compare fixed, simple, and complex camera solutions; use the complex route only when it adds a visible story, spatial, temporal, or subjective result that the simpler routes cannot provide.", "zh-CN": "比较固定、简单和复杂摄影机方案；只有复杂方案带来简单方案无法等价完成的剧情、空间、时间或主观可见结果时才采用。"},
+        {"en": "Text, reference video, 3D previs, images, and keyframes each keep an explicit responsibility boundary and cannot silently overwrite story or asset truth.", "zh-CN": "文字、参考视频、3D 预演、图片和关键帧各自保持明确职责边界，不能静默覆盖剧情或资产事实。"}
+      ],
+      "extra_inputs": [
+        {"en": "An explicit request to test `$ai-storyboard-director-motion-lab`; the words 'complex camera movement' alone do not authorize the experimental route.", "zh-CN": "用户显式要求测试 `$ai-storyboard-director-motion-lab`；仅出现“复杂运镜”四字不构成实验授权。"},
+        {"en": "Any motion-reference video or 3D previs must state what motion or topology it controls and what characters, locations, brands, materials, and story facts it does not contribute.", "zh-CN": "运镜参考视频或 3D 预演必须写清负责的运动/拓扑，以及不提供的人物、地点、品牌、材质和剧情事实。"}
+      ],
+      "extra_workflow": [
+        {"en": "Label the output as a 5.4.3 test that does not change formal 5.4.2, decide input responsibilities, and split or request previs when the path cannot be described reliably.", "zh-CN": "先标记为不改变正式 5.4.2 的 5.4.3 测试，裁决输入职责；路径无法可靠描述时拆段或要求预演。"}
+      ],
+      "extra_returns": [
+        {"en": "If complex motion adds only spectacle, return to a fixed or simple camera plan; if topology or occlusion cannot be proven, return to 3D previs instead of inventing continuity.", "zh-CN": "复杂运镜若只增加奇观则退回固定或简单方案；拓扑或遮挡无法证明时退回 3D 预演，不虚构连续性。"}
+      ],
+      "extra_review": [
+        {"en": "Every motion phase has a visible trigger, path, focus or occlusion handoff, speed change, new information, endpoint, and a stated reason the simpler alternative is insufficient.", "zh-CN": "每个运动阶段都有可见触发、路径、焦点/遮挡接力、速度变化、新信息、终点，并说明简单替代为何不足。"}
+      ],
+      "extra_pass": [
+        {"en": "A structural or text-behavior pass keeps the module in Testing; only explicit later user approval can start a separate promotion decision.", "zh-CN": "结构或文字行为通过后仍保持“测试中”；只有用户后续明确批准，才能另开转正决定。"}
+      ],
+      "extra_outputs": [
+        {"en": "The output begins with `5.4.3 experimental candidate | this test only | formal 5.4.2 unchanged` and includes the readable five-column storyboard plus complete six-module prompts.", "zh-CN": "输出以“5.4.3 实验候选｜仅本次测试｜正式 5.4.2 不变”开头，并同时包含五列分镜和完整六模块提示词。"}
+      ],
+      "extra_boundaries": [
+        {"en": "The package keeps `allow_implicit_invocation: false`, stays outside the complete-studio ZIP, and requires `--experimental` for local installation.", "zh-CN": "该包保持 `allow_implicit_invocation: false`，不进入完整工作室 ZIP，本地安装必须显式添加 `--experimental`。"}
+      ]
     },
     {
       "name": "character-asset", "family": "asset", "status": "deployed",

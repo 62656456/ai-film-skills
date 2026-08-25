@@ -1,0 +1,22 @@
+{
+  "version": "5.4.2-candidate-pre-formalization",
+  "snapshot_date": "2026-08-24",
+  "status": "exact_installed_candidate_snapshot_before_formalization",
+  "files": [
+    {
+      "target": "../../SKILL.md",
+      "snapshot": "SKILL.snapshot.md",
+      "sha256": "C8C576213F44833BB649F63E24063BE02B38B8CCFBE4791AFF8A5FE40B3FD471"
+    },
+    {
+      "target": "../../references/shot-design-engine.md",
+      "snapshot": "shot-design-engine.snapshot.md",
+      "sha256": "C1C59BBDAA04B8C5F127FF50C032A88E3F9B6E0A17A7CABBA55FF375DD063E86"
+    }
+  ],
+  "unchanged_contract": {
+    "target": "../../references/production-contract.md",
+    "pre_formalization_sha256": "09C8118A42AF9071D4BDECA2033C344B36ED230DB37A1831FEF1890D9CE1FFCB"
+  },
+  "rollback_rule": "Only restore on explicit user request or a verified formalization regression. Verify snapshot hashes before copying and target hashes after copying. Do not alter versions/5.4.1 or restore invalidated 5.5/6.0 content."
+}
