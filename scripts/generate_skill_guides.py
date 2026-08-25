@@ -7,6 +7,8 @@ import json
 import os
 from pathlib import Path
 
+from repository_safety import package_source_files
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACTS = ROOT / "docs" / "skill-contracts.json"
@@ -51,13 +53,7 @@ def rel_link(source_page: Path, destination: Path) -> str:
 def resources(page: Path, skill: Path, locale: str) -> list[str]:
     groups: dict[str, list[Path]] = {"runtime": [], "references": [], "scripts": [], "versions": [], "other": []}
     # Sort by normalized relative paths so generated guides are identical across hosts.
-    for path in sorted(
-        (candidate for candidate in skill.rglob("*") if candidate.is_file()),
-        key=lambda candidate: (
-            candidate.relative_to(skill).as_posix().casefold(),
-            candidate.relative_to(skill).as_posix(),
-        ),
-    ):
+    for path in package_source_files(skill):
         rel = path.relative_to(skill)
         if rel.as_posix() in {"SKILL.md", "agents/openai.yaml"}:
             key = "runtime"

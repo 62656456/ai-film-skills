@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -18,14 +19,16 @@ REQUIRED = [
 ]
 DATE_FIELDS = ["published_at", "retrieved_at", "data_period_start", "data_period_end"]
 LEVELS = {"S", "A", "B", "C", "D"}
+DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+CORE_FIELDS = ("source_name", "publisher", "source_url", "metric_name", "evidence_level")
 
 
-def load_records(path: Path) -> list[dict[str, object]]:
+def load_records(path: Path) -> list[object]:
     if path.suffix.lower() == ".csv":
         with path.open("r", encoding="utf-8-sig", newline="") as handle:
             return list(csv.DictReader(handle))
     if path.suffix.lower() in {".jsonl", ".ndjson"}:
-        records = []
+        records: list[object] = []
         with path.open("r", encoding="utf-8-sig") as handle:
             for line_no, line in enumerate(handle, 1):
                 if line.strip():
@@ -41,7 +44,19 @@ def is_blank(value: object) -> bool:
     return value is None or str(value).strip() == ""
 
 
-def validate(records: list[dict[str, object]]) -> tuple[list[str], list[str]]:
+def parse_strict_date(value: object) -> date:
+    text = str(value).strip()
+    if not DATE_PATTERN.fullmatch(text):
+        raise ValueError("must use YYYY-MM-DD")
+    return date.fromisoformat(text)
+
+
+def valid_http_url(value: object) -> bool:
+    parsed = urlparse(str(value).strip())
+    return parsed.scheme in {"http", "https"} and bool(parsed.hostname)
+
+
+def validate(records: list[object]) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     if not records:
@@ -57,17 +72,25 @@ def validate(records: list[dict[str, object]]) -> tuple[list[str], list[str]]:
         for field in REQUIRED:
             if field in row and is_blank(row[field]):
                 warnings.append(f"row {index}: blank {field}")
+        if all(is_blank(row.get(field)) for field in REQUIRED):
+            errors.append(f"row {index}: record contains no usable evidence")
+            continue
+        for field in CORE_FIELDS:
+            if is_blank(row.get(field)):
+                errors.append(f"row {index}: {field} is required for a usable record")
+        if is_blank(row.get("metric_value")) and is_blank(row.get("raw_excerpt")):
+            errors.append(f"row {index}: provide metric_value or raw_excerpt")
         for field in DATE_FIELDS:
             value = row.get(field)
             if not is_blank(value):
                 try:
-                    date.fromisoformat(str(value))
+                    parse_strict_date(value)
                 except ValueError:
                     errors.append(f"row {index}: {field} must use YYYY-MM-DD")
         start, end = row.get("data_period_start"), row.get("data_period_end")
         if not is_blank(start) and not is_blank(end):
             try:
-                if date.fromisoformat(str(start)) > date.fromisoformat(str(end)):
+                if parse_strict_date(start) > parse_strict_date(end):
                     errors.append(f"row {index}: data period start is after end")
             except ValueError:
                 pass
@@ -75,7 +98,7 @@ def validate(records: list[dict[str, object]]) -> tuple[list[str], list[str]]:
         if level and level not in LEVELS:
             errors.append(f"row {index}: invalid evidence_level {level!r}")
         url = str(row.get("source_url", "")).strip()
-        if url and urlparse(url).scheme not in {"http", "https"}:
+        if url and not valid_http_url(url):
             errors.append(f"row {index}: source_url must be an http(s) original link")
         key = tuple(str(row.get(field, "")).strip() for field in
                     ("source_url", "data_period_start", "data_period_end", "platform", "metric_name", "metric_value"))
@@ -106,4 +129,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

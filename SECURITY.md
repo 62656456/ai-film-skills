@@ -15,3 +15,9 @@ This repository must never contain:
 - copied third-party courses or packages without redistribution permission.
 
 The validator catches several common token formats, but automated scanning is not a substitute for review. Installing a third-party Skill also grants an Agent access to its instructions and possibly its scripts; review the package and the host's permission prompts before enabling it.
+
+## Local tooling boundary
+
+- Package output is replaced only when it is under the repository `dist/` tree or explicitly allowed, and an existing non-empty target must carry the repository ownership marker.
+- Skill packages reject symbolic links, junctions, and resolved paths outside the Skill root.
+- A rejected unsafe path or malformed record is expected behavior. Report a bypass when a command still returns success, reads outside the Skill root, or changes an unowned target.

@@ -9,9 +9,9 @@
 [简体中文](docs/i18n/zh-CN/README.md) · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · **English**
 
 ![Packaged skills](https://img.shields.io/badge/packaged_skills-18-FF6B35?style=flat-square)
-![Experimental skills](https://img.shields.io/badge/experimental-1-D6A756?style=flat-square)
-![Standalone packages](https://img.shields.io/badge/standalone_packages-19-7ED6A5?style=flat-square)
-![Design guides](https://img.shields.io/badge/design_guides-38-46C2CB?style=flat-square)
+![Experimental skills](https://img.shields.io/badge/experimental-2-D6A756?style=flat-square)
+![Standalone packages](https://img.shields.io/badge/standalone_packages-20-7ED6A5?style=flat-square)
+![Design guides](https://img.shields.io/badge/design_guides-40-46C2CB?style=flat-square)
 ![Agent hosts](https://img.shields.io/badge/agent_hosts-5%20documented%20%2B%20generic-46C2CB?style=flat-square)
 ![Languages](https://img.shields.io/badge/readme_languages-4-46C2CB?style=flat-square)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
@@ -24,7 +24,7 @@
 | I need one craft | I want the complete studio |
 |---|---|
 | Read one module's design contract on GitHub, download one ZIP, and install one self-contained folder. No shared repository directory is required. | Install all 18 packaged Skills in the Agent host you already use, then move from script through assets, shots, production, and validation. |
-| [Browse 38 English / Chinese design guides](docs/skills/INDEX.md) · [Choose one Skill](SKILL_CATALOG.md) · [Installation guide](docs/INSTALLATION.md) | [Download the complete package](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip) · [Architecture](docs/ARCHITECTURE.md) |
+| [Browse 40 English / Chinese design guides](docs/skills/INDEX.md) · [Choose one Skill](SKILL_CATALOG.md) · [Installation guide](docs/INSTALLATION.md) | [Download the complete package](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip) · [Architecture](docs/ARCHITECTURE.md) |
 
 ## Start here
 
@@ -40,6 +40,10 @@ The design guide is the human-readable entrance. The linked runtime file remains
 | Plan an end-to-end short-drama workflow | [`ai-short-drama-production`](docs/skills/en/ai-short-drama-production.md) | [`SKILL.md`](skills/ai-short-drama-production/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) |
 | Design or audit a distinctive web interface | [`web-design-director`](docs/skills/en/web-design-director.md) | [`SKILL.md`](skills/web-design-director/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
 
+### Testing: storyboard motion candidate 5.4.3
+
+[`ai-storyboard-director-motion-lab`](docs/skills/en/ai-storyboard-director-motion-lab.md) is an explicit-only experimental test line for complex camera paths, motion-reference video, visual transformations, and 3D previs responsibilities. It does not replace formal `ai-storyboard-director` 5.4.2, is excluded from the complete-studio ZIP, and requires `--experimental` for local installation. [Read the runtime contract](experimental/ai-storyboard-director-motion-lab/SKILL.md) · [Download the experimental ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director-motion-lab.zip)
+
 ## The promise
 
 These Skills do not replace judgment with prompt decoration. They turn story causality, character purpose, blocking, spatial continuity, physical action, light, materials, and production gates into reusable operating contracts.
@@ -50,7 +54,7 @@ The visible result comes first: a readable script, shot plan, asset contract, vi
 
 ## Read the design before installing
 
-All 19 modules have a GitHub-readable design guide in both English and Simplified Chinese: **38 pages generated from one reviewed contract registry**. Every page explains the module's purpose, principles, inputs, workflow, directed return path, review gates, pass evidence, outputs, boundaries, host requirements, and every file shipped in that standalone package.
+All 20 modules have a GitHub-readable design guide in both English and Simplified Chinese: **40 pages generated from one reviewed contract registry**. Every page explains the module's purpose, principles, inputs, workflow, directed return path, review gates, pass evidence, outputs, boundaries, host requirements, and every file shipped in that standalone package.
 
 - [Browse all English and Chinese module guides](docs/skills/INDEX.md)
 - [Understand the shared return, review, and pass logic](docs/SKILL_DESIGN_SYSTEM.md)
@@ -125,9 +129,9 @@ The canonical content is shared across every host. Native discovery and tool per
 | Production | `produce-ai-video` | Deployed |
 | Workflow orchestration | `ai-short-drama-production` | Packaged; validation pending |
 | Product and research | `web-design-director`, `d-official-market-analysis`, `d-data-analysis-semantic-layer` | Deployed |
-| Experimental | `hard-sci-fi-visual-director` | Not deployed; user visual review pending |
+| Experimental | `hard-sci-fi-visual-director`, `ai-storyboard-director-motion-lab` | Isolated from normal installation; the 5.4.3 motion lab is Testing and explicit-only |
 
-See the detailed [Skill catalog](SKILL_CATALOG.md), [38 design guides](docs/skills/INDEX.md), [shared design system](docs/SKILL_DESIGN_SYSTEM.md), and [architecture](docs/ARCHITECTURE.md).
+See the detailed [Skill catalog](SKILL_CATALOG.md), [40 design guides](docs/skills/INDEX.md), [shared design system](docs/SKILL_DESIGN_SYSTEM.md), and [architecture](docs/ARCHITECTURE.md).
 
 ## Status means something
 

@@ -3,9 +3,9 @@
 ## Included
 
 - 18 packaged, personally authored Skills in `skills/`;
-- 1 isolated experimental Skill in `experimental/`;
+- 2 isolated experimental Skills in `experimental/`;
 - the runtime references, scripts, metadata, and rollback evidence carried inside each standalone Skill folder;
-- 38 GitHub-readable module design guides: 19 English and 19 Simplified Chinese pages;
+- 40 GitHub-readable module design guides: 20 English and 20 Simplified Chinese pages;
 - the shared human-readable design system, reviewed bilingual contract registry, guide generator, documentation validator, and repository validator;
 - original repository documentation, diagrams, installation tooling, release packaging, and CI workflows.
 
@@ -20,6 +20,8 @@ The human-readable guides explain purpose, principles, standalone scope, inputs,
 - third-party images, course copies, film stills, screenshots, or other media without a verified right to redistribute.
 
 `hard-sci-fi-visual-director` is present only under `experimental/`. It is not part of the normal installation command and must not be described as approved or deployed.
+
+`ai-storyboard-director-motion-lab` is the 5.4.3 experimental candidate. It is published as **Testing**, keeps `allow_implicit_invocation: false`, requires deliberate experimental installation, does not enter the complete-studio ZIP, and does not replace formal `ai-storyboard-director` 5.4.2.
 
 ## Language scope
 

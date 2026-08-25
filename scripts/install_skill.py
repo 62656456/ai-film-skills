@@ -8,7 +8,10 @@ import os
 import shutil
 import sys
 import tempfile
+import uuid
 from pathlib import Path
+
+from repository_safety import SafetyError, is_link_like, is_within, safe_source_files
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,25 +45,36 @@ def default_target(platform: str) -> Path | None:
 
 
 def install(source: Path, target_root: Path, force: bool) -> Path:
+    safe_source_files(source)
     target_root = target_root.expanduser().resolve()
     destination = target_root / source.name
+    if not is_within(destination.resolve(strict=False), target_root):
+        raise SafetyError(f"installation destination escapes target root: {destination}")
     target_root.mkdir(parents=True, exist_ok=True)
 
     if destination.exists() and not force:
         raise FileExistsError(
             f"{destination} already exists. Re-run with --force only after reviewing the existing copy."
         )
+    if destination.exists():
+        if is_link_like(destination) or not destination.is_dir():
+            raise SafetyError(f"existing installation must be a regular directory: {destination}")
+        safe_source_files(destination)
 
     staging_parent = Path(tempfile.mkdtemp(prefix=f".{source.name}-install-", dir=target_root))
     staging = staging_parent / source.name
-    backup = target_root / f".{source.name}.backup"
+    backup = target_root / f".{source.name}.backup-{uuid.uuid4().hex}"
     try:
-        shutil.copytree(source, staging)
+        shutil.copytree(
+            source,
+            staging,
+            symlinks=True,
+            ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", "*.pyc", "*.pyo"),
+        )
+        safe_source_files(staging)
         if not (staging / "SKILL.md").is_file():
             raise RuntimeError("staged package is missing SKILL.md")
         if destination.exists():
-            if backup.exists():
-                shutil.rmtree(backup)
             destination.rename(backup)
         staging.rename(destination)
         if backup.exists():

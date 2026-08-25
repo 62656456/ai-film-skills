@@ -9,7 +9,8 @@ The English and Simplified Chinese pages are generated from the same reviewed co
 | Skill | State | English | 简体中文 | Runtime |
 |---|---|---|---|---|
 | `director-agent` | Deployed; long-term practice evidence remains separate | [Design guide](en/director-agent.md) | [设计说明](zh-CN/director-agent.md) | [`SKILL.md`](../../skills/director-agent/SKILL.md) |
-| `ai-storyboard-director` | Deployed; 5.4.2 candidate over the 5.4.1 continuity contract | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
+| `ai-storyboard-director` | Deployed; 5.4.2 is the current formal default over the 5.4.1 continuity contract | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
+| `ai-storyboard-director-motion-lab` | Testing; 5.4.3 experimental candidate; explicit invocation only | [Design guide](en/ai-storyboard-director-motion-lab.md) | [设计说明](zh-CN/ai-storyboard-director-motion-lab.md) | [`SKILL.md`](../../experimental/ai-storyboard-director-motion-lab/SKILL.md) |
 | `character-asset` | Deployed | [Design guide](en/character-asset.md) | [设计说明](zh-CN/character-asset.md) | [`SKILL.md`](../../skills/character-asset/SKILL.md) |
 | `scene-asset` | Deployed | [Design guide](en/scene-asset.md) | [设计说明](zh-CN/scene-asset.md) | [`SKILL.md`](../../skills/scene-asset/SKILL.md) |
 | `prop-asset` | Deployed | [Design guide](en/prop-asset.md) | [设计说明](zh-CN/prop-asset.md) | [`SKILL.md`](../../skills/prop-asset/SKILL.md) |
