@@ -16,6 +16,8 @@ npx --yes skills@latest add 62656456/ai-film-skills --list
 
 This route was verified with `skills` 1.5.23. It discovers the 18 stable modules; the isolated experiment remains outside default discovery.
 
+Live directory: https://skills.sh/62656456/ai-film-skills
+
 ## Short English launch post
 
 AI storyboards often name the event but hide the camera plan.
@@ -50,4 +52,5 @@ https://github.com/62656456/ai-film-skills
 - Storyboard 5.4.4 example: https://github.com/62656456/ai-film-skills/blob/main/examples/storyboard-director-5.4.4-visible-camera-plan.md
 - Skill catalog: https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md
 - Installation: https://github.com/62656456/ai-film-skills/blob/main/docs/INSTALLATION.md
+- Skills directory: https://skills.sh/62656456/ai-film-skills
 - Release: https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0
