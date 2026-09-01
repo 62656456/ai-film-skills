@@ -16,7 +16,7 @@ experimental/
 docs/
   SKILL_DESIGN_SYSTEM.md     shared human-readable design and review logic
   skill-contracts.json       reviewed bilingual contract registry
-  skills/INDEX.md            GitHub reading index for all 20 modules
+  skills/INDEX.md            GitHub reading index for all 19 modules
   skills/en/                 19 generated English design guides
   skills/zh-CN/              19 generated Simplified Chinese design guides
   i18n/                      translated repository entry points
@@ -39,7 +39,7 @@ The runtime and reading layers have different jobs:
 | `docs/skills/{en,zh-CN}/` | Generated reading layer | Lets a person understand and compare every module directly on GitHub |
 | `docs/SKILL_DESIGN_SYSTEM.md` | Shared design explanation | Defines the common directed-return loop and separates structural, runtime, real-task, and user-acceptance states |
 
-The generated pages explain the runtime contract; they do not replace it. Every page links the exact `SKILL.md`, every packaged reference or helper, the standalone ZIP, installation instructions, and Agent compatibility guidance. Edit the reviewed contract registry or runtime source, regenerate the 40 pages, then run both validators; do not hand-edit generated guides as an independent source of truth.
+The generated pages explain the runtime contract; they do not replace it. Every page links the exact `SKILL.md`, every packaged reference or helper, the standalone ZIP, installation instructions, and Agent compatibility guidance. Edit the reviewed contract registry or runtime source, regenerate the 38 pages, then run both validators; do not hand-edit generated guides as an independent source of truth.
 
 ## Runtime route
 

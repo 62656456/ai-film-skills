@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
+import struct
 import sys
 from pathlib import Path
 from urllib.parse import unquote
@@ -22,6 +24,7 @@ ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
 REQUIRED_REPOSITORY_FILES = {
     ".github/workflows/package-release.yml",
     ".github/workflows/validate.yml",
+    ".github/ISSUE_TEMPLATE/showcase.yml",
     "CONTACT.md",
     "CONTRIBUTING.md",
     "PUBLICATION_SCOPE.md",
@@ -31,17 +34,34 @@ REQUIRED_REPOSITORY_FILES = {
     "SKILL_CATALOG.md",
     "docs/COMPATIBILITY.md",
     "docs/INSTALLATION.md",
+    "docs/LAUNCH_KIT.md",
     "docs/SKILL_DESIGN_SYSTEM.md",
+    "docs/assets/launch-assets.json",
     "docs/assets/review-loop.svg",
+    "docs/assets/social-preview.png",
+    "docs/assets/social-preview.svg",
+    "docs/assets/storyboard-544-proof.png",
+    "docs/assets/storyboard-544-proof.svg",
     "docs/skill-contracts.json",
     "docs/skills/INDEX.md",
+    "examples/storyboard-director-5.4.4-visible-camera-plan.md",
     "scripts/build_skill_packages.py",
     "scripts/generate_skill_guides.py",
     "scripts/install_skill.py",
     "scripts/repository_safety.py",
+    "scripts/render_social_preview.py",
+    "scripts/render_storyboard_proof.py",
     "scripts/validate_skill_docs.py",
     "scripts/validate_skill_independence.py",
     "requirements-dev.txt",
+}
+STALE_PUBLIC_COUNT_PATTERNS = {
+    "20 modules": re.compile(r"\b20 modules\b", re.I),
+    "40 pages": re.compile(r"\b40 pages\b", re.I),
+    "20 Chinese modules": re.compile(r"20 个模块"),
+    "40 Chinese guides": re.compile(r"40 个(?:逐模块页面|设计说明)"),
+    "20 Korean modules": re.compile(r"20개 모듈"),
+    "40 Korean guides": re.compile(r"40개 상세 페이지"),
 }
 REQUIRED_COMPATIBILITY_TERMS = {
     ".codex/skills",
@@ -163,6 +183,61 @@ def validate_local_dependencies(skill: Path) -> list[str]:
             errors.append(
                 f"missing local dependency: {skill_file.relative_to(ROOT)} -> {dependency}"
             )
+    return errors
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest().upper()
+
+
+def png_dimensions(path: Path) -> tuple[int, int]:
+    header = path.read_bytes()[:24]
+    if len(header) != 24 or header[:8] != b"\x89PNG\r\n\x1a\n" or header[12:16] != b"IHDR":
+        raise ValueError("invalid PNG header")
+    return struct.unpack(">II", header[16:24])
+
+
+def validate_launch_assets() -> list[str]:
+    errors: list[str] = []
+    manifest_path = ROOT / "docs" / "assets" / "launch-assets.json"
+    try:
+        payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"invalid launch asset manifest: {exc}"]
+    assets = payload.get("assets")
+    if not isinstance(assets, list) or not assets:
+        return ["launch asset manifest must contain a non-empty assets list"]
+    for item in assets:
+        if not isinstance(item, dict):
+            errors.append("launch asset entry must be an object")
+            continue
+        relative = item.get("path")
+        if not isinstance(relative, str) or not relative:
+            errors.append("launch asset entry has no path")
+            continue
+        asset = manifest_path.parent / relative
+        if not asset.is_file():
+            errors.append(f"missing launch asset: docs/assets/{relative}")
+            continue
+        expected_hash = item.get("sha256")
+        if not isinstance(expected_hash, str) or sha256(asset) != expected_hash.upper():
+            errors.append(f"launch asset hash mismatch: docs/assets/{relative}")
+        if asset.suffix.lower() == ".png":
+            try:
+                actual_size = png_dimensions(asset)
+            except ValueError as exc:
+                errors.append(f"invalid launch PNG docs/assets/{relative}: {exc}")
+                continue
+            expected_size = (item.get("width"), item.get("height"))
+            if actual_size != expected_size:
+                errors.append(
+                    f"launch PNG size mismatch docs/assets/{relative}: "
+                    f"expected {expected_size}, found {actual_size}"
+                )
     return errors
 
 
@@ -295,6 +370,20 @@ def main() -> int:
             errors.append(f"unsafe Skill source tree {rel}: {exc}")
 
     errors.extend(validate_public_reading_routes(skills))
+    errors.extend(validate_launch_assets())
+
+    public_count_files = (
+        ROOT / "README.md",
+        ROOT / "CONTRIBUTING.md",
+        ROOT / "docs" / "ARCHITECTURE.md",
+        ROOT / "docs" / "i18n" / "zh-CN" / "README.md",
+        ROOT / "docs" / "i18n" / "ko" / "README.md",
+    )
+    for path in public_count_files:
+        text = path.read_text(encoding="utf-8-sig")
+        for label, pattern in STALE_PUBLIC_COUNT_PATTERNS.items():
+            if pattern.search(text):
+                errors.append(f"stale public count ({label}): {path.relative_to(ROOT)}")
 
     repository_paths = [
         path

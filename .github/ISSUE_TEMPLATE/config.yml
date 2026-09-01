@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Workflow questions and open-ended ideas
+    url: https://github.com/62656456/ai-film-skills/discussions
+    about: Ask for help, compare workflows, or discuss an idea before it becomes a bounded issue.
+  - name: Security or private disclosure
+    url: https://github.com/62656456/ai-film-skills/security/policy
+    about: Do not post credentials, private projects, client material, or security reports in a public issue.

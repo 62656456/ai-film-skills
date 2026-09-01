@@ -4,14 +4,14 @@
 
 # Open Film Skills
 
-**Portable, modular directing intelligence for Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy, and other Agent software.**
+**Turn a script into cinematic storyboards, reusable visual assets, copy-ready prompts, and an AI-video production workflow—inside the Agent you already use.**
 
 [简体中文](docs/i18n/zh-CN/README.md) · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · **English**
 
 ![Packaged skills](https://img.shields.io/badge/packaged_skills-18-FF6B35?style=flat-square)
-![Experimental skills](https://img.shields.io/badge/experimental-2-D6A756?style=flat-square)
-![Standalone packages](https://img.shields.io/badge/standalone_packages-20-7ED6A5?style=flat-square)
-![Design guides](https://img.shields.io/badge/design_guides-40-46C2CB?style=flat-square)
+![Experimental skills](https://img.shields.io/badge/experimental-1-D6A756?style=flat-square)
+![Standalone packages](https://img.shields.io/badge/standalone_packages-19-7ED6A5?style=flat-square)
+![Design guides](https://img.shields.io/badge/design_guides-38-46C2CB?style=flat-square)
 ![Agent hosts](https://img.shields.io/badge/agent_hosts-5%20documented%20%2B%20generic-46C2CB?style=flat-square)
 ![Languages](https://img.shields.io/badge/readme_languages-4-46C2CB?style=flat-square)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
@@ -19,14 +19,51 @@
 
 </div>
 
-## Two ways in
+Open Film Skills is a public toolkit of 19 standalone Agent Skills for AI filmmaking: 18 stable modules and one isolated experiment. Start with one outcome; install the complete studio only when you need the full route.
+
+## Start with one outcome
+
+| Write or repair the story | Design executable shots | Produce an AI-video workflow |
+|---|---|---|
+| Use [`director-agent`](docs/skills/en/director-agent.md) for causality, character action, dialogue, subtext, scene purpose, and directing decisions. | Use [`ai-storyboard-director`](docs/skills/en/ai-storyboard-director.md) for blocking, lens, camera position, motivated motion, continuity, and copy-ready prompts. | Use [`produce-ai-video`](docs/skills/en/produce-ai-video.md) for readiness, cost gates, generation stages, editing, playback review, and repair. |
+| [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
+
+## See one concrete difference
+
+<img src="docs/assets/storyboard-544-proof.png" width="100%" alt="A vague story-only segment heading compared with an executable Storyboard Director 5.4.4 camera-plan heading" />
+
+Storyboard Director 5.4.4 replaces headings such as “the gear slips” with a visible camera contract: lens and optics, camera side and height, path and orientation, speed, focus handoff, and the shot's physical endpoint. The example is a verified text-behavior case—not a claim that a video model or a user has approved the final image.
+
+- [Read the complete eight-second example](examples/storyboard-director-5.4.4-visible-camera-plan.md)
+- [Inspect the runtime contract](skills/ai-storyboard-director/SKILL.md)
+- [Compare every Skill and its evidence state](SKILL_CATALOG.md)
+
+## Try it in 60 seconds
+
+Clone the repository and install one Skill:
+
+```bash
+git clone https://github.com/62656456/ai-film-skills.git
+cd ai-film-skills
+python scripts/install_skill.py ai-storyboard-director --platform codex
+```
+
+Then ask your Agent:
+
+```text
+Use $ai-storyboard-director to turn this approved eight-second scene into readable shots and one complete generation prompt. Make every segment heading show the lens/optics, camera side and height, camera path and orientation change, speed, focus or occlusion handoff, and the physical endpoint: [paste scene]
+```
+
+For Claude Code, replace `--platform codex` with `--platform claude-code`. For other hosts and ZIP installation, see [Installation](docs/INSTALLATION.md).
+
+## Install one craft or the complete studio
 
 | I need one craft | I want the complete studio |
 |---|---|
 | Read one module's design contract on GitHub, download one ZIP, and install one self-contained folder. No shared repository directory is required. | Install all 18 packaged Skills in the Agent host you already use, then move from script through assets, shots, production, and validation. |
 | [Browse 38 English / Chinese design guides](docs/skills/INDEX.md) · [Choose one Skill](SKILL_CATALOG.md) · [Installation guide](docs/INSTALLATION.md) | [Download the complete package](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip) · [Architecture](docs/ARCHITECTURE.md) |
 
-## Start here
+## Browse by task
 
 The design guide is the human-readable entrance. The linked runtime file remains the exact Agent instruction, and the ZIP remains the standalone installable package.
 
@@ -54,7 +91,7 @@ The visible result comes first: a readable script, shot plan, asset contract, vi
 
 ## Read the design before installing
 
-All 20 modules have a GitHub-readable design guide in both English and Simplified Chinese: **40 pages generated from one reviewed contract registry**. Every page explains the module's purpose, principles, inputs, workflow, directed return path, review gates, pass evidence, outputs, boundaries, host requirements, and every file shipped in that standalone package.
+All 19 modules have a GitHub-readable design guide in both English and Simplified Chinese: **38 pages generated from one reviewed contract registry**. Every page explains the module's purpose, principles, inputs, workflow, directed return path, review gates, pass evidence, outputs, boundaries, host requirements, and every file shipped in that standalone package.
 
 - [Browse all English and Chinese module guides](docs/skills/INDEX.md)
 - [Understand the shared return, review, and pass logic](docs/SKILL_DESIGN_SYSTEM.md)
