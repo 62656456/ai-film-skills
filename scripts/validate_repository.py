@@ -45,6 +45,7 @@ REQUIRED_REPOSITORY_FILES = {
     "docs/skill-contracts.json",
     "docs/skills/INDEX.md",
     "examples/storyboard-director-5.4.4-visible-camera-plan.md",
+    "examples/skills-cli-install-verification.md",
     "scripts/build_skill_packages.py",
     "scripts/generate_skill_guides.py",
     "scripts/install_skill.py",
@@ -277,6 +278,9 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
     for required in ("docs/skills/INDEX.md", "docs/SKILL_DESIGN_SYSTEM.md", guide_count):
         if required not in readme:
             errors.append(f"README.md missing GitHub reading term: {required}")
+    cli_command = "npx --yes skills@latest add 62656456/ai-film-skills --list"
+    if cli_command not in readme:
+        errors.append("README.md missing the verified open Skills CLI discovery command")
     return errors
 
 

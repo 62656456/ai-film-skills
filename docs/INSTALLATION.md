@@ -8,6 +8,22 @@ Read [Agent compatibility](COMPATIBILITY.md) first if your product name or insta
 
 Open the [latest release](https://github.com/62656456/ai-film-skills/releases/latest) and download the ZIP named after the Skill, such as `ai-storyboard-director.zip`. The archive contains one complete Skill folder.
 
+## Install with the open Skills CLI
+
+The open [`skills` CLI](https://github.com/vercel-labs/skills) can discover the stable Skill folders directly from GitHub:
+
+```bash
+npx --yes skills@latest add 62656456/ai-film-skills --list
+```
+
+Copy one Skill into the project route selected for an Agent:
+
+```bash
+npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
+```
+
+The verified 1.5.23 test discovered 18 stable Skills, copied exactly six `ai-storyboard-director` runtime files, produced one `SKILL.md`, and matched all six public-source SHA-256 values. The isolated experimental Skill is intentionally not part of default discovery. This proves repository discovery and file copying; native activation, routing, and model behavior still belong to the selected host. See the [full verification record](../examples/skills-cli-install-verification.md).
+
 ## Install from a clone
 
 ```bash

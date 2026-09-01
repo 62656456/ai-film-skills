@@ -40,7 +40,14 @@ Storyboard Director 5.4.4 replaces headings such as “the gear slips” with a 
 
 ## Try it in 60 seconds
 
-Clone the repository and install one Skill:
+List the 18 stable Skills with the open ecosystem CLI, then copy one into its Codex project route:
+
+```bash
+npx --yes skills@latest add 62656456/ai-film-skills --list
+npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
+```
+
+Or use the repository's explicit host installer:
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
@@ -54,7 +61,7 @@ Then ask your Agent:
 Use $ai-storyboard-director to turn this approved eight-second scene into readable shots and one complete generation prompt. Make every segment heading show the lens/optics, camera side and height, camera path and orientation change, speed, focus or occlusion handoff, and the physical endpoint: [paste scene]
 ```
 
-For Claude Code, replace `--platform codex` with `--platform claude-code`. For other hosts and ZIP installation, see [Installation](docs/INSTALLATION.md).
+For Claude Code, replace `--platform codex` with `--platform claude-code`. The ecosystem CLI discovery and six-file copy route were verified with `skills` 1.5.23; native activation still belongs to the selected host. See the [verification record](examples/skills-cli-install-verification.md), or use [Installation](docs/INSTALLATION.md) for other hosts and ZIP routes.
 
 ## Install one craft or the complete studio
 
