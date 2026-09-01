@@ -26,6 +26,8 @@ jobs:
           git diff --exit-code -- docs/skills
       - name: Validate bilingual Skill guides
         run: python scripts/validate_skill_docs.py
+      - name: Validate GitHub Pages landing page
+        run: python scripts/validate_pages_site.py
       - name: Validate repository
         run: python scripts/validate_repository.py
       - name: Build standalone packages

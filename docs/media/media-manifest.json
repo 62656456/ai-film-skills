@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "publication": "Open Film Skills GitHub Pages media evidence",
+  "rights_basis": "Original locally generated project media published under the repository owner's explicit authorization for this showcase.",
+  "items": [
+    {
+      "id": "previs-blocking-5s",
+      "video": "previs-blocking-5s.mp4",
+      "poster": "previs-blocking-poster.png",
+      "video_sha256": "149F62BC45625878FF9B4254ECD7BDFB09A64DFEE08F3B8FF0BE2232DF0EB86A",
+      "poster_sha256": "6F6DEC0284076DE4A6C63253AF8FD8D568DBB312C4EF052D03C5D2982D7A03AC",
+      "video_bytes": 278701,
+      "poster_bytes": 105827,
+      "width": 960,
+      "height": 540,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "status": "internal visual pass for push, actor blocking, hard cut, lateral track, and parallax",
+      "proves": "a playable locally generated 3D previs clip can expose camera movement, blocking, a cut, and scene parallax",
+      "does_not_prove": "finished AI-video quality, a published Skill in this repository, external-user adoption, or user aesthetic approval"
+    },
+    {
+      "id": "rigged-contact-gate-2.8s",
+      "video": "rigged-contact-gate-2.8s.mp4",
+      "poster": "rigged-contact-poster.png",
+      "video_sha256": "3BF941C9080463C58DD915BAC86C74422C6E4315B7C6D3A3946153144BC11A63",
+      "poster_sha256": "2437DCB14EE41398FACBABF44433CC189389CE88981F28E05F8E7048C7738884",
+      "video_bytes": 161340,
+      "poster_bytes": 362032,
+      "width": 960,
+      "height": 402,
+      "duration_seconds": 2.8,
+      "frames": 67,
+      "status": "single-action rigged contact gate passed blind review and final-surface contact checks",
+      "proves": "the bounded action gate contains two-hand grip geometry, shared contact, a held impact interval, and opposite recoil",
+      "does_not_prove": "a complete fight, a final rendered film, a production-ready 30-second profile, external adoption, or user approval"
+    }
+  ],
+  "excluded_from_positive_showcase": [
+    "user-rejected 30-second mecha previews",
+    "editor interface screenshots presented as if they were previs video",
+    "failed or superseded collision-gate versions",
+    "media with unclear redistribution rights"
+  ],
+  "scope_note": "These clips come from a broader local previs research workflow. The executor that generated them is not included as a published Skill in Open Film Skills v1.3.0."
+}

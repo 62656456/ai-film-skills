@@ -49,6 +49,8 @@ https://github.com/62656456/ai-film-skills
 ## Evidence links
 
 - Repository: https://github.com/62656456/ai-film-skills
+- Website: https://62656456.github.io/ai-film-skills/
+- Local media evidence: https://62656456.github.io/ai-film-skills/#media
 - Storyboard 5.4.4 example: https://github.com/62656456/ai-film-skills/blob/main/examples/storyboard-director-5.4.4-visible-camera-plan.md
 - Director Agent before/after: https://github.com/62656456/ai-film-skills/blob/main/examples/director-agent-before-after.md
 - Skill catalog: https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md
