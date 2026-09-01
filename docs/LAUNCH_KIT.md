@@ -8,6 +8,14 @@ Use these messages only with the linked public evidence. Do not add model-succes
 
 **简体中文：** 开放影视 Skill 让 Codex、Claude Code 等 Agent 把剧本变成导演判断、可复用视觉资产、电影化分镜、可复制提示词和 AI 视频生产流程。
 
+## Lowest-friction verified discovery
+
+```bash
+npx --yes skills@latest add 62656456/ai-film-skills --list
+```
+
+This route was verified with `skills` 1.5.23. It discovers the 18 stable modules; the isolated experiment remains outside default discovery.
+
 ## Short English launch post
 
 AI storyboards often name the event but hide the camera plan.
