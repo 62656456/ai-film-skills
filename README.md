@@ -24,7 +24,7 @@
 | I need one craft | I want the complete studio |
 |---|---|
 | Read one module's design contract on GitHub, download one ZIP, and install one self-contained folder. No shared repository directory is required. | Install all 18 packaged Skills in the Agent host you already use, then move from script through assets, shots, production, and validation. |
-| [Browse 40 English / Chinese design guides](docs/skills/INDEX.md) · [Choose one Skill](SKILL_CATALOG.md) · [Installation guide](docs/INSTALLATION.md) | [Download the complete package](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip) · [Architecture](docs/ARCHITECTURE.md) |
+| [Browse 38 English / Chinese design guides](docs/skills/INDEX.md) · [Choose one Skill](SKILL_CATALOG.md) · [Installation guide](docs/INSTALLATION.md) | [Download the complete package](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip) · [Architecture](docs/ARCHITECTURE.md) |
 
 ## Start here
 
@@ -40,9 +40,9 @@ The design guide is the human-readable entrance. The linked runtime file remains
 | Plan an end-to-end short-drama workflow | [`ai-short-drama-production`](docs/skills/en/ai-short-drama-production.md) | [`SKILL.md`](skills/ai-short-drama-production/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) |
 | Design or audit a distinctive web interface | [`web-design-director`](docs/skills/en/web-design-director.md) | [`SKILL.md`](skills/web-design-director/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
 
-### Testing: storyboard motion candidate 5.4.3
+### Current storyboard version: 5.4.4
 
-[`ai-storyboard-director-motion-lab`](docs/skills/en/ai-storyboard-director-motion-lab.md) is an explicit-only experimental test line for complex camera paths, motion-reference video, visual transformations, and 3D previs responsibilities. It does not replace formal `ai-storyboard-director` 5.4.2, is excluded from the complete-studio ZIP, and requires `--experimental` for local installation. [Read the runtime contract](experimental/ai-storyboard-director-motion-lab/SKILL.md) · [Download the experimental ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director-motion-lab.zip)
+The formal [`ai-storyboard-director`](skills/ai-storyboard-director/SKILL.md) package is now 5.4.4. It integrates the useful complex-camera work into the single stable entry, adds natural-language prompt packaging, locked-reference and multi-space continuity gates, and makes each segmented-shot heading expose the actual camera plan. Structural and text-behavior checks passed; real video-model generation and explicit user review remain pending. The former separate motion-lab entry is retired and must not be installed as a second storyboard Skill.
 
 ## The promise
 
@@ -129,9 +129,9 @@ The canonical content is shared across every host. Native discovery and tool per
 | Production | `produce-ai-video` | Deployed |
 | Workflow orchestration | `ai-short-drama-production` | Packaged; validation pending |
 | Product and research | `web-design-director`, `d-official-market-analysis`, `d-data-analysis-semantic-layer` | Deployed |
-| Experimental | `hard-sci-fi-visual-director`, `ai-storyboard-director-motion-lab` | Isolated from normal installation; the 5.4.3 motion lab is Testing and explicit-only |
+| Experimental | `hard-sci-fi-visual-director` | Isolated from normal installation; not deployed and still awaiting user visual review |
 
-See the detailed [Skill catalog](SKILL_CATALOG.md), [40 design guides](docs/skills/INDEX.md), [shared design system](docs/SKILL_DESIGN_SYSTEM.md), and [architecture](docs/ARCHITECTURE.md).
+See the detailed [Skill catalog](SKILL_CATALOG.md), [38 design guides](docs/skills/INDEX.md), [shared design system](docs/SKILL_DESIGN_SYSTEM.md), and [architecture](docs/ARCHITECTURE.md).
 
 ## Status means something
 

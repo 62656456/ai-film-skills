@@ -21,7 +21,7 @@
       ],
       "returns": [
         {"en": "If causality, character knowledge, or scene purpose fails, return to the earliest broken scene before polishing dialogue or visuals.", "zh-CN": "因果、人物知识或场景目的失败时，先退回最早断裂的场景，不先润色台词或视觉。"},
-        {"en": "If the request actually needs production storyboard detail, hand the approved directing decisions to `ai-storyboard-director` instead of stretching this module beyond its contract.", "zh-CN": "若任务实际需要完整生产分镜，把已批准的导演判断交给 `ai-storyboard-director`，不让本模块越界。"},
+        {"en": "If the request also needs production storyboard detail, return a complete standalone `DIRECTOR_PLAN` containing every decision needed by shot production; this package never reads a sibling Skill.", "zh-CN": "若任务还需要完整生产分镜，交付包含全部镜头制作决定的独立 `DIRECTOR_PLAN`；本包不读取任何兄弟 Skill。"},
         {"en": "Cold-read PASS is a screenplay review state, not proof that the user likes the work.", "zh-CN": "冷读 PASS 只是剧本审阅状态，不是用户喜欢或采用的证明。"}
       ],
       "review": [
@@ -63,7 +63,7 @@
       ],
       "returns": [
         {"en": "Story or director failures return upstream; spatial, blocking, camera, timing, or prompt-encoding failures return to their responsible design stage.", "zh-CN": "故事或导演问题退回上游；空间、调度、摄影机、时长或提示词编译问题退回对应设计阶段。"},
-        {"en": "Version rollback is distinct from creative rework and exists only for the documented 5.4.1 hash-verified snapshot when explicitly requested.", "zh-CN": "版本回滚不同于创作回炉；只有用户明确要求时，才可使用已有的 5.4.1 哈希快照。"},
+        {"en": "Package maintenance is distinct from creative rework; the shared ZIP contains only the current self-contained runtime and no historical runtime dependency.", "zh-CN": "技能包维护不同于创作回炉；分享 ZIP 只包含当前独立运行内容，不含历史运行依赖。"},
         {"en": "A continuity failure is repaired from fixed world coordinates, never by moving the room to preserve screen-left labels.", "zh-CN": "连续性失败从固定世界坐标修复，不能为了保持画面左右而移动房间。"}
       ],
       "review": [
@@ -433,45 +433,11 @@
     },
     {
       "name": "ai-storyboard-director", "family": "storyboard", "status": "deployed",
-      "status_label": {"en": "Deployed; 5.4.2 is the current formal default over the 5.4.1 continuity contract", "zh-CN": "已部署；5.4.2 是当前正式默认版，继承 5.4.1 连续性合同"},
+      "status_label": {"en": "Deployed; 5.4.4 is the current installed version; real-video generation and user review remain pending", "zh-CN": "已部署；5.4.4 是当前安装版本；真实视频生成与用户审阅仍待完成"},
       "title": {"en": "ai-storyboard-director — script to shots and prompts", "zh-CN": "ai-storyboard-director｜剧本转分镜与提示词"},
       "purpose": {"en": "Turn an approved script into human-readable multi-shot design and production prompts while preserving causality, blocking, timing, and world-space continuity.", "zh-CN": "把已批准剧本变成人读多镜头设计和生产提示词，同时守住因果、调度、时长和世界空间连续性。"},
       "standalone": {"en": "A complete storyboard and copy-ready prompt package for an existing approved script.", "zh-CN": "针对已有批准剧本的完整分镜和可复制提示词包。"},
       "cannot": {"en": "It does not rewrite the script, directly generate the video, or prove platform success.", "zh-CN": "不改写剧本、不直接生成视频，也不证明平台生成成功。"}
-    },
-    {
-      "name": "ai-storyboard-director-motion-lab", "family": "storyboard", "status": "experimental",
-      "status_label": {"en": "Testing; 5.4.3 experimental candidate; explicit invocation only", "zh-CN": "测试中；5.4.3 实验候选；仅限显式调用"},
-      "title": {"en": "ai-storyboard-director-motion-lab — 5.4.3 complex-motion test line", "zh-CN": "ai-storyboard-director-motion-lab｜5.4.3 复杂运镜测试线"},
-      "purpose": {"en": "Test whether complex camera paths, visual transformations, motion-reference video, and 3D previs can add necessary visible information without replacing the formal 5.4.2 storyboard contract.", "zh-CN": "测试复杂摄影机路径、视觉变换、运镜参考视频和 3D 预演能否在不替换正式 5.4.2 分镜合同的前提下增加必要可见信息。"},
-      "standalone": {"en": "An explicitly requested 5.4.3 test storyboard, input-duty decision, and six-module prompt package for complex camera motion.", "zh-CN": "用户显式点名后交付 5.4.3 测试分镜、输入职责裁决和复杂运镜六模块提示词包。"},
-      "cannot": {"en": "It is not the default storyboard Skill and cannot claim formal promotion, stable model generation, finished-video quality, or user acceptance.", "zh-CN": "它不是默认分镜 Skill，不能声称已经转正、模型稳定生成、成片合格或用户接受。"},
-      "extra_principles": [
-        {"en": "Compare fixed, simple, and complex camera solutions; use the complex route only when it adds a visible story, spatial, temporal, or subjective result that the simpler routes cannot provide.", "zh-CN": "比较固定、简单和复杂摄影机方案；只有复杂方案带来简单方案无法等价完成的剧情、空间、时间或主观可见结果时才采用。"},
-        {"en": "Text, reference video, 3D previs, images, and keyframes each keep an explicit responsibility boundary and cannot silently overwrite story or asset truth.", "zh-CN": "文字、参考视频、3D 预演、图片和关键帧各自保持明确职责边界，不能静默覆盖剧情或资产事实。"}
-      ],
-      "extra_inputs": [
-        {"en": "An explicit request to test `$ai-storyboard-director-motion-lab`; the words 'complex camera movement' alone do not authorize the experimental route.", "zh-CN": "用户显式要求测试 `$ai-storyboard-director-motion-lab`；仅出现“复杂运镜”四字不构成实验授权。"},
-        {"en": "Any motion-reference video or 3D previs must state what motion or topology it controls and what characters, locations, brands, materials, and story facts it does not contribute.", "zh-CN": "运镜参考视频或 3D 预演必须写清负责的运动/拓扑，以及不提供的人物、地点、品牌、材质和剧情事实。"}
-      ],
-      "extra_workflow": [
-        {"en": "Label the output as a 5.4.3 test that does not change formal 5.4.2, decide input responsibilities, and split or request previs when the path cannot be described reliably.", "zh-CN": "先标记为不改变正式 5.4.2 的 5.4.3 测试，裁决输入职责；路径无法可靠描述时拆段或要求预演。"}
-      ],
-      "extra_returns": [
-        {"en": "If complex motion adds only spectacle, return to a fixed or simple camera plan; if topology or occlusion cannot be proven, return to 3D previs instead of inventing continuity.", "zh-CN": "复杂运镜若只增加奇观则退回固定或简单方案；拓扑或遮挡无法证明时退回 3D 预演，不虚构连续性。"}
-      ],
-      "extra_review": [
-        {"en": "Every motion phase has a visible trigger, path, focus or occlusion handoff, speed change, new information, endpoint, and a stated reason the simpler alternative is insufficient.", "zh-CN": "每个运动阶段都有可见触发、路径、焦点/遮挡接力、速度变化、新信息、终点，并说明简单替代为何不足。"}
-      ],
-      "extra_pass": [
-        {"en": "A structural or text-behavior pass keeps the module in Testing; only explicit later user approval can start a separate promotion decision.", "zh-CN": "结构或文字行为通过后仍保持“测试中”；只有用户后续明确批准，才能另开转正决定。"}
-      ],
-      "extra_outputs": [
-        {"en": "The output begins with `5.4.3 experimental candidate | this test only | formal 5.4.2 unchanged` and includes the readable five-column storyboard plus complete six-module prompts.", "zh-CN": "输出以“5.4.3 实验候选｜仅本次测试｜正式 5.4.2 不变”开头，并同时包含五列分镜和完整六模块提示词。"}
-      ],
-      "extra_boundaries": [
-        {"en": "The package keeps `allow_implicit_invocation: false`, stays outside the complete-studio ZIP, and requires `--experimental` for local installation.", "zh-CN": "该包保持 `allow_implicit_invocation: false`，不进入完整工作室 ZIP，本地安装必须显式添加 `--experimental`。"}
-      ]
     },
     {
       "name": "character-asset", "family": "asset", "status": "deployed",
@@ -589,7 +555,7 @@
       "title": {"en": "ai-short-drama-production — short-drama control contracts", "zh-CN": "ai-short-drama-production｜AI短剧控制合同"},
       "purpose": {"en": "Turn approved creative decisions into traceable beat, asset, blocking, lighting, action, sketch, prompt, and QC control contracts for AI short-drama production.", "zh-CN": "把批准的创作决定编排为可追溯的节拍、资产、调度、布光、动作、草图、提示词和 QC 控制合同。"},
       "standalone": {"en": "Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts.", "zh-CN": "针对已有决定的生产控制编排与缺口审计，也可单独交付六类控制合同中的任意一类。"},
-      "cannot": {"en": "It does not duplicate all director, asset, genre, generation, and QC abilities in one folder.", "zh-CN": "不会在一个文件夹里复制导演、资产、类型、生成和 QC 的全部能力。"}
+      "cannot": {"en": "It does not require a companion package: its director, asset, genre, prompt, and QC rules are rewritten as local short-drama modules, while actual image/video generation still needs the host's media tools and permissions.", "zh-CN": "不需要配套技能包：导演、资产、类型、提示词和 QC 规则均按短剧用途重写为本地模块；真实图片和视频生成仍需要宿主媒体工具与权限。"}
     },
     {
       "name": "web-design-director", "family": "web", "status": "deployed",
@@ -604,16 +570,16 @@
       "status_label": {"en": "Deployed", "zh-CN": "已部署"},
       "title": {"en": "d-official-market-analysis — source-backed media research", "zh-CN": "d-official-market-analysis｜官方影视市场研究"},
       "purpose": {"en": "Research film, short drama, animation, AI film, and adjacent media markets from current official and authoritative evidence for a defined decision.", "zh-CN": "围绕明确决策，用当前官方与权威证据研究影视、短剧、动画、AI影视及相邻市场。"},
-      "standalone": {"en": "A source plan, validated dataset, evidence table, analysis, report, and separately labeled knowledge candidate.", "zh-CN": "来源计划、校验数据集、证据表、分析报告和单独标记的知识候选。"},
+      "standalone": {"en": "A source plan, validated dataset, evidence table, analysis, report, and separately labeled pending record, all produced by this package.", "zh-CN": "由本包独立完成的来源计划、校验数据集、证据表、分析报告和单独标记的待批准记录。"},
       "cannot": {"en": "Offline use cannot fabricate current market facts, and a completed report does not authorize semantic-layer writing.", "zh-CN": "离线时不能补造当前市场事实，报告完成也不授权语义层写入。"}
     },
     {
       "name": "d-data-analysis-semantic-layer", "family": "semantic", "status": "deployed",
       "status_label": {"en": "Deployed", "zh-CN": "已部署"},
       "title": {"en": "d-data-analysis-semantic-layer — approved knowledge writing", "zh-CN": "d-data-analysis-semantic-layer｜批准后的知识写入"},
-      "purpose": {"en": "Validate, version, expire, preserve conflicts, and write approved analytical candidates into a semantic knowledge layer with a reconciled receipt.", "zh-CN": "校验、版本化、管理有效期、保留冲突，并把已批准分析候选写入语义知识层，核对真实回执。"},
-      "standalone": {"en": "Candidate review, validation, version/expiry planning, and a pending-write package; actual writing when the host capability and current approval exist.", "zh-CN": "候选审核、校验、版本/有效期规划和待写入包；宿主能力与本轮批准齐全时可实际写入。"},
-      "cannot": {"en": "No current approval or no write capability means it cannot claim that the knowledge base was updated.", "zh-CN": "没有本轮批准或没有写入能力时，不能声称知识库已经更新。"}
+      "purpose": {"en": "Validate, version, expire, preserve conflicts, and write approved analytical candidates into the D semantic target explicitly supplied by the current task, with a reconciled receipt.", "zh-CN": "校验、版本化、管理有效期、保留冲突，并把已批准分析候选写入本次任务明确提供的D语义层目标，核对真实回执。"},
+      "standalone": {"en": "The package contains the complete approval, validation, version, conflict, write, readback, and pending-write contracts; the host supplies only the current write target or direct data handle.", "zh-CN": "本包自带完整审批、校验、版本、冲突、写入、回读和待写入合同；宿主只需提供本次写入目标或直接数据句柄。"},
+      "cannot": {"en": "Without current approval or a writable target it cannot claim a write; it returns a complete pending-write package instead.", "zh-CN": "没有本轮批准或可写目标时，不能声称已经写入，只能交付完整待写入包。"}
     },
     {
       "name": "hard-sci-fi-visual-director", "family": "hard-scifi", "status": "experimental",

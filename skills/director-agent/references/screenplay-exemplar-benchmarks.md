@@ -6,7 +6,7 @@ For a serious, complete, full, or explicitly excellent screenplay, read at least
 
 ## Source And Copyright Boundary
 
-This Skill does not bundle full copyrighted screenplays. It stores verified source editions, scene ranges, and transferable mechanisms. Read the actual source when needed, quote only within applicable limits, and use A3-20/A3-21 to move methods rather than expression.
+This Skill does not bundle full copyrighted screenplays. It stores verified source editions, scene ranges, and transferable mechanisms. Read the actual public source when needed, quote only within applicable limits, and use the mechanism-transfer procedure in this file rather than copying expression.
 
 Before claiming that a draft was calibrated, keep this internal receipt:
 
@@ -14,8 +14,8 @@ Before claiming that a draft was calibrated, keep this internal receipt:
 real screenplay and edition identity
 actual pages/scenes opened in this task
 observable action/dialogue causality found in those pages
-A3-20 mechanism extraction
-A3-21 original transfer decision
+Mechanism extraction
+Original transfer decision
 recognizable plot/character/setting/dialogue similarities explicitly banned
 surface-cluster check: whether two or more distinctive sensory, occupational, spatial, deadline, or power-shift elements still resemble the benchmark
 ```

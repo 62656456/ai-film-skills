@@ -32,9 +32,9 @@
 | 编排 AI 短剧完整生产流程 | [`ai-short-drama-production`](../../skills/zh-CN/ai-short-drama-production.md) | [`SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) |
 | 设计、实现或审查网页界面 | [`web-design-director`](../../skills/zh-CN/web-design-director.md) | [`SKILL.md`](../../../skills/web-design-director/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
 
-### 测试中：分镜复杂运镜候选 5.4.3
+### 当前分镜版本：5.4.4
 
-[`ai-storyboard-director-motion-lab`](../../skills/zh-CN/ai-storyboard-director-motion-lab.md) 是仅限显式调用的实验测试线，用于复杂摄影机路径、运镜参考视频、视觉变换和 3D 预演职责裁决。它不替换正式 `ai-storyboard-director` 5.4.2，不进入完整工作室 ZIP，本地安装必须添加 `--experimental`。[阅读运行合同](../../../experimental/ai-storyboard-director-motion-lab/SKILL.md) · [下载实验 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director-motion-lab.zip)
+正式 [`ai-storyboard-director`](../../../skills/ai-storyboard-director/SKILL.md) 已更新到 5.4.4。复杂摄影机能力已收回单一稳定入口，同时增加用户可见提示词自然语言包装、锁定参考图与多空间连续性门，并要求每个分段镜头标题直接显示真实摄影方案。结构与文字行为检查已通过；真实视频模型生成和用户明确审阅仍待完成。原独立 motion-lab 入口已经退役，不应作为第二个分镜 Skill 安装。
 
 ## 这套 Skill 解决什么
 

@@ -12,6 +12,8 @@ import sys
 import zipfile
 from pathlib import Path
 
+import validate_skill_independence as independence
+
 from repository_safety import (
     SafetyError,
     commit_staging_output,
@@ -125,6 +127,19 @@ def main() -> int:
         help="Allow a reviewed external output that is empty or already owned by this tool",
     )
     args = parser.parse_args()
+
+    independent_skills = independence.skill_dirs()
+    independent_names = {independence.frontmatter_name(skill) for skill in independent_skills}
+    independence_errors = [
+        error
+        for skill in independent_skills
+        for error in independence.validate_skill(skill, independent_names)
+    ]
+    if independence_errors:
+        print("Build refused: one or more Skill packages are not self-contained", file=sys.stderr)
+        for error in independence_errors:
+            print(f"ERROR: {error}", file=sys.stderr)
+        return 2
 
     try:
         output = validate_output_target(

@@ -2,15 +2,15 @@
 
 | 状态 | 已部署 |
 |---|---|
-| 单独可交付 | 候选审核、校验、版本/有效期规划和待写入包；宿主能力与本轮批准齐全时可实际写入。 |
-| 单独不能声称 | 没有本轮批准或没有写入能力时，不能声称知识库已经更新。 |
+| 单独可交付 | 本包自带完整审批、校验、版本、冲突、写入、回读和待写入合同；宿主只需提供本次写入目标或直接数据句柄。 |
+| 单独不能声称 | 没有本轮批准或可写目标时，不能声称已经写入，只能交付完整待写入包。 |
 
 [运行正文 `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-data-analysis-semantic-layer.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
 <!-- contract:purpose -->
 ## 1. 设计目的
 
-校验、版本化、管理有效期、保留冲突，并把已批准分析候选写入语义知识层，核对真实回执。
+校验、版本化、管理有效期、保留冲突，并把已批准分析候选写入本次任务明确提供的D语义层目标，核对真实回执。
 
 <!-- contract:principles -->
 ## 2. 设计理念
@@ -24,9 +24,9 @@
 
 当点名结果落在以下边界内时，可以只拿这一个模块使用：
 
-候选审核、校验、版本/有效期规划和待写入包；宿主能力与本轮批准齐全时可实际写入。
+本包自带完整审批、校验、版本、冲突、写入、回读和待写入合同；宿主只需提供本次写入目标或直接数据句柄。
 
-**单独不能声称:** 没有本轮批准或没有写入能力时，不能声称知识库已经更新。
+**单独不能声称:** 没有本轮批准或可写目标时，不能声称已经写入，只能交付完整待写入包。
 
 <!-- contract:inputs -->
 ## 4. 输入
@@ -100,6 +100,7 @@
 - [`references/records-v1.0.0.json`](../../../skills/d-data-analysis-semantic-layer/references/records-v1.0.0.json)
 - [`references/semantic-contract.md`](../../../skills/d-data-analysis-semantic-layer/references/semantic-contract.md)
 - [`references/semantic-layer.md`](../../../skills/d-data-analysis-semantic-layer/references/semantic-layer.md)
+- [`references/semantic-write-contract.md`](../../../skills/d-data-analysis-semantic-layer/references/semantic-write-contract.md)
 - [`references/source-inventory.md`](../../../skills/d-data-analysis-semantic-layer/references/source-inventory.md)
 - [`references/versioning-and-expiry.md`](../../../skills/d-data-analysis-semantic-layer/references/versioning-and-expiry.md)
 

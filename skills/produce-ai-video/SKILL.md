@@ -9,7 +9,7 @@ description: Turn an approved script, scene, or story passage into a qualified, 
 
 Deliver an actual qualified video. Treat storyboards, prompts, generated clips, edit projects, and QC reports as intermediate artifacts, never as the final result.
 
-Use `ai-storyboard-director` only after the director judgment is complete. Its six-module prompt structure and Digital-10 information core are the downstream encoding contract; do not modify or replace that Skill.
+This package contains its own production storyboard and six-module prompt compiler in `references/storyboard-prompt-compiler.md`. Use it only after the director judgment is complete.
 
 ## Choose the execution mode
 
@@ -38,7 +38,7 @@ Use this mode when the user supplies or has repeatedly adjusted a storyboard, ti
 2. **Interpret the script.** Determine the dramatic event, character objective, power relation, information reveal, physical action, emotional turn, sound cue, entry state, and exit state. Read [autonomous-production-workflow.md](references/autonomous-production-workflow.md) for the auditable decision framework.
 3. **Direct before prompting.** Decide what the audience must see and in what order. Build a world-state model for space, subjects, props, light sources, movement axes, and continuity.
 4. **Design segments and shots.** Treat a segment as a short dramatic sequence and a shot as one uninterrupted viewpoint. In autonomous mode, design at least 7–8 effective, non-equally timed shots per segment unless the user explicitly requests a long take. Every cut must add information, change power, clarify action, reveal a reaction, or hand off the next beat.
-5. **Create the director handoff.** Produce a `DIRECTOR_SHOT_PACKAGE` containing the segment objective, entry and exit states, world-state lock, shot order, timing, framing, camera, visible action, sound, cut motivation, and continuity handoff. Only after this package is coherent may `ai-storyboard-director` convert it into the approved human-readable storyboard and six-module video prompt.
+5. **Create and compile the director package.** Produce a `DIRECTOR_SHOT_PACKAGE` containing the segment objective, entry and exit states, world-state lock, shot order, timing, framing, camera, visible action, sound, cut motivation, and continuity handoff. Only after this package is coherent may `references/storyboard-prompt-compiler.md` convert it into the approved five-column storyboard and six-module video prompt.
 6. **Choose the production route.** Preserve the director timing and shot design. If one model call cannot reliably render the required internal shots, generate individual shots or smaller clusters and edit them into the designed segment. Never let a model's maximum duration redefine the dramatic timing.
 7. **Generate real motion.** Produce actual video material. Reject static-frame motion, keyframe slideshows, or technical previews when the requested deliverable is a finished video.
 8. **Select and assemble.** Judge takes by performance, identity, action, continuity, composition, and editability. Cut on motivated action, gaze, occlusion, object, sound, or information change. Add handles where the tool permits; do not concatenate fixed clip durations blindly.

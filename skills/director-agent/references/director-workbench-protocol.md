@@ -28,7 +28,7 @@ Never one-shot a film project, but do not force a fixed production pipeline onto
 
 ```text
 Pure script creation or repair:
-Project facts when needed -> A3 Writer Room -> state/causality audit -> isolated Cold Read -> readable screenplay
+Project facts when needed -> bundled Writer Room -> state/causality audit -> isolated Cold Read -> readable screenplay
 
 Director design for an approved script:
 Approved screenplay -> Director Room -> Asset Bible -> Scene Board
@@ -92,12 +92,12 @@ Purpose: first tell a complete story through believable behavior and character-s
 
 Creation layer, in this order:
 
-- Read `screenplay-writing-core.md` and the exact A3 cards routed for the task.
+- Read `screenplay-writing-core.md` and the exact local sections routed for the task.
 - Plain story: who wants what, why now, what they do, what it causes, how they change approach, what final choice occurs, and what it costs.
 - Character behavior: knowledge, want, fear/protection, chosen action, obvious available alternative, reason for rejecting it, and resulting consequence.
 - Scene action chain: immediate objective -> action -> resistance -> adaptation/refusal -> changed exit situation -> next necessity.
 - Dialogue behavior: purpose, surface line, protected subtext, listener effect, character-specific voice, interruption/evasion/silence when motivated.
-- Anti-AI pass using A3-18 and A3-19 when needed.
+- Anti-AI pass using the bundled writing core when needed.
 - Exact script draft or replacement passage when requested.
 
 Verification layer, only after the creation layer exists:
@@ -165,7 +165,7 @@ Hard gate: a scene may end unresolved, but it may not end unchanged. The next sc
 
 ### 7. Shot Board / Animatic
 
-Purpose: prepare for `ai-storyboard-director` or visual preproduction.
+Purpose: prepare a complete director package for shot production or visual preproduction.
 
 For each shot candidate:
 
@@ -202,7 +202,7 @@ Fields:
 - Reference image list.
 - Negative constraints.
 - Dialogue/lip-sync status.
-- `ai-storyboard-director` handoff prompt or constraints.
+- Complete local shot-production prompt and constraints.
 
 ### 9. Post-Production Handoff
 
@@ -263,7 +263,7 @@ When the user asks to create a director Agent workflow, project workflow, or reu
 - If only one scene is being handled and project continuity matters, use a lightweight version of the relevant room; otherwise deliver the requested scene directly.
 - If the user wants pure writing and not production, use Writer Room only. Add Director Room only when the user also asks for interpretation, staging, performance, sound, edit, or visual design.
 - For pure screenplay requests, keep internal state ledgers out of the delivered reading copy unless the user asks to inspect them.
-- If the user wants full分镜, complete Project/Director/Asset/Scene/Shot cards first, then hand off to `ai-storyboard-director`.
+- If the user wants full分镜, complete Project/Director/Asset/Scene/Shot cards first and include the complete shot-production constraint block in the same package.
 
 ## Anti-Overbuild Rule
 

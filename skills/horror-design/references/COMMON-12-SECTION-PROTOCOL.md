@@ -1,6 +1,6 @@
-# 12 节类型 Skill 共享执行规约
+# 本包12节类型执行合同
 
-本文件是所有 `*-design` 类型 Skill 的共同细则。各类型文件必须仍包含 0–11 节；本文件只避免重复抄写通用规范，不能替代类型文件的真实色彩、导演、场景或负向参数。
+本文件是当前类型包的完整通用执行合同。主入口仍包含0–11节专属参数；本文件负责当前包内的统一字段、时间线、材质、质量门、平台适配、连续性和声音规则。
 
 ## 统一加载与输出
 
@@ -84,19 +84,21 @@
 2. 类型专属：由类型文件第 9 节提供。
 3. 画质负面：CG 感、3D animation、cartoon、anime、game render、plastic texture、waxy skin、low resolution、over-sharpen、oversaturated、fake bloom。
 
-## 平台与 7-Agent 接口
+## 平台与独立交付接口
 
 - 即梦：中文语义分段；将最重要的时空、主体、动作、镜头和约束置前；复杂镜头明确“内切”与每段时长。
 - 可灵：突出动作起点、传导、终点，材质与环境交互；一段一个主要动作。
 - Midjourney：以静帧/资产为主；英文、镜头和构图先行，参数仅写平台认可的格式。
 - SD：英文参数化强；保留 prompt/negative prompt/seed/reference 的可复现账本。
 
-| 消费方 | 字段 | 必须保留 |
+本 Skill 自己输出完整、可独立消费的四个数据块，不读取任何其他 Skill 的结构：
+
+| 本地输出块 | 字段 | 必须保留 |
 |---|---|---|
-| 02-art-director | asset_contract / style_module | 资产编号、来源、版本、审核状态 |
-| 03-storyboard | style_module | 镜头、空间、动作、导演“可观察方法” |
-| 04-prompt-engineer | style_route | 色彩、材质、模板字段、平台适配、资产引用 |
-| 06-qc-supervisor | qc_checklist / negative_layers | 失败项、回炉项、尾帧衔接 |
+| asset_contract | 资产编号、来源、版本、审核状态 | 已锁定外观与状态不得被风格参数改写 |
+| style_module | 镜头、空间、动作、导演“可观察方法” | 只供应类型参数，不代替剧情决定 |
+| style_route | 色彩、材质、模板字段、平台适配、资产引用 | 字段可直接粘贴或由调用方读取 |
+| qc_checklist / negative_layers | 失败项、回炉项、尾帧衔接 | 失败时给出明确回炉字段 |
 
 ## 连续性与声音
 

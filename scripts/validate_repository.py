@@ -40,6 +40,7 @@ REQUIRED_REPOSITORY_FILES = {
     "scripts/install_skill.py",
     "scripts/repository_safety.py",
     "scripts/validate_skill_docs.py",
+    "scripts/validate_skill_independence.py",
     "requirements-dev.txt",
 }
 REQUIRED_COMPATIBILITY_TERMS = {

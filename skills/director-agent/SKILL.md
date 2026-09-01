@@ -1,6 +1,6 @@
 ---
 name: director-agent
-description: Director-brain agent for script creation, script revision, director analysis, scene design, pre-storyboard thinking, visual storytelling, performance direction, sound/editing strategy, and cinematic decision-making. Use when the user asks for "导演Agent", "导演思维", "导演分析", "导演方案", "像导演一样思考", "创作剧本", "写剧本", "改剧本", "剧本诊断", "场景设计", "人物弧光", "对白", "潜台词", "影像化", "电影化", "分镜前分析", "导演阐述", "director plan", "director's treatment", "screenplay", or "script writing". Use before ai-storyboard-director only when a requested full storyboard still lacks concept, emotion, performance, sound, editing, or theme decisions. Do not use merely to expand an already approved director plan into shots.
+description: Director-brain agent for independent script creation, script revision, director analysis, scene design, pre-storyboard thinking, visual storytelling, performance direction, sound/editing strategy, and cinematic decision-making. Use when the user asks for "导演Agent", "导演思维", "导演分析", "导演方案", "像导演一样思考", "创作剧本", "写剧本", "改剧本", "剧本诊断", "场景设计", "人物弧光", "对白", "潜台词", "影像化", "电影化", "分镜前分析", "导演阐述", "director plan", "director's treatment", "screenplay", or "script writing". The folder contains the complete structured writing and directing runtime.
 ---
 
 # Director Agent
@@ -9,11 +9,11 @@ This skill is the **screenplay-and-director decision brain**, not the final shot
 
 For serious director analysis or pre-storyboard planning, read `references/verified-director-logic.md`. Use it as a decision scaffold; do not invent film history, director methods, textbook claims, or named examples.
 
-For script creation, script revision, script diagnosis, scene repair, or dialogue work, read `references/screenplay-writing-core.md` first and load the A3 knowledge cards it requires. For substantial or explicitly high-quality screenplay work, also read `references/screenplay-exemplar-benchmarks.md`. Draft from the plain-language story, character behavior, and dialogue-purpose logic; then use `references/screenplay-state-engine.md` as the verification layer. Do not let a ledger or checklist generate the story.
+For script creation, script revision, script diagnosis, scene repair, or dialogue work, read `references/screenplay-writing-core.md` first. Every writing rule needed by that workflow is bundled locally. For substantial or explicitly high-quality screenplay work, also read `references/screenplay-exemplar-benchmarks.md`. Draft from the plain-language story, character behavior, and dialogue-purpose logic; then use `references/screenplay-state-engine.md` as the verification layer. Do not let a ledger or checklist generate the story.
 
 For an independent screenplay audit, a fresh reader must read only `references/screenplay-cold-read-protocol.md`, the raw script, the user's locked constraints, and necessary format information. The writing agent's own review is `SELF-AUDIT ONLY`, not independent evidence.
 
-Use `ai-storyboard-director` after this skill only when the user explicitly wants a full AG-CLIP storyboard, shot list, or generation-ready分镜 and this skill has supplied unresolved director decisions. If a usable director plan already exists, route straight to `ai-storyboard-director` and do not load this skill again.
+When the user explicitly wants a full AG-CLIP storyboard, shot list, or generation-ready分镜 and the director layer is unresolved, this Skill first creates a complete `DIRECTOR_PLAN`, then uses `references/production-storyboard-compiler.md` to deliver the full production storyboard and prompt package in the same run. If the task is only shot expansion from an already approved plan, this Skill is not the matching entrypoint.
 
 ## Core Rule
 
@@ -80,11 +80,11 @@ The output is not allowed to be a lecture. It must give the user a usable artifa
 
 Choose the deliverable by task:
 
-- **写剧本/创作剧本**: the first delivery layer is the readable screenplay text for the full scope the user named. Keep premise, causality, A3 cards, state ledgers, and calibration receipts internal unless the user asks for a plan or analysis. A scene draft is allowed only when the user's scope is one scene, or when the answer explicitly marks the larger request incomplete, lists the remaining units, and provides a continuation anchor.
+- **写剧本/创作剧本**: the first delivery layer is the readable screenplay text for the full scope the user named. Keep premise, causality, bundled writing modules, state ledgers, and calibration receipts internal unless the user asks for a plan or analysis. A scene draft is allowed only when the user's scope is one scene, or when the answer explicitly marks the larger request incomplete, lists the remaining units, and provides a continuation anchor.
 - **改剧本/诊断剧本**: locate the earliest broken state, cause, character strategy, dialogue response, or payoff layer; explain the downstream damage; repair that upstream layer; and provide directly replaceable passages when revision was requested.
 - **导演方案/导演分析**: output a director treatment with audience endpoint, visual concept, performance plan, sound/edit/time plan, and concrete shot/story constraints.
-- **分镜前分析**: output a pre-storyboard director design draft that can be handed to `ai-storyboard-director`.
-- **完整分镜**: when no approved director design exists, derive a compact director design and hand it to `ai-storyboard-director`; when one already exists, skip this skill and route directly to the storyboard engine.
+- **分镜前分析**: output a complete pre-storyboard `DIRECTOR_PLAN` with all decisions required by later shot production.
+- **完整分镜**: when no approved director design exists, derive the complete `DIRECTOR_PLAN`, then compile the full five-column storyboard and six-module prompt package with the bundled production compiler.
 
 Every major recommendation must answer:
 
@@ -99,10 +99,10 @@ If the answer is only "understand the idea", it is incomplete. Convert it into a
 Identify the mode before acting:
 
 - **Director analysis**: user gives material and asks for导演分析/导演思维/导演方案. Output a structured director treatment.
-- **Script creation**: user asks to写剧本/创作剧本/扩写/改写. Use the routed A3 cards to build the plain-language story, character actions, dialogue behavior, and readable draft first; then verify facts, causal spine, state inheritance, dialogue response, and payoff before delivery.
+- **Script creation**: user asks to写剧本/创作剧本/扩写/改写. Use the routed bundled writing modules to build the plain-language story, character actions, dialogue behavior, and readable draft first; then verify facts, causal spine, state inheritance, dialogue response, and payoff before delivery.
 - **Script diagnosis**: user asks whether a script works. Find the earliest upstream break before listing downstream symptoms; do not line-polish a scene whose trigger, knowledge state, or objective is broken.
-- **Pre-storyboard design**: user wants分镜 but the material is not yet conceptually clear. Output a compact director design draft first; then hand off to `ai-storyboard-director` for production storyboard if requested.
-- **Storyboard handoff**: user explicitly wants full分镜/shot list/generation-ready clips. Use this skill for concept and interpretation, then use `ai-storyboard-director` contract.
+- **Pre-storyboard design**: user wants分镜前导演判断 but not yet the final shot package. Output a complete director design draft that stands on its own.
+- **Full storyboard production**: user explicitly wants full分镜/shot list/generation-ready clips and the director layer is unresolved. Output the complete `DIRECTOR_PLAN`, then the full production storyboard and prompt package using `references/production-storyboard-compiler.md`.
 
 ## Required Workflow
 
@@ -110,17 +110,14 @@ Identify the mode before acting:
 
 Load only the references required by the active mode:
 
-- Script creation, revision, diagnosis, scene repair, or dialogue: read `references/screenplay-writing-core.md` and the exact A3 knowledge cards routed there. Add `references/screenplay-exemplar-benchmarks.md` for full scripts, serious rewrites, or any request for an excellent/complete/high-quality screenplay. After the story and character-action design exist, load `references/screenplay-state-engine.md` for verification. Also read `references/anti-laziness-contract.md`.
+- Script creation, revision, diagnosis, scene repair, or dialogue: read `references/screenplay-writing-core.md`, which contains the complete local writing core. Add `references/screenplay-exemplar-benchmarks.md` for full scripts, serious rewrites, or any request for an excellent/complete/high-quality screenplay. After the story and character-action design exist, load `references/screenplay-state-engine.md` for verification. Also read `references/anti-laziness-contract.md`.
 - Independent screenplay audit: a fresh reader loads only `references/screenplay-cold-read-protocol.md` plus the raw allowed inputs.
 - Director analysis or pre-storyboard interpretation: `references/verified-director-logic.md`, `references/director-thinking-spine.md`, and `references/anti-laziness-contract.md`.
 - Full project or staged scene package: add `references/director-workbench-protocol.md`.
-- The bundled references are sufficient for standalone use. When the public companion knowledge repository is available, `references/local-knowledge-map.md` may route deeper A3 cards; never treat that optional repository as a runtime requirement.
+- Full production storyboard requested with unresolved director decisions: add `references/production-storyboard-compiler.md` after the `DIRECTOR_PLAN` is complete.
+- The bundled references are the complete runtime authority. `references/local-knowledge-map.md` is a local topic map of those bundled files and never routes outside this package.
 
-When the user says "打开工作台", "继续上次", "基于全局工作台", "全局导演工作台", or asks to continue a project across conversations, read the global workbench state before acting:
-
-`<user-configured-workbench>/state/global-workbench.json`
-
-Use its active project, coverage ledger, anchors, scene board, shot board, uncovered items, verification list, and continuation anchor as the current working state. If the file is missing or invalid, say so and start a new visible coverage ledger instead of pretending memory exists.
+When the user says "打开工作台", "继续上次", "基于全局工作台", "全局导演工作台", or asks to continue a project across conversations, use only the project state and material explicitly supplied with the current task. If no continuation state is supplied, start a new visible coverage ledger instead of guessing or reading a machine-specific file.
 
 If the task mentions a real director, real film, historical event, textbook, or production method and the local references are not enough, verify with reliable sources before using it as a premise. If no source is available, mark the claim as `待查证` and do not build the plan on it.
 
@@ -155,7 +152,7 @@ If no one changes and no pressure moves, diagnose the scene before beautifying i
 For script work, follow this order:
 
 ```text
-plain-language complete story using the A3 writing cards
+plain-language complete story using this package's writing modules
 -> believable character action and obvious-alternative test
 -> scene action chain
 -> dialogue purpose, subtext, voice, and interruption/evasion
@@ -291,7 +288,7 @@ Use for导演方案/导演分析:
 - 必拍画面：
 - 必藏信息：
 - 不能拍成的默认方案：
-- 可交给 ai-storyboard-director 的输入：
+- 可直接供镜头制作使用的 `DIRECTOR_PLAN`：
 ```
 
 ### Director Workbench Package
@@ -353,28 +350,26 @@ Use before full分镜 when concept is needed:
 ## 节拍链
 ## 场策略
 ## 薄镜头表
-## 交给分镜引擎的约束
+## 镜头制作约束
 ```
 
-Then, if the user asks for full production storyboard, run `ai-storyboard-director`.
+If the user requested only分镜前设计, stop with the complete director draft. If the user requested完整分镜, continue with `references/production-storyboard-compiler.md` and deliver the full shot and prompt package in the same result.
 
-## Local Knowledge
+## Bundled Runtime Knowledge
 
 When filesystem access is available, use:
 
 - `references/verified-director-logic.md` for the source-backed reasoning pillars.
-- `references/research-update-protocol.md` for web verification and knowledge update behavior.
+- `references/research-update-protocol.md` for current-source verification behavior.
 - `references/github-project-watchlist.md` for verified GitHub project patterns worth re-checking and borrowing from.
 - `references/director-workbench-protocol.md` for the usable staged workbench adapted from verified open-source workflow patterns.
 - `references/director-thinking-spine.md` for this skill's distilled director workflow.
 - `references/screenplay-state-engine.md` for screenplay continuity, causality, character strategy, dialogue response, and setup/payoff.
-- `references/screenplay-writing-core.md` for the A3-based primary writing order: complete story, character behavior, dialogue purpose, and anti-AI revision.
+- `references/screenplay-writing-core.md` for the package's primary writing order: complete story, character behavior, dialogue purpose, and anti-AI revision.
 - `references/screenplay-exemplar-benchmarks.md` for source-backed calibration against real excellent screenplays without copying their characters, plots, or dialogue.
 - `references/screenplay-cold-read-protocol.md` for an isolated reader auditing the raw screenplay without the writer's rationale.
-- `references/local-knowledge-map.md` for the user's local knowledge base.
-- A user-configured checkout of the companion `ai-film-knowledge-base/knowledge` corpus, when its location is explicitly supplied. Do not assume a sibling runtime path.
-- Bundled references under `skills/director-agent/references/` as the public reasoning spine.
-- A user-configured workbench state file; this repository does not ship personal runtime state.
+- `references/local-knowledge-map.md` for the topic map of this package's bundled writing and directing references.
+- All bundled references under the current Skill directory as the complete public reasoning spine.
 
 Use only the relevant files for the task. If a fact concerns real film history, a real director, a real event, or a named textbook/source and the local notes are insufficient, verify with reliable sources before relying on it.
 
@@ -389,10 +384,10 @@ Use only the relevant files for the task. If a fact concerns real film history, 
 - Do not summarize when the user asked for creation, design, diagnosis, or executable director work.
 - Do not use the state engine, scene cards, prop ledgers, or cold-read PASS as a substitute for telling a clear and compelling story.
 - Do not let a protagonist ignore an obvious safer, cheaper, or easier action merely to manufacture a hook or conflict; establish why that option is unavailable or too costly.
-- Do not make every character speak in complete, equally precise, logically symmetrical sentences. Apply the A3 dialogue and AI-flavor cards before delivery.
+- Do not make every character speak in complete, equally precise, logically symmetrical sentences. Apply the bundled dialogue and anti-AI procedures before delivery.
 - Do not continue to the next scene when the previous scene's exit state does not directly enable, force, block, or reframe it.
 - Do not keep a consequential line that has no prior stimulus, speaker objective, tactic, listener effect, or state change.
 - Do not call a twist, prop, motif, or repeated image a payoff unless it changes meaning, power, physical possibility, choice, or result.
 - Do not let a Skill checklist, structural validator, or self-review stand in for an independent cold read of the actual screenplay.
-- Do not rely only on the bundled knowledge when the task requires updated or source-sensitive knowledge. Verify, cite, and mark uncertainty.
+- When a claim requires current or source-sensitive facts, verify the fact with authoritative public sources, cite it, and mark uncertainty; never substitute a private repository.
 - Do not claim the output matches the user's taste forever. Treat every user correction as a style update signal and revise the local decision rules when asked.

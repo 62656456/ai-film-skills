@@ -2,15 +2,15 @@
 
 | Status | Deployed |
 |---|---|
-| Can deliver alone | Candidate review, validation, version/expiry planning, and a pending-write package; actual writing when the host capability and current approval exist. |
-| Cannot claim alone | No current approval or no write capability means it cannot claim that the knowledge base was updated. |
+| Can deliver alone | The package contains the complete approval, validation, version, conflict, write, readback, and pending-write contracts; the host supplies only the current write target or direct data handle. |
+| Cannot claim alone | Without current approval or a writable target it cannot claim a write; it returns a complete pending-write package instead. |
 
 [Runtime `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-data-analysis-semantic-layer.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
 <!-- contract:purpose -->
 ## 1. Purpose
 
-Validate, version, expire, preserve conflicts, and write approved analytical candidates into a semantic knowledge layer with a reconciled receipt.
+Validate, version, expire, preserve conflicts, and write approved analytical candidates into the D semantic target explicitly supplied by the current task, with a reconciled receipt.
 
 <!-- contract:principles -->
 ## 2. Design principles
@@ -24,9 +24,9 @@ Validate, version, expire, preserve conflicts, and write approved analytical can
 
 Use this module by itself when the requested result stays inside the following boundary:
 
-Candidate review, validation, version/expiry planning, and a pending-write package; actual writing when the host capability and current approval exist.
+The package contains the complete approval, validation, version, conflict, write, readback, and pending-write contracts; the host supplies only the current write target or direct data handle.
 
-**Cannot claim alone:** No current approval or no write capability means it cannot claim that the knowledge base was updated.
+**Cannot claim alone:** Without current approval or a writable target it cannot claim a write; it returns a complete pending-write package instead.
 
 <!-- contract:inputs -->
 ## 4. Inputs
@@ -100,6 +100,7 @@ Candidate review, validation, version/expiry planning, and a pending-write packa
 - [`references/records-v1.0.0.json`](../../../skills/d-data-analysis-semantic-layer/references/records-v1.0.0.json)
 - [`references/semantic-contract.md`](../../../skills/d-data-analysis-semantic-layer/references/semantic-contract.md)
 - [`references/semantic-layer.md`](../../../skills/d-data-analysis-semantic-layer/references/semantic-layer.md)
+- [`references/semantic-write-contract.md`](../../../skills/d-data-analysis-semantic-layer/references/semantic-write-contract.md)
 - [`references/source-inventory.md`](../../../skills/d-data-analysis-semantic-layer/references/source-inventory.md)
 - [`references/versioning-and-expiry.md`](../../../skills/d-data-analysis-semantic-layer/references/versioning-and-expiry.md)
 

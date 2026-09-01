@@ -19,7 +19,7 @@ python scripts/install_skill.py <skill-name> --platform <codex|claude-code|trae|
 | Skill design guide | Best for | Runtime | Standalone download | Release state |
 |---|---|---|---|---|
 | [`director-agent`](docs/skills/en/director-agent.md) | Script creation and revision, causality, character action, natural dialogue, and pre-storyboard directing decisions | [`SKILL.md`](skills/director-agent/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) | Deployed; long-term stability still accumulating |
-| [`ai-storyboard-director`](docs/skills/en/ai-storyboard-director.md) | Script understanding, blocking, shot sentences, multi-camera projection, complex camera movement, and production prompts | [`SKILL.md`](skills/ai-storyboard-director/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) | Deployed; 5.4.2 is the current formal default over the 5.4.1 continuity contract |
+| [`ai-storyboard-director`](docs/skills/en/ai-storyboard-director.md) | Script understanding, blocking, shot sentences, multi-camera projection, complex camera movement, and production prompts | [`SKILL.md`](skills/ai-storyboard-director/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) | Deployed; 5.4.4 is current; real-video generation and user review pending |
 
 ## Asset definition
 
@@ -57,7 +57,6 @@ python scripts/install_skill.py <skill-name> --platform <codex|claude-code|trae|
 | Skill design guide | Best for | Runtime | Standalone download | Release state |
 |---|---|---|---|---|
 | [`hard-sci-fi-visual-director`](docs/skills/en/hard-sci-fi-visual-director.md) | Evidence-grounded hard-science-fiction visual direction with physical, ecological, industrial, and story-legibility gates | [`SKILL.md`](experimental/hard-sci-fi-visual-director/SKILL.md) | [Experimental ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/hard-sci-fi-visual-director.zip) | Experimental; not deployed; user visual review pending |
-| [`ai-storyboard-director-motion-lab`](docs/skills/en/ai-storyboard-director-motion-lab.md) | 5.4.3 test line for necessary complex camera paths, visual transformations, motion references, and 3D previs input duties | [`SKILL.md`](experimental/ai-storyboard-director-motion-lab/SKILL.md) | [Experimental ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director-motion-lab.zip) | **Testing**; explicit invocation only; formal 5.4.2 remains unchanged |
 
 Experimental packages are not included in the complete-studio ZIP and require deliberate installation.
 

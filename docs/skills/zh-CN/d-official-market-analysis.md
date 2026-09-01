@@ -2,7 +2,7 @@
 
 | 状态 | 已部署 |
 |---|---|
-| 单独可交付 | 来源计划、校验数据集、证据表、分析报告和单独标记的知识候选。 |
+| 单独可交付 | 由本包独立完成的来源计划、校验数据集、证据表、分析报告和单独标记的待批准记录。 |
 | 单独不能声称 | 离线时不能补造当前市场事实，报告完成也不授权语义层写入。 |
 
 [运行正文 `SKILL.md`](../../../skills/d-official-market-analysis/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-official-market-analysis.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
@@ -24,7 +24,7 @@
 
 当点名结果落在以下边界内时，可以只拿这一个模块使用：
 
-来源计划、校验数据集、证据表、分析报告和单独标记的知识候选。
+由本包独立完成的来源计划、校验数据集、证据表、分析报告和单独标记的待批准记录。
 
 **单独不能声称:** 离线时不能补造当前市场事实，报告完成也不授权语义层写入。
 
@@ -97,6 +97,7 @@
 **引用资料**
 
 - [`references/analysis-and-report.md`](../../../skills/d-official-market-analysis/references/analysis-and-report.md)
+- [`references/analysis-capability-contract.md`](../../../skills/d-official-market-analysis/references/analysis-capability-contract.md)
 - [`references/connector-contract.md`](../../../skills/d-official-market-analysis/references/connector-contract.md)
 - [`references/data-contract.md`](../../../skills/d-official-market-analysis/references/data-contract.md)
 - [`references/evidence-and-sources.md`](../../../skills/d-official-market-analysis/references/evidence-and-sources.md)

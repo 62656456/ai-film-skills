@@ -1,7 +1,0 @@
-interface:
-  display_name: "复杂运镜实验室"
-  short_description: "仅供显式调用的复杂运镜设计、参考视频与三维预演裁决实验候选"
-  default_prompt: "Use $ai-storyboard-director-motion-lab to test a complex camera-motion storyboard without changing the formal skill."
-
-policy:
-  allow_implicit_invocation: false

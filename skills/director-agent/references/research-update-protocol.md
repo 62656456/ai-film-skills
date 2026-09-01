@@ -21,7 +21,7 @@ Use web verification when the task depends on:
 - A film-theory claim not already supported in `verified-director-logic.md`.
 - Current AI video model/platform capability, generation limits, prompt behavior, or production workflow.
 - User asks for "最新", "查证", "真实", "教材", "教科书", "大师方法", "全球导演", "不要臆想".
-- The local knowledge base and bundled references disagree or feel incomplete.
+- The bundled references and newly verified public evidence disagree or feel incomplete.
 
 ## Source Priority
 

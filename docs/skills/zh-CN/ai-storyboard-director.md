@@ -1,6 +1,6 @@
 # ai-storyboard-director｜剧本转分镜与提示词
 
-| 状态 | 已部署；5.4.2 是当前正式默认版，继承 5.4.1 连续性合同 |
+| 状态 | 已部署；5.4.4 是当前安装版本；真实视频生成与用户审阅仍待完成 |
 |---|---|
 | 单独可交付 | 针对已有批准剧本的完整分镜和可复制提示词包。 |
 | 单独不能声称 | 不改写剧本、不直接生成视频，也不证明平台生成成功。 |
@@ -48,7 +48,7 @@
 ## 6. 退回、重做与版本回滚
 
 - 故事或导演问题退回上游；空间、调度、摄影机、时长或提示词编译问题退回对应设计阶段。
-- 版本回滚不同于创作回炉；只有用户明确要求时，才可使用已有的 5.4.1 哈希快照。
+- 技能包维护不同于创作回炉；分享 ZIP 只包含当前独立运行内容，不含历史运行依赖。
 - 连续性失败从固定世界坐标修复，不能为了保持画面左右而移动房间。
 
 <!-- contract:review -->
@@ -96,15 +96,7 @@
 
 **引用资料**
 
+- [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)
-
-**版本与回退证据**
-
-- [`versions/5.4.1/production-contract.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.1/production-contract.snapshot.md)
-- [`versions/5.4.1/rollback-manifest.json`](../../../skills/ai-storyboard-director/versions/5.4.1/rollback-manifest.json)
-- [`versions/5.4.1/SKILL.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.1/SKILL.snapshot.md)
-- [`versions/5.4.2-candidate/rollback-manifest.json`](../../../skills/ai-storyboard-director/versions/5.4.2-candidate/rollback-manifest.json)
-- [`versions/5.4.2-candidate/shot-design-engine.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.2-candidate/shot-design-engine.snapshot.md)
-- [`versions/5.4.2-candidate/SKILL.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.2-candidate/SKILL.snapshot.md)
