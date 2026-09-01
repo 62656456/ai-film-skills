@@ -42,6 +42,30 @@ Makes two-hand grip, final-surface contact, the held impact interval, and opposi
 
 These original local outputs show the kind of observable camera, blocking, and physical-action checkpoints the Skills are designed to specify and review. They are rough 3D previs—not finished AI films, external-user adoption, or proof that the unpublished local previs executor ships in this repository. [Open the complete media gallery](https://62656456.github.io/ai-film-skills/#media) · [Inspect hashes and evidence boundaries](docs/media/media-manifest.json)
 
+## Explore the visual language
+
+One internally reviewed image makes each genre Skill's observable design priorities visible. The image is an example of the parameters the linked Skill supplies—not a claim that the Skill alone generated it or that a user has accepted the aesthetic result.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="docs/skills/en/cyberpunk-design.md"><img src="docs/style-gallery/cyberpunk-design.jpg" width="100%" alt="Cyberpunk street repair scene with practical pink and blue neon, wet reflections, layered class infrastructure and human-machine contact" /></a><br /><strong><a href="docs/skills/en/cyberpunk-design.md">Cyberpunk</a></strong><br />Functional neon, unequal infrastructure, wet material response and repair labor.</td>
+<td width="33%" valign="top"><a href="docs/skills/en/epic-design.md"><img src="docs/style-gallery/epic-design.jpg" width="100%" alt="Epic desert procession approaching a monumental rock-cut citadel with human-scale figures and motivated dust light" /></a><br /><strong><a href="docs/skills/en/epic-design.md">Epic</a></strong><br />Human-small scale, purposeful movement, material history and a readable destination.</td>
+<td width="33%" valign="top"><a href="docs/skills/en/fantasy-design.md"><img src="docs/style-gallery/fantasy-design.jpg" width="100%" alt="Fantasy traveler placing one violet crystal into a forest observatory basin under motivated amber daylight" /></a><br /><strong><a href="docs/skills/en/fantasy-design.md">Fantasy</a></strong><br />Source-bound magic light, layered world space and aged wet materials.</td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="docs/skills/en/horror-design.md"><img src="docs/style-gallery/horror-design.jpg" width="100%" alt="Restrained hospital corridor horror scene with local flashlight, wet footprint evidence, negative space and a mirror contradiction" /></a><br /><strong><a href="docs/skills/en/horror-design.md">Horror</a></strong><br />Readable darkness, partial evidence, controlled space and no full threat reveal.</td>
+<td width="33%" valign="top"><a href="docs/skills/en/noir-design.md"><img src="docs/style-gallery/noir-design.jpg" width="100%" alt="Noir harbor office with a sealed envelope at the light-shadow boundary and a waiting figure beyond rain-streaked glass" /></a><br /><strong><a href="docs/skills/en/noir-design.md">Noir</a></strong><br />Practical light, obstruction, moral tension and evidence at the shadow boundary.</td>
+<td width="33%" valign="top"><a href="docs/skills/en/romance-design.md"><img src="docs/style-gallery/romance-design.jpg" width="100%" alt="Restrained romance at a rainy doorway where two adults share a repaired umbrella across warm and cool light" /></a><br /><strong><a href="docs/skills/en/romance-design.md">Romance</a></strong><br />Threshold distance, warm/cool separation, shared-object contact and micro-emotion.</td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="docs/skills/en/war-design.md"><img src="docs/style-gallery/war-design.jpg" width="100%" alt="War-film evacuation through ruined terrain with a stretcher team, hand signal, readable route and physical load" /></a><br /><strong><a href="docs/skills/en/war-design.md">War</a></strong><br />Readable terrain, human coordination, physical load and localized warmth.</td>
+<td width="33%" valign="top"><a href="docs/skills/en/wuxia-design.md"><img src="docs/style-gallery/wuxia-design.jpg" width="100%" alt="Ink-derived three-dimensional wuxia mountain route with a grounded traveler, pavilion and restrained red lantern" /></a><br /><strong><a href="docs/skills/en/wuxia-design.md">Wuxia</a></strong><br />Deep route geometry, grounded body mechanics, ink material and one restrained accent.</td>
+<td width="33%" valign="top"><a href="docs/skills/en/hard-sci-fi-visual-director.md"><img src="docs/style-gallery/hard-sci-fi-visual-director.jpg" width="100%" alt="Hard science fiction lunar habitat threshold exchange with pressure seals, dust-control wear and human operational logic" /></a><br /><strong><a href="docs/skills/en/hard-sci-fi-visual-director.md">Hard Sci-Fi</a></strong><br /><em>Experimental · self-audit only.</em> Physical threshold, material operation and restrained equipment.</td>
+</tr>
+</table>
+
+Seven frames were newly designed from the current Skill contracts; two prior original atlas panels remained strong enough to reuse after an isolated-crop audit. The complete generated-image archive was inventoried at file level, while public selection required explicit provenance and visible review. [Inspect the style-gallery manifest](docs/style-gallery/manifest.json)
+
 ## Start with one outcome
 
 | Write or repair the story | Design executable shots | Produce an AI-video workflow |

@@ -19,6 +19,7 @@ Single-entry storyboard 5.4.4 and standalone-package completion.
 - Added a dependency-free, responsive, accessible GitHub Pages landing page for non-technical creators, with proof-led outcomes, verified install routes, and explicit evidence boundaries.
 - Added two original locally generated 3D previs clips with preserved poster frames, hashes, dimensions, status labels, exclusion rules, and explicit non-final/non-adoption boundaries.
 - Added two lightweight animated previews directly to the repository README, so GitHub visitors can inspect camera/blocking and rigged-contact motion before opening the full MP4 gallery.
+- Added a nine-image visual-language gallery directly to the repository README: eight deployed genre Skills plus one clearly labeled experimental hard-science-fiction example, with file-level archive inventory, provenance, hashes, selection rationale, visible contracts, and non-acceptance boundaries.
 
 This update proves repository structure, standalone closure, deterministic validation, and the recorded 5.4.4 text behavior. It does not claim successful video-model generation or explicit user acceptance of the resulting storyboard output.
 
