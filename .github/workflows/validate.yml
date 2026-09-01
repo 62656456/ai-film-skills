@@ -43,6 +43,8 @@ jobs:
         run: python scripts/validate_skill_docs.py
       - name: Validate GitHub Pages landing page
         run: python scripts/validate_pages_site.py
+      - name: Validate README visual-language gallery
+        run: python scripts/validate_style_gallery.py
       - name: Validate portable repository
         run: python scripts/validate_repository.py
       - name: Validate every Skill in sibling-free isolation
