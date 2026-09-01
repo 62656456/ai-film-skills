@@ -54,6 +54,7 @@ def main() -> int:
 
     html = INDEX.read_text(encoding="utf-8")
     css = CSS.read_text(encoding="utf-8")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
     parser = SiteParser()
     parser.feed(html)
 
@@ -143,6 +144,7 @@ def main() -> int:
         for field, hash_field, size_field in (
             ("video", "video_sha256", "video_bytes"),
             ("poster", "poster_sha256", "poster_bytes"),
+            ("readme_preview", "preview_sha256", "preview_bytes"),
         ):
             relative = item.get(field)
             path = DOCS / "media" / str(relative)
@@ -154,11 +156,35 @@ def main() -> int:
                 errors.append(f"media evidence hash mismatch: {relative}")
             if path.stat().st_size != item.get(size_field):
                 errors.append(f"media evidence byte-size mismatch: {relative}")
-            if str(relative) not in html:
+            if field != "readme_preview" and str(relative) not in html:
                 errors.append(f"media evidence is not linked from Pages HTML: {relative}")
-        for boundary_field in ("status", "proves", "does_not_prove"):
+            if field == "readme_preview":
+                if str(relative) not in readme:
+                    errors.append(f"media preview is not embedded in README: {relative}")
+                payload = path.read_bytes()
+                if not payload.startswith((b"GIF87a", b"GIF89a")):
+                    errors.append(f"README preview is not a GIF: {relative}")
+                elif len(payload) >= 10:
+                    width = int.from_bytes(payload[6:8], "little")
+                    height = int.from_bytes(payload[8:10], "little")
+                    if width != item.get("preview_width") or height != item.get("preview_height"):
+                        errors.append(f"README preview dimensions mismatch: {relative}")
+                    frame_count = payload.count(b"\x21\xf9\x04")
+                    if frame_count != item.get("preview_frames"):
+                        errors.append(f"README preview frame count mismatch: {relative}")
+        for boundary_field in ("status", "proves", "does_not_prove", "preview_derivation"):
             if not str(item.get(boundary_field, "")).strip():
                 errors.append(f"media evidence item missing {boundary_field}: {item.get('id')}")
+
+    for required_readme_term in (
+        "## See the Skills in motion",
+        "https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4",
+        "https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4",
+        "not finished AI films",
+        "unpublished local previs executor",
+    ):
+        if required_readme_term not in readme:
+            errors.append(f"README missing direct media showcase term: {required_readme_term}")
 
     print(f"Pages HTML tags checked: {len(parser.tags)}")
     print(f"Pages IDs checked: {len(parser.ids)}")
