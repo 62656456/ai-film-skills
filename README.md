@@ -27,7 +27,7 @@ Open Film Skills is a public toolkit of 19 standalone Agent Skills for AI filmma
 | Write or repair the story | Design executable shots | Produce an AI-video workflow |
 |---|---|---|
 | Use [`director-agent`](docs/skills/en/director-agent.md) for causality, character action, dialogue, subtext, scene purpose, and directing decisions. | Use [`ai-storyboard-director`](docs/skills/en/ai-storyboard-director.md) for blocking, lens, camera position, motivated motion, continuity, and copy-ready prompts. | Use [`produce-ai-video`](docs/skills/en/produce-ai-video.md) for readiness, cost gates, generation stages, editing, playback review, and repair. |
-| [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
+| [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) · [Before/after example](examples/director-agent-before-after.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
 
 ## See one concrete difference
 
