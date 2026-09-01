@@ -47,6 +47,7 @@ REQUIRED_REPOSITORY_FILES = {
     "examples/storyboard-director-5.4.4-visible-camera-plan.md",
     "examples/skills-cli-install-verification.md",
     "examples/skills-sh-index-verification.md",
+    "examples/director-agent-before-after.md",
     "scripts/build_skill_packages.py",
     "scripts/generate_skill_guides.py",
     "scripts/install_skill.py",
@@ -379,6 +380,20 @@ def main() -> int:
 
     errors.extend(validate_public_reading_routes(skills))
     errors.extend(validate_launch_assets())
+
+    director_example = (ROOT / "examples" / "director-agent-before-after.md").read_text(
+        encoding="utf-8-sig"
+    )
+    for required in (
+        "### Earliest break",
+        "## Upstream repair",
+        "## Revised screenplay",
+        "## Self-audit only",
+        "SELF-AUDIT ONLY",
+        "No independent cold reader was used",
+    ):
+        if required not in director_example:
+            errors.append(f"director-agent public example missing evidence term: {required}")
 
     public_count_files = (
         ROOT / "README.md",

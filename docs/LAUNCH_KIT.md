@@ -50,6 +50,7 @@ https://github.com/62656456/ai-film-skills
 
 - Repository: https://github.com/62656456/ai-film-skills
 - Storyboard 5.4.4 example: https://github.com/62656456/ai-film-skills/blob/main/examples/storyboard-director-5.4.4-visible-camera-plan.md
+- Director Agent before/after: https://github.com/62656456/ai-film-skills/blob/main/examples/director-agent-before-after.md
 - Skill catalog: https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md
 - Installation: https://github.com/62656456/ai-film-skills/blob/main/docs/INSTALLATION.md
 - Skills directory: https://skills.sh/62656456/ai-film-skills

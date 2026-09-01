@@ -17,6 +17,7 @@
 | 写或修剧本 | 设计可执行镜头 | 组织 AI 视频生产 |
 |---|---|---|
 | 用 [`director-agent`](../../skills/zh-CN/director-agent.md) 处理因果、人物行动、对白、潜台词、场景目的和导演判断。 | 用 [`ai-storyboard-director`](../../skills/zh-CN/ai-storyboard-director.md) 处理走位、焦段、机位、摄影机运动、连续性和可复制提示词。 | 用 [`produce-ai-video`](../../skills/zh-CN/produce-ai-video.md) 处理资产准备、费用门、生成阶段、剪辑、完整播放检查和修复。 |
+| [查看诊断与改写前后对比](../../../examples/director-agent-before-after.md) | [查看5.4.4镜头案例](../../../examples/storyboard-director-5.4.4-visible-camera-plan.md) | [查看生产Skill说明](../../skills/zh-CN/produce-ai-video.md) |
 
 ## 先看一个真实差异
 
