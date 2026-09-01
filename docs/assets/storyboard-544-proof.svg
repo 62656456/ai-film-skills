@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Storyboard Director 5.4.4 camera-plan proof</title>
+  <desc id="desc">A vague story-only segment heading compared with a complete visible camera-plan heading.</desc>
+  <rect width="1200" height="560" fill="#0B0F14"/>
+  <g stroke="#1F2935" stroke-width="1" opacity="0.72">
+    <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200M0 480H1200"/>
+    <path d="M120 0V560M300 0V560M480 0V560M660 0V560M840 0V560M1020 0V560"/>
+  </g>
+  <rect x="52" y="38" width="202" height="30" rx="15" fill="#FF6B35"/>
+  <text x="153" y="58" text-anchor="middle" fill="#0B0F14" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">STORYBOARD 5.4.4</text>
+  <text x="52" y="120" fill="#F4F0E8" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="42" font-weight="800">See the camera plan before generation.</text>
+  <text x="54" y="154" fill="#AAB4C0" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="17">A segment title should tell a human how the shot is staged—not only what happens.</text>
+
+  <rect x="52" y="198" width="376" height="276" rx="8" fill="#121923" stroke="#394552" stroke-width="2"/>
+  <text x="78" y="234" fill="#7F8C9B" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">STORY-ONLY HEADING</text>
+  <text x="78" y="286" fill="#F4F0E8" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="29" font-weight="700">[2.20–4.50s]</text>
+  <text x="78" y="330" fill="#F4F0E8" font-family="Arial, 'Noto Sans SC', sans-serif" font-size="23">The gear slips.</text>
+  <path d="M78 370H400" stroke="#2B3541" stroke-width="2"/>
+  <text x="78" y="410" fill="#7F8C9B" font-family="Arial, sans-serif" font-size="15">Lens?</text>
+  <text x="166" y="410" fill="#7F8C9B" font-family="Arial, sans-serif" font-size="15">Position?</text>
+  <text x="270" y="410" fill="#7F8C9B" font-family="Arial, sans-serif" font-size="15">Focus?</text>
+  <text x="78" y="446" fill="#FF8B64" font-family="Arial, sans-serif" font-size="14" font-weight="700">The event is named. The shot is not.</text>
+
+  <path d="M458 336H520" stroke="#FF6B35" stroke-width="4"/>
+  <path d="M509 324L526 336L509 348" fill="none" stroke="#FF6B35" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="552" y="198" width="596" height="276" rx="8" fill="#121923" stroke="#46C2CB" stroke-width="2"/>
+  <text x="578" y="234" fill="#46C2CB" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.4">VISIBLE CAMERA CONTRACT</text>
+  <text x="578" y="278" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="17" font-weight="700">2.20–4.50s · 50mm hand close-up</text>
+  <text x="578" y="312" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="17">Southeast of bench · 15° high angle</text>
+  <text x="578" y="346" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="17">Locked camera · faces northwest · no movement</text>
+  <text x="578" y="380" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="17">Focus locked to fall path → receiving palm</text>
+  <text x="578" y="414" fill="#D6A756" font-family="Arial, sans-serif" font-size="17" font-weight="700">Endpoint: falling gear makes physical contact with hand</text>
+  <text x="578" y="448" fill="#7EE2A8" font-family="Arial, sans-serif" font-size="14" font-weight="700">7 visible fields · fixed position · explicit focus · physical result</text>
+
+  <text x="52" y="522" fill="#6F7C8C" font-family="Arial, sans-serif" font-size="13">Verified text behavior · 0.00–8.00s continuous · no claim of video-model or user visual approval</text>
+</svg>

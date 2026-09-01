@@ -11,7 +11,7 @@ Use $director-agent to diagnose this scene's protagonist goal, opposition, actio
 ## Storyboard and generation prompts
 
 ```text
-Use $ai-storyboard-director to turn this approved scene into readable shots with blocking, shot size, camera position, motivated movement, continuity, and generation-ready prompts: [scene]
+Use $ai-storyboard-director to turn this approved scene into readable shots and one complete generation prompt. Make every segment heading show the lens/optics, camera side and height, camera path and orientation change, speed, focus or occlusion handoff, and physical endpoint: [scene]
 ```
 
 ## One reusable asset

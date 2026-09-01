@@ -5,6 +5,7 @@ The most useful feedback describes a real request, the Skill used, the result, a
 ## Choose a channel
 
 - Public idea or workflow discussion: [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions)
+- Public result or anonymized use case: [open the Showcase form](https://github.com/62656456/ai-film-skills/issues/new?template=showcase.yml)
 - Reproducible problem or feature proposal: [GitHub Issues](https://github.com/62656456/ai-film-skills/issues)
 - Direct contact: [haldissita@gmail.com](mailto:haldissita@gmail.com)
 - Sensitive security or privacy concern: follow [SECURITY.md](../SECURITY.md)

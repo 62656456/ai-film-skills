@@ -17,7 +17,7 @@ Contributions should improve a Skill's real-task performance without hiding its 
 
 ## Keep the GitHub reading guide in sync
 
-Every module has one English and one Simplified Chinese human-readable guide. These 40 pages explain the runtime contract; they do not replace it.
+Every module has one English and one Simplified Chinese human-readable guide. These 38 pages explain the runtime contract; they do not replace it.
 
 Install the repository-only validation dependency and run the negative regression suite before changing packaging, installation, frontmatter, or data validators:
 

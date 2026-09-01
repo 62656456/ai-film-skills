@@ -10,6 +10,9 @@ Single-entry storyboard 5.4.4 and standalone-package completion.
 - Removed packaged cross-version rollback snapshots from the runtime tree so each Skill remains independently copyable without sibling versions or historical dependencies.
 - Completed the standalone-package remediation and repository validation work prepared after v1.2.0, including package-local references, stricter independence checks, and function-conservation regression coverage.
 - The repository now publishes 18 stable Skills and one isolated experimental Skill, with 19 English and 19 Simplified Chinese design guides.
+- Rebuilt the repository entrance around three first-time outcomes—write the story, design executable shots, or organize AI-video production—and added a 60-second single-Skill trial.
+- Added an auditable Storyboard Director 5.4.4 before/after example, deterministic campaign graphics, a social-preview export, a public launch kit, and a real-use showcase form.
+- Added repository checks that reject stale public module counts and verify every launch asset's SHA-256 and PNG dimensions.
 
 This update proves repository structure, standalone closure, deterministic validation, and the recorded 5.4.4 text behavior. It does not claim successful video-model generation or explicit user acceptance of the resulting storyboard output.
 

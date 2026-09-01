@@ -4,19 +4,53 @@
 
 # 开放影视 Skill
 
-**可独立安装、可组合使用，适配 Codex、Claude Code、TRAE、CodeBuddy、WorkBuddy 与其他 Agent 工具。**
+**让你正在使用的 Agent 把剧本变成电影化分镜、可复用视觉资产、可复制提示词和 AI 视频生产流程。**
 
 [English](../../../README.md) · **简体中文** · [日本語](../ja/README.md) · [한국어](../ko/README.md)
 
 </div>
 
-## 在 GitHub 直接阅读
+开放影视 Skill 共包含 19 个可独立安装的 Agent Skill：18 个正式模块和 1 个隔离实验模块。第一次使用先选一个结果，不必先理解整套系统。
 
-20 个模块都已经提供英文和简体中文设计说明，共 **40 个逐模块页面**。每页讲清设计目的、理念、输入、流程、定向退回、审核门、过关证据、输出、边界、跨 Agent 条件和随包文件。
+## 从一个结果开始
 
-- [浏览全部 40 个设计说明](../../skills/INDEX.md)
+| 写或修剧本 | 设计可执行镜头 | 组织 AI 视频生产 |
+|---|---|---|
+| 用 [`director-agent`](../../skills/zh-CN/director-agent.md) 处理因果、人物行动、对白、潜台词、场景目的和导演判断。 | 用 [`ai-storyboard-director`](../../skills/zh-CN/ai-storyboard-director.md) 处理走位、焦段、机位、摄影机运动、连续性和可复制提示词。 | 用 [`produce-ai-video`](../../skills/zh-CN/produce-ai-video.md) 处理资产准备、费用门、生成阶段、剪辑、完整播放检查和修复。 |
+
+## 先看一个真实差异
+
+<img src="../../assets/storyboard-544-proof.png" width="100%" alt="只有剧情短标题的旧写法与5.4.4可执行摄影方案标题的对比" />
+
+5.4.4 不再只写“齿轮滑落”一类剧情短标题，而是直接展示焦段与光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点接力和动作落点。这是已经回归验证的文字行为案例；它不代表视频模型已经完全执行，也不代表用户已完成成片审美验收。
+
+- [查看完整 8 秒案例](../../../examples/storyboard-director-5.4.4-visible-camera-plan.md)
+- [读取正式运行合同](../../../skills/ai-storyboard-director/SKILL.md)
+- [比较全部 Skill 与证据状态](../../../SKILL_CATALOG.md)
+
+## 60 秒试用
+
+```bash
+git clone https://github.com/62656456/ai-film-skills.git
+cd ai-film-skills
+python scripts/install_skill.py ai-storyboard-director --platform codex
+```
+
+然后在 Agent 中输入：
+
+```text
+使用 $ai-storyboard-director，把下面已经确认的8秒剧情设计成人读分镜和一条完整视频提示词。每个时间段标题直接显示焦段/光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点或遮挡接力和动作落点：[粘贴剧情]
+```
+
+Claude Code 把安装命令中的 `--platform codex` 改成 `--platform claude-code`。其他宿主和 ZIP 安装方式见[安装指南](../../INSTALLATION.md)。
+
+## 在 GitHub 继续阅读
+
+19 个模块都已经提供英文和简体中文设计说明，共 **38 个逐模块页面**。每页讲清设计目的、理念、输入、流程、定向退回、审核门、过关证据、输出、边界、跨 Agent 条件和随包文件。
+
+- [浏览全部 38 个设计说明](../../skills/INDEX.md)
 - [阅读共同的定向退回、审核与过关逻辑](../../SKILL_DESIGN_SYSTEM.md)
-- [按任务比较 20 个模块、运行正文和独立 ZIP](../../../SKILL_CATALOG.md)
+- [按任务比较 19 个模块、运行正文和独立 ZIP](../../../SKILL_CATALOG.md)
 
 设计说明是给人在 GitHub 上阅读的入口；`SKILL.md` 仍是 Agent 的运行真相。结构通过、宿主执行、真实任务证据和用户接受必须分开记录。
 

@@ -1,0 +1,48 @@
+name: Share a real use case
+description: Show what you tried, what the Skill produced, and what should improve.
+title: "[Showcase] "
+labels:
+  - showcase
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share only material you are allowed to publish. Remove private scripts, credentials, faces, client work, unpublished assets, and personal contact details.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill used
+      placeholder: ai-storyboard-director
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: What you asked it to do
+      description: A public or anonymized version of the request.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What it produced
+      description: Link or paste the smallest public excerpt that lets others judge the result.
+    validations:
+      required: true
+  - type: textarea
+    id: worked
+    attributes:
+      label: What worked
+    validations:
+      required: true
+  - type: textarea
+    id: improve
+    attributes:
+      label: The one change that would improve it most
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Agent host and model, if relevant
+      placeholder: Codex / Claude Code / TRAE / other

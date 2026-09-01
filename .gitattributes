@@ -7,6 +7,7 @@
 *.json text eol=lf
 *.py text eol=lf
 *.svg text eol=lf
+*.png binary
 
 # Historical rollback evidence preserves exact source bytes, including Markdown hard breaks.
 skills/ai-storyboard-director/versions/5.4.2-candidate/SKILL.snapshot.md -whitespace
