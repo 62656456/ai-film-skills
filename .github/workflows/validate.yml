@@ -39,8 +39,10 @@ jobs:
         run: |
           python scripts/generate_skill_guides.py
           git diff --exit-code -- docs/skills
-      - name: Validate 40 bilingual Skill design guides
+      - name: Validate 38 bilingual Skill design guides
         run: python scripts/validate_skill_docs.py
+      - name: Validate GitHub Pages landing page
+        run: python scripts/validate_pages_site.py
       - name: Validate portable repository
         run: python scripts/validate_repository.py
       - name: Validate every Skill in sibling-free isolation

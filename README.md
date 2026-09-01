@@ -17,6 +17,7 @@
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
 [![Validate Skills](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml)
 [![skills.sh](https://skills.sh/b/62656456/ai-film-skills)](https://skills.sh/62656456/ai-film-skills)
+[![Website](https://img.shields.io/badge/website-open_film_skills-46C2CB?style=flat-square)](https://62656456.github.io/ai-film-skills/)
 
 </div>
 
@@ -38,6 +39,7 @@ Storyboard Director 5.4.4 replaces headings such as “the gear slips” with a 
 - [Read the complete eight-second example](examples/storyboard-director-5.4.4-visible-camera-plan.md)
 - [Inspect the runtime contract](skills/ai-storyboard-director/SKILL.md)
 - [Compare every Skill and its evidence state](SKILL_CATALOG.md)
+- [Watch the local 3D previs evidence gallery](https://62656456.github.io/ai-film-skills/#media)
 
 ## Try it in 60 seconds
 
