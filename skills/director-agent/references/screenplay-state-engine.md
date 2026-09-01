@@ -1,6 +1,6 @@
 # Screenplay State And Causality Engine
 
-Use this engine after the primary A3-based writing pass in `screenplay-writing-core.md`. It verifies continuity, causality, knowledge, strategy, and setup/payoff. It must not generate the premise by assembling ledgers, props, or checkpoints.
+Use this engine after the primary writing pass in `screenplay-writing-core.md`. It verifies continuity, causality, character information, strategy, and setup/payoff. It must not generate the premise by assembling ledgers, props, or checkpoints.
 
 This is an audit contract, not a form that must be shown to the user. Keep the ledgers internal; deliver the script, rewrite, or diagnosis the user requested. Show a ledger only when it helps the user judge a disputed continuity decision.
 
@@ -34,7 +34,7 @@ These rules are operational constraints distilled from cross-work screenplay rea
 Enter this engine only after the story can be retold in plain language and the character-action logic has passed the obvious-alternative test in `screenplay-writing-core.md`. Then audit in this order:
 
 ```text
-plain-language story and A3 behavior/dialogue pass already complete
+plain-language story and bundled behavior/dialogue pass already complete
 -> single source of truth
 -> causal spine
 -> character state machines
@@ -240,7 +240,7 @@ The writing agent's own review is `SELF-AUDIT ONLY`; it cannot be labeled indepe
 
 ### Script Creation
 
-1. Confirm that `screenplay-writing-core.md` and its routed A3 cards were actually read and applied.
+1. Confirm that `screenplay-writing-core.md` and its routed local sections were actually read and applied.
 2. Audit facts and assumptions.
 3. Audit the causal spine through the requested scope.
 4. Audit character knowledge, options, behavior, and scene exit states.

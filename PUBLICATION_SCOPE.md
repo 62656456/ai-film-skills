@@ -21,7 +21,7 @@ The human-readable guides explain purpose, principles, standalone scope, inputs,
 
 `hard-sci-fi-visual-director` is present only under `experimental/`. It is not part of the normal installation command and must not be described as approved or deployed.
 
-`ai-storyboard-director-motion-lab` is the 5.4.3 experimental candidate. It is published as **Testing**, keeps `allow_implicit_invocation: false`, requires deliberate experimental installation, does not enter the complete-studio ZIP, and does not replace formal `ai-storyboard-director` 5.4.2.
+The former `ai-storyboard-director-motion-lab` package is retired. Its useful complex-camera rules were integrated into the single formal `ai-storyboard-director` 5.4.4 entry; the obsolete second entry is not published or installable.
 
 ## Language scope
 

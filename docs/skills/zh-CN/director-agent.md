@@ -48,7 +48,7 @@
 ## 6. 退回、重做与版本回滚
 
 - 因果、人物知识或场景目的失败时，先退回最早断裂的场景，不先润色台词或视觉。
-- 若任务实际需要完整生产分镜，把已批准的导演判断交给 `ai-storyboard-director`，不让本模块越界。
+- 若任务还需要完整生产分镜，交付包含全部镜头制作决定的独立 `DIRECTOR_PLAN`；本包不读取任何兄弟 Skill。
 - 冷读 PASS 只是剧本审阅状态，不是用户喜欢或采用的证明。
 
 <!-- contract:review -->
@@ -101,6 +101,7 @@
 - [`references/director-workbench-protocol.md`](../../../skills/director-agent/references/director-workbench-protocol.md)
 - [`references/github-project-watchlist.md`](../../../skills/director-agent/references/github-project-watchlist.md)
 - [`references/local-knowledge-map.md`](../../../skills/director-agent/references/local-knowledge-map.md)
+- [`references/production-storyboard-compiler.md`](../../../skills/director-agent/references/production-storyboard-compiler.md)
 - [`references/research-update-protocol.md`](../../../skills/director-agent/references/research-update-protocol.md)
 - [`references/screenplay-cold-read-protocol.md`](../../../skills/director-agent/references/screenplay-cold-read-protocol.md)
 - [`references/screenplay-exemplar-benchmarks.md`](../../../skills/director-agent/references/screenplay-exemplar-benchmarks.md)

@@ -48,7 +48,7 @@ A script, replacement passage, diagnosis, director treatment, workbench, or pre-
 ## 6. Return, rework, and rollback
 
 - If causality, character knowledge, or scene purpose fails, return to the earliest broken scene before polishing dialogue or visuals.
-- If the request actually needs production storyboard detail, hand the approved directing decisions to `ai-storyboard-director` instead of stretching this module beyond its contract.
+- If the request also needs production storyboard detail, return a complete standalone `DIRECTOR_PLAN` containing every decision needed by shot production; this package never reads a sibling Skill.
 - Cold-read PASS is a screenplay review state, not proof that the user likes the work.
 
 <!-- contract:review -->
@@ -101,6 +101,7 @@ A script, replacement passage, diagnosis, director treatment, workbench, or pre-
 - [`references/director-workbench-protocol.md`](../../../skills/director-agent/references/director-workbench-protocol.md)
 - [`references/github-project-watchlist.md`](../../../skills/director-agent/references/github-project-watchlist.md)
 - [`references/local-knowledge-map.md`](../../../skills/director-agent/references/local-knowledge-map.md)
+- [`references/production-storyboard-compiler.md`](../../../skills/director-agent/references/production-storyboard-compiler.md)
 - [`references/research-update-protocol.md`](../../../skills/director-agent/references/research-update-protocol.md)
 - [`references/screenplay-cold-read-protocol.md`](../../../skills/director-agent/references/screenplay-cold-read-protocol.md)
 - [`references/screenplay-exemplar-benchmarks.md`](../../../skills/director-agent/references/screenplay-exemplar-benchmarks.md)

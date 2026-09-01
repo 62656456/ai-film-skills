@@ -1,6 +1,6 @@
 # ai-storyboard-director — script to shots and prompts
 
-| Status | Deployed; 5.4.2 is the current formal default over the 5.4.1 continuity contract |
+| Status | Deployed; 5.4.4 is the current installed version; real-video generation and user review remain pending |
 |---|---|
 | Can deliver alone | A complete storyboard and copy-ready prompt package for an existing approved script. |
 | Cannot claim alone | It does not rewrite the script, directly generate the video, or prove platform success. |
@@ -48,7 +48,7 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 ## 6. Return, rework, and rollback
 
 - Story or director failures return upstream; spatial, blocking, camera, timing, or prompt-encoding failures return to their responsible design stage.
-- Version rollback is distinct from creative rework and exists only for the documented 5.4.1 hash-verified snapshot when explicitly requested.
+- Package maintenance is distinct from creative rework; the shared ZIP contains only the current self-contained runtime and no historical runtime dependency.
 - A continuity failure is repaired from fixed world coordinates, never by moving the room to preserve screen-left labels.
 
 <!-- contract:review -->
@@ -96,15 +96,7 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 
 **References**
 
+- [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)
-
-**Version and rollback evidence**
-
-- [`versions/5.4.1/production-contract.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.1/production-contract.snapshot.md)
-- [`versions/5.4.1/rollback-manifest.json`](../../../skills/ai-storyboard-director/versions/5.4.1/rollback-manifest.json)
-- [`versions/5.4.1/SKILL.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.1/SKILL.snapshot.md)
-- [`versions/5.4.2-candidate/rollback-manifest.json`](../../../skills/ai-storyboard-director/versions/5.4.2-candidate/rollback-manifest.json)
-- [`versions/5.4.2-candidate/shot-design-engine.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.2-candidate/shot-design-engine.snapshot.md)
-- [`versions/5.4.2-candidate/SKILL.snapshot.md`](../../../skills/ai-storyboard-director/versions/5.4.2-candidate/SKILL.snapshot.md)

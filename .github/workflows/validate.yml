@@ -43,6 +43,8 @@ jobs:
         run: python scripts/validate_skill_docs.py
       - name: Validate portable repository
         run: python scripts/validate_repository.py
+      - name: Validate every Skill in sibling-free isolation
+        run: python scripts/validate_skill_independence.py
       - name: Build deterministic standalone packages
         run: python scripts/build_skill_packages.py --include-experimental --output dist/skills
       - name: Smoke-install the same Skill into native layouts

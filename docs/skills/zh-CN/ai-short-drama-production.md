@@ -3,7 +3,7 @@
 | 状态 | 已打包；未部署 |
 |---|---|
 | 单独可交付 | 针对已有决定的生产控制编排与缺口审计，也可单独交付六类控制合同中的任意一类。 |
-| 单独不能声称 | 不会在一个文件夹里复制导演、资产、类型、生成和 QC 的全部能力。 |
+| 单独不能声称 | 不需要配套技能包：导演、资产、类型、提示词和 QC 规则均按短剧用途重写为本地模块；真实图片和视频生成仍需要宿主媒体工具与权限。 |
 
 [运行正文 `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
@@ -26,7 +26,7 @@
 
 针对已有决定的生产控制编排与缺口审计，也可单独交付六类控制合同中的任意一类。
 
-**单独不能声称:** 不会在一个文件夹里复制导演、资产、类型、生成和 QC 的全部能力。
+**单独不能声称:** 不需要配套技能包：导演、资产、类型、提示词和 QC 规则均按短剧用途重写为本地模块；真实图片和视频生成仍需要宿主媒体工具与权限。
 
 <!-- contract:inputs -->
 ## 4. 输入
@@ -97,4 +97,5 @@
 **引用资料**
 
 - [`references/control-contracts.md`](../../../skills/ai-short-drama-production/references/control-contracts.md)
+- [`references/independent-production-core.md`](../../../skills/ai-short-drama-production/references/independent-production-core.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/ai-short-drama-production/references/SOURCE-LEDGER.md)

@@ -3,7 +3,7 @@
 | Status | Packaged; not deployed |
 |---|---|
 | Can deliver alone | Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts. |
-| Cannot claim alone | It does not duplicate all director, asset, genre, generation, and QC abilities in one folder. |
+| Cannot claim alone | It does not require a companion package: its director, asset, genre, prompt, and QC rules are rewritten as local short-drama modules, while actual image/video generation still needs the host's media tools and permissions. |
 
 [Runtime `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
@@ -26,7 +26,7 @@ Use this module by itself when the requested result stays inside the following b
 
 Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts.
 
-**Cannot claim alone:** It does not duplicate all director, asset, genre, generation, and QC abilities in one folder.
+**Cannot claim alone:** It does not require a companion package: its director, asset, genre, prompt, and QC rules are rewritten as local short-drama modules, while actual image/video generation still needs the host's media tools and permissions.
 
 <!-- contract:inputs -->
 ## 4. Inputs
@@ -97,4 +97,5 @@ Production-control orchestration and gap auditing for existing decisions, includ
 **References**
 
 - [`references/control-contracts.md`](../../../skills/ai-short-drama-production/references/control-contracts.md)
+- [`references/independent-production-core.md`](../../../skills/ai-short-drama-production/references/independent-production-core.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/ai-short-drama-production/references/SOURCE-LEDGER.md)

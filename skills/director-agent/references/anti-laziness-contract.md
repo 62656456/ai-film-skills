@@ -54,7 +54,7 @@ Every unit must identify:
 For script creation, revision, diagnosis, or dialogue work, require:
 
 - A plain-language retell of who wants what, why now, what they do, what it causes, what final choice occurs, and what it costs.
-- Actual reading of the routed A3 knowledge cards; a path, summary, or state ledger does not count as knowledge use.
+- Actual application of the routed local writing sections; a filename, summary, or state ledger does not count as use.
 - An obvious-alternative test for every central action: why does the character not use the safer, cheaper, easier, or more direct option?
 - Direct cause inherited from the previous unit.
 - Entrance facts, knowledge, relationships, power, and physical conditions.
@@ -64,7 +64,7 @@ For script creation, revision, diagnosis, or dialogue work, require:
 - Character-specific dialogue purpose and voice; do not equate clear dialogue with complete, symmetrical answers.
 - Setup/payoff lifecycle for any climax mechanism, reveal, or recurring object.
 
-If the plain story, character action, obvious-alternative, or dialogue-purpose checks fail, return to `screenplay-writing-core.md` and the routed A3 card. Use `screenplay-state-engine.md` only for a continuity, knowledge, causality, or setup/payoff failure. Do not compensate with visual polish or explanation.
+If the plain story, character action, obvious-alternative, or dialogue-purpose checks fail, return to `screenplay-writing-core.md` and the exact bundled writing section required by the failure. Use `screenplay-state-engine.md` only for a continuity, character-information, causality, or setup/payoff failure. Do not compensate with visual polish or explanation.
 
 For director analysis or pre-storyboard work, require:
 
@@ -78,7 +78,7 @@ For storyboard-prep, also include:
 - Motif or physical carrier.
 - Spatial power geometry.
 - Anti-default choice.
-- Handoff constraints for `ai-storyboard-director`.
+- Complete `DIRECTOR_PLAN` constraints for independent shot production.
 
 ## Continuation Rules
 

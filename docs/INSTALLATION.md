@@ -78,15 +78,7 @@ WorkBuddy's official client supports local Skill-package import. Download one mo
 
 ## Experimental packages
 
-Experimental Skills are not included in the complete-studio archive. Review their status first. The local installer requires `--experimental`.
-
-The 5.4.3 motion candidate is published as **Testing** and remains explicit-only:
-
-```bash
-python scripts/install_skill.py ai-storyboard-director-motion-lab --platform codex --experimental
-```
-
-Installing it does not replace formal `ai-storyboard-director` 5.4.2. Invoke `$ai-storyboard-director-motion-lab` only for a deliberate test; ordinary storyboard requests continue to use the formal Skill.
+Experimental Skills are not included in the complete-studio archive. Review their status first. The local installer requires `--experimental`. The former `ai-storyboard-director-motion-lab` entry has been retired; use the single formal `ai-storyboard-director` 5.4.4 package for storyboard and complex-camera work.
 
 ## Verify an installation
 

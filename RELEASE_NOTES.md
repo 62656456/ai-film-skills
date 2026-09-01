@@ -1,5 +1,18 @@
 # Release notes
 
+## v1.3.0 — 2026-09-01
+
+Single-entry storyboard 5.4.4 and standalone-package completion.
+
+- Updated the formal `ai-storyboard-director` runtime to 5.4.4 while keeping the user-facing invocation unchanged.
+- Added the single-master-prompt gate, natural-language asset naming, continuous living-subject motion, locked-reference composition, multi-space separation, physically valid entrances, and visible camera-plan headings for every segmented shot.
+- Retired the separate `ai-storyboard-director-motion-lab` package after its useful complex-camera rules were integrated into the formal single entry; it is no longer published or installable as a second storyboard Skill.
+- Removed packaged cross-version rollback snapshots from the runtime tree so each Skill remains independently copyable without sibling versions or historical dependencies.
+- Completed the standalone-package remediation and repository validation work prepared after v1.2.0, including package-local references, stricter independence checks, and function-conservation regression coverage.
+- The repository now publishes 18 stable Skills and one isolated experimental Skill, with 19 English and 19 Simplified Chinese design guides.
+
+This update proves repository structure, standalone closure, deterministic validation, and the recorded 5.4.4 text behavior. It does not claim successful video-model generation or explicit user acceptance of the resulting storyboard output.
+
 ## v1.2.0 — 2026-08-25
 
 Safety hardening and 5.4.3 testing-candidate release.

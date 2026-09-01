@@ -1,6 +1,6 @@
 # Screenplay Writing Core
 
-Use this as the primary writing contract for screenplay creation, revision, diagnosis, scene repair, and dialogue work. It implements the user's existing A3 knowledge base. The state engine is a later verification tool, not the source of the story.
+Use this as the primary, self-contained writing contract for screenplay creation, revision, diagnosis, scene repair, and dialogue work. The state engine is a later verification tool, not the source of the story.
 
 ## Contents
 
@@ -14,17 +14,17 @@ Use this as the primary writing contract for screenplay creation, revision, diag
 
 ## Required Knowledge Loading
 
-Optional source root: `<knowledge-repository>/knowledge/A-理论层/A3-编剧组`
+All runtime writing rules are defined in this file and the local references named by `local-knowledge-map.md`.
 
 Read the current files themselves; seeing these paths is not enough.
 
-- New original screenplay from a blank brief, concept, or theme: read A3-00, A3-05, A3-01, A3-02, A3-06, A3-08, A3-15, A3-16, A3-17, A3-18, and A3-19.
-- Complete multi-scene original screenplay or complete rewrite: follow the A3-00 creation flow. In addition to the profile above, read A3-03, A3-04, A3-07, A3-09, and A3-10 through A3-14. This profile covers A3-01 through A3-19 and may not be shortened to a five-card sample.
-- Story seed or outline repair: read A3-01, A3-02, and A3-05, then add only the character, conflict, theme, or structure cards required by the problem.
-- Single-scene, character, or dialogue repair: read the exact matching cards from `local-knowledge-map.md`; dialogue work always includes A3-15, generated or over-polished text also includes A3-18 and A3-19, and action/emotion work includes A3-16 and A3-17.
-- Serious, complete, full, or explicitly excellent screenplay work: also read `screenplay-exemplar-benchmarks.md`, `A3-20 拉片与技法蒸馏.md`, and `A3-21 拉片转创作方法.md`, then complete the internal calibration receipt required there.
+- New original screenplay from a blank brief, concept, or theme: use this file's premise, causal action, character, dialogue, emotional behavior, and anti-AI sections.
+- Complete multi-scene original screenplay or complete rewrite: additionally apply the full conflict, theme, character-arc, antagonist, pressure-chain, opening/payoff, turn/climax, scene-deletion, and scene-entry/exit checks in this file. Do not reduce the full profile to a sample.
+- Story seed or outline repair: use the core premise and diagnosis questions first, then add only the character, conflict, theme, or structure checks required by the problem.
+- Single-scene, character, or dialogue repair: use the exact matching sections here; dialogue work always includes purpose and subtext, generated or over-polished text includes the anti-AI pass, and action/emotion work includes externalized behavior and restraint.
+- Serious, complete, full, or explicitly excellent screenplay work: also read `screenplay-exemplar-benchmarks.md` and complete its internal mechanism-calibration receipt.
 
-Do not claim that the knowledge base was used unless the routed A3 files were actually read in the current task.
+Do not claim that a local writing module was used unless its actual section was applied in the current task.
 
 ## 1. Tell The Whole Story In Plain Language
 
@@ -71,7 +71,7 @@ what consequence their action creates
 
 The obvious-alternative test is mandatory. If an available simple action would solve the problem and the text gives no reason to reject it, the chosen action is author convenience. Change the conditions or change the action.
 
-Give important characters at least one pressure-revealing protection behavior from A3-08 when appropriate: denial, deflection, concealment, repetition, a small mistake, saving face, or swallowing words. Do not turn this into a mandatory gimmick in every scene.
+Give important characters at least one pressure-revealing protection behavior when appropriate: denial, deflection, concealment, repetition, a small mistake, saving face, or swallowing words. Do not turn this into a mandatory gimmick in every scene.
 
 Every consequential supporting character also needs an independent want, risk, or cost that can pull them away from their apparent dramatic function. If replacing the person with a rule, warning, deadline, or conscience speech leaves the story essentially unchanged, the character is still a plot device. Let new evidence change at least one supporting character's judgment or chosen action, and allow that person to make a credible mistake or self-protective compromise.
 
@@ -93,7 +93,7 @@ Do not begin with dialogue written to explain the premise. First know what the p
 
 ## 4. Write Dialogue As Behavior
 
-Apply A3-15 before polishing lines.
+Apply the dialogue-purpose and subtext rules in this section before polishing lines.
 
 - Give each speaker a concrete purpose: obtain, conceal, test, attack, delay, bargain, save face, force a choice, or end contact.
 - Let the surface line differ from the hidden purpose when the character has something to protect.
@@ -111,7 +111,7 @@ Run an ordinary-speech pass before delivery:
 
 ## 5. Remove Generated Neatness
 
-Apply A3-18 and, when needed, A3-19.
+Apply the anti-AI diagnosis and rewrite procedure in this section.
 
 Reject drafts where:
 

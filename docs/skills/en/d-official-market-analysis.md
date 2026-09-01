@@ -2,7 +2,7 @@
 
 | Status | Deployed |
 |---|---|
-| Can deliver alone | A source plan, validated dataset, evidence table, analysis, report, and separately labeled knowledge candidate. |
+| Can deliver alone | A source plan, validated dataset, evidence table, analysis, report, and separately labeled pending record, all produced by this package. |
 | Cannot claim alone | Offline use cannot fabricate current market facts, and a completed report does not authorize semantic-layer writing. |
 
 [Runtime `SKILL.md`](../../../skills/d-official-market-analysis/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-official-market-analysis.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
@@ -24,7 +24,7 @@ Research film, short drama, animation, AI film, and adjacent media markets from 
 
 Use this module by itself when the requested result stays inside the following boundary:
 
-A source plan, validated dataset, evidence table, analysis, report, and separately labeled knowledge candidate.
+A source plan, validated dataset, evidence table, analysis, report, and separately labeled pending record, all produced by this package.
 
 **Cannot claim alone:** Offline use cannot fabricate current market facts, and a completed report does not authorize semantic-layer writing.
 
@@ -97,6 +97,7 @@ A source plan, validated dataset, evidence table, analysis, report, and separate
 **References**
 
 - [`references/analysis-and-report.md`](../../../skills/d-official-market-analysis/references/analysis-and-report.md)
+- [`references/analysis-capability-contract.md`](../../../skills/d-official-market-analysis/references/analysis-capability-contract.md)
 - [`references/connector-contract.md`](../../../skills/d-official-market-analysis/references/connector-contract.md)
 - [`references/data-contract.md`](../../../skills/d-official-market-analysis/references/data-contract.md)
 - [`references/evidence-and-sources.md`](../../../skills/d-official-market-analysis/references/evidence-and-sources.md)

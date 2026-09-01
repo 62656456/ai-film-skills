@@ -19,19 +19,19 @@ description: 基于最新可验证的政府、监管、平台官方、行业协�
 8. 涉及具体平台时，读取 [platform-metrics.md](references/platform-metrics.md)，不得把平台热度值等同播放量。
 9. 接入专属数据服务或 MCP 时，读取 [connector-contract.md](references/connector-contract.md)，只接受保留原始来源与口径的响应。
 
-## 组合 Data Analytics 能力
+## 本包内完整分析能力
 
-按任务需要调用已安装的对应 Skill：
+本 Skill 按 `references/analysis-capability-contract.md` 独立完成以下步骤：
 
-- 先用 `gather-business-context` 补齐研究边界；范围已清楚时不要重复追问。
-- 用 `analyze-data-quality` 检查缺失、重复、异常、样本偏差、口径冲突和更新时间差。
-- 用 `product-business-analysis` 评估题材、受众、平台、商业价值与进入策略。
-- 用 `metric-diagnostics` 分析指标变化驱动因素，禁止把相关性写成因果。
-- 只有用户要求市场规模时用 `market-sizing`；明确 TAM、SAM、SOM 假设。
-- 需要图表时用 `visualize-data`；保留原始指标单位和口径。
-- 有重要清洗、排名或计算时用 `jupyter-notebooks`，确保从原始数据可重跑。
-- 报告完成前用 `validate-data` 复核；需要正式交付物时用 `build-report`。
-- 不得在分析阶段调用 `create-data-context`。只有用户在看到报告和候选内容后明确批准，才转交 `$d-data-analysis-semantic-layer`。
+- 用本文件的研究边界问句补齐范围；范围已清楚时不要重复追问。
+- 按 `references/data-contract.md` 检查缺失、重复、异常、样本偏差、口径冲突和更新时间差。
+- 按 `references/analysis-and-report.md` 评估题材、受众、平台、商业价值与进入策略。
+- 分析指标变化驱动因素，禁止把相关性写成因果。
+- 只有用户要求市场规模时才计算 TAM、SAM、SOM，并明确假设。
+- 需要图表时直接生成保留原始指标单位和口径的图表。
+- 有重要清洗、排名或计算时创建可重跑的 SQL/Python/Jupyter 工作稿，保留输入、清洗规则、公式、环境和输出。
+- 报告完成前按本包质量门复核来源、数据、计算、表格、结论和限制。
+- 分析阶段只输出正式报告与独立待批准记录；后续写入是新的独立任务，本 Skill 不连接任何外部语义层。
 
 ## 抓取与证据规则
 
@@ -65,4 +65,4 @@ python scripts/validate_dataset.py <dataset.csv|dataset.jsonl>
 
 ## 输出
 
-按 [analysis-and-report.md](references/analysis-and-report.md) 的固定章节和表格生成正式报告与“知识库候选内容”。候选内容不是知识库更新。输出后停止，不写入 D 语义层，直至用户明确回复“同意吸纳”“写入D”“加入数据分析知识库”“确认进入知识库”或“批准更新D”。
+按 [analysis-and-report.md](references/analysis-and-report.md) 的固定章节和表格生成正式报告与“待批准记录”。待批准记录不是持久写入。输出后停止；用户后续明确批准时，由新的独立写入任务处理，本 Skill 不连接包外语义层。
