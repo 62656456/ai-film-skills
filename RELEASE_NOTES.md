@@ -18,6 +18,7 @@ Single-entry storyboard 5.4.4 and standalone-package completion.
 - Added an original `director-agent` diagnosis-and-revision case with explicit alternative tests, causal state changes, dialogue-response chains, and a self-audit-only evidence label.
 - Added a dependency-free, responsive, accessible GitHub Pages landing page for non-technical creators, with proof-led outcomes, verified install routes, and explicit evidence boundaries.
 - Added two original locally generated 3D previs clips with preserved poster frames, hashes, dimensions, status labels, exclusion rules, and explicit non-final/non-adoption boundaries.
+- Added two lightweight animated previews directly to the repository README, so GitHub visitors can inspect camera/blocking and rigged-contact motion before opening the full MP4 gallery.
 
 This update proves repository structure, standalone closure, deterministic validation, and the recorded 5.4.4 text behavior. It does not claim successful video-model generation or explicit user acceptance of the resulting storyboard output.
 

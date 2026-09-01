@@ -23,6 +23,25 @@
 
 Open Film Skills is a public toolkit of 19 standalone Agent Skills for AI filmmaking: 18 stable modules and one isolated experiment. Start with one outcome; install the complete studio only when you need the full route.
 
+## See the Skills in motion
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4"><img src="docs/media/previs-blocking-preview.gif" width="100%" alt="Five-second gray 3D previs showing a camera push, actor blocking, a hard cut, lateral tracking, and scene parallax" /></a><br />
+<strong>Camera and blocking previs · 5.0 seconds</strong><br />
+Makes camera movement, performer position, the cut, and scene parallax visible before generation. <a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4">Play the original MP4</a>.
+</td>
+<td width="50%" valign="top">
+<a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4"><img src="docs/media/rigged-contact-preview.gif" width="100%" alt="Two-point-eight-second gray 3D rigged action gate showing two-hand grip, held contact, and opposite recoil" /></a><br />
+<strong>Rigged contact action gate · 2.8 seconds</strong><br />
+Makes two-hand grip, final-surface contact, the held impact interval, and opposite recoil inspectable. <a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4">Play the original MP4</a>.
+</td>
+</tr>
+</table>
+
+These original local outputs show the kind of observable camera, blocking, and physical-action checkpoints the Skills are designed to specify and review. They are rough 3D previs—not finished AI films, external-user adoption, or proof that the unpublished local previs executor ships in this repository. [Open the complete media gallery](https://62656456.github.io/ai-film-skills/#media) · [Inspect hashes and evidence boundaries](docs/media/media-manifest.json)
+
 ## Start with one outcome
 
 | Write or repair the story | Design executable shots | Produce an AI-video workflow |
