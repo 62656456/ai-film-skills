@@ -24,6 +24,8 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 The verified 1.5.23 test discovered 18 stable Skills, copied exactly six `ai-storyboard-director` runtime files, produced one `SKILL.md`, and matched all six public-source SHA-256 values. The isolated experimental Skill is intentionally not part of default discovery. This proves repository discovery and file copying; native activation, routing, and model behavior still belong to the selected host. See the [full verification record](../examples/skills-cli-install-verification.md).
 
+The same stable set is publicly indexed at [skills.sh/62656456/ai-film-skills](https://skills.sh/62656456/ai-film-skills). The repository page and flagship Skill pages were checked as live HTTP 200 responses; see the [index verification record](../examples/skills-sh-index-verification.md). Directory install counts include maintainer verification runs and must not be described as distinct external users.
+
 ## Install from a clone
 
 ```bash

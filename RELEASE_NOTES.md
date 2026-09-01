@@ -14,6 +14,7 @@ Single-entry storyboard 5.4.4 and standalone-package completion.
 - Added an auditable Storyboard Director 5.4.4 before/after example, deterministic campaign graphics, a social-preview export, a public launch kit, and a real-use showcase form.
 - Added repository checks that reject stale public module counts and verify every launch asset's SHA-256 and PNG dimensions.
 - Verified the open `skills` CLI 1.5.23 against the public repository: 18 stable Skills discovered, one six-file Storyboard Director package copied with full SHA-256 parity, and the isolated experiment excluded from default discovery.
+- Verified the live skills.sh index: the repository page reports 18 Agent Skills, flagship pages resolve successfully, and the official install-count badge is available.
 
 This update proves repository structure, standalone closure, deterministic validation, and the recorded 5.4.4 text behavior. It does not claim successful video-model generation or explicit user acceptance of the resulting storyboard output.
 

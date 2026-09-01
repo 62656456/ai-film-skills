@@ -37,6 +37,8 @@ npx --yes skills@latest add 62656456/ai-film-skills --list
 npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
 ```
 
+直接浏览在线目录：[18个正式Skill](https://skills.sh/62656456/ai-film-skills) · [`ai-storyboard-director`](https://skills.sh/62656456/ai-film-skills/ai-storyboard-director) · [`director-agent`](https://skills.sh/62656456/ai-film-skills/director-agent)
+
 也可以使用仓库自带的明确宿主安装器：
 
 ```bash
@@ -51,7 +53,7 @@ python scripts/install_skill.py ai-storyboard-director --platform codex
 使用 $ai-storyboard-director，把下面已经确认的8秒剧情设计成人读分镜和一条完整视频提示词。每个时间段标题直接显示焦段/光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点或遮挡接力和动作落点：[粘贴剧情]
 ```
 
-Claude Code 把安装命令中的 `--platform codex` 改成 `--platform claude-code`。Skills CLI 1.5.23 的发现和六文件复制路径已经隔离验证；是否原生加载仍由具体宿主决定。查看[CLI验证记录](../../../examples/skills-cli-install-verification.md)，其他宿主和 ZIP 安装方式见[安装指南](../../INSTALLATION.md)。
+Claude Code 把安装命令中的 `--platform codex` 改成 `--platform claude-code`。Skills CLI 1.5.23 的发现和六文件复制路径已经隔离验证；是否原生加载仍由具体宿主决定。查看[CLI验证记录](../../../examples/skills-cli-install-verification.md)和[skills.sh索引验证](../../../examples/skills-sh-index-verification.md)，其他宿主和 ZIP 安装方式见[安装指南](../../INSTALLATION.md)。
 
 ## 在 GitHub 继续阅读
 

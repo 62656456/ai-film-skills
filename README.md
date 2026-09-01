@@ -16,6 +16,7 @@
 ![Languages](https://img.shields.io/badge/readme_languages-4-46C2CB?style=flat-square)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
 [![Validate Skills](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml)
+[![skills.sh](https://skills.sh/b/62656456/ai-film-skills)](https://skills.sh/62656456/ai-film-skills)
 
 </div>
 
@@ -47,6 +48,8 @@ npx --yes skills@latest add 62656456/ai-film-skills --list
 npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
 ```
 
+Browse the live directory pages: [all 18 stable Skills](https://skills.sh/62656456/ai-film-skills) · [`ai-storyboard-director`](https://skills.sh/62656456/ai-film-skills/ai-storyboard-director) · [`director-agent`](https://skills.sh/62656456/ai-film-skills/director-agent)
+
 Or use the repository's explicit host installer:
 
 ```bash
@@ -61,7 +64,7 @@ Then ask your Agent:
 Use $ai-storyboard-director to turn this approved eight-second scene into readable shots and one complete generation prompt. Make every segment heading show the lens/optics, camera side and height, camera path and orientation change, speed, focus or occlusion handoff, and the physical endpoint: [paste scene]
 ```
 
-For Claude Code, replace `--platform codex` with `--platform claude-code`. The ecosystem CLI discovery and six-file copy route were verified with `skills` 1.5.23; native activation still belongs to the selected host. See the [verification record](examples/skills-cli-install-verification.md), or use [Installation](docs/INSTALLATION.md) for other hosts and ZIP routes.
+For Claude Code, replace `--platform codex` with `--platform claude-code`. The ecosystem CLI discovery and six-file copy route were verified with `skills` 1.5.23; native activation still belongs to the selected host. See the [install verification](examples/skills-cli-install-verification.md), the [skills.sh index verification](examples/skills-sh-index-verification.md), or use [Installation](docs/INSTALLATION.md) for other hosts and ZIP routes.
 
 ## Install one craft or the complete studio
 

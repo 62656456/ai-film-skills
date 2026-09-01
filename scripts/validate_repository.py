@@ -46,6 +46,7 @@ REQUIRED_REPOSITORY_FILES = {
     "docs/skills/INDEX.md",
     "examples/storyboard-director-5.4.4-visible-camera-plan.md",
     "examples/skills-cli-install-verification.md",
+    "examples/skills-sh-index-verification.md",
     "scripts/build_skill_packages.py",
     "scripts/generate_skill_guides.py",
     "scripts/install_skill.py",
@@ -281,6 +282,9 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
     cli_command = "npx --yes skills@latest add 62656456/ai-film-skills --list"
     if cli_command not in readme:
         errors.append("README.md missing the verified open Skills CLI discovery command")
+    directory_badge = "https://skills.sh/b/62656456/ai-film-skills"
+    if directory_badge not in readme:
+        errors.append("README.md missing the verified skills.sh directory badge")
     return errors
 
 
