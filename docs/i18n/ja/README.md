@@ -6,7 +6,7 @@
 
 **Codex、Claude Code、TRAE、CodeBuddy、WorkBuddy、その他のAgentで再利用できるモジュール型の演出知能。**
 
-[English](../../../README.md) · [简体中文](../zh-CN/README.md) · **日本語** · [한국어](../ko/README.md)
+[English](../../../README.md#english-overview) · [简体中文](../zh-CN/README.md) · **日本語** · [한국어](../ko/README.md)
 
 </div>
 

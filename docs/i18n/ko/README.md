@@ -6,7 +6,7 @@
 
 **Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy 및 기타 Agent에서 재사용할 수 있는 모듈형 연출 지능.**
 
-[English](../../../README.md) · [简体中文](../zh-CN/README.md) · [日本語](../ja/README.md) · **한국어**
+[English](../../../README.md#english-overview) · [简体中文](../zh-CN/README.md) · [日本語](../ja/README.md) · **한국어**
 
 </div>
 

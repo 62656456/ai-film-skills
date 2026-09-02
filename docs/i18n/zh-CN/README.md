@@ -6,7 +6,7 @@
 
 **让你正在使用的 Agent 把剧本变成电影化分镜、可复用视觉资产、可复制提示词和 AI 视频生产流程。**
 
-[English](../../../README.md) · **简体中文** · [日本語](../ja/README.md) · [한국어](../ko/README.md)
+[English](../../../README.md#english-overview) · **简体中文** · [日本語](../ja/README.md) · [한국어](../ko/README.md)
 
 </div>
 
