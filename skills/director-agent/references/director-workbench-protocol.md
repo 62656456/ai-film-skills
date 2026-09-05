@@ -28,16 +28,17 @@ Never one-shot a film project, but do not force a fixed production pipeline onto
 
 ```text
 Pure script creation or repair:
-Project facts when needed -> bundled Writer Room -> state/causality audit -> isolated Cold Read -> readable screenplay
+Project facts when needed -> bundled Writer Room -> state/causality audit -> cold-read protocol with honest evidence label -> readable screenplay
 
 Director design for an approved script:
 Approved screenplay -> Director Room -> Asset Bible -> Scene Board
 
-Production storyboard:
-Approved screenplay + approved director design -> Asset Bible -> Scene Board -> Shot Board -> handoff
+Production storyboard owned by this Skill only while director decisions are unresolved:
+Approved screenplay + newly completed DIRECTOR_PLAN -> Asset Bible -> Scene Board -> Shot Board -> handoff
 ```
 
 Do not send a screenplay with unresolved causal or dialogue blockers downstream to Director Room or Shot Board.
+If the user already has an approved `DIRECTOR_PLAN` and asks only for shot expansion, do not rebuild, reinterpret, or route that request through this workbench. Preserve the approved plan and hand the task to the matching storyboard-production entrypoint when one is available.
 
 ## Workbench Rooms
 
@@ -263,7 +264,7 @@ When the user asks to create a director Agent workflow, project workflow, or reu
 - If only one scene is being handled and project continuity matters, use a lightweight version of the relevant room; otherwise deliver the requested scene directly.
 - If the user wants pure writing and not production, use Writer Room only. Add Director Room only when the user also asks for interpretation, staging, performance, sound, edit, or visual design.
 - For pure screenplay requests, keep internal state ledgers out of the delivered reading copy unless the user asks to inspect them.
-- If the user wants full分镜, complete Project/Director/Asset/Scene/Shot cards first and include the complete shot-production constraint block in the same package.
+- If the user wants full分镜 and the director layer is unresolved, complete Project/Director/Asset/Scene/Shot cards first and include the complete shot-production constraint block in the same package. If an approved `DIRECTOR_PLAN` already exists and only shot expansion is requested, stop at the handoff boundary and do not regenerate those cards.
 
 ## Anti-Overbuild Rule
 
@@ -271,6 +272,6 @@ Do not force the full workbench on tiny requests.
 
 - One screenplay scene: Writer Room only; add project facts only when continuity depends on them.
 - Rewrite one paragraph: Writer Room only unless the user explicitly asks for a director note.
-- Full short film / short drama / sequence requested as pure writing: Writer Room + state audit + isolated cold read.
+- Full short film / short drama / sequence requested as pure writing: Writer Room + state audit + cold-read protocol. Use `INDEPENDENT COLD READ` only when an explicitly available and allowed fresh reader or isolated context satisfies the protocol; otherwise label it `SELF-AUDIT ONLY`.
 - Full production design for a short film / short drama / sequence: full workbench.
-- Production分镜: full workbench through Shot Board, then AG-CLIP handoff.
+- Production分镜 with unresolved director decisions: full workbench through Shot Board, then AG-CLIP handoff. Approved-plan shot expansion is outside this Skill's entrypoint.

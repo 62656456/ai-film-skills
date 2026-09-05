@@ -81,12 +81,15 @@ Do not flood the answer with citations when the user asked for a practical scrip
 
 ## Updating The Skill
 
-Do not automatically rewrite skill files for every fact. Update the skill only when:
+Research never authorizes a file change by itself. Rewrite this Skill only when the user explicitly authorizes an update to this package and its scope in the current task.
 
-- The user explicitly asks to update the Agent.
-- A repeated task reveals a stable new rule.
-- A verified correction fixes a wrong or weak bundled rule.
-- The user's personal preference should persist.
+The following are candidate signals, not independent permission to write:
+
+- A repeated task reveals a potentially stable new rule.
+- A verified correction exposes a wrong or weak bundled rule.
+- The user states a personal preference that may deserve a private/local overlay.
+
+Report these as proposed changes first. Do not modify files, installation copies, Git history, releases, or public documentation until the user authorizes the exact target and scope. A personal preference must not enter a public package merely because it should persist locally; generalize it only with explicit approval, remove private details, and keep local-only preferences out of the public runtime.
 
 When updating:
 
@@ -94,6 +97,7 @@ When updating:
 - Keep detailed source notes in references, not the main `SKILL.md`.
 - Preserve the anti-laziness contract.
 - Mark user-specific preferences as user preference, not universal film law.
+- Treat repository commit, push, release, installation sync, and other external mutations as separately permissioned actions; authorization to research or propose an update does not authorize them.
 
 ## User Fit Check
 
