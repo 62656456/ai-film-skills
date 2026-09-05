@@ -43,7 +43,7 @@ plain-language story and bundled behavior/dialogue pass already complete
 -> dialogue response chains
 -> setup/payoff and knowledge audit
 -> revised screenplay prose
--> independent cold-read audit
+-> cold-read protocol with an honest evidence label
 ```
 
 Do not start with polished dialogue, visual style, theme speeches, or shot design. If a downstream layer fails, return to the earliest broken upstream layer instead of adding exposition or decorative detail.
@@ -232,9 +232,9 @@ Hard gates:
 
 ## 9. Run The Independent Cold-Read Gate
 
-Use `screenplay-cold-read-protocol.md` with a fresh reader. Give that reader only the raw screenplay, the user's locked constraints, and necessary format information. Do not give them this engine's ledgers, intended meaning, suspected bugs, or expected answer.
+Use `screenplay-cold-read-protocol.md` with a fresh reader or isolated context only when that capability is explicitly available and allowed. Give that reader only the raw screenplay, the user's locked constraints, and necessary format information. Do not give them this engine's ledgers, intended meaning, suspected bugs, or expected answer.
 
-The writing agent's own review is `SELF-AUDIT ONLY`; it cannot be labeled independent evidence. Route every cold-read failure to the earliest broken layer, rewrite there, and submit a clean text for a new read.
+When no allowed isolated reader exists, run the protocol in the current context and label it `SELF-AUDIT ONLY`; lack of an independent reader must not be hidden or used to fabricate an independent PASS. Route every cold-read failure to the earliest broken layer, rewrite there, and submit a clean text for a new read when possible.
 
 ## 10. Mode-Specific Execution
 
@@ -247,7 +247,7 @@ The writing agent's own review is `SELF-AUDIT ONLY`; it cannot be labeled indepe
 5. Audit consequential dialogue response chains without forcing literal, over-complete replies.
 6. Audit setup/payoff and ending conditions.
 7. Revise the requested screenplay text at the earliest broken layer.
-8. Run a cold-read audit before delivery.
+8. Run the cold-read protocol before delivery and report `SELF-AUDIT ONLY` unless a genuinely isolated read occurred.
 
 Do not expose all internal ledgers unless the user asks. Lead with the usable script or requested creative artifact.
 

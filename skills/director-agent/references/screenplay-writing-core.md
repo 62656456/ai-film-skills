@@ -10,6 +10,7 @@ Use this as the primary, self-contained writing contract for screenplay creation
 - Build Scenes From Action And Consequence
 - Write Dialogue As Behavior
 - Remove Generated Neatness
+- Compile For AI Only After The Story Passes
 - Calibrate, Verify, Then Deliver
 
 ## Required Knowledge Loading
@@ -23,6 +24,7 @@ Read the current files themselves; seeing these paths is not enough.
 - Story seed or outline repair: use the core premise and diagnosis questions first, then add only the character, conflict, theme, or structure checks required by the problem.
 - Single-scene, character, or dialogue repair: use the exact matching sections here; dialogue work always includes purpose and subtext, generated or over-polished text includes the anti-AI pass, and action/emotion work includes externalized behavior and restraint.
 - Serious, complete, full, or explicitly excellent screenplay work: also read `screenplay-exemplar-benchmarks.md` and complete its internal mechanism-calibration receipt.
+- AI-video, AI-comic, or prompt-ready screenplay work: complete the readable story and state verification first, then read `screenplay-ai-execution-compiler.md`. Its subject-binding and action-chain rules belong to the execution layer, not automatically to the human-readable master.
 
 Do not claim that a local writing module was used unless its actual section was applied in the current task.
 
@@ -124,14 +126,20 @@ Reject drafts where:
 
 Life friction must arise naturally from the setting and people. Do not add random clutter merely to satisfy a checklist.
 
-## 6. Calibrate, Verify, Then Deliver
+## 6. Compile For AI Only After The Story Passes
+
+When the user explicitly requests an AI-executable screenplay, an AI-comic/AI-video production script, or repair of model-confusing action, preserve the readable screenplay as the semantic master and use `screenplay-ai-execution-compiler.md` for a separate compilation pass.
+
+Do not respond to a weak story by adding more bodily detail. Causality, current objective, relationship pressure, dialogue purpose, choice, and cost must already work. Do not mechanically repeat character names, explain every transition, or attach a visible reaction to every line in an ordinary screenplay. Those devices are conditional disambiguation tools for machine execution.
+
+## 7. Calibrate, Verify, Then Deliver
 
 For serious screenplay work:
 
-0. When the user is testing the Skill or calibrating a new direction and did not explicitly request a full-length script, deliver a 2--3 minute sample first: normally 2 scenes, 2--3 speaking characters, and about 800--1200 Chinese characters. Before showing it, give a fresh ordinary reader only the raw sample and ask them to mark any unclear opening fact, unreconstructable physical action, and up to three lines that do not sound spontaneously speakable; two or more consequential writer-shaped lines require revision. Do not expand into a long script until the user accepts the short sample or asks for the full version.
+0. When the user is testing the Skill or calibrating a new direction and did not explicitly request a full-length script, deliver a 2--3 minute sample first: normally 2 scenes, 2--3 speaking characters, and about 800--1200 Chinese characters. Before showing it, run the cold-read protocol against only the raw sample. Use a fresh ordinary reader or isolated context only when that capability is explicitly available and allowed; otherwise label the pass `SELF-AUDIT ONLY`. Mark any unclear opening fact, unreconstructable physical action, and up to three lines that do not sound spontaneously speakable; two or more consequential writer-shaped lines require revision. Do not expand into a long script until the user accepts the short sample or asks for the full version.
 
 1. Compare the draft's mechanism with the relevant real-script scene in `screenplay-exemplar-benchmarks.md`; copy no plot, character, setting, or line.
 2. Run `screenplay-state-engine.md` to catch continuity, knowledge, causality, and setup/payoff errors.
-3. Give a fresh reader only the raw screenplay, locked constraints, and `screenplay-cold-read-protocol.md`.
+3. When an explicitly available and allowed fresh reader or isolated context exists, give it only the raw screenplay, locked constraints, and `screenplay-cold-read-protocol.md`; otherwise run the protocol in the current context and label it `SELF-AUDIT ONLY`.
 4. Treat logic PASS as a floor. Require the reader also to retell the story, identify obvious unused alternatives, distinguish character voices, and name any line or action that feels written for the author's convenience.
 5. Deliver the actual script in the requested form. User acceptance is the only final aesthetic verdict.

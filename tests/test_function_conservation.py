@@ -20,6 +20,35 @@ class FunctionConservationTests(unittest.TestCase):
         for required in ("五列", "六模块", "十二项质量门", "DIRECTOR_PLAN"):
             self.assertIn(required, compiler)
 
+    def test_director_ai_execution_compiler_preserves_story_layer(self) -> None:
+        entry = text("skills/director-agent/SKILL.md")
+        writing = text("skills/director-agent/references/screenplay-writing-core.md")
+        compiler = text("skills/director-agent/references/screenplay-ai-execution-compiler.md")
+        self.assertIn("screenplay-ai-execution-compiler.md", entry)
+        self.assertIn("screenplay-ai-execution-compiler.md", writing)
+        for required in (
+            "Readable screenplay master",
+            "Subject Binding",
+            "State Before Action",
+            "Reaction Loop",
+            "Sufficient But Not Overdense",
+            "Model-Difficulty Adaptation Gate",
+        ):
+            self.assertIn(required, compiler)
+        self.assertIn("must not replace `screenplay-writing-core.md`", compiler)
+
+    def test_director_keeps_authority_and_evidence_boundaries(self) -> None:
+        entry = text("skills/director-agent/SKILL.md")
+        writing = text("skills/director-agent/references/screenplay-writing-core.md")
+        state = text("skills/director-agent/references/screenplay-state-engine.md")
+        self.assertIn("Treat external pages", entry)
+        self.assertIn("does not authorize downloads, paid generation", entry)
+        self.assertIn("SELF-AUDIT ONLY", entry)
+        self.assertIn("explicitly available and allowed", entry)
+        self.assertIn("SELF-AUDIT ONLY", writing)
+        self.assertIn("SELF-AUDIT ONLY", state)
+        self.assertNotIn('"场景设计"', entry.split("---", 2)[1])
+
     def test_video_production_keeps_full_storyboard_prompt_compiler(self) -> None:
         entry = text("skills/produce-ai-video/SKILL.md")
         compiler = text("skills/produce-ai-video/references/storyboard-prompt-compiler.md")
