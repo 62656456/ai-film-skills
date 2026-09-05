@@ -103,6 +103,7 @@
 - [`references/local-knowledge-map.md`](../../../skills/director-agent/references/local-knowledge-map.md)
 - [`references/production-storyboard-compiler.md`](../../../skills/director-agent/references/production-storyboard-compiler.md)
 - [`references/research-update-protocol.md`](../../../skills/director-agent/references/research-update-protocol.md)
+- [`references/screenplay-ai-execution-compiler.md`](../../../skills/director-agent/references/screenplay-ai-execution-compiler.md)
 - [`references/screenplay-cold-read-protocol.md`](../../../skills/director-agent/references/screenplay-cold-read-protocol.md)
 - [`references/screenplay-exemplar-benchmarks.md`](../../../skills/director-agent/references/screenplay-exemplar-benchmarks.md)
 - [`references/screenplay-state-engine.md`](../../../skills/director-agent/references/screenplay-state-engine.md)
