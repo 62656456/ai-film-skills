@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   package:
+    if: github.event_name != 'release' || !startsWith(github.event.release.tag_name, 'ai-storyboard-director-v5.6.0-rc.')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
