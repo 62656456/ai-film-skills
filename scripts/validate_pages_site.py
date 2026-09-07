@@ -7,6 +7,7 @@ import sys
 from html.parser import HTMLParser
 import hashlib
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -22,6 +23,7 @@ class SiteParser(HTMLParser):
         super().__init__()
         self.tags: list[tuple[str, dict[str, str]]] = []
         self.ids: set[str] = set()
+        self.duplicate_ids: set[str] = set()
         self.title_text = ""
         self.in_title = False
 
@@ -29,6 +31,8 @@ class SiteParser(HTMLParser):
         values = {key: value or "" for key, value in attrs}
         self.tags.append((tag, values))
         if values.get("id"):
+            if values["id"] in self.ids:
+                self.duplicate_ids.add(values["id"])
             self.ids.add(values["id"])
         if tag == "title":
             self.in_title = True
@@ -40,6 +44,28 @@ class SiteParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self.in_title:
             self.title_text += data
+
+
+def markup_errors(parser: SiteParser) -> list[str]:
+    errors = [f"Pages HTML duplicate id: {value}" for value in sorted(parser.duplicate_ids)]
+    for tag, attrs in parser.tags:
+        if tag == "script":
+            errors.append("Pages HTML must not contain scripts or tracking code")
+        if any(name.lower().startswith("on") for name in attrs):
+            errors.append(f"Pages HTML must not contain executable event attributes: {tag}")
+        if any(attrs.get(name, "").strip().lower().startswith(("javascript:", "data:text/html")) for name in ("href", "src", "action")):
+            errors.append(f"Pages HTML must not contain executable URLs: {tag}")
+        if tag == "a" and attrs.get("href", "").startswith("#") and attrs["href"][1:] not in parser.ids:
+            errors.append(f"Pages HTML broken section link: {attrs['href']}")
+    return errors
+
+
+def has_whitebox_route(text: str) -> bool:
+    return bool(re.search(r"experimental/whitebox-previs-executor|docs/skills/(?:en|zh-CN)/whitebox-previs-executor\.md", text))
+
+
+def has_previs_nonfilm_boundary(text: str) -> bool:
+    return bool(re.search(r"(?:not|不证明|不是|不代表|不等于)[^\n]{0,100}(?:finished\s+AI\s+films|final\s+AI\s+films|(?:最终|完整)\s*AI\s*成片)", text, re.I))
 
 
 def main() -> int:
@@ -60,13 +86,12 @@ def main() -> int:
 
     if not parser.title_text.strip():
         errors.append("Pages HTML has no title")
-    for required_id in ("main", "top", "outcomes", "proof", "install"):
+    for required_id in ("main", "top", "outcomes", "proof", "install", "workflow", "showcase"):
         if required_id not in parser.ids:
             errors.append(f"Pages HTML missing id: {required_id}")
     if "media" not in parser.ids:
         errors.append("Pages HTML missing id: media")
-    if any(tag == "script" for tag, _ in parser.tags):
-        errors.append("Pages HTML must not contain scripts or tracking code")
+    errors.extend(markup_errors(parser))
 
     meta_names = {attrs.get("name") for tag, attrs in parser.tags if tag == "meta"}
     meta_props = {attrs.get("property") for tag, attrs in parser.tags if tag == "meta"}
@@ -90,7 +115,7 @@ def main() -> int:
                 errors.append("Pages video preload must be metadata")
             if "autoplay" in attrs:
                 errors.append("Pages videos must not autoplay")
-        if tag in {"a", "link", "img"}:
+        if tag in {"a", "link", "img", "source"}:
             value = attrs.get("href") or attrs.get("src")
             if not value or value.startswith(("#", "mailto:")):
                 continue
@@ -119,14 +144,17 @@ def main() -> int:
             errors.append(f"Pages HTML missing evidence or action term: {term}")
     required_css = (
         ":focus-visible",
-        "@media (max-width: 800px)",
-        "@media (max-width: 520px)",
         "@media (prefers-reduced-motion: reduce)",
-        "color-scheme: dark",
     )
     for term in required_css:
         if term not in css:
             errors.append(f"Pages CSS missing quality term: {term}")
+    if not re.search(r"@media[^{}]*\((?:max|min)-width\s*:", css):
+        errors.append("Pages CSS must contain a responsive width breakpoint")
+    if "showcase/manifest.json" not in html:
+        errors.append("Pages HTML must link the current showcase provenance manifest")
+    if not has_whitebox_route(html):
+        errors.append("Pages workflow must link the explicit experimental whitebox package")
 
     media_manifest = DOCS / "media" / "media-manifest.json"
     try:
@@ -177,14 +205,15 @@ def main() -> int:
                 errors.append(f"media evidence item missing {boundary_field}: {item.get('id')}")
 
     for required_readme_term in (
-        "## See the Skills in motion",
         "https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4",
         "https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4",
-        "not finished AI films",
-        "unpublished local previs executor",
     ):
         if required_readme_term not in readme:
             errors.append(f"README missing direct media showcase term: {required_readme_term}")
+    if not has_previs_nonfilm_boundary(readme):
+        errors.append("README must distinguish bounded previs evidence from finished AI films")
+    if not has_whitebox_route(readme):
+        errors.append("README must link the experimental whitebox source or its design guide")
 
     print(f"Pages HTML tags checked: {len(parser.tags)}")
     print(f"Pages IDs checked: {len(parser.ids)}")

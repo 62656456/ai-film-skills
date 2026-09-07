@@ -1,227 +1,171 @@
 <div align="center">
 
-<img src="docs/assets/hero.svg" width="100%" alt="Open Film Skills — 从剧本、资产和视觉语言到分镜、生产与验收的 AI 影视 Skill 工作室" />
+<img src="docs/assets/hero.svg" width="100%" alt="Open Film Skills — 从剧本、导演、视觉资产到分镜、提示词、视频和验收" />
 
 # Open Film Skills｜开放影视技能
 
-**让 Agent 把剧本变成可读剧本、可复用视觉资产、可执行分镜、可复制提示词和可验收的 AI 视频生产流程。**
+**从输入到可验收成片，让每个创作阶段有清楚的职责、交付和证据。**
 
-*Script-to-screen Agent Skills for AI filmmaking — modular, inspectable, and independently installable.*
+*Independent Agent Skills for story, directing, visual assets, cinematography and AI-film production.*
 
-[从一个结果开始](#从一个结果开始) · [60 秒开始](#60-秒开始) · [查看真实证据](#see-the-skills-in-motion) · [浏览全部 Skill](SKILL_CATALOG.md) · [下载完整套装](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip)
+[完整工作流](docs/WORKFLOW.md) · [14张用户接受成图](#本轮14张用户接受成图) · [按任务选Skill](SKILL_CATALOG.md) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
 
-**简体中文（当前页）** · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · [English overview](#english-overview)
+**简体中文** · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · [English overview](#english-overview)
 
-![Packaged skills](https://img.shields.io/badge/packaged_skills-18-FF6B35?style=flat-square)
-![Experimental skills](https://img.shields.io/badge/experimental-1-D6A756?style=flat-square)
-![Standalone packages](https://img.shields.io/badge/standalone_packages-19-7ED6A5?style=flat-square)
+![Regular packages](https://img.shields.io/badge/regular_packages-18-FF6B35?style=flat-square)
+![Experimental packages](https://img.shields.io/badge/experimental_packages-2-D6A756?style=flat-square)
+![Bilingual guides](https://img.shields.io/badge/bilingual_guides-40-7ED6A5?style=flat-square)
 [![Validate Skills](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml)
 [![skills.sh](https://skills.sh/b/62656456/ai-film-skills)](https://skills.sh/62656456/ai-film-skills)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
 
 </div>
 
-## 这是什么
+## 从输入到成片：完整工作流
 
-Open Film Skills 不是一份“万能提示词”，而是一组面向 AI 影视创作的独立 Agent Skills。它把创作拆成六个可检查的阶段：
+![输入、剧本、导演方案、十种视觉路线、人物场景道具资产、5.6分镜与保存恢复、母提示词、可选白模、实际生成、剪辑声音、完整播放和用户验收](docs/assets/workflow-overview.svg)
 
-```text
-故事与导演判断 → 人物 / 场景 / 道具资产 → 类型视觉语言 → 镜头与提示词 → 视频生产 → 证据与验收
-```
+[查看全部节点、交接与返回线](docs/WORKFLOW.md) · [下载完整Mermaid源图](docs/assets/production-workflow.mmd)
 
-你可以只安装当前需要的一项，也可以安装完整工作室。每个 Skill 都带自己的运行正文和必要引用，不依赖仓库里的共享知识目录。
+点子、小说、大纲、剧本、参考图或已有镜头都可以成为入口。已有可用成果就从相应阶段继续，按需选择主Skill；每项技能自带运行正文和必要引用，不要求先加载整个工作室。
 
-> 设计原则：先交人能判断的结果，再让规则、检查和状态支撑结果。结构通过、宿主加载、真实任务、媒体效果和用户确认是五种不同证据，不能互相冒充。
+完整工作流列出 **20项影视职责＋1项网页辅助**。其中外部仙侠只提供上游链接，本仓库实际分发 **18项常规＋2项实验＝20个模块**，对应 **40份英文/简体中文指南**。
 
-## 能力总览
+## 当前源码与下载版本
 
-| 阶段 | 使用的 Skill | 直接得到什么 |
-|---|---|---|
-| 故事与导演 | [`director-agent`](docs/skills/zh-CN/director-agent.md) | 剧本创作与修改、人物因果、自然对白、潜台词、场景目的和分镜前导演判断 |
-| 资产定义 | [`character-asset`](docs/skills/zh-CN/character-asset.md) · [`scene-asset`](docs/skills/zh-CN/scene-asset.md) · [`prop-asset`](docs/skills/zh-CN/prop-asset.md) | 可复用的人物、场景、道具参考任务与连续性合同 |
-| 视觉语言 | [8 个类型视觉 Skill](SKILL_CATALOG.md#genre-visual-language) | 可观察的构图、光线、空间、动作、材质与连续性参数 |
-| 分镜与提示词 | [`ai-storyboard-director`](docs/skills/zh-CN/ai-storyboard-director.md) | 人读分镜、人物调度、焦段与机位、摄影机路径、空间连续性和完整视频提示词 |
-| 视频生产 | [`produce-ai-video`](docs/skills/zh-CN/produce-ai-video.md) · [`ai-short-drama-production`](docs/skills/zh-CN/ai-short-drama-production.md) | 生成准备、费用门、生产分段、剪辑、完整播放检查、修复与短剧编排 |
-| 产品与研究 | [`web-design-director`](docs/skills/zh-CN/web-design-director.md) · [数据研究 Skills](SKILL_CATALOG.md#production-product-and-research) | 网页设计与实现、官方市场研究、经批准的数据知识写入 |
+| 入口 | 当前口径 |
+|---|---|
+| [当前源码](skills/ai-storyboard-director/SKILL.md) | 分镜入口为 **5.6**，已选择日常使用；增加作品内导演意图、镜头和状态的保存恢复，以及摄影设计在提示词编译中的保留检查 |
+| [已发布v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | **旧发布快照**，分镜是 **5.4.4**；源码更新不改变旧ZIP |
+| 5.6独立Preview | 另有标签和清单的独立预览包，与当前源码及完整套装Release分别记录 |
 
-完整目录包含 19 个模块、38 个英文／简体中文设计说明，以及每个模块的运行正文和独立 ZIP：
-
-- [按任务比较全部 Skill](SKILL_CATALOG.md)
-- [浏览 38 个设计说明](docs/skills/INDEX.md)
-- [理解共同的审核、退回与过关逻辑](docs/SKILL_DESIGN_SYSTEM.md)
+本轮是源码与文档刷新，不能把它称为已经发布新Release。要用当前源码，请检查所取分支/提交与`SKILL.md`版本；旧Release适合明确复现旧快照。[安装选择与验证](docs/INSTALLATION.md)
 
 ## 从一个结果开始
 
-| 你现在要什么 | 先用哪个 Skill | 一句话调用 |
+| 你要的结果 | 入口 | 直接交付 |
 |---|---|---|
-| 写剧本、改剧本、解决人物和对白问题 | [`director-agent`](skills/director-agent/SKILL.md) | `使用 $director-agent，把这段故事改成因果清楚、人物行动可拍、对白自然的剧本。` |
-| 把确认后的剧本做成分镜和提示词 | [`ai-storyboard-director`](skills/ai-storyboard-director/SKILL.md) | `使用 $ai-storyboard-director，把这段剧本设计成人读分镜和一条完整视频提示词。` |
-| 定义人物、场景或道具参考资产 | [`character-asset`](skills/character-asset/SKILL.md) · [`scene-asset`](skills/scene-asset/SKILL.md) · [`prop-asset`](skills/prop-asset/SKILL.md) | `使用对应资产 Skill，把这个对象整理成可审核、可复用的参考资产合同。` |
-| 为作品建立明确的类型视觉语言 | [类型视觉 Skill](SKILL_CATALOG.md#genre-visual-language) | `使用对应类型 Skill，只输出能在画面中被观察和检查的视觉参数。` |
-| 把批准内容生产成可观看视频 | [`produce-ai-video`](skills/produce-ai-video/SKILL.md) | `使用 $produce-ai-video，在费用和权限确认后生成、剪辑、完整播放检查并修复。` |
+| 写剧本、改对白、解决因果与人物问题 | [director-agent](docs/skills/zh-CN/director-agent.md) | 可读剧本、可替换段落或导演方案；明确需要时另编译AI执行层 |
+| 将已有剧本做成镜头和提示词 | [ai-storyboard-director](docs/skills/zh-CN/ai-storyboard-director.md) | 五列分镜＋完整六模块母提示词；明确作品目录中的5.6保存与恢复 |
+| 人物、场景、道具参考 | [character-asset](docs/skills/zh-CN/character-asset.md) · [scene-asset](docs/skills/zh-CN/scene-asset.md) · [prop-asset](docs/skills/zh-CN/prop-asset.md) | 按需的单图/必要视图、提示词与状态合同 |
+| 类型视觉方向 | [8项常规类型](SKILL_CATALOG.md#genre-visual-language) · [硬科幻实验](docs/skills/zh-CN/hard-sci-fi-visual-director.md) · [外部仙侠](https://github.com/liyue-aigc/xianxia-visual-director) | 构图、光影、色彩、材质、空间与动作参数 |
+| 生成前看机位和基础走位 | [whitebox-previs-executor](docs/skills/zh-CN/whitebox-previs-executor.md) | 实验3D预演MP4；仅实现的代理和已过门动作 |
+| 实际生成、剪辑与验收视频 | [produce-ai-video](docs/skills/zh-CN/produce-ai-video.md) | 在工具和权限可用时统筹真实视频、声音、完整播放与修复 |
+| 选题、平台或知识沉淀 | [市场研究](docs/skills/zh-CN/d-official-market-analysis.md) · [批准后写入](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) | 有来源的研究；知识写入另需明确批准 |
+| 专项短剧控制、作品站或资产工作台 | [短剧控制](docs/skills/zh-CN/ai-short-drama-production.md) · [网页设计](docs/skills/zh-CN/web-design-director.md) | 短剧控制合同（未部署、需核对5.6交接）；网页设计与实际渲染审核 |
 
-## 60 秒开始
-
-先列出可安装的正式 Skills：
-
-```bash
-npx --yes skills@latest add 62656456/ai-film-skills --list
-```
-
-只安装当前需要的一项：
-
-```bash
-npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
-```
-
-或使用仓库自带安装器：
+## 安装当前源码中的一个Skill
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
+git log -1 --oneline
+python scripts/install_skill.py --list
 python scripts/install_skill.py ai-storyboard-director --platform codex
 ```
 
-然后把已经确认的剧情交给 Agent：
+安装器使用当前检出的源码；公共默认分支不会自动包含未推送的本地修改。安装前查看所选源码版本，然后在Agent中调用：
 
 ```text
-使用 $ai-storyboard-director，把下面已经确认的剧情设计成人读分镜和一条完整视频提示词。
-每个时间段标题直接显示焦段/光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点或遮挡接力和动作落点：
-[粘贴剧情]
+使用 $ai-storyboard-director，把下面剧本设计成人读分镜和一条完整视频母提示词。
+保留已确认剧情、人物与台词；镜头标题直接显示具体摄影方案。
+如果我提供了作品目录，请实际保存导演意图、选中镜头和场景状态，并核对恢复结果。
+[粘贴剧本与已有约束]
 ```
 
-Skills CLI 1.5.23 的发现和六文件复制路径已经隔离验证；是否原生加载仍由具体宿主决定。查看 [CLI 验证记录](examples/skills-cli-install-verification.md)、[skills.sh 索引验证](examples/skills-sh-index-verification.md)和[完整安装指南](docs/INSTALLATION.md)。
+也可用Skills CLI查看公共仓库的可发现条目，再按需要安装；该路线读取公共来源，不会取得未推送的本地修改：
 
-## 为什么拆成多个独立 Skill
+```bash
+npx --yes skills@latest add 62656456/ai-film-skills --list
+npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
+```
 
-一个超级 Skill 看起来方便，但会让剧本、资产、摄影、风格、生产和审核规则同时进入上下文，增加冲突和误触发。Open Film Skills 选择把职责拆开：
+[skills.sh公开目录](https://skills.sh/62656456/ai-film-skills)显示平台自己的安装统计，其中包含维护者验证，不等于独立外部用户数。
 
-1. **需要什么才加载什么**：写剧本时不必读取全部摄影和生产规则。
-2. **每项能力单独验收**：结构通过不等于真实任务通过，分镜通过也不等于视频成片通过。
-3. **可替换、可回退**：升级一个 Skill 不必同时改写整个创作系统。
+其他宿主、历史ZIP与实验包的明确安装方式见[安装指南](docs/INSTALLATION.md)和[兼容边界](docs/COMPATIBILITY.md)。Skills CLI的[旧版发现与复制记录](examples/skills-cli-install-verification.md)保留为历史证据，不冒充本轮5.6宿主行为测试。
 
-如果需要完整短剧路线，再由 [`ai-short-drama-production`](docs/skills/zh-CN/ai-short-drama-production.md) 编排各阶段；编排器不会吞并各 Skill 的职责和验收门。
+## 本轮14张用户接受成图
+
+以下均为原创生成结果，用户已逐批明确接受。预览保留完整画幅，点击进入原始PNG；没有裁切成卡片来隐藏边缘。包括8类型、5张硬科幻与1张仙侠；仙侠技能本体来自外部，仅链接上游，图是本轮授权生成的原创成果。
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/cyberpunk-after-the-new-eye.png"><img src="docs/showcase/cyberpunk-after-the-new-eye.webp" width="100%" alt="赛博朋克：身体、技术与人的处境；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《换眼之后》</strong><br />赛博朋克：身体、技术与人的处境。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/epic-open-gates.png"><img src="docs/showcase/epic-open-gates.webp" width="100%" alt="史诗：群体规模与门前的个人命运；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《开门》</strong><br />史诗：群体规模与门前的个人命运。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/fantasy-mending-the-bridge.png"><img src="docs/showcase/fantasy-mending-the-bridge.webp" width="100%" alt="奇幻：魔法作用、石桥与跨越；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《重续断桥》</strong><br />奇幻：魔法作用、石桥与跨越。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/horror-upstairs-visitor.png"><img src="docs/showcase/horror-upstairs-visitor.webp" width="100%" alt="恐怖：可读空间中的异常证据；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《楼上的访客》</strong><br />恐怖：可读空间中的异常证据。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/noir-before-the-money.png"><img src="docs/showcase/noir-before-the-money.webp" width="100%" alt="黑色：证据、封口费与未完成交易；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《收钱之前》</strong><br />黑色：证据、封口费与未完成交易。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/romance-tilted-umbrella.png"><img src="docs/showcase/romance-tilted-umbrella.webp" width="100%" alt="爱情：系鞋与偏伞的双向照顾；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《把伞偏过去》</strong><br />爱情：系鞋与偏伞的双向照顾。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/war-river-crossing.png"><img src="docs/showcase/war-river-crossing.webp" width="100%" alt="战争：负荷、协同与渡河行动；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《渡河》</strong><br />战争：负荷、协同与渡河行动。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/wuxia-tea-still-warm.png"><img src="docs/showcase/wuxia-tea-still-warm.webp" width="100%" alt="武侠：日常空间中的兵器与关系压力；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《茶未凉》</strong><br />武侠：日常空间中的兵器与关系压力。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/hard-scifi-orbital-morning.png"><img src="docs/showcase/hard-scifi-orbital-morning.webp" width="100%" alt="硬科幻：轨道生活与细小照料；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《环城清晨》</strong><br />硬科幻：轨道生活与细小照料。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/hard-scifi-lunar-lightfield.png"><img src="docs/showcase/hard-scifi-lunar-lightfield.webp" width="100%" alt="硬科幻：月面系统、尺度与日照；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《极昼镜阵》</strong><br />硬科幻：月面系统、尺度与日照。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/hard-scifi-titan-harbor.png"><img src="docs/showcase/hard-scifi-titan-harbor.webp" width="100%" alt="硬科幻：环境与装备形态；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《泰坦泊岸》</strong><br />硬科幻：环境与装备形态。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/hard-scifi-mars-first-harvest.png"><img src="docs/showcase/hard-scifi-mars-first-harvest.webp" width="100%" alt="硬科幻：农业系统与收获；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《火星的第一颗番茄》</strong><br />硬科幻：农业系统与收获。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/hard-scifi-europa-underice.png"><img src="docs/showcase/hard-scifi-europa-underice.webp" width="100%" alt="硬科幻：冰下环境与探测；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《冰壳下的来客》</strong><br />硬科幻：冰下环境与探测。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/xianxia-cloud-bell.png"><img src="docs/showcase/xianxia-cloud-bell.webp" width="100%" alt="仙侠：外部技能路线的原创成图；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《云海钟境》</strong><br />仙侠：外部技能路线的原创成图。</td>
+</tr>
+</table>
+
+[查看逐文件来源、版本、哈希与接受记录](docs/showcase/manifest.json)。这14张证明相应图例已通过用户审阅；没有旧版同题A/B，不能据此宣称量化升级、所有题材稳定成功或视频执行通过。
+
+## 本轮视觉方法更新了什么
+
+视觉与资产模块先确定成像方式和观看命题，再联合设计主体分离、光源及反射、空间尺度、材料差异和细节层次。每包都带自己的画面关系参考，单独复制仍可读取。
+
+- 配色、焦段、光比、浅景深、前景人物和黄金时刻是可选设计，不是万能要求。
+- 摄影写实、三维动画、二维动画/插画采用各自的失败标准；新物、真实塑料和设计发光不被通用负向误杀。
+- 用户只要单图或提示词时，先交付点名结果；真实像素检查、连续视频检查和用户决定分别记录。
+
+这些方法是本项目对用户供图关系分析的原创综合，不声称反推出第三方Skill、模型或未提供的摄影参数。
 
 ## See the Skills in motion
 
-下面是两段真实可播放的本地 3D 预演证据，用来展示“镜头和动作如何被看见并检查”。
+历史预演证据展示了可观看的机位、走位与短动作门，保留原验收范围：
 
 <table>
 <tr>
-<td width="50%" valign="top">
-<a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4"><img src="docs/media/previs-blocking-preview.gif" width="100%" alt="五秒灰模预演，展示摄影机推进、人物走位、切镜、横移跟拍和场景视差" /></a><br />
-<strong>Camera and blocking previs · 5.0 seconds</strong><br />
-摄影机运动、人物位置、切镜和空间视差可直接检查。<a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4">播放原始 MP4</a>。
-</td>
-<td width="50%" valign="top">
-<a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4"><img src="docs/media/rigged-contact-preview.gif" width="100%" alt="二点八秒骨骼动作门，展示双手握持、接触保持和相反方向反作用" /></a><br />
-<strong>Rigged contact action gate · 2.8 seconds</strong><br />
-双手握持、最终接触面、接触保持时间和相反反作用可直接检查。<a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4">播放原始 MP4</a>。
-</td>
+<td width="50%" valign="top"><a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4"><img src="docs/media/previs-blocking-preview.gif" width="100%" alt="5秒基础3D摄影机和走位预演" /></a><br /><strong>基础机位与走位 · 5秒</strong></td>
+<td width="50%" valign="top"><a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4"><img src="docs/media/rigged-contact-preview.gif" width="100%" alt="2.8秒骨骼接触动作门" /></a><br /><strong>骨骼接触动作门 · 2.8秒</strong></td>
 </tr>
 </table>
 
-These are rough 3D previs checkpoints, **not finished AI films**, not external-user adoption, and not proof that the **unpublished local previs executor** ships in this repository. [查看完整媒体证据与哈希边界](docs/media/media-manifest.json)。
+白模执行器现作为源码中的独立实验包列出；这些历史片段证明有限预演与动作门，不证明任意完整打斗、最终AI成片或新的用户接受。[媒体清单](docs/media/media-manifest.json)
 
-## 一个具体差异：镜头标题不再只讲剧情
+[旧5.4.4文字行为案例](examples/storyboard-director-5.4.4-visible-camera-plan.md)和[历史视觉参考墙](docs/style-gallery/manifest.json)仍可查看，保留各自日期与原状态，不与本轮14张接受成图混记。
 
-<img src="docs/assets/storyboard-544-proof.png" width="100%" alt="只有剧情短标题的旧写法与5.4.4可执行摄影方案标题的对比" />
+## 模块和证据边界
 
-Storyboard Director 5.4.4 会直接写出焦段与光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点接力和动作落点，而不是只写“齿轮滑落”一类剧情标题。
+常规包可单独使用；实验硬科幻与白模不进入默认完整套装。已封装的短剧控制器尚未部署，使用前须核对现行5.6交接。外部仙侠没有已核实再分发许可，因此不复制源码、不进ZIP；完整职责见[工作流](docs/WORKFLOW.md)。
 
-这是已经回归验证的文字行为案例；它不代表视频模型已经完全执行，也不代表用户完成了成片审美验收。
+结构有效、宿主实际加载、真实任务输出、媒体检查与用户接受是不同证据。5.6的状态程序不评审美，不替代实际读剧本，也不能强制所有聊天入口执行。费用、账户、工具和发布权限由实际任务与宿主决定。
 
-- [查看完整 8 秒案例](examples/storyboard-director-5.4.4-visible-camera-plan.md)
-- [读取正式运行合同](skills/ai-storyboard-director/SKILL.md)
-- [查看当前证据状态](SKILL_CATALOG.md)
-
-## Explore the visual language
-
-这面参考墙展示 8 个已部署类型 Skill 和 1 个隔离实验 Skill 的可观察视觉重点。图片帮助人理解合同，不代替运行正文和真实项目验收。
-
-<table>
-<tr>
-<td width="33%" valign="top"><a href="docs/skills/en/cyberpunk-design.md"><img src="docs/style-gallery/cyberpunk-design.jpg" width="100%" alt="赛博朋克街道维修场景，包含有来源的霓虹、湿地反射、阶层基础设施和人机接触" /></a><br /><strong><a href="docs/skills/en/cyberpunk-design.md">Cyberpunk</a></strong><br />功能性霓虹、不平等基础设施、潮湿材质反馈与维修劳动。</td>
-<td width="33%" valign="top"><a href="docs/skills/en/epic-design.md"><img src="docs/style-gallery/epic-design.jpg" width="100%" alt="史诗沙漠队伍走向巨型岩石城塞，人物尺度、运动目的与尘光清晰" /></a><br /><strong><a href="docs/skills/en/epic-design.md">Epic</a></strong><br />人物渺小尺度、明确目的地、材料历史与可读运动。</td>
-<td width="33%" valign="top"><a href="docs/skills/en/fantasy-design.md"><img src="docs/style-gallery/fantasy-design.jpg" width="100%" alt="奇幻旅人把紫色晶石放进森林观测池，魔法光源、空间层次与湿旧材质明确" /></a><br /><strong><a href="docs/skills/en/fantasy-design.md">Fantasy</a></strong><br />有来源的魔法光、分层世界空间与潮湿旧材质。</td>
-</tr>
-<tr>
-<td width="33%" valign="top"><a href="docs/skills/en/horror-design.md"><img src="docs/style-gallery/horror-design.jpg" width="100%" alt="克制的医院走廊恐怖画面，手电光、湿脚印证据、负空间与镜面矛盾可读" /></a><br /><strong><a href="docs/skills/en/horror-design.md">Horror</a></strong><br />可读黑暗、局部证据、受控空间与不完整威胁。</td>
-<td width="33%" valign="top"><a href="docs/skills/en/noir-design.md"><img src="docs/style-gallery/noir-design.jpg" width="100%" alt="黑色电影港口办公室，密封信封位于明暗边界，雨窗外有人等待" /></a><br /><strong><a href="docs/skills/en/noir-design.md">Noir</a></strong><br />实景光源、遮挡、道德张力与阴影边界证据。</td>
-<td width="33%" valign="top"><a href="docs/skills/en/romance-design.md"><img src="docs/style-gallery/romance-design.jpg" width="100%" alt="雨天门口的克制爱情画面，两名成年人隔着冷暖光共同触碰修好的雨伞" /></a><br /><strong><a href="docs/skills/en/romance-design.md">Romance</a></strong><br />门槛距离、冷暖分离、共享物件接触与微情绪。</td>
-</tr>
-<tr>
-<td width="33%" valign="top"><a href="docs/skills/en/war-design.md"><img src="docs/style-gallery/war-design.jpg" width="100%" alt="战争撤离场景，担架队、手势、可读路线、废墟地形与身体负荷明确" /></a><br /><strong><a href="docs/skills/en/war-design.md">War</a></strong><br />可读地形、人员协同、身体负荷与局部暖色。</td>
-<td width="33%" valign="top"><a href="docs/skills/en/wuxia-design.md"><img src="docs/style-gallery/wuxia-design.jpg" width="100%" alt="水墨衍生的三维武侠山路，人物动作接地，亭台路径与克制红灯笼清楚" /></a><br /><strong><a href="docs/skills/en/wuxia-design.md">Wuxia</a></strong><br />深层路线几何、接地身体力学、水墨材质与单一强调色。</td>
-<td width="33%" valign="top"><a href="docs/skills/en/hard-sci-fi-visual-director.md"><img src="docs/style-gallery/hard-sci-fi-visual-director.jpg" width="100%" alt="硬科幻月面居住舱门槛交接，压力密封、除尘磨损与人员操作逻辑明确" /></a><br /><strong><a href="docs/skills/en/hard-sci-fi-visual-director.md">Hard Sci-Fi</a></strong><br /><em>Experimental · self-audit only.</em> 物理门槛、材料操作与克制设备。</td>
-</tr>
-</table>
-
-Seven frames were newly designed from the current Skill contracts; **two prior original atlas panels** were reused after an isolated-crop audit. This gallery is **not a claim that the Skill alone generated it** or that a user accepted the aesthetic result. [Inspect `docs/style-gallery/manifest.json`](docs/style-gallery/manifest.json) for provenance, hashes, inventory boundaries, and review state.
-
-## 完整 Skill 地图
-
-| 层级 | Skills | 当前状态 |
-|---|---|---|
-| 故事与导演 | `director-agent` · `ai-storyboard-director` | 已部署 |
-| 资产定义 | `character-asset` · `scene-asset` · `prop-asset` | 已部署 |
-| 类型视觉 | `cyberpunk` · `epic` · `fantasy` · `horror` · `noir` · `romance` · `war` · `wuxia` | 已部署 |
-| 视频生产 | `produce-ai-video` | 已部署 |
-| 短剧编排 | `ai-short-drama-production` | 已封装，尚未部署 |
-| 产品与研究 | `web-design-director` · `d-official-market-analysis` · `d-data-analysis-semantic-layer` | 已部署 |
-| 实验 | `hard-sci-fi-visual-director` | 与正常安装隔离，待用户视觉审阅 |
-
-[打开完整目录、下载链接和逐项证据状态](SKILL_CATALOG.md)
-
-## 安装一个 Skill 或完整工作室
-
-| 只需要一项能力 | 需要完整工作室 |
-|---|---|
-| 从 [Skill 目录](SKILL_CATALOG.md) 选择一项，下载对应 ZIP，或使用安装器只复制该文件夹。 | 下载 [`open-film-skills-complete.zip`](https://github.com/62656456/ai-film-skills/releases/latest/download/open-film-skills-complete.zip)，按故事、资产、视觉、镜头、生产和验收逐阶段使用。 |
-| 每个包都带自身运行引用，不需要保留整个仓库。 | 实验 Skill 不进入正常完整包，避免未批准能力被自动加载。 |
-
-支持的宿主路径和边界：
-
-| 宿主 | 安装方式 |
-|---|---|
-| Codex | `.codex/skills/<name>/` |
-| Claude Code | `.claude/skills/<name>/` 或 `.claude/skills/<name>/` |
-| TRAE | 项目内 `.agents/skills/<name>/` |
-| CodeBuddy | `.codebuddy/skills/<name>/` |
-| WorkBuddy | “添加技能 → 上传技能”导入独立 ZIP |
-| 其他 Agent | 导入 `SKILL.md` 与包内本地引用；不把“能阅读指令”冒充原生发现或工具执行 |
-
-详细路径、产品名核对和宿主限制见 [Agent 兼容说明](docs/COMPATIBILITY.md)。
-
-## 状态和证据怎么读
-
-- **已部署**：当前个人运行包正在使用，不等于已完成三个不同真实任务的稳定验证。
-- **已封装**：结构达到分发要求，但当前没有部署。
-- **实验中**：与正常安装隔离，明确保留未批准或未完成状态。
-- **已淘汰**：故意不收录，不能从旧文件自动恢复。
-- **第三方**：不当成个人原创再次发布。
-
-仓库验证器会检查独立依赖、公开阅读路径、媒体哈希、图库来源、打包边界和文档结构；这些检查仍不能替代真实项目质量、视频模型执行和用户审美判断。
+[20模块目录](SKILL_CATALOG.md) · [40份设计指南](docs/skills/INDEX.md) · [共同审核逻辑](docs/SKILL_DESIGN_SYSTEM.md) · [分发范围](PUBLICATION_SCOPE.md)
 
 ## English overview
 
-Open Film Skills is a public toolkit of 19 independently installable Agent Skills for AI filmmaking. It separates story and directing, reusable assets, genre-specific visual language, executable storyboards, video production, and validation so each stage can be loaded, tested, replaced, and reviewed on its own.
+Open Film Skills provides **20 self-contained modules: 18 regular and 2 experimental**, with 40 English/Simplified Chinese guides. The [full workflow](docs/WORKFLOW.md) covers input, writing, directing, visual language, assets, shots, prompts, optional previs, actual video production, sound, playback review and acceptance. It lists one external xianxia workflow entry without redistributing its source.
 
-- Start with [`director-agent`](docs/skills/en/director-agent.md) to write or repair the story.
-- Use [`ai-storyboard-director`](docs/skills/en/ai-storyboard-director.md) to turn an approved scene into readable shots and a copy-ready generation prompt.
-- Use [`produce-ai-video`](docs/skills/en/produce-ai-video.md) when an approved passage is ready for cost-gated generation, editing, full-playback review, and repair.
-- Browse every module, runtime source, ZIP, and evidence state in the [Skill catalog](SKILL_CATALOG.md).
+Current source uses Storyboard Director 5.6. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The primary showcase contains 14 original images explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
 
-Each package is self-contained inside its stated outcome boundary. Structural validation, host execution, real-task evidence, media quality, and explicit user acceptance remain separate states.
+Start with the [catalog](SKILL_CATALOG.md), [source installation](docs/INSTALLATION.md) or [per-module English guides](docs/skills/INDEX.md).
 
-## 贡献、安全与来源
+## 贡献、来源与许可
 
-- 提交修改前阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
-- 意外密钥或隐私问题通过 [SECURITY.md](SECURITY.md) 报告，不要公开到 Issue。
-- 第三方排除与改编边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
-- 公开发布范围见 [PUBLICATION_SCOPE.md](PUBLICATION_SCOPE.md)。
-- 反馈真实任务结果可使用 [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions)、[GitHub Issues](https://github.com/62656456/ai-film-skills/issues) 或 [反馈模板](docs/FEEDBACK.md)。
+[贡献说明](CONTRIBUTING.md) · [安全反馈](SECURITY.md) · [第三方说明](THIRD_PARTY_NOTICES.md) · [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions) · [Issues](https://github.com/62656456/ai-film-skills/issues)
 
-## License
+本仓库原创Skill、脚本、文档、提示词和明确项目自主生成的示例，在权利人有权许可的范围内按[Apache License 2.0](LICENSE)允许个人与商业使用、修改、集成和再分发；保留适用许可说明、注明文件变更，不要求衍生项目全部开源。本轮14图属于项目原创AI辅助样本，并经人工参与设计、筛选、修订与接受；不承诺AI输出独一无二。新作品仍需遵守实际平台条款与输入素材、肖像、商标等权利，外部仙侠链接不授予其源码许可。
 
-除非文件另有声明，本仓库个人原创内容使用 [Apache License 2.0](LICENSE)。
+[阅读完整原创版权与商用说明](COMMERCIAL_USE.md) · [第三方范围](THIRD_PARTY_NOTICES.md)

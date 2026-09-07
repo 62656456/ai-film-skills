@@ -1,51 +1,55 @@
 <div align="center">
 
-<img src="../../assets/hero.svg" width="100%" alt="Open Film Skills — AI 영화 제작을 위한 스토리, 디자인, 쇼트, 제작 지능" />
-
 # Open Film Skills
 
-**Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy 및 기타 Agent에서 재사용할 수 있는 모듈형 연출 지능.**
+**아이디어와 시나리오에서 연출, 시각 자산, 쇼트, 프롬프트, 영상 제작과 실제 검수까지.**
 
 [English](../../../README.md#english-overview) · [简体中文](../zh-CN/README.md) · [日本語](../ja/README.md) · **한국어**
 
 </div>
 
-## GitHub에서 읽기
+![전체 영상 제작 워크플로](../../assets/workflow-overview.svg)
 
-19개 모듈에는 목적, 설계 원칙, 입력, 워크플로, 되돌림, 리뷰 게이트, 통과 기준, 출력, 경계, Agent 요구사항을 설명하는 개별 페이지가 있습니다. 현재 38개 상세 페이지는 **English와 简体中文으로만** 제공됩니다. 이 한국어 페이지는 저장소 개요이며, 19개 상세 페이지가 한국어로 번역되었다고 주장하지 않습니다.
+[전체 노드·인계·Mermaid 원본](../../WORKFLOW.md) · [사용자가 수락한 14개 이미지](../../../README.md#本轮14张用户接受成图) · [모듈 목록](../../../SKILL_CATALOG.md)
 
-- [English / 简体中文 전체 모듈 색인](../../skills/INDEX.md)
-- [공통 되돌림·리뷰·통과 로직](../../SKILL_DESIGN_SYSTEM.md)
-- [19개 모듈, 런타임 `SKILL.md`, ZIP 비교](../../../SKILL_CATALOG.md)
+## 현재 소스와 기존 릴리스
 
-## 목적에 따라 선택하기
+현재 소스는 **일반 18개＋실험 2개＝20개 모듈**이며, 상세 가이드는English와简体中文으로 총40개입니다. 이 한국어 페이지는 개요이며 20개 상세 가이드의 한국어 번역이 아닙니다.
 
-| 목적 | 설계 가이드 | 런타임 | ZIP |
-|---|---|---|---|
-| 시나리오 작성·수정, 인물 인과관계, 자연스러운 대사 | [`director-agent` (English)](../../skills/en/director-agent.md) | [`SKILL.md`](../../../skills/director-agent/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) |
-| 승인된 시나리오를 쇼트와 생성 프롬프트로 설계 | [`ai-storyboard-director` (English)](../../skills/en/ai-storyboard-director.md) | [`SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) |
-| 캐릭터·장면·소품 참조 자산 정의 | [Asset guides (English)](../../../SKILL_CATALOG.md#asset-definition) | [Runtime index](../../skills/INDEX.md) | [Latest release](https://github.com/62656456/ai-film-skills/releases/latest) |
-| 승인된 소재를 AI 영상으로 제작 | [`produce-ai-video` (English)](../../skills/en/produce-ai-video.md) | [`SKILL.md`](../../../skills/produce-ai-video/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
-| 웹 인터페이스 설계·구현·검토 | [`web-design-director` (English)](../../skills/en/web-design-director.md) | [`SKILL.md`](../../../skills/web-design-director/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
+- 현재Storyboard Director 소스는 **5.6**입니다. 명시된 작품 폴더에서 연출 의도, 선택한 쇼트와 장면 상태를 저장하고 복원합니다.
+- 공개된 **v1.3.0**은 **5.4.4**를 포함한 과거 스냅샷입니다. 소스 변경으로 기존ZIP이 바뀌지는 않습니다.
+- 별도 표시된5.6 단독Preview도 다른 배포물입니다. 이번 소스 갱신은 새 전체 패키지Release가 게시되었다는 뜻이 아닙니다.
 
-이 저장소는 이야기의 인과관계, 인물의 목적, 블로킹, 공간 연속성, 물리적 동작, 조명, 재질, 제작 게이트를 재사용 가능한 실행 계약으로 바꿉니다. 유행어를 쌓은 프롬프트 모음이 아닙니다.
+[소스와ZIP 선택](../../INSTALLATION.md) · [40개 가이드](../../skills/INDEX.md)
 
-각 모듈은 자신이 명시한 결과 범위 안에서 독립적으로 사용할 수 있습니다. 하지만 스타일 모듈이 시나리오까지 작성하거나, 이미지 도구 없이 자산 이미지가 이미 생성되거나, 제작 모듈이 비용·권리·게시 권한을 우회할 수 있다는 뜻은 아닙니다.
+## 필요한 결과로 선택
 
-## 설치
+| 결과 | 모듈 |
+|---|---|
+| 시나리오·대사 수정과 연출 판단 | [director-agent](../../skills/en/director-agent.md) |
+| 카메라, 쇼트, 완전한 생성 프롬프트 | [ai-storyboard-director](../../skills/en/ai-storyboard-director.md) |
+| 인물·공간·소품 참조 | [자산 모듈](../../../SKILL_CATALOG.md#asset-definition) |
+| 장르별 빛·색·구도·재질 | [8개 일반 장르](../../../SKILL_CATALOG.md#genre-visual-language)와[하드SF 실험](../../skills/en/hard-sci-fi-visual-director.md) |
+| 기초3D 카메라·동선 프리뷰 | [whitebox-previs-executor](../../skills/en/whitebox-previs-executor.md), 실험 배포 |
+| 실제 생성·편집·사운드·전체 재생 검수 | [produce-ai-video](../../skills/en/produce-ai-video.md) |
+
+기존 결과가 있으면 해당 단계부터 계속합니다. 외부[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)는 선협 워크플로를 위한 링크이며, 확인된 재배포 허가가 없어 소스나ZIP에 넣지 않습니다. 저장소의 영상 모듈19개＋웹 보조1개에 외부 선협을 더하면 전체 흐름은 영상 역할20개＋웹 보조1개가 됩니다.
+
+## 소스 설치
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
-python scripts/install_skill.py ai-storyboard-director --platform claude-code
+git log -1 --oneline
+python scripts/install_skill.py ai-storyboard-director --platform codex
 ```
 
-동일한 자체 완결형 폴더를 Codex, Claude Code, TRAE, CodeBuddy에 설치할 수 있고 WorkBuddy에서는 ZIP으로 업로드할 수 있습니다. 다른 Agent에서는 `SKILL.md`와 로컬 리소스를 지침으로 가져올 수 있습니다. 지침을 읽을 수 있는 것과 호스트가 Skill을 네이티브로 검색·실행하는 것은 같지 않습니다. 자세한 내용은 [Compatibility](../../COMPATIBILITY.md)와 [Installation](../../INSTALLATION.md)을 참조하세요. `experimental/`은 기본 전체 패키지에 포함되지 않습니다.
+실제로 체크아웃한 버전을 확인하세요. 게시되지 않은 로컬 변경은 공개 기본 브랜치에 포함되지 않습니다. 실험 패키지는 명시적인`--experimental`선택이 필요합니다.[Installation](../../INSTALLATION.md)과[Compatibility](../../COMPATIBILITY.md)를 참고하세요.
 
-표현 구조는 [OmniRoute](https://github.com/diegosouzapw/OmniRoute)의 명확한 탐색, 다국어 진입점, 다이어그램, 빠른 시작, 상태 표시를 참고했지만 브랜드, 이미지, 문구, 코드는 복제하지 않았습니다.
+## 실제 예시와 한계
 
-연락처: [haldissita@gmail.com](mailto:haldissita@gmail.com)
+14개 원본 생성 이미지는 사용자가 명시적으로 수락했습니다. 전체 화면 비율의 미리보기, 원본PNG와 출처·상태는[공개 매니페스트](../../showcase/manifest.json)에 기록됩니다. 이전 버전과 동일 프롬프트A/B 비교를 수행하지 않았으며, 보편적인 성공률이나 영상 품질을 보장하지 않습니다.
 
-## 라이선스
+구도·빛·재질·색은 장면에 맞게 선택합니다. 황금 시간대, 얕은 심도, 네온은 필수가 아닙니다. 화이트박스 프리뷰는 구현된 대상과 개별 검증 동작에 한정되며 임의의 긴 전투를 보장하지 않습니다.5.6 상태 검사는 미적 판단을 대신하지 않습니다.
 
-별도 표기가 없다면 개인 창작 부분은 [Apache License 2.0](../../../LICENSE)을 따릅니다.
+[설계·검수 원칙](../../SKILL_DESIGN_SYSTEM.md) · [공개 범위](../../../PUBLICATION_SCOPE.md) · [Apache License 2.0](../../../LICENSE) · [피드백](https://github.com/62656456/ai-film-skills/issues)

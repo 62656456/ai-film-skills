@@ -5,9 +5,12 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
+from urllib.parse import quote
 
 from repository_safety import package_source_files
+from build_skill_packages import archive_files
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,6 +51,36 @@ def skill_root(item: dict[str, object]) -> Path:
 
 def rel_link(source_page: Path, destination: Path) -> str:
     return Path(os.path.relpath(destination, source_page.parent)).as_posix()
+
+
+def download_link(item: dict[str, object], page: Path, locale: str) -> tuple[str, str]:
+    """Never imply a release asset contains the current working-tree source."""
+    download = item.get("download")
+    if not isinstance(download, dict):
+        raise ValueError(f"{item['name']}: explicit download state is required")
+    note = local(download.get("note"), locale)
+    if download.get("state") == "historical_snapshot":
+        tag = download.get("tag")
+        asset = download.get("asset")
+        if not isinstance(tag, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", tag):
+            raise ValueError(f"{item['name']}: invalid historical release tag")
+        if asset != f"{item['name']}.zip":
+            raise ValueError(f"{item['name']}: historical asset must name this Skill ZIP")
+        url = f"https://github.com/62656456/ai-film-skills/releases/download/{quote(tag)}/{quote(asset)}"
+        label = f"{tag} historical ZIP" if locale == "en" else f"{tag} 历史 ZIP"
+    elif download.get("state") == "source_only":
+        raw = download.get("source_install")
+        if not isinstance(raw, str) or not raw:
+            raise ValueError(f"{item['name']}: source-only package needs installation instructions")
+        relative, separator, anchor = raw.partition("#")
+        destination = (ROOT / relative).resolve()
+        if Path(relative).is_absolute() or not destination.is_relative_to(ROOT.resolve()):
+            raise ValueError(f"{item['name']}: source installation link escapes repository")
+        url = rel_link(page, destination) + (f"#{anchor}" if separator else "")
+        label = "Install current source" if locale == "en" else "安装当前源码"
+    else:
+        raise ValueError(f"{item['name']}: unknown download state")
+    return f"[{label}]({url})", note
 
 
 def resources(page: Path, skill: Path, locale: str) -> list[str]:
@@ -93,6 +126,15 @@ def resources(page: Path, skill: Path, locale: str) -> list[str]:
             label = path.relative_to(skill).as_posix()
             lines.append(f"- [`{label}`]({rel_link(page, path)})")
         lines.append("")
+    archive_entries, notices = archive_files(skill)
+    inherited = {notice["path"] for notice in notices if notice["source"] == "repository_default"}
+    if inherited:
+        title = "Distribution notices in new ZIP builds" if locale == "en" else "新构建 ZIP 的分发许可文件"
+        note = ("New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged."
+                if locale == "en" else "新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。")
+        lines.extend([f"**{title}**", "", note, ""])
+        lines.extend(f"- [`{relative}`]({rel_link(page, source)})" for source, relative in archive_entries if relative in inherited)
+        lines.append("")
     return lines
 
 
@@ -128,14 +170,14 @@ def guide(data: dict[str, object], item: dict[str, object], locale: str) -> str:
     headings = HEADINGS[locale]
     status = local(item["status_label"], locale)
     runtime = skill / "SKILL.md"
-    zip_url = f"https://github.com/62656456/ai-film-skills/releases/latest/download/{name}.zip"
+    download, download_note = download_link(item, page, locale)
     common_system = rel_link(page, ROOT / "docs" / "SKILL_DESIGN_SYSTEM.md")
     install = rel_link(page, ROOT / "docs" / "INSTALLATION.md")
     compatibility = rel_link(page, ROOT / "docs" / "COMPATIBILITY.md")
 
     if locale == "en":
         summary_labels = ("Status", "Can deliver alone", "Cannot claim alone")
-        links = f"[Runtime `SKILL.md`]({rel_link(page, runtime)}) · [Standalone ZIP]({zip_url}) · [Install]({install}) · [Compatibility]({compatibility}) · [Design system]({common_system})"
+        links = f"[Runtime `SKILL.md`]({rel_link(page, runtime)}) · {download} · [Install]({install}) · [Compatibility]({compatibility}) · [Design system]({common_system})"
         status_note = "A pass below means this module's stated gates were met. Structural validity, real-task evidence, and user acceptance remain separate states."
         standalone_intro = "Use this module by itself when the requested result stays inside the following boundary:"
         cross_agent = [
@@ -146,7 +188,7 @@ def guide(data: dict[str, object], item: dict[str, object], locale: str) -> str:
         ]
     else:
         summary_labels = ("状态", "单独可交付", "单独不能声称")
-        links = f"[运行正文 `SKILL.md`]({rel_link(page, runtime)}) · [独立 ZIP]({zip_url}) · [安装说明]({install}) · [兼容说明]({compatibility}) · [设计总则]({common_system})"
+        links = f"[运行正文 `SKILL.md`]({rel_link(page, runtime)}) · {download} · [安装说明]({install}) · [兼容说明]({compatibility}) · [设计总则]({common_system})"
         status_note = "下方“通过”只表示本模块规定的审核门已通过；结构有效、真实任务证据和用户接受必须分开记录。"
         standalone_intro = "当点名结果落在以下边界内时，可以只拿这一个模块使用："
         cross_agent = [
@@ -165,6 +207,8 @@ def guide(data: dict[str, object], item: dict[str, object], locale: str) -> str:
         f"| {summary_labels[2]} | {local(item['cannot'], locale)} |",
         "",
         links,
+        "",
+        download_note,
         "",
         "<!-- contract:purpose -->", f"## 1. {headings[0]}", "", local(item["purpose"], locale), "",
         "<!-- contract:principles -->", f"## 2. {headings[1]}", "", *bullets(contract["principles"], locale), "",

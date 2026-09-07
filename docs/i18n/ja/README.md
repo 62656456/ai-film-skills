@@ -1,51 +1,55 @@
 <div align="center">
 
-<img src="../../assets/hero.svg" width="100%" alt="Open Film Skills — AI映像制作のためのストーリー、デザイン、ショット、制作知能" />
-
 # Open Film Skills
 
-**Codex、Claude Code、TRAE、CodeBuddy、WorkBuddy、その他のAgentで再利用できるモジュール型の演出知能。**
+**アイデアと脚本から、演出、ビジュアル資産、ショット、プロンプト、映像制作、確認まで。**
 
 [English](../../../README.md#english-overview) · [简体中文](../zh-CN/README.md) · **日本語** · [한국어](../ko/README.md)
 
 </div>
 
-## GitHubで読む
+![映像制作の全体ワークフロー](../../assets/workflow-overview.svg)
 
-20個のモジュールには、目的、設計原則、入力、ワークフロー、差し戻し、レビューゲート、合格条件、出力、境界、Agent要件を説明する個別ページがあります。現在、全40ページの詳細版は **English と简体中文のみ** です。この日本語ページはリポジトリ概要であり、20個の詳細ページが日本語化済みだとは主張しません。
+[全ノード・受け渡し・Mermaid原図](../../WORKFLOW.md) · [承認済み14画像](../../../README.md#本轮14张用户接受成图) · [モジュール一覧](../../../SKILL_CATALOG.md)
 
-- [English / 简体中文 の全モジュール索引](../../skills/INDEX.md)
-- [共通の差し戻し・レビュー・合格ロジック](../../SKILL_DESIGN_SYSTEM.md)
-- [19モジュール、実行用 `SKILL.md`、ZIP の比較](../../../SKILL_CATALOG.md)
+## 現在のソースと公開済みアーカイブ
 
-## 目的から選ぶ
+現在のソースには **通常18＋実験2＝20モジュール** があり、詳細ガイドはEnglishと简体中文の計40ページです。この日本語ページは概要であり、20の詳細ガイドの日本語訳ではありません。
 
-| 目的 | 設計ガイド | 実行用ファイル | ZIP |
-|---|---|---|---|
-| 脚本の作成・修正、人物因果、自然な台詞 | [`director-agent` (English)](../../skills/en/director-agent.md) | [`SKILL.md`](../../../skills/director-agent/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) |
-| 承認済み脚本からショットと生成プロンプトを設計 | [`ai-storyboard-director` (English)](../../skills/en/ai-storyboard-director.md) | [`SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) |
-| キャラクター・シーン・小道具の参照資産を定義 | [Asset guides (English)](../../../SKILL_CATALOG.md#asset-definition) | [Runtime index](../../skills/INDEX.md) | [Latest release](https://github.com/62656456/ai-film-skills/releases/latest) |
-| 承認済み素材をAI映像として制作 | [`produce-ai-video` (English)](../../skills/en/produce-ai-video.md) | [`SKILL.md`](../../../skills/produce-ai-video/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
-| Web UIを設計・実装・監査 | [`web-design-director` (English)](../../skills/en/web-design-director.md) | [`SKILL.md`](../../../skills/web-design-director/SKILL.md) | [Download](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
+- 現在のStoryboard Directorソースは **5.6**。明示された作品ディレクトリ内で演出意図、選択ショット、場面状態を保存・復元します。
+- 公開済み **v1.3.0** は **5.4.4** を含む過去のスナップショットです。ソース更新で既存ZIPは変わりません。
+- 別途ラベル付けされた5.6単体Previewも独立した配布物です。この更新は新しい完全版Releaseの公開を意味しません。
 
-本リポジトリは、物語の因果、人物の目的、ブロッキング、空間連続性、物理的な動作、光、素材、制作ゲートを再利用可能な実行契約へ変換します。単なる流行語のプロンプト集ではありません。
+[ソースとZIPの選び方](../../INSTALLATION.md) · [40ガイド](../../skills/INDEX.md)
 
-各モジュールは、自らが明示した成果の範囲内で単独利用できます。ただし、スタイルモジュールが脚本まで書く、画像ツールなしで資産画像が生成済みになる、制作モジュールが費用・権利・公開権限を回避できる、という意味ではありません。
+## 必要な成果から選ぶ
 
-## インストール
+| 成果 | モジュール |
+|---|---|
+| 脚本・台詞の修正、演出判断 | [director-agent](../../skills/en/director-agent.md) |
+| カメラ、ショット、完全な生成プロンプト | [ai-storyboard-director](../../skills/en/ai-storyboard-director.md) |
+| キャラクター・場所・小道具 | [資産モジュール](../../../SKILL_CATALOG.md#asset-definition) |
+| ジャンルの光・色・構図・素材 | [8通常ジャンル](../../../SKILL_CATALOG.md#genre-visual-language)と[ハードSF実験](../../skills/en/hard-sci-fi-visual-director.md) |
+| 基礎的な3Dカメラ・動線プレビュー | [whitebox-previs-executor](../../skills/en/whitebox-previs-executor.md)、実験配布 |
+| 実際の生成・編集・音・全編確認 | [produce-ai-video](../../skills/en/produce-ai-video.md) |
+
+既存の素材があれば該当段階から続けます。外部の[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)は仙侠ワークフロー用のリンクのみで、再配布許可が確認できないためソースやZIPには含めません。リポジトリの19映像モジュール＋Web補助1に外部仙侠を加えると、全体図は映像20の役割＋Web補助1になります。
+
+## ソースからインストール
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
-python scripts/install_skill.py ai-storyboard-director --platform claude-code
+git log -1 --oneline
+python scripts/install_skill.py ai-storyboard-director --platform codex
 ```
 
-同じ自己完結型フォルダーを Codex、Claude Code、TRAE、CodeBuddy に配置でき、WorkBuddy ではZIPをアップロードできます。その他のAgentでは `SKILL.md` とローカルリソースを指示として読み込めます。指示を読めることと、ホストがSkillをネイティブに検出・実行できることは同じではありません。詳細は [Compatibility](../../COMPATIBILITY.md) と [Installation](../../INSTALLATION.md) を参照してください。`experimental/` は既定の完全版に含まれません。
+実際にチェックアウトした版を確認してください。未公開のローカル変更は公開ブランチには含まれません。実験パッケージは明示的な`--experimental`が必要です。[Installation](../../INSTALLATION.md)と[Compatibility](../../COMPATIBILITY.md)を参照してください。
 
-表示設計は [OmniRoute](https://github.com/diegosouzapw/OmniRoute) の明確なナビゲーション、多言語入口、図解、クイックスタート、状態表示を参考にしていますが、ブランド、画像、文章、コードは複製していません。
+## 実例と限界
 
-連絡先: [haldissita@gmail.com](mailto:haldissita@gmail.com)
+14枚のオリジナル生成画像はユーザーが明示的に承認しています。全画角のプレビューと原PNG、出所と状態を[公開マニフェスト](../../showcase/manifest.json)で確認できます。旧版との同一プロンプトA/B比較は実施しておらず、一般的な成功率や動画品質を保証しません。
 
-## ライセンス
+構図、光、素材、色は場面ごとに選択し、夕景、浅い被写界深度、ネオンを必須にはしません。白箱プレビューは実装済みの主体と個別に合格した動作に限られ、任意の長い格闘を保証しません。5.6の状態チェックは美的判断の代わりにはなりません。
 
-特記がない限り、個人制作部分は [Apache License 2.0](../../../LICENSE) です。
+[設計・確認原則](../../SKILL_DESIGN_SYSTEM.md) · [公開範囲](../../../PUBLICATION_SCOPE.md) · [Apache License 2.0](../../../LICENSE) · [フィードバック](https://github.com/62656456/ai-film-skills/issues)

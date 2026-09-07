@@ -16,6 +16,14 @@ A search-result snippet, model memory, second-hand summary, or unopened citation
 
 An approved, versioned evidence card may be reused for later shots in the same locked world while its assumptions, scope, and source currency remain valid. Research again when the script introduces a new mechanism, environment, body, interface, system route, or contradiction.
 
+## Prior-example firewall
+
+Earlier images, prompts, concept groups, validation batches, and user examples are not hidden route menus. Unless explicitly approved/locked, record only:
+
+`problem the example solved → effective relationship mechanism → why it worked → transferable upper-level rule → literal traits to delete`
+
+Do not transfer the example's count, order, name, scene, faction, environment, body proportion, limb plan, weapon location, palette, pose, composition, camera, or light setup. For combat-mecha work, named animation, model-kit, collectible, live-action, or industrial references may separately inform character readability, construction hierarchy, second silhouette, mass, human touch, or engineering mechanism; never combine recognizable parts as a collage or pass brand names into the image prompt.
+
 ## Research question card
 
 Start with:
@@ -154,3 +162,4 @@ Reject or revise if any applicable answer is no:
 9. For amplitude II–III, do at least three visible consequences follow from one paid rule without a hidden second miracle?
 10. Does the final design avoid recognizable source/franchise form and pass the applicable substitution test?
 11. Are unapproved results still labeled provisional or candidate?
+12. Would a new task with a different combat responsibility, world, body, and light still collapse back to an earlier example group's count, scene order, silhouette, palette, pose, or composition? If yes, sample leakage occurred; re-abstract the capability before design or generation.

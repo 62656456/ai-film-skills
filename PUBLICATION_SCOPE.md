@@ -1,43 +1,42 @@
 # Publication scope
 
-## Included
+## Current source inventory
 
-- 18 packaged, personally authored Skills in `skills/`;
-- 2 isolated experimental Skills in `experimental/`;
-- the runtime references, scripts, metadata, and rollback evidence carried inside each standalone Skill folder;
-- 40 GitHub-readable module design guides: 20 English and 20 Simplified Chinese pages;
-- the shared human-readable design system, reviewed bilingual contract registry, guide generator, documentation validator, and repository validator;
-- original repository documentation, diagrams, installation tooling, release packaging, and CI workflows.
+The current source tree contains **18 regular packages and 2 opt-in experimental packages: 20 modules, with 40 generated English / Simplified Chinese guides**. The regular complete-studio archive includes only the 18 packages under `skills/`. Individual builds additionally include the two packages under `experimental/`.
 
-The human-readable guides explain purpose, principles, standalone scope, inputs, workflow, directed return paths, review gates, pass evidence, outputs, boundaries, host requirements, and every packaged file. They do not replace the linked runtime `SKILL.md` or upgrade a module's evidence status.
+The 20 repository modules comprise 19 filmmaking modules and one web-interface helper. The [complete workflow](docs/WORKFLOW.md) also lists the external `xianxia-visual-director`, giving 20 filmmaking responsibilities plus one web helper. The external entry does not increase repository package or guide counts.
 
-## Intentionally excluded
+Included material consists of authored Skill instructions and local runtime resources, public documentation and diagrams, build/install/validation tooling, and authorized original demonstration media. Human guides explain each module; runtime authority remains its `SKILL.md` and package-local resources.
 
-- `sci-fi-design`: retired by its owner and not restored from history;
-- `xianxia-visual-director`: installed from an external source without a verified redistribution license;
-- `frontend-design`: third-party Apache-2.0 Skill used only as a design-quality reference, not republished as original work;
-- system Skills, Lark Skills, plugin Skills, company work, client work, personal projects, private validation logs, personal retrospectives, credentials, private contact records, local runtime state, and caches;
-- third-party images, course copies, film stills, screenshots, or other media without a verified right to redistribute.
+Personal and commercial permissions for original and clearly owner-generated content are explained in [Commercial use and copyright](COMMERCIAL_USE.md). That explanation preserves the existing Apache 2.0 LICENSE and does not grant rights to excluded external source or clear arbitrary inputs. Third-party file notices retain their own scope.
 
-`hard-sci-fi-visual-director` is present only under `experimental/`. It is not part of the normal installation command and must not be described as approved or deployed.
+## Source, release, and preview
 
-The former `ai-storyboard-director-motion-lab` package is retired. Its useful complex-camera rules were integrated into the single formal `ai-storyboard-director` 5.4.4 entry; the obsolete second entry is not published or installable.
+- Current `skills/ai-storyboard-director/` source is 5.6, selected for daily use by the maintainer's user.
+- Public Release **v1.3.0** is a historical distribution snapshot containing Storyboard Director **5.4.4** and the older inventory. Its ZIPs are not rewritten by a source update.
+- The separately labeled 5.6 standalone Preview remains a distinct artifact. Its label does not rename the current source entry or imply a new complete-studio Release.
+- This documentation update does not by itself publish a new Release. Read the actual source ref and archive manifest before installation.
 
-## Language scope
+`hard-sci-fi-visual-director` and `whitebox-previs-executor` stay under `experimental/` and outside default complete-studio installation. Experimental distribution is not a denial of recorded successful examples: hard-science-fiction has user-accepted images, while previs has bounded camera/blocking and contact-gate evidence. Neither establishes universal reliability or arbitrary complete-fight support.
 
-- Repository entry pages: English, Simplified Chinese, Japanese, and Korean.
-- Full per-module design guides: English and Simplified Chinese only.
-- The Japanese and Korean entry pages disclose this boundary and must not imply that all 19 detailed guides have been translated into those languages.
+## Authorized public media
 
-## Status rule
+The primary [showcase](docs/showcase/manifest.json) contains 14 original generated images that the user explicitly accepted. Their full aspect ratios are preserved. The public manifest records provenance, versions and review boundaries without copying private task histories or local runtime paths.
 
-Structural validation proves that a Skill can be loaded and inspected. It does not prove host execution, real-task quality, or user acceptance. A Skill should be called practice-validated only after accepted results across three different real tasks with evidence.
+The older [style gallery](docs/style-gallery/manifest.json) and [previs evidence](docs/media/media-manifest.json) remain historical records with their own original status. They are not silently reclassified as part of the 14 accepted images. No old-version same-prompt A/B comparison was performed; do not claim a measured before/after improvement.
 
-The public evidence ladder remains:
+## Excluded
 
-1. structurally valid;
-2. loadable or runnable in a compatible host;
-3. task-validated with real evidence;
-4. explicitly user-accepted.
+- `sci-fi-design`: retired and not restored.
+- [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director): external upstream whose README does not grant verified redistribution permission; link only, no copied source or ZIP.
+- Third-party reference images, course material, film stills or screenshots without verified redistribution rights.
+- System, connector and plugin Skills outside this authored project; private projects, client work, local runtime state, credentials, private reviews and caches.
+- Third-party `frontend-design` source: not republished as original work.
 
-Generated documentation, packaging, a successful CI run, a generated file, or an internal review cannot promote a lower state to a higher one.
+The former separate storyboard motion-lab entry remains retired. Its useful camera-design concepts belong in the single storyboard entry, not a second automatically loaded Skill.
+
+## Languages and evidence
+
+Repository entry pages exist in English, Simplified Chinese, Japanese and Korean. All 20 per-module guides are available in English and Simplified Chinese, 40 pages total; Japanese and Korean are overview pages only.
+
+Structural validity, successful loading, actual task results, media review and explicit user acceptance are separate evidence. Three different accepted real tasks are needed before the maintainer labels a Skill practice-validated. Packaging, CI, file creation and internal review cannot manufacture that state. Accepted images remain accepted examples; they do not prove stable output across all models or hosts.

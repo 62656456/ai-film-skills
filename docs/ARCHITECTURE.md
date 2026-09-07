@@ -1,72 +1,50 @@
 # Architecture
 
+[Complete input-to-film workflow](WORKFLOW.md) · [Module catalog](../SKILL_CATALOG.md) · [Design and review system](SKILL_DESIGN_SYSTEM.md)
+
 ## Repository layers
 
 ```text
-skills/
-  <skill-name>/
-    SKILL.md                 required agent instructions
-    agents/openai.yaml       UI metadata
-    references/              selectively loaded knowledge
-    scripts/                 deterministic helpers, when needed
-    assets/                  output resources, when needed
-
-experimental/
-  <skill-name>/              isolated, never installed by default
-docs/
-  SKILL_DESIGN_SYSTEM.md     shared human-readable design and review logic
-  skill-contracts.json       reviewed bilingual contract registry
-  skills/INDEX.md            GitHub reading index for all 19 modules
-  skills/en/                 19 generated English design guides
-  skills/zh-CN/              19 generated Simplified Chinese design guides
-  i18n/                      translated repository entry points
-scripts/
-  generate_skill_guides.py   deterministic design-guide generator
-  validate_skill_docs.py     guide, source-link, and status validator
-  validate_repository.py     portable repository validator
+skills/<name>/                18 regular, self-contained packages
+experimental/<name>/          2 opt-in packages; excluded from the complete-studio ZIP
+docs/skill-contracts.json      reviewed bilingual documentation and inventory contract
+docs/skills/en/               20 generated English guides
+docs/skills/zh-CN/            20 generated Simplified Chinese guides
+docs/WORKFLOW.md               complete workflow, handoffs and 20 film + 1 web responsibilities
+docs/assets/production-workflow.mmd  editable full workflow source
+docs/showcase/manifest.json    14 accepted original images and explicit evidence state
+docs/i18n/                    translated entry pages
+scripts/                      install, packaging, guide generation and validation
 ```
 
-Each Skill carries its own runtime references. A shared `skills/references/` directory is deliberately forbidden because it would break standalone downloads.
+Each package contains its own `SKILL.md`, necessary `references/`, and optional `scripts/`, `assets/` or `agents/openai.yaml`. No sibling Skill, private path or shared runtime directory is needed to read its bounded contract. Media generation still depends on host tools and permissions.
 
-## GitHub reading layer
+## Runtime and human documentation
 
-The runtime and reading layers have different jobs:
+| Layer | Authority and role |
+|---|---|
+| `SKILL.md` and package-local files | Runtime instructions for the named outcome |
+| `docs/skill-contracts.json` | Reviewed bilingual guide content and expected package inventory |
+| Generated `docs/skills/` pages | Human explanations, exact source links and package boundaries |
+| `docs/WORKFLOW.md` | Optional orchestration and explicit handoffs; not a new runtime super-Skill |
+| Showcase manifest | File-level public examples and recorded acceptance, not generalized success rates |
 
-| Layer | Authority | Purpose |
-|---|---|---|
-| `SKILL.md` plus local resources | Canonical runtime instruction | Tells a compatible Agent how to perform the bounded task |
-| `docs/skill-contracts.json` | Reviewed human-documentation source | Records the bilingual purpose, principles, inputs, workflow, return paths, gates, outputs, boundaries, status, and host requirements |
-| `docs/skills/{en,zh-CN}/` | Generated reading layer | Lets a person understand and compare every module directly on GitHub |
-| `docs/SKILL_DESIGN_SYSTEM.md` | Shared design explanation | Defines the common directed-return loop and separates structural, runtime, real-task, and user-acceptance states |
+Edit runtime instructions and the reviewed contract where needed, then regenerate 40 guides with `scripts/generate_skill_guides.py`. The generated pages are not an independently edited authority.
 
-The generated pages explain the runtime contract; they do not replace it. Every page links the exact `SKILL.md`, every packaged reference or helper, the standalone ZIP, installation instructions, and Agent compatibility guidance. Edit the reviewed contract registry or runtime source, regenerate the 38 pages, then run both validators; do not hand-edit generated guides as an independent source of truth.
+## Authority follows the deliverable
 
-## Runtime route
+The current request selects one primary Skill. The Skill establishes its inputs, produces the requested artifact and applies its own review gates. A second Skill is useful only when it consumes a named handoff and delivers a different necessary result. Failure returns to the earliest responsible decision while preserving approved facts.
 
-```text
-user request
-    ↓ semantic trigger
-one primary Skill
-    ↓ verify required input and authority
-visible, judgeable draft
-    ↓ module-specific review gates
-fail ──→ return to the earliest broken decision and preserve approved constraints
-pass ──→ record evidence and produce the named output
-    ↓ explicit handoff only when needed
-second Skill with a different output contract
-```
+The director owns story and interpretation. Asset contracts own approved appearance and state. Genre modules supply observable visual choices. Storyboard 5.6 designs camera and timing and, inside an explicitly identified work directory, saves and restores the decisions in `.director_design`. Those records do not replace the project's overall state or new user instructions. The helper checks recorded versions, inheritance, timing and explicit geometry; it does not score aesthetics or make every chat invocation unavoidable.
 
-Skills do not share authority merely because they are stored together. Story decisions belong to the directing layer; asset definitions belong to asset Skills; genre Skills supply observable visual parameters; production Skills cannot spend money or publish without the required approval gates.
+Production consumes approved material and actual model/tool capability. Whitebox previs is optional and limited to implemented proxies and passed action gates. Market analysis supplies evidence; semantic writing requires its own explicit approval and target.
 
-## Version and evidence states
+## Counting and distribution
 
-Structure, deployment, real-task evidence, and user acceptance are recorded separately. A valid folder can load while still producing poor work. An experimental package can contain substantial research while remaining unapproved. Repository labels must preserve those distinctions.
+The 20 repository modules are 19 filmmaking modules plus `web-design-director`. An external xianxia link adds one workflow responsibility, not a bundled module. Thus the complete workflow shows 20 filmmaking responsibilities plus one web helper, while the repository still builds 18 regular and 2 experimental packages.
 
-The common evidence ladder is:
+Current source, old published archives and standalone Preview artifacts have different refs. Source Storyboard Director is 5.6; Release v1.3.0 preserves 5.4.4. See [Installation](INSTALLATION.md) before choosing a distribution.
 
-1. structurally valid;
-2. loadable or runnable in a compatible host;
-3. validated on a real task with evidence;
-4. explicitly accepted by the user.
+## Evidence
 
-A lower state must never be promoted to a higher state by documentation, packaging, generation, or internal review alone. Read [How every Skill is designed](SKILL_DESIGN_SYSTEM.md) and [all module design guides](skills/INDEX.md) for the complete public contract.
+File validity, loading, recorded behavior, viewed output and user acceptance are distinct. The 14 current showcase images were accepted; the historical gallery and previs clips retain their original evidence labels. None of these records proves an arbitrary complete film, identical output across hosts or a same-prompt old/new comparison.

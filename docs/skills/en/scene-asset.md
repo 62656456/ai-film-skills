@@ -5,7 +5,9 @@
 | Can deliver alone | A scene reference task, spatial anchor and reverse-view plan, lighting/material rules, and JSON contract. |
 | Cannot claim alone | It does not decide story blocking or prove that generated scene images are spatially consistent without inspection. |
 
-[Runtime `SKILL.md`](../../../skills/scene-asset/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/scene-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/scene-asset/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/scene-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -18,6 +20,7 @@ Define a reusable environment through layout, entrances, exits, landmarks, scale
 - Establish an auditable, versioned asset identity before storyboard or video production.
 - Platform adaptation may change syntax, never approved `locked_features` or state history.
 - A static asset contract separates identity, allowed state changes, materials, geometry, lighting, and downstream references.
+- Derive attention, separation, source-based lighting, scale and detail hierarchy together. Single-image requests do not become mandatory contact sheets; new plastic and designed emission remain valid when specified.
 - A scene is a navigable world model, not one attractive angle; reverse views must derive from the same layout.
 
 <!-- contract:standalone -->
@@ -39,11 +42,12 @@ A scene reference task, spatial anchor and reverse-view plan, lighting/material 
 <!-- contract:workflow -->
 ## 5. Workflow
 
-1. Extract required dimensions and mark missing facts instead of inventing them.
-2. Lock identity, geometry, materials, physical behavior, lighting, and state rules.
-3. Choose the necessary views or state plates and compile a platform-aware generation task.
-4. Run the module checklist and create the machine-readable asset contract.
-5. Mark failures `rework`; only human-reviewed assets may enter `assets_approved` and downstream shots.
+1. Choose prompt-only, actual-image or scoped-diagnosis delivery and photographic, 3D-animation or 2D/illustration imaging before using a template.
+2. Extract required dimensions and mark missing facts instead of inventing them.
+3. Lock identity, geometry, materials, physical behavior, lighting, and state rules.
+4. Choose the necessary views or state plates and compile a platform-aware generation task.
+5. Run the module checklist and create the machine-readable asset contract.
+6. For text-only delivery, pixel checks remain not_evaluated. Actual image failures are rework; only explicit human review can approve an asset.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -98,4 +102,11 @@ A scene reference task, spatial anchor and reverse-view plan, lighting/material 
 
 **References**
 
+- [`references/cinematic-image-direction.md`](../../../skills/scene-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/scene-asset/references/NEGATIVE-CASE-BOOK.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

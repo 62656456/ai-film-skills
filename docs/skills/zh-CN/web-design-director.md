@@ -5,7 +5,9 @@
 | 单独可交付 | 完整界面方向或审查；有代码与浏览器能力时，可交付经验证的实现切片。 |
 | 单独不能声称 | 没有真实渲染和交互审核时，不能声称视觉实现或用户接受通过。 |
 
-[运行正文 `SKILL.md`](../../../skills/web-design-director/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/web-design-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/web-design-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0历史快照；已更新模块与当前源码不同。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -99,3 +101,9 @@
 - [`references/creative-direction.md`](../../../skills/web-design-director/references/creative-direction.md)
 - [`references/design-rubric.md`](../../../skills/web-design-director/references/design-rubric.md)
 - [`references/web-quality-checklist.md`](../../../skills/web-design-director/references/web-quality-checklist.md)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

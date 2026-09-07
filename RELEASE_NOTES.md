@@ -1,5 +1,22 @@
 # Release notes
 
+## Unreleased source refresh — 2026-09-07
+
+This section describes the current source changes. It is **not a claim that a new GitHub Release or updated release ZIP has been published**. Public v1.3.0 remains the historical 5.4.4 snapshot; the separately labeled 5.6 standalone Preview is a different artifact.
+
+- Current single-entry Storyboard Director source is 5.6, selected for daily use, with project-local director-intent/shot/state persistence, recovery, explicit geometry checks and preservation of selected camera design during prompt compilation.
+- Retain the director-agent trust, scoped-routing and honest cold-read changes, including conditional AI-executable script compilation separate from the readable master.
+- Add package-local image-relationship direction to the visual and asset modules: attention, subject separation, source-based light, material response, scale and detail hierarchy. Preserve photographic, 3D-animation and 2D/illustration modes, single-image scope, new plastic and designed emission.
+- Refresh hard-science-fiction visual derivation and original machine-form guidance while retaining its opt-in experimental distribution.
+- Add `whitebox-previs-executor` as a second isolated experiment. Its camera/basic-blocking and individually qualified action evidence does not establish arbitrary actors or complete untested fights.
+- Current inventory is 18 regular and 2 experimental packages, with 20 English and 20 Simplified Chinese guides. The complete-studio archive excludes both experiments.
+- Document the full input-to-script/director/visual/assets/storyboard/prompt/video/review workflow, including 5.6 save/recovery, optional previs and explicit return paths.
+- Link external `xianxia-visual-director` for workflow completeness without copying its source or including it in any ZIP; no verified redistribution license is available.
+- Present 14 original images explicitly accepted by the user, preserving their full aspect ratio and separating them from the older historical gallery. There is no old-version same-prompt A/B experiment, so no quantified before/after improvement or universal success rate is claimed.
+- Distinguish current source installation from pinned historical release archives and a separate Preview in the catalog, generated guides and installation pages.
+
+Validation, source synchronization, actual media inspection, accepted examples, Git push and Release publication remain separate evidence. The prior release notes below are historical snapshots; their module counts and version descriptions are not the current source inventory.
+
 ## v1.3.0 — 2026-09-01
 
 Single-entry storyboard 5.4.4 and standalone-package completion.

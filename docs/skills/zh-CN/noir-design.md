@@ -5,7 +5,9 @@
 | 单独可交付 | 黑色 `style_route`、场景与光影参数、负向约束和 QC 合同。 |
 | 单独不能声称 | 不等于蓝黑滤镜、无来源烟雾、乱向百叶阴影或夸张荷兰角。 |
 
-[运行正文 `SKILL.md`](../../../skills/noir-design/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/noir-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/noir-design/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/noir-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0历史快照；已更新模块与当前源码不同。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -18,6 +20,7 @@
 - 把类型感翻译成可观察的镜头、色彩、空间、动作、材质、声音和连续性参数。
 - 类型参数服务已批准的故事和资产，不改写它们。
 - 导演名和色值只是来源或起点，不是模仿命令或普适定律。
+- 黄金时刻、互补色、浅景深、前景人物、固定焦段和磨损都是可选设计，不是通用质量条件。
 
 <!-- contract:standalone -->
 ## 3. 适合单独使用的范围
@@ -31,16 +34,16 @@
 <!-- contract:inputs -->
 ## 4. 输入
 
-- 类型要求、场景功能、时长、主体、批准的 Cxx/Sxx/Pxx 资产和已知目标平台。
+- 类型、目标媒介、场景功能、主体、锁定要求及相关资产；仅当前交付需要时读取时长和平台字段。
 - 已有导演、调度、布光、连续性和尾帧决定。
 - 缺失字段保持开放，不能用“电影感”等空词补全。
 
 <!-- contract:workflow -->
 ## 5. 流程逻辑
 
-1. 加载类型镜头与构图路线。
+1. 先读包内电影画面关系判断，选择成像媒介，建立可见命题和注意力层次，再选预设。
 2. 推导有功能的色彩、光源、空间结构和场景参数。
-3. 挂接动作、材质、物理交互、声音、连续性和批准资产编号。
+3. 补材质、接触和状态连续性；仅视频加入运镜、时间和声音，保留已有批准资产。
 4. 编译数字10信息和平台转译，不改变上游决定。
 5. 执行共享与类型专项审核，输出 `ready_for_prompt` 或具体字段的 `rework`。
 
@@ -54,7 +57,7 @@
 <!-- contract:review -->
 ## 7. 审核门
 
-- [ ] 镜头、色彩、光源、空间锚点、资产编号、动作因果、材质交互、声音和尾帧齐全且一致。
+- [ ] 当前媒介必需字段相互一致：构图、功能色彩、有来源光、空间、主体材质关系和状态；视频才补运动与声音。
 - [ ] 共享假电影感检查会拦截空质量词、无动机运镜、无源光、装饰性色彩和不稳定道具/空间。
 - [ ] 类型专项负向只针对高概率失败，不压制剧情允许的色彩、尺度、静止或运动。
 - [ ] 实用光与阴影方向一致，暗部可读，遮挡与反差承担信息或权力功能。
@@ -78,6 +81,8 @@
 
 - 不写剧本、不替代导演判断、不修改批准资产外观。
 - 不宣称普适类型配色、不模仿在世创作者，也不宣称生成成功。
+- 新增画面关系参考是作者对所供图片分析的综合；14张接受成图不证明他方Skill内部方法、稳定成功率或旧新版同题A/B提升。
+- 用户已接受本轮该类型代表图，见docs/showcase/manifest.json；这是图例级结果，不是通用成功保证。
 
 <!-- contract:agents -->
 ## 11. 跨 Agent 使用
@@ -97,6 +102,13 @@
 
 **引用资料**
 
+- [`references/cinematic-image-direction.md`](../../../skills/noir-design/references/cinematic-image-direction.md)
 - [`references/COMMON-12-SECTION-PROTOCOL.md`](../../../skills/noir-design/references/COMMON-12-SECTION-PROTOCOL.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/noir-design/references/NEGATIVE-CASE-BOOK.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/noir-design/references/SOURCE-LEDGER.md)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

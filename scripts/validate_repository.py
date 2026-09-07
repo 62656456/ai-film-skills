@@ -15,6 +15,7 @@ import yaml
 from yaml.constructor import ConstructorError
 
 from repository_safety import SafetyError, is_link_like, is_within, safe_source_files
+from generate_skill_guides import download_link
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +41,7 @@ REQUIRED_REPOSITORY_FILES = {
     "docs/SKILL_DESIGN_SYSTEM.md",
     "docs/site.css",
     "docs/style-gallery/manifest.json",
+    "docs/showcase/manifest.json",
     "docs/style-gallery/cyberpunk-design.jpg",
     "docs/style-gallery/epic-design.jpg",
     "docs/style-gallery/fantasy-design.jpg",
@@ -80,13 +82,9 @@ REQUIRED_REPOSITORY_FILES = {
     "scripts/validate_skill_independence.py",
     "requirements-dev.txt",
 }
-STALE_PUBLIC_COUNT_PATTERNS = {
-    "20 modules": re.compile(r"\b20 modules\b", re.I),
-    "40 pages": re.compile(r"\b40 pages\b", re.I),
-    "20 Chinese modules": re.compile(r"20 个模块"),
-    "40 Chinese guides": re.compile(r"40 个(?:逐模块页面|设计说明)"),
-    "20 Korean modules": re.compile(r"20개 모듈"),
-    "40 Korean guides": re.compile(r"40개 상세 페이지"),
+PUBLIC_COUNT_PATTERNS = {
+    "modules": re.compile(r"\b(\d+)\s+(?:standalone\s+)?(?:modules|skills)\b|(\d+)\s*个模块|(\d+)개 모듈", re.I),
+    "guides": re.compile(r"\b(\d+)\s+(?:bilingual\s+)?(?:pages|guides)\b|(\d+)\s*个(?:逐模块页面|设计说明)|(\d+)개 상세 페이지", re.I),
 }
 REQUIRED_COMPATIBILITY_TERMS = {
     ".codex/skills",
@@ -281,18 +279,28 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
     catalog = catalog_path.read_text(encoding="utf-8-sig")
     index = index_path.read_text(encoding="utf-8-sig")
     readme = readme_path.read_text(encoding="utf-8-sig")
+    contracts = json.loads((ROOT / "docs" / "skill-contracts.json").read_text(encoding="utf-8"))
+    by_name = {item["name"]: item for item in contracts["skills"]}
     for skill in skills:
         name = skill.name
         runtime = skill.relative_to(ROOT).as_posix() + "/SKILL.md"
         design_en = f"docs/skills/en/{name}.md"
         design_zh = f"zh-CN/{name}.md"
-        zip_name = f"{name}.zip"
         if design_en not in catalog:
             errors.append(f"SKILL_CATALOG.md missing human design route for {name}")
         if runtime not in catalog:
             errors.append(f"SKILL_CATALOG.md missing runtime SKILL.md route for {name}")
-        if zip_name not in catalog:
-            errors.append(f"SKILL_CATALOG.md missing standalone ZIP route for {name}")
+        item = by_name.get(name, {})
+        download = item.get("download", {})
+        if download.get("state") == "historical_snapshot":
+            route = f"releases/download/{download.get('tag')}/{name}.zip"
+            if route not in catalog:
+                errors.append(f"SKILL_CATALOG.md missing tagged historical ZIP route for {name}")
+        elif download.get("state") == "source_only":
+            if str(download.get("source_install", "")) not in catalog:
+                errors.append(f"SKILL_CATALOG.md missing current source-install route for {name}")
+        else:
+            errors.append(f"{name} lacks an explicit current-source versus release-download contract")
         if f"en/{name}.md" not in index or design_zh not in index:
             errors.append(f"docs/skills/INDEX.md missing bilingual routes for {name}")
         if runtime not in index:
@@ -308,6 +316,41 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
     directory_badge = "https://skills.sh/b/62656456/ai-film-skills"
     if directory_badge not in readme:
         errors.append("README.md missing the verified skills.sh directory badge")
+    return errors
+
+
+def validate_public_counts(text: str, skill_count: int) -> list[str]:
+    errors: list[str] = []
+    for line in text.splitlines():
+        # Explicitly dated historical release counts remain valid historical evidence.
+        if re.search(r"historical|previous release|历史|이전|v1\.3\.0", line, re.I):
+            continue
+        for kind, pattern in PUBLIC_COUNT_PATTERNS.items():
+            expected = skill_count * (2 if kind == "guides" else 1)
+            for match in pattern.finditer(line):
+                found = int(next(value for value in match.groups() if value is not None))
+                if found != expected:
+                    errors.append(f"public {kind} count {found} differs from registered {expected}")
+    return errors
+
+
+def validate_download_contracts() -> list[str]:
+    errors: list[str] = []
+    data = json.loads((ROOT / "docs" / "skill-contracts.json").read_text(encoding="utf-8"))
+    for item in data["skills"]:
+        for locale in ("en", "zh-CN"):
+            page = ROOT / "docs" / "skills" / locale / f"{item['name']}.md"
+            try:
+                link, note = download_link(item, page, locale)
+            except (ValueError, KeyError, TypeError) as exc:
+                errors.append(f"invalid download contract: {exc}")
+                continue
+            if page.is_file():
+                text = page.read_text(encoding="utf-8-sig")
+                if link not in text or note not in text:
+                    errors.append(f"guide does not expose its download state: {page.relative_to(ROOT)}")
+                if "releases/latest/download/" in text:
+                    errors.append(f"guide incorrectly maps current source to latest release: {page.relative_to(ROOT)}")
     return errors
 
 
@@ -401,6 +444,7 @@ def main() -> int:
             errors.append(f"unsafe Skill source tree {rel}: {exc}")
 
     errors.extend(validate_public_reading_routes(skills))
+    errors.extend(validate_download_contracts())
     errors.extend(validate_launch_assets())
 
     director_example = (ROOT / "examples" / "director-agent-before-after.md").read_text(
@@ -426,9 +470,7 @@ def main() -> int:
     )
     for path in public_count_files:
         text = path.read_text(encoding="utf-8-sig")
-        for label, pattern in STALE_PUBLIC_COUNT_PATTERNS.items():
-            if pattern.search(text):
-                errors.append(f"stale public count ({label}): {path.relative_to(ROOT)}")
+        errors.extend(f"{path.relative_to(ROOT)}: {error}" for error in validate_public_counts(text, len(skills)))
 
     repository_paths = [
         path

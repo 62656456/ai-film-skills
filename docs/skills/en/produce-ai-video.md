@@ -5,7 +5,9 @@
 | Can deliver alone | A full production and validation contract; with the required host tools and permissions, an actual reviewed final video. |
 | Cannot claim alone | Installing the Skill alone does not supply models, credits, rights, editing tools, or a qualified video. |
 
-[Runtime `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/produce-ai-video.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -99,3 +101,9 @@ A full production and validation contract; with the required host tools and perm
 - [`references/autonomous-production-workflow.md`](../../../skills/produce-ai-video/references/autonomous-production-workflow.md)
 - [`references/qualified-video-acceptance.md`](../../../skills/produce-ai-video/references/qualified-video-acceptance.md)
 - [`references/storyboard-prompt-compiler.md`](../../../skills/produce-ai-video/references/storyboard-prompt-compiler.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

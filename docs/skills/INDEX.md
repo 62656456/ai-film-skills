@@ -9,7 +9,7 @@ The English and Simplified Chinese pages are generated from the same reviewed co
 | Skill | State | English | 简体中文 | Runtime |
 |---|---|---|---|---|
 | `director-agent` | Deployed; long-term practice evidence remains separate | [Design guide](en/director-agent.md) | [设计说明](zh-CN/director-agent.md) | [`SKILL.md`](../../skills/director-agent/SKILL.md) |
-| `ai-storyboard-director` | Deployed; 5.4.4 is the current installed version; real-video generation and user review remain pending | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
+| `ai-storyboard-director` | Current source 5.6; selected for daily use; v1.3.0 ZIP preserves 5.4.4 | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
 | `character-asset` | Deployed | [Design guide](en/character-asset.md) | [设计说明](zh-CN/character-asset.md) | [`SKILL.md`](../../skills/character-asset/SKILL.md) |
 | `scene-asset` | Deployed | [Design guide](en/scene-asset.md) | [设计说明](zh-CN/scene-asset.md) | [`SKILL.md`](../../skills/scene-asset/SKILL.md) |
 | `prop-asset` | Deployed | [Design guide](en/prop-asset.md) | [设计说明](zh-CN/prop-asset.md) | [`SKILL.md`](../../skills/prop-asset/SKILL.md) |
@@ -26,7 +26,8 @@ The English and Simplified Chinese pages are generated from the same reviewed co
 | `web-design-director` | Deployed | [Design guide](en/web-design-director.md) | [设计说明](zh-CN/web-design-director.md) | [`SKILL.md`](../../skills/web-design-director/SKILL.md) |
 | `d-official-market-analysis` | Deployed | [Design guide](en/d-official-market-analysis.md) | [设计说明](zh-CN/d-official-market-analysis.md) | [`SKILL.md`](../../skills/d-official-market-analysis/SKILL.md) |
 | `d-data-analysis-semantic-layer` | Deployed | [Design guide](en/d-data-analysis-semantic-layer.md) | [设计说明](zh-CN/d-data-analysis-semantic-layer.md) | [`SKILL.md`](../../skills/d-data-analysis-semantic-layer/SKILL.md) |
-| `hard-sci-fi-visual-director` | Experimental; not deployed; user visual review pending | [Design guide](en/hard-sci-fi-visual-director.md) | [设计说明](zh-CN/hard-sci-fi-visual-director.md) | [`SKILL.md`](../../experimental/hard-sci-fi-visual-director/SKILL.md) |
+| `hard-sci-fi-visual-director` | Experimental distribution; user-accepted image examples; broad reliability unproven | [Design guide](en/hard-sci-fi-visual-director.md) | [设计说明](zh-CN/hard-sci-fi-visual-director.md) | [`SKILL.md`](../../experimental/hard-sci-fi-visual-director/SKILL.md) |
+| `whitebox-previs-executor` | Experimental; implemented basic previs and individually qualified action gates | [Design guide](en/whitebox-previs-executor.md) | [设计说明](zh-CN/whitebox-previs-executor.md) | [`SKILL.md`](../../experimental/whitebox-previs-executor/SKILL.md) |
 
 ## Common review logic / 共同审核逻辑
 

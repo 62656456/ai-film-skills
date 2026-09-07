@@ -1,0 +1,80 @@
+{
+  "schema_version": "0.1",
+  "title": "Three-shot whitebox previs acceptance sample",
+  "fps": 24,
+  "resolution": [960, 540],
+  "compile_notes": [
+    "This fixture tests a wide establishing dolly, a lateral tracking medium shot, and a close push-in.",
+    "Human performance is intentionally reduced to neutral walk, idle and reach proxies."
+  ],
+  "world": {
+    "floor": {"size": [14, 12], "grid": 1},
+    "walls": [
+      {"id": "back-wall", "center": [0, 5.6, 1.5], "size": [12, 0.2, 3]},
+      {"id": "left-wall", "center": [-5.9, 2, 1.5], "size": [0.2, 7.2, 3]}
+    ],
+    "props": [
+      {"id": "table", "type": "box", "center": [0.2, 2.3, 0.45], "size": [2.2, 1.0, 0.9]},
+      {"id": "door-block", "type": "box", "center": [3.8, 5.1, 1.1], "size": [1.4, 0.3, 2.2]}
+    ]
+  },
+  "actors": [
+    {
+      "id": "A",
+      "label": "A",
+      "height": 1.78,
+      "tone": 0.96,
+      "keyframes": [
+        {"time": 0.0, "position": [-2.5, 0.8, 0], "facing": 12, "action": "idle"},
+        {"time": 3.2, "position": [-1.4, 1.6, 0], "facing": 25, "action": "walk"},
+        {"time": 6.6, "position": [0.3, 2.0, 0], "facing": 35, "action": "walk"},
+        {"time": 10.0, "position": [0.3, 2.0, 0], "facing": 35, "action": "reach"}
+      ]
+    },
+    {
+      "id": "B",
+      "label": "B",
+      "height": 1.68,
+      "tone": 0.72,
+      "keyframes": [
+        {"time": 0.0, "position": [1.3, 2.8, 0], "facing": 205, "action": "idle"},
+        {"time": 6.6, "position": [1.3, 2.8, 0], "facing": 205, "action": "idle"},
+        {"time": 10.0, "position": [1.3, 2.8, 0], "facing": 205, "action": "idle"}
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "label": "WIDE",
+      "start": 0.0,
+      "end": 3.2,
+      "camera_keyframes": [
+        {"time": 0.0, "position": [0, -7.8, 2.6], "look_at": [0, 2.0, 1.0], "lens_mm": 24, "easing": "smooth"},
+        {"time": 3.2, "position": [0, -6.3, 2.35], "look_at": [0, 2.0, 1.0], "lens_mm": 28, "easing": "smooth"}
+      ]
+    },
+    {
+      "id": "S02",
+      "label": "MED TRACK",
+      "start": 3.2,
+      "end": 6.6,
+      "camera_keyframes": [
+        {"time": 3.2, "position": [-4.2, -0.7, 1.65], "look_at": [-1.0, 1.9, 1.05], "lens_mm": 40, "easing": "smooth"},
+        {"time": 4.9, "position": [-3.8, -0.45, 1.65], "look_at": [-0.5, 2.0, 1.1], "lens_mm": 40, "easing": "smooth"},
+        {"time": 6.6, "position": [-3.5, -0.2, 1.62], "look_at": [0.2, 2.1, 1.12], "lens_mm": 45, "easing": "smooth"}
+      ]
+    },
+    {
+      "id": "S03",
+      "label": "CLOSE PUSH",
+      "start": 6.6,
+      "end": 10.0,
+      "camera_keyframes": [
+        {"time": 6.6, "position": [0.1, -2.3, 1.62], "look_at": [0.3, 2.0, 1.4], "lens_mm": 48, "easing": "smooth"},
+        {"time": 8.2, "position": [0.14, -1.9, 1.6], "look_at": [0.3, 2.0, 1.42], "lens_mm": 52, "easing": "smooth"},
+        {"time": 10.0, "position": [0.18, -1.5, 1.58], "look_at": [0.3, 2.0, 1.44], "lens_mm": 55, "easing": "smooth"}
+      ]
+    }
+  ]
+}

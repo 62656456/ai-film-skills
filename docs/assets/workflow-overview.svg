@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1430" width="1200" height="1430" role="img" aria-labelledby="title desc">
+  <title id="title">AI 影视完整工作流程：按本次目标选择阶段</title>
+  <desc id="desc">主线从输入和需求，经剧本、导演、十类视觉风格、三类资产、分镜与保存恢复、五列分镜和六模块提示词，到生成剪辑声音、整片审查及用户验收。白模为可选预演，市场研究和经批准的知识写入为侧支，短剧合同待对齐，网页设计为辅助。已有材料可直接进入对应阶段，局部任务可在任意阶段结束。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#ff6b35" stroke-width="1.5"/></marker>
+    <marker id="side-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#8b9dad" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif;fill:#f4f0e8}
+      .title{font-size:27px;font-weight:700;letter-spacing:1px}.sub{font-size:17px;fill:#aab4c0}.label{font-size:22px;font-weight:650}.small{font-size:17px;fill:#bdc7d2}.code{font-family:Consolas,monospace;font-size:14px;fill:#aab4c0}.tag{font-size:14px;fill:#ff986f;font-weight:700;letter-spacing:1px}
+      .node{fill:#151d27;stroke:#364351;stroke-width:1.5}.main{fill:#192028;stroke:#ff6b35;stroke-width:1.6}.side{fill:#111820;stroke:#526273;stroke-width:1.2}.flow{fill:none;stroke:#ff6b35;stroke-width:2;marker-end:url(#arrow)}.optional{fill:none;stroke:#8b9dad;stroke-width:1.5;stroke-dasharray:6 5;marker-end:url(#side-arrow)}.return{fill:none;stroke:#8b9dad;stroke-width:1.5;marker-start:url(#side-arrow);marker-end:url(#side-arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="1430" fill="#0b0f14"/>
+  <text x="36" y="47" class="title">从故事到交付，把决定留在流程里。</text>
+  <text x="36" y="78" class="sub">已有材料可直接进入相应阶段；只做局部结果时，可在任何阶段结束。</text>
+  <path d="M394 159H360V270H342" class="optional"/>
+  <path d="M394 159H20V591H36" class="optional"/>
+  <path d="M604 202V228 M604 316V342 M604 430V456 M604 582V610 M604 698V728 M604 816V846 M604 934V1010 M604 1098V1126 M604 1214V1242" class="flow"/>
+
+  <rect x="394" y="114" width="420" height="88" rx="6" class="main"/>
+  <text x="416" y="143" class="tag">START / 本次目标</text><text x="416" y="172" class="label">输入与需求 · 已有材料</text>
+  <text x="416" y="192" class="code">交付物 · 时长 · 画幅 · 平台 · 制作限制</text>
+
+  <rect x="394" y="228" width="420" height="88" rx="6" class="node"/>
+  <text x="416" y="261" class="label">剧本创作与编辑</text><text x="416" y="286" class="small">人物 · 情节因果 · 对白 · 场景</text><text x="416" y="307" class="code">director-agent</text>
+
+  <rect x="36" y="222" width="306" height="96" rx="6" class="side"/>
+  <text x="56" y="249" class="tag">按需 / 市场判断</text><text x="56" y="276" class="label">市场研究</text><text x="56" y="300" class="code">d-official-market-analysis</text>
+  <path d="M342 282H382V283H394" class="optional"/>
+  <path d="M189 318V354" class="optional"/>
+  <text x="207" y="343" class="code">明确批准写入后</text>
+  <rect x="36" y="354" width="306" height="89" rx="6" class="side"/>
+  <text x="56" y="385" class="label">审核并写入市场知识</text><text x="56" y="409" class="code">d-data-analysis-semantic-layer</text><text x="56" y="431" class="small">研究结论不会自动入库</text>
+
+  <rect x="394" y="342" width="420" height="88" rx="6" class="node"/>
+  <text x="416" y="374" class="label">导演方案</text><text x="416" y="399" class="small">表演 · 视觉概念 · 声音 · 剪辑</text><text x="416" y="420" class="code">director-agent</text>
+
+  <path d="M814 273H850V387H862" class="optional"/>
+  <rect x="862" y="342" width="302" height="92" rx="6" class="side"/>
+  <text x="882" y="369" class="tag">明确需要时</text><text x="882" y="396" class="label">AI 执行剧本编译</text><text x="882" y="420" class="code">director-agent 的条件模式</text>
+  <path d="M1164 388H1180V760H814" class="optional"/>
+
+  <rect x="394" y="456" width="420" height="126" rx="6" class="node"/>
+  <text x="416" y="486" class="label">按需选择 10 类视觉风格</text>
+  <text x="416" y="515" class="small">赛博朋克 · 史诗 · 奇幻 · 恐怖 · 黑色</text>
+  <text x="416" y="541" class="small">爱情 · 战争 · 武侠 · 仙侠 · 硬科幻</text>
+  <text x="416" y="566" class="code">保留类型特色，按当前画面决定摄影与色彩</text>
+
+  <rect x="36" y="542" width="306" height="100" rx="6" class="side"/>
+  <text x="56" y="569" class="tag">专项分支 / 待对齐</text><text x="56" y="596" class="label">短剧生产控制合同</text><text x="56" y="619" class="code">ai-short-drama-production</text><text x="56" y="640" class="code">尚未部署；先对齐 5.6 交接</text>
+
+  <rect x="394" y="610" width="420" height="88" rx="6" class="node"/>
+  <text x="416" y="641" class="label">人物 / 场景 / 道具资产</text><text x="416" y="666" class="small">图片提示词 → 生成参考图 → 审阅锁定</text><text x="416" y="688" class="code">character-asset · scene-asset · prop-asset</text>
+  <path d="M394 654H369V520H394" class="optional"/>
+  <path d="M814 520H836V747H814" class="optional"/>
+  <text x="849" y="600" class="code">不需新资产时</text><text x="849" y="620" class="code">可直接进入分镜</text>
+
+  <rect x="394" y="728" width="420" height="88" rx="6" class="main"/>
+  <text x="416" y="759" class="label">分镜与摄影设计</text><text x="416" y="784" class="small">视点 · 机位 · 调度 · 镜头选择</text><text x="416" y="806" class="code">ai-storyboard-director 5.6 · 日常源码</text>
+  <path d="M814 787H862" class="return"/>
+  <rect x="862" y="748" width="302" height="85" rx="6" class="side"/>
+  <text x="882" y="780" class="label">5.6 保存与恢复</text><text x="882" y="807" class="small">导演意图 · 已选镜头 · 场景状态</text>
+
+  <rect x="394" y="846" width="420" height="88" rx="6" class="node"/>
+  <text x="416" y="878" class="label">五列分镜表 + 视频母提示词</text><text x="416" y="904" class="small">六大模块外层 · 数字 10 信息内核</text><text x="416" y="925" class="code">可单独交付分镜或完整提示词</text>
+  <path d="M814 889H862" class="optional"/>
+  <rect x="862" y="857" width="302" height="97" rx="6" class="side"/>
+  <text x="882" y="884" class="tag">可选 / 先看空间与节奏</text><text x="882" y="911" class="label">3D 白模预演</text><text x="882" y="937" class="code">whitebox-previs-executor</text>
+  <path d="M1164 906H1181V992H838V772H814" class="optional"/>
+  <text x="864" y="979" class="code">需要修改机位或节奏 → 返回分镜</text>
+  <path d="M1013 954V1052H814" class="optional"/>
+
+  <rect x="394" y="1010" width="420" height="88" rx="6" class="node"/>
+  <text x="416" y="1042" class="label">实际生成 · 选片 · 剪辑 · 声音</text><text x="416" y="1067" class="small">视频模型 / 工具 · 对白 / 音效 / 音乐</text><text x="416" y="1088" class="code">produce-ai-video 统筹制作</text>
+
+  <rect x="36" y="1032" width="306" height="100" rx="6" class="side"/>
+  <text x="56" y="1059" class="tag">辅助能力 / 不进入成片主线</text><text x="56" y="1086" class="label">网页与工作台设计</text><text x="56" y="1111" class="code">web-design-director</text>
+
+  <rect x="394" y="1126" width="420" height="88" rx="6" class="node"/>
+  <text x="416" y="1160" class="label">整片播放审查与修复</text><text x="416" y="1187" class="small">看到 / 听到实际结果，再修复失败</text>
+  <path d="M394 1170H365V1053H394" class="optional"/>
+
+  <rect x="394" y="1242" width="420" height="82" rx="6" class="main"/>
+  <text x="416" y="1278" class="label">用户验收与成片交付</text><text x="416" y="1304" class="small">用户保留审美与最终接受决定</text>
+  <path d="M36 1363H81" class="flow"/><text x="96" y="1370" class="small">阶段交接</text>
+  <path d="M256 1363H301" class="optional"/><text x="316" y="1370" class="small">按需分支或修复返回</text>
+  <text x="36" y="1405" class="sub">20 项影视能力 + 1 项网页辅助；完整工作流不等于每次任务必须走完全部步骤。</text>
+</svg>

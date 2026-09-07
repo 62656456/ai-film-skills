@@ -1,6 +1,6 @@
 # Giant mecha and megafauna route
 
-Load this reference only when the requested image contains a giant operated machine, a city-scale organism, or their interaction. Preserve source authority, physics, production design, camera, and aesthetic gates; apply live-action rules only when that production route is selected.
+Load this reference only when the requested image contains a giant operated machine, a city-scale organism, or their interaction. Preserve source authority, physics, production design, camera, and aesthetic gates; apply live-action rules only when that production route is selected. When combat identity defines a mecha, also load `combat-mecha-form-direction.md`; this file continues to own mass/support/actuation/operation/scale, while the combat module owns visual proposition, silhouette, humanoid body rhythm, author identity, combat readability, and cinematic presentation.
 
 ## Evidence boundary
 
@@ -15,7 +15,7 @@ Before the support card, write one world-exclusive visual thesis. A giant subjec
 For amplitude II–III:
 
 - combine one verified load/energy/biological invariant, one non-adjacent operating principle, and one explicit discontinuity;
-- generate three functionally valid body/topology candidates with different support geometry, occupied relationship, and spatial role before locking a silhouette;
+- explore distinct body/topology possibilities only as far as the open identity decision requires. Do not force a candidate count, expose unrequested options, or merge them into a compromise silhouette; in single-author or repair mode, commit to one coherent route;
 - propagate the selected body plan into at least three visible consequences across city/terrain structure, operator or organism behavior, maintenance/feeding, institution/economy, evacuation/safety, or lifecycle;
 - for a narrative frame, place the source-required bodies, infrastructure, and environmental response in one function-specific relationship rather than a side-by-side scale comparison; for an isolated asset reference, show function, support, applicable interfaces/relationships, and scale without inventing action;
 - run the contemporary-substitution test: if an ordinary crane, ship, tracked vehicle, familiar animal, or conventional giant humanoid can replace the subject without changing the event, redesign it.
@@ -39,6 +39,14 @@ Reject a city-scale body whose tiny feet, crouched joints, instant acceleration,
 ## Giant mecha system
 
 Derive every major shape from the source-required mission or social role: lifting, construction, transport, habitation, cultivation, ritual, exploration, containment, rescue, defense, assembly, hazard interception, or another named function.
+
+### Combat-mecha handoff
+
+- Use this file first to establish the hard physical boundary: support medium, mass class, motion envelope, occupied relation, and any limit that could veto the form. Do not fully design exposed actuation, armor, or service systems before the combat module locks the visual proposition, silhouette, and body rhythm. Then return here to resolve load path, actuation, power/heat, control, scale proof, and environmental response inside the selected form.
+- When combat, armed defense, interception, deterrence, battlefield survival, or military responsibility defines identity, use `future-weapon-systems.md` for effect/responsibility/safety and `combat-mecha-form-direction.md` for visual proposition, body plan, role silhouette, armor/inner-frame rhythm, reference de-collaging, and cinematic presentation.
+- A prior image, prompt, concept set, or named franchise supplies only an abstract relationship mechanism unless explicitly locked. Never inherit its count, machine names, scene menu, palette, weapon, pose, body, or composition.
+- Temporarily hide removable weapons and mission packs. If the remaining body cannot express combat responsibility, survivability, sensing/governance, load path, or movement envelope, return to body-plan design; it is only a generic machine carrying a weapon.
+- Choose a source-derived current state—such as maneuver, observation, deployment, bracing, effect delivery, thermal recovery, degraded withdrawal, or aftermath—without turning these examples into a mandatory scene list.
 
 ### Structure and actuation
 
@@ -120,6 +128,8 @@ Reject the image or prompt if any applicable item appears:
 - size proved only by a wide lens, tiny people, skyscraper comparison, or adjectives;
 - combat with no source-relevant affected body/space, terrain or medium, energy/load, safety envelope, or collateral logic; civilians are required only when the screenplay includes them.
 - amplitude II–III that remains a walking crane, enlarged familiar animal, ordinary vehicle with legs, or conventional armored humanoid after labels, setting, and color are removed.
+- combat identity that exists only in a removable weapon, shoulder cannon, glowing chest, red alarm, or hero pose;
+- combat requests that return to the same conventional armored humanoid body regardless of role, environment, support, control, threat geometry, or world.
 
 ## Primary references
 

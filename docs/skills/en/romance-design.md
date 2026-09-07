@@ -5,12 +5,14 @@
 | Can deliver alone | A romance `style_route`, intimacy and light parameters, negative constraints, and QC contract. |
 | Cannot claim alone | It does not manufacture intimacy with a pink filter, constant soft focus, or an unmotivated embrace. |
 
-[Runtime `SKILL.md`](../../../skills/romance-design/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/romance-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/romance-design/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/romance-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
 
-Translate romance into interpersonal distance, micro-actions, gaze, warm practical light, material intimacy, rhythm, restraint, and continuity.
+Translate romance into distance, gaze, contact, reciprocal action, light and material choices driven by the actual relationship, without requiring warm lighting.
 
 <!-- contract:principles -->
 ## 2. Design principles
@@ -18,6 +20,7 @@ Translate romance into interpersonal distance, micro-actions, gaze, warm practic
 - Translate genre feeling into observable camera, color, space, action, material, sound, and continuity parameters.
 - Genre parameters support an approved story and assets; they do not rewrite either one.
 - Director names and color values are sources or starting points, never imitation commands or universal laws.
+- Golden hour, complementary colors, shallow focus, foreground people, exact lens values and worn surfaces are optional design choices, not universal quality requirements.
 
 <!-- contract:standalone -->
 ## 3. Standalone scope
@@ -31,16 +34,16 @@ A romance `style_route`, intimacy and light parameters, negative constraints, an
 <!-- contract:inputs -->
 ## 4. Inputs
 
-- Genre request, scene function, duration, subjects, approved Cxx/Sxx/Pxx assets, and target platform when known.
+- Genre, intended medium, scene function, subjects, locked choices and relevant assets; duration and platform fields only when needed by the current deliverable.
 - Existing director, blocking, lighting, continuity, and end-state decisions.
 - Missing fields remain open; generic words such as 'cinematic' cannot fill them.
 
 <!-- contract:workflow -->
 ## 5. Workflow
 
-1. Load the genre camera and composition route.
+1. Read the package-local cinematic-image-direction reference, choose the imaging medium, and establish the visible proposition and attention hierarchy before presets.
 2. Derive functional color, light sources, spatial structure, and scene parameters.
-3. Attach action, material, physical interaction, sound, continuity, and approved asset IDs.
+3. Add materials, contact and state continuity; include camera motion, timing and sound only for video, and preserve supplied approved assets.
 4. Compile the ten information categories and platform translation without changing upstream decisions.
 5. Run shared and genre-specific review; emit `ready_for_prompt` or a field-specific `rework` result.
 
@@ -54,7 +57,7 @@ A romance `style_route`, intimacy and light parameters, negative constraints, an
 <!-- contract:review -->
 ## 7. Review gates
 
-- [ ] Camera, color, light source, spatial anchors, asset IDs, action causality, material interaction, sound, and end state are all present and mutually consistent.
+- [ ] All fields required by the current medium agree: framing, functional color, motivated light, space, subject/material relations and state; add motion and sound for video only.
 - [ ] The shared anti-fake-cinema checks reject empty quality words, unmotivated camera moves, source-less light, decorative color, and unstable props or space.
 - [ ] Genre-specific negative constraints target only likely failures and do not suppress story-authorized color, scale, stillness, or motion.
 - [ ] Distance, gaze, touch, pauses, and light respond to the characters' actual relationship change; softness never erases readable action or material.
@@ -78,6 +81,8 @@ A romance `style_route`, intimacy and light parameters, negative constraints, an
 
 - Do not write the screenplay, replace director judgment, or modify approved asset appearance.
 - Do not claim universal genre color laws, living-artist imitation, or generation success.
+- The new image-relationship reference is an authored synthesis of supplied-image analysis. The 14 accepted showcase results do not establish the source methods of another Skill, a stable success rate, or an old/new same-prompt A/B improvement.
+- The user accepted this round's representative image, recorded in docs/showcase/manifest.json; that is an image-level result, not a universal success claim.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use
@@ -97,6 +102,13 @@ A romance `style_route`, intimacy and light parameters, negative constraints, an
 
 **References**
 
+- [`references/cinematic-image-direction.md`](../../../skills/romance-design/references/cinematic-image-direction.md)
 - [`references/COMMON-12-SECTION-PROTOCOL.md`](../../../skills/romance-design/references/COMMON-12-SECTION-PROTOCOL.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/romance-design/references/NEGATIVE-CASE-BOOK.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/romance-design/references/SOURCE-LEDGER.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

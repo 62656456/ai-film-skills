@@ -1,101 +1,84 @@
 # How every Skill is designed
 
-This repository is meant to be read on GitHub as well as installed in an Agent. You do not need to clone the repository to understand a module: open its human-readable design guide, then open its runtime `SKILL.md` when you want the exact operating instructions.
+A Skill owns a bounded result and the evidence needed to judge it. The [20 module guides](skills/INDEX.md) explain the current source in English and Simplified Chinese; each links its exact runtime files. The [full workflow](WORKFLOW.md) explains how those results can be handed to the next stage without loading every Skill at once.
 
-- [Browse every standalone design guide](skills/INDEX.md)
-- [Choose by filmmaking task](../SKILL_CATALOG.md)
-- [Understand installation and Agent hosts](INSTALLATION.md)
+## The design contract
 
-## The unit of design
-
-One Skill owns one bounded outcome. It may work alone, or hand a named deliverable to a second Skill, but it does not silently take authority over another layer.
-
-| Contract field | What it must answer |
+| Field | Required answer |
 |---|---|
-| Purpose | What visible problem does this Skill solve? |
-| Inputs | What must already be known, approved, or supplied? |
-| Workflow | In what causal order does the work happen? |
-| Return path | When a check fails, which earlier decision must be repaired? |
-| Review gates | What must a reviewer inspect before accepting the output? |
-| Pass standard | What observable evidence is enough to call the output complete? |
-| Output | What can the next person or Agent actually use? |
-| Boundary | What does this Skill deliberately refuse to decide or claim? |
+| Purpose | What visible problem is being solved? |
+| Inputs | Which facts, materials, constraints and approvals are actually available? |
+| Workflow | What causal order produces the result? |
+| Return path | Which earlier decision changes if the result fails? |
+| Review | What must be read, viewed, heard or run? |
+| Pass evidence | What observable output supports the stated completion level? |
+| Handoff | What can the next person or Skill use without hidden context? |
+| Boundary | What remains unknown, unsupported or outside the request? |
 
-This is why a Skill is more than a prompt collection. Its design includes failure handling, evidence, and a usable output contract.
+Start from the actual requested outcome and available evidence. Existing examples, templates and named methods are candidate inputs, not automatic conclusions. Preserve user-locked facts and differentiate a creative proposal from an approved decision.
 
 ## Shared operating loop
 
-<img src="assets/review-loop.svg" width="100%" alt="A Skill moves from bounded input through design and a visible draft to review. Failed checks return to the earliest broken decision; passed checks produce an evidence-backed handoff." />
+<img src="assets/review-loop.svg" width="100%" alt="Input, visible design, review, directed return and evidence-backed handoff" />
 
 ```text
-request
-  -> select one primary Skill
-  -> verify required input and authority
-  -> make the smallest visible draft that can be judged
-  -> review module-specific gates
-       -> fail: return to the earliest broken decision
-       -> pass: record evidence and produce the named output
-  -> hand off only when another Skill has a different, necessary contract
+current request and material
+  -> one primary Skill for the requested result
+  -> establish facts, open decisions and constraints
+  -> produce the visible artifact at the requested scope
+  -> inspect the applicable module gates
+       fail -> repair the earliest responsible decision
+       pass -> record evidence and deliver the named handoff
+  -> use another Skill only for a different necessary outcome
 ```
 
-## Return design
+## Image relationships before presets
 
-“Try again” is not a return design. A useful return identifies the first failed assumption, keeps already approved constraints, and changes only the layer that caused the failure.
+The visual and asset packages now carry their own `cinematic-image-direction.md`. It derives the viewing proposition, attention, subject/background separation, source-based light and reflection, scale, material differences and detail hierarchy together. This is an authored synthesis of supplied-image analysis, not a reconstruction of another creator's hidden Skill or exact camera settings.
 
-| Failure type | Return to | Preserve |
+- Choose photographic, 3D-animation or 2D/illustration imaging before selecting negative constraints.
+- Derive lens, light, color, scale and focus from the current image; do not require golden hour, complementary colors, foreground people or shallow focus everywhere.
+- Keep requested new surfaces, real plastic and designed emission. Wear must follow use rather than a blanket quality filter.
+- Match delivery scope: a single prompt or image does not automatically become a multi-view sheet, a video timeline or a complete film.
+- Read actual pixels for an image verdict and actual motion for video; text consistency remains text evidence.
+
+The [14-image showcase](showcase/manifest.json) records accepted outcomes. It is not a same-prompt comparison against the old rules and does not prove a general success rate.
+
+## Storyboard 5.6: persistence without replacing judgment
+
+In a supplied project directory, 5.6 saves the source identity, director intent, selected shots and scene entry/exit states, then restores the current context and required knowledge. It uses revision/hash checks and protects accepted facts from silent replacement. The records live with the work and do not replace the work's overall project state.
+
+The helper checks recorded fields, timing, inheritance and explicit geometry. It does not decide whether a shot is powerful, verify arbitrary 3D geometry or make the native chat route impossible to bypass. Prompt formatting must preserve the selected camera design; a valid JSON record cannot compensate for a weak or changed shot.
+
+Without a supplied project directory, a simple shot consultation can still deliver text. It must not claim that it saved or restored a project.
+
+## Directed return
+
+| Visible failure | Return to | Preserve |
 |---|---|---|
-| Missing or contradictory input | Intake and scope | Nothing that depends on the missing fact |
-| Story causality or character purpose fails | Story/directing analysis | Approved format, length, and production constraints |
-| Blocking, camera, or continuity fails | Shot/asset design | Approved story beat and character intention |
-| Style is decorative or physically incoherent | Visual-language design | Approved story, space, and action |
-| Platform cannot execute the plan | Production/platform translation | Approved creative intent and continuity anchors |
-| Evidence, rights, privacy, or authority is insufficient | Publication boundary | The private source; do not publish it while unresolved |
-| Output exists but is not judgeable | Output contract | The work itself; change how it is exposed and verified |
+| Missing decisive input | Scope and source interpretation | Unaffected known facts |
+| Causality, knowledge or dialogue fails | Earliest broken story decision | Approved scope and unaffected scenes |
+| Camera, blocking or continuity fails | Responsible shot and world-state decision | Story event and character purpose |
+| Image feels generic or unreadable | Attention, framing, light, material or detail relationship | Locked identity and intended function |
+| Model cannot execute the plan | Actual production route | Approved dramatic intent and required state |
+| Whitebox action is unsupported | Capability boundary and short action gate | Already verified basic preview |
+| Rights or permission is absent | Applicable source/publication boundary | Private material and existing approved output |
+| Final result cannot be inspected | Delivery path or playable export | The work itself |
 
-The module guide for each Skill narrows this table to its own inputs and gates.
+A return names the failed relationship and a concrete correction. It does not use a new generation attempt as a substitute for diagnosis or restart unrelated stages.
 
-## Review and pass states
+## Evidence states
 
-The repository keeps four facts separate:
+1. **Structurally valid:** the package and its local resources are present.
+2. **Loaded or executed:** the actual host read the instructions or ran the helper.
+3. **Task evidence:** a script, image, preview, report or other result was produced and inspected.
+4. **User-accepted result:** the user explicitly accepted the named visible output.
+5. **Practice-validated Skill:** the maintainer has accepted evidence across three different real tasks.
 
-1. **Structurally valid** — required files and local dependencies are present.
-2. **Runnable or loadable** — a compatible Agent can discover or receive the instructions.
-3. **Task-validated** — the Skill produced evidence on a real task.
-4. **User-accepted** — a person reviewed the visible result and explicitly accepted it.
+These states attach to their exact scope. A user-accepted image is not a complete-film acceptance; several examples from one run do not automatically prove three independent tasks. An experimental package may have accepted examples while remaining opt-in. Current source, Git push, local builds and published Release assets are also separate states.
 
-A lower state must never be reported as a higher one. Folder validation does not prove creative quality, and an output file does not prove user acceptance.
+## Maintaining the documentation
 
-Every module-specific pass standard therefore uses observable nouns: a script passage, shot package, asset contract, research table, versioned semantic entry, qualified media file, or inspected interface. “Optimized,” “professional,” and “cinematic” are not evidence by themselves.
+`docs/skill-contracts.json` contains the reviewed bilingual explanations and distribution links. `scripts/generate_skill_guides.py` generates 40 guides and an index from that registry plus the actual packaged resources. Edit the registry or runtime truth, regenerate, and validate; do not hand-edit derived pages.
 
-## Combining Skills without losing modularity
-
-The complete studio route is:
-
-```text
-story -> assets -> visual language -> shots -> production -> validation
-```
-
-It is optional. A user may take only `character-asset`, only `noir-design`, only `director-agent`, or any other single module. When Skills are combined:
-
-- one primary Skill remains responsible for the current deliverable;
-- a handoff names the exact output the next Skill receives;
-- the second Skill gets no hidden authority over the first Skill’s decisions;
-- rejection returns to the responsible layer, not to the beginning of the whole pipeline;
-- experimental modules remain opt-in and keep their experimental status.
-
-## Reading a module on GitHub
-
-Each page under [`docs/skills/`](skills/INDEX.md) contains the same eight-part contract, links to the exact runtime source, and states whether the module is packaged or experimental. That repeated structure is deliberate: readers can compare modules without learning a new page layout each time, while the content of every gate remains module-specific.
-
-## Changing a Skill
-
-A change is ready for review only when all of the following are true:
-
-- the runtime instructions and the GitHub design guide still describe the same outcome;
-- new dependencies are local to the standalone Skill folder;
-- a failed check has a defined return point;
-- the pass standard names observable evidence;
-- repository validation passes;
-- the release status does not overstate real-task or user acceptance.
-
-See [Contributing](../CONTRIBUTING.md) for the submission workflow.
+A useful maintenance change keeps the runtime and guide in agreement, keeps dependencies inside the standalone package, preserves approved behavior, and identifies a concrete rollback or repair route. Read [Publication scope](../PUBLICATION_SCOPE.md), [Architecture](ARCHITECTURE.md) and [Contributing](../CONTRIBUTING.md).

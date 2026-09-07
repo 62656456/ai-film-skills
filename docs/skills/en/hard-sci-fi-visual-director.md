@@ -1,11 +1,13 @@
 # hard-sci-fi-visual-director — evidence-grounded speculative design
 
-| Status | Experimental; not deployed; user visual review pending |
+| Status | Experimental distribution; user-accepted image examples; broad reliability unproven |
 |---|---|
 | Can deliver alone | Research-driven visual diagnosis, derivation, bible, directing plan, and copy-ready prompt package for a defined scene or asset. |
-| Cannot claim alone | It remains Experimental and cannot claim deployment, stable practice validation, generation success, or user visual approval. |
+| Cannot claim alone | Accepted examples do not turn the experimental package into universal engineering validation, stable generation performance or an accepted final film. |
 
-[Runtime `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/hard-sci-fi-visual-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/hard-sci-fi-visual-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -18,6 +20,7 @@ Derive original hard-science-fiction worlds, systems, organisms, equipment, inte
 - The method stays fixed while each project's visual identity is derived from source truth, evidence, physics, production, and story legibility.
 - Script fact, necessary extrapolation, proposal, approved decision, and locked decision remain distinct states.
 - Research sets an evidence floor, not a creativity ceiling; high-amplitude design must expose its speculative rule and cost.
+- Design visual attention, material response, light, scale and original machine form together; engineering plausibility does not replace a distinctive readable image.
 
 <!-- contract:standalone -->
 ## 3. Standalone scope
@@ -26,7 +29,7 @@ Use this module by itself when the requested result stays inside the following b
 
 Research-driven visual diagnosis, derivation, bible, directing plan, and copy-ready prompt package for a defined scene or asset.
 
-**Cannot claim alone:** It remains Experimental and cannot claim deployment, stable practice validation, generation success, or user visual approval.
+**Cannot claim alone:** Accepted examples do not turn the experimental package into universal engineering validation, stable generation performance or an accepted final film.
 
 <!-- contract:inputs -->
 ## 4. Inputs
@@ -62,7 +65,7 @@ Research-driven visual diagnosis, derivation, bible, directing plan, and copy-re
 ## 8. Pass standard and states
 
 - Applicable gates pass and the output states what is fact, inference, candidate, approved, locked, unknown, generated, and user-reviewed.
-- Internal or generated status never upgrades this Experimental module to deployed, stable, or user-approved.
+- Accepted image examples retain their recorded acceptance while experimental distribution remains opt-in. They do not establish general reliability or completed-film acceptance.
 
 > A pass below means this module's stated gates were met. Structural validity, real-task evidence, and user acceptance remain separate states.
 
@@ -76,7 +79,7 @@ Research-driven visual diagnosis, derivation, bible, directing plan, and copy-re
 ## 10. Boundaries, dependencies, and permissions
 
 - Do not copy protected IP, imitate named living artists, provide actionable weapons construction, or generate without authorization.
-- This is Experimental, not deployed; substantial research and internal checks do not equal user visual approval.
+- Experimental describes repository distribution, not the absence of accepted images. Physical and production claims require their own evidence beyond visual appeal.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use
@@ -97,6 +100,9 @@ Research-driven visual diagnosis, derivation, bible, directing plan, and copy-re
 **References**
 
 - [`references/aesthetic-audit.md`](../../../experimental/hard-sci-fi-visual-director/references/aesthetic-audit.md)
+- [`references/cinematic-image-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/cinematic-image-direction.md)
+- [`references/combat-mecha-aesthetic.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-aesthetic.md)
+- [`references/combat-mecha-form-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-form-direction.md)
 - [`references/future-interface-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-interface-systems.md)
 - [`references/future-weapon-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-weapon-systems.md)
 - [`references/inspiration-engine.md`](../../../experimental/hard-sci-fi-visual-director/references/inspiration-engine.md)
@@ -111,3 +117,9 @@ Research-driven visual diagnosis, derivation, bible, directing plan, and copy-re
 - [`references/script-to-visual-derivation.md`](../../../experimental/hard-sci-fi-visual-director/references/script-to-visual-derivation.md)
 - [`references/style-color-system.md`](../../../experimental/hard-sci-fi-visual-director/references/style-color-system.md)
 - [`references/visual-continuity.md`](../../../experimental/hard-sci-fi-visual-director/references/visual-continuity.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

@@ -1,4 +1,4 @@
 interface:
   display_name: "硬核科幻视觉导演"
-  short_description: "先读剧本与视觉空白，再推导世界、生命、风格、色彩和镜头"
-  default_prompt: "Use $hard-sci-fi-visual-director to start from the current screenplay or source, separate canon facts from necessary inferences and reversible proposals, research only design-changing gaps, derive world, environment, nonhuman life when present, style, color, camera, and applicable systems, preserve approved project locks, and generate images only when explicitly requested."
+  short_description: "从剧本推导原创硬科幻世界、战斗机甲、生命、风格与镜头"
+  default_prompt: "Use $hard-sci-fi-visual-director to start from the current screenplay or source, separate facts from inferences and proposals, research design-changing gaps, and for combat mecha derive a bold brand-free body, human–machine scale relation, and context-sensitive single/family/variant/independent contract before any authorized image generation."

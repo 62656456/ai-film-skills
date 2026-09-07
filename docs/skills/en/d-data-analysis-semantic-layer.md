@@ -5,7 +5,9 @@
 | Can deliver alone | The package contains the complete approval, validation, version, conflict, write, readback, and pending-write contracts; the host supplies only the current write target or direct data handle. |
 | Cannot claim alone | Without current approval or a writable target it cannot claim a write; it returns a complete pending-write package instead. |
 
-[Runtime `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-data-analysis-semantic-layer.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/d-data-analysis-semantic-layer.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -107,3 +109,9 @@ The package contains the complete approval, validation, version, conflict, write
 **Deterministic helpers**
 
 - [`scripts/validate_candidate.py`](../../../skills/d-data-analysis-semantic-layer/scripts/validate_candidate.py)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

@@ -5,7 +5,9 @@
 | Can deliver alone | A complete interface direction or review; with code and browser access, a verified implementation slice. |
 | Cannot claim alone | Without actual rendering and interaction review, it cannot claim visual implementation or user acceptance passed. |
 
-[Runtime `SKILL.md`](../../../skills/web-design-director/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/web-design-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/web-design-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -99,3 +101,9 @@ A complete interface direction or review; with code and browser access, a verifi
 - [`references/creative-direction.md`](../../../skills/web-design-director/references/creative-direction.md)
 - [`references/design-rubric.md`](../../../skills/web-design-director/references/design-rubric.md)
 - [`references/web-quality-checklist.md`](../../../skills/web-design-director/references/web-quality-checklist.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

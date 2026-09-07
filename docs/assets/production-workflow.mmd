@@ -1,0 +1,25 @@
+flowchart TB
+    U["用户输入<br/>点子·小说·大纲·剧本·参考图·已有镜头"] --> T["确定本次目标与已有材料<br/>交付物·时长·画幅·平台·制作限制"]
+    T --> W["剧本创作与编辑<br/>director-agent"]
+    T -. "需要市场判断时" .-> M["市场研究<br/>d-official-market-analysis"]
+    M -. "选题与改稿参考" .-> W
+    M -. "用户明确批准写入后" .-> K["市场知识审核与沉淀<br/>d-data-analysis-semantic-layer"]
+    W --> S["可读剧本<br/>人物·情节因果·对白·场景"]
+    S --> D["导演方案<br/>director-agent<br/>表演·视觉概念·声音·剪辑"]
+    S -. "明确需要时" .-> X["AI执行剧本编译<br/>director-agent 的条件模式"]
+    D --> V["按需选择视觉风格<br/>赛博朋克·史诗·奇幻·恐怖·黑色<br/>爱情·战争·武侠·仙侠·硬科幻"]
+    V --> A["人物／场景／道具资产<br/>character-asset · scene-asset · prop-asset<br/>图片提示词 → 生成参考图 → 审阅锁定"]
+    A -. "需要调整时" .-> V
+    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.6"]
+    A --> B
+    X --> B
+    B <--> R["5.6 保存与恢复<br/>导演意图·已选镜头·场景状态"]
+    B --> P["五列分镜表＋视频母提示词<br/>六大模块外层·数字10信息内核"]
+    P -. "需要先看空间与节奏时" .-> PRE["3D白模预演<br/>whitebox-previs-executor"]
+    PRE -. "修改机位或节奏" .-> B
+    PRE --> G["实际视频生成<br/>produce-ai-video 统筹制作<br/>调用视频模型与生成工具"]
+    P --> G
+    G --> E["选片·剪辑·对白／音效／音乐"]
+    E --> Q["完整播放审查与修复"]
+    Q --> F["用户验收与成片交付"]
+    T -. "专项编排，尚未部署" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>需先对齐5.6交接合同"]

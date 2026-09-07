@@ -1,105 +1,67 @@
 # Installation
 
-Every packaged Skill is self-contained and follows a portable `SKILL.md`-first layout. Install the complete studio or take one craft; no shared repository directory is required.
+Choose the source or archive snapshot first, then install one complete Skill folder. The [catalog](../SKILL_CATALOG.md) and [workflow](WORKFLOW.md) explain which module owns the requested outcome.
 
-Read [Agent compatibility](COMPATIBILITY.md) first if your product name or install path differs from the examples below.
+## Choose a snapshot
 
-## Download one Skill
+| Distribution | What it contains | How to use it |
+|---|---|---|
+| Current source tree | Storyboard Director 5.6, the updated visual contracts and 20 modules: 18 regular plus 2 experimental | Clone or download the intended source ref and use the local installer |
+| [Published v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | Historical snapshot with Storyboard Director 5.4.4 and the older 19-module inventory | Use when deliberately reproducing that release; its ZIP does not track current source |
+| Separately labeled 5.6 standalone Preview | An independently labeled preview artifact with its own manifest | Read that artifact's label and scope; do not treat it as a new complete-studio release |
 
-Open the [latest release](https://github.com/62656456/ai-film-skills/releases/latest) and download the ZIP named after the Skill, such as `ai-storyboard-director.zip`. The archive contains one complete Skill folder.
-
-## Install with the open Skills CLI
-
-The open [`skills` CLI](https://github.com/vercel-labs/skills) can discover the stable Skill folders directly from GitHub:
-
-```bash
-npx --yes skills@latest add 62656456/ai-film-skills --list
-```
-
-Copy one Skill into the project route selected for an Agent:
-
-```bash
-npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
-```
-
-The verified 1.5.23 test discovered 18 stable Skills, copied exactly six `ai-storyboard-director` runtime files, produced one `SKILL.md`, and matched all six public-source SHA-256 values. The isolated experimental Skill is intentionally not part of default discovery. This proves repository discovery and file copying; native activation, routing, and model behavior still belong to the selected host. See the [full verification record](../examples/skills-cli-install-verification.md).
-
-The same stable set is publicly indexed at [skills.sh/62656456/ai-film-skills](https://skills.sh/62656456/ai-film-skills). The repository page and flagship Skill pages were checked as live HTTP 200 responses; see the [index verification record](../examples/skills-sh-index-verification.md). Directory install counts include maintainer verification runs and must not be described as distinct external users.
+A source update or local ZIP build is not a GitHub Release publication. The new whitebox package has no v1.3.0 release asset. Do not infer an archive version from the word `latest`.
 
 ## Install from a clone
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
+git log -1 --oneline
 python scripts/install_skill.py --list
-```
-
-Then choose the actual host explicitly:
-
-```bash
 python scripts/install_skill.py ai-storyboard-director --platform codex
-python scripts/install_skill.py ai-storyboard-director --platform claude-code
-python scripts/install_skill.py ai-storyboard-director --platform codebuddy
 ```
 
-For a TRAE project, run the installer while your terminal is in that project, or provide the target directly:
+The installer reads the files in your actual checkout. Inspect its `SKILL.md` version before installation; cloning a public default branch does not fetch unpublished local changes. Select an explicitly intended branch, tag or commit before running the installer when reproducing a particular snapshot.
+
+Supported installer targets include `codex`, `claude-code`, `trae` and `codebuddy`. For a project-specific destination:
 
 ```bash
-python /path/to/ai-film-skills/scripts/install_skill.py ai-storyboard-director --platform trae
 python scripts/install_skill.py ai-storyboard-director --target /path/to/project/.agents/skills
 ```
 
-The installer refuses to overwrite an existing Skill unless you deliberately add `--force`.
-
-## Native locations
-
-| Host | Personal / global | Project |
-|---|---|---|
-| Codex | `$CODEX_HOME/skills/` or `~/.codex/skills/` | Use the Skill interface or project configuration supported by your Codex client |
-| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
-| TRAE | Use the current client UI for global Skills | `.agents/skills/` |
-| CodeBuddy Code | `~/.codebuddy/skills/` | `.codebuddy/skills/` |
-| WorkBuddy | Upload the ZIP from **Add Skill → Upload Skill** | Managed by the WorkBuddy client |
-
-## Install the complete studio
-
-Download `open-film-skills-complete.zip` from the latest release. It contains `skills/<skill-name>/...`. Copy the individual Skill folders into the correct host directory, or import only the modules you need.
-
-Example for Claude Code on macOS or Linux:
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R skills/* ~/.claude/skills/
-```
-
-Example for CodeBuddy on Windows PowerShell:
-
-```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codebuddy\skills" | Out-Null
-Copy-Item -Recurse -Force .\skills\* "$env:USERPROFILE\.codebuddy\skills\"
-```
-
-## Other Agent software
-
-If the host supports the [Agent Skills specification](https://agentskills.io/specification), place the complete Skill folder in its documented Skill library. If it has no native Skill loader:
-
-1. attach or import `SKILL.md` as the Agent's instructions;
-2. attach the Skill's `references/`, `assets/`, and `scripts/` when present;
-3. tell the Agent that relative paths resolve from the Skill folder;
-4. review every tool or script permission in that host before enabling execution.
-
-This fallback preserves the method, but it cannot create native discovery or tool permissions that the host does not provide.
-
-## WorkBuddy upload
-
-WorkBuddy's official client supports local Skill-package import. Download one module ZIP, open **Add Skill**, choose **Upload Skill**, and select the file. Keep only the Skills needed for the current task enabled. Because the exact client UI and package checks may change, report an import failure with the WorkBuddy version and ZIP name.
+The installer refuses to overwrite an existing installation unless `--force` is explicitly supplied. Keep the prior known version before replacing it. A complete Skill folder includes all its referenced files; copying `SKILL.md` alone is insufficient.
 
 ## Experimental packages
 
-Experimental Skills are not included in the complete-studio archive. Review their status first. The local installer requires `--experimental`. The former `ai-storyboard-director-motion-lab` entry has been retired; use the single formal `ai-storyboard-director` 5.4.4 package for storyboard and complex-camera work.
+Both experiments remain outside the normal complete-studio archive and require an explicit choice:
 
-## Verify an installation
+```bash
+python scripts/install_skill.py hard-sci-fi-visual-director --platform codex --experimental
+python scripts/install_skill.py whitebox-previs-executor --platform codex --experimental
+```
 
-Every installed folder must contain `SKILL.md` and every local file referenced by it. `agents/openai.yaml` is optional host metadata: Codex may use it for display and invocation, while other hosts may ignore it safely.
+Hard-science-fiction has user-accepted image examples but is still distributed as an experiment. Whitebox requires a compatible Python/Blender/media runtime; the Skill does not bundle Blender or install it silently. Its implemented humanoid/basic-camera route and individually qualified action profiles do not provide arbitrary complete fight choreography. Unsupported proxies or unpassed actions must remain blocked or diagnostic.
 
-Structural installation does not prove real-project quality or identical behavior across models. Check [SKILL_CATALOG.md](../SKILL_CATALOG.md) for the release state.
+The external [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director) is linked for workflow completeness only. It is not copied into this repository or any archive; follow its upstream terms independently.
+
+## Published ZIPs and complete studio
+
+The [v1.3.0 assets](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) contain individual module ZIPs and `open-film-skills-complete.zip`. These are old snapshots. Current source builds contain 18 regular modules in the complete archive; the 2 experiments are separate opt-in ZIPs. Inspect the build manifest's source ref and hashes.
+
+For manual installation, copy each selected complete module folder into the host's documented Skill location. An upload-based host may accept the standalone ZIP. Native paths and the difference between instruction reading and native activation are described in [Compatibility](COMPATIBILITY.md).
+
+## Optional Skills CLI route
+
+The open [Skills CLI](https://github.com/vercel-labs/skills) can discover a public repository:
+
+```bash
+npx --yes skills@latest add 62656456/ai-film-skills --list
+npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
+```
+
+The recorded CLI 1.5.23 verification covered the older 18-regular-module discovery and six-file 5.4.4 copy. It is historical evidence, not a fresh 5.6/20-module host test. See [CLI evidence](../examples/skills-cli-install-verification.md) and [historical directory-index evidence](../examples/skills-sh-index-verification.md). Installation counts include maintainer tests and are not distinct external-user adoption.
+
+## Verify the result
+
+Check the installed version, every local reference, and any required runtime tool. Then run a small task with the actual host. File equality, host routing, text output, real media and user acceptance remain separate checks. Storyboard 5.6 can answer a one-shot text question without a project directory; claiming saved/restored project decisions requires actual file operations in the supplied work directory. Generated image examples do not prove video-model execution.

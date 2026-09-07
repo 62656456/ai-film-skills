@@ -5,7 +5,9 @@
 | 单独可交付 | 完整生产与验收合同；宿主工具和权限齐全时，可交付真实审核后的最终视频。 |
 | 单独不能声称 | 只安装 Skill 不会自动获得模型、额度、版权、剪辑工具或合格成片。 |
 
-[运行正文 `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/produce-ai-video.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0历史快照；已更新模块与当前源码不同。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -99,3 +101,9 @@
 - [`references/autonomous-production-workflow.md`](../../../skills/produce-ai-video/references/autonomous-production-workflow.md)
 - [`references/qualified-video-acceptance.md`](../../../skills/produce-ai-video/references/qualified-video-acceptance.md)
 - [`references/storyboard-prompt-compiler.md`](../../../skills/produce-ai-video/references/storyboard-prompt-compiler.md)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

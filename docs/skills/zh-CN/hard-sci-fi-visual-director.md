@@ -1,11 +1,13 @@
 # hard-sci-fi-visual-director｜证据化硬科幻视觉设计
 
-| 状态 | 实验；未部署；用户视觉审核待完成 |
+| 状态 | 实验分发；已有用户接受成图；广泛稳定性未证明 |
 |---|---|
 | 单独可交付 | 针对明确场景或资产的研究驱动视觉诊断、推导、圣经、导演方案和可复制提示词包。 |
-| 单独不能声称 | 仍是实验模块，不能声称已部署、实战稳定、生成成功或用户视觉通过。 |
+| 单独不能声称 | 接受图例不把实验包升级为普遍工程验证、稳定生成性能或已验收成片。 |
 
-[运行正文 `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/hard-sci-fi-visual-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/hard-sci-fi-visual-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0历史快照；已更新模块与当前源码不同。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -18,6 +20,7 @@
 - 方法固定，但每个项目的视觉身份必须从原文事实、证据、物理、制作和叙事可读性推导。
 - 剧本事实、必要外推、提案、批准决定和锁定决定保持不同状态。
 - 研究设证据底线，不设创意上限；高振幅设计必须暴露推测规则与代价。
+- 联合设计视觉注意力、材质响应、光影、尺度与原创机械形体；工程合理不能替代有辨识度的可读画面。
 
 <!-- contract:standalone -->
 ## 3. 适合单独使用的范围
@@ -26,7 +29,7 @@
 
 针对明确场景或资产的研究驱动视觉诊断、推导、圣经、导演方案和可复制提示词包。
 
-**单独不能声称:** 仍是实验模块，不能声称已部署、实战稳定、生成成功或用户视觉通过。
+**单独不能声称:** 接受图例不把实验包升级为普遍工程验证、稳定生成性能或已验收成片。
 
 <!-- contract:inputs -->
 ## 4. 输入
@@ -62,7 +65,7 @@
 ## 8. 过关标准与状态
 
 - 适用审核门通过，输出明确事实、推断、候选、批准、锁定、未知、已生成和用户审核状态。
-- 内部通过或生成文件都不能把该实验模块升级为已部署、稳定或用户通过。
+- 已接受图例保留其接受状态，实验分发仍需主动选择；这些图例不证明普遍稳定性或成片验收。
 
 > 下方“通过”只表示本模块规定的审核门已通过；结构有效、真实任务证据和用户接受必须分开记录。
 
@@ -76,7 +79,7 @@
 ## 10. 边界、依赖与权限
 
 - 不复制受保护 IP、不模仿在世创作者、不提供可操作武器制造，也不在无授权时生成。
-- 这是实验模块而非已部署模块；大量研究和内部检查不等于用户视觉通过。
+- 实验指本仓库分发状态，并不否认已接受成图；物理与制作判断仍需好看之外的独立证据。
 
 <!-- contract:agents -->
 ## 11. 跨 Agent 使用
@@ -97,6 +100,9 @@
 **引用资料**
 
 - [`references/aesthetic-audit.md`](../../../experimental/hard-sci-fi-visual-director/references/aesthetic-audit.md)
+- [`references/cinematic-image-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/cinematic-image-direction.md)
+- [`references/combat-mecha-aesthetic.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-aesthetic.md)
+- [`references/combat-mecha-form-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-form-direction.md)
 - [`references/future-interface-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-interface-systems.md)
 - [`references/future-weapon-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-weapon-systems.md)
 - [`references/inspiration-engine.md`](../../../experimental/hard-sci-fi-visual-director/references/inspiration-engine.md)
@@ -111,3 +117,9 @@
 - [`references/script-to-visual-derivation.md`](../../../experimental/hard-sci-fi-visual-director/references/script-to-visual-derivation.md)
 - [`references/style-color-system.md`](../../../experimental/hard-sci-fi-visual-director/references/style-color-system.md)
 - [`references/visual-continuity.md`](../../../experimental/hard-sci-fi-visual-director/references/visual-continuity.md)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

@@ -1,0 +1,6 @@
+interface:
+  display_name: "提示词3D预演器"
+  short_description: "把任意视频提示词自动编译并输出可播放的3D白模镜头预演视频"
+  default_prompt: "Use $whitebox-previs-executor to turn this video prompt into a playable 3D camera-and-blocking previs MP4."
+policy:
+  allow_implicit_invocation: true

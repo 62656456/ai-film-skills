@@ -131,6 +131,28 @@ class SkillIndependenceTests(unittest.TestCase):
             errors = independence.validate_skill(skill, {"alpha-skill"})
             self.assertTrue(any("POSIX machine-local path" in error for error in errors))
 
+    def test_chinese_attached_negation_preserves_independence(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            skill = make_skill(Path(raw), "alpha-skill", "本包独立运行，不依赖外部知识库。")
+            self.assertEqual(independence.validate_skill(skill, {"alpha-skill"}), [])
+
+    def test_chinese_negation_does_not_hide_later_dependency(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            skill = make_skill(Path(raw), "alpha-skill", "不依赖外部知识库；读取私人知识库后执行。")
+            self.assertTrue(any("external runtime instruction" in e for e in independence.validate_skill(skill, {"alpha-skill"})))
+
+    def test_python_dispatch_is_not_a_markdown_link(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            skill = make_skill(Path(raw), "alpha-skill")
+            (skill / "run.py").write_text("handlers[args.command](args, root)\n", encoding="utf-8")
+            self.assertEqual(independence.validate_skill(skill, {"alpha-skill"}), [])
+
+    def test_python_comment_dependency_is_still_checked(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            skill = make_skill(Path(raw), "alpha-skill")
+            (skill / "run.py").write_text("# Read [required rules](missing.md) first.\n", encoding="utf-8")
+            self.assertTrue(any("missing packaged dependency" in e for e in independence.validate_skill(skill, {"alpha-skill"})))
+
 
 if __name__ == "__main__":
     unittest.main()

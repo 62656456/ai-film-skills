@@ -5,7 +5,9 @@
 | 单独可交付 | 针对已有决定的生产控制编排与缺口审计，也可单独交付六类控制合同中的任意一类。 |
 | 单独不能声称 | 不需要配套技能包：导演、资产、类型、提示词和 QC 规则均按短剧用途重写为本地模块；真实图片和视频生成仍需要宿主媒体工具与权限。 |
 
-[运行正文 `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-short-drama-production.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0历史快照；已更新模块与当前源码不同。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -76,14 +78,14 @@
 ## 10. 边界、依赖与权限
 
 - 它可以单独整理已批准决定或审计控制缺口，但不会复制导演、资产、类型、生成和 QC 的全部能力。
-- 从零完成全流程仍需要相应专业 Skill 和宿主工具。
+- 本包自带有限控制规则，已封装但未部署；作为全流程编排器前须核对与当前5.6分镜合同的交接格式。
 
 <!-- contract:agents -->
 ## 11. 跨 Agent 使用
 
 - 标准包是完整 Skill 文件夹，不是只复制一段提示词。
 - `agents/openai.yaml` 只是 Codex 的可选界面元数据，不是其他宿主的运行依赖。
-- 合同设计依赖文本/文件；完整编排需要相关专业 Skill，真实画面审核和生成还需媒体工具与权限。
+- 控制合同设计使用文本、文件及本包规则；真实生成、审核与剪辑需宿主媒体能力和权限，并须核对现行分镜输出的交接兼容性。
 - Agent 能阅读指令不等于原生发现或原生执行；提示词回退不能写成原生兼容。
 
 <!-- contract:sources -->
@@ -99,3 +101,9 @@
 - [`references/control-contracts.md`](../../../skills/ai-short-drama-production/references/control-contracts.md)
 - [`references/independent-production-core.md`](../../../skills/ai-short-drama-production/references/independent-production-core.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/ai-short-drama-production/references/SOURCE-LEDGER.md)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

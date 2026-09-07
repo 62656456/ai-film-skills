@@ -5,7 +5,9 @@
 | Can deliver alone | A prop reference task, interaction/state views, locked handling rules, negative constraints, and JSON contract. |
 | Cannot claim alone | It does not choreograph the full scene or prove correct handling until actual reference and shot images are reviewed. |
 
-[Runtime `SKILL.md`](../../../skills/prop-asset/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/prop-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/prop-asset/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/prop-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -18,6 +20,7 @@ Define a prop's identity, scale, materials, usable faces, interfaces, holder, or
 - Establish an auditable, versioned asset identity before storyboard or video production.
 - Platform adaptation may change syntax, never approved `locked_features` or state history.
 - A static asset contract separates identity, allowed state changes, materials, geometry, lighting, and downstream references.
+- Derive attention, separation, source-based lighting, scale and detail hierarchy together. Single-image requests do not become mandatory contact sheets; new plastic and designed emission remain valid when specified.
 - A prop is tracked by usable faces, holder, orientation, open/closed or damaged state, and physical contact—not by name alone.
 
 <!-- contract:standalone -->
@@ -39,11 +42,12 @@ A prop reference task, interaction/state views, locked handling rules, negative 
 <!-- contract:workflow -->
 ## 5. Workflow
 
-1. Extract required dimensions and mark missing facts instead of inventing them.
-2. Lock identity, geometry, materials, physical behavior, lighting, and state rules.
-3. Choose the necessary views or state plates and compile a platform-aware generation task.
-4. Run the module checklist and create the machine-readable asset contract.
-5. Mark failures `rework`; only human-reviewed assets may enter `assets_approved` and downstream shots.
+1. Choose prompt-only, actual-image or scoped-diagnosis delivery and photographic, 3D-animation or 2D/illustration imaging before using a template.
+2. Extract required dimensions and mark missing facts instead of inventing them.
+3. Lock identity, geometry, materials, physical behavior, lighting, and state rules.
+4. Choose the necessary views or state plates and compile a platform-aware generation task.
+5. Run the module checklist and create the machine-readable asset contract.
+6. For text-only delivery, pixel checks remain not_evaluated. Actual image failures are rework; only explicit human review can approve an asset.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -98,4 +102,11 @@ A prop reference task, interaction/state views, locked handling rules, negative 
 
 **References**
 
+- [`references/cinematic-image-direction.md`](../../../skills/prop-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/prop-asset/references/NEGATIVE-CASE-BOOK.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

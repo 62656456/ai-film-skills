@@ -1,132 +1,63 @@
 <div align="center">
 
-<img src="../../assets/hero.svg" width="100%" alt="开放影视 Skill：面向 AI 影视创作的故事、设计、镜头与生产能力" />
+# 开放影视技能｜Open Film Skills
 
-# 开放影视 Skill
+**从点子与剧本，到导演、资产、镜头、提示词、视频和实际验收。**
 
-**让你正在使用的 Agent 把剧本变成电影化分镜、可复用视觉资产、可复制提示词和 AI 视频生产流程。**
-
-[English](../../../README.md#english-overview) · **简体中文** · [日本語](../ja/README.md) · [한국어](../ko/README.md)
+[完整中文主页](../../../README.md) · [English](../../../README.md#english-overview) · [日本語](../ja/README.md) · [한국어](../ko/README.md)
 
 </div>
 
-开放影视 Skill 共包含 19 个可独立安装的 Agent Skill：18 个正式模块和 1 个隔离实验模块。第一次使用先选一个结果，不必先理解整套系统。
+![完整AI影视工作流](../../assets/workflow-overview.svg)
 
-## 从一个结果开始
+[完整流程图、原始Mermaid和职责表](../../WORKFLOW.md) · [14张用户接受成图](../../../README.md#本轮14张用户接受成图) · [20模块目录](../../../SKILL_CATALOG.md) · [40份中英指南](../../skills/INDEX.md)
 
-| 写或修剧本 | 设计可执行镜头 | 组织 AI 视频生产 |
-|---|---|---|
-| 用 [`director-agent`](../../skills/zh-CN/director-agent.md) 处理因果、人物行动、对白、潜台词、场景目的和导演判断。 | 用 [`ai-storyboard-director`](../../skills/zh-CN/ai-storyboard-director.md) 处理走位、焦段、机位、摄影机运动、连续性和可复制提示词。 | 用 [`produce-ai-video`](../../skills/zh-CN/produce-ai-video.md) 处理资产准备、费用门、生成阶段、剪辑、完整播放检查和修复。 |
-| [查看诊断与改写前后对比](../../../examples/director-agent-before-after.md) | [查看5.4.4镜头案例](../../../examples/storyboard-director-5.4.4-visible-camera-plan.md) | [查看生产Skill说明](../../skills/zh-CN/produce-ai-video.md) |
+## 当前源码与发布快照
 
-## 先看一个真实差异
+本仓库当前源码含 **18项常规＋2项实验＝20个独立模块**，对应40份英文/简体中文指南。20个模块中有19项影视技能和1项网页辅助；工作流另列外部仙侠，因此共20项影视职责＋1项网页辅助，外部项不计入源码包和指南数。
 
-<img src="../../assets/storyboard-544-proof.png" width="100%" alt="只有剧情短标题的旧写法与5.4.4可执行摄影方案标题的对比" />
+- 当前分镜源码为 **5.6**，已选择日常使用；明确作品目录时保存恢复导演意图、选中镜头与场景状态。
+- [公开v1.3.0 Release](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0)仍是含 **5.4.4** 的历史快照，不因源码改变而更新。
+- 另行标记的5.6独立Preview有自己的范围，不等于新完整套装Release。
 
-5.4.4 不再只写“齿轮滑落”一类剧情短标题，而是直接展示焦段与光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点接力和动作落点。这是已经回归验证的文字行为案例；它不代表视频模型已经完全执行，也不代表用户已完成成片审美验收。
+本轮说明源码刷新，不声称已发布新Release。[安装版本选择](../../INSTALLATION.md)
 
-- [查看完整 8 秒案例](../../../examples/storyboard-director-5.4.4-visible-camera-plan.md)
-- [读取正式运行合同](../../../skills/ai-storyboard-director/SKILL.md)
-- [比较全部 Skill 与证据状态](../../../SKILL_CATALOG.md)
+## 按结果选入口
 
-## 60 秒试用
+| 结果 | Skill |
+|---|---|
+| 可读剧本、对白修订或导演方案 | [director-agent](../../skills/zh-CN/director-agent.md) |
+| 分镜、摄影设计和完整母提示词 | [ai-storyboard-director](../../skills/zh-CN/ai-storyboard-director.md) |
+| 人物、场景和道具参考 | [character-asset](../../skills/zh-CN/character-asset.md)、[scene-asset](../../skills/zh-CN/scene-asset.md)、[prop-asset](../../skills/zh-CN/prop-asset.md) |
+| 八种类型、硬科幻或仙侠方向 | [类型目录](../../../SKILL_CATALOG.md#genre-visual-language)、[硬科幻实验](../../skills/zh-CN/hard-sci-fi-visual-director.md)、[外部仙侠](https://github.com/liyue-aigc/xianxia-visual-director) |
+| 生成前看3D机位与基础走位 | [whitebox-previs-executor](../../skills/zh-CN/whitebox-previs-executor.md)，实验包 |
+| 实际生成、剪辑、声音和完整看片 | [produce-ai-video](../../skills/zh-CN/produce-ai-video.md) |
+| 选题研究、批准后知识写入、网页工作台 | [完整目录](../../../SKILL_CATALOG.md#production-product-and-research) |
 
-先用开放生态的 Skills CLI 列出18个正式 Skill，再把一个 Skill 复制到它为 Codex 选择的项目路径：
+已有材料从对应阶段继续，不要求每次重做全流程。短剧控制器已封装但未部署，作为专项编排使用前需对齐当前5.6交接。
 
-```bash
-npx --yes skills@latest add 62656456/ai-film-skills --list
-npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
-```
-
-直接浏览在线目录：[18个正式Skill](https://skills.sh/62656456/ai-film-skills) · [`ai-storyboard-director`](https://skills.sh/62656456/ai-film-skills/ai-storyboard-director) · [`director-agent`](https://skills.sh/62656456/ai-film-skills/director-agent)
-
-也可以使用仓库自带的明确宿主安装器：
+## 安装当前检出的源码
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
 cd ai-film-skills
+git log -1 --oneline
+python scripts/install_skill.py --list
 python scripts/install_skill.py ai-storyboard-director --platform codex
 ```
 
-然后在 Agent 中输入：
+安装前检查所选分支/提交与Skill版本。未推送本地更新不会自动出现在公共默认分支。其他宿主、历史ZIP、实验包主动安装及覆盖边界见[安装指南](../../INSTALLATION.md)和[兼容说明](../../COMPATIBILITY.md)。完整文件夹可读不等于每个宿主已原生加载或实际运行。
 
-```text
-使用 $ai-storyboard-director，把下面已经确认的8秒剧情设计成人读分镜和一条完整视频提示词。每个时间段标题直接显示焦段/光学、机位方位与高度、摄影机路径与朝向变化、速度、焦点或遮挡接力和动作落点：[粘贴剧情]
-```
+## 实际成果与方法边界
 
-Claude Code 把安装命令中的 `--platform codex` 改成 `--platform claude-code`。Skills CLI 1.5.23 的发现和六文件复制路径已经隔离验证；是否原生加载仍由具体宿主决定。查看[CLI验证记录](../../../examples/skills-cli-install-verification.md)和[skills.sh索引验证](../../../examples/skills-sh-index-verification.md)，其他宿主和 ZIP 安装方式见[安装指南](../../INSTALLATION.md)。
+本轮14张原创图均经用户接受，包括8类型、5张硬科幻和1张仙侠；主页按原比例展示并提供原始PNG，[清单](../../showcase/manifest.json)保留逐图证据。没有旧版同题A/B，不声称量化提升或全题材稳定。
 
-## 在 GitHub 继续阅读
+新增画面关系方法先看观看重点，再设计明暗、色彩、材质与空间。它不把暖光、浅景深、霓虹、磨损或前景人物当通用要求；二维动画、三维动画与摄影写实分别选择负向。单图请求不自动变多格，只有文本时不假称像素验收。
 
-19 个模块都已经提供英文和简体中文设计说明，共 **38 个逐模块页面**。每页讲清设计目的、理念、输入、流程、定向退回、审核门、过关证据、输出、边界、跨 Agent 条件和随包文件。
+白模只证明已实现代理和已过动作门的预演解释，不证明任意完整打斗或视频模型将生成相同画面。5.6记录程序不评审美。最终视频仍需实际生成、完整播放、修复和用户验收。
 
-- [浏览全部 38 个设计说明](../../skills/INDEX.md)
-- [阅读共同的定向退回、审核与过关逻辑](../../SKILL_DESIGN_SYSTEM.md)
-- [按任务比较 19 个模块、运行正文和独立 ZIP](../../../SKILL_CATALOG.md)
+## 来源与许可
 
-设计说明是给人在 GitHub 上阅读的入口；`SKILL.md` 仍是 Agent 的运行真相。结构通过、宿主执行、真实任务证据和用户接受必须分开记录。
+外部仙侠只列[上游链接](https://github.com/liyue-aigc/xianxia-visual-director)，没有已核实再分发许可，因此不复制源码或进入ZIP。本仓库原创内容按[Apache License 2.0](../../../LICENSE)分发；参考媒体和私人项目不随包发布。
 
-## 从这里开始
-
-| 你的任务 | 阅读设计说明 | 运行正文 | 独立 ZIP |
-|---|---|---|---|
-| 写剧本、改剧本、梳理人物因果与对白 | [`director-agent`](../../skills/zh-CN/director-agent.md) | [`SKILL.md`](../../../skills/director-agent/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) |
-| 把确认后的剧本设计成分镜与视频提示词 | [`ai-storyboard-director`](../../skills/zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) |
-| 设计人物、场景或道具参考资产 | [`character-asset`](../../skills/zh-CN/character-asset.md) · [`scene-asset`](../../skills/zh-CN/scene-asset.md) · [`prop-asset`](../../skills/zh-CN/prop-asset.md) | [人物](../../../skills/character-asset/SKILL.md) · [场景](../../../skills/scene-asset/SKILL.md) · [道具](../../../skills/prop-asset/SKILL.md) | [人物](https://github.com/62656456/ai-film-skills/releases/latest/download/character-asset.zip) · [场景](https://github.com/62656456/ai-film-skills/releases/latest/download/scene-asset.zip) · [道具](https://github.com/62656456/ai-film-skills/releases/latest/download/prop-asset.zip) |
-| 为画面加入可观察的类型视觉语言 | [查看完整目录](../../../SKILL_CATALOG.md#genre-visual-language) | [运行索引](../../skills/INDEX.md) | [最新发布](https://github.com/62656456/ai-film-skills/releases/latest) |
-| 把批准内容生产成可观看 AI 视频 | [`produce-ai-video`](../../skills/zh-CN/produce-ai-video.md) | [`SKILL.md`](../../../skills/produce-ai-video/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) |
-| 编排 AI 短剧完整生产流程 | [`ai-short-drama-production`](../../skills/zh-CN/ai-short-drama-production.md) | [`SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) |
-| 设计、实现或审查网页界面 | [`web-design-director`](../../skills/zh-CN/web-design-director.md) | [`SKILL.md`](../../../skills/web-design-director/SKILL.md) | [下载](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) |
-
-### 当前分镜版本：5.4.4
-
-正式 [`ai-storyboard-director`](../../../skills/ai-storyboard-director/SKILL.md) 已更新到 5.4.4。复杂摄影机能力已收回单一稳定入口，同时增加用户可见提示词自然语言包装、锁定参考图与多空间连续性门，并要求每个分段镜头标题直接显示真实摄影方案。结构与文字行为检查已通过；真实视频模型生成和用户明确审阅仍待完成。原独立 motion-lab 入口已经退役，不应作为第二个分镜 Skill 安装。
-
-## 这套 Skill 解决什么
-
-它们不是把热门视觉词堆成提示词，而是把剧情因果、人物目的、走位、空间连续性、动作物理、光线、材质和生产门转成可复用的执行合同。
-
-第一交付层始终是人能判断的真实结果：剧本、分镜、资产合同、视觉方向、研究报告或合格媒体。内部字段和检查只用于支撑结果，不代替结果。
-
-<img src="../../assets/skill-map.svg" width="100%" alt="从故事与资产到视觉语言、镜头、生产和验证的能力地图" />
-
-## 单独可用不等于包办全部
-
-每个模块都能在自己点名的结果边界内单独使用。例如，人物资产模块可以单独输出人物任务说明与资产合同，类型模块可以单独输出视觉参数包，导演模块可以单独写或诊断剧本。
-
-“可独立”不代表类型模块同时负责写剧本，也不代表没有生图工具就已经生成资产图，更不代表生产模块可以绕过费用、版权、发布权限和用户审核。每个逐模块页面都明确写出“单独可交付”和“单独不能声称”。
-
-## 跨 Agent 安装
-
-```bash
-git clone https://github.com/62656456/ai-film-skills.git
-cd ai-film-skills
-python scripts/install_skill.py --list
-python scripts/install_skill.py ai-storyboard-director --platform claude-code
-```
-
-同一个 Skill 文件夹可安装到：Codex 的 `.codex/skills/`、Claude Code 的 `.claude/skills/`、TRAE 项目的 `.agents/skills/`、CodeBuddy 的 `.codebuddy/skills/`；WorkBuddy 可在“添加技能 → 上传技能”中导入独立 ZIP。其他 Agent 若没有原生 Skill 加载器，可以把 `SKILL.md` 与本地引用文件作为指令导入。
-
-每个模块已经自带所需引用，不依赖共享目录。`agents/openai.yaml` 只是 Codex 可选界面元数据，其他 Agent 可以安全忽略。Agent 能阅读指令不等于原生发现或原生执行。具体产品名核对、官方依据和限制见 [Agent 兼容说明](../../COMPATIBILITY.md)，完整步骤见 [安装指南](../../INSTALLATION.md)。
-
-## 状态不是装饰
-
-- **已部署**：当前个人运行包正在使用，但不等于已经完成三个不同真实任务的稳定验证。
-- **已封装**：结构达到分发要求，但当前没有部署。
-- **实验中**：与正常安装隔离，明确保留未批准或未完成状态。
-- **已淘汰**：故意不收录，不能从旧文件自动恢复。
-- **第三方**：不当成个人原创再次发布。
-
-详细状态见 [Skill 完整目录](../../../SKILL_CATALOG.md)，设计总则见 [每个 Skill 如何设计](../../SKILL_DESIGN_SYSTEM.md)，结构说明见 [架构](../../ARCHITECTURE.md)。
-
-## 仓库设计来源
-
-仓库借鉴了 [OmniRoute](https://github.com/diegosouzapw/OmniRoute) 的信息组织优点：清晰首屏、快速导航、多语种入口、可复制安装命令、状态展示、图解、贡献入口、安全规则和第三方说明。没有复制其品牌、图片、文案或代码。
-
-## 反馈与联系
-
-欢迎通过 [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions)、[GitHub Issues](https://github.com/62656456/ai-film-skills/issues) 或邮件 [haldissita@gmail.com](mailto:haldissita@gmail.com) 提供真实使用反馈。
-
-## 开源协议
-
-除非文件另有声明，本仓库个人原创内容使用 [Apache License 2.0](../../../LICENSE)。
+[审核总则](../../SKILL_DESIGN_SYSTEM.md) · [分发范围](../../../PUBLICATION_SCOPE.md) · [反馈](https://github.com/62656456/ai-film-skills/issues)

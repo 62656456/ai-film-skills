@@ -1,11 +1,13 @@
 # ai-storyboard-director｜剧本转分镜与提示词
 
-| 状态 | 已部署；5.4.4 是当前安装版本；真实视频生成与用户审阅仍待完成 |
+| 状态 | 当前源码5.6，已选择日常使用；v1.3.0 ZIP保留5.4.4 |
 |---|---|
 | 单独可交付 | 针对已有批准剧本的完整分镜和可复制提示词包。 |
 | 单独不能声称 | 不改写剧本、不直接生成视频，也不证明平台生成成功。 |
 
-[运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0旧ZIP包含5.4.4，不是当前源码5.6。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -40,9 +42,10 @@
 
 1. 先读因果、人物目标、关系、情绪、空间、动作和连续性。
 2. 先固定世界状态并设计调度，再选择摄影机投影。
-3. 构建镜头句、丰富覆盖和分阶段摄影机事件，让剧情拍点可见。
-4. 输出人读分镜，并把数字10信息编译进六个可见提示词模块。
-5. 执行十二项完成门，只返回点名创作成果和真正未解决的边界。
+3. 在明确作品目录中实际恢复设计记录和所需知识，以版本与哈希检查保存意图、镜头和状态，再回读结果。
+4. 构建镜头句、丰富覆盖和分阶段摄影机事件，让剧情拍点可见。
+5. 输出人读分镜，并把数字10信息编译进六个可见提示词模块。
+6. 执行当前包完成门，反向核对提示词格式化是否保留已选摄影设计；只交付点名创作成果与真实边界。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚
@@ -61,7 +64,7 @@
 <!-- contract:pass -->
 ## 8. 过关标准与状态
 
-- 十二项完成检查全部通过，且人读分镜不依赖工程字段。
+- 当前包完成门通过，且人读分镜无需工程字段即可理解。
 - 六模块包含数字10全部信息，但这仍不证明平台已经成功生成视频。
 
 > 下方“通过”只表示本模块规定的审核门已通过；结构有效、真实任务证据和用户接受必须分开记录。
@@ -69,7 +72,7 @@
 <!-- contract:outputs -->
 ## 9. 输出
 
-- 包含时间、景别/摄影机、可见动作、台词与声音的人读多镜头分镜。
+- 五列人读分镜：时间、景别/机位、摄影机、画面与动作、台词/声音。
 - 使用六模块外层和数字10信息内核的可复制正式提示词。
 
 <!-- contract:boundaries -->
@@ -77,13 +80,14 @@
 
 - 不改写锁定剧情事实或台词，不虚构平台能力或生成成功。
 - 分镜完成不等于成片，也不等于用户通过视觉结果。
+- 5.6程序检查已记录状态、时间与明确几何，不评审美、不证明图像/视频语义，也不能强制每个聊天入口执行；无作品目录的文字咨询不虚构持久化。
 
 <!-- contract:agents -->
 ## 11. 跨 Agent 使用
 
 - 标准包是完整 Skill 文件夹，不是只复制一段提示词。
 - `agents/openai.yaml` 只是 Codex 的可选界面元数据，不是其他宿主的运行依赖。
-- 任何能读取完整文件夹的宿主都可做文本分镜；文件能力用于引用和哈希回滚，真实生成另需媒体工具与权限。
+- 文本分镜需完整文件夹；项目保存恢复另需授权文件能力和包内Python标准库程序；媒体执行另需模型工具权限。
 - Agent 能阅读指令不等于原生发现或原生执行；提示词回退不能写成原生兼容。
 
 <!-- contract:sources -->
@@ -98,5 +102,17 @@
 
 - [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
+- [`references/design-memory-protocol.md`](../../../skills/ai-storyboard-director/references/design-memory-protocol.md)
+- [`references/framing-and-axis.md`](../../../skills/ai-storyboard-director/references/framing-and-axis.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)
+
+**确定性辅助脚本**
+
+- [`scripts/design_memory.py`](../../../skills/ai-storyboard-director/scripts/design_memory.py)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

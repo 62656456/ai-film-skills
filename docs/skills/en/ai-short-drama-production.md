@@ -5,7 +5,9 @@
 | Can deliver alone | Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts. |
 | Cannot claim alone | It does not require a companion package: its director, asset, genre, prompt, and QC rules are rewritten as local short-drama modules, while actual image/video generation still needs the host's media tools and permissions. |
 
-[Runtime `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-short-drama-production.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -76,14 +78,14 @@ Production-control orchestration and gap auditing for existing decisions, includ
 ## 10. Boundaries, dependencies, and permissions
 
 - It can organize approved decisions or audit missing controls by itself; it does not copy every directing, asset, genre, generation, or QC capability into one module.
-- From-zero end-to-end production still needs the relevant specialist Skills and host tools.
+- This source package contains its own bounded control rules. It is packaged but not deployed; check its handoff format against the current 5.6 storyboard contract before using it as an end-to-end coordinator.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use
 
 - The canonical package is the complete Skill folder, not a copied prompt fragment.
 - `agents/openai.yaml` is optional Codex UI metadata and is not a runtime dependency for other hosts.
-- Contract design is text/file based. Full orchestration benefits from the companion specialist Skills, while actual image review and generation require media tools and permissions.
+- Control-contract design uses text and files with this package's local rules; actual generation, review and editing need host media tools and permissions. Handoff compatibility with current storyboard output must be checked.
 - An Agent may read the instructions without native Skill discovery, but prompt-only reading must not be described as native integration.
 
 <!-- contract:sources -->
@@ -99,3 +101,9 @@ Production-control orchestration and gap auditing for existing decisions, includ
 - [`references/control-contracts.md`](../../../skills/ai-short-drama-production/references/control-contracts.md)
 - [`references/independent-production-core.md`](../../../skills/ai-short-drama-production/references/independent-production-core.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/ai-short-drama-production/references/SOURCE-LEDGER.md)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)

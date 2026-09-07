@@ -5,7 +5,9 @@
 | 单独可交付 | 人物参考图任务、视图计划、锁定特征清单、负向约束和 JSON 合同。 |
 | 单独不能声称 | 没有生图工具和视觉审核时，不能声称人物图已存在或已批准。 |
 
-[运行正文 `SKILL.md`](../../../skills/character-asset/SKILL.md) · [独立 ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/character-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/character-asset/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/character-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+
+v1.3.0历史快照；已更新模块与当前源码不同。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -18,6 +20,7 @@
 - 先建立可审核、可版本化的资产身份，再进入分镜或视频生产。
 - 平台适配可以改变语法，但不能改变已批准的 `locked_features` 和状态历史。
 - 静态资产合同把身份、允许状态变化、材质、几何、布光和下游引用分开。
+- 联合推导注意力、主体分离、有来源光影、尺度与细节层次。单图不自动变多格；按设计保留新塑料和有依据的发光。
 - 人物连续性优先锁定五官、体型、发型、服装层次、配饰、年龄和非人结构，不让装饰风格压过身份。
 
 <!-- contract:standalone -->
@@ -39,11 +42,12 @@
 <!-- contract:workflow -->
 ## 5. 流程逻辑
 
-1. 提取必填维度，缺失事实明确标记，不臆造。
-2. 锁定身份、几何、材质、物理行为、布光和状态规则。
-3. 选择必要视图或状态图，编译平台适配的生成任务。
-4. 执行模块质检并生成机读资产合同。
-5. 失败标记为 `rework`；只有经人审的资产才能进入 `assets_approved` 和下游镜头。
+1. 先选择仅提示词、实际图或局部诊断交付，以及摄影写实、三维动画或二维插画成像，再使用模板。
+2. 提取必填维度，缺失事实明确标记，不臆造。
+3. 锁定身份、几何、材质、物理行为、布光和状态规则。
+4. 选择必要视图或状态图，编译平台适配的生成任务。
+5. 执行模块质检并生成机读资产合同。
+6. 仅文本交付时像素检查保持not_evaluated；实际图失败才标rework，资产需明确人审才能批准。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚
@@ -98,4 +102,11 @@
 
 **引用资料**
 
+- [`references/cinematic-image-direction.md`](../../../skills/character-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/character-asset/references/NEGATIVE-CASE-BOOK.md)
+
+**新构建 ZIP 的分发许可文件**
+
+新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
+
+- [`LICENSE`](../../../LICENSE)

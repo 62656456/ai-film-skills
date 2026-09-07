@@ -1,84 +1,78 @@
 # Skill catalog
 
-Every entry below is a bounded, self-contained module. Its name opens the human-readable GitHub design guide; the `SKILL.md` column opens the exact runtime instruction; the ZIP contains the standalone installable folder.
+**Current source: 18 regular + 2 experimental = 20 modules; 40 English / Simplified Chinese guides.**
 
-- [Browse all 40 English / Simplified Chinese guides](docs/skills/INDEX.md)
-- [Read the shared directed-return, review, and pass logic](docs/SKILL_DESIGN_SYSTEM.md)
-- [Installation](docs/INSTALLATION.md) · [Agent compatibility](docs/COMPATIBILITY.md)
+[Full workflow and handoffs](docs/WORKFLOW.md) · [All guides](docs/skills/INDEX.md) · [Installation](docs/INSTALLATION.md) · [Design/review system](docs/SKILL_DESIGN_SYSTEM.md)
 
-After cloning, install one module with:
+Current-source installation and published archives are different choices. The archive links below are explicitly pinned to historical **v1.3.0**, which preserves Storyboard Director **5.4.4** and predates this source refresh. Current storyboard source is **5.6**; its separate standalone Preview is a separately labeled artifact. No new Release is claimed here.
+
+The normal complete-studio archive contains only regular packages. Both experiments require `--experimental`. A self-contained Skill owns its bounded output; it does not supply missing models, media tools, credits or host permissions.
 
 ```bash
-python scripts/install_skill.py <skill-name> --platform <codex|claude-code|trae|codebuddy>
+python scripts/install_skill.py <skill-name> --platform codex
 ```
-
-“Standalone” means the module can deliver its named outcome without a shared repository directory. It does not mean that a visual-style module also writes a script, that an asset contract can generate images without a media tool, or that a production module can bypass host permissions, cost approval, rights, or user review. Each design guide states the exact boundary.
 
 ## Story and directing
 
-| Skill design guide | Best for | Runtime | Standalone download | Release state |
+| Module guide | Purpose | Current runtime | Source status | Historical archive |
 |---|---|---|---|---|
-| [`director-agent`](docs/skills/en/director-agent.md) | Script creation and revision, causality, character action, natural dialogue, and pre-storyboard directing decisions | [`SKILL.md`](skills/director-agent/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/director-agent.zip) | Deployed; long-term stability still accumulating |
-| [`ai-storyboard-director`](docs/skills/en/ai-storyboard-director.md) | Script understanding, blocking, shot sentences, multi-camera projection, complex camera movement, and production prompts | [`SKILL.md`](skills/ai-storyboard-director/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-storyboard-director.zip) | Deployed; 5.4.4 is current; real-video generation and user review pending |
+| [director-agent](docs/skills/en/director-agent.md) | Create, revise, or diagnose scripts and make the directing decisions that must exist before full storyboard production. | [SKILL.md](skills/director-agent/SKILL.md) | Deployed; long-term practice evidence remains separate | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/director-agent.zip) |
+| [ai-storyboard-director](docs/skills/en/ai-storyboard-director.md) | Turn an approved script into human-readable multi-shot design and production prompts while preserving causality, blocking, timing, and world-space continuity. | [SKILL.md](skills/ai-storyboard-director/SKILL.md) | Current source 5.6; selected for daily use; v1.3.0 ZIP preserves 5.4.4 | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) |
 
 ## Asset definition
 
-| Skill design guide | Best for | Runtime | Standalone download | Release state |
+| Module guide | Purpose | Current runtime | Source status | Historical archive |
 |---|---|---|---|---|
-| [`character-asset`](docs/skills/en/character-asset.md) | Character identity, views, expressions, actions, and continuity reference contracts | [`SKILL.md`](skills/character-asset/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/character-asset.zip) | Deployed |
-| [`scene-asset`](docs/skills/en/scene-asset.md) | Reusable environment, spatial anchor, lighting, and continuity reference contracts | [`SKILL.md`](skills/scene-asset/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/scene-asset.zip) | Deployed |
-| [`prop-asset`](docs/skills/en/prop-asset.md) | Prop identity, state, handling, material, scale, and continuity contracts | [`SKILL.md`](skills/prop-asset/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/prop-asset.zip) | Deployed |
+| [character-asset](docs/skills/en/character-asset.md) | Define a character's stable identity, views, expressions, actions, clothing, materials, and allowed state changes for downstream continuity. | [SKILL.md](skills/character-asset/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/character-asset.zip) |
+| [scene-asset](docs/skills/en/scene-asset.md) | Define a reusable environment through layout, entrances, exits, landmarks, scale, lighting, materials, camera access, and continuity states. | [SKILL.md](skills/scene-asset/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/scene-asset.zip) |
+| [prop-asset](docs/skills/en/prop-asset.md) | Define a prop's identity, scale, materials, usable faces, interfaces, holder, orientation, wear, operation, and state transitions. | [SKILL.md](skills/prop-asset/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/prop-asset.zip) |
 
 ## Genre visual language
 
-| Skill design guide | Best for | Runtime | Standalone download | Release state |
+| Module guide | Purpose | Current runtime | Source status | Historical archive |
 |---|---|---|---|---|
-| [`cyberpunk-design`](docs/skills/en/cyberpunk-design.md) | Observable cyberpunk image, color, space, action, material, and continuity parameters | [`SKILL.md`](skills/cyberpunk-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/cyberpunk-design.zip) | Deployed |
-| [`epic-design`](docs/skills/en/epic-design.md) | Scale, spectacle, composition, light, movement, and material parameters | [`SKILL.md`](skills/epic-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/epic-design.zip) | Deployed |
-| [`fantasy-design`](docs/skills/en/fantasy-design.md) | Fantasy world, magic, environment, light, material, and continuity parameters | [`SKILL.md`](skills/fantasy-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/fantasy-design.zip) | Deployed |
-| [`horror-design`](docs/skills/en/horror-design.md) | Horror framing, space, light, threat, action, material, and continuity parameters | [`SKILL.md`](skills/horror-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/horror-design.zip) | Deployed |
-| [`noir-design`](docs/skills/en/noir-design.md) | Noir and crime framing, contrast, space, action, and material parameters | [`SKILL.md`](skills/noir-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/noir-design.zip) | Deployed |
-| [`romance-design`](docs/skills/en/romance-design.md) | Romantic distance, light, movement, material, emotion, and continuity parameters | [`SKILL.md`](skills/romance-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/romance-design.zip) | Deployed |
-| [`war-design`](docs/skills/en/war-design.md) | War framing, terrain, explosions, action, material, and continuity parameters | [`SKILL.md`](skills/war-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/war-design.zip) | Deployed |
-| [`wuxia-design`](docs/skills/en/wuxia-design.md) | Wuxia framing, blocking, weapons, action, Eastern materials, and continuity parameters | [`SKILL.md`](skills/wuxia-design/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/wuxia-design.zip) | Deployed |
+| [cyberpunk-design](docs/skills/en/cyberpunk-design.md) | Translate body/technology relations and social space into functional light, color, materials, framing and continuity; daylight and dry interiors remain valid. | [SKILL.md](skills/cyberpunk-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/cyberpunk-design.zip) |
+| [epic-design](docs/skills/en/epic-design.md) | Translate epic scale into human references, terrain, formation, layered spectacle, motivated camera distance, light, material, and movement. | [SKILL.md](skills/epic-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/epic-design.zip) |
+| [fantasy-design](docs/skills/en/fantasy-design.md) | Translate fantasy into coherent world rules, magical cause and light, spatial behavior, materials, creatures, action, and continuity. | [SKILL.md](skills/fantasy-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/fantasy-design.zip) |
+| [horror-design](docs/skills/en/horror-design.md) | Translate horror into threat placement, reveal timing, readable darkness, spatial uncertainty, physical traces, sound, and continuity. | [SKILL.md](skills/horror-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/horror-design.zip) |
+| [noir-design](docs/skills/en/noir-design.md) | Translate noir and crime tension into readable contrast, motivated practical light, obstruction, power geometry, wet or worn materials, restrained action, and sound. | [SKILL.md](skills/noir-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/noir-design.zip) |
+| [romance-design](docs/skills/en/romance-design.md) | Translate romance into distance, gaze, contact, reciprocal action, light and material choices driven by the actual relationship, without requiring warm lighting. | [SKILL.md](skills/romance-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/romance-design.zip) |
+| [war-design](docs/skills/en/war-design.md) | Translate war into terrain, formation, weapon direction, cover, movement, impact, smoke and debris physics, logistics traces, sound, and continuity. | [SKILL.md](skills/war-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/war-design.zip) |
+| [wuxia-design](docs/skills/en/wuxia-design.md) | Translate wuxia into grounded force, weapon paths, footwork, cloth and hair response, architecture, Eastern materials, rhythm, sound, and continuity. | [SKILL.md](skills/wuxia-design/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/wuxia-design.zip) |
 
 ## Production, product, and research
 
-| Skill design guide | Best for | Runtime | Standalone download | Release state |
+| Module guide | Purpose | Current runtime | Source status | Historical archive |
 |---|---|---|---|---|
-| [`produce-ai-video`](docs/skills/en/produce-ai-video.md) | Turning approved material into a qualified, watchable AI video through explicit cost and quality gates | [`SKILL.md`](skills/produce-ai-video/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/produce-ai-video.zip) | Deployed |
-| [`ai-short-drama-production`](docs/skills/en/ai-short-drama-production.md) | Orchestrating script beats, assets, shots, generation, quality control, and editing | [`SKILL.md`](skills/ai-short-drama-production/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/ai-short-drama-production.zip) | Packaged; not deployed |
-| [`web-design-director`](docs/skills/en/web-design-director.md) | Directing, building, or auditing distinctive production-grade web interfaces | [`SKILL.md`](skills/web-design-director/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/web-design-director.zip) | Deployed |
-| [`d-official-market-analysis`](docs/skills/en/d-official-market-analysis.md) | Source-backed official research for AI film and adjacent media markets | [`SKILL.md`](skills/d-official-market-analysis/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-official-market-analysis.zip) | Deployed |
-| [`d-data-analysis-semantic-layer`](docs/skills/en/d-data-analysis-semantic-layer.md) | Reviewing and versioning approved analytical knowledge into a semantic layer | [`SKILL.md`](skills/d-data-analysis-semantic-layer/SKILL.md) | [ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-data-analysis-semantic-layer.zip) | Deployed |
+| [produce-ai-video](docs/skills/en/produce-ai-video.md) | Turn an approved script or passage into a qualified, watchable AI-generated final video through directing, shots, generation, edit, sound, full playback, and repair. | [SKILL.md](skills/produce-ai-video/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/produce-ai-video.zip) |
+| [ai-short-drama-production](docs/skills/en/ai-short-drama-production.md) | Turn approved creative decisions into traceable beat, asset, blocking, lighting, action, sketch, prompt, and QC control contracts for AI short-drama production. | [SKILL.md](skills/ai-short-drama-production/SKILL.md) | Packaged; not deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-short-drama-production.zip) |
+| [web-design-director](docs/skills/en/web-design-director.md) | Direct, review, or build a distinctive production-grade web interface from product truth through rendered verification. | [SKILL.md](skills/web-design-director/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/web-design-director.zip) |
+| [d-official-market-analysis](docs/skills/en/d-official-market-analysis.md) | Research film, short drama, animation, AI film, and adjacent media markets from current official and authoritative evidence for a defined decision. | [SKILL.md](skills/d-official-market-analysis/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/d-official-market-analysis.zip) |
+| [d-data-analysis-semantic-layer](docs/skills/en/d-data-analysis-semantic-layer.md) | Validate, version, expire, preserve conflicts, and write approved analytical candidates into the D semantic target explicitly supplied by the current task, with a reconciled receipt. | [SKILL.md](skills/d-data-analysis-semantic-layer/SKILL.md) | Deployed | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/d-data-analysis-semantic-layer.zip) |
 
 ## Experimental
 
-| Skill design guide | Best for | Runtime | Standalone download | Release state |
+| Module guide | Purpose | Current runtime | Source status | Historical archive |
 |---|---|---|---|---|
-| [`hard-sci-fi-visual-director`](docs/skills/en/hard-sci-fi-visual-director.md) | Evidence-grounded hard-science-fiction visual direction with physical, ecological, industrial, and story-legibility gates | [`SKILL.md`](experimental/hard-sci-fi-visual-director/SKILL.md) | [Experimental ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/hard-sci-fi-visual-director.zip) | Experimental; not deployed; user visual review pending |
+| [hard-sci-fi-visual-director](docs/skills/en/hard-sci-fi-visual-director.md) | Derive original hard-science-fiction worlds, systems, organisms, equipment, interfaces, camera, and prompts from script truth, evidence, physics, production, and continuity. | [SKILL.md](experimental/hard-sci-fi-visual-director/SKILL.md) | Experimental distribution; user-accepted image examples; broad reliability unproven | [v1.3.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/hard-sci-fi-visual-director.zip) |
+| [whitebox-previs-executor](docs/skills/en/whitebox-previs-executor.md) | Compile an existing prompt or storyboard into a playable 3D preview of camera, spatial parallax, basic blocking, timing and cuts, with explicit action-capability limits. | [SKILL.md](experimental/whitebox-previs-executor/SKILL.md) | Experimental; implemented basic previs and individually qualified action gates | [Source only](docs/INSTALLATION.md#experimental-packages) |
 
-Experimental packages are not included in the complete-studio ZIP and require deliberate installation.
+## External workflow route
 
-## How review and return work
+[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director) is listed only to complete the Eastern xianxia workflow. Its source and ZIP are not redistributed because no redistribution permission is verified. Ten visual routes therefore mean eight regular genres, one experimental hard-science-fiction module and this external route.
 
-Every module has its own inputs and gates, but all use the same causal discipline:
+The repository has 19 filmmaking modules plus one web helper; including external xianxia gives 20 filmmaking responsibilities plus one web helper. The external entry is not counted in the 20 packaged modules or 40 guides.
 
-```text
-bounded input -> visible draft -> module review gates
-    fail -> return to the earliest broken decision while preserving approved constraints
-    pass -> record observable evidence and produce the named handoff
-```
+## Evidence and return paths
 
-Read [How every Skill is designed](docs/SKILL_DESIGN_SYSTEM.md) for the common contract. A module pass, structural validation, host execution, real-task evidence, and explicit user acceptance are different states.
+The [14-image showcase](docs/showcase/manifest.json) contains actual user-accepted originals. The old [style gallery](docs/style-gallery/manifest.json), [5.4.4 text example](examples/storyboard-director-5.4.4-visible-camera-plan.md), and [previs clips](docs/media/media-manifest.json) retain their historical states. No old-version same-prompt A/B study was performed.
+
+When a visible result fails, return to the earliest responsible story, asset, camera, light, material, execution or editing decision. Preserve approved constraints. File validity, host activation, real-task output and user acceptance are separate states. An experimental distribution can have accepted examples without being generally practice-validated.
 
 ## Intentionally absent
 
-- `sci-fi-design`: retired after failed real-image validation; it is not restored.
-- `xianxia-visual-director`: third-party repository with no redistribution license verified at packaging time.
-- `frontend-design`: third-party Apache-2.0 package; not presented as original work. The public `web-design-director` uses an original local creative-direction reference instead.
-- System Skills and Lark connector Skills: outside the authored repository scope.
+- `sci-fi-design`: retired; not restored.
+- External or system/connector/plugin Skills outside the authored scope.
+- Third-party `frontend-design` source, private projects, credentials and unlicensed media.
 
-## Feedback
-
-If a module works, fails, or almost works on a real task, share the evidence through [Discussions](https://github.com/62656456/ai-film-skills/discussions), [Issues](https://github.com/62656456/ai-film-skills/issues), or [haldissita@gmail.com](mailto:haldissita@gmail.com).
+See [Publication scope](PUBLICATION_SCOPE.md) and [Third-party notices](THIRD_PARTY_NOTICES.md). Feedback: [Discussions](https://github.com/62656456/ai-film-skills/discussions) or [Issues](https://github.com/62656456/ai-film-skills/issues).

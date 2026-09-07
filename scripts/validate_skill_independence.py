@@ -9,6 +9,9 @@ import sys
 import tempfile
 import argparse
 import json
+import ast
+import io
+import tokenize
 from pathlib import Path
 
 
@@ -27,7 +30,7 @@ MACHINE_PLACEHOLDER = re.compile(
 )
 EXTERNAL_RUNTIME = re.compile(
     r"(?i)(?:read|load|retrieve|sync|call|route|hand\s*off|depend|"
-    r"读取|加载|检索|同步|调用|路由|转交|交给|依赖).{0,60}"
+    r"读取|加载|检索|同步|调用|路由|转交|交给|依赖)[^;；.。]{0,60}?"
     r"(?:knowledge\s*base|private\s*repository|知识库|知识卡|工作台|共享目录|旧版本)"
 )
 LEGACY_RUNTIME = re.compile(
@@ -86,6 +89,20 @@ def frontmatter_name(skill: Path) -> str:
     return skill.name
 
 
+def prose_for_links(text: str, suffix: str) -> str:
+    """Python subscriptions/calls are not Markdown; strings and comments may be."""
+    if suffix.casefold() != ".py":
+        return text
+    try:
+        tree = ast.parse(text)
+        strings = [node.value for node in ast.walk(tree) if isinstance(node, ast.Constant) and isinstance(node.value, str)]
+        comments = [token.string for token in tokenize.generate_tokens(io.StringIO(text).readline) if token.type == tokenize.COMMENT]
+    except (SyntaxError, tokenize.TokenError):
+        # Preserve conservative scanning of invalid source; syntax validation is separate.
+        return text
+    return "\n".join(strings + comments)
+
+
 def validate_skill(skill: Path, known_names: set[str]) -> list[str]:
     errors: list[str] = []
     name = frontmatter_name(skill)
@@ -103,7 +120,7 @@ def validate_skill(skill: Path, known_names: set[str]) -> list[str]:
         relative = path.relative_to(skill).as_posix()
         text = path.read_text(encoding="utf-8-sig", errors="replace")
         dependencies = set(LOCAL_DEPENDENCY.findall(text))
-        dependencies.update(match.group(1).strip().split()[0].strip("<>") for match in MARKDOWN_LINK.finditer(text))
+        dependencies.update(match.group(1).strip().split()[0].strip("<>") for match in MARKDOWN_LINK.finditer(prose_for_links(text, path.suffix)))
         for line in text.splitlines():
             if REFERENCE_ACTION.search(line) and not WRITE_CONTEXT.search(line):
                 dependencies.update(match.group(1) for match in BACKTICK_FILE.finditer(line))
@@ -136,7 +153,9 @@ def validate_skill(skill: Path, known_names: set[str]) -> list[str]:
                 errors.append(f"{name}: machine-specific placeholder: {relative}:{line_no}")
             for runtime_match in EXTERNAL_RUNTIME.finditer(line):
                 clause_start = max(line.rfind(separator, 0, runtime_match.start()) for separator in (";", "；", ".", "。")) + 1
-                if not NEGATED_RUNTIME.search(line[clause_start:runtime_match.start()]):
+                prefix = line[clause_start:runtime_match.start()]
+                # Chinese negation can be immediately attached to the matched verb.
+                if not (NEGATED_RUNTIME.search(prefix) or prefix.endswith("不")):
                     errors.append(f"{name}: external runtime instruction: {relative}:{line_no}")
                     break
             if LEGACY_RUNTIME.search(line):

@@ -5,7 +5,9 @@
 | Can deliver alone | A source plan, validated dataset, evidence table, analysis, report, and separately labeled pending record, all produced by this package. |
 | Cannot claim alone | Offline use cannot fabricate current market facts, and a completed report does not authorize semantic-layer writing. |
 
-[Runtime `SKILL.md`](../../../skills/d-official-market-analysis/SKILL.md) · [Standalone ZIP](https://github.com/62656456/ai-film-skills/releases/latest/download/d-official-market-analysis.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/d-official-market-analysis/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/d-official-market-analysis.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+
+Historical v1.3.0 snapshot; differs from current source where updated.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -106,3 +108,9 @@ A source plan, validated dataset, evidence table, analysis, report, and separate
 **Deterministic helpers**
 
 - [`scripts/validate_dataset.py`](../../../skills/d-official-market-analysis/scripts/validate_dataset.py)
+
+**Distribution notices in new ZIP builds**
+
+New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
+
+- [`LICENSE`](../../../LICENSE)
