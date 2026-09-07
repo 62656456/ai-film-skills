@@ -237,11 +237,9 @@ def validate_showcase(root: Path = ROOT, require_links: bool = True) -> list[str
     for field, actual in (("expected_count", len(items)), ("expected_genre_count", len({a.get('skill') for a in items if isinstance(a, dict) and isinstance(a.get('skill'), str)}))):
         if type(manifest.get(field)) is not int or manifest[field] <= 0 or manifest[field] != actual:
             errors.append(f"current showcase {field} does not match actual inventory")
-    page_links: set[str] = set()
     readme_links: set[str] = set()
     if require_links:
         try:
-            page_links = asset_links((root / "docs" / "index.html").read_text(encoding="utf-8"))
             readme_links = asset_links((root / "README.md").read_text(encoding="utf-8"), markdown=True)
         except OSError as exc:
             errors.append(f"cannot verify showcase entry links: {exc}")
@@ -299,10 +297,8 @@ def validate_showcase(root: Path = ROOT, require_links: bool = True) -> list[str
                 errors.append(f"showcase {identifier} {key} dimensions mismatch or invalid static image header")
             else:
                 dimensions[prefix] = actual_size
-            if require_links and f"showcase/{relative}" not in page_links:
-                errors.append(f"showcase {identifier} {key} must be linked from the actual Pages markup")
-            if require_links and not prefix and f"docs/showcase/{relative}" not in readme_links:
-                errors.append(f"showcase {identifier} preview must be linked from README")
+            if require_links and f"docs/showcase/{relative}" not in readme_links:
+                errors.append(f"showcase {identifier} {key} must be linked from README")
         if "" in dimensions and "original_" in dimensions:
             width, height = dimensions[""]
             ow, oh = dimensions["original_"]

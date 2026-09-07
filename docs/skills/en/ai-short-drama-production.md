@@ -41,10 +41,10 @@ Production-control orchestration and gap auditing for existing decisions, includ
 ## 5. Workflow
 
 1. Obtain current director and beat decisions; do not recreate them with a generic formula.
-2. Build or reference human-approved Cxx/Sxx/Pxx assets and their versions.
+2. Preserve approved assets; label unresolved assets as candidates for text design, and require the applicable asset review before actual generation.
 3. Create blocking, lighting, action, and sketch-to-shot control contracts only where needed.
-4. Compile contracts into one continuous-camera AG-CLIP with bounded action density and a usable end state.
-5. Review actual images and emit `ready_for_prompt` only when all eight pre-generation gates pass.
+4. Compile a five-column storyboard and one six-module master prompt for the requested total duration; preserve locked formats, cuts, camera paths, dialogue and timing.
+5. Distinguish coherent candidate text (`ready_for_prompt`) from approved assets and verified execution conditions (`ready_for_generation`); inspect actual media after generation.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -57,14 +57,14 @@ Production-control orchestration and gap auditing for existing decisions, includ
 ## 7. Review gates
 
 - [ ] Hook, objective, obstacle, information gap, power turn, cost, and end hook are visible rather than adjective labels.
-- [ ] Every asset version is human-reviewed; blocking explains people, props, camera and axis; lighting has visible sources; action has start, path, end and reaction.
-- [ ] Each clip has no hidden hard cut, respects dialogue timing and action density, and ends in a continuous next-shot state.
+- [ ] Approved and candidate assets remain distinct; blocking explains world space and each camera projection; light has a physical source and action has start, path, end and reaction.
+- [ ] Cuts or continuous takes are explicit, locked structure is preserved, dialogue fits its time window, and the final prompt retains selected camera design and end-state continuity.
 
 <!-- contract:pass -->
 ## 8. Pass standard and states
 
-- All eight `ready_for_prompt` conditions pass with traceable contract IDs and actual-image review where required.
-- This state means the controlled task is ready for prompt production; it is not a finished clip or film.
+- The requested artifact is complete; timing, actions, camera and user locks can be reconstructed from its final text, with ten information categories covered inside six modules.
+- Text readiness, generation readiness, actual video review and user acceptance are separate states.
 
 > A pass below means this module's stated gates were met. Structural validity, real-task evidence, and user acceptance remain separate states.
 
@@ -72,20 +72,20 @@ Production-control orchestration and gap auditing for existing decisions, includ
 ## 9. Outputs
 
 - A narrative beat contract, asset registry, blocking map, lighting plan, action ledger, or sketch-to-shot brief as needed.
-- A traceable `ready_for_prompt` package or a responsibility-specific rework record.
+- The requested control contract, five-column storyboard or complete six-module prompt; internal IDs stay in records and natural names appear in user-facing prompts.
 
 <!-- contract:boundaries -->
 ## 10. Boundaries, dependencies, and permissions
 
 - It can organize approved decisions or audit missing controls by itself; it does not copy every directing, asset, genre, generation, or QC capability into one module.
-- This source package contains its own bounded control rules. It is packaged but not deployed; check its handoff format against the current 5.6 storyboard contract before using it as an end-to-end coordinator.
+- This package includes a self-contained handoff aligned with the 5.6 storyboard format, without importing its persistence engine. Source alignment does not establish deployment or actual-video acceptance.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use
 
 - The canonical package is the complete Skill folder, not a copied prompt fragment.
 - `agents/openai.yaml` is optional Codex UI metadata and is not a runtime dependency for other hosts.
-- Control-contract design uses text and files with this package's local rules; actual generation, review and editing need host media tools and permissions. Handoff compatibility with current storyboard output must be checked.
+- Text design uses this package's own rules and handoff. Actual generation, playback review and editing require the host's media capabilities, applicable approvals and checked platform limits.
 - An Agent may read the instructions without native Skill discovery, but prompt-only reading must not be described as native integration.
 
 <!-- contract:sources -->
@@ -100,6 +100,7 @@ Production-control orchestration and gap auditing for existing decisions, includ
 
 - [`references/control-contracts.md`](../../../skills/ai-short-drama-production/references/control-contracts.md)
 - [`references/independent-production-core.md`](../../../skills/ai-short-drama-production/references/independent-production-core.md)
+- [`references/production-handoff.md`](../../../skills/ai-short-drama-production/references/production-handoff.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/ai-short-drama-production/references/SOURCE-LEDGER.md)
 
 **Distribution notices in new ZIP builds**

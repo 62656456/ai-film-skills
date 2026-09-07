@@ -231,10 +231,10 @@
       ],
       "workflow": [
         {"en": "Obtain current director and beat decisions; do not recreate them with a generic formula.", "zh-CN": "取得现行导演与节拍决定，不用通用公式重做。"},
-        {"en": "Build or reference human-approved Cxx/Sxx/Pxx assets and their versions.", "zh-CN": "建立或引用经人审的 Cxx/Sxx/Pxx 资产及版本。"},
+        {"en": "Preserve approved assets; label unresolved assets as candidates for text design, and require the applicable asset review before actual generation.", "zh-CN": "沿用批准资产；未定资产可标候选支持文本设计，正式生成前完成相应审阅。"},
         {"en": "Create blocking, lighting, action, and sketch-to-shot control contracts only where needed.", "zh-CN": "按需建立调度、布光、动作和草图转镜头控制合同。"},
-        {"en": "Compile contracts into one continuous-camera AG-CLIP with bounded action density and a usable end state.", "zh-CN": "把合同装入一个连续机位 AG-CLIP，控制动作密度并留下可接续尾帧。"},
-        {"en": "Review actual images and emit `ready_for_prompt` only when all eight pre-generation gates pass.", "zh-CN": "审核实际画面，只有八项生成前门全部通过才输出 `ready_for_prompt`。"}
+        {"en": "Compile a five-column storyboard and one six-module master prompt for the requested total duration; preserve locked formats, cuts, camera paths, dialogue and timing.", "zh-CN": "编译五列分镜与覆盖点名总时长的一条六模块母提示词，保留锁定格式、切点、摄影路径、对白和时长。"},
+        {"en": "Distinguish coherent candidate text (`ready_for_prompt`) from approved assets and verified execution conditions (`ready_for_generation`); inspect actual media after generation.", "zh-CN": "区分文本自洽的 ready_for_prompt 与资产审阅、执行条件齐全的 ready_for_generation；生成后再检查真实媒体。"}
       ],
       "returns": [
         {"en": "Story, concept, beat, or dialogue returns to the directing/writing layer; asset drift returns to asset design.", "zh-CN": "故事、概念、节拍或台词退回导演/编剧层；资产漂移退回资产层。"},
@@ -243,22 +243,22 @@
       ],
       "review": [
         {"en": "Hook, objective, obstacle, information gap, power turn, cost, and end hook are visible rather than adjective labels.", "zh-CN": "钩子、目标、阻力、信息差、权力转折、代价和结尾钩子可观察，不是形容词。"},
-        {"en": "Every asset version is human-reviewed; blocking explains people, props, camera and axis; lighting has visible sources; action has start, path, end and reaction.", "zh-CN": "资产版本均经人审；调度能解释人物、道具、摄影机与轴线；布光有来源；动作有起点、路径、终点和反应。"},
-        {"en": "Each clip has no hidden hard cut, respects dialogue timing and action density, and ends in a continuous next-shot state.", "zh-CN": "每段无隐藏硬切，台词时序与动作密度成立，并以连续尾帧接下一镜。"}
+        {"en": "Approved and candidate assets remain distinct; blocking explains world space and each camera projection; light has a physical source and action has start, path, end and reaction.", "zh-CN": "批准与候选资产状态分明；调度能解释世界空间及每个机位投影；光有实体来源，动作有起点、路径、终点和反应。"},
+        {"en": "Cuts or continuous takes are explicit, locked structure is preserved, dialogue fits its time window, and the final prompt retains selected camera design and end-state continuity.", "zh-CN": "切镜或连续长镜明确、锁定结构不变、台词时间成立，最终提示词保留已选摄影与尾态连续性。"}
       ],
       "pass": [
-        {"en": "All eight `ready_for_prompt` conditions pass with traceable contract IDs and actual-image review where required.", "zh-CN": "八项 `ready_for_prompt` 条件全部通过，合同编号可追溯，并完成所需真实画面审核。"},
-        {"en": "This state means the controlled task is ready for prompt production; it is not a finished clip or film.", "zh-CN": "该状态只表示控制任务可进入提示词生产，不是片段或成片通过。"}
+        {"en": "The requested artifact is complete; timing, actions, camera and user locks can be reconstructed from its final text, with ten information categories covered inside six modules.", "zh-CN": "点名产物完整，最终正文可还原时序、动作、摄影与用户锁定；六模块内十类信息齐全。"},
+        {"en": "Text readiness, generation readiness, actual video review and user acceptance are separate states.", "zh-CN": "文本就绪、生成就绪、真实视频检查与用户接受分别记录。"}
       ],
       "outputs": [
         {"en": "A narrative beat contract, asset registry, blocking map, lighting plan, action ledger, or sketch-to-shot brief as needed.", "zh-CN": "按需交付节拍合同、资产索引、调度图、布光图、动作账本或草图转镜头说明。"},
-        {"en": "A traceable `ready_for_prompt` package or a responsibility-specific rework record.", "zh-CN": "可追溯的 `ready_for_prompt` 包，或按责任层分类的回炉记录。"}
+        {"en": "The requested control contract, five-column storyboard or complete six-module prompt; internal IDs stay in records and natural names appear in user-facing prompts.", "zh-CN": "交付点名控制合同、五列分镜或完整六模块提示词；编号留在内部记录，用户提示词使用自然名称。"}
       ],
       "boundaries": [
         {"en": "It can organize approved decisions or audit missing controls by itself; it does not copy every directing, asset, genre, generation, or QC capability into one module.", "zh-CN": "它可以单独整理已批准决定或审计控制缺口，但不会复制导演、资产、类型、生成和 QC 的全部能力。"},
-        {"en": "This source package contains its own bounded control rules. It is packaged but not deployed; check its handoff format against the current 5.6 storyboard contract before using it as an end-to-end coordinator.", "zh-CN": "本包自带有限控制规则，已封装但未部署；作为全流程编排器前须核对与当前5.6分镜合同的交接格式。"}
+        {"en": "This package includes a self-contained handoff aligned with the 5.6 storyboard format, without importing its persistence engine. Source alignment does not establish deployment or actual-video acceptance.", "zh-CN": "本包自带与5.6分镜格式对齐的交付合同，不引入其状态程序；源码对齐不代表部署或真实视频验收。"}
       ],
-      "requires": {"en": "Control-contract design uses text and files with this package's local rules; actual generation, review and editing need host media tools and permissions. Handoff compatibility with current storyboard output must be checked.", "zh-CN": "控制合同设计使用文本、文件及本包规则；真实生成、审核与剪辑需宿主媒体能力和权限，并须核对现行分镜输出的交接兼容性。"}
+      "requires": {"en": "Text design uses this package's own rules and handoff. Actual generation, playback review and editing require the host's media capabilities, applicable approvals and checked platform limits.", "zh-CN": "文本设计使用本包规则及交付合同；实际生成、播放审核与剪辑需要宿主媒体能力、相应授权与已核实平台限制。"}
     },
     "web": {
       "principles": [
@@ -272,7 +272,7 @@
         {"en": "Required states, devices, accessibility constraints, performance limits, and authorization to change code.", "zh-CN": "所需状态、设备、无障碍约束、性能边界和代码修改授权。"}
       ],
       "workflow": [
-        {"en": "Ground the product, audience, single job, and vocabulary.", "zh-CN": "锁定产品、受众、页面唯一任务和词汇。"},
+        {"en": "Identify the requested surface first; repository README maintenance does not request a separate website. For an actual interface task, ground the product, audience and primary job.", "zh-CN": "先识别点名界面；仓库README维护不等于要求另做网站。明确界面任务后再锁定产品、受众与主要用途。"},
         {"en": "Inspect the actual interface and system before inventing a direction.", "zh-CN": "提出方向前先检查真实界面与系统。"},
         {"en": "Choose a product-native color, type, layout, and one signature element; reject generic defaults.", "zh-CN": "选择产品原生的色彩、字体、布局和一个标志元素，排除模板化默认。"},
         {"en": "Design the user journey, empty/loading/error/success states, responsive behavior, and engineering contract.", "zh-CN": "设计用户路径、空/载入/失败/成功状态、响应式和工程合同。"},
@@ -297,6 +297,7 @@
         {"en": "Concrete decisions, blocker-ranked findings, exact changed files when building, and remaining verification limits.", "zh-CN": "具体设计决定、按阻塞级排序的问题、实施时的准确变更文件和剩余验证边界。"}
       ],
       "boundaries": [
+        {"en": "A repository homepage, README, source synchronization or package update alone does not authorize building or deploying a website; an existing site does not expand that scope.", "zh-CN": "仓库首页、README、源码同步或技能包更新本身不授权建站或部署；已有网站也不扩大任务范围。"},
         {"en": "Do not migrate frameworks, add dependencies, or redesign unrelated surfaces merely for aesthetic uniformity.", "zh-CN": "不为审美统一擅自迁移框架、增加依赖或重做无关界面。"},
         {"en": "Do not call source inspection, tests, or a static mockup proof of user-accepted visual quality.", "zh-CN": "不把源码检查、测试或静态稿冒充用户通过的视觉质量。"}
       ],

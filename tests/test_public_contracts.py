@@ -96,6 +96,23 @@ class ShowcaseContractTests(unittest.TestCase):
             manifest["items"][0]["original_sha256"] = "0" * 64
             self.assertTrue(any("hash mismatch" in e for e in self.validate(root, path, manifest)))
 
+    def test_showcase_requires_readme_preview_and_original_without_a_website(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            path, manifest = self.fixture(root)
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+            preview = '<img src="docs/showcase/one.webp" alt="sample" />'
+            original = '<a href="docs/showcase/originals/one.png">Original</a>'
+            readme = root / "README.md"
+            readme.write_text(preview + original, encoding="utf-8")
+            self.assertFalse((root / "docs/index.html").exists())
+            self.assertEqual(validate_showcase(root), [])
+            for missing, content in (("original_file", preview), ("file", original)):
+                with self.subTest(missing=missing):
+                    readme.write_text(content, encoding="utf-8")
+                    errors = validate_showcase(root)
+                    self.assertTrue(any(f"{missing} must be linked from README" in e for e in errors), errors)
+
     def test_showcase_rejects_path_escape_and_unsupported_external_skill(self):
         with tempfile.TemporaryDirectory() as raw:
             root = Path(raw)

@@ -47,7 +47,7 @@
   <text x="416" y="566" class="code">保留类型特色，按当前画面决定摄影与色彩</text>
 
   <rect x="36" y="542" width="306" height="100" rx="6" class="side"/>
-  <text x="56" y="569" class="tag">专项分支 / 待对齐</text><text x="56" y="596" class="label">短剧生产控制合同</text><text x="56" y="619" class="code">ai-short-drama-production</text><text x="56" y="640" class="code">尚未部署；先对齐 5.6 交接</text>
+  <text x="56" y="569" class="tag">专项分支 / 按需</text><text x="56" y="596" class="label">短剧生产控制合同</text><text x="56" y="619" class="code">ai-short-drama-production</text><text x="56" y="640" class="code">5.6 结构已对齐；实片待验</text>
 
   <rect x="394" y="610" width="420" height="88" rx="6" class="node"/>
   <text x="416" y="641" class="label">人物 / 场景 / 道具资产</text><text x="416" y="666" class="small">图片提示词 → 生成参考图 → 审阅锁定</text><text x="416" y="688" class="code">character-asset · scene-asset · prop-asset</text>

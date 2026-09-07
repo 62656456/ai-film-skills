@@ -1,9 +1,13 @@
 ---
 name: web-design-director
-description: Senior design-director workflow for distinctive, production-grade web products that unifies visual identity, information architecture, UX, responsive behavior, accessibility, frontend architecture, performance, and implementation quality. Use whenever the user mentions webpage or website design, UI, UX, interface layout, frontend visual design, design systems, responsive pages, dashboards, workbenches, asset libraries, landing pages, component styling, visual redesign, interaction or motion design, accessibility, UI review, or asks to build, improve, audit, or judge any web interface. Also trigger on Chinese requests containing 网页设计、网站设计、页面设计、界面设计、UI、UX、布局、前端、美化、视觉改版、设计系统、响应式、工作台、控制台、资产库 or similar language.
+description: Design, implement, or review an explicitly requested website or application interface, covering visual identity, information architecture, UX, responsive behavior, accessibility, frontend architecture, performance, and implementation quality. Use for 网页设计、网站设计、界面设计、UI、UX、前端、设计系统、响应式, or the visual design of dashboards, workbenches, asset libraries and landing pages. A GitHub repository homepage, README, skill catalog, source synchronization, or package update alone is repository maintenance and does not request a separate website or deployment.
 ---
 
 # Web Design Director
+
+## Identify the requested surface
+
+Establish what the user wants changed before selecting a design mode. A GitHub repository's homepage normally means its README and repository content. Complete that work in the repository; do not turn it into an HTML site, a Pages redesign, a new hosting project, or a deployment task. The presence of an existing website does not authorize changing it. Use this workflow only when a website or application interface is actually in scope; if the surface remains ambiguous and choosing it would change the deliverable, resolve that ambiguity before implementing.
 
 ## Hold the role
 

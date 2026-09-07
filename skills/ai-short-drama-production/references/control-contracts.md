@@ -1,6 +1,6 @@
 # 短剧可控性合同
 
-仅在对应任务需要时加载本文件。合同可直接写进 `shots.json` 或工作单；字段缺失即标记 `pending`。
+仅在对应任务需要时加载本文件。合同可写进本次工作单或用户要求保存的记录；字段缺失标记 `pending`。这些是内部控制字段，不自动作为用户提示词正文或额外文件交付；外层输出按本包 [production-handoff.md](production-handoff.md)。
 
 ## 1. narrative_beat_contract
 
@@ -15,6 +15,8 @@
 ~~~
 
 ## 3. blocking_map
+
+先锁定世界方向、人物/道具/光源位置，再为每镜记录画面投影。下例的 `space_anchors` 和 `left-mid` 是单镜画面位置，不能直接复用到反打；换机位时保持世界位置不变并重新填写左右、遮挡和露出。连续镜头中的摄影机路径也可分阶段，不能由“一个记录”推导出单一运镜限制。
 
 ~~~json
 {"blocking_map_id":"BM_E01S01_003","orientation":"screen-left-to-right","space_anchors":{"left":"","mid":"","right":"","foreground":"","background":""},"power_geometry":{"start":"","turn":"","end":""},"axis":{"a":"","b":"","camera_side":""},"beats":[{"id":"T0","actors":[{"asset_id":"C01","position":"left-mid","depth":"mid","facing":"right","eyeline":"C02","entry_exit":"","occlusion":""}],"props":[{"asset_id":"P01","holder":"C01","facing":"","position":""}],"camera":{"position":"","heading":"","lens":"","shot_size":""}},{"id":"T1","changes":[]},{"id":"T2","changes":[]}]}
@@ -44,3 +46,4 @@
 2. 核对光源方向、色温与暗部目的；再核对镜头和轴线。
 3. 对动作逐拍核对发力、路径、接触/落空和反应；最后核对尾帧。
 4. 若草图参与，核对只继承允许字段，且没有替代资产合同。
+5. 按当前交付模式核对五列人读与六模块正文、数字10信息覆盖、总时长和用户锁定；内部合同齐全不替代实际可复制内容，也不自动表示已可正式生成。

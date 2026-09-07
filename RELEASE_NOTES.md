@@ -10,6 +10,9 @@ This section describes the current source changes. It is **not a claim that a ne
 - Refresh hard-science-fiction visual derivation and original machine-form guidance while retaining its opt-in experimental distribution.
 - Add `whitebox-previs-executor` as a second isolated experiment. Its camera/basic-blocking and individually qualified action evidence does not establish arbitrary actors or complete untested fights.
 - Current inventory is 18 regular and 2 experimental packages, with 20 English and 20 Simplified Chinese guides. The complete-studio archive excludes both experiments.
+- Align the short-drama, director and video-production prompt compilers with the current five-column/six-module handoff. Preserve one master prompt for a requested total duration, user-locked shot structure, natural subject names and selected camera design; text readiness remains separate from actual generation.
+- Make the GitHub repository README the complete module entrance with all 20 source routes, the workflow, original image examples and commercial-use guidance. Restore the pre-existing standalone website files; this update does not commission a new website.
+- Clarify the web-design Skill trigger: repository, README, source and package maintenance do not authorize website creation or deployment.
 - Document the full input-to-script/director/visual/assets/storyboard/prompt/video/review workflow, including 5.6 save/recovery, optional previs and explicit return paths.
 - Link external `xianxia-visual-director` for workflow completeness without copying its source or including it in any ZIP; no verified redistribution license is available.
 - Present 14 original images explicitly accepted by the user, preserving their full aspect ratio and separating them from the older historical gallery. There is no old-version same-prompt A/B experiment, so no quantified before/after improvement or universal success rate is claimed.

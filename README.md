@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="docs/assets/hero.svg" width="100%" alt="Open Film Skills — 从剧本、导演、视觉资产到分镜、提示词、视频和验收" />
+<a href="docs/showcase/originals/xianxia-cloud-bell.png"><img src="docs/showcase/xianxia-cloud-bell.webp" width="100%" alt="《云海钟境》：本项目自主生成、用户已接受的仙侠画面；保持完整画幅，点击查看原始PNG" /></a>
+
+*《云海钟境》｜项目自主生成、用户已接受；点击图片查看完整原图。*
 
 # Open Film Skills｜开放影视技能
 
@@ -8,7 +10,7 @@
 
 *Independent Agent Skills for story, directing, visual assets, cinematography and AI-film production.*
 
-[完整工作流](docs/WORKFLOW.md) · [14张用户接受成图](#本轮14张用户接受成图) · [按任务选Skill](SKILL_CATALOG.md) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
+[完整工作流](docs/WORKFLOW.md) · [14张用户接受成图](#本轮14张用户接受成图) · [全部20个技能](#全部20个独立技能) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
 
 **简体中文** · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · [English overview](#english-overview)
 
@@ -41,18 +43,36 @@
 
 本轮是源码与文档刷新，不能把它称为已经发布新Release。要用当前源码，请检查所取分支/提交与`SKILL.md`版本；旧Release适合明确复现旧快照。[安装选择与验证](docs/INSTALLATION.md)
 
-## 从一个结果开始
+## 全部20个独立技能
 
-| 你要的结果 | 入口 | 直接交付 |
-|---|---|---|
-| 写剧本、改对白、解决因果与人物问题 | [director-agent](docs/skills/zh-CN/director-agent.md) | 可读剧本、可替换段落或导演方案；明确需要时另编译AI执行层 |
-| 将已有剧本做成镜头和提示词 | [ai-storyboard-director](docs/skills/zh-CN/ai-storyboard-director.md) | 五列分镜＋完整六模块母提示词；明确作品目录中的5.6保存与恢复 |
-| 人物、场景、道具参考 | [character-asset](docs/skills/zh-CN/character-asset.md) · [scene-asset](docs/skills/zh-CN/scene-asset.md) · [prop-asset](docs/skills/zh-CN/prop-asset.md) | 按需的单图/必要视图、提示词与状态合同 |
-| 类型视觉方向 | [8项常规类型](SKILL_CATALOG.md#genre-visual-language) · [硬科幻实验](docs/skills/zh-CN/hard-sci-fi-visual-director.md) · [外部仙侠](https://github.com/liyue-aigc/xianxia-visual-director) | 构图、光影、色彩、材质、空间与动作参数 |
-| 生成前看机位和基础走位 | [whitebox-previs-executor](docs/skills/zh-CN/whitebox-previs-executor.md) | 实验3D预演MP4；仅实现的代理和已过门动作 |
-| 实际生成、剪辑与验收视频 | [produce-ai-video](docs/skills/zh-CN/produce-ai-video.md) | 在工具和权限可用时统筹真实视频、声音、完整播放与修复 |
-| 选题、平台或知识沉淀 | [市场研究](docs/skills/zh-CN/d-official-market-analysis.md) · [批准后写入](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) | 有来源的研究；知识写入另需明确批准 |
-| 专项短剧控制、作品站或资产工作台 | [短剧控制](docs/skills/zh-CN/ai-short-drama-production.md) · [网页设计](docs/skills/zh-CN/web-design-director.md) | 短剧控制合同（未部署、需核对5.6交接）；网页设计与实际渲染审核 |
+当前仓库收录 **18项常规包＋2项实验包**，下面逐项列出用途、源码版本和直接入口。版本列的“—”表示该包`SKILL.md`没有单独声明技能版本号，以实际Git提交和完整文件为准；不把模板中的资产版本、JSON协议版本或仓库Release号当成Skill版本。
+
+| 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
+|---|---|---|---|---|
+| `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为五列分镜和六模块母提示词；在作品目录保存恢复镜头决定 | 5.6.0 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
+| `character-asset`<br/>人物资产 | 人物身份、外形、必要视图、表情与可变状态的参考任务和资产合同 | — | 常规 | [运行正文](skills/character-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/character-asset.md) |
+| `scene-asset`<br/>场景资产 | 场景拓扑、空间锚点、光源、材质和连续性参考图/提示词 | — | 常规 | [运行正文](skills/scene-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/scene-asset.md) |
+| `prop-asset`<br/>道具资产 | 道具结构、比例、可见面、持用和新旧状态；按要求交单图或必要视图 | — | 常规 | [运行正文](skills/prop-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/prop-asset.md) |
+| `cyberpunk-design`<br/>赛博朋克 | 身体与技术关系、功能光源、空间层级和材质；不强制雨夜霓虹 | — | 常规 | [运行正文](skills/cyberpunk-design/SKILL.md) · [中文说明](docs/skills/zh-CN/cyberpunk-design.md) |
+| `epic-design`<br/>史诗 | 地形、建筑、群体与个人代价共同建立尺度和画面秩序 | — | 常规 | [运行正文](skills/epic-design/SKILL.md) · [中文说明](docs/skills/zh-CN/epic-design.md) |
+| `fantasy-design`<br/>奇幻 | 魔法来源、作用目标、世界规则和环境反馈的视觉参数 | — | 常规 | [运行正文](skills/fantasy-design/SKILL.md) · [中文说明](docs/skills/zh-CN/fantasy-design.md) |
+| `horror-design`<br/>恐怖 | 可见异常证据、威胁显露、空间不安与可读暗部 | — | 常规 | [运行正文](skills/horror-design/SKILL.md) · [中文说明](docs/skills/zh-CN/horror-design.md) |
+| `noir-design`<br/>黑色与犯罪 | 秘密、犯罪、关系压力和明暗信息；不以黑白滤镜替代剧情 | — | 常规 | [运行正文](skills/noir-design/SKILL.md) · [中文说明](docs/skills/zh-CN/noir-design.md) |
+| `romance-design`<br/>爱情 | 距离、视线、接触和双向行动表达关系，不固定粉色、暖光或拥抱 | — | 常规 | [运行正文](skills/romance-design/SKILL.md) · [中文说明](docs/skills/zh-CN/romance-design.md) |
+| `war-design`<br/>战争 | 地形、协同、负荷、行动与后果；检查武器方向和接触关系 | — | 常规 | [运行正文](skills/war-design/SKILL.md) · [中文说明](docs/skills/zh-CN/war-design.md) |
+| `wuxia-design`<br/>武侠 | 兵器、步法、支撑、衣发反馈与东方空间的可观察参数 | — | 常规 | [运行正文](skills/wuxia-design/SKILL.md) · [中文说明](docs/skills/zh-CN/wuxia-design.md) |
+| `produce-ai-video`<br/>实际视频生产 | 统筹实际生成、选片、剪辑、对白音效、完整播放审查与修复 | — | 常规 | [运行正文](skills/produce-ai-video/SKILL.md) · [中文说明](docs/skills/zh-CN/produce-ai-video.md) |
+| `ai-short-drama-production`<br/>短剧控制 | 五列分镜＋一条六模块母提示词；5.6结构已对齐，文本验证通过，实片待验 | — | 常规；未部署 | [运行正文](skills/ai-short-drama-production/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-short-drama-production.md) |
+| `web-design-director`<br/>网页辅助 | 明确网页或应用界面任务时设计与审核；仓库README维护不触发建站 | — | 常规 | [运行正文](skills/web-design-director/SKILL.md) · [中文说明](docs/skills/zh-CN/web-design-director.md) |
+| `d-official-market-analysis`<br/>市场研究 | 根据当前可验证来源研究题材、平台、受众与制作机会，保留数据局限 | — | 常规 | [运行正文](skills/d-official-market-analysis/SKILL.md) · [中文说明](docs/skills/zh-CN/d-official-market-analysis.md) |
+| `d-data-analysis-semantic-layer`<br/>知识审核与写入 | 用户批准后校验来源、版本、有效期与冲突，写入明确目标并回读 | — | 常规 | [运行正文](skills/d-data-analysis-semantic-layer/SKILL.md) · [中文说明](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) |
+| `hard-sci-fi-visual-director`<br/>硬科幻视觉 | 从物理、功能、制造与环境推导原创世界、设备、形体和完整提示词 | — | 实验 | [运行正文](experimental/hard-sci-fi-visual-director/SKILL.md) · [中文说明](docs/skills/zh-CN/hard-sci-fi-visual-director.md) |
+| `whitebox-previs-executor`<br/>3D白模预演 | 将已有镜头编译成可播放机位与基础走位预演；打斗限已实现且过门的动作 | — | 实验 | [运行正文](experimental/whitebox-previs-executor/SKILL.md) · [中文说明](docs/skills/zh-CN/whitebox-previs-executor.md) |
+
+**分发状态与完成证据分开。** 常规包不表示所有能力已通过实战；实验硬科幻已有接受图例，白模仍有明确能力限制。短剧控制器已在仓库源码对齐5.6交付结构，独立文本行为样本经修正后最终通过；仍未部署、未生成视频、未获用户实际效果验收，不新增独立版本号。其余实际使用和验收边界见各自运行正文与说明。
+
+外部[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)只作为仙侠工作流入口，不属于这20个源码包、不进本仓库ZIP；《云海钟境》是本项目自主生成并已接受的示例图，图的发布不等于再分发外部技能源码。
 
 ## 安装当前源码中的一个Skill
 
@@ -148,7 +168,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 ## 模块和证据边界
 
-常规包可单独使用；实验硬科幻与白模不进入默认完整套装。已封装的短剧控制器尚未部署，使用前须核对现行5.6交接。外部仙侠没有已核实再分发许可，因此不复制源码、不进ZIP；完整职责见[工作流](docs/WORKFLOW.md)。
+常规包可单独使用；实验硬科幻与白模不进入默认完整套装。已封装的短剧控制器已在仓库源码对齐5.6交付结构，仍未部署；文本验证不替代真实视频和用户验收。外部仙侠没有已核实再分发许可，因此不复制源码、不进ZIP；完整职责见[工作流](docs/WORKFLOW.md)。
 
 结构有效、宿主实际加载、真实任务输出、媒体检查与用户接受是不同证据。5.6的状态程序不评审美，不替代实际读剧本，也不能强制所有聊天入口执行。费用、账户、工具和发布权限由实际任务与宿主决定。
 

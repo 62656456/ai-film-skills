@@ -35,7 +35,7 @@ flowchart TB
     G --> E["选片·剪辑·对白／音效／音乐"]
     E --> Q["完整播放审查与修复"]
     Q --> F["用户验收与成片交付"]
-    T -. "专项编排，尚未部署" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>需先对齐5.6交接合同"]
+    T -. "专项编排，尚未部署" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>五列分镜＋六模块母提示词"]
 ```
 
 ## 每个阶段实际交付什么
@@ -75,10 +75,10 @@ flowchart TB
 | 15 | [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director) | 东方仙侠世界、天宫巨构与写实摄影 | 外部上游；无已核实再分发许可，不复制源码或打包 |
 | 16 | [whitebox-previs-executor](skills/zh-CN/whitebox-previs-executor.md) | 提示词到可播放3D基础预演 | 实验包；人形和已实现代理，打斗必须逐动作过门 |
 | 17 | [produce-ai-video](skills/zh-CN/produce-ai-video.md) | 统筹实际生成、选片、剪辑、声音、完整看片与修复 | 需要实际工具、模型与相应权限；不内置免费模型 |
-| 18 | [ai-short-drama-production](skills/zh-CN/ai-short-drama-production.md) | 短剧节拍、资产、调度、光线、动作与QC控制合同 | 已封装、未部署；与5.6交接前核对合同，不默认接管主线 |
+| 18 | [ai-short-drama-production](skills/zh-CN/ai-short-drama-production.md) | 短剧节拍、资产、调度、光线、动作与QC控制合同 | 源码交付结构已对齐5.6；文本样本最终通过，未部署、实片待验证 |
 | 19 | [d-official-market-analysis](skills/zh-CN/d-official-market-analysis.md) | 选题与平台研究、来源、数据、结论与独立待批准记录 | 按需研究；报告不授权知识写入 |
 | 20 | [d-data-analysis-semantic-layer](skills/zh-CN/d-data-analysis-semantic-layer.md) | 用户批准后校验、版本化写入与回读 | 目标和批准来自当前任务；已存知识仍检查时效 |
-| 辅助 | [web-design-director](skills/zh-CN/web-design-director.md) | 作品站、资产库、工作台和网页展示 | 网页辅助，不属于影片正文生产步骤 |
+| 辅助 | [web-design-director](skills/zh-CN/web-design-director.md) | 作品站、资产库、工作台和网页展示 | 只用于明确网页或应用界面任务；仓库README维护不触发建站 |
 
 十种视觉路线＝八项常规类型＋实验硬科幻＋外部仙侠。选择取决于作品，不要求一次加载十项，也不把风格名变成统一色表或固定镜头。
 

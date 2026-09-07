@@ -40,7 +40,7 @@ A complete interface direction or review; with code and browser access, a verifi
 <!-- contract:workflow -->
 ## 5. Workflow
 
-1. Ground the product, audience, single job, and vocabulary.
+1. Identify the requested surface first; repository README maintenance does not request a separate website. For an actual interface task, ground the product, audience and primary job.
 2. Inspect the actual interface and system before inventing a direction.
 3. Choose a product-native color, type, layout, and one signature element; reject generic defaults.
 4. Design the user journey, empty/loading/error/success states, responsive behavior, and engineering contract.
@@ -77,6 +77,7 @@ A complete interface direction or review; with code and browser access, a verifi
 <!-- contract:boundaries -->
 ## 10. Boundaries, dependencies, and permissions
 
+- A repository homepage, README, source synchronization or package update alone does not authorize building or deploying a website; an existing site does not expand that scope.
 - Do not migrate frameworks, add dependencies, or redesign unrelated surfaces merely for aesthetic uniformity.
 - Do not call source inspection, tests, or a static mockup proof of user-accepted visual quality.
 

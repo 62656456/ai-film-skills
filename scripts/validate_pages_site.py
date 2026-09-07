@@ -86,7 +86,7 @@ def main() -> int:
 
     if not parser.title_text.strip():
         errors.append("Pages HTML has no title")
-    for required_id in ("main", "top", "outcomes", "proof", "install", "workflow", "showcase"):
+    for required_id in ("main", "top", "outcomes", "proof", "install"):
         if required_id not in parser.ids:
             errors.append(f"Pages HTML missing id: {required_id}")
     if "media" not in parser.ids:
@@ -151,10 +151,6 @@ def main() -> int:
             errors.append(f"Pages CSS missing quality term: {term}")
     if not re.search(r"@media[^{}]*\((?:max|min)-width\s*:", css):
         errors.append("Pages CSS must contain a responsive width breakpoint")
-    if "showcase/manifest.json" not in html:
-        errors.append("Pages HTML must link the current showcase provenance manifest")
-    if not has_whitebox_route(html):
-        errors.append("Pages workflow must link the explicit experimental whitebox package")
 
     media_manifest = DOCS / "media" / "media-manifest.json"
     try:
