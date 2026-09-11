@@ -101,6 +101,9 @@ A complete interface direction or review; with code and browser access, a verifi
 
 - [`references/creative-direction.md`](../../../skills/web-design-director/references/creative-direction.md)
 - [`references/design-rubric.md`](../../../skills/web-design-director/references/design-rubric.md)
+- [`references/interaction-design.md`](../../../skills/web-design-director/references/interaction-design.md)
+- [`references/material-and-motion.md`](../../../skills/web-design-director/references/material-and-motion.md)
+- [`references/research-to-design.md`](../../../skills/web-design-director/references/research-to-design.md)
 - [`references/web-quality-checklist.md`](../../../skills/web-design-director/references/web-quality-checklist.md)
 
 **Distribution notices in new ZIP builds**

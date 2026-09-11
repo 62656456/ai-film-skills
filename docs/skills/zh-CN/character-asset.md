@@ -103,6 +103,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 **引用资料**
 
 - [`references/cinematic-image-direction.md`](../../../skills/character-asset/references/cinematic-image-direction.md)
+- [`references/female-character-charm.md`](../../../skills/character-asset/references/female-character-charm.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/character-asset/references/NEGATIVE-CASE-BOOK.md)
 
 **新构建 ZIP 的分发许可文件**

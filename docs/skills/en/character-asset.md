@@ -103,6 +103,7 @@ A character reference-image task, view plan, locked-feature checklist, negative 
 **References**
 
 - [`references/cinematic-image-direction.md`](../../../skills/character-asset/references/cinematic-image-direction.md)
+- [`references/female-character-charm.md`](../../../skills/character-asset/references/female-character-charm.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/character-asset/references/NEGATIVE-CASE-BOOK.md)
 
 **Distribution notices in new ZIP builds**

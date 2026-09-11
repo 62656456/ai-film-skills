@@ -1,81 +1,57 @@
-# Design Director Rubric
+# Design judgment and acceptance
 
-Use this rubric for design proposals, reviews, and build verification. Score only when comparison helps; do not turn every response into a report.
+Use applicable criteria for comparison, review, and delivery. Score only when a comparison benefits; do not turn a local correction into a comprehensive audit. A plausible design argument is different from an observed result.
 
-## 1. Product truth
+## Review the outcome
 
-- Can a first-time user identify the product, the current surface, and the next useful action?
-- Does the hierarchy match the user's real task frequency and consequence?
-- Is the interface vocabulary written from the user's perspective?
-- Are cost, progress, risk, and destructive consequences visible before commitment?
+| Dimension | Observable question |
+| --- | --- |
+| Product and information | Can the intended user identify the current surface, priority, and next useful action? Does grouping match task frequency and consequence? |
+| Complete user task | Can the user finish the relevant goal, understand the result, and recover where necessary without avoidable backtracking, repeated entry, or remembering hidden comparison information? |
+| Visual identity | Do composition, typography, imagery, and density belong to this product? Does the result visibly achieve the requested degree of distinction or impact? Is expression compatible with locked brand decisions? No mandatory signature count or animation. |
+| Visual execution | Do actual words, images, values, contrast, alignment, and rhythm hold together at required widths? Are assets and claims truthful? |
+| Interaction | Does the primary action deliver its promised result, with clear feedback and applicable recovery? Are focus, selection, and bulk-action scope unambiguous? Can users recognize the next action, and do its target and identity remain predictable during operation? |
+| Accessibility | Can required operations be reached and understood with keyboard, labels, semantics, visible focus, sufficient contrast, and relevant alternatives? |
+| Responsiveness | Does narrow-width structure preserve priorities, access, input, and context rather than merely shrink? Are long content and meaningful overflow handled? |
+| Engineering | Does state have clear ownership? Are resource costs bounded by an appropriate strategy? Are dependencies, privacy, and compatibility appropriate to scope? |
 
-## 2. Information architecture
+For each finding, identify observed condition → user impact → likely cause → concrete correction → verification. Distinguish verified defects, hypotheses needing a test, and aesthetic preferences. Use supplied screenshot regions or real code locations; never invent either.
 
-- Does every region have one clear responsibility?
-- Are navigation, creation, inspection, and management functions spatially distinct?
-- Are advanced controls progressively disclosed without concealing essential state?
-- Can users recover context after refresh, navigation, or reopening a project?
-- Is density intentional for the surface rather than copied from a landing page or generic admin dashboard?
+For work that required research, compare the actual rendered result with the chosen reference properties: hierarchy, content sequence, material response, or interaction behavior. State which mechanism was translated and what was deliberately adapted to this product. A source list, framework change, added blur, or higher test count does not establish that learning improved the design. Reading source, reproducing a mechanism, verifying a product outcome, and receiving user acceptance are separate evidence levels.
 
-## 3. Distinctiveness
+Assess beauty and usability together. Strong visual execution cannot compensate for an unusable task path, and isolated functional success cannot establish a coherent or appealing interface. Repair the observed conflict: strengthen hierarchy, put comparison information together, stabilize an action, or separate decorative motion from operation. Do not automatically prescribe a plain style, remove every effect, or impose a universal layout.
 
-- Does the direction arise from the product's subject, materials, workflow, or culture?
-- Could the same palette, typography, layout, and signature be pasted onto an unrelated product?
-- Is there exactly one memorable signature move with a clear reason?
-- Has the design avoided unearned gradients, glass, glow, pills, cards, ornamental numbering, and fake metrics?
-- Is real content doing visual work instead of placeholder copy?
+For a substantive task surface, inspect a representative start-to-finish task without explanatory coaching. Where relevant, inspect a return visit and the main recovery. Record the goal, starting conditions, observed path, friction, resulting state, and a concrete improvement. Internal walkthroughs may identify defects; claims about human ease, satisfaction, or time saved require corresponding user evidence. A pure direction or screenshot-only review must stay within its available evidence.
 
-## 4. Visual system
+## Blockers in the requested scope
 
-- Is there a controlled token system for color, type, spacing, radii, elevation, iconography, and motion?
-- Is typography a hierarchy rather than a collection of sizes?
-- Do contrast, alignment, rhythm, and whitespace reveal priority?
-- Are dense regions calm and scannable?
-- Are icons consistent in stroke, size, alignment, and meaning?
+Do not call an affected workflow ready while any of these remains:
 
-## 5. Interaction and motion
+- The primary task is unclear, unreachable, or promised controls do not perform their action.
+- A required decision cannot be made with accessible context, or changing targets causes the user to act on the wrong object.
+- Keyboard users cannot operate core controls, or essential state/content is inaccessible.
+- The interface loses entered work unexpectedly, commits stale results, or misrepresents success.
+- A destructive action lacks appropriate protection or its purported undo cannot restore it.
+- Secrets or sensitive error details are exposed.
+- Required layouts break or hide necessary information and controls.
+- Loading, empty, error, or return states trap the user.
+- Realistic collection sizes cause unbounded work or interaction failure.
+- The implementation contradicts the user's scope, approved content, brand, or design contract.
 
-- Does each control communicate default, hover, focus, active, selected, disabled, loading, success, warning, and error states as applicable?
-- Are actions named consistently from trigger through confirmation?
-- Is motion used to explain hierarchy, continuity, status, or causality?
-- Is there one orchestrated moment rather than unrelated effects?
-- Are animations interruptible and reduced for prefers-reduced-motion?
+Unrelated pre-existing defects should be reported when material; do not silently expand the assignment to fix them.
 
-## 6. Accessibility
+## Evidence levels
 
-- Does semantic HTML carry the interaction before ARIA is added?
-- Can every operation be completed by keyboard with visible focus?
-- Are labels, names, roles, status announcements, and error relationships exposed?
-- Does zoom remain enabled, and do contrast and target sizes remain usable?
-- Is meaning independent of color, hover, or animation alone?
+Keep these statuses distinct:
 
-## 7. Responsive and content resilience
+- **Implemented:** the requested change exists; this alone says nothing about execution.
+- **Build/runtime checked:** relevant commands ran and/or the application loaded.
+- **Appearance inspected:** actual rendered views at recorded conditions were examined.
+- **Interaction verified:** recorded actions produced their promised observable results.
+- **Task walkthrough completed:** the representative user goal was followed through the actual interface and friction was recorded; identify who performed it. This does not imply human usability research.
+- **Integration verified:** actual service/data persistence was checked where required.
+- **User accepted:** the user explicitly approved the result. Internal or subagent review cannot award this status.
 
-- Does the layout adapt structurally instead of merely shrinking?
-- Are long names, translated strings, large numbers, empty sets, and broken media handled?
-- Do sidebars, inspectors, dialogs, grids, and toolbars have deliberate narrow-width behavior?
-- Are safe areas, overflow, sticky regions, and virtual keyboards considered?
+A proposal can be ready for review without implementation evidence. A screenshot review can be complete within visible evidence without claiming interaction tests. A build with blocked browser access can be delivered with the exact remaining check, but cannot be described as visually verified. A few accessibility checks do not establish whole-site WCAG conformance.
 
-## 8. Engineering quality
-
-- Do component boundaries follow behavior and ownership?
-- Are tokens centralized and state represented once?
-- Does the solution respect the current stack and avoid unnecessary migration?
-- Are large lists, images, effects, and network work bounded?
-- Are secrets, uploads, external URLs, destructive actions, and error details handled safely?
-- Can important behavior be tested without relying only on screenshots?
-
-## Quality gates
-
-Treat any of these as a blocker:
-
-- the primary journey is unclear or inaccessible;
-- a destructive action has neither confirmation nor undo;
-- keyboard users cannot reach or operate core controls;
-- secrets or sensitive error details can reach the client or logs;
-- the layout breaks at the project's required viewport;
-- loading, error, or empty states trap the user;
-- a large collection causes unbounded rendering or interaction failure;
-- the implementation contradicts the approved design contract.
-
-Call a result ready only when no blocker remains and the product identity, main workflow, accessibility, responsiveness, and buildability are all defensible. The user's aesthetic judgment remains final.
+If no relevant blocker remains, provide the result and evidence proportionate to the task. State remaining limitations plainly. Stop extra testing or polishing unless a new change, failure, or unresolved concern justifies it.

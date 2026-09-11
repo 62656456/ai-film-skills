@@ -9,7 +9,7 @@ The English and Simplified Chinese pages are generated from the same reviewed co
 | Skill | State | English | 简体中文 | Runtime |
 |---|---|---|---|---|
 | `director-agent` | Deployed; long-term practice evidence remains separate | [Design guide](en/director-agent.md) | [设计说明](zh-CN/director-agent.md) | [`SKILL.md`](../../skills/director-agent/SKILL.md) |
-| `ai-storyboard-director` | Current source 5.6; selected for daily use; v1.3.0 ZIP preserves 5.4.4 | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
+| `ai-storyboard-director` | Current source 5.6.3; selected for daily use; v1.3.0 ZIP preserves 5.4.4 | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
 | `character-asset` | Deployed | [Design guide](en/character-asset.md) | [设计说明](zh-CN/character-asset.md) | [`SKILL.md`](../../skills/character-asset/SKILL.md) |
 | `scene-asset` | Deployed | [Design guide](en/scene-asset.md) | [设计说明](zh-CN/scene-asset.md) | [`SKILL.md`](../../skills/scene-asset/SKILL.md) |
 | `prop-asset` | Deployed | [Design guide](en/prop-asset.md) | [设计说明](zh-CN/prop-asset.md) | [`SKILL.md`](../../skills/prop-asset/SKILL.md) |

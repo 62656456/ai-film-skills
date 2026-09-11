@@ -37,7 +37,7 @@
 
 | 入口 | 当前口径 |
 |---|---|
-| [当前源码](skills/ai-storyboard-director/SKILL.md) | 分镜入口为 **5.6**，已选择日常使用；增加作品内导演意图、镜头和状态的保存恢复，以及摄影设计在提示词编译中的保留检查 |
+| [当前源码](skills/ai-storyboard-director/SKILL.md) | 分镜入口为 **5.6.3**，已选择日常使用；增加紧凑提示词编译、打戏因果与受力设计，以及推进/变焦、横移/摇摄/环绕的按需诊断 |
 | [已发布v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | **旧发布快照**，分镜是 **5.4.4**；源码更新不改变旧ZIP |
 | 5.6独立Preview | 另有标签和清单的独立预览包，与当前源码及完整套装Release分别记录 |
 
@@ -50,7 +50,7 @@
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为五列分镜和六模块母提示词；在作品目录保存恢复镜头决定 | 5.6.0 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为五列分镜和六模块母提示词；在作品目录保存恢复镜头决定 | 5.6.3 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
 | `character-asset`<br/>人物资产 | 人物身份、外形、必要视图、表情与可变状态的参考任务和资产合同 | — | 常规 | [运行正文](skills/character-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/character-asset.md) |
 | `scene-asset`<br/>场景资产 | 场景拓扑、空间锚点、光源、材质和连续性参考图/提示词 | — | 常规 | [运行正文](skills/scene-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/scene-asset.md) |
 | `prop-asset`<br/>道具资产 | 道具结构、比例、可见面、持用和新旧状态；按要求交单图或必要视图 | — | 常规 | [运行正文](skills/prop-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/prop-asset.md) |
@@ -151,6 +151,15 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 这些方法是本项目对用户供图关系分析的原创综合，不声称反推出第三方Skill、模型或未提供的摄影参数。
 
+## 2026-09-11 源码研究增量
+
+- `ai-storyboard-director` 5.6.3 仍保持一个分镜入口：普通任务按阶段读取；打戏另读攻防、接触阻力、节奏和摄影设计；只有用户要求运镜对照或诊断时，才读取推进/变焦与横移/摇摄/环绕的可见证据方法。内部格式、隔离和文本回归通过；真实视频和用户审美仍待验。
+- 人物、场景和道具资产先通读剧本并区分明示事实与设计推定。人物默认交三面全身加中景，女性魅力按任务读取独立参考；场景无指定画风时默认摄影写实，并从用途、使用者、维护、天气和事件痕迹推导可信环境；道具继续围绕功能、接触和状态变化设计。
+- `war-design` 1.0.0 合并战争类型视觉与军事顾问方法，覆盖故事关键帧、战斗、小队摄影和实际画面审查；它不认证真实战术、装备性能或任意视频结果。
+- `web-design-director` 1.3.0 将优秀成品观察、开源实现与许可核对连接到具体设计机制，并把任务走查、布局实用性、材质、动效和交互恢复分开验证。本次升级获用户确认，不等同于跨项目、跨设备或真人研究结论。
+
+本增量只更新源码和双语说明，不创建新Release、不改写v1.3.0附件，也不上传私有测试媒体、候选成片或第三方无授权源码。
+
 ## See the Skills in motion
 
 历史预演证据展示了可观看的机位、走位与短动作门，保留原验收范围：
@@ -178,7 +187,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 Open Film Skills provides **20 self-contained modules: 18 regular and 2 experimental**, with 40 English/Simplified Chinese guides. The [full workflow](docs/WORKFLOW.md) covers input, writing, directing, visual language, assets, shots, prompts, optional previs, actual video production, sound, playback review and acceptance. It lists one external xianxia workflow entry without redistributing its source.
 
-Current source uses Storyboard Director 5.6. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The primary showcase contains 14 original images explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
+Current source uses Storyboard Director 5.6.3. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The 2026-09-11 source increment adds compact prompt compilation, fight design, camera-motion diagnostics, script-first asset derivation, unified war-film visual methods, and research-to-design web guidance with explicit evidence limits. The primary showcase contains 14 original images explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
 
 Start with the [catalog](SKILL_CATALOG.md), [source installation](docs/INSTALLATION.md) or [per-module English guides](docs/skills/INDEX.md).
 

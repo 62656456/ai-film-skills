@@ -1,0 +1,72 @@
+# Research that changes the design
+
+Use before a new direction, technology choice, or substantive implementation. Research connects a visible quality to a mechanism and a product decision; it is not satisfied by naming acclaimed sites or collecting repositories. Keep the work proportional to the unresolved choices.
+
+## Connect the finished experience to its implementation
+
+Observe relevant complete interfaces in their actual rendered state: initial composition, information progression, primary action, changed state, and narrow layout where they affect this task. Identify why the reference works for its content, audience, assets, and task frequency. A striking hero alone does not explain the rest of a product.
+
+Find open-source implementations for the important layout, interaction, material, or loading mechanisms. Read the actual license at the version inspected, then follow the relevant code from input/state to the visible result and cleanup. Inspect repository structure or dependencies only far enough to understand this path. A component library supplies mechanisms; it cannot stand in for studying a complete site's composition.
+
+If the finished site's code is unavailable, distinguish its observed design from the independently inspected open-source mechanism. Do not imply that the site uses a framework or algorithm without evidence. Seek a complete open-source product/site when that would close a composition-to-code gap. Public source is not automatically an unrestricted open-source license, and a repository license may not cover its photographs, fonts, brands, or third-party assets.
+
+Keep a compact record in existing project evidence: observed quality and conditions; source URL and commit/version; code actually read and license; causal mechanism; intended adaptation; cost/fallback; what remains unverified. This can be a few sentences per consequential choice, not a routine large report. Reuse relevant verified evidence rather than repeatedly researching the same mechanism.
+
+Before implementation, explain internally how the choice changes what the user sees or can do. Where feasibility is uncertain, reproduce only the critical mechanism with representative content, background, and target browser. Verify its failure/fallback before expanding it. Do not call a repository locally tested when only source or its hosted demo was inspected.
+
+For an explicitly requested concept or proposal when the target interface is unavailable, use the supplied facts and applicable existing research to give a provisional design. Identify assumptions and the inspection still needed before implementation; do not present it as a review of a page you have not seen. This does not waive research for a genuinely unresolved design or technology choice.
+
+## Learn from complete experiences
+
+These are design-analysis entry points, not proof that their site implementations are open source or permanently current. Reinspect the relevant page before making a current claim.
+
+| Case | Transferable question | Dependency or limit |
+| --- | --- | --- |
+| [Linear design refresh](https://linear.app/now/behind-the-latest-design-refresh) | Does navigation's visual weight leave the work and current context dominant? Are recurring actions predictable? | A retrospective supplies rationale and comparisons; inspect actual behavior separately. Muted chrome must remain readable. |
+| [Apple AirPods Pro](https://www.apple.com.cn/airpods-pro/) | In what order does an unfamiliar visitor understand object, value, mechanism, and use? | Product imagery carries much of the composition; oversize type and whitespace alone cannot reproduce it. |
+| [The Pudding: onions](https://pudding.cool/2025/08/onions/) | Can changing a parameter teach the explanation through a visible consequence, before introducing more complexity? | Match instructional pacing to the task; repeat users may need direct controls. |
+| [Stripe accessible color systems](https://stripe.com/blog/accessible-color-systems) | Do text, background, status, and interaction colors work as related roles? | This is a 2019 historical method case, not evidence of all current Stripe screens. |
+| [Palace Museum collection](https://digicol.dpm.org.cn/) | Can both a knowledgeable searcher and an unfamiliar explorer find material? | Topic, category, date, and color routes depend on trustworthy metadata and suitable imagery. |
+| [Lusion](https://lusion.co/) | Does the experience itself demonstrate the expertise being offered? | Expressive 3D fits this service proposition; assess loading, device cost, and fallback before borrowing its approach. |
+
+Transfer relationships and mechanisms rather than branding or an entire arrangement. Evaluate Chinese typography and genuine assets independently; a Latin-heavy reference does not solve Chinese headline wrapping, mixed-language rhythm, or local font loading.
+
+## Choose language, framework, and rendering separately
+
+Start with the behavior and content, then compare feasible choices against the current repository, complexity, device budget, maintainability, and testability:
+
+| Layer | Decision it actually answers |
+| --- | --- |
+| HTML/CSS and JavaScript/TypeScript | Semantic structure and style versus runtime behavior; type checking pays off with state/data complexity. TypeScript does not itself improve aesthetics or runtime speed. |
+| Application framework | Shared state, routing, component ownership, server/client boundaries, and team constraints. A simple effect does not automatically require React; an existing React product does not need replacement to improve its composition. |
+| CSS/SVG/Canvas 2D/WebGL/WebGPU | Layout/compositing, shape/filter processing, repeated 2D drawing, or shader/3D work. Use the mechanism with a defensible cost, compatibility, and fallback. The word “shader” in a demo is not evidence of GPU rendering. |
+| Delivery and activation | Which content appears immediately, which controls must already work, and which nonessential islands may activate on visibility or idle. Postponing a primary action can break the experience. |
+
+Prefer platform primitives when they meet the effect and behavior; use a library when its tested mechanics justify its dependency and integration cost. Neither minimal code nor an advanced stack is an aesthetic goal. Do not add smooth scrolling, a 3D engine, or a component suite solely because a reference includes it.
+
+## Source study map
+
+The following mechanisms were read at fixed snapshots on 2026-09-08. These are selected-source findings, not claims of local builds, cross-browser acceptance, or measured speedups. Follow the linked code and its same-commit license when applying it; verify the version actually adopted. The first ten snapshots were recorded as MIT. Preserve applicable license/attribution when reusing code.
+
+| Implementation and source | Mechanism to transfer |
+| --- | --- |
+| [shadcn sidebar](https://github.com/shadcn-ui/ui/blob/5c7072da672b0048bc6771e3204063a2537df91a/apps/v4/registry/new-york-v4/ui/sidebar.tsx) | Separate mobile and desktop presentation state while retaining shared task context. Reuse semantic variants, not a default card layout. |
+| [Radix dialog](https://github.com/radix-ui/primitives/blob/f7ecd5ab16f5e1e820eb5786a1419a98a2d594ae/packages/react/dialog/src/dialog.tsx) and [focus scope](https://github.com/radix-ui/primitives/blob/f7ecd5ab16f5e1e820eb5786a1419a98a2d594ae/packages/react/focus-scope/src/focus-scope.tsx) | Open state, presence, dismissal, focus ownership/restoration, and nested layers have distinct lifetimes. |
+| [Astro visible activation](https://github.com/withastro/astro/blob/9870f95601690d9d98799b6fa78a0bc76165ee06/packages/astro/src/runtime/client/visible.ts) and [idle activation](https://github.com/withastro/astro/blob/9870f95601690d9d98799b6fa78a0bc76165ee06/packages/astro/src/runtime/client/idle.ts) | Separate immediately useful content and controls from work that can wait. |
+| [Motion native animation](https://github.com/motiondivision/motion/blob/e871ba7f175d0609cef84f416f984e8e84be8333/packages/motion-dom/src/animation/NativeAnimationExtended.ts) and [frame batcher](https://github.com/motiondivision/motion/blob/e871ba7f175d0609cef84f416f984e8e84be8333/packages/motion-dom/src/frameloop/batcher.ts) | Continue an interrupted animation from current value/velocity; organize frame work instead of interleaving layout reads and writes. |
+| [React Three Fiber loop](https://github.com/pmndrs/react-three-fiber/blob/ff3899dbf43d2a88895fecf53c147192abfd7431/packages/fiber/src/core/loop.ts) and [performance guidance](https://github.com/pmndrs/react-three-fiber/blob/ff3899dbf43d2a88895fecf53c147192abfd7431/docs/advanced/scaling-performance.mdx) | Shared frame timing, demand invalidation, and resource reuse; the application still owns quality and reduced-motion policies. |
+| [Lenis animation](https://github.com/darkroomengineering/lenis/blob/eea71595f5ae595f49b21ed87520822d3624098a/packages/core/src/animate.ts) and [scroll controller](https://github.com/darkroomengineering/lenis/blob/eea71595f5ae595f49b21ed87520822d3624098a/packages/core/src/lenis.ts) | Input → target → elapsed-time damping → actual scroll → completion. Inspect native touch, nested scroll, and reduced-motion handling before adopting. |
+| [Radix light colors](https://github.com/radix-ui/colors/blob/dbdb85470547c7d34b9001f48fddb08ded335979/src/light.ts), [dark colors](https://github.com/radix-ui/colors/blob/dbdb85470547c7d34b9001f48fddb08ded335979/src/dark.ts), and [CSS generation](https://github.com/radix-ui/colors/blob/dbdb85470547c7d34b9001f48fddb08ded335979/scripts/build-css-modules.js) | Role-oriented scales, separate themes, and feature/gamut-conditioned wide-gamut values. |
+| [Open Props type](https://github.com/argyleink/open-props/blob/530682d04327f842f56bb1ec33cf84a3cadb3876/src/props.fonts.js), [sizes](https://github.com/argyleink/open-props/blob/530682d04327f842f56bb1ec33cf84a3cadb3876/src/props.sizes.js), and [docsite layout](https://github.com/argyleink/open-props/blob/530682d04327f842f56bb1ec33cf84a3cadb3876/docsite/index.css) | Bounded fluid scales, content measures, and responsive relationships. Verify real Chinese text separately. |
+| [Liquid Glass React](https://github.com/rdev/liquid-glass-react/blob/ac48eab18d1f7f444ae30002d240cae29c863a21/src/index.tsx) and [map generation](https://github.com/rdev/liquid-glass-react/blob/ac48eab18d1f7f444ae30002d240cae29c863a21/src/shader-utils.ts) | Canvas-generated displacement maps, SVG channel displacement, and separate refractive background/clear content layers. |
+| [Shu Ding liquid glass](https://github.com/shuding/liquid-glass/blob/a2d2e847f793430e3409a52927af815a23f4d372/liquid-glass.js) | A vanilla JavaScript/Canvas 2D map can drive an SVG filter. Audit demo cleanup before reuse: this snapshot's destroy path does not remove its global listeners. |
+| [React Bits source-available snapshot](https://github.com/DavidHDev/react-bits/tree/0e69e737242df1d257b4e5e399b01ae1d7901375) and [license](https://github.com/DavidHDev/react-bits/blob/0e69e737242df1d257b4e5e399b01ae1d7901375/LICENSE.md) | Studied time/pointer-driven fragment shading and multi-buffer fluid simulation as mechanisms. This snapshot has MIT plus Commons Clause restrictions; do not redistribute its component code as unrestricted MIT or embed it in this skill. |
+
+Use this map to choose a relevant source, not as a mandatory reading list on every task. A library source study leaves complete-site composition, target-device performance, and user taste unproven until the corresponding evidence exists.
+
+## Usability with visual character
+
+These additional studies connect a whole user task to visible layout and operation. Reuse the mechanism only where the task benefits; neither visual style is a universal template.
+
+- **[Excalidraw](https://excalidraw.com/)**: its stable canvas and main tools coexist with properties appropriate to the selected object. The studied [contextual actions](https://github.com/excalidraw/excalidraw/blob/0361bdd9cb832450f1232dd28931199a73b64b1d/packages/excalidraw/components/Actions.tsx), [mobile toolbar](https://github.com/excalidraw/excalidraw/blob/0361bdd9cb832450f1232dd28931199a73b64b1d/packages/excalidraw/components/MobileToolbar.tsx), and [history actions](https://github.com/excalidraw/excalidraw/blob/0361bdd9cb832450f1232dd28931199a73b64b1d/packages/excalidraw/actions/actionHistory.tsx) show contextual control selection, prioritization according to available space, and undo of document/app state. [MIT license](https://github.com/excalidraw/excalidraw/blob/0361bdd9cb832450f1232dd28931199a73b64b1d/LICENSE) was read at the same snapshot. On 2026-09-08 the hosted desktop/mobile interface was actually inspected, rectangle/text tool changes and undo/redo were exercised. The source and deployed site were not proven identical. Transfer stable workspace relationships and recoverable exploration, not tiny icon sizes or a hand-drawn theme by default.
+- **[GOV.UK error-summary example](https://design-system.service.gov.uk/components/error-summary/linking/)**: errors connect to correction with context. The studied [error-summary implementation](https://github.com/alphagov/govuk-frontend/blob/6b7063b9cbf95cfbb758e4cf01e4d962b722a6eb/packages/govuk-frontend/src/govuk/components/error-summary/error-summary.mjs), [visual styles](https://github.com/alphagov/govuk-frontend/blob/6b7063b9cbf95cfbb758e4cf01e4d962b722a6eb/packages/govuk-frontend/src/govuk/components/error-summary/_mixin.scss), and [input template](https://github.com/alphagov/govuk-frontend/blob/6b7063b9cbf95cfbb758e4cf01e4d962b722a6eb/packages/govuk-frontend/src/govuk/components/input/template.njk) combine label-aware scrolling/focus, distinct error/focus roles, and preserved input values. [MIT license](https://github.com/alphagov/govuk-frontend/blob/6b7063b9cbf95cfbb758e4cf01e4d962b722a6eb/LICENSE.txt) was read. The hosted example's error link was exercised and reached its field with the label visible; initial automatic focus and a real mobile keyboard were not verified. Transfer the clear recovery path, not the government brand or its entire validation policy. The [check-answers pattern](https://design-system.service.gov.uk/patterns/check-answers/) also explains returning from a correction without repeating unrelated steps; this part was documentation research, not a completed live transaction test.

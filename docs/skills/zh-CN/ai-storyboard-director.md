@@ -1,13 +1,13 @@
 # ai-storyboard-director｜剧本转分镜与提示词
 
-| 状态 | 当前源码5.6，已选择日常使用；v1.3.0 ZIP保留5.4.4 |
+| 状态 | 当前源码5.6.3，已选择日常使用；v1.3.0 ZIP保留5.4.4 |
 |---|---|
 | 单独可交付 | 针对已有批准剧本的完整分镜和可复制提示词包。 |
 | 单独不能声称 | 不改写剧本、不直接生成视频，也不证明平台生成成功。 |
 
 [运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0旧ZIP包含5.4.4，不是当前源码5.6。
+v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.3。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -100,9 +100,12 @@ v1.3.0旧ZIP包含5.4.4，不是当前源码5.6。
 
 **引用资料**
 
+- [`references/camera-motion-diagnostics.md`](../../../skills/ai-storyboard-director/references/camera-motion-diagnostics.md)
 - [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/design-memory-protocol.md`](../../../skills/ai-storyboard-director/references/design-memory-protocol.md)
+- [`references/fight-design.md`](../../../skills/ai-storyboard-director/references/fight-design.md)
+- [`references/fight-reference-case.md`](../../../skills/ai-storyboard-director/references/fight-reference-case.md)
 - [`references/framing-and-axis.md`](../../../skills/ai-storyboard-director/references/framing-and-axis.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)

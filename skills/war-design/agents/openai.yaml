@@ -1,4 +1,4 @@
 interface:
-  display_name: "战争视觉设计"
-  short_description: "为战争场景提供可观察的镜头、空间、爆炸、动作、材质与连续性参数。"
-  default_prompt: "Use $war-design to design an observable war visual direction."
+  display_name: "战争电影视觉顾问"
+  short_description: "统一战争光色与军事顾问能力，设计人物装备、场景道具、故事战斗和大胆小队画面"
+  default_prompt: "用 $war-design 设计这次战争或军事画面，结合人物目标、服装装备、空间光色与可见动作，按要求交付提示词或真实图片。"

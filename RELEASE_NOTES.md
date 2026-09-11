@@ -1,10 +1,13 @@
 # Release notes
 
-## Unreleased source refresh — 2026-09-07
+## Unreleased source refresh — 2026-09-11
 
 This section describes the current source changes. It is **not a claim that a new GitHub Release or updated release ZIP has been published**. Public v1.3.0 remains the historical 5.4.4 snapshot; the separately labeled 5.6 standalone Preview is a different artifact.
 
-- Current single-entry Storyboard Director source is 5.6, selected for daily use, with project-local director-intent/shot/state persistence, recovery, explicit geometry checks and preservation of selected camera design during prompt compilation.
+- Current single-entry Storyboard Director source is 5.6.3, selected for daily use, with compact prompt compilation, project-local state recovery, fight causality/contact/timing/camera design, and conditional diagnostics for dolly versus zoom and truck/pan/orbit motion.
+- Make the character, scene and prop asset modules read the script first and separate stated facts from design inferences. Default character delivery is three full-body views plus a medium shot; scenes default to photographic realism when no style is specified and derive wear from use, occupants, maintenance, weather and events.
+- Merge war-genre visual direction and military visual advising into `war-design` 1.0.0, including story frames, combat, squad cinematography and actual-image review while preserving the existing parameter interface and evidence limits.
+- Extend `web-design-director` 1.3.0 with research-to-design, interaction, material/motion and complete-task usability methods. The accepted upgrade does not claim cross-project, cross-device or human-study proof.
 - Retain the director-agent trust, scoped-routing and honest cold-read changes, including conditional AI-executable script compilation separate from the readable master.
 - Add package-local image-relationship direction to the visual and asset modules: attention, subject separation, source-based light, material response, scale and detail hierarchy. Preserve photographic, 3D-animation and 2D/illustration modes, single-image scope, new plastic and designed emission.
 - Refresh hard-science-fiction visual derivation and original machine-form guidance while retaining its opt-in experimental distribution.

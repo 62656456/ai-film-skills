@@ -1,13 +1,13 @@
 # ai-storyboard-director — script to shots and prompts
 
-| Status | Current source 5.6; selected for daily use; v1.3.0 ZIP preserves 5.4.4 |
+| Status | Current source 5.6.3; selected for daily use; v1.3.0 ZIP preserves 5.4.4 |
 |---|---|
 | Can deliver alone | A complete storyboard and copy-ready prompt package for an existing approved script. |
 | Cannot claim alone | It does not rewrite the script, directly generate the video, or prove platform success. |
 
 [Runtime `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.
+Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.3.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -100,9 +100,12 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 
 **References**
 
+- [`references/camera-motion-diagnostics.md`](../../../skills/ai-storyboard-director/references/camera-motion-diagnostics.md)
 - [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/design-memory-protocol.md`](../../../skills/ai-storyboard-director/references/design-memory-protocol.md)
+- [`references/fight-design.md`](../../../skills/ai-storyboard-director/references/fight-design.md)
+- [`references/fight-reference-case.md`](../../../skills/ai-storyboard-director/references/fight-reference-case.md)
 - [`references/framing-and-axis.md`](../../../skills/ai-storyboard-director/references/framing-and-axis.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)

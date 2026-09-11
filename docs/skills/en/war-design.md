@@ -1,9 +1,9 @@
-# war-design — terrain, force, and combat causality
+# war-design — unified war and military film visual advisor
 
 | Status | Deployed |
 |---|---|
-| Can deliver alone | A war `style_route`, terrain/action parameters, negative constraints, and QC contract. |
-| Cannot claim alone | It does not provide real weapon-building instruction or make combat credible through clean hero posing and decorative explosions. |
+| Can deliver alone | Genre parameters, military visual advice, complete image prompts, actual images, and war-visual/sound supplements for approved shots. |
+| Cannot claim alone | Merging and installation do not replace new image/video or user-aesthetic evaluation, or certify real tactics and equipment performance. |
 
 [Runtime `SKILL.md`](../../../skills/war-design/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/war-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
@@ -12,76 +12,72 @@ Historical v1.3.0 snapshot; differs from current source where updated.
 <!-- contract:purpose -->
 ## 1. Purpose
 
-Translate war into terrain, formation, weapon direction, cover, movement, impact, smoke and debris physics, logistics traces, sound, and continuity.
+Unify war-genre light and space, military clothing and equipment, environments and props, story/combat imagery, squad cinematography and actual-image review under war-design.
 
 <!-- contract:principles -->
 ## 2. Design principles
 
-- Translate genre feeling into observable camera, color, space, action, material, sound, and continuity parameters.
-- Genre parameters support an approved story and assets; they do not rewrite either one.
-- Director names and color values are sources or starting points, never imitation commands or universal laws.
-- Golden hour, complementary colors, shallow focus, foreground people, exact lens values and worn surfaces are optional design choices, not universal quality requirements.
+- Select the requested mode before loading rules: style parameters, assets, story images, or shot supplements. Empty environments remain empty.
+- Preserve user locks, treat presets as optional designs, and separate observations, source claims, and authored choices.
 
 <!-- contract:standalone -->
 ## 3. Standalone scope
 
 Use this module by itself when the requested result stays inside the following boundary:
 
-A war `style_route`, terrain/action parameters, negative constraints, and QC contract.
+Genre parameters, military visual advice, complete image prompts, actual images, and war-visual/sound supplements for approved shots.
 
-**Cannot claim alone:** It does not provide real weapon-building instruction or make combat credible through clean hero posing and decorative explosions.
+**Cannot claim alone:** Merging and installation do not replace new image/video or user-aesthetic evaluation, or certify real tactics and equipment performance.
 
 <!-- contract:inputs -->
 ## 4. Inputs
 
-- Genre, intended medium, scene function, subjects, locked choices and relevant assets; duration and platform fields only when needed by the current deliverable.
-- Existing director, blocking, lighting, continuity, and end-state decisions.
-- Missing fields remain open; generic words such as 'cinematic' cannot fill them.
+- The target medium, story or object, locked people/space/style, and relevant references.
+- Use duration, platform and existing sound only when needed; do not invent unverified models or dates.
 
 <!-- contract:workflow -->
 ## 5. Workflow
 
-1. Read the package-local cinematic-image-direction reference, choose the imaging medium, and establish the visible proposition and attention hierarchy before presets.
-2. Derive functional color, light sources, spatial structure, and scene parameters.
-3. Add materials, contact and state continuity; include camera motion, timing and sound only for video, and preserve supplied approved assets.
-4. Compile the ten information categories and platform translation without changing upstream decisions.
-5. Run shared and genre-specific review; emit `ready_for_prompt` or a field-specific `rework` result.
+1. Choose parameters, character, environment, prop, story, combat, or squad mode.
+2. Establish attention, spatial and material relationships; use genre presets when useful.
+3. Add goals, obstacles and visible evidence for story tasks; preserve the scope of asset-only tasks.
+4. Check actual prompt payloads for people, equipment, directions and reference roles; use natural names in copyable prompts.
+5. Deliver prompts or use available image tools as requested, inspect actual results, and repair specific issues.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
 
-- Story, asset, or blocking failures return to their owning layer; style failures return to the camera, color, space, action, material, or continuity field that caused them.
-- Review failure produces `rework` with the failed field; it cannot be bypassed by another generation attempt.
-- These modules have design rework, not historical version rollback.
+- Identify location, visible defect and task impact; do not conceal problems with fog, cropping or wording.
+- Preserve accepted states and rollback material; merging does not duplicate image acceptance counts.
 
 <!-- contract:review -->
 ## 7. Review gates
 
-- [ ] All fields required by the current medium agree: framing, functional color, motivated light, space, subject/material relations and state; add motion and sound for video only.
-- [ ] The shared anti-fake-cinema checks reject empty quality words, unmotivated camera moves, source-less light, decorative color, and unstable props or space.
-- [ ] Genre-specific negative constraints target only likely failures and do not suppress story-authorized color, scale, stillness, or motion.
+- [ ] Verify medium, subject count, user locks, form/loadout, space, direction, light and materials.
+- [ ] Keep necessary people and equipment readable in low light; shared gear does not prove actor identity.
+- [ ] Do not invent temporal proof from stills; check timing, end state and sound only for video supplements.
 - [ ] Terrain, cover, weapon direction, action cause and reaction, debris, smoke, injuries, and movement routes agree; slow motion has a dramatic reason.
 
 <!-- contract:pass -->
 ## 8. Pass standard and states
 
-- All shared and genre-specific checks pass, approved assets remain unchanged, and the module can emit `ready_for_prompt`.
-- `ready_for_prompt` means the visual parameter package is ready; it does not prove that an image, clip, or final film passed.
+- Report structure/prompt readiness, generation, review and user acceptance separately; ready_for_prompt only means prepared.
+- Preserve sourced historical acceptance of the war example and five advisor images; merge checks are not new image acceptance.
 
 > A pass below means this module's stated gates were met. Structural validity, real-task evidence, and user acceptance remain separate states.
 
 <!-- contract:outputs -->
 ## 9. Outputs
 
-- A genre-specific `style_route`, `style_module`, and `qc_contract` that can stand alone as a visual parameter package.
-- Scene-ready prompt fields, negative constraints, continuity state, and sound cues.
+- Task-specific visual designs, natural-language prompts, actual images, or visual supplements for approved shots.
+- Keep style_module, style_route and qc_contract when needed; ten information categories are internal, not mandatory ten-section output.
 
 <!-- contract:boundaries -->
 ## 10. Boundaries, dependencies, and permissions
 
-- Do not write the screenplay, replace director judgment, or modify approved asset appearance.
-- Do not claim universal genre color laws, living-artist imitation, or generation success.
-- The new image-relationship reference is an authored synthesis of supplied-image analysis. The 14 accepted showcase results do not establish the source methods of another Skill, a stable success rate, or an old/new same-prompt A/B improvement.
+- Do not rewrite locked stories, take over full screenplay/shot-list production, or override approved assets and directing.
+- Do not provide real weapon construction or attack-operation tutorials; still images do not certify engineering, tactics or motion.
+- The standalone package contains its runtime knowledge; model tools, accounts and extra permissions are not provided by the Skill.
 - The user accepted this round's representative image, recorded in docs/showcase/manifest.json; that is an image-level result, not a universal success claim.
 
 <!-- contract:agents -->
@@ -103,9 +99,16 @@ A war `style_route`, terrain/action parameters, negative constraints, and QC con
 **References**
 
 - [`references/cinematic-image-direction.md`](../../../skills/war-design/references/cinematic-image-direction.md)
+- [`references/combat-visual.md`](../../../skills/war-design/references/combat-visual.md)
 - [`references/COMMON-12-SECTION-PROTOCOL.md`](../../../skills/war-design/references/COMMON-12-SECTION-PROTOCOL.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/war-design/references/NEGATIVE-CASE-BOOK.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/war-design/references/SOURCE-LEDGER.md)
+- [`references/sources.md`](../../../skills/war-design/references/sources.md)
+- [`references/squad-cinematography.md`](../../../skills/war-design/references/squad-cinematography.md)
+- [`references/story-visual.md`](../../../skills/war-design/references/story-visual.md)
+- [`references/visual-design.md`](../../../skills/war-design/references/visual-design.md)
+- [`references/visual-review.md`](../../../skills/war-design/references/visual-review.md)
+- [`references/war-visual-presets.md`](../../../skills/war-design/references/war-visual-presets.md)
 
 **Distribution notices in new ZIP builds**
 
