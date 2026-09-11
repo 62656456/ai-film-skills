@@ -107,7 +107,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 
 ## 实际证据与返修
 
-[14张展示图](docs/showcase/manifest.json)均为用户已接受的项目自主生成结果；这不是旧新版同题A/B，也不证明全题材稳定、视频执行或全部技能实战通过。旧[视觉图库](docs/style-gallery/manifest.json)、[5.4.4文字案例](examples/storyboard-director-5.4.4-visible-camera-plan.md)和[预演片段](docs/media/media-manifest.json)保留原证据状态。
+[21张展示图](docs/showcase/manifest.json)均为用户已接受的项目自主视觉结果，其中19张为生成静帧、2张为原创网页原型截图；这不是旧新版同题A/B，也不证明全题材稳定、视频执行、真人可用性研究或全部技能实战通过。旧[视觉图库](docs/style-gallery/manifest.json)、[5.4.4文字案例](examples/storyboard-director-5.4.4-visible-camera-plan.md)和[预演片段](docs/media/media-manifest.json)保留原证据状态。
 
 结果失败时退回最早的故事、资产、摄影、光影、材质或执行环节，保留已确认事实。结构检查、实际加载、真实任务、媒体检查和用户接受分别记录。
 

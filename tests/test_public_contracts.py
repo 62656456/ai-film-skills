@@ -136,6 +136,19 @@ class ShowcaseContractTests(unittest.TestCase):
             item.update({"original_width": 16, "original_height": 6, "original_bytes": len(original), "original_sha256": hashlib.sha256(original).hexdigest()})
             self.assertTrue(any("aspect ratio" in e for e in self.validate(root, path, manifest)))
 
+    def test_showcase_accepts_browser_screenshot_only_for_web_design(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            path, manifest = self.fixture(root)
+            item = manifest["items"][0]
+            web_skill = root / "skills/web-design-director"
+            web_skill.mkdir(parents=True)
+            (web_skill / "SKILL.md").write_text("test runtime", encoding="utf-8")
+            item.update({"skill": "web-design-director", "source_kind": "original_browser_screenshot"})
+            self.assertEqual(self.validate(root, path, manifest), [])
+            item["skill"] = "cyberpunk-design"
+            self.assertTrue(any("unsupported source provenance" in e for e in self.validate(root, path, manifest)))
+
 
 if __name__ == "__main__":
     unittest.main()

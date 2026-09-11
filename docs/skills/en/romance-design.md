@@ -81,7 +81,7 @@ A romance `style_route`, intimacy and light parameters, negative constraints, an
 
 - Do not write the screenplay, replace director judgment, or modify approved asset appearance.
 - Do not claim universal genre color laws, living-artist imitation, or generation success.
-- The new image-relationship reference is an authored synthesis of supplied-image analysis. The 14 accepted showcase results do not establish the source methods of another Skill, a stable success rate, or an old/new same-prompt A/B improvement.
+- The new image-relationship reference is an authored synthesis of supplied-image analysis. The 21 accepted showcase outputs do not establish the source methods of another Skill, a stable success rate, cross-device usability, or an old/new same-prompt A/B improvement.
 - The user accepted this round's representative image, recorded in docs/showcase/manifest.json; that is an image-level result, not a universal success claim.
 
 <!-- contract:agents -->

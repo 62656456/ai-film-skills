@@ -4,7 +4,7 @@
 
 ![从输入、剧本、导演、视觉资产、分镜提示词到视频验收的完整流程](assets/workflow-overview.svg)
 
-[下载完整 Mermaid 源图](assets/production-workflow.mmd) · [全部模块](../SKILL_CATALOG.md) · [当前源码安装](INSTALLATION.md#install-from-a-clone) · [14张用户接受成图及证据](showcase/manifest.json)
+[下载完整 Mermaid 源图](assets/production-workflow.mmd) · [全部模块](../SKILL_CATALOG.md) · [当前源码安装](INSTALLATION.md#install-from-a-clone) · [21张用户接受视觉成果及证据](showcase/manifest.json)
 
 ## 完整原图
 
@@ -84,6 +84,6 @@ flowchart TB
 
 ## 证据与当前边界
 
-本轮14张原创成图均已由用户接受，原幅展示及逐文件状态见[展示清单](showcase/manifest.json)。这证明这些图例的实际结果已被接受；没有旧版同题A/B，因此不把它们称为量化提升或所有题材的稳定成功率。完整视频仍须生成、完整播放、修复并单独验收。
+本轮21张视觉成果均已由用户接受，其中19张为原创生成静帧，2张为原创网页原型的真实浏览器截图；原幅展示及逐文件状态见[展示清单](showcase/manifest.json)。这只证明这些具体结果已被接受；没有旧版同题A/B，也没有跨任务稳定性或真人可用性研究。完整视频仍须生成、完整播放、修复并单独验收。
 
 当前源码的分镜入口为5.6；公开v1.3.0 Release是含5.4.4的旧快照；另行分发的5.6独立Preview有自己的标签和范围。更新源码、构建ZIP、推送Git和发布新Release是不同动作，见[安装说明](INSTALLATION.md)。

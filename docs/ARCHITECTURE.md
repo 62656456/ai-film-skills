@@ -12,7 +12,7 @@ docs/skills/en/               20 generated English guides
 docs/skills/zh-CN/            20 generated Simplified Chinese guides
 docs/WORKFLOW.md               complete workflow, handoffs and 20 film + 1 web responsibilities
 docs/assets/production-workflow.mmd  editable full workflow source
-docs/showcase/manifest.json    14 accepted original images and explicit evidence state
+docs/showcase/manifest.json    21 accepted visual outputs and explicit evidence state
 docs/i18n/                    translated entry pages
 scripts/                      install, packaging, guide generation and validation
 ```
@@ -47,4 +47,4 @@ Current source, old published archives and standalone Preview artifacts have dif
 
 ## Evidence
 
-File validity, loading, recorded behavior, viewed output and user acceptance are distinct. The 14 current showcase images were accepted; the historical gallery and previs clips retain their original evidence labels. None of these records proves an arbitrary complete film, identical output across hosts or a same-prompt old/new comparison.
+File validity, loading, recorded behavior, viewed output and user acceptance are distinct. The 21 current showcase outputs were accepted: 19 generated stills and two original-interface browser screenshots. The historical gallery and previs clips retain their original evidence labels. None of these records proves an arbitrary complete film, identical output across hosts, cross-device usability or a same-prompt old/new comparison.

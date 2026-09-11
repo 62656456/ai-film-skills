@@ -268,8 +268,13 @@ def validate_showcase(root: Path = ROOT, require_links: bool = True) -> list[str
                 errors.append(f"showcase {identifier} has unsupported external Skill provenance")
         else:
             errors.append(f"showcase {identifier} has invalid availability")
-        if item.get("source_kind") != "original_builtin_imagegen":
-            errors.append(f"showcase {identifier} must identify original ImageGen provenance")
+        source_kind = item.get("source_kind")
+        if source_kind == "original_builtin_imagegen":
+            pass
+        elif source_kind == "original_browser_screenshot" and skill == "web-design-director":
+            pass
+        else:
+            errors.append(f"showcase {identifier} has unsupported source provenance")
         if item.get("status") != "user_accepted":
             errors.append(f"showcase {identifier} lacks the declared user acceptance")
         if item.get("file") != f"{identifier}.webp" or item.get("original_file") != f"originals/{identifier}.png":

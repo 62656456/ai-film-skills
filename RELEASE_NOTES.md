@@ -18,7 +18,7 @@ This section describes the current source changes. It is **not a claim that a ne
 - Clarify the web-design Skill trigger: repository, README, source and package maintenance do not authorize website creation or deployment.
 - Document the full input-to-script/director/visual/assets/storyboard/prompt/video/review workflow, including 5.6 save/recovery, optional previs and explicit return paths.
 - Link external `xianxia-visual-director` for workflow completeness without copying its source or including it in any ZIP; no verified redistribution license is available.
-- Present 14 original images explicitly accepted by the user, preserving their full aspect ratio and separating them from the older historical gallery. There is no old-version same-prompt A/B experiment, so no quantified before/after improvement or universal success rate is claimed.
+- Present 21 visual outputs explicitly accepted by the user: 19 generated stills and two browser screenshots of the original LUMEN interface. Preserve full aspect ratios and separate them from the older historical gallery. There is no old-version same-prompt A/B experiment, so no quantified before/after improvement or universal success rate is claimed.
 - Distinguish current source installation from pinned historical release archives and a separate Preview in the catalog, generated guides and installation pages.
 
 Validation, source synchronization, actual media inspection, accepted examples, Git push and Release publication remain separate evidence. The prior release notes below are historical snapshots; their module counts and version descriptions are not the current source inventory.

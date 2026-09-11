@@ -10,7 +10,7 @@
 
 *Independent Agent Skills for story, directing, visual assets, cinematography and AI-film production.*
 
-[完整工作流](docs/WORKFLOW.md) · [14张用户接受成图](#本轮14张用户接受成图) · [全部20个技能](#全部20个独立技能) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
+[完整工作流](docs/WORKFLOW.md) · [21张用户接受视觉成果](#本轮21张用户接受视觉成果) · [全部20个技能](#全部20个独立技能) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
 
 **简体中文** · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · [English overview](#english-overview)
 
@@ -104,9 +104,9 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 其他宿主、历史ZIP与实验包的明确安装方式见[安装指南](docs/INSTALLATION.md)和[兼容边界](docs/COMPATIBILITY.md)。Skills CLI的[旧版发现与复制记录](examples/skills-cli-install-verification.md)保留为历史证据，不冒充本轮5.6宿主行为测试。
 
-## 本轮14张用户接受成图
+## 本轮21张用户接受视觉成果
 
-以下均为原创生成结果，用户已逐批明确接受。预览保留完整画幅，点击进入原始PNG；没有裁切成卡片来隐藏边缘。包括8类型、5张硬科幻与1张仙侠；仙侠技能本体来自外部，仅链接上游，图是本轮授权生成的原创成果。
+以下19张是原创生成静帧，另有2张是原创LUMEN界面的真实浏览器截图；用户均已逐批明确接受。预览保持原始比例，点击进入原始PNG，没有裁切成卡片来隐藏边缘。仙侠技能本体来自外部，仅链接上游，图是本轮授权生成的原创成果。
 
 <table>
 <tr>
@@ -137,9 +137,24 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 <td width="50%" valign="top"><a href="docs/showcase/originals/hard-scifi-europa-underice.png"><img src="docs/showcase/hard-scifi-europa-underice.webp" width="100%" alt="硬科幻：冰下环境与探测；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《冰壳下的来客》</strong><br />硬科幻：冰下环境与探测。</td>
 <td width="50%" valign="top"><a href="docs/showcase/originals/xianxia-cloud-bell.png"><img src="docs/showcase/xianxia-cloud-bell.webp" width="100%" alt="仙侠：外部技能路线的原创成图；用户已接受的原创单幅成图，点击查看原始完整画幅" /></a><br /><strong>《云海钟境》</strong><br />仙侠：外部技能路线的原创成图。</td>
 </tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/war-bold-black-shadow-advance.png"><img src="docs/showcase/war-bold-black-shadow-advance.webp" width="100%" alt="战争小队：工业夜景中的四人纵深与暴露边缘；用户已接受，点击查看原始完整画幅" /></a><br /><strong>《黑影前行》</strong><br />贴地广角、实用光源和四人差异化动作。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/war-bold-suspended-city-landing.png"><img src="docs/showcase/war-bold-suspended-city-landing.webp" width="100%" alt="战争小队：高楼外立面的垂直接力；用户已接受，点击查看原始完整画幅" /></a><br /><strong>《悬城落点》</strong><br />高差、绳索承托、器材负荷和协作关系。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/war-bold-red-sand-contact.png"><img src="docs/showcase/war-bold-red-sand-contact.webp" width="100%" alt="战争小队：红砂路堑的近距离交锋；用户已接受，点击查看原始完整画幅" /></a><br /><strong>《赤沙交锋》</strong><br />过肩近景、局部碎屑和不同步的队员反应。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/war-bold-floodgate-blue.png"><img src="docs/showcase/war-bold-floodgate-blue.webp" width="100%" alt="战争小队：潮门下涉水搬运器材；用户已接受，点击查看原始完整画幅" /></a><br /><strong>《潮门幽蓝》</strong><br />水阻、低矮障碍、共同承重和警戒分工。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/war-bold-snowline-backlight.png"><img src="docs/showcase/war-bold-snowline-backlight.webp" width="100%" alt="战争小队：雪线逆光中的分层攀登；用户已接受，点击查看原始完整画幅" /></a><br /><strong>《雪线逆光》</strong><br />雪地阻力、错落队形、援手和明确目的地。</td>
+<td width="50%" valign="top"><a href="docs/showcase/originals/web-design-lumen-desktop-confirmed.png"><img src="docs/showcase/web-design-lumen-desktop-confirmed.webp" width="100%" alt="网页设计：LUMEN桌面端收藏回访界面；用户已接受，点击查看原始截图" /></a><br /><strong>LUMEN·桌面端</strong><br />收藏结果、再次回访入口和本地保存边界同时可见。</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="docs/showcase/originals/web-design-lumen-mobile-favorites.png"><img src="docs/showcase/web-design-lumen-mobile-favorites.webp" width="100%" alt="网页设计：LUMEN手机端收藏回访界面；用户已接受，点击查看原始截图" /></a><br /><strong>LUMEN·手机端</strong><br />390像素宽度下保留收藏、身份和回访路径。</td>
+</tr>
 </table>
 
-[查看逐文件来源、版本、哈希与接受记录](docs/showcase/manifest.json)。这14张证明相应图例已通过用户审阅；没有旧版同题A/B，不能据此宣称量化升级、所有题材稳定成功或视频执行通过。
+[查看逐文件来源、版本、哈希与接受记录](docs/showcase/manifest.json)。这21张证明对应静帧或界面结果已通过用户审阅；五张战争小队图来自一次接受批次，两张LUMEN截图来自一次接受的界面交付，不能据此宣称跨任务稳定、真人可用性研究、所有题材成功或视频执行通过。
 
 ## 本轮视觉方法更新了什么
 
@@ -158,7 +173,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 - `war-design` 1.0.0 合并战争类型视觉与军事顾问方法，覆盖故事关键帧、战斗、小队摄影和实际画面审查；它不认证真实战术、装备性能或任意视频结果。
 - `web-design-director` 1.3.0 将优秀成品观察、开源实现与许可核对连接到具体设计机制，并把任务走查、布局实用性、材质、动效和交互恢复分开验证。本次升级获用户确认，不等同于跨项目、跨设备或真人研究结论。
 
-本增量只更新源码和双语说明，不创建新Release、不改写v1.3.0附件，也不上传私有测试媒体、候选成片或第三方无授权源码。
+本增量更新源码、双语说明和已明确接受的公开图片；不创建新Release、不改写v1.3.0附件，也不上传待审候选、私有项目状态、候选成片或第三方无授权源码。
 
 ## See the Skills in motion
 
@@ -173,7 +188,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 白模执行器现作为源码中的独立实验包列出；这些历史片段证明有限预演与动作门，不证明任意完整打斗、最终AI成片或新的用户接受。[媒体清单](docs/media/media-manifest.json)
 
-[旧5.4.4文字行为案例](examples/storyboard-director-5.4.4-visible-camera-plan.md)和[历史视觉参考墙](docs/style-gallery/manifest.json)仍可查看，保留各自日期与原状态，不与本轮14张接受成图混记。
+[旧5.4.4文字行为案例](examples/storyboard-director-5.4.4-visible-camera-plan.md)和[历史视觉参考墙](docs/style-gallery/manifest.json)仍可查看，保留各自日期与原状态，不与本轮21张接受视觉成果混记。
 
 ## 模块和证据边界
 
@@ -187,7 +202,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 Open Film Skills provides **20 self-contained modules: 18 regular and 2 experimental**, with 40 English/Simplified Chinese guides. The [full workflow](docs/WORKFLOW.md) covers input, writing, directing, visual language, assets, shots, prompts, optional previs, actual video production, sound, playback review and acceptance. It lists one external xianxia workflow entry without redistributing its source.
 
-Current source uses Storyboard Director 5.6.3. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The 2026-09-11 source increment adds compact prompt compilation, fight design, camera-motion diagnostics, script-first asset derivation, unified war-film visual methods, and research-to-design web guidance with explicit evidence limits. The primary showcase contains 14 original images explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
+Current source uses Storyboard Director 5.6.3. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The 2026-09-11 source increment adds compact prompt compilation, fight design, camera-motion diagnostics, script-first asset derivation, unified war-film visual methods, and research-to-design web guidance with explicit evidence limits. The primary showcase contains 19 generated stills and two browser screenshots explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
 
 Start with the [catalog](SKILL_CATALOG.md), [source installation](docs/INSTALLATION.md) or [per-module English guides](docs/skills/INDEX.md).
 
@@ -195,6 +210,6 @@ Start with the [catalog](SKILL_CATALOG.md), [source installation](docs/INSTALLAT
 
 [贡献说明](CONTRIBUTING.md) · [安全反馈](SECURITY.md) · [第三方说明](THIRD_PARTY_NOTICES.md) · [GitHub Discussions](https://github.com/62656456/ai-film-skills/discussions) · [Issues](https://github.com/62656456/ai-film-skills/issues)
 
-本仓库原创Skill、脚本、文档、提示词和明确项目自主生成的示例，在权利人有权许可的范围内按[Apache License 2.0](LICENSE)允许个人与商业使用、修改、集成和再分发；保留适用许可说明、注明文件变更，不要求衍生项目全部开源。本轮14图属于项目原创AI辅助样本，并经人工参与设计、筛选、修订与接受；不承诺AI输出独一无二。新作品仍需遵守实际平台条款与输入素材、肖像、商标等权利，外部仙侠链接不授予其源码许可。
+本仓库原创Skill、脚本、文档、提示词和明确项目自主生成的示例，在权利人有权许可的范围内按[Apache License 2.0](LICENSE)允许个人与商业使用、修改、集成和再分发；保留适用许可说明、注明文件变更，不要求衍生项目全部开源。本轮19张成图属于项目原创AI辅助样本，2张界面图属于原创原型的浏览器截图，均经人工参与设计、筛选、修订与接受；不承诺AI输出独一无二。新作品仍需遵守实际平台条款与输入素材、肖像、商标等权利，外部仙侠链接不授予其源码许可。
 
 [阅读完整原创版权与商用说明](COMMERCIAL_USE.md) · [第三方范围](THIRD_PARTY_NOTICES.md)

@@ -42,7 +42,7 @@ The visual and asset packages now carry their own `cinematic-image-direction.md`
 - Match delivery scope: a single prompt or image does not automatically become a multi-view sheet, a video timeline or a complete film.
 - Read actual pixels for an image verdict and actual motion for video; text consistency remains text evidence.
 
-The [14-image showcase](showcase/manifest.json) records accepted outcomes. It is not a same-prompt comparison against the old rules and does not prove a general success rate.
+The [21-output showcase](showcase/manifest.json) records 19 accepted generated stills and two accepted browser screenshots of an original interface. It is not a same-prompt comparison against the old rules and does not prove a general success rate or cross-device usability.
 
 ## Storyboard 5.6: persistence without replacing judgment
 
