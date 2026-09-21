@@ -214,8 +214,8 @@
       ],
       "outputs": [
         {
-          "en": "A five-column storyboard: time, framing/angle, camera, visible action, and dialogue/sound.",
-          "zh-CN": "五列人读分镜：时间、景别/机位、摄影机、画面与动作、台词/声音。"
+          "en": "One fused six-section master with the readable shot timeline in section six; a standalone five-column table only when explicitly requested.",
+          "zh-CN": "一条融合六段母稿，第六段包含完整人读镜头时间轴；仅单独点名镜头表时改用五列表。"
         },
         {
           "en": "Copy-ready prompts using the required six-module outer structure and Digital-10 information core.",
@@ -704,8 +704,8 @@
           "zh-CN": "它可以单独整理已批准决定或审计控制缺口，但不会复制导演、资产、类型、生成和 QC 的全部能力。"
         },
         {
-          "en": "This package includes a self-contained handoff aligned with the 5.6 storyboard format, without importing its persistence engine. Source alignment does not establish deployment or actual-video acceptance.",
-          "zh-CN": "本包自带与5.6分镜格式对齐的交付合同，不引入其状态程序；源码对齐不代表部署或真实视频验收。"
+          "en": "This package's independent handoff was aligned with the 5.6.0 format on 2026-09-07 and retains a five-column storyboard plus a six-module prompt. It has not adopted 5.6.4's single fused output or its persistence engine. That historical alignment does not establish deployment or actual-video acceptance.",
+          "zh-CN": "本包独立交付合同于2026-09-07按5.6.0结构建立，保留五列分镜加六模块提示词，未随5.6.4改为融合单稿，也不引入其状态程序；历史对齐不代表部署或真实视频验收。"
         }
       ],
       "requires": {
@@ -1380,6 +1380,60 @@
           "zh-CN": "独立包包含运行知识；模型工具、账户与额外权限不由Skill提供。"
         }
       ]
+    },
+    "guofeng": {
+      "principles": [
+        {
+          "en": "Ground culture, lived space and image design in the brief; separate history, invented worlds and stylization.",
+          "zh-CN": "从简报推导文化、生活空间与画面；区分历史还原、架空古风和风格化表达。"
+        }
+      ],
+      "inputs": [
+        {
+          "en": "Story, portrait, environment, object brief or a visual reference, with any locked facts.",
+          "zh-CN": "故事、人像、环境、器物简报或视觉参考，以及已有锁定事实。"
+        }
+      ],
+      "workflow": [
+        {
+          "en": "Identify evidence and open choices; choose culture and medium; design people, space, light and material; compile and review the actual result.",
+          "zh-CN": "区分依据与开放项，选择文化与媒介，设计人物、空间、光色和材质，编译提示词并检查实际结果。"
+        }
+      ],
+      "returns": [
+        {
+          "en": "Repair the earliest factual, spatial or pictorial mismatch while preserving accepted choices.",
+          "zh-CN": "保留已认可内容，修复最早出现的文化、空间或画面偏差。"
+        }
+      ],
+      "review": [
+        {
+          "en": "Compare the actual image with the brief; text checks do not imply image acceptance.",
+          "zh-CN": "对照真实图片与简报；文字检查不代表画面被接受。"
+        }
+      ],
+      "pass": [
+        {
+          "en": "A reviewed result fits the requested medium and explicit evidence; user taste remains a separate decision.",
+          "zh-CN": "结果符合指定媒介和证据；用户审美由用户单独确认。"
+        }
+      ],
+      "outputs": [
+        {
+          "en": "Visual direction, complete image prompts, controlled variants or image diagnosis as requested.",
+          "zh-CN": "按要求交付视觉方案、完整图像提示词、受控变体或图像诊断。"
+        }
+      ],
+      "boundaries": [
+        {
+          "en": "No automatic xianxia, wuxia, fixed dynasty, image generation or full-film expansion.",
+          "zh-CN": "不自动变仙侠、武侠、固定朝代，不因讨论技能就生图或扩为全片。"
+        }
+      ],
+      "requires": {
+        "en": "The visual parameter and QC package is text-only and host-neutral. Actual image or video output requires the host's media tools, model access, permissions, and visual review.",
+        "zh-CN": "视觉参数与质检包是宿主无关的文本合同；真实图片或视频另需媒体工具、模型权限和视觉审核。"
+      }
     }
   },
   "skills": [
@@ -1422,8 +1476,8 @@
       "family": "storyboard",
       "status": "deployed",
       "status_label": {
-        "en": "Current source 5.6.3; selected for daily use; v1.3.0 ZIP preserves 5.4.4",
-        "zh-CN": "当前源码5.6.3，已选择日常使用；v1.3.0 ZIP保留5.4.4"
+        "en": "Current source 5.6.4; selected for daily use; v1.3.0 ZIP preserves 5.4.4",
+        "zh-CN": "当前源码5.6.4，已选择日常使用；v1.3.0 ZIP保留5.4.4"
       },
       "title": {
         "en": "ai-storyboard-director — script to shots and prompts",
@@ -1446,11 +1500,11 @@
         "tag": "v1.3.0",
         "asset": "ai-storyboard-director.zip",
         "note": {
-          "en": "Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.3.",
-          "zh-CN": "v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.3。"
+          "en": "Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.4.",
+          "zh-CN": "v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.4。"
         }
       },
-      "source_version": "5.6.3"
+      "source_version": "5.6.4"
     },
     {
       "name": "character-asset",
@@ -2196,14 +2250,48 @@
           "zh-CN": "新增源码包；v1.3.0没有此发布附件。"
         }
       }
+    },
+    {
+      "name": "guofeng-visual-director",
+      "family": "guofeng",
+      "status": "experimental",
+      "source_version": "0.1.1",
+      "status_label": {
+        "en": "Candidate 0.1.1; opt-in experiment; image review pending",
+        "zh-CN": "候选0.1.1；主动选择的实验包；图像待审"
+      },
+      "title": {
+        "en": "guofeng-visual-director — Chinese period visual direction",
+        "zh-CN": "guofeng-visual-director｜古风视觉设计总监"
+      },
+      "purpose": {
+        "en": "Design coherent Chinese period imagery across people, clothing, architecture, objects, color and light.",
+        "zh-CN": "统一设计古风人物服饰、建筑空间、器物、光色与完整图像提示词。"
+      },
+      "standalone": {
+        "en": "A complete visual brief, image prompt, controlled variant or diagnosis.",
+        "zh-CN": "完整视觉方案、图像提示词、受控变体或诊断。"
+      },
+      "cannot": {
+        "en": "It does not certify historical accuracy, user acceptance or finished video.",
+        "zh-CN": "不自动证明历史准确、用户接受或视频成片。"
+      },
+      "download": {
+        "state": "source_only",
+        "source_install": "docs/INSTALLATION.md#experimental-packages",
+        "note": {
+          "en": "Candidate source; no historical v1.3.0 ZIP.",
+          "zh-CN": "候选源码；历史v1.3.0无此ZIP。"
+        }
+      }
     }
   ],
   "distribution": {
     "regular_packages": 18,
-    "experimental_packages": 2,
-    "total_packages": 20,
-    "bilingual_guides": 40,
-    "source_storyboard_version": "5.6.0",
+    "experimental_packages": 3,
+    "total_packages": 21,
+    "bilingual_guides": 42,
+    "source_storyboard_version": "5.6.4",
     "historical_release": "v1.3.0",
     "historical_release_storyboard_version": "5.4.4",
     "preview": "Separately labeled 5.6 standalone Preview; not the current complete-studio Release",

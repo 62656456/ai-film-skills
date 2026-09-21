@@ -10,18 +10,99 @@
 
 *Independent Agent Skills for story, directing, visual assets, cinematography and AI-film production.*
 
-[完整工作流](docs/WORKFLOW.md) · [21张用户接受视觉成果](#本轮21张用户接受视觉成果) · [全部20个技能](#全部20个独立技能) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
+[本轮研究成果](docs/RESEARCH.md) · [完整工作流](docs/WORKFLOW.md) · [21张用户接受视觉成果](#本轮21张用户接受视觉成果) · [全部21个技能](#全部21个独立技能) · [安装当前源码](docs/INSTALLATION.md#install-from-a-clone) · [版本与发布边界](#当前源码与下载版本) · [原创版权与商用](COMMERCIAL_USE.md)
 
 **简体中文** · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · [English overview](#english-overview)
 
 ![Regular packages](https://img.shields.io/badge/regular_packages-18-FF6B35?style=flat-square)
-![Experimental packages](https://img.shields.io/badge/experimental_packages-2-D6A756?style=flat-square)
-![Bilingual guides](https://img.shields.io/badge/bilingual_guides-40-7ED6A5?style=flat-square)
+![Experimental packages](https://img.shields.io/badge/experimental_packages-3-D6A756?style=flat-square)
+![Bilingual guides](https://img.shields.io/badge/bilingual_guides-42-7ED6A5?style=flat-square)
 [![Validate Skills](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml)
 [![skills.sh](https://skills.sh/b/62656456/ai-film-skills)](https://skills.sh/62656456/ai-film-skills)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
 
 </div>
+
+## 9 月研究更新：先看实际成果
+
+**这一轮新增 7 组视频展示（8 个完整 MP4）、26 张研究样图与 3 份可编辑白模工程，并同步分镜导演 5.6.4 与古风视觉候选技能。** 下方保留原有 21 张已接受作品、历史白模和旧版本入口。新研究样例按实际进度标注，不与已接受作品混记。
+
+[研究成果与方向](docs/RESEARCH.md) · [全部新图与实际提示词](docs/research/visual/index.md) · [全部白模与生成对照](docs/research/whitebox/index.md) · [下载当前源码](https://github.com/62656456/ai-film-skills/archive/refs/heads/main.zip)
+
+### 最新 3D 白模：动作重排与多镜切换
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="docs/research/whitebox/action-reblock-30s.mp4"><img src="docs/research/whitebox/action-reblock-30s.gif" width="100%" alt="30秒动作重排与连续摄影机预演，完整时长低帧率预览" /></a><br/><strong>动作重排 · 30 秒 · 9/19</strong><br/>重新安排脚步、转身、手势与队伍展开，检查它们和连续运镜是否接得上。<br/><a href="docs/research/whitebox/action-reblock-30s.mp4">观看完整 MP4</a></td>
+<td width="50%" valign="top"><a href="docs/research/whitebox/minimal-shots-30s.mp4"><img src="docs/research/whitebox/minimal-shots-30s.gif" width="100%" alt="30秒11镜极简白模，完整时长低帧率预览" /></a><br/><strong>极简分镜 · 30 秒 / 11 镜 · 9/18</strong><br/>用必要的代理形体检查站位、视线、走位、切镜和注意力变化。<br/><a href="docs/research/whitebox/minimal-shots-30s.mp4">观看完整 MP4</a></td>
+</tr>
+</table>
+
+两条均为历史研究候选；GIF 保留完整时长，降低帧率与分辨率便于首页观看。它们展示简化关节代理和摄影实验，动作与审美仍待审；不证明最终 AI 成片。20 秒早期失败实验也保留在[研究演进页](docs/research/whitebox/index.md)。
+
+### 从白模到生成片：看哪里继承、哪里偏离
+
+https://github.com/user-attachments/assets/951b5ff1-86e0-4629-b6cc-c3e3d915c9e0
+
+赛车案例把原白模与实际生成片上下对照，并配中文讲解。**原设计为 15 秒，生成时误选约 30 秒**；12.5–27.375 秒没有对应的原白模镜头，保留完整结果供检查。[完整视频、对应关系与许可说明](docs/research/whitebox/index.md)
+
+<details>
+<summary>展开观看三组完整原白模：追逐、博弈、棍术</summary>
+
+**高速追击 · 15 秒 / 6 镜**
+
+https://github.com/user-attachments/assets/7bbea66b-d855-47c4-a7b0-b628bbd7d208
+
+**权力博弈 · 30 秒 / 8 镜**
+
+https://github.com/user-attachments/assets/be73270a-9cea-49a4-b421-39b2ea15abd8
+
+**棍术打戏 · 15 秒 / 7 镜**
+
+https://github.com/user-attachments/assets/fef933aa-eee3-40b9-8930-feb019b4e507
+
+[每组完整 MP4、参考图和实际提示词](docs/research/whitebox/index.md) · [可运行案例与交互预演台](https://github.com/62656456/ai-visual-previs-lab)
+
+</details>
+
+### 六种视觉风格：人物、环境和材质共同变化
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/style-film-realism.png"><img src="docs/research/visual/previews/style-film-realism.webp" width="100%" alt="胶片诗意写实，完整画幅的研究候选" /></a><br/><strong>胶片诗意写实</strong></td>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/style-mineral-painting.png"><img src="docs/research/visual/previews/style-mineral-painting.webp" width="100%" alt="东方岩彩，完整画幅的研究候选" /></a><br/><strong>东方岩彩</strong></td>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/style-copperplate-etching.png"><img src="docs/research/visual/previews/style-copperplate-etching.webp" width="100%" alt="铜版线刻，完整画幅的研究候选" /></a><br/><strong>铜版线刻</strong></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/style-paper-theatre.png"><img src="docs/research/visual/previews/style-paper-theatre.webp" width="100%" alt="纸雕剧场，完整画幅的研究候选" /></a><br/><strong>纸雕剧场</strong></td>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/style-needle-felt-v2.png"><img src="docs/research/visual/previews/style-needle-felt-v2.webp" width="100%" alt="羊毛毡定格感 · v2，完整画幅的研究候选" /></a><br/><strong>羊毛毡定格感 · v2</strong></td>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/style-glazed-porcelain.png"><img src="docs/research/visual/previews/style-glazed-porcelain.webp" width="100%" alt="釉彩瓷偶，完整画幅的研究候选" /></a><br/><strong>釉彩瓷偶</strong></td>
+</tr>
+</table>
+
+胶片诗意写实、东方岩彩、铜版线刻、纸雕剧场、羊毛毡定格感与釉彩瓷偶，围绕相近题材进行探索。研究得到的具体方法是：风格规则必须覆盖人物和环境；羊毛毡版本针对水面进行了单独修订，避免真实液体与纤维世界混杂。六图为静态研究候选。[完整图、可复制提示词与风格规则](docs/research/visual/index.md)
+
+### 古风真实感：让人物与环境处在同一束光里
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/guofeng-window-letter.png"><img src="docs/research/visual/previews/guofeng-window-letter.webp" width="100%" alt="窗边家书 · 窗光，完整画幅的研究候选" /></a><br/><strong>窗边家书 · 窗光</strong></td>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/guofeng-seedling-handoff.png"><img src="docs/research/visual/previews/guofeng-seedling-handoff.webp" width="100%" alt="田埂递秧 · 阴天，完整画幅的研究候选" /></a><br/><strong>田埂递秧 · 阴天</strong></td>
+<td width="33%" valign="top"><a href="docs/research/visual/originals/guofeng-market-eaves.png"><img src="docs/research/visual/previews/guofeng-market-eaves.webp" width="100%" alt="檐下挑货 · 光影交界，完整画幅的研究候选" /></a><br/><strong>檐下挑货 · 光影交界</strong></td>
+</tr>
+</table>
+
+从“色彩与故事感成立、真实感不足”的六朝首图出发，继续修订肤色、照明与材质，再以窗边家书、田埂递秧、檐下挑货验证新的生活场景。新图仍待审阅。[六朝原图→修订对照与三张新场景](docs/research/visual/index.md) · [古风技能 0.1.1 候选源码](experimental/guofeng-visual-director/SKILL.md)
+
+### 研究已经写进哪些技能
+
+| 研究问题 | 本轮可直接使用的结果 | 查看 |
+|---|---|---|
+| 分镜与提示词重复，摄影意图容易在编译时丢失 | 分镜 5.6.4：一份融合六段母稿，第六段承载完整镜头时间轴；打戏和运镜诊断仍在同一个入口 | [源码](skills/ai-storyboard-director/SKILL.md) |
+| 古风容易变成固定朝代、固定柔光和统一人像 | 新增古风 0.1.1 实验包：文化依据、生活空间、人物器物、光色和结果检查 | [源码](experimental/guofeng-visual-director/SKILL.md) |
+| 资产脱离剧情时间线，人物与环境缺少使用逻辑 | 剧本驱动人物、场景、道具设计；人物魅力研究附五张实际肖像 | [研究结果](docs/RESEARCH.md) |
+| 战争画面只换背景，小队动作趋同 | 战争视觉、军事装备与小队摄影合为一个入口；五张已接受作品继续在下方展示 | [战争技能](skills/war-design/SKILL.md) |
+| 新方法是否在别的任务仍成立 | 公开失败与修订、提出风格迁移／镜头执行／动作连续性下一轮验证方向 | [研究方向](docs/RESEARCH.md#接下来研究什么) |
 
 ## 从输入到成片：完整工作流
 
@@ -31,26 +112,26 @@
 
 点子、小说、大纲、剧本、参考图或已有镜头都可以成为入口。已有可用成果就从相应阶段继续，按需选择主Skill；每项技能自带运行正文和必要引用，不要求先加载整个工作室。
 
-完整工作流列出 **20项影视职责＋1项网页辅助**。其中外部仙侠只提供上游链接，本仓库实际分发 **18项常规＋2项实验＝20个模块**，对应 **40份英文/简体中文指南**。
+完整工作流列出 **21项影视职责＋1项网页辅助**。其中外部仙侠只提供上游链接，本仓库实际分发 **18项常规＋3项实验＝21个模块**，对应 **42份英文/简体中文指南**。
 
 ## 当前源码与下载版本
 
 | 入口 | 当前口径 |
 |---|---|
-| [当前源码](skills/ai-storyboard-director/SKILL.md) | 分镜入口为 **5.6.3**，已选择日常使用；增加紧凑提示词编译、打戏因果与受力设计，以及推进/变焦、横移/摇摄/环绕的按需诊断 |
+| [当前源码](skills/ai-storyboard-director/SKILL.md) | 分镜入口为 **5.6.4**，已选择日常使用；增加紧凑提示词编译、打戏因果与受力设计，以及推进/变焦、横移/摇摄/环绕的按需诊断 |
 | [已发布v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | **旧发布快照**，分镜是 **5.4.4**；源码更新不改变旧ZIP |
 | 5.6独立Preview | 另有标签和清单的独立预览包，与当前源码及完整套装Release分别记录 |
 
-本轮是源码与文档刷新，不能把它称为已经发布新Release。要用当前源码，请检查所取分支/提交与`SKILL.md`版本；旧Release适合明确复现旧快照。[安装选择与验证](docs/INSTALLATION.md)
+本次更新源码、研究成果与展示；v1.3.0 和独立 Preview 继续保留各自历史内容。要用当前源码，请检查所取分支/提交与`SKILL.md`版本；旧Release适合明确复现旧快照。[安装选择与验证](docs/INSTALLATION.md)
 
-## 全部20个独立技能
+## 全部21个独立技能
 
-当前仓库收录 **18项常规包＋2项实验包**，下面逐项列出用途、源码版本和直接入口。版本列的“—”表示该包`SKILL.md`没有单独声明技能版本号，以实际Git提交和完整文件为准；不把模板中的资产版本、JSON协议版本或仓库Release号当成Skill版本。
+当前仓库收录 **18项常规包＋3项实验包**，下面逐项列出用途、源码版本和直接入口。版本列的“—”表示该包`SKILL.md`没有单独声明技能版本号，以实际Git提交和完整文件为准；不把模板中的资产版本、JSON协议版本或仓库Release号当成Skill版本。
 
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为五列分镜和六模块母提示词；在作品目录保存恢复镜头决定 | 5.6.3 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为一条融合六段母稿，第六段含完整镜头时间轴；在作品目录保存恢复镜头决定 | 5.6.4 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
 | `character-asset`<br/>人物资产 | 人物身份、外形、必要视图、表情与可变状态的参考任务和资产合同 | — | 常规 | [运行正文](skills/character-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/character-asset.md) |
 | `scene-asset`<br/>场景资产 | 场景拓扑、空间锚点、光源、材质和连续性参考图/提示词 | — | 常规 | [运行正文](skills/scene-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/scene-asset.md) |
 | `prop-asset`<br/>道具资产 | 道具结构、比例、可见面、持用和新旧状态；按要求交单图或必要视图 | — | 常规 | [运行正文](skills/prop-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/prop-asset.md) |
@@ -63,16 +144,17 @@
 | `war-design`<br/>战争 | 地形、协同、负荷、行动与后果；检查武器方向和接触关系 | — | 常规 | [运行正文](skills/war-design/SKILL.md) · [中文说明](docs/skills/zh-CN/war-design.md) |
 | `wuxia-design`<br/>武侠 | 兵器、步法、支撑、衣发反馈与东方空间的可观察参数 | — | 常规 | [运行正文](skills/wuxia-design/SKILL.md) · [中文说明](docs/skills/zh-CN/wuxia-design.md) |
 | `produce-ai-video`<br/>实际视频生产 | 统筹实际生成、选片、剪辑、对白音效、完整播放审查与修复 | — | 常规 | [运行正文](skills/produce-ai-video/SKILL.md) · [中文说明](docs/skills/zh-CN/produce-ai-video.md) |
-| `ai-short-drama-production`<br/>短剧控制 | 五列分镜＋一条六模块母提示词；5.6结构已对齐，文本验证通过，实片待验 | — | 常规；未部署 | [运行正文](skills/ai-short-drama-production/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-short-drama-production.md) |
+| `ai-short-drama-production`<br/>短剧控制 | 保留2026-09-07按5.6.0建立的独立合同：五列分镜＋六模块提示词；文本验证通过，实片待验 | — | 常规；未部署 | [运行正文](skills/ai-short-drama-production/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-short-drama-production.md) |
 | `web-design-director`<br/>网页辅助 | 明确网页或应用界面任务时设计与审核；仓库README维护不触发建站 | — | 常规 | [运行正文](skills/web-design-director/SKILL.md) · [中文说明](docs/skills/zh-CN/web-design-director.md) |
 | `d-official-market-analysis`<br/>市场研究 | 根据当前可验证来源研究题材、平台、受众与制作机会，保留数据局限 | — | 常规 | [运行正文](skills/d-official-market-analysis/SKILL.md) · [中文说明](docs/skills/zh-CN/d-official-market-analysis.md) |
 | `d-data-analysis-semantic-layer`<br/>知识审核与写入 | 用户批准后校验来源、版本、有效期与冲突，写入明确目标并回读 | — | 常规 | [运行正文](skills/d-data-analysis-semantic-layer/SKILL.md) · [中文说明](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) |
 | `hard-sci-fi-visual-director`<br/>硬科幻视觉 | 从物理、功能、制造与环境推导原创世界、设备、形体和完整提示词 | — | 实验 | [运行正文](experimental/hard-sci-fi-visual-director/SKILL.md) · [中文说明](docs/skills/zh-CN/hard-sci-fi-visual-director.md) |
 | `whitebox-previs-executor`<br/>3D白模预演 | 将已有镜头编译成可播放机位与基础走位预演；打斗限已实现且过门的动作 | — | 实验 | [运行正文](experimental/whitebox-previs-executor/SKILL.md) · [中文说明](docs/skills/zh-CN/whitebox-previs-executor.md) |
+| `guofeng-visual-director`<br/>古风视觉 | 文化依据、生活空间、人物器物、光色与图像提示词；附真实候选图 | 0.1.1 | 实验候选 | [运行正文](experimental/guofeng-visual-director/SKILL.md) · [中文说明](docs/skills/zh-CN/guofeng-visual-director.md) |
 
-**分发状态与完成证据分开。** 常规包不表示所有能力已通过实战；实验硬科幻已有接受图例，白模仍有明确能力限制。短剧控制器已在仓库源码对齐5.6交付结构，独立文本行为样本经修正后最终通过；仍未部署、未生成视频、未获用户实际效果验收，不新增独立版本号。其余实际使用和验收边界见各自运行正文与说明。
+**分发状态与完成证据分开。** 常规包不表示所有能力已通过实战；实验硬科幻已有接受图例，白模仍有明确能力限制。短剧控制器保留2026-09-07按5.6.0建立的独立交付合同，未随分镜5.6.4改为融合单稿；其独立文本行为样本经修正后最终通过，仍未部署、未生成视频、未获用户实际效果验收，不新增独立版本号。其余实际使用和验收边界见各自运行正文与说明。
 
-外部[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)只作为仙侠工作流入口，不属于这20个源码包、不进本仓库ZIP；《云海钟境》是本项目自主生成并已接受的示例图，图的发布不等于再分发外部技能源码。
+外部[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)只作为仙侠工作流入口，不属于这21个源码包、不进本仓库ZIP；《云海钟境》是本项目自主生成并已接受的示例图，图的发布不等于再分发外部技能源码。
 
 ## 安装当前源码中的一个Skill
 
@@ -87,7 +169,7 @@ python scripts/install_skill.py ai-storyboard-director --platform codex
 安装器使用当前检出的源码；公共默认分支不会自动包含未推送的本地修改。安装前查看所选源码版本，然后在Agent中调用：
 
 ```text
-使用 $ai-storyboard-director，把下面剧本设计成人读分镜和一条完整视频母提示词。
+使用 $ai-storyboard-director，把下面剧本设计成一条融合六段母稿，在第六段写完整的人读镜头时间轴。
 保留已确认剧情、人物与台词；镜头标题直接显示具体摄影方案。
 如果我提供了作品目录，请实际保存导演意图、选中镜头和场景状态，并核对恢复结果。
 [粘贴剧本与已有约束]
@@ -166,14 +248,14 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 这些方法是本项目对用户供图关系分析的原创综合，不声称反推出第三方Skill、模型或未提供的摄影参数。
 
-## 2026-09-11 源码研究增量
+## 9 月技能研究积累
 
-- `ai-storyboard-director` 5.6.3 仍保持一个分镜入口：普通任务按阶段读取；打戏另读攻防、接触阻力、节奏和摄影设计；只有用户要求运镜对照或诊断时，才读取推进/变焦与横移/摇摄/环绕的可见证据方法。内部格式、隔离和文本回归通过；真实视频和用户审美仍待验。
+- `ai-storyboard-director` 5.6.4 仍保持一个分镜入口：普通任务按阶段读取；打戏另读攻防、接触阻力、节奏和摄影设计；只有用户要求运镜对照或诊断时，才读取推进/变焦与横移/摇摄/环绕的可见证据方法。内部格式、隔离和文本回归通过；真实视频和用户审美仍待验。
 - 人物、场景和道具资产先通读剧本并区分明示事实与设计推定。人物默认交三面全身加中景，女性魅力按任务读取独立参考；场景无指定画风时默认摄影写实，并从用途、使用者、维护、天气和事件痕迹推导可信环境；道具继续围绕功能、接触和状态变化设计。
 - `war-design` 1.0.0 合并战争类型视觉与军事顾问方法，覆盖故事关键帧、战斗、小队摄影和实际画面审查；它不认证真实战术、装备性能或任意视频结果。
 - `web-design-director` 1.3.0 将优秀成品观察、开源实现与许可核对连接到具体设计机制，并把任务走查、布局实用性、材质、动效和交互恢复分开验证。本次升级获用户确认，不等同于跨项目、跨设备或真人研究结论。
 
-本增量更新源码、双语说明和已明确接受的公开图片；不创建新Release、不改写v1.3.0附件，也不上传待审候选、私有项目状态、候选成片或第三方无授权源码。
+上述 9 月 11 日记录保留其原始范围。本次 9 月 21 日另增明确标注的研究候选图与白模；旧接受状态和 v1.3.0 附件保持各自记录。
 
 ## See the Skills in motion
 
@@ -192,17 +274,17 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 ## 模块和证据边界
 
-常规包可单独使用；实验硬科幻与白模不进入默认完整套装。已封装的短剧控制器已在仓库源码对齐5.6交付结构，仍未部署；文本验证不替代真实视频和用户验收。外部仙侠没有已核实再分发许可，因此不复制源码、不进ZIP；完整职责见[工作流](docs/WORKFLOW.md)。
+常规包可单独使用；实验硬科幻、白模与古风候选不进入默认完整套装。短剧控制器保留按5.6.0建立的独立五列分镜＋六模块合同，未采用5.6.4融合单稿，仍未部署；文本验证不替代真实视频和用户验收。外部仙侠没有已核实再分发许可，因此不复制源码、不进ZIP；完整职责见[工作流](docs/WORKFLOW.md)。
 
 结构有效、宿主实际加载、真实任务输出、媒体检查与用户接受是不同证据。5.6的状态程序不评审美，不替代实际读剧本，也不能强制所有聊天入口执行。费用、账户、工具和发布权限由实际任务与宿主决定。
 
-[20模块目录](SKILL_CATALOG.md) · [40份设计指南](docs/skills/INDEX.md) · [共同审核逻辑](docs/SKILL_DESIGN_SYSTEM.md) · [分发范围](PUBLICATION_SCOPE.md)
+[21模块目录](SKILL_CATALOG.md) · [42份设计指南](docs/skills/INDEX.md) · [共同审核逻辑](docs/SKILL_DESIGN_SYSTEM.md) · [分发范围](PUBLICATION_SCOPE.md)
 
 ## English overview
 
-Open Film Skills provides **20 self-contained modules: 18 regular and 2 experimental**, with 40 English/Simplified Chinese guides. The [full workflow](docs/WORKFLOW.md) covers input, writing, directing, visual language, assets, shots, prompts, optional previs, actual video production, sound, playback review and acceptance. It lists one external xianxia workflow entry without redistributing its source.
+Open Film Skills provides **21 self-contained modules: 18 regular and 3 experimental**, with 42 English/Simplified Chinese guides. The [full workflow](docs/WORKFLOW.md) covers input, writing, directing, visual language, assets, shots, prompts, optional previs, actual video production, sound, playback review and acceptance. It lists one external xianxia workflow entry without redistributing its source.
 
-Current source uses Storyboard Director 5.6.3. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The 2026-09-11 source increment adds compact prompt compilation, fight design, camera-motion diagnostics, script-first asset derivation, unified war-film visual methods, and research-to-design web guidance with explicit evidence limits. The primary showcase contains 19 generated stills and two browser screenshots explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
+The September 21 update adds 26 original research images, seven video showcases (eight complete MP4 files), and the guofeng 0.1.1 candidate. Prior accepted showcases remain intact. [Research findings and next directions](docs/RESEARCH.md). Current source uses Storyboard Director 5.6.4. Published v1.3.0 ZIPs preserve the historical 5.4.4 snapshot; the separately labeled 5.6 Preview is another artifact. Source updates do not publish a new Release. The 2026-09-11 source increment adds compact prompt compilation, fight design, camera-motion diagnostics, script-first asset derivation, unified war-film visual methods, and research-to-design web guidance with explicit evidence limits. The primary showcase contains 19 generated stills and two browser screenshots explicitly accepted by the user, displayed without cropping; it is not a measured old/new A/B study or a guarantee of general reliability.
 
 Start with the [catalog](SKILL_CATALOG.md), [source installation](docs/INSTALLATION.md) or [per-module English guides](docs/skills/INDEX.md).
 

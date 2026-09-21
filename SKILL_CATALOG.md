@@ -1,10 +1,10 @@
 # 全部技能目录 / Skill catalog
 
-**本仓库20个源码包：18项常规＋2项实验；40份英文/简体中文指南。** 此页列出每包实际用途、源码版本和直接文件入口，GitHub仓库首页是[README](README.md)。
+**本仓库21个源码包：18项常规＋3项实验；42份英文/简体中文指南。** 此页列出每包实际用途、源码版本和直接文件入口，GitHub仓库首页是[README](README.md)。
 
 [完整工作流](docs/WORKFLOW.md) · [全部双语指南](docs/skills/INDEX.md) · [安装](docs/INSTALLATION.md) · [原创版权与商用](COMMERCIAL_USE.md)
 
-版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜源码明确为5.6.3。常规/实验是分发状态，不是全部能力通过实战的声明。
+版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜源码明确为5.6.4。常规/实验是分发状态，不是全部能力通过实战的声明。
 
 ## 当前源码与历史下载
 
@@ -23,7 +23,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) · [EN](docs/skills/en/director-agent.md) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为五列分镜和六模块母提示词；在作品目录保存恢复镜头决定 | 5.6.3 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为一条融合六段母稿，第六段含完整镜头时间轴；在作品目录保存恢复镜头决定 | 5.6.4 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) |
 
 ## Asset definition
 
@@ -70,6 +70,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 |---|---|---|---|---|
 | `hard-sci-fi-visual-director`<br/>硬科幻视觉 | 从物理、功能、制造与环境推导原创世界、设备、形体和完整提示词 | — | 实验 | [运行正文](experimental/hard-sci-fi-visual-director/SKILL.md) · [中文说明](docs/skills/zh-CN/hard-sci-fi-visual-director.md) · [EN](docs/skills/en/hard-sci-fi-visual-director.md) |
 | `whitebox-previs-executor`<br/>3D白模预演 | 将已有镜头编译成可播放机位与基础走位预演；打斗限已实现且过门的动作 | — | 实验 | [运行正文](experimental/whitebox-previs-executor/SKILL.md) · [中文说明](docs/skills/zh-CN/whitebox-previs-executor.md) · [EN](docs/skills/en/whitebox-previs-executor.md) |
+| `guofeng-visual-director`<br/>古风视觉 | 文化依据、生活空间、人物器物、光色与图像提示词；附真实候选图 | 0.1.1 | 实验候选 | [运行正文](experimental/guofeng-visual-director/SKILL.md) · [中文说明](docs/skills/zh-CN/guofeng-visual-director.md) · [EN](docs/skills/en/guofeng-visual-director.md) |
 
 短剧控制器已在仓库源码对齐5.6交付结构，独立文本行为样本经修正后最终通过；未部署、未生成视频、未获用户实际效果验收，未新增独立版本号。白模只对已实现代理和已过动作门负责，不能把基础预演升级为任意完整打斗。
 
@@ -103,7 +104,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 
 [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)只提供上游链接，不再分发其源码或ZIP；上游尚无已核实再分发许可。十种视觉路线为八项常规类型、实验硬科幻和外部仙侠。
 
-本仓库20包＝19项影视＋1项网页辅助；另计外部仙侠后，完整工作流是20项影视职责＋1项网页辅助。外部项不计入20包或40份指南。
+本仓库20包＝19项影视＋1项网页辅助；另计外部仙侠后，完整工作流是21项影视职责＋1项网页辅助。外部项不计入20包或42份指南。
 
 ## 实际证据与返修
 

@@ -1,13 +1,13 @@
 # ai-storyboard-director — script to shots and prompts
 
-| Status | Current source 5.6.3; selected for daily use; v1.3.0 ZIP preserves 5.4.4 |
+| Status | Current source 5.6.4; selected for daily use; v1.3.0 ZIP preserves 5.4.4 |
 |---|---|
 | Can deliver alone | A complete storyboard and copy-ready prompt package for an existing approved script. |
 | Cannot claim alone | It does not rewrite the script, directly generate the video, or prove platform success. |
 
 [Runtime `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.3.
+Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.4.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -72,7 +72,7 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 <!-- contract:outputs -->
 ## 9. Outputs
 
-- A five-column storyboard: time, framing/angle, camera, visible action, and dialogue/sound.
+- One fused six-section master with the readable shot timeline in section six; a standalone five-column table only when explicitly requested.
 - Copy-ready prompts using the required six-module outer structure and Digital-10 information core.
 
 <!-- contract:boundaries -->

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1430" width="1200" height="1430" role="img" aria-labelledby="title desc">
   <title id="title">AI 影视完整工作流程：按本次目标选择阶段</title>
-  <desc id="desc">主线从输入和需求，经剧本、导演、十类视觉风格、三类资产、分镜与保存恢复、五列分镜和六模块提示词，到生成剪辑声音、整片审查及用户验收。白模为可选预演，市场研究和经批准的知识写入为侧支，短剧合同待对齐，网页设计为辅助。已有材料可直接进入对应阶段，局部任务可在任意阶段结束。</desc>
+  <desc id="desc">主线从输入和需求，经剧本、导演、十一类视觉方向、三类资产、分镜与保存恢复、融合六段镜头母稿，到生成剪辑声音、整片审查及用户验收。白模为可选预演，市场研究和经批准的知识写入为侧支，短剧合同待对齐，网页设计为辅助。已有材料可直接进入对应阶段，局部任务可在任意阶段结束。</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#ff6b35" stroke-width="1.5"/></marker>
     <marker id="side-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#8b9dad" stroke-width="1.5"/></marker>
@@ -41,9 +41,9 @@
   <path d="M1164 388H1180V760H814" class="optional"/>
 
   <rect x="394" y="456" width="420" height="126" rx="6" class="node"/>
-  <text x="416" y="486" class="label">按需选择 10 类视觉风格</text>
+  <text x="416" y="486" class="label">按需选择 11 类视觉方向</text>
   <text x="416" y="515" class="small">赛博朋克 · 史诗 · 奇幻 · 恐怖 · 黑色</text>
-  <text x="416" y="541" class="small">爱情 · 战争 · 武侠 · 仙侠 · 硬科幻</text>
+  <text x="416" y="541" class="small">爱情 · 战争 · 武侠 · 仙侠 · 硬科幻 · 古风</text>
   <text x="416" y="566" class="code">保留类型特色，按当前画面决定摄影与色彩</text>
 
   <rect x="36" y="542" width="306" height="100" rx="6" class="side"/>
@@ -56,13 +56,13 @@
   <text x="849" y="600" class="code">不需新资产时</text><text x="849" y="620" class="code">可直接进入分镜</text>
 
   <rect x="394" y="728" width="420" height="88" rx="6" class="main"/>
-  <text x="416" y="759" class="label">分镜与摄影设计</text><text x="416" y="784" class="small">视点 · 机位 · 调度 · 镜头选择</text><text x="416" y="806" class="code">ai-storyboard-director 5.6 · 日常源码</text>
+  <text x="416" y="759" class="label">分镜与摄影设计</text><text x="416" y="784" class="small">视点 · 机位 · 调度 · 镜头选择</text><text x="416" y="806" class="code">ai-storyboard-director 5.6.4 · 日常源码</text>
   <path d="M814 787H862" class="return"/>
   <rect x="862" y="748" width="302" height="85" rx="6" class="side"/>
   <text x="882" y="780" class="label">5.6 保存与恢复</text><text x="882" y="807" class="small">导演意图 · 已选镜头 · 场景状态</text>
 
   <rect x="394" y="846" width="420" height="88" rx="6" class="node"/>
-  <text x="416" y="878" class="label">五列分镜表 + 视频母提示词</text><text x="416" y="904" class="small">六大模块外层 · 数字 10 信息内核</text><text x="416" y="925" class="code">可单独交付分镜或完整提示词</text>
+  <text x="416" y="878" class="label">一条融合六段镜头母稿</text><text x="416" y="904" class="small">第六段镜头时间轴 · 十项内部核对</text><text x="416" y="925" class="code">单独点名镜头表时才输出表格</text>
   <path d="M814 889H862" class="optional"/>
   <rect x="862" y="857" width="302" height="97" rx="6" class="side"/>
   <text x="882" y="884" class="tag">可选 / 先看空间与节奏</text><text x="882" y="911" class="label">3D 白模预演</text><text x="882" y="937" class="code">whitebox-previs-executor</text>

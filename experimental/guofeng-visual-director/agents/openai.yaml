@@ -1,0 +1,4 @@
+interface:
+  display_name: "古风视觉设计总监"
+  short_description: "从故事与文化依据出发，设计古风人物、空间、器物与电影画面"
+  default_prompt: "使用 $guofeng-visual-director，依据我的故事或简报设计完整的古风视觉方案，并按要求交付提示词或图片。"

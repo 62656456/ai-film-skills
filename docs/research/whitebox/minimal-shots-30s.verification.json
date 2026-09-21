@@ -1,0 +1,15 @@
+{
+  "file": "minimal-shots-30s.blend",
+  "source_sha256": "b68c88e705bc736532494ef9005bc242eec492476fffe2f4adbc774e46e23a5f",
+  "published_sha256": "cd96c73c60135a61dbfdc474f6be2e8227e849b632a2a3f3bdaad7041de68d97",
+  "blender_version": "5.2.1 LTS",
+  "text_blocks_removed": 2,
+  "absolute_path_custom_properties_removed": 0,
+  "external_dependencies": 0,
+  "drivers": 0,
+  "armature_count": 0,
+  "object_count": 245,
+  "action_count": 89,
+  "sampled_frames_geometry_and_camera_unchanged": true,
+  "verification": "Reopened published copy with script execution disabled; compared world matrices, local mesh vertices and camera settings at four timeline points. No source animation edits."
+}

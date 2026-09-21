@@ -14,13 +14,13 @@
 
 ## 현재 소스와 기존 릴리스
 
-현재 소스는 **일반 18개＋실험 2개＝20개 모듈**이며, 상세 가이드는English와简体中文으로 총40개입니다. 이 한국어 페이지는 개요이며 20개 상세 가이드의 한국어 번역이 아닙니다.
+현재 소스는 **일반 18개＋실험 3개＝21개 모듈**이며, 상세 가이드는English와简体中文으로 총42개입니다. 이 한국어 페이지는 개요이며 21개 상세 가이드의 한국어 번역이 아닙니다.
 
 - 현재Storyboard Director 소스는 **5.6**입니다. 명시된 작품 폴더에서 연출 의도, 선택한 쇼트와 장면 상태를 저장하고 복원합니다.
 - 공개된 **v1.3.0**은 **5.4.4**를 포함한 과거 스냅샷입니다. 소스 변경으로 기존ZIP이 바뀌지는 않습니다.
 - 별도 표시된5.6 단독Preview도 다른 배포물입니다. 이번 소스 갱신은 새 전체 패키지Release가 게시되었다는 뜻이 아닙니다.
 
-[소스와ZIP 선택](../../INSTALLATION.md) · [40개 가이드](../../skills/INDEX.md)
+[소스와ZIP 선택](../../INSTALLATION.md) · [42개 가이드](../../skills/INDEX.md)
 
 ## 필요한 결과로 선택
 
@@ -33,7 +33,7 @@
 | 기초3D 카메라·동선 프리뷰 | [whitebox-previs-executor](../../skills/en/whitebox-previs-executor.md), 실험 배포 |
 | 실제 생성·편집·사운드·전체 재생 검수 | [produce-ai-video](../../skills/en/produce-ai-video.md) |
 
-기존 결과가 있으면 해당 단계부터 계속합니다. 외부[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)는 선협 워크플로를 위한 링크이며, 확인된 재배포 허가가 없어 소스나ZIP에 넣지 않습니다. 저장소의 영상 모듈19개＋웹 보조1개에 외부 선협을 더하면 전체 흐름은 영상 역할20개＋웹 보조1개가 됩니다.
+기존 결과가 있으면 해당 단계부터 계속합니다. 외부[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)는 선협 워크플로를 위한 링크이며, 확인된 재배포 허가가 없어 소스나ZIP에 넣지 않습니다. 저장소의 영상 모듈20개＋웹 보조1개에 외부 선협을 더하면 전체 흐름은 영상 역할21개＋웹 보조1개가 됩니다.
 
 ## 소스 설치
 

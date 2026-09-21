@@ -1,5 +1,17 @@
 # Release notes
 
+## 2026-09-21 — Research showcase and current source refresh
+
+- Preserve all existing accepted images, historical gallery, whitebox demonstrations, examples and release archives.
+- Put new visible research on the repository homepage: two complete animated whitebox previews, the narrated generated-video comparison, six material/style directions and three new Chinese-period scenes.
+- Publish seven experimental/comparison showcases (eight MP4 files) and 26 original image candidates with full-resolution images, actual prompts, provenance, status and limitations.
+- Synchronize the 12-file Storyboard Director 5.6.4 runtime: one fused six-section output, fight design, motion diagnosis and saved design memory.
+- Add guofeng-visual-director 0.1.1 as an opt-in candidate. Current distribution is 18 regular plus three experimental packages, with 42 bilingual guides.
+- Add a substantive research retrospective and next directions. Historical accepted work, new candidates and failed experiments keep separate labels.
+
+This is a source and showcase update. Historical release tags and their ZIPs remain unchanged; download the current source or build the selected package locally.
+
+
 ## Unreleased source refresh — 2026-09-11
 
 This section describes the current source changes. It is **not a claim that a new GitHub Release or updated release ZIP has been published**. Public v1.3.0 remains the historical 5.4.4 snapshot; the separately labeled 5.6 standalone Preview is a different artifact.

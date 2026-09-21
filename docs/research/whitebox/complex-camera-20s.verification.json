@@ -1,0 +1,15 @@
+{
+  "file": "complex-camera-20s.blend",
+  "source_sha256": "1b727c77543768fb833d84ee4c560d2954f3be5fad44e34712701e628ff6b9e7",
+  "published_sha256": "9225649d6b42cc162bacb95c8fe3f2a5faceb0ccbd598be1becb3ddf57972ae5",
+  "blender_version": "5.2.1 LTS",
+  "text_blocks_removed": 2,
+  "absolute_path_custom_properties_removed": 0,
+  "external_dependencies": 0,
+  "drivers": 0,
+  "armature_count": 0,
+  "object_count": 233,
+  "action_count": 79,
+  "sampled_frames_geometry_and_camera_unchanged": true,
+  "verification": "Reopened published copy with script execution disabled; compared world matrices, local mesh vertices and camera settings at four timeline points. No source animation edits."
+}

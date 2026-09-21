@@ -6,7 +6,7 @@ Choose the source or archive snapshot first, then install one complete Skill fol
 
 | Distribution | What it contains | How to use it |
 |---|---|---|
-| Current source tree | Storyboard Director 5.6, the updated visual contracts and 20 modules: 18 regular plus 2 experimental | Clone or download the intended source ref and use the local installer |
+| Current source tree | Storyboard Director 5.6, the updated visual contracts and 21 modules: 18 regular plus 3 experimental | Clone or download the intended source ref and use the local installer |
 | [Published v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | Historical snapshot with Storyboard Director 5.4.4 and the older 19-module inventory | Use when deliberately reproducing that release; its ZIP does not track current source |
 | Separately labeled 5.6 standalone Preview | An independently labeled preview artifact with its own manifest | Read that artifact's label and scope; do not treat it as a new complete-studio release |
 
@@ -34,11 +34,12 @@ The installer refuses to overwrite an existing installation unless `--force` is 
 
 ## Experimental packages
 
-Both experiments remain outside the normal complete-studio archive and require an explicit choice:
+All three experiments remain outside the normal complete-studio archive and require an explicit choice:
 
 ```bash
 python scripts/install_skill.py hard-sci-fi-visual-director --platform codex --experimental
 python scripts/install_skill.py whitebox-previs-executor --platform codex --experimental
+python scripts/install_skill.py guofeng-visual-director --platform codex --experimental
 ```
 
 Hard-science-fiction has user-accepted image examples but is still distributed as an experiment. Whitebox requires a compatible Python/Blender/media runtime; the Skill does not bundle Blender or install it silently. Its implemented humanoid/basic-camera route and individually qualified action profiles do not provide arbitrary complete fight choreography. Unsupported proxies or unpassed actions must remain blocked or diagnostic.
@@ -47,7 +48,7 @@ The external [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-vis
 
 ## Published ZIPs and complete studio
 
-The [v1.3.0 assets](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) contain individual module ZIPs and `open-film-skills-complete.zip`. These are old snapshots. Current source builds contain 18 regular modules in the complete archive; the 2 experiments are separate opt-in ZIPs. Inspect the build manifest's source ref and hashes.
+The [v1.3.0 assets](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) contain individual module ZIPs and `open-film-skills-complete.zip`. These are old snapshots. Current source builds contain 18 regular modules in the complete archive; the 3 experiments are separate opt-in ZIPs. Inspect the build manifest's source ref and hashes.
 
 For manual installation, copy each selected complete module folder into the host's documented Skill location. An upload-based host may accept the standalone ZIP. Native paths and the difference between instruction reading and native activation are described in [Compatibility](COMPATIBILITY.md).
 

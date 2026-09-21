@@ -21,7 +21,7 @@ from generate_skill_guides import download_link
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_ROOTS = (ROOT / "skills", ROOT / "experimental")
 FORBIDDEN_SKILL_DIRS = {"frontend-design", "sci-fi-design", "xianxia-visual-director"}
-ALLOWED_FRONTMATTER_KEYS = {"name", "description"}
+ALLOWED_FRONTMATTER_KEYS = {"name", "description", "metadata"}
 REQUIRED_REPOSITORY_FILES = {
     ".github/workflows/package-release.yml",
     ".github/workflows/validate.yml",
@@ -415,7 +415,7 @@ def main() -> int:
             errors.append(f"{skill_file.relative_to(ROOT)}: {parse_error}")
             continue
         extras = keys - ALLOWED_FRONTMATTER_KEYS
-        missing = ALLOWED_FRONTMATTER_KEYS - keys
+        missing = {"name", "description"} - keys
         if extras:
             errors.append(f"{skill_file.relative_to(ROOT)}: non-portable frontmatter keys {sorted(extras)}")
         if missing:

@@ -7,7 +7,7 @@ Contributions should improve a Skill's real-task performance without hiding its 
 1. Open an issue describing a concrete user request that should trigger the Skill and the visible result that should pass.
 2. Keep `SKILL.md` concise and move detailed knowledge into directly linked `references/` files.
 3. Use lowercase letters, digits, and hyphens for Skill directory names.
-4. Keep only the portable `name` and `description` fields in `SKILL.md` frontmatter.
+4. Require the portable `name` and `description` fields in `SKILL.md` frontmatter. Optional `metadata` may preserve package version and candidate status; it must not become a host-specific runtime dependency.
 5. Keep every required script, reference, template, and asset inside the same Skill folder. A shared runtime `skills/references/` directory is forbidden.
 6. Treat `agents/openai.yaml` as optional Codex presentation metadata. Other hosts must be able to ignore it without losing the Skill workflow.
 7. Do not add Claude-, TRAE-, CodeBuddy-, WorkBuddy-, or Codex-only instructions to the canonical body unless the workflow truly requires that host; document host adapters separately.
@@ -17,7 +17,7 @@ Contributions should improve a Skill's real-task performance without hiding its 
 
 ## Keep the GitHub reading guide in sync
 
-Every module has one English and one Simplified Chinese human-readable guide. These 40 pages explain the runtime contract; they do not replace it.
+Every module has one English and one Simplified Chinese human-readable guide. These 42 pages explain the runtime contract; they do not replace it.
 
 Install the repository-only validation dependency and run the negative regression suite before changing packaging, installation, frontmatter, or data validators:
 

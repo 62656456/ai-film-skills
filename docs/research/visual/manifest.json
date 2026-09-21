@@ -1,0 +1,947 @@
+{
+  "schema_version": 1,
+  "title": "Open Film Skills visual research gallery",
+  "prepared_on": "2026-09-21",
+  "image_count": 26,
+  "groups": {
+    "styles": 6,
+    "guofeng-originals": 6,
+    "guofeng-revisions": 6,
+    "guofeng-new-scenes": 3,
+    "character-charm": 5
+  },
+  "provenance": "All originals are generated research outputs. No external reference artwork is bundled.",
+  "dates": "Dates identify the recorded research batch; exact generation timestamps are not asserted.",
+  "preview_policy": "Exact pixel dimensions and aspect ratio preserved. WebP compression only, no crop or aesthetic edits.",
+  "interpretation": "Generated appearance, not proof of physical craft, historical reconstruction or video performance.",
+  "validation": {
+    "original_bytes_match_source": true,
+    "all_images_decoded": true,
+    "all_preview_dimensions_match": true,
+    "all_originals_without_embedded_metadata": true,
+    "publication_visual_sample_count": 6,
+    "user_acceptance_unchanged": true,
+    "original_visual_sample_count": 5,
+    "preview_visual_sample_count": 3
+  },
+  "images": [
+    {
+      "id": "style-film-realism",
+      "title": "胶片诗意写实",
+      "group": "styles",
+      "recorded_batch_date": "2026-09-19",
+      "status": "candidate_user_review_pending",
+      "review_notes": "自然皮肤、织物和环境使用痕迹；胶片描述生成外观。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/style-film-realism.png",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 2970074,
+        "sha256": "ce3269ab4970b56008ff3e2b6e894fd42a64d29d2a1a5e389a1f6d4e651d6547"
+      },
+      "preview": {
+        "path": "previews/style-film-realism.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 279380,
+        "sha256": "247b01079aaf30398b43ff6a3071818ba44265d1b68e1dcf6cddbc3a9030a761",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#styles",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "style-mineral-painting",
+      "title": "东方岩彩",
+      "group": "styles",
+      "recorded_batch_date": "2026-09-19",
+      "status": "candidate_user_review_pending",
+      "review_notes": "哑光色面、矿物颗粒、线条与层叠空间。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/style-mineral-painting.png",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 3602987,
+        "sha256": "a66c3cc28a65bd71536677c785a20ad4c7be08dd9af289bc21403d07ee7d2f25"
+      },
+      "preview": {
+        "path": "previews/style-mineral-painting.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 476674,
+        "sha256": "a30011e179fabaeeadde802091e224d2ec4b161d9c041278131fbb0b7b7dd939",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#styles",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "style-copperplate-etching",
+      "title": "铜版线刻",
+      "group": "styles",
+      "recorded_batch_date": "2026-09-19",
+      "status": "candidate_user_review_pending",
+      "review_notes": "刻线与纸白组织明暗，局部淡彩辅助识别。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/style-copperplate-etching.png",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 4744222,
+        "sha256": "b3027676c0b5ebc614de8378157c5f9fcec10417b58916ad903fe726c12e1b5c"
+      },
+      "preview": {
+        "path": "previews/style-copperplate-etching.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 698080,
+        "sha256": "bf236e041bd104a1a6a567a03b3d0fb817e5d76e3e7a36f135f308b562883501",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#styles",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "style-paper-theatre",
+      "title": "纸雕剧场",
+      "group": "styles",
+      "recorded_batch_date": "2026-09-19",
+      "status": "candidate_user_review_pending",
+      "review_notes": "纸片厚度、切边、折面和层间投影。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/style-paper-theatre.png",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 2701173,
+        "sha256": "188a675dc1f2f3a46818cfae5a5f372bbf900ec78c57a3bb5f15e46ead5fa1eb"
+      },
+      "preview": {
+        "path": "previews/style-paper-theatre.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 250980,
+        "sha256": "d6879e4b0754a3b0f8ac91f1958f4745934883a9b79498ac2cf139af25873b07",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#styles",
+      "publication_sample_visual_check": true
+    },
+    {
+      "id": "style-needle-felt-v2",
+      "title": "羊毛毡定格感 · 水面修订",
+      "group": "styles",
+      "recorded_batch_date": "2026-09-19",
+      "status": "candidate_user_review_pending",
+      "review_notes": "保留人物和构图，水面经定向编辑转为纤维材料；静态图未验证动画。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/style-needle-felt-v2.png",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 2853405,
+        "sha256": "803e3b3858927b3ecc9bd6e807a0f20431589f6aba3755871a0a419da59364cd"
+      },
+      "preview": {
+        "path": "previews/style-needle-felt-v2.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 262724,
+        "sha256": "416beb1a36c3eb72aa6007dc97f8415810bfbd4750bff2493a0b5ddace53de77",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#styles",
+      "publication_sample_visual_check": true
+    },
+    {
+      "id": "style-glazed-porcelain",
+      "title": "釉彩瓷偶",
+      "group": "styles",
+      "recorded_batch_date": "2026-09-19",
+      "status": "candidate_user_review_pending",
+      "review_notes": "雕塑衣褶、浅浮雕发丝和釉面反光组成陶瓷世界。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/style-glazed-porcelain.png",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 2428283,
+        "sha256": "d7f8866729e557aef730046d14727d6e19cc2da3f3e97c80918d9230a523af53"
+      },
+      "preview": {
+        "path": "previews/style-glazed-porcelain.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 192588,
+        "sha256": "92e37c944b9a5ab593af40acb568482d64a3ea3157eed598ce40bbe3c2774e4e",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#styles",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-han-border-soldier-original",
+      "title": "汉代题材 · 边塞戍卒 · 原图",
+      "group": "guofeng-originals",
+      "recorded_batch_date": "2026-09-18",
+      "status": "partial_feedback_realism_not_accepted",
+      "review_notes": "检查背光人物与荒原是否共享现场光照，保留冷山、赭土和人物位置。",
+      "user_feedback": {
+        "status": "partial_feedback_recorded",
+        "accepted_dimensions": [
+          "color_relationships",
+          "story_feeling"
+        ],
+        "rejected_dimensions": [
+          "lighting_realism",
+          "skin_realism",
+          "environment_realism"
+        ],
+        "whole_image_accepted": false
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-han-border-soldier-original.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2382065,
+        "sha256": "89468de5979e65fb64a82cdb401b68452db8e11aeb8c747354b96922e77bf794"
+      },
+      "preview": {
+        "path": "previews/guofeng-han-border-soldier-original.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 204080,
+        "sha256": "d507816e0e6b730e9535a8781c2fc9de4fc0e019c255e00ce836113d3c9bf3d5",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-originals",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-han-border-soldier-revised",
+      "title": "汉代题材 · 边塞戍卒 · 修订候选",
+      "group": "guofeng-revisions",
+      "recorded_batch_date": "2026-09-18",
+      "status": "revision_candidate_user_review_pending",
+      "review_notes": "检查背光人物与荒原是否共享现场光照，保留冷山、赭土和人物位置。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-han-border-soldier-revised.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2157903,
+        "sha256": "477a92a183f4cc3abea3f3eddeff38f42b6d3251bd5da7685a4949de47e9c95c"
+      },
+      "preview": {
+        "path": "previews/guofeng-han-border-soldier-revised.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 165496,
+        "sha256": "c45a60461e5ae82baa5915e914a0947acd9bd9c6c7cb173119fdfc0d02206036",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-revisions",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-tang-noblewoman-original",
+      "title": "唐代题材 · 贵族女子 · 原图",
+      "group": "guofeng-originals",
+      "recorded_batch_date": "2026-09-18",
+      "status": "partial_feedback_realism_not_accepted",
+      "review_notes": "减少整体金橙染光与美容补光；修订图门外光色较前版偏白昼，仍需审阅。",
+      "user_feedback": {
+        "status": "partial_feedback_recorded",
+        "accepted_dimensions": [
+          "color_relationships",
+          "story_feeling"
+        ],
+        "rejected_dimensions": [
+          "lighting_realism",
+          "skin_realism",
+          "environment_realism"
+        ],
+        "whole_image_accepted": false
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-tang-noblewoman-original.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1978750,
+        "sha256": "9ebdf794ab7c25e9aec2a139adc1c19406612529047cd0e520e6b4b0000e8caf"
+      },
+      "preview": {
+        "path": "previews/guofeng-tang-noblewoman-original.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 152898,
+        "sha256": "c04b413ab5ba66885ec0bf6c6a2a7e80bad74f774069bbf5ce81b1d25bf10d63",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-originals",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-tang-noblewoman-revised",
+      "title": "唐代题材 · 贵族女子 · 修订候选",
+      "group": "guofeng-revisions",
+      "recorded_batch_date": "2026-09-18",
+      "status": "revision_candidate_user_review_pending",
+      "review_notes": "减少整体金橙染光与美容补光；修订图门外光色较前版偏白昼，仍需审阅。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-tang-noblewoman-revised.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1930387,
+        "sha256": "17bdd9831f16fbe80a92344f782b5a092af3183f6632064de6e0ec7f08286cf6"
+      },
+      "preview": {
+        "path": "previews/guofeng-tang-noblewoman-revised.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 141230,
+        "sha256": "3c53b976c46be6d0f72af685573042993140872788c12289878ca307c416b6d4",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-revisions",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-song-scholar-original",
+      "title": "宋代题材 · 临水书斋 · 原图",
+      "group": "guofeng-originals",
+      "recorded_batch_date": "2026-09-18",
+      "status": "partial_feedback_realism_not_accepted",
+      "review_notes": "收回强烈水面亮带与窄亮边，检查老人肤色、窗光及旧木反射。",
+      "user_feedback": {
+        "status": "partial_feedback_recorded",
+        "accepted_dimensions": [
+          "color_relationships",
+          "story_feeling"
+        ],
+        "rejected_dimensions": [
+          "lighting_realism",
+          "skin_realism",
+          "environment_realism"
+        ],
+        "whole_image_accepted": false
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-song-scholar-original.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2000618,
+        "sha256": "14bbf99b7f36d23b1ec7a920fcb10ea48d80dfd58694aa3bb76595875b8fbf64"
+      },
+      "preview": {
+        "path": "previews/guofeng-song-scholar-original.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 132800,
+        "sha256": "2a62e1115693deac752eb9fbd5e74e352202af183909d57144dc1ad68405418c",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-originals",
+      "publication_sample_visual_check": true
+    },
+    {
+      "id": "guofeng-song-scholar-revised",
+      "title": "宋代题材 · 临水书斋 · 修订候选",
+      "group": "guofeng-revisions",
+      "recorded_batch_date": "2026-09-18",
+      "status": "revision_candidate_user_review_pending",
+      "review_notes": "收回强烈水面亮带与窄亮边，检查老人肤色、窗光及旧木反射。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-song-scholar-revised.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1960742,
+        "sha256": "6822e47af65916e36156fdb80a200ebdf6807f27b999eba5eaae44dca52eceb2"
+      },
+      "preview": {
+        "path": "previews/guofeng-song-scholar-revised.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 129450,
+        "sha256": "f1ca4fa2284d55b1be88c49c0bb2e37d2988c880ae846a4aaf31ecef831ad089",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-revisions",
+      "publication_sample_visual_check": true
+    },
+    {
+      "id": "guofeng-yuan-herder-original",
+      "title": "元代题材 · 草原牧民 · 原图",
+      "group": "guofeng-originals",
+      "recorded_batch_date": "2026-09-18",
+      "status": "partial_feedback_realism_not_accepted",
+      "review_notes": "保留晴蓝天空与草绿，减少云、草、皮肤和羊毛的过度锐化。",
+      "user_feedback": {
+        "status": "partial_feedback_recorded",
+        "accepted_dimensions": [
+          "color_relationships",
+          "story_feeling"
+        ],
+        "rejected_dimensions": [
+          "lighting_realism",
+          "skin_realism",
+          "environment_realism"
+        ],
+        "whole_image_accepted": false
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-yuan-herder-original.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2534575,
+        "sha256": "227c414971207e7b7f68320ce70b846d0eadf3ad7fd1dd350d62fea15c494242"
+      },
+      "preview": {
+        "path": "previews/guofeng-yuan-herder-original.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 253352,
+        "sha256": "ba2b7f78c31ca0c2b1e3e9af5f756ef032a837db55dfa371197a91ae48545f22",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-originals",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-yuan-herder-revised",
+      "title": "元代题材 · 草原牧民 · 修订候选",
+      "group": "guofeng-revisions",
+      "recorded_batch_date": "2026-09-18",
+      "status": "revision_candidate_user_review_pending",
+      "review_notes": "保留晴蓝天空与草绿，减少云、草、皮肤和羊毛的过度锐化。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-yuan-herder-revised.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2348352,
+        "sha256": "94a1bcaf57849b5377917adbea92e73bb6b01fc5cce97036326c0f9c29311ecc"
+      },
+      "preview": {
+        "path": "previews/guofeng-yuan-herder-revised.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 221020,
+        "sha256": "94ad6803ada0aeadf1fd4e8fb490f9f8a7a0d4ce32965587a096ef42b65bc34f",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-revisions",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-ming-potter-original",
+      "title": "明代题材 · 制瓷匠人 · 原图",
+      "group": "guofeng-originals",
+      "recorded_batch_date": "2026-09-18",
+      "status": "partial_feedback_realism_not_accepted",
+      "review_notes": "减少皮肤油蜡感，保留手、工具和碗坯接触及劳动故事。",
+      "user_feedback": {
+        "status": "partial_feedback_recorded",
+        "accepted_dimensions": [
+          "color_relationships",
+          "story_feeling"
+        ],
+        "rejected_dimensions": [
+          "lighting_realism",
+          "skin_realism",
+          "environment_realism"
+        ],
+        "whole_image_accepted": false
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-ming-potter-original.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2314727,
+        "sha256": "0f328773ecbfd42c36b64502b5459d593712bb49809484f9099d82e473c53d09"
+      },
+      "preview": {
+        "path": "previews/guofeng-ming-potter-original.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 190434,
+        "sha256": "6b74fc0b0d6989472ce348860889deab5224ea0a6c4b09a1b776a324b9dc8d27",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-originals",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-ming-potter-revised",
+      "title": "明代题材 · 制瓷匠人 · 修订候选",
+      "group": "guofeng-revisions",
+      "recorded_batch_date": "2026-09-18",
+      "status": "revision_candidate_user_review_pending",
+      "review_notes": "减少皮肤油蜡感，保留手、工具和碗坯接触及劳动故事。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-ming-potter-revised.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2218805,
+        "sha256": "c08068e5db4c10425e10dfc18e6cc1bb4f168727041095da7ca55b26e894fc83"
+      },
+      "preview": {
+        "path": "previews/guofeng-ming-potter-revised.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 170716,
+        "sha256": "2b19914ae69b73a1239484844556407a69449b1aa67e23638297ab7fc74efc14",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-revisions",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-qing-emperor-original",
+      "title": "清代题材 · 宫廷皇帝 · 原图",
+      "group": "guofeng-originals",
+      "recorded_batch_date": "2026-09-18",
+      "status": "partial_feedback_realism_not_accepted",
+      "review_notes": "保留明黄、朱红与冷白雪，修订金线、皮肤和雪地反光。",
+      "user_feedback": {
+        "status": "partial_feedback_recorded",
+        "accepted_dimensions": [
+          "color_relationships",
+          "story_feeling"
+        ],
+        "rejected_dimensions": [
+          "lighting_realism",
+          "skin_realism",
+          "environment_realism"
+        ],
+        "whole_image_accepted": false
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-qing-emperor-original.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2395567,
+        "sha256": "ecf59346b98c057109158b2251454e8c70d7a85db355422ca964b8659e0c6837"
+      },
+      "preview": {
+        "path": "previews/guofeng-qing-emperor-original.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 223518,
+        "sha256": "30b95f596fbf05c8a176d2dfc827aa9e8be55c3082e43cf0e697443d625ad11c",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-originals",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-qing-emperor-revised",
+      "title": "清代题材 · 宫廷皇帝 · 修订候选",
+      "group": "guofeng-revisions",
+      "recorded_batch_date": "2026-09-18",
+      "status": "revision_candidate_user_review_pending",
+      "review_notes": "保留明黄、朱红与冷白雪，修订金线、皮肤和雪地反光。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-qing-emperor-revised.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2238313,
+        "sha256": "2d81919a2e7f9fc85c90e239195981687225cc71d5829c212878905f417721b5"
+      },
+      "preview": {
+        "path": "previews/guofeng-qing-emperor-revised.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 191386,
+        "sha256": "aac9d9b0e741cc5e87a1b9de2fff087f04e9ea5c3a04cfdc41a4478737cc6075",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-revisions",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-window-letter",
+      "title": "窗边家书",
+      "group": "guofeng-new-scenes",
+      "recorded_batch_date": "2026-09-18",
+      "status": "candidate_user_review_pending",
+      "review_notes": "检查面部、双手与房间的同一窗光关系。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-window-letter.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1880597,
+        "sha256": "eca1e5a2d2ac482d8ecb7f9ff85e9c4b8ddce639e3a8f748b5f4ddb3258d0c51"
+      },
+      "preview": {
+        "path": "previews/guofeng-window-letter.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 97076,
+        "sha256": "d03db4564e7e7ac4cdd238e8786f16c562d100ae143233b4367779c7f3a35e65",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-new-scenes",
+      "publication_sample_visual_check": true
+    },
+    {
+      "id": "guofeng-seedling-handoff",
+      "title": "田埂递秧",
+      "group": "guofeng-new-scenes",
+      "recorded_batch_date": "2026-09-18",
+      "status": "candidate_user_review_pending",
+      "review_notes": "检查阴天散射光中的人物肤色、泥水与农舍。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-seedling-handoff.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2565050,
+        "sha256": "6e653a08b28c047a877817d1a89f84414409a09b9695deee2f4dea73b73c2bf1"
+      },
+      "preview": {
+        "path": "previews/guofeng-seedling-handoff.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 261122,
+        "sha256": "39bd34fc78f4e07f48c2e642f61f3263fe1b207972a6d047a432c6725bdd4612",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-new-scenes",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "guofeng-market-eaves",
+      "title": "檐下挑货",
+      "group": "guofeng-new-scenes",
+      "recorded_batch_date": "2026-09-18",
+      "status": "candidate_user_review_pending",
+      "review_notes": "检查晴天街面与檐下人物的明暗差，不均匀提亮全场。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/guofeng-market-eaves.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2206797,
+        "sha256": "bb9d12b3d8db2b58cdaad0369b4a8c8ed53893f5a3312a20e152f76d0f314bd2"
+      },
+      "preview": {
+        "path": "previews/guofeng-market-eaves.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 159084,
+        "sha256": "b5763ecd1855bc1fed77617e21289e08b2729fa701c9904c508e032c9b619497",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#guofeng-new-scenes",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "character-guofeng-glance",
+      "title": "古风回眸 · 克制温柔",
+      "group": "character-charm",
+      "recorded_batch_date": "2026-09-10",
+      "status": "internal_partial_user_review_pending",
+      "review_notes": "内部部分通过：气质与持扇关系可读；背景山水建筑偏离纯蓝天要求。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/character-guofeng-glance.png",
+        "width": 941,
+        "height": 1672,
+        "bytes": 2335220,
+        "sha256": "9fca30f26316fda1b0a177b2c5cacf8cdcc5687b27eb3f84eb4849864072f0ef"
+      },
+      "preview": {
+        "path": "previews/character-guofeng-glance.webp",
+        "width": 941,
+        "height": 1672,
+        "bytes": 171012,
+        "sha256": "5827867d0f526240e01506f34e589a867566d7a588b43b824ed7389b392ac2d5",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#character-charm",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "character-window-portrait",
+      "title": "日常窗边 · 朴素亲和",
+      "group": "character-charm",
+      "recorded_batch_date": "2026-09-10",
+      "status": "internal_main_requirements_pass_user_review_pending",
+      "review_notes": "内部主要要求通过：暖笑、自然肤质、松肩与搭手建立亲和。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/character-window-portrait.png",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 1900686,
+        "sha256": "ef1542980f292f5d8c6d2bf2214fb49e10feaad3bb35bbc9bc6c4fd22e5a8838"
+      },
+      "preview": {
+        "path": "previews/character-window-portrait.webp",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 86750,
+        "sha256": "e48bdee403296d2d24bcc0af3b18886a75be2672bf99ef4e3225de93640797d6",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#character-charm",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "character-mature-captain",
+      "title": "成熟女船长 · 从容机敏",
+      "group": "character-charm",
+      "recorded_batch_date": "2026-09-10",
+      "status": "internal_partial_user_review_pending",
+      "review_notes": "内部部分通过：年龄、肤色与体型保留；前方手指被底边裁切，背景较复杂。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/character-mature-captain.png",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 1991288,
+        "sha256": "a037ed73f3baf3c533be179b08a35e16bc9f4864e779078f6ff1e01e06b7c190"
+      },
+      "preview": {
+        "path": "previews/character-mature-captain.webp",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 106148,
+        "sha256": "46abccaa85521b817509b676bdd2ec209d8c457c44ceb17801474ecccd7b6393",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#character-charm",
+      "publication_sample_visual_check": true
+    },
+    {
+      "id": "character-outdoor-leader",
+      "title": "户外领队 · 清醒英气",
+      "group": "character-charm",
+      "recorded_batch_date": "2026-09-10",
+      "status": "internal_main_requirements_pass_user_review_pending",
+      "review_notes": "内部主要要求通过：视线与姿态有目标；外套质感更接近薄防风壳。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/character-outdoor-leader.png",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 1875909,
+        "sha256": "0faf514d7555d33dd8d4d38147ca1ffb4f1c4c9493dd1301a6f598857e4b0ffc"
+      },
+      "preview": {
+        "path": "previews/character-outdoor-leader.webp",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 77206,
+        "sha256": "cb6e37ca6f46b3f0ad4005e46051a9f63994943213760a58fe64f59997a0038e",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#character-charm",
+      "publication_sample_visual_check": false
+    },
+    {
+      "id": "character-animated-mechanic",
+      "title": "二维机械师 · 自信幽默",
+      "group": "character-charm",
+      "recorded_batch_date": "2026-09-10",
+      "status": "internal_partial_user_review_pending",
+      "review_notes": "内部部分通过：成年比例与二维语言保留；顶部少量卷发裁切。",
+      "user_feedback": {
+        "status": "pending"
+      },
+      "date_precision": "recorded_batch_date_not_exact_generation_timestamp",
+      "origin": "original_AI_generated_research_image",
+      "generation_tool": "image_gen",
+      "original": {
+        "path": "originals/character-animated-mechanic.png",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 1594806,
+        "sha256": "fa3a5e02e71cc1a0eecb4cfcd703111f7104c1d5101468bbc93243653506bfa4"
+      },
+      "preview": {
+        "path": "previews/character-animated-mechanic.webp",
+        "width": 1122,
+        "height": 1402,
+        "bytes": 87632,
+        "sha256": "c76bcfbeb0acac41479ec40f37c2fb91ff8f7a56c092e8b247eb015eb1c507bf",
+        "crop": false,
+        "resize": false,
+        "conversion": "WebP quality 85"
+      },
+      "prompt_link": "prompts.md#character-charm",
+      "publication_sample_visual_check": false
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "whitebox-comparison-map/1.0",
+  "fps": 24,
+  "range_semantics": "half_open_frames",
+  "final_video_frames": 721,
+  "whitebox_video_frames": 360,
+  "source_files": {
+    "final": "generated-full.mp4",
+    "whitebox": "../chase/whitebox.mp4"
+  },
+  "segments": [
+    {
+      "destination": [
+        0,
+        54
+      ],
+      "source": [
+        0,
+        54
+      ],
+      "mode": "match"
+    },
+    {
+      "destination": [
+        54,
+        107
+      ],
+      "source": [
+        54,
+        108
+      ],
+      "mode": "match"
+    },
+    {
+      "destination": [
+        107,
+        168
+      ],
+      "source": [
+        108,
+        168
+      ],
+      "mode": "match"
+    },
+    {
+      "destination": [
+        168,
+        209
+      ],
+      "source": [
+        168,
+        210
+      ],
+      "mode": "match"
+    },
+    {
+      "destination": [
+        209,
+        300
+      ],
+      "source": [
+        210,
+        300
+      ],
+      "mode": "match"
+    },
+    {
+      "destination": [
+        300,
+        657
+      ],
+      "source": [
+        299,
+        300
+      ],
+      "mode": "unmatched_hold"
+    },
+    {
+      "destination": [
+        657,
+        721
+      ],
+      "source": [
+        300,
+        360
+      ],
+      "mode": "match"
+    }
+  ],
+  "unmatched_label": "生成延展｜本段无对应白模（参考末帧定格）",
+  "interpretation": "Explicitly aligned shot spans. Match segments permit only small local frame-count adjustments; the unmatched span must remain visibly labelled.",
+  "unmatched_seconds": [
+    12.5,
+    27.375
+  ]
+}

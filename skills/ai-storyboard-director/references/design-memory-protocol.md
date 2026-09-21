@@ -92,7 +92,7 @@ framing 与 continuity 是每场必须考虑的基础维度；是否存在关系
 }
 ```
 
-第二场起 previous_scene 是含 scene_id 与 sha256 的对象，哈希从上次实际 context 输出取得。镜头状态变化时添加 state_changes，例如 key 为 chair、from 为 empty、to 为 occupied、action 为当前剧本中明确可见的落座过程。例子的4秒、同框和固定机位不是通用要求；完整镜头含义仍需在五列设计里准确表达。
+第二场起 previous_scene 是含 scene_id 与 sha256 的对象，哈希从上次实际 context 输出取得。镜头状态变化时添加 state_changes，例如 key 为 chair、from 为 empty、to 为 occupied、action 为当前剧本中明确可见的落座过程。例子的4秒、同框和固定机位不是通用要求；完整镜头含义仍需在融合母稿第六段的时间轴里准确表达，用户明确单独点名表格时才改用五列设计。
 
 镜头的 enter_state 与 exit_state 写最少但足以继承的事实，如人物所在侧、道具持有人、门的开关、已经看见的证据。发生改变时，state_changes 逐项记录 key、from、to 和可见 action；字典自洽不证明这段动作具有充分因果，仍需阅读剧本与镜头语义。
 
@@ -123,7 +123,7 @@ python scripts/design_memory.py check --project-root <作品目录> --scene <场
 
 需要与创作者解释隔离的验证时，新的审阅上下文只收到原文、锁定要求和完成镜头，不带作者预期答案。普通任务不为形式完整强制增加代理；没有隔离能力时标为同上下文自审。
 
-输出仍按五列分镜与六模块合同。工作记录、版本、程序错误细节和哈希不塞进用户可复制的提示词。已明确要求仅设计稿时，仅交镜头设计。
+默认输出仍按单一融合六模块合同，第六段承担人读镜头时间轴；不再并列输出五列分镜。工作记录、版本、程序错误细节和哈希不塞进用户可复制的母稿。已明确要求仅看五列表或仅设计稿时，只交所点名的镜头设计。
 
 ```text
 python scripts/design_memory.py export --project-root <作品目录> --scene <场景ID> --text <根内待交付正文> --output <根内新回执路径> --expected-revision <读取版本> --expected-sha256 <读取哈希>

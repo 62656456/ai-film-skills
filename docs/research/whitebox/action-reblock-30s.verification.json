@@ -1,0 +1,15 @@
+{
+  "file": "action-reblock-30s.blend",
+  "source_sha256": "d71ac4a535b7f044c100a71751f09e2e5c0c934bfff5fe406c3f1b6d57d68170",
+  "published_sha256": "00b638408be711224b3e18b114c50bf0612dd836def681b5cab32344b71069ea",
+  "blender_version": "5.2.1 LTS",
+  "text_blocks_removed": 2,
+  "absolute_path_custom_properties_removed": 0,
+  "external_dependencies": 0,
+  "drivers": 0,
+  "armature_count": 0,
+  "object_count": 264,
+  "action_count": 107,
+  "sampled_frames_geometry_and_camera_unchanged": true,
+  "verification": "Reopened published copy with script execution disabled; compared world matrices, local mesh vertices and camera settings at four timeline points. No source animation edits."
+}

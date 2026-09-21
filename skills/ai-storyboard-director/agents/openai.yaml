@@ -1,4 +1,4 @@
 interface:
   display_name: "AI分镜导演"
-  short_description: "理解剧本与打戏攻防，设计摄影调度、可读分镜和完整视频提示词。"
-  default_prompt: "Use $ai-storyboard-director to turn an approved script into readable shots and production prompts."
+  short_description: "理解剧本与打戏攻防，生成融合分镜与提示词的单一母稿。"
+  default_prompt: "Use $ai-storyboard-director to turn an approved script into one readable, production-ready fused storyboard prompt."

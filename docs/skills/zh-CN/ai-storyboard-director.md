@@ -1,13 +1,13 @@
 # ai-storyboard-director｜剧本转分镜与提示词
 
-| 状态 | 当前源码5.6.3，已选择日常使用；v1.3.0 ZIP保留5.4.4 |
+| 状态 | 当前源码5.6.4，已选择日常使用；v1.3.0 ZIP保留5.4.4 |
 |---|---|
 | 单独可交付 | 针对已有批准剧本的完整分镜和可复制提示词包。 |
 | 单独不能声称 | 不改写剧本、不直接生成视频，也不证明平台生成成功。 |
 
 [运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.3。
+v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.4。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -72,7 +72,7 @@ v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.3。
 <!-- contract:outputs -->
 ## 9. 输出
 
-- 五列人读分镜：时间、景别/机位、摄影机、画面与动作、台词/声音。
+- 一条融合六段母稿，第六段包含完整人读镜头时间轴；仅单独点名镜头表时改用五列表。
 - 使用六模块外层和数字10信息内核的可复制正式提示词。
 
 <!-- contract:boundaries -->

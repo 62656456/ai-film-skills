@@ -78,7 +78,7 @@ Production-control orchestration and gap auditing for existing decisions, includ
 ## 10. Boundaries, dependencies, and permissions
 
 - It can organize approved decisions or audit missing controls by itself; it does not copy every directing, asset, genre, generation, or QC capability into one module.
-- This package includes a self-contained handoff aligned with the 5.6 storyboard format, without importing its persistence engine. Source alignment does not establish deployment or actual-video acceptance.
+- This package's independent handoff was aligned with the 5.6.0 format on 2026-09-07 and retains a five-column storyboard plus a six-module prompt. It has not adopted 5.6.4's single fused output or its persistence engine. That historical alignment does not establish deployment or actual-video acceptance.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use

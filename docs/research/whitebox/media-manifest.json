@@ -1,0 +1,452 @@
+{
+  "schema_version": "whitebox-showcase/1.0",
+  "verified_on": "2026-09-21",
+  "verification_scope": [
+    "local_file_identity",
+    "ffprobe_frame_count",
+    "full_media_decode",
+    "selected_frame_visual_review"
+  ],
+  "not_verified": [
+    "continuous_realtime_human_playback",
+    "user_aesthetic_acceptance",
+    "cross_model_reproduction",
+    "controlled_AB_effectiveness"
+  ],
+  "project_status": "Historical experiment publication does not restore any original project production status.",
+  "showcase_video_count": 7,
+  "supporting_original_video_count": 1,
+  "assets": [
+    {
+      "file": "action-reblock-30s.gif",
+      "bytes": 5606349,
+      "sha256": "7d7f8d0b9580eb3773b5e723c53548418982a469339e3b8f36a2d362bfc4d85b",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "codec_type": "video",
+            "width": 480,
+            "height": 270,
+            "r_frame_rate": "5/1",
+            "duration": "30.000000",
+            "nb_read_frames": "150"
+          }
+        ],
+        "format": {
+          "duration": "30.000000",
+          "size": "5606349"
+        }
+      },
+      "full_decode": "pass",
+      "publication_role": "full_duration_browse_preview",
+      "source_video": "action-reblock-30s.mp4",
+      "duration_preserved": true,
+      "fps": 5,
+      "width": 480,
+      "user_acceptance": "not_established",
+      "image_size": [
+        480,
+        270
+      ]
+    },
+    {
+      "file": "action-reblock-30s.jpg",
+      "bytes": 32450,
+      "sha256": "13aa531966f74f63e88e35a4f1e28b25559c50432e2dda4019a086e25869c984",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "file": "action-reblock-30s.mp4",
+      "bytes": 5705013,
+      "sha256": "8fee9dff75e237858031780d03dc3c157b5182fcbb2d347c7e5695e196097ed6",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1",
+            "duration": "30.000000",
+            "nb_read_frames": "720"
+          }
+        ],
+        "format": {
+          "duration": "30.000000",
+          "size": "5705013"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-19",
+      "publication_role": "historical_research_candidate",
+      "interpretation": "New contact-planned articulated proxy blocking; user acceptance not established."
+    },
+    {
+      "file": "chase/preview.jpg",
+      "bytes": 24270,
+      "sha256": "006e8793dc71e75cbbdd073b86ddc266731cb4125665a46777ec95f5b6e52089",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "file": "chase/reference.png",
+      "bytes": 1596007,
+      "sha256": "8e7f8f8c866d4b6ff28405a79590c58e9abbef6c4708009bd5786cfa82fbfafd",
+      "image_size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "chase/whitebox.mp4",
+      "bytes": 5962460,
+      "sha256": "e3cda2ec66c569bcd502c6ae42f2b06df758b321899af350c969ef948b19c746",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1",
+            "duration": "15.000000",
+            "nb_read_frames": "360"
+          }
+        ],
+        "format": {
+          "duration": "15.000000",
+          "size": "5962460"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-09",
+      "publication_role": "previously_published_research_example",
+      "interpretation": "Six-shot camera and vehicle blocking example."
+    },
+    {
+      "file": "chase-comparison/comparison-v2.mp4",
+      "bytes": 14082550,
+      "sha256": "e9e94eca55fa57973d5c1bf8e2fff81e9dcc7a5cc3c38db64af2bdee033a4ee2",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1080,
+            "height": 1920,
+            "r_frame_rate": "24/1",
+            "duration": "30.041667",
+            "nb_read_frames": "721"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "30.048000",
+            "nb_read_frames": "1406"
+          }
+        ],
+        "format": {
+          "duration": "30.048000",
+          "size": "14082550"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-10",
+      "publication_role": "previously_published_generated_comparison",
+      "interpretation": "Includes third-party voice/music; no same-condition A/B claim."
+    },
+    {
+      "file": "chase-comparison/generated-full.mp4",
+      "bytes": 21434797,
+      "sha256": "8b04797804ef7f9cb6752a51ef2b532dd38953c008563c50beaad91e7938860d",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 854,
+            "height": 480,
+            "r_frame_rate": "24/1",
+            "duration": "30.041667",
+            "nb_read_frames": "721"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "30.048000",
+            "nb_read_frames": "939"
+          }
+        ],
+        "format": {
+          "duration": "30.048000",
+          "size": "21434797"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-10",
+      "publication_role": "supporting_original_generated_video",
+      "interpretation": "Full original output retained; 12.5-27.375 seconds have no corresponding whitebox footage."
+    },
+    {
+      "file": "chase-comparison/preview.jpg",
+      "bytes": 107265,
+      "sha256": "fe1f4e8fa4cb29e534e529ac02a1524f0cde416d75f1059d8fc2071aaad72eee",
+      "image_size": [
+        960,
+        1706
+      ]
+    },
+    {
+      "file": "complex-camera-20s.jpg",
+      "bytes": 28979,
+      "sha256": "6efdaa2ae2aff6fa825054dc60163af809baf54d6db51d0ab6fef76380864496",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "file": "complex-camera-20s.mp4",
+      "bytes": 3358531,
+      "sha256": "d223d4f7005548019d99d34072c0a9eeb0de1dd93bafc8140efe96b988811fe4",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1",
+            "duration": "20.000000",
+            "nb_read_frames": "480"
+          }
+        ],
+        "format": {
+          "duration": "20.000000",
+          "size": "3358531"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-18",
+      "publication_role": "superseded_action_failure_comparison",
+      "interpretation": "The 13-second source movement was slowed to 20 seconds; action quality was rejected."
+    },
+    {
+      "file": "fight/preview.jpg",
+      "bytes": 27500,
+      "sha256": "03d9e336acd3bb4894e7863c9c33e1522ccc6455bd165b55c05e67de0e6331d1",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "file": "fight/reference.png",
+      "bytes": 2027524,
+      "sha256": "30bed2673dfa1fd0017143f00c3bb33c058e4bb18b350cc3deaef40acd57f1aa",
+      "image_size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "fight/whitebox.mp4",
+      "bytes": 7319783,
+      "sha256": "d012c9afefedbe4352b84623dc39a7a5eaedf9b2ca6485facc9e8fa400d3fb6e",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1",
+            "duration": "15.000000",
+            "nb_read_frames": "360"
+          }
+        ],
+        "format": {
+          "duration": "15.000000",
+          "size": "7319783"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-09",
+      "publication_role": "previously_published_research_example",
+      "interpretation": "Seven-shot staff contact and choreography example."
+    },
+    {
+      "file": "minimal-shots-30s.gif",
+      "bytes": 3703217,
+      "sha256": "50aa61205410883b56fef99b8d6d18cc7e4892c663c1bddb0fdda93f3ce5f24a",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "codec_type": "video",
+            "width": 480,
+            "height": 270,
+            "r_frame_rate": "5/1",
+            "duration": "30.000000",
+            "nb_read_frames": "150"
+          }
+        ],
+        "format": {
+          "duration": "30.000000",
+          "size": "3703217"
+        }
+      },
+      "full_decode": "pass",
+      "publication_role": "full_duration_browse_preview",
+      "source_video": "minimal-shots-30s.mp4",
+      "duration_preserved": true,
+      "fps": 5,
+      "width": 480,
+      "user_acceptance": "not_established",
+      "image_size": [
+        480,
+        270
+      ]
+    },
+    {
+      "file": "minimal-shots-30s.jpg",
+      "bytes": 27018,
+      "sha256": "c8be7dd7e175761ae5d7088349b9455abf567a1fad546e615b89104b9c6816a7",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "file": "minimal-shots-30s.mp4",
+      "bytes": 3947802,
+      "sha256": "f5befa19ec06445ffab0d23f71f2e9da10e53b40b9d8101d3e38f5d7b2272f5f",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1",
+            "duration": "30.000000",
+            "nb_read_frames": "720"
+          }
+        ],
+        "format": {
+          "duration": "30.000000",
+          "size": "3947802"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-18",
+      "publication_role": "historical_research_candidate",
+      "interpretation": "11-shot minimal-proxy experiment; user acceptance not established."
+    },
+    {
+      "file": "power/preview.jpg",
+      "bytes": 25193,
+      "sha256": "6a9cec06c98f378897a4a21b9a1ad8274d24b6dc9175c03ed00eb234c12b44b7",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    {
+      "file": "power/reference.png",
+      "bytes": 1787485,
+      "sha256": "30172ceacee15016d0d5c6570c09cc5aa874a8e9ff238834927529dce3cd5273",
+      "image_size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "power/whitebox.mp4",
+      "bytes": 14328899,
+      "sha256": "5f9ad6eb8f8fd4556b43404cf712a4d59b9ee6d77de9cc15f3b169419ff4cd4b",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "24/1",
+            "duration": "30.000000",
+            "nb_read_frames": "720"
+          }
+        ],
+        "format": {
+          "duration": "30.000000",
+          "size": "14328899"
+        }
+      },
+      "full_decode": "pass",
+      "experiment_date": "2026-09-09",
+      "publication_role": "previously_published_research_example",
+      "interpretation": "Eight-shot group blocking example."
+    },
+    {
+      "file": "action-reblock-30s.blend",
+      "bytes": 5070823,
+      "sha256": "00b638408be711224b3e18b114c50bf0612dd836def681b5cab32344b71069ea",
+      "publication_role": "sanitized_editable_historical_research_scene",
+      "verification_file": "action-reblock-30s.verification.json",
+      "external_dependencies": 0,
+      "armature_count": 0,
+      "source_animation_edits": false,
+      "reopened_copy_geometry_samples_match": true
+    },
+    {
+      "file": "complex-camera-20s.blend",
+      "bytes": 3399158,
+      "sha256": "9225649d6b42cc162bacb95c8fe3f2a5faceb0ccbd598be1becb3ddf57972ae5",
+      "publication_role": "sanitized_editable_historical_research_scene",
+      "verification_file": "complex-camera-20s.verification.json",
+      "external_dependencies": 0,
+      "armature_count": 0,
+      "source_animation_edits": false,
+      "reopened_copy_geometry_samples_match": true
+    },
+    {
+      "file": "minimal-shots-30s.blend",
+      "bytes": 4069359,
+      "sha256": "cd96c73c60135a61dbfdc474f6be2e8227e849b632a2a3f3bdaad7041de68d97",
+      "publication_role": "sanitized_editable_historical_research_scene",
+      "verification_file": "minimal-shots-30s.verification.json",
+      "external_dependencies": 0,
+      "armature_count": 0,
+      "source_animation_edits": false,
+      "reopened_copy_geometry_samples_match": true
+    }
+  ]
+}
