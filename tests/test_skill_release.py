@@ -228,13 +228,13 @@ class SkillReleaseTests(unittest.TestCase):
     def test_symlink_source_and_parent_are_refused(self):
         outside = self.base / "outside"
         outside.mkdir()
-        (outside / "secret.md").write_text("outside", encoding="utf-8")
+        (outside / "outside-note.md").write_text("outside", encoding="utf-8")
         try:
             (self.root / "link").symlink_to(outside, target_is_directory=True)
         except OSError as exc:
             self.skipTest("OS does not permit symlink creation: " + str(exc))
         with self.assertRaisesRegex(release.ReleaseError, "reparse"):
-            self.snapshot(self.make_config(self.root, ["link/secret.md"]))
+            self.snapshot(self.make_config(self.root, ["link/outside-note.md"]))
 
     def test_reparse_attribute_detection(self):
         info = mock.Mock(st_mode=stat.S_IFDIR, st_file_attributes=0x400)
