@@ -21,6 +21,16 @@ jobs:
           python-version: "3.12"
       - name: Install repository validation dependencies
         run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Prepare explicit cross-platform test temporary directory
+        shell: python
+        run: |
+          import os
+          from pathlib import Path
+          temporary = (Path(os.environ["RUNNER_TEMP"]).resolve() / "film-skills-tests").resolve()
+          temporary.mkdir(parents=True, exist_ok=True)
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as handle:
+              for name in ("TEMP", "TMP", "TMPDIR", "SKILL_RELEASE_TEST_TEMP"):
+                  handle.write(f"{name}={temporary}\n")
       - name: Run cross-platform regression tests
         run: python -m unittest discover -s tests -v
 
@@ -33,6 +43,16 @@ jobs:
           python-version: "3.12"
       - name: Install repository validation dependencies
         run: python -m pip install --disable-pip-version-check -r requirements-dev.txt
+      - name: Prepare explicit cross-platform test temporary directory
+        shell: python
+        run: |
+          import os
+          from pathlib import Path
+          temporary = (Path(os.environ["RUNNER_TEMP"]).resolve() / "film-skills-tests").resolve()
+          temporary.mkdir(parents=True, exist_ok=True)
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as handle:
+              for name in ("TEMP", "TMP", "TMPDIR", "SKILL_RELEASE_TEST_TEMP"):
+                  handle.write(f"{name}={temporary}\n")
       - name: Run negative and regression tests
         run: python -m unittest discover -s tests -v
       - name: Regenerate GitHub-readable Skill guides
