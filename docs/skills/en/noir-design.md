@@ -1,6 +1,6 @@
 # noir-design — noir and crime visual parameters
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | A noir `style_route`, scene and light parameters, negative constraints, and QC contract. |
 | Cannot claim alone | It does not equal a blue-black filter, source-less smoke, random blind shadows, or exaggerated Dutch angles. |
@@ -44,8 +44,8 @@ A noir `style_route`, scene and light parameters, negative constraints, and QC c
 1. Read the package-local cinematic-image-direction reference, choose the imaging medium, and establish the visible proposition and attention hierarchy before presets.
 2. Derive functional color, light sources, spatial structure, and scene parameters.
 3. Add materials, contact and state continuity; include camera motion, timing and sound only for video, and preserve supplied approved assets.
-4. Compile the ten information categories and platform translation without changing upstream decisions.
-5. Run shared and genre-specific review; emit `ready_for_prompt` or a field-specific `rework` result.
+4. Deliver the requested medium; presets are conditional references, not fixed timing, shot-count or output templates.
+5. Review the applicable visual relations once; return the creative result. Structured style/QC records are supplied when requested for a real handoff.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -73,7 +73,7 @@ A noir `style_route`, scene and light parameters, negative constraints, and QC c
 <!-- contract:outputs -->
 ## 9. Outputs
 
-- A genre-specific `style_route`, `style_module`, and `qc_contract` that can stand alone as a visual parameter package.
+- A directly usable visual design or prompt; style_route, style_module and qc_contract remain available for explicit structured handoffs.
 - Scene-ready prompt fields, negative constraints, continuity state, and sound cues.
 
 <!-- contract:boundaries -->
@@ -104,6 +104,7 @@ A noir `style_route`, scene and light parameters, negative constraints, and QC c
 
 - [`references/cinematic-image-direction.md`](../../../skills/noir-design/references/cinematic-image-direction.md)
 - [`references/COMMON-12-SECTION-PROTOCOL.md`](../../../skills/noir-design/references/COMMON-12-SECTION-PROTOCOL.md)
+- [`references/genre-presets.md`](../../../skills/noir-design/references/genre-presets.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/noir-design/references/NEGATIVE-CASE-BOOK.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/noir-design/references/SOURCE-LEDGER.md)
 

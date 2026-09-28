@@ -21,6 +21,7 @@ Derive original hard-science-fiction worlds, systems, organisms, equipment, inte
 - Script fact, necessary extrapolation, proposal, approved decision, and locked decision remain distinct states.
 - Research sets an evidence floor, not a creativity ceiling; high-amplitude design must expose its speculative rule and cost.
 - Design visual attention, material response, light, scale and original machine form together; engineering plausibility does not replace a distinctive readable image.
+- Local questions and scoped revisions load only relevant mechanisms; complete world or system design loads the full design workflow and specialist gates.
 
 <!-- contract:standalone -->
 ## 3. Standalone scope
@@ -103,6 +104,7 @@ Research-driven visual diagnosis, derivation, bible, directing plan, and copy-re
 - [`references/cinematic-image-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/cinematic-image-direction.md)
 - [`references/combat-mecha-aesthetic.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-aesthetic.md)
 - [`references/combat-mecha-form-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-form-direction.md)
+- [`references/full-design-workflow.md`](../../../experimental/hard-sci-fi-visual-director/references/full-design-workflow.md)
 - [`references/future-interface-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-interface-systems.md)
 - [`references/future-weapon-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-weapon-systems.md)
 - [`references/inspiration-engine.md`](../../../experimental/hard-sci-fi-visual-director/references/inspiration-engine.md)

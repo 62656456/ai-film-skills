@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1430" width="1200" height="1430" role="img" aria-labelledby="title desc">
   <title id="title">AI 影视完整工作流程：按本次目标选择阶段</title>
-  <desc id="desc">主线从输入和需求，经剧本、导演、十一类视觉方向、三类资产、分镜与保存恢复、融合六段镜头母稿，到生成剪辑声音、整片审查及用户验收。白模为可选预演，市场研究和经批准的知识写入为侧支，短剧合同待对齐，网页设计为辅助。已有材料可直接进入对应阶段，局部任务可在任意阶段结束。</desc>
+  <desc id="desc">主线从输入和需求，经剧本、导演、十一类视觉方向、三类资产、分镜与保存恢复、按请求交付分镜或提示词，到生成剪辑声音、整片审查及用户验收。白模为可选预演，市场研究和经批准的知识写入为侧支，短剧按阶段交付，网页设计为辅助。已有材料可直接进入对应阶段，局部任务可在任意阶段结束。</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#ff6b35" stroke-width="1.5"/></marker>
     <marker id="side-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#8b9dad" stroke-width="1.5"/></marker>
@@ -15,7 +15,7 @@
   <text x="36" y="78" class="sub">已有材料可直接进入相应阶段；只做局部结果时，可在任何阶段结束。</text>
   <path d="M394 159H360V270H342" class="optional"/>
   <path d="M394 159H20V591H36" class="optional"/>
-  <path d="M604 202V228 M604 316V342 M604 430V456 M604 582V610 M604 698V728 M604 816V846 M604 934V1010 M604 1098V1126 M604 1214V1242" class="flow"/>
+  <path d="M604 202V228 M604 316V342 M604 430V456 M604 582V610 M604 698V728 M604 816V846 M604 1098V1126 M604 1214V1242" class="flow"/>
 
   <rect x="394" y="114" width="420" height="88" rx="6" class="main"/>
   <text x="416" y="143" class="tag">START / 本次目标</text><text x="416" y="172" class="label">输入与需求 · 已有材料</text>
@@ -47,29 +47,34 @@
   <text x="416" y="566" class="code">保留类型特色，按当前画面决定摄影与色彩</text>
 
   <rect x="36" y="542" width="306" height="100" rx="6" class="side"/>
-  <text x="56" y="569" class="tag">专项分支 / 按需</text><text x="56" y="596" class="label">短剧生产控制合同</text><text x="56" y="619" class="code">ai-short-drama-production</text><text x="56" y="640" class="code">5.6 结构已对齐；实片待验</text>
+  <text x="56" y="569" class="tag">专项分支 / 按需</text><text x="56" y="596" class="label">短剧生产控制合同</text><text x="56" y="619" class="code">ai-short-drama-production</text><text x="56" y="640" class="code">分阶段交付；实片待验</text>
 
   <rect x="394" y="610" width="420" height="88" rx="6" class="node"/>
-  <text x="416" y="641" class="label">人物 / 场景 / 道具资产</text><text x="416" y="666" class="small">图片提示词 → 生成参考图 → 审阅锁定</text><text x="416" y="688" class="code">character-asset · scene-asset · prop-asset</text>
+  <text x="416" y="641" class="label">人物 / 场景 / 道具资产</text><text x="416" y="666" class="small">按请求交设计、提示词或参考图</text><text x="416" y="688" class="code">character-asset · scene-asset · prop-asset</text>
   <path d="M394 654H369V520H394" class="optional"/>
   <path d="M814 520H836V747H814" class="optional"/>
   <text x="849" y="600" class="code">不需新资产时</text><text x="849" y="620" class="code">可直接进入分镜</text>
 
   <rect x="394" y="728" width="420" height="88" rx="6" class="main"/>
-  <text x="416" y="759" class="label">分镜与摄影设计</text><text x="416" y="784" class="small">视点 · 机位 · 调度 · 镜头选择</text><text x="416" y="806" class="code">ai-storyboard-director 5.6.4 · 日常源码</text>
+  <text x="416" y="759" class="label">分镜与摄影设计</text><text x="416" y="784" class="small">视点 · 机位 · 调度 · 镜头选择</text><text x="416" y="806" class="code">ai-storyboard-director 5.7.1 · 候选</text>
   <path d="M814 787H862" class="return"/>
   <rect x="862" y="748" width="302" height="85" rx="6" class="side"/>
-  <text x="882" y="780" class="label">5.6 保存与恢复</text><text x="882" y="807" class="small">导演意图 · 已选镜头 · 场景状态</text>
+  <text x="882" y="780" class="label">保存与恢复</text><text x="882" y="807" class="small">导演意图 · 已选镜头 · 场景状态</text>
 
+  <path d="M394 772H342" class="optional"/>
+  <rect x="36" y="717" width="306" height="138" rx="6" class="side"/>
+  <text x="56" y="745" class="tag">按需 / 文字候选</text><text x="56" y="775" class="label">创意镜头思路</text><text x="56" y="801" class="small">画面过程 · 作用 · 取舍</text><text x="56" y="825" class="small">采用后才合并，不自动生成</text>
   <rect x="394" y="846" width="420" height="88" rx="6" class="node"/>
-  <text x="416" y="878" class="label">一条融合六段镜头母稿</text><text x="416" y="904" class="small">第六段镜头时间轴 · 十项内部核对</text><text x="416" y="925" class="code">单独点名镜头表时才输出表格</text>
+  <text x="416" y="878" class="label">按请求交分镜或提示词</text><text x="416" y="904" class="small">分镜可读设计 · 提示词六模块</text><text x="416" y="925" class="code">只交当前阶段；同一设计完整保留</text>
   <path d="M814 889H862" class="optional"/>
   <rect x="862" y="857" width="302" height="97" rx="6" class="side"/>
-  <text x="882" y="884" class="tag">可选 / 先看空间与节奏</text><text x="882" y="911" class="label">3D 白模预演</text><text x="882" y="937" class="code">whitebox-previs-executor</text>
+  <text x="882" y="884" class="tag">明确请求 / 实际预演</text><text x="882" y="911" class="label">3D 白模预演</text><text x="882" y="937" class="code">whitebox-previs-executor</text>
   <path d="M1164 906H1181V992H838V772H814" class="optional"/>
   <text x="864" y="979" class="code">需要修改机位或节奏 → 返回分镜</text>
   <path d="M1013 954V1052H814" class="optional"/>
 
+  <path d="M604 934V1010" class="optional"/>
+  <text x="416" y="962" class="tag">明确要求实际视频</text><text x="416" y="985" class="tag">才进入下方制作</text>
   <rect x="394" y="1010" width="420" height="88" rx="6" class="node"/>
   <text x="416" y="1042" class="label">实际生成 · 选片 · 剪辑 · 声音</text><text x="416" y="1067" class="small">视频模型 / 工具 · 对白 / 音效 / 音乐</text><text x="416" y="1088" class="code">produce-ai-video 统筹制作</text>
 

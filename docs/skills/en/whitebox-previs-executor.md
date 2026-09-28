@@ -75,6 +75,7 @@ An MP4 preview and its compiled/validation contract when the host has the requir
 
 - This is an experimental preview executor, not an AI-video model, final-film renderer or prediction of a generation model's pixels.
 - Supported humanoid/basic proxies and qualified profiles are limited; do not claim quadrupeds, vehicles or new combat without implemented and verified support.
+- Render only when an actual 3D preview is requested; possessing a prompt or asking for creative ideas does not trigger Blender.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use

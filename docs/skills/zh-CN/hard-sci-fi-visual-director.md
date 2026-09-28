@@ -21,6 +21,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 - 剧本事实、必要外推、提案、批准决定和锁定决定保持不同状态。
 - 研究设证据底线，不设创意上限；高振幅设计必须暴露推测规则与代价。
 - 联合设计视觉注意力、材质响应、光影、尺度与原创机械形体；工程合理不能替代有辨识度的可读画面。
+- 局部问答与修订只读相关机制，完整世界或系统设计仍执行完整工作流与专项门。
 
 <!-- contract:standalone -->
 ## 3. 适合单独使用的范围
@@ -103,6 +104,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 - [`references/cinematic-image-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/cinematic-image-direction.md)
 - [`references/combat-mecha-aesthetic.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-aesthetic.md)
 - [`references/combat-mecha-form-direction.md`](../../../experimental/hard-sci-fi-visual-director/references/combat-mecha-form-direction.md)
+- [`references/full-design-workflow.md`](../../../experimental/hard-sci-fi-visual-director/references/full-design-workflow.md)
 - [`references/future-interface-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-interface-systems.md)
 - [`references/future-weapon-systems.md`](../../../experimental/hard-sci-fi-visual-director/references/future-weapon-systems.md)
 - [`references/inspiration-engine.md`](../../../experimental/hard-sci-fi-visual-director/references/inspiration-engine.md)

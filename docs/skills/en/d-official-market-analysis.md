@@ -1,6 +1,6 @@
 # d-official-market-analysis — source-backed media research
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | A source plan, validated dataset, evidence table, analysis, report, and separately labeled pending record, all produced by this package. |
 | Cannot claim alone | Offline use cannot fabricate current market facts, and a completed report does not authorize semantic-layer writing. |
@@ -20,6 +20,7 @@ Research film, short drama, animation, AI film, and adjacent media markets from 
 - State only what current, public, verifiable evidence supports; keep inference separate from official fact.
 - Data date, statistical period, region, platform, definition, and source authority travel with every conclusion.
 - A report may produce a knowledge candidate, but only explicit later approval can authorize semantic-layer writing.
+- Narrow questions use the relevant evidence and time window; full market reports retain the complete research contract.
 
 <!-- contract:standalone -->
 ## 3. Standalone scope
@@ -103,6 +104,7 @@ A source plan, validated dataset, evidence table, analysis, report, and separate
 - [`references/connector-contract.md`](../../../skills/d-official-market-analysis/references/connector-contract.md)
 - [`references/data-contract.md`](../../../skills/d-official-market-analysis/references/data-contract.md)
 - [`references/evidence-and-sources.md`](../../../skills/d-official-market-analysis/references/evidence-and-sources.md)
+- [`references/full-market-research.md`](../../../skills/d-official-market-analysis/references/full-market-research.md)
 - [`references/platform-metrics.md`](../../../skills/d-official-market-analysis/references/platform-metrics.md)
 
 **Deterministic helpers**

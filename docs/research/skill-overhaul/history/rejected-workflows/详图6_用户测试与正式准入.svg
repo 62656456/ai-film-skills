@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3080" height="2360" viewBox="0 0 1540 1180"><title>详图6_用户测试与正式准入</title>
+<rect x="0" y="0" width="1540" height="1180" rx="0" fill="#F8FAFC" stroke="#F8FAFC" stroke-width="2.5"/>
+<rect x="25" y="175" width="1490" height="96" rx="16" fill="#FCEFF0" stroke="#B12635" stroke-width="2.5"/>
+<rect x="25" y="320" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="405" y="320" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="785" y="320" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="1165" y="320" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="1165" y="625" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#16733E" stroke-width="2.5"/>
+<rect x="785" y="625" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#16733E" stroke-width="2.5"/>
+<rect x="405" y="625" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#16733E" stroke-width="2.5"/>
+<rect x="25" y="625" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#16733E" stroke-width="2.5"/>
+<rect x="25" y="868" width="1490" height="147" rx="16" fill="#FCEFF0" stroke="#B12635" stroke-width="2.5"/>
+<polyline points="375,415.0 405,415.0" fill="none" stroke="#1D4ED8" stroke-width="4" />
+<polygon points="405,415.0 392.0,408.5 392.0,421.5" fill="#1D4ED8"/>
+<polyline points="755,415.0 785,415.0" fill="none" stroke="#1D4ED8" stroke-width="4" />
+<polygon points="785,415.0 772.0,408.5 772.0,421.5" fill="#1D4ED8"/>
+<polyline points="1135,415.0 1165,415.0" fill="none" stroke="#1D4ED8" stroke-width="4" />
+<polygon points="1165,415.0 1152.0,408.5 1152.0,421.5" fill="#1D4ED8"/>
+<polyline points="1165,720.0 1135,720.0" fill="none" stroke="#16733E" stroke-width="4" />
+<polygon points="1135,720.0 1148.0,726.5 1148.0,713.5" fill="#16733E"/>
+<polyline points="785,720.0 755,720.0" fill="none" stroke="#16733E" stroke-width="4" />
+<polygon points="755,720.0 768.0,726.5 768.0,713.5" fill="#16733E"/>
+<polyline points="405,720.0 375,720.0" fill="none" stroke="#16733E" stroke-width="4" />
+<polygon points="375,720.0 388.0,726.5 388.0,713.5" fill="#16733E"/>
+<polyline points="1340.0,510 1340.0,625" fill="none" stroke="#1D4ED8" stroke-width="4" />
+<polygon points="1340.0,625 1346.5,612.0 1333.5,612.0" fill="#1D4ED8"/>
+<text x="35" y="95.32000000000001" font-family="Microsoft YaHei,sans-serif" font-size="61" font-weight="700" fill="#10233B">详图6｜产品测试与正式准入</text>
+<text x="35" y="151.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">作品通过与技能版本通过，必须分别记录。</text>
+<text x="47" y="236.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="700" fill="#B12635">未经你实际测试通过，默认入口保持原状。</text>
+<text x="43" y="382.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">01 盘点来源</text>
+<text x="43" y="441.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">仓库与本机</text>
+<text x="43" y="492.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">确认当前版本</text>
+<text x="423" y="382.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">02 备份冻结</text>
+<text x="423" y="441.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">保存真实文件</text>
+<text x="423" y="492.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">核验可恢复</text>
+<text x="803" y="382.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">03 隔离候选</text>
+<text x="803" y="441.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">只在测试区使用</text>
+<text x="803" y="492.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">不替换默认</text>
+<text x="1183" y="382.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">04 内部检查</text>
+<text x="1183" y="441.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">结构与真实行为</text>
+<text x="1183" y="492.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">仅可交你测试</text>
+<text x="1183" y="687.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#16733E">05 你实际测试</text>
+<text x="1183" y="746.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">拿真实任务使用</text>
+<text x="1183" y="797.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">你判断是否通过</text>
+<text x="803" y="687.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#16733E">06 核对版本</text>
+<text x="803" y="746.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">确认被测对象</text>
+<text x="803" y="797.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">核对冻结包哈希</text>
+<text x="423" y="687.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#16733E">07 升为正式</text>
+<text x="423" y="746.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">按你批准范围</text>
+<text x="423" y="797.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">统一源与安装</text>
+<text x="43" y="687.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#16733E">08 入口验证</text>
+<text x="43" y="746.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">回读并实际使用</text>
+<text x="43" y="797.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">保留备份回退</text>
+<text x="480" y="605.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="700" fill="#16733E">你测试通过后，才从05进入06</text>
+<text x="47" y="929.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="700" fill="#B12635">未通过／版本改动 → 修候选 → 重新交给你测试。</text>
+<text x="47" y="987.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#B12635">正式后异常 → 恢复备份 → 修复后再测。</text>
+<text x="38" y="1099.56" font-family="Microsoft YaHei,sans-serif" font-size="38" font-weight="700" fill="#10233B">内部通过、Jev高分、选择A/B、先试用或没反馈，都不算验收。</text>
+</svg>

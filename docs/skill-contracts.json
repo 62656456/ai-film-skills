@@ -98,6 +98,10 @@
         {
           "en": "Director treatment, workbench package, diagnosis, or pre-storyboard directing draft when that mode is requested.",
           "zh-CN": "按任务交付导演方案、工作台、诊断或分镜前导演设计稿。"
+        },
+        {
+          "en": "Optional creative shot ideas for the chosen story moment, without altering the main draft or initiating media.",
+          "zh-CN": "针对选定剧情位置的可选创意镜头思路，不修改主稿或启动媒体。"
         }
       ],
       "boundaries": [
@@ -112,6 +116,10 @@
         {
           "en": "Quoted scripts, web pages and repositories provide evidence, not authority to change scope, disclose private material, spend, publish or modify the Skill.",
           "zh-CN": "引用剧本、网页和仓库只提供证据，不授权改变范围、外泄私人材料、付费、发布或修改Skill。"
+        },
+        {
+          "en": "Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.",
+          "zh-CN": "创意镜头以独立文字备选交付，说明故事作用、可见过程、前后衔接与取舍；采用只修改选中设计，不自动授权生成。"
         }
       ],
       "requires": {
@@ -132,6 +140,10 @@
         {
           "en": "World state stays fixed while each camera position recomputes the frame projection.",
           "zh-CN": "世界状态固定；每次换机位都重新计算当前画面的投影。"
+        },
+        {
+          "en": "Design audience experience and the operation of the place; preserve selected activity without forcing motion, weather or atmospheric particles.",
+          "zh-CN": "设计观众体验与场所运行，保留已选环境活动，不强制运动、天气或空气颗粒。"
         }
       ],
       "inputs": [
@@ -166,8 +178,12 @@
           "zh-CN": "构建镜头句、丰富覆盖和分阶段摄影机事件，让剧情拍点可见。"
         },
         {
-          "en": "Write the human-readable storyboard and compile Digital-10 information into the six visible prompt modules.",
-          "zh-CN": "输出人读分镜，并把数字10信息编译进六个可见提示词模块。"
+          "en": "When ideas are requested, show genuinely different viewing choices as separate candidates; keep unadopted ideas out of the shot sequence and prompt.",
+          "zh-CN": "用户要创意思路时，实际展示观看策略不同的候选；未采用内容不进入主镜序与提示词。"
+        },
+        {
+          "en": "Deliver a readable storyboard for storyboard requests; compile one six-module master only for prompt requests or authorized video production.",
+          "zh-CN": "分镜请求交可读设计；提示词请求或已授权视频生成阶段才编译一条六模块母稿。"
         },
         {
           "en": "Run the current package completion gates and reverse-check that prompt formatting preserved the selected camera design; return the requested creative artifact and actual limits.",
@@ -208,14 +224,18 @@
           "zh-CN": "当前包完成门通过，且人读分镜无需工程字段即可理解。"
         },
         {
-          "en": "Prompt modules contain all ten information categories, but this still does not prove that a platform generated a successful video.",
-          "zh-CN": "六模块包含数字10全部信息，但这仍不证明平台已经成功生成视频。"
+          "en": "Applicable information survives compilation; structure and text checks do not prove real-video execution or aesthetic acceptance.",
+          "zh-CN": "适用信息在编译中保全；结构与文字检查不证明实际视频执行或审美接受。"
         }
       ],
       "outputs": [
         {
-          "en": "One fused six-section master with the readable shot timeline in section six; a standalone five-column table only when explicitly requested.",
-          "zh-CN": "一条融合六段母稿，第六段包含完整人读镜头时间轴；仅单独点名镜头表时改用五列表。"
+          "en": "Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.",
+          "zh-CN": "创意镜头以独立文字备选交付，说明故事作用、可见过程、前后衔接与取舍；采用只修改选中设计，不自动授权生成。"
+        },
+        {
+          "en": "A readable storyboard or the user's existing shot-table format; a six-module prompt only when requested. Both are supplied only when both are requested.",
+          "zh-CN": "可读分镜或用户既定镜头表；提示词请求才交六模块母稿，两者都要才分别交付。"
         },
         {
           "en": "Copy-ready prompts using the required six-module outer structure and Digital-10 information core.",
@@ -234,6 +254,10 @@
         {
           "en": "The 5.6 helper checks recorded state, timing and explicit geometry; it does not judge aesthetics, prove image/video semantics, or force every chat entry to use it. A text-only question without a project does not invent persistence.",
           "zh-CN": "5.6程序检查已记录状态、时间与明确几何，不评审美、不证明图像/视频语义，也不能强制每个聊天入口执行；无作品目录的文字咨询不虚构持久化。"
+        },
+        {
+          "en": "Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.",
+          "zh-CN": "创意镜头以独立文字备选交付，说明故事作用、可见过程、前后衔接与取舍；采用只修改选中设计，不自动授权生成。"
         }
       ],
       "requires": {
@@ -258,6 +282,10 @@
         {
           "en": "Derive attention, separation, source-based lighting, scale and detail hierarchy together. Single-image requests do not become mandatory contact sheets; new plastic and designed emission remain valid when specified.",
           "zh-CN": "联合推导注意力、主体分离、有来源光影、尺度与细节层次。单图不自动变多格；按设计保留新塑料和有依据的发光。"
+        },
+        {
+          "en": "Reuse unchanged source context for local revisions. Asset identifiers remain internal; unapproved references block formal generation, not candidate text design.",
+          "zh-CN": "局部修订复用未变原文与相关上下文；资产编号留内部，未审参考限制正式生成，不阻断候选文字设计。"
         }
       ],
       "inputs": [
@@ -356,6 +384,10 @@
         {
           "en": "Without an image tool and visual review, this module delivers a generation task and contract, not finished reference images.",
           "zh-CN": "没有生图工具和视觉审核时，本模块交付生成任务与合同，不能声称完成参考图。"
+        },
+        {
+          "en": "Interaction descriptions do not add an image task; text stays text and image quantity follows the user's scope.",
+          "zh-CN": "描述交互不新增图片任务；文字仍交文字，图片数量服从用户范围。"
         }
       ],
       "requires": {
@@ -410,12 +442,12 @@
           "zh-CN": "补材质、接触和状态连续性；仅视频加入运镜、时间和声音，保留已有批准资产。"
         },
         {
-          "en": "Compile the ten information categories and platform translation without changing upstream decisions.",
-          "zh-CN": "编译数字10信息和平台转译，不改变上游决定。"
+          "en": "Deliver the requested medium; presets are conditional references, not fixed timing, shot-count or output templates.",
+          "zh-CN": "交付当前所需媒介；预设按需读取，不规定固定时长、镜数或输出模板。"
         },
         {
-          "en": "Run shared and genre-specific review; emit `ready_for_prompt` or a field-specific `rework` result.",
-          "zh-CN": "执行共享与类型专项审核，输出 `ready_for_prompt` 或具体字段的 `rework`。"
+          "en": "Review the applicable visual relations once; return the creative result. Structured style/QC records are supplied when requested for a real handoff.",
+          "zh-CN": "集中检查适用画面关系并交付创作结果；真实交接需要时才输出结构化风格或QC记录。"
         }
       ],
       "returns": [
@@ -458,8 +490,8 @@
       ],
       "outputs": [
         {
-          "en": "A genre-specific `style_route`, `style_module`, and `qc_contract` that can stand alone as a visual parameter package.",
-          "zh-CN": "可独立使用的类型 `style_route`、`style_module` 和 `qc_contract` 视觉参数包。"
+          "en": "A directly usable visual design or prompt; style_route, style_module and qc_contract remain available for explicit structured handoffs.",
+          "zh-CN": "直接可用的视觉设计或提示词；明确结构化交接时仍提供style_route、style_module及qc_contract。"
         },
         {
           "en": "Scene-ready prompt fields, negative constraints, continuity state, and sound cues.",
@@ -516,12 +548,12 @@
       ],
       "workflow": [
         {
-          "en": "Lock source, acceptance, permissions, and mode; interpret the script and make director decisions.",
-          "zh-CN": "锁定来源、验收、权限与模式；理解剧本并完成导演判断。"
+          "en": "Enter only for an actual video request. Reuse the current director plan, storyboard and approvals; fill only missing execution decisions.",
+          "zh-CN": "只有实际视频请求才进入；继承现行导演方案、分镜与批准，只补执行缺口。"
         },
         {
-          "en": "Design shot groups and use `ai-storyboard-director` for the downstream shot and prompt contract.",
-          "zh-CN": "设计镜头组，并使用 `ai-storyboard-director` 完成下游分镜与提示词合同。"
+          "en": "Preserve the selected shot design and use this package's own compiler; no companion Skill is required.",
+          "zh-CN": "保留已选镜头设计，用本包编译器执行，不要求配套技能。"
         },
         {
           "en": "Choose a generation route, create genuine motion, edit, build sound, and render the real final file.",
@@ -576,8 +608,8 @@
       ],
       "outputs": [
         {
-          "en": "An actual playable final video plus its exact status and delivery path.",
-          "zh-CN": "真实可播放的最终视频、精确状态和交付入口。"
+          "en": "The actual playable film, single shot or video test requested, with its verified scope and status.",
+          "zh-CN": "用户点名的真实可播放成片、单镜或视频测试，附已验证范围与状态。"
         },
         {
           "en": "Only the necessary supporting artifacts and a concise record of review, repairs, rights, and remaining limits.",
@@ -592,6 +624,10 @@
         {
           "en": "Never describe a storyboard, prompt, generated clip, edit timeline, or unreviewed render as the finished film.",
           "zh-CN": "不把分镜、提示词、生成片段、剪辑时间线或未审渲染冒充成片。"
+        },
+        {
+          "en": "Creative ideas, workflow tests and requests to see text-stage results do not authorize generation; a single-shot video test stays within its explicit scope.",
+          "zh-CN": "创意思路、工作流测试或查看文字阶段成果不授权生成；明确的单镜视频测试只执行点名范围。"
         }
       ],
       "requires": {
@@ -642,8 +678,8 @@
           "zh-CN": "按需建立调度、布光、动作和草图转镜头控制合同。"
         },
         {
-          "en": "Compile a five-column storyboard and one six-module master prompt for the requested total duration; preserve locked formats, cuts, camera paths, dialogue and timing.",
-          "zh-CN": "编译五列分镜与覆盖点名总时长的一条六模块母提示词，保留锁定格式、切点、摄影路径、对白和时长。"
+          "en": "Compile the requested control contract, readable storyboard or six-module prompt; provide both storyboard and prompt only when requested, preserving all locks.",
+          "zh-CN": "编译点名控制合同、可读分镜或六模块提示词；两者都要才交分镜与提示词，保留全部锁定。"
         },
         {
           "en": "Distinguish coherent candidate text (`ready_for_prompt`) from approved assets and verified execution conditions (`ready_for_generation`); inspect actual media after generation.",
@@ -680,8 +716,8 @@
       ],
       "pass": [
         {
-          "en": "The requested artifact is complete; timing, actions, camera and user locks can be reconstructed from its final text, with ten information categories covered inside six modules.",
-          "zh-CN": "点名产物完整，最终正文可还原时序、动作、摄影与用户锁定；六模块内十类信息齐全。"
+          "en": "The requested artifact is complete and preserves timing, action and user locks; only prompt delivery uses six modules with applicable information coverage.",
+          "zh-CN": "点名产物完整并保留时序、动作与用户锁定；仅提示词交付使用六模块及适用信息覆盖。"
         },
         {
           "en": "Text readiness, generation readiness, actual video review and user acceptance are separate states.",
@@ -704,8 +740,12 @@
           "zh-CN": "它可以单独整理已批准决定或审计控制缺口，但不会复制导演、资产、类型、生成和 QC 的全部能力。"
         },
         {
-          "en": "This package's independent handoff was aligned with the 5.6.0 format on 2026-09-07 and retains a five-column storyboard plus a six-module prompt. It has not adopted 5.6.4's single fused output or its persistence engine. That historical alignment does not establish deployment or actual-video acceptance.",
-          "zh-CN": "本包独立交付合同于2026-09-07按5.6.0结构建立，保留五列分镜加六模块提示词，未随5.6.4改为融合单稿，也不引入其状态程序；历史对齐不代表部署或真实视频验收。"
+          "en": "The standalone handoff follows the current delivery stage: storyboard or prompt, both only when requested. It retains its own production controls without importing another package's state engine.",
+          "zh-CN": "独立交接按当前阶段交分镜或提示词，两者都要才分别交付；保留本包生产控制，不引入其他包状态程序。"
+        },
+        {
+          "en": "Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.",
+          "zh-CN": "创意镜头以独立文字备选交付，说明故事作用、可见过程、前后衔接与取舍；采用只修改选中设计，不自动授权生成。"
         }
       ],
       "requires": {
@@ -844,6 +884,10 @@
         {
           "en": "A report may produce a knowledge candidate, but only explicit later approval can authorize semantic-layer writing.",
           "zh-CN": "报告可以生成知识候选，但只有后续明确批准才能授权语义层写入。"
+        },
+        {
+          "en": "Narrow questions use the relevant evidence and time window; full market reports retain the complete research contract.",
+          "zh-CN": "窄问题只使用相关证据与时窗，完整市场报告保留全部研究合同。"
         }
       ],
       "inputs": [
@@ -1076,6 +1120,10 @@
         {
           "en": "Design visual attention, material response, light, scale and original machine form together; engineering plausibility does not replace a distinctive readable image.",
           "zh-CN": "联合设计视觉注意力、材质响应、光影、尺度与原创机械形体；工程合理不能替代有辨识度的可读画面。"
+        },
+        {
+          "en": "Local questions and scoped revisions load only relevant mechanisms; complete world or system design loads the full design workflow and specialist gates.",
+          "zh-CN": "局部问答与修订只读相关机制，完整世界或系统设计仍执行完整工作流与专项门。"
         }
       ],
       "inputs": [
@@ -1268,6 +1316,10 @@
         {
           "en": "Supported humanoid/basic proxies and qualified profiles are limited; do not claim quadrupeds, vehicles or new combat without implemented and verified support.",
           "zh-CN": "人形/基础代理和合格动作有限；四足、车辆或新打斗未实现并验证前不得声称支持。"
+        },
+        {
+          "en": "Render only when an actual 3D preview is requested; possessing a prompt or asking for creative ideas does not trigger Blender.",
+          "zh-CN": "只有明确要求实际3D预演才渲染；已有提示词或提出创意思路不触发Blender。"
         }
       ],
       "requires": {
@@ -1440,10 +1492,10 @@
     {
       "name": "director-agent",
       "family": "director",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed; long-term practice evidence remains separate",
-        "zh-CN": "已部署；长期实战证据单独记录"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "director-agent — script and directing design",
@@ -1454,12 +1506,12 @@
         "zh-CN": "创作、修改或诊断剧本，并完成进入完整分镜前必须成立的导演判断。"
       },
       "standalone": {
-        "en": "A script, replacement passage, diagnosis, director treatment, workbench, or pre-storyboard directing draft.",
-        "zh-CN": "剧本、替换段落、诊断、导演方案、工作台或分镜前导演设计稿。"
+        "en": "A script, diagnosis, treatment or pre-storyboard design; when explicitly requested and directing is unresolved, a complete readable storyboard using the local compiler.",
+        "zh-CN": "按请求交剧本、诊断、导演方案或分镜前设计；明确要完整分镜且导演判断未定时，用本包编译器独立交付可读分镜。"
       },
       "cannot": {
-        "en": "It does not by itself produce a full production storyboard, generated media, or proof of user acceptance.",
-        "zh-CN": "不能单独交付完整生产分镜、真实生成媒体或用户接受证明。"
+        "en": "Director analysis alone is not a complete storyboard. Reuse an existing approved director plan; creative ideas do not authorize media generation or establish user acceptance.",
+        "zh-CN": "不把导演分析冒充完整分镜；已有获批导演方案直接继承。创意思路不授权媒体生成，也不证明用户接受。"
       },
       "download": {
         "state": "historical_snapshot",
@@ -1474,22 +1526,22 @@
     {
       "name": "ai-storyboard-director",
       "family": "storyboard",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Current source 5.6.4; selected for daily use; v1.3.0 ZIP preserves 5.4.4",
-        "zh-CN": "当前源码5.6.4，已选择日常使用；v1.3.0 ZIP保留5.4.4"
+        "en": "Source A 5.7.1 adopted by explicit user instruction; known image-test issues and aesthetic acceptance remain separate; historical ZIPs unchanged.",
+        "zh-CN": "源码A5.7.1已按明确用户指令采用；已知图像问题与审美验收分别保留；历史ZIP不变。"
       },
       "title": {
         "en": "ai-storyboard-director — script to shots and prompts",
         "zh-CN": "ai-storyboard-director｜剧本转分镜与提示词"
       },
       "purpose": {
-        "en": "Turn an approved script into human-readable multi-shot design and production prompts while preserving causality, blocking, timing, and world-space continuity.",
-        "zh-CN": "把已批准剧本变成人读多镜头设计和生产提示词，同时守住因果、调度、时长和世界空间连续性。"
+        "en": "Design audience viewing order, blocking, camera, timing and continuity; offer separate creative alternatives or compile selected shots when requested.",
+        "zh-CN": "设计观众观看顺序、调度、摄影、时长与连续性；按请求另供创意备选或编译已选镜头。"
       },
       "standalone": {
-        "en": "A complete storyboard and copy-ready prompt package for an existing approved script.",
-        "zh-CN": "针对已有批准剧本的完整分镜和可复制提示词包。"
+        "en": "Creative shot ideas, a readable storyboard or copy-ready prompts, according to the requested stage; multiple artifacts only when requested.",
+        "zh-CN": "按当前阶段交创意镜头思路、可读分镜或可复制提示词；点名多种产物才分别交付。"
       },
       "cannot": {
         "en": "It does not rewrite the script, directly generate the video, or prove platform success.",
@@ -1500,19 +1552,19 @@
         "tag": "v1.3.0",
         "asset": "ai-storyboard-director.zip",
         "note": {
-          "en": "Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.4.",
-          "zh-CN": "v1.3.0旧ZIP包含5.4.4，不是当前源码5.6.4。"
+          "en": "Historical v1.3.0 ZIP contains 5.4.4; current source is the separately adopted A 5.7.1.",
+          "zh-CN": "v1.3.0旧ZIP包含5.4.4；当前源码为单独采用的A5.7.1。"
         }
       },
-      "source_version": "5.6.4"
+      "source_version": "5.7.1"
     },
     {
       "name": "character-asset",
       "family": "asset",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "character-asset — character identity contract",
@@ -1555,10 +1607,10 @@
     {
       "name": "scene-asset",
       "family": "asset",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "scene-asset — environment and spatial contract",
@@ -1601,10 +1653,10 @@
     {
       "name": "prop-asset",
       "family": "asset",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "prop-asset — prop identity and state contract",
@@ -1647,10 +1699,10 @@
     {
       "name": "cyberpunk-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "cyberpunk-design — cyberpunk visual parameters",
@@ -1693,10 +1745,10 @@
     {
       "name": "epic-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "epic-design — epic scale and spectacle parameters",
@@ -1739,10 +1791,10 @@
     {
       "name": "fantasy-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "fantasy-design — fantasy world and magic parameters",
@@ -1785,10 +1837,10 @@
     {
       "name": "horror-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "horror-design — threat, reveal, and readable darkness",
@@ -1831,10 +1883,10 @@
     {
       "name": "noir-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "noir-design — noir and crime visual parameters",
@@ -1877,10 +1929,10 @@
     {
       "name": "romance-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "romance-design — distance, intimacy, and restrained warmth",
@@ -1923,10 +1975,10 @@
     {
       "name": "war-design",
       "family": "war_visual",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "war-design — unified war and military film visual advisor",
@@ -1970,10 +2022,10 @@
     {
       "name": "wuxia-design",
       "family": "genre",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "wuxia-design — wuxia force, weapons, and Eastern space",
@@ -2016,10 +2068,10 @@
     {
       "name": "produce-ai-video",
       "family": "video-production",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "produce-ai-video — qualified final video production",
@@ -2052,8 +2104,8 @@
       "family": "short-drama",
       "status": "packaged",
       "status_label": {
-        "en": "Packaged; not deployed",
-        "zh-CN": "已打包；未部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "ai-short-drama-production — short-drama control contracts",
@@ -2084,10 +2136,10 @@
     {
       "name": "web-design-director",
       "family": "web",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "web-design-director — product-native interface direction",
@@ -2119,10 +2171,10 @@
     {
       "name": "d-official-market-analysis",
       "family": "market",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "d-official-market-analysis — source-backed media research",
@@ -2153,10 +2205,10 @@
     {
       "name": "d-data-analysis-semantic-layer",
       "family": "semantic",
-      "status": "deployed",
+      "status": "packaged",
       "status_label": {
-        "en": "Deployed",
-        "zh-CN": "已部署"
+        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
+        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
       },
       "title": {
         "en": "d-data-analysis-semantic-layer — approved knowledge writing",
@@ -2291,7 +2343,7 @@
     "experimental_packages": 3,
     "total_packages": 21,
     "bilingual_guides": 42,
-    "source_storyboard_version": "5.6.4",
+    "source_storyboard_version": "5.7.0",
     "historical_release": "v1.3.0",
     "historical_release_storyboard_version": "5.4.4",
     "preview": "Separately labeled 5.6 standalone Preview; not the current complete-studio Release",

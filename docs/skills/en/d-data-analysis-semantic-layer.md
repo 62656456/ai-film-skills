@@ -1,6 +1,6 @@
 # d-data-analysis-semantic-layer — approved knowledge writing
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | The package contains the complete approval, validation, version, conflict, write, readback, and pending-write contracts; the host supplies only the current write target or direct data handle. |
 | Cannot claim alone | Without current approval or a writable target it cannot claim a write; it returns a complete pending-write package instead. |

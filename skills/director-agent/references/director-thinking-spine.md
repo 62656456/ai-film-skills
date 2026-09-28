@@ -22,6 +22,8 @@ This file distills the user's draft files:
 
 ## Operating Flow
 
+Use only the decisions still needed for the requested artifact. This is a dependency order, not a requirement to repeat a complete director analysis for every idea or local shot change.
+
 ```text
 Read material
 -> choose director path
@@ -52,3 +54,13 @@ Use these as hard checks:
 - **Sound has a job**: every major scene needs a sound relation, including the possibility of silence.
 - **Edit has a motive**: no cut without information, emotion, action, sound, eyeline, or rhythm motive.
 - **Assumptions are labeled**: missing world, character, time, and production facts must be marked.
+
+## Creative Shot And Transition Ideas
+
+When the user asks for creative camera/transition ideas, or the current design has a meaningful open opportunity, offer a concise candidate tied to that moment. A creative device should change how the audience discovers information, experiences space, feels a turn or understands a time jump. Do not add one to every shot or require a fixed number of alternatives.
+
+Make the idea imaginable: identify the surrounding action, the starting image, the action or sound that triggers a change, the camera/focus/cut mechanism and the ending image. Explain the narrative effect and the main continuity requirement or practical tradeoff. For a transition, describe both sides and what connects them; do not call a cut a continuous camera move. No model access or exact camera engineering is needed to provide a useful concept; distinguish a plausible design from an executed result.
+
+Mechanisms may include action or shape matching, occlusion, focus transfer, a changed viewpoint, coordinated staging and camera movement, or a sound bridge. Choose from the scene's needs rather than copying a named film's surface device. Treat a user's example as a mechanism to understand, not as a mandatory prop, transition or shot count.
+
+Deliver these as unselected ideas beside the main plan. Keep locked dialogue, story results and already selected shots intact. A user selection incorporates only the named idea and scope into the next design revision; it does not approve an unrelated change, make a Skill version formal, or authorize media generation. Images, animatics and video are separate requested artifacts, not prerequisites for finishing the ideas task.

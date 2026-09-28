@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2580" viewBox="0 0 1600 2580">
+<title>影视技能组合工作流程图</title><desc>主流程、创意思路、按需辅助和用户测试后正式启用的维护闭环。</desc>
+<rect width="100%" height="100%" fill="#0B111A"/>
+<text x="40" y="83.76" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="46" font-weight="700" fill="#F2F5FA">影视技能组合 · 工作流程图</text>
+<text x="42" y="129.56" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="400" fill="#A9BACD">创意只给思路  ·  按当前阶段交付  ·  实际生成须明确请求</text>
+<rect x="40" y="151" width="1520" height="62" rx="10" fill="#252132" stroke="#7C6A99" stroke-width="2"/>
+<text x="62" y="193.38" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="400" fill="#D9CFF2">修订工作逻辑：现用默认5.6.5；修订5.7.1仍有语义保真与冗余问题，尚未正式切换。</text>
+<polyline points="800,370 800,430" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,430 794.5,417 805.5,417" fill="#65B6FF"/>
+<polyline points="800,570 800,650" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,650 794.5,637 805.5,637" fill="#65B6FF"/>
+<polyline points="800,790 800,870" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,870 794.5,857 805.5,857" fill="#65B6FF"/>
+<polyline points="800,1010 800,1090" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,1090 794.5,1077 805.5,1077" fill="#65B6FF"/>
+<polyline points="800,1245 800,1330" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,1330 794.5,1317 805.5,1317" fill="#65B6FF"/>
+<polyline points="800,1640 800,1710" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,1710 794.5,1697 805.5,1697" fill="#65B6FF"/>
+<polyline points="800,1845 800,1920" fill="none" stroke="#65B6FF" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="800,1920 794.5,1907 805.5,1907" fill="#65B6FF"/>
+<polyline points="800,1434 800,1520" fill="none" stroke="#64D8C6" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="800,1520 794.5,1507 805.5,1507" fill="#64D8C6"/>
+<text x="818" y="1481.2" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="700" fill="#64D8C6">已明确请求</text>
+<polyline points="500,1382 430,1382" fill="none" stroke="#64D8C6" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="430,1382 443,1376.5 443,1387.5" fill="#64D8C6"/>
+<text x="449" y="1366.14" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" font-weight="400" fill="#64D8C6">文字</text>
+<polyline points="1100,310 1130,310 1130,584 1180,584" fill="none" stroke="#FFB268" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1180,584 1167,589.5 1167,578.5" fill="#FFB268"/>
+<text x="1180" y="529.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="700" fill="#FFB268">只要创意，可直接进入</text>
+<polyline points="430,700 500,700" fill="none" stroke="#697E96" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="500,700 487,705.5 487,694.5" fill="#697E96"/>
+<polyline points="1100,687 1180,687" fill="none" stroke="#FFB268" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1180,687 1167,692.5 1167,681.5" fill="#FFB268"/>
+<text x="1106" y="678.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#FFB268">备选</text>
+<polyline points="1180,751 1100,751" fill="none" stroke="#FFB268" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1100,751 1113,745.5 1113,756.5" fill="#FFB268"/>
+<text x="1105" y="742.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#FFB268">采用后</text>
+<polyline points="1560,625 1580,625 1580,865 1100,865 1100,900" fill="none" stroke="#FFB268" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1100,900 1094.5,887 1105.5,887" fill="#FFB268"/>
+<text x="1200" y="849.2" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#FFB268">思路可直接核对、交付</text>
+<polyline points="1100,936 1180,936" fill="none" stroke="#697E96" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1180,936 1167,941.5 1167,930.5" fill="#697E96"/>
+<polyline points="1180,1000 1145,1000 1145,780 1100,780" fill="none" stroke="#697E96" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1100,780 1113,774.5 1113,785.5" fill="#697E96"/>
+<polyline points="430,1045 465,1045 465,945 500,945" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="500,945 487,950.5 487,939.5" fill="#B7A5F2"/>
+<polyline points="1100,1135 1145,1135 1145,1358 1180,1358" fill="none" stroke="#697E96" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1180,1358 1167,1363.5 1167,1352.5" fill="#697E96"/>
+<text x="1180" y="1322.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#A9BACD">明确请求预演时</text>
+<polyline points="500,1790 465,1790 465,1575 500,1575" fill="none" stroke="#697E96" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="500,1575 487,1580.5 487,1569.5" fill="#697E96"/>
+<text x="292" y="1677.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#A9BACD">局部修复</text>
+<polyline points="430,1418 450,1418 450,1972 500,1972" fill="none" stroke="#64D8C6" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="500,1972 487,1977.5 487,1966.5" fill="#64D8C6"/>
+<text x="66" y="1866.2" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="20" font-weight="400" fill="#64D8C6">文字成果同样交给用户决定</text>
+<polyline points="1100,1972 1180,1972" fill="none" stroke="#697E96" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1180,1972 1167,1977.5 1167,1966.5" fill="#697E96"/>
+<rect x="500" y="260" width="600" height="110" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="307.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">1  输入与当前任务</text>
+<text x="524" y="341.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">思路 / 分镜 / 提示词 / 图片 / 视频</text>
+<rect x="500" y="430" width="600" height="140" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="477.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">2  剧本与导演判断</text>
+<text x="524" y="511.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">只补缺口，已有可用方案直接继承</text>
+<text x="524" y="541.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">人物目的 · 因果 · 表演 · 观看顺序</text>
+<text x="524" y="566.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">director-agent · AI执行剧本仅按需</text>
+<rect x="500" y="650" width="600" height="140" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="697.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">3  主分镜与摄影设计</text>
+<text x="524" y="731.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">景别 · 机位 · 调度 · 时长 · 连续性</text>
+<text x="524" y="761.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">守住原台词、动作状态与已选镜头</text>
+<text x="524" y="786.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">ai-storyboard-director</text>
+<rect x="500" y="870" width="600" height="140" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="917.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">4  文字核对</text>
+<text x="524" y="951.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">事实与人物知情 / 动作状态 / 重复表达</text>
+<text x="524" y="981.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">检查当前成品，只修受影响部分</text>
+<rect x="500" y="1090" width="600" height="155" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="1137.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">5  交付当前文字成果</text>
+<text x="524" y="1171.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">思路、资产设计 → 文字方案与取舍</text>
+<text x="524" y="1201.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">分镜 → 可读镜头设计</text>
+<text x="524" y="1231.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">提示词 → 完整可复制母稿</text>
+<rect x="500" y="1330" width="600" height="104" rx="14" fill="#142132" stroke="#64D8C6" stroke-width="2"/>
+<text x="524" y="1377.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#64D8C6">是否明确要求实际图片或视频？</text>
+<text x="524" y="1411.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">已有明确请求直接执行，不重复询问</text>
+<rect x="40" y="1325" width="390" height="140" rx="14" fill="#142132" stroke="#64D8C6" stroke-width="2"/>
+<text x="64" y="1372.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#64D8C6">文字任务到此可结束</text>
+<text x="64" y="1406.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">保留主稿与未采用候选</text>
+<text x="64" y="1436.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">不因出思路寻找平台或密钥</text>
+<rect x="500" y="1520" width="600" height="120" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="1567.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">6  执行已请求的媒体</text>
+<text x="524" y="1601.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">图片按出图范围；视频按已选镜头</text>
+<text x="524" y="1628.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">资产技能 / produce-ai-video / 实际媒体工具</text>
+<rect x="500" y="1710" width="600" height="135" rx="14" fill="#182A40" stroke="#65B6FF" stroke-width="2"/>
+<text x="524" y="1757.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#65B6FF">7  按媒介检查与修复</text>
+<text x="524" y="1791.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">图片：看图、核对身份与空间</text>
+<text x="524" y="1821.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">视频：剪辑、声音、完整播放</text>
+<rect x="500" y="1920" width="600" height="110" rx="14" fill="#142132" stroke="#64D8C6" stroke-width="2"/>
+<text x="524" y="1967.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#64D8C6">8  用户查看与决定</text>
+<text x="524" y="2001.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">接受结果 / 局部修改 / 暂时不采用</text>
+<rect x="40" y="260" width="390" height="220" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="64" y="307.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">已有材料直接接续</text>
+<text x="64" y="341.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">已有导演方案 → 进分镜</text>
+<text x="64" y="371.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">已有分镜 → 进提示词</text>
+<text x="64" y="401.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">只要资产 → 进资产设计</text>
+<text x="64" y="431.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">不要求每次走完整条链</text>
+<rect x="40" y="540" width="390" height="385" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="64" y="588.74" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#65B6FF">按需视觉与资产</text>
+<text x="64" y="632.38" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="23" font-weight="700" fill="#F2F5FA">11条视觉路线</text>
+<text x="64" y="668.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">赛博 · 史诗 · 奇幻 · 恐怖</text>
+<text x="64" y="703.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">黑色 · 爱情 · 战争 · 武侠</text>
+<text x="64" y="738.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">古风 · 硬科幻 · 仙侠＊</text>
+<text x="64" y="769.08" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" font-weight="400" fill="#A9BACD">＊仙侠为外部路线</text>
+<polyline points="64,782 406,782" fill="none" stroke="#697E96" stroke-width="1" stroke-linejoin="round"/>
+<text x="64" y="825.44" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="24" font-weight="700" fill="#F2F5FA">人物 / 场景 / 道具资产</text>
+<text x="64" y="859.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#F2F5FA">按请求交设计、提示词或图片</text>
+<text x="64" y="890.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">character-asset · scene-asset</text>
+<text x="64" y="913.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">prop-asset；已批准资产直接复用</text>
+<rect x="40" y="980" width="390" height="218" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="64" y="1027.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">A / B 文字复核</text>
+<text x="64" y="1061.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">A：主模型回读与自检</text>
+<text x="64" y="1091.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">B：同核心，明确启用才用Jev</text>
+<text x="64" y="1121.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">Jev不直接看图、不替用户评审美</text>
+<text x="64" y="1151.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">Jev可选，不是全部交付的必经门</text>
+<rect x="40" y="1515" width="390" height="282" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="64" y="1562.74" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="29" font-weight="700" fill="#65B6FF">其他按需辅助</text>
+<text x="64" y="1604.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">市场研究：选题与平台判断</text>
+<text x="64" y="1626.96" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="400" fill="#A9BACD">d-official-market-analysis</text>
+<text x="64" y="1671.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">知识写入：用户明确批准后</text>
+<text x="64" y="1693.96" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="400" fill="#A9BACD">d-data-analysis-semantic-layer</text>
+<text x="64" y="1738.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">短剧控制：组织既定方案</text>
+<text x="64" y="1760.96" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" font-weight="400" fill="#A9BACD">ai-short-drama-production</text>
+<text x="64" y="1790.08" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" font-weight="400" fill="#A9BACD">这些辅助不会自动扩展主任务</text>
+<rect x="1180" y="260" width="380" height="170" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="1204" y="307.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">保存与恢复（按需）</text>
+<text x="1204" y="341.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">已有作品才恢复相关记录</text>
+<text x="1204" y="371.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">意图 · 已选镜头 · 状态 · 来源</text>
+<text x="1204" y="401.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">新想法不覆盖已确认决定</text>
+<rect x="1180" y="548" width="380" height="248" rx="14" fill="#322519" stroke="#FFB268" stroke-width="2"/>
+<text x="1204" y="595.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#FFB268">创意镜头思路</text>
+<text x="1204" y="629.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">接在哪一处？观众看见什么？</text>
+<text x="1204" y="659.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">画面过程 → 叙事作用 → 取舍</text>
+<text x="1204" y="689.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">未采用：独立候选，主稿不动</text>
+<text x="1204" y="719.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">明确采用：只合并选中的部分</text>
+<text x="1204" y="749.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">采用创意 ≠ 授权生成</text>
+<rect x="1180" y="900" width="380" height="150" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="1204" y="947.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">发现问题，局部返回</text>
+<text x="1204" y="981.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">事实或意图偏了 → 回设计</text>
+<text x="1204" y="1011.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">表达重复或漏项 → 回编译</text>
+<rect x="1180" y="1330" width="380" height="150" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="1204" y="1377.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">可选3D白模预演</text>
+<text x="1204" y="1411.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">仅明确要求实际预演时执行</text>
+<text x="1204" y="1441.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">验证空间与运镜，不证明成片</text>
+<text x="1204" y="1468.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">whitebox-previs-executor</text>
+<rect x="1180" y="1530" width="380" height="156" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="1204" y="1577.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">网页展示（独立任务）</text>
+<text x="1204" y="1611.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">仅在用户要网页或界面时进入</text>
+<text x="1204" y="1641.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">影视技能维护不自动触发建站</text>
+<text x="1204" y="1674.02" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="17" font-weight="400" fill="#A9BACD">web-design-director</text>
+<rect x="1180" y="1892" width="380" height="160" rx="14" fill="#142132" stroke="#697E96" stroke-width="2"/>
+<text x="1204" y="1939.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B2C2D4">区分两个“接受”</text>
+<text x="1204" y="1973.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">采用一个镜头或一份作品</text>
+<text x="1204" y="2003.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">不等于接受整套技能版本</text>
+<text x="1204" y="2033.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#F2F5FA">技能正式启用看下方维护闭环</text>
+<rect x="40" y="2140" width="1520" height="300" rx="14" fill="#141C2C" stroke="#8E81BC" stroke-width="2"/>
+<text x="66" y="2189.8" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="30" font-weight="700" fill="#B7A5F2">技能维护闭环 · 与一次创作交付分开</text>
+<rect x="60" y="2255" width="260" height="76" rx="9" fill="#202940" stroke="#B7A5F2" stroke-width="2"/>
+<text x="82" y="2302.56" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" fill="#F2F5FA">检查并备份原版</text>
+<polyline points="320,2293 360,2293" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="360,2293 347,2298.5 347,2287.5" fill="#B7A5F2"/>
+<rect x="360" y="2255" width="260" height="76" rx="9" fill="#202940" stroke="#B7A5F2" stroke-width="2"/>
+<text x="382" y="2302.56" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" fill="#F2F5FA">候选修改与测试</text>
+<polyline points="620,2293 660,2293" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="660,2293 647,2298.5 647,2287.5" fill="#B7A5F2"/>
+<rect x="660" y="2255" width="260" height="76" rx="9" fill="#202940" stroke="#B7A5F2" stroke-width="2"/>
+<text x="682" y="2302.56" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" fill="#F2F5FA">对比真实输出</text>
+<polyline points="920,2293 960,2293" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="960,2293 947,2298.5 947,2287.5" fill="#B7A5F2"/>
+<rect x="960" y="2255" width="260" height="76" rx="9" fill="#202940" stroke="#B7A5F2" stroke-width="2"/>
+<text x="982" y="2302.56" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" fill="#F2F5FA">用户测试并认可</text>
+<polyline points="1220,2293 1260,2293" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1260,2293 1247,2298.5 1247,2287.5" fill="#B7A5F2"/>
+<rect x="1260" y="2255" width="260" height="76" rx="9" fill="#202940" stroke="#B7A5F2" stroke-width="2"/>
+<text x="1282" y="2302.56" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="26" font-weight="700" fill="#F2F5FA">正式启用</text>
+<rect x="540" y="2375" width="520" height="48" rx="8" fill="#24223A" stroke="#B7A5F2" stroke-width="2"/>
+<text x="565" y="2407.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#F2F5FA">失败：保留或恢复原版，修复候选后重测</text>
+<polyline points="790,2331 790,2375" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="790,2375 784.5,2362 795.5,2362" fill="#B7A5F2"/>
+<polyline points="540,2399 490,2399 490,2331" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="490,2331 495.5,2344 484.5,2344" fill="#B7A5F2"/>
+<text x="963" y="2361.14" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" font-weight="400" fill="#B7A5F2">未通过 → 退回修复</text>
+<polyline points="1090,2331 1090,2399 1060,2399" fill="none" stroke="#B7A5F2" stroke-width="3" stroke-linejoin="round" stroke-dasharray="12 9"/>
+<polygon points="1060,2399 1073,2393.5 1073,2404.5" fill="#B7A5F2"/>
+<text x="48" y="2522.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#A9BACD">21个仓库技能：20项影视能力＋1项网页辅助；仙侠另列为外部路线。</text>
+<text x="48" y="2556.26" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="21" font-weight="400" fill="#A9BACD">此图说明职责与进入条件，不代表全部效果已验收；当前未默认启用修订版。</text>
+<text x="66" y="2223.32" font-family="Microsoft YaHei UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="22" font-weight="400" fill="#D9CFF2">先保存可恢复版本；候选独立修订。只有你测试并明确认可该版本，才正式切换。</text>
+</svg>

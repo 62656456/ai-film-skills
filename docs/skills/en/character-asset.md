@@ -1,6 +1,6 @@
 # character-asset — character identity contract
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | A character reference-image task, view plan, locked-feature checklist, negative constraints, and JSON contract. |
 | Cannot claim alone | Without an image tool and visual review, it cannot claim that character images exist or are approved. |
@@ -21,6 +21,7 @@ Define a character's stable identity, views, expressions, actions, clothing, mat
 - Platform adaptation may change syntax, never approved `locked_features` or state history.
 - A static asset contract separates identity, allowed state changes, materials, geometry, lighting, and downstream references.
 - Derive attention, separation, source-based lighting, scale and detail hierarchy together. Single-image requests do not become mandatory contact sheets; new plastic and designed emission remain valid when specified.
+- Reuse unchanged source context for local revisions. Asset identifiers remain internal; unapproved references block formal generation, not candidate text design.
 - Character continuity prioritizes face, body, hair, clothing layers, accessories, age, and nonhuman anatomy over decorative style.
 
 <!-- contract:standalone -->
@@ -83,6 +84,7 @@ A character reference-image task, view plan, locked-feature checklist, negative 
 
 - Do not invent missing source facts, overwrite approved features, or put video action and dialogue into a static asset identity.
 - Without an image tool and visual review, this module delivers a generation task and contract, not finished reference images.
+- Interaction descriptions do not add an image task; text stays text and image quantity follows the user's scope.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use

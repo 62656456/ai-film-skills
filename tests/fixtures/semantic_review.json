@@ -1,0 +1,16 @@
+{
+  "source": {
+    "text": "A与B在白天的干燥街边交谈。A说：坐吧。车流在两人说话期间继续通过。",
+    "dialogue": [{"id": "line1", "speaker": "A", "text": "坐吧。"}]
+  },
+  "locked_facts": [
+    {"id": "traffic", "text": "两人说话期间车流继续通过，不因主角动作而冻结。", "severity": "major", "target": "deliverable", "excerpt": "两人说话期间，后景车流沿道路持续通过。", "question_type": "choice"}
+  ],
+  "deliverable": {
+    "text": "日间、路面干燥。A对B说：坐吧。两人说话期间，后景车流沿道路持续通过。",
+    "duration_seconds": 8,
+    "segments": [{"start_seconds": 0, "end_seconds": 8}],
+    "dialogue": [{"source_id": "line1", "speaker": "A", "text": "坐吧。", "start_seconds": 1, "end_seconds": 2}]
+  },
+  "observed_evidence": []
+}

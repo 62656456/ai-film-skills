@@ -1,18 +1,18 @@
 # ai-storyboard-director — script to shots and prompts
 
-| Status | Current source 5.6.4; selected for daily use; v1.3.0 ZIP preserves 5.4.4 |
+| Status | Source A 5.7.1 adopted by explicit user instruction; known image-test issues and aesthetic acceptance remain separate; historical ZIPs unchanged. |
 |---|---|
-| Can deliver alone | A complete storyboard and copy-ready prompt package for an existing approved script. |
+| Can deliver alone | Creative shot ideas, a readable storyboard or copy-ready prompts, according to the requested stage; multiple artifacts only when requested. |
 | Cannot claim alone | It does not rewrite the script, directly generate the video, or prove platform success. |
 
 [Runtime `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 ZIP contains 5.4.4, not current source 5.6.4.
+Historical v1.3.0 ZIP contains 5.4.4; current source is the separately adopted A 5.7.1.
 
 <!-- contract:purpose -->
 ## 1. Purpose
 
-Turn an approved script into human-readable multi-shot design and production prompts while preserving causality, blocking, timing, and world-space continuity.
+Design audience viewing order, blocking, camera, timing and continuity; offer separate creative alternatives or compile selected shots when requested.
 
 <!-- contract:principles -->
 ## 2. Design principles
@@ -20,13 +20,14 @@ Turn an approved script into human-readable multi-shot design and production pro
 - Story causality, character purpose, blocking, and spatial action come before shot terminology.
 - Blocking and camera are designed as one event; a complex move needs a visible start, trigger, phases, and endpoint.
 - World state stays fixed while each camera position recomputes the frame projection.
+- Design audience experience and the operation of the place; preserve selected activity without forcing motion, weather or atmospheric particles.
 
 <!-- contract:standalone -->
 ## 3. Standalone scope
 
 Use this module by itself when the requested result stays inside the following boundary:
 
-A complete storyboard and copy-ready prompt package for an existing approved script.
+Creative shot ideas, a readable storyboard or copy-ready prompts, according to the requested stage; multiple artifacts only when requested.
 
 **Cannot claim alone:** It does not rewrite the script, directly generate the video, or prove platform success.
 
@@ -44,8 +45,9 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 2. Fix the world state and design blocking before selecting camera projection.
 3. In an explicitly identified project, read the actual design-memory context and required knowledge, save the selected intent/shots/states with revision and hash checks, and read back the result.
 4. Build shot sentences, varied coverage, and phased camera events that visibly carry the beat.
-5. Write the human-readable storyboard and compile Digital-10 information into the six visible prompt modules.
-6. Run the current package completion gates and reverse-check that prompt formatting preserved the selected camera design; return the requested creative artifact and actual limits.
+5. When ideas are requested, show genuinely different viewing choices as separate candidates; keep unadopted ideas out of the shot sequence and prompt.
+6. Deliver a readable storyboard for storyboard requests; compile one six-module master only for prompt requests or authorized video production.
+7. Run the current package completion gates and reverse-check that prompt formatting preserved the selected camera design; return the requested creative artifact and actual limits.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -65,14 +67,15 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 ## 8. Pass standard and states
 
 - The current package completion gates pass and the storyboard is readable without engineering-only fields.
-- Prompt modules contain all ten information categories, but this still does not prove that a platform generated a successful video.
+- Applicable information survives compilation; structure and text checks do not prove real-video execution or aesthetic acceptance.
 
 > A pass below means this module's stated gates were met. Structural validity, real-task evidence, and user acceptance remain separate states.
 
 <!-- contract:outputs -->
 ## 9. Outputs
 
-- One fused six-section master with the readable shot timeline in section six; a standalone five-column table only when explicitly requested.
+- Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.
+- A readable storyboard or the user's existing shot-table format; a six-module prompt only when requested. Both are supplied only when both are requested.
 - Copy-ready prompts using the required six-module outer structure and Digital-10 information core.
 
 <!-- contract:boundaries -->
@@ -81,6 +84,7 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 - Do not rewrite locked story facts or dialogue and do not invent platform capability or generation success.
 - Storyboard completion is not a finished video or user-approved visual result.
 - The 5.6 helper checks recorded state, timing and explicit geometry; it does not judge aesthetics, prove image/video semantics, or force every chat entry to use it. A text-only question without a project does not invent persistence.
+- Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use
@@ -102,6 +106,7 @@ A complete storyboard and copy-ready prompt package for an existing approved scr
 
 - [`references/camera-motion-diagnostics.md`](../../../skills/ai-storyboard-director/references/camera-motion-diagnostics.md)
 - [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
+- [`references/creative-shot-ideas.md`](../../../skills/ai-storyboard-director/references/creative-shot-ideas.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/design-memory-protocol.md`](../../../skills/ai-storyboard-director/references/design-memory-protocol.md)
 - [`references/fight-design.md`](../../../skills/ai-storyboard-director/references/fight-design.md)

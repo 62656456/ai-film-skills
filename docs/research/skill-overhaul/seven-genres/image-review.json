@@ -1,0 +1,616 @@
+{
+  "title": "七题材三版首轮分镜图检查",
+  "scope": "21 images, complete first-pass visual review",
+  "counts": {
+    "images": 21,
+    "images_with_confirmed_or_scoped_issues": 15,
+    "images_no_definite_issue_found": 6,
+    "issues": 29
+  },
+  "interpretation": "Raw observation counts from this run, not skill accuracy rankings. Shared reference images can carry pose/composition effects, and each design was generated once.",
+  "images": [
+    {
+      "path": "images/01-suspense-current.png",
+      "sha256": "68b63717b3d450c1e2cce6d25a20773f10d580fdf9ff676173475ac42fc4832f",
+      "story_id": "01",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [],
+      "needs_repair": false,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/02-horror-current.png",
+      "sha256": "52493fc2bbef596b6f4fe17fa088e76976b336c95e4854523551bf49f3ea5c33",
+      "story_id": "02",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "05",
+          "severity": "medium",
+          "problem": "应已松开的双手仍握在布草车把上。",
+          "visible_evidence": "镜05图中两只红橡胶手套仍弯指扣着横向车把；该格已经转看铁门方向，配文和原稿镜05均写松开车把后转向出口。",
+          "expected": "stories.json 02：她松手转向出口；current_02.json 镜05：红手套松开车把，阿芩转向铁门。",
+          "repair_scope": "镜05明确让两只红手套离开车把，保留车与床单、铁门位置。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/03-romance-current.png",
+      "sha256": "dfa33fb9d4db31971a85b5da9cfeefcc8fed33fdb7086978f07ba497f53f8a22",
+      "story_id": "03",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "05左侧子格",
+          "severity": "high",
+          "problem": "撑伞与放花盆的左右手交换。",
+          "visible_evidence": "镜05左子格是许棠近正面：画右的她左手握住伞杆，画左的她右手伸向长椅花盆。镜02的右手撑伞状态与此不连续。",
+          "expected": "stories.json 03：黄伞一直由许棠右手拿；左手接花盆、放长椅、腾手、拉袖。current_03.json 镜05同样明确右手撑伞、左手放盆。",
+          "repair_scope": "镜05左子格改为许棠右手握伞，左手把盆放上长椅，保留人物与长椅位置。",
+          "limit": null
+        },
+        {
+          "shot": "06",
+          "severity": "medium",
+          "problem": "袖口挽留被画成抓周野胸口衣襟。",
+          "visible_evidence": "镜06许棠伸向周野的手攥在橙外套前胸、领襟/拉链附近，周野手臂袖口并不在这只手的位置。",
+          "expected": "stories.json 03：腾出左手拉住他的袖子；current_03.json 镜06：她没有松开他的袖口。",
+          "repair_scope": "镜06把左手接触点保留在橙色袖口，右手继续撑黄伞。",
+          "limit": null
+        },
+        {
+          "shot": "03、07",
+          "severity": "low",
+          "problem": "电车主色偏绿灰，与输入奶油色视觉锚不一致。",
+          "visible_evidence": "镜03电车正面及镜07驶离车体大面积为绿灰色，奶油色仅见于局部上沿或饰条。",
+          "expected": "stories.json 03：一辆复古奶油色电车接近并驶离。",
+          "repair_scope": "电车车身主色统一为奶油色，维持同一车型及进出方向。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/04-fight-current.png",
+      "sha256": "5af7258e28be883b5db74bd1654a082b2c13ce663e0349cb1b2e669ece212650",
+      "story_id": "04",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [],
+      "needs_repair": false,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/05-gunfight-current.png",
+      "sha256": "fdc77b2aa4850ce9ceff156b20fab4aa7267cbb082c21b369a2a0e5200a017ec",
+      "story_id": "05",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "07",
+          "severity": "medium",
+          "problem": "抓门把手的手画在杜莎一侧，关门执行者与原稿不同。",
+          "visible_evidence": "镜07蓝门把手旁的手直接连着杜莎画右侧蓝色袖臂；陆川深绿色袖臂仍横在她腰腹前扶持，没有画出原稿指定的陆川左手抓门把。",
+          "expected": "stories.json 05：陆川自己最后退入并拉上钢门；current_05.json 镜07：陆川右臂支撑杜莎，左手握门内拉手把厚钢门拉合。",
+          "repair_scope": "镜07明确画陆川左手抓门内拉手，右臂继续扶杜莎；杜莎蓝袖双臂用于靠扶，门内外关系清楚。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/07-superpower-current.png",
+      "sha256": "725adf76f48be31f07f213a934bac37e765946950f85ef6c127f15fc66802d66",
+      "story_id": "07",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "03右侧子格、04、05右侧子格、06",
+          "severity": "high",
+          "problem": "隔空托举被表现为手掌直接接触、顶撑棚板。",
+          "visible_evidence": "镜04近景尤为明确：洛岚一掌贴压棚板右端侧面，另一掌贴在板底/边缘，没有掌与金属间隙；镜03、05、06的高举手臂也与板面接合，形成实体撑举读法。",
+          "expected": "stories.json 07锁定：能力为隔空托举，先由螺栓建立再用于棚板。current_07.json 镜04关键帧明确“右侧洛岚双掌隔空上撑”。",
+          "repair_scope": "所有托板格在双掌与棚板之间留出明确可见的空气间隙，仍保持用力、膝抖、裂砖和板下救援关系。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/06-racing-current.png",
+      "sha256": "585baf6f9c91edadc5352910fd1954e6d260598f1bd0add6633d1ea1a997d45c",
+      "story_id": "06",
+      "variant": "现用5.6.5",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "05末子格（15.3秒）与09",
+          "severity": "high",
+          "problem": "停车后两车相对朝向被重置。",
+          "visible_evidence": "镜05标15.3秒的末子格中，黄色车露前脸与前灯，深蓝车露后部尾灯，两车指向明显不同；镜09两车却同时露车尾、同向朝终点。镜06—08只拍放窗、抬手与呼气，没有再次调整车辆位置的事件。",
+          "expected": "current_06.json镜05末尾两车均停稳，镜06—08保持停车交流，镜09车轮保持不动；两車末态应连续。",
+          "repair_scope": "以镜05确定的一组停止位置与相对朝向为准，镜09仅改变观察机位，不改变车身相对朝向；或统一修正镜05和09为同一停车末态。",
+          "limit": null
+        },
+        {
+          "shot": "09",
+          "severity": "medium",
+          "problem": "深蓝车已破损的左后轮恢复成完整充气状态。",
+          "visible_evidence": "镜02外侧后胎明确胎壁破裂、橡胶翻卷；镜09深蓝车靠近摄影机的左后轮可见完整圆整胎壁，车身也恢复正常轮高，破损状态不再保留。",
+          "expected": "stories.json和current_06.json均由深蓝车外侧左后轮破损触发失控，之后没有换胎、修复或换车情节。",
+          "repair_scope": "镜09保留同一左后轮塌胎、破胎外观与相应车身支撑高度，其余已停止车位保持。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/04-fight-b.png",
+      "sha256": "fa47c5be9eb04384b4cc4a01c44ea261a861c00f2e7097e36b3561144761985e",
+      "story_id": "04",
+      "variant": "新版B5.7.1-jev",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "04、05、06（以06最清楚）",
+          "severity": "high",
+          "problem": "锁定的左手扶绳被画成右手扶绳。",
+          "visible_evidence": "镜06岑舟近正面站立，连接画左肩的右臂向画左伸出抓住绳栏，连接画右肩的左臂自然垂下；镜04—05延续同一只扶绳手。",
+          "expected": "stories.json04：岑舟左手抓稳绳栏；b_04.json镜04和镜05均明确左手保持支撑、左手扶绳。",
+          "repair_scope": "镜04—06统一左手抓绳，连同身体转向、两臂占用和绊腿支撑一起保持可读，不只镜像翻转单格文字或改变皮匣归属。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/05-gunfight-a.png",
+      "sha256": "24c7793a361926a377d0eed5f5846d1d3baeeaffaed5c023a59b4560f14da327",
+      "story_id": "05",
+      "variant": "新版A5.7.1",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [],
+      "needs_repair": false,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/01-suspense-a.png",
+      "sha256": "981e0369ce0239bcf460a88d9897e2cbdf30b7663635f8bf079d026f9f8a6a6b",
+      "story_id": "01",
+      "variant": "A",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": 2,
+          "severity": "high",
+          "problem": "入门双人画面右下角的黄铜钱匣已经是平整合盖状态；开场镜1仍敞开，镜4才被安排为慢慢合匣。",
+          "visible_evidence": "入门双人画面右下角的黄铜钱匣已经是平整合盖状态；开场镜1仍敞开，镜4才被安排为慢慢合匣。",
+          "expected": "从现金入匣到发现镜中黑靴期间钱匣保持打开，镜4才合上。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 2,
+          "severity": "medium",
+          "problem": "罗晋入门的正面脸部没有可辨认的眼镜框，镜6近景则清楚戴着圆眼镜。",
+          "visible_evidence": "罗晋入门的正面脸部没有可辨认的眼镜框，镜6近景则清楚戴着圆眼镜。",
+          "expected": "罗晋的圆眼镜为固定人物视觉锚，未安排摘戴。",
+          "repair_scope": null,
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/01-suspense-b.png",
+      "sha256": "cd8edbd97b7cadd8b02d2f89876447d7d63fb4df90b81bbe841268c1c2d8b09b",
+      "story_id": "01",
+      "variant": "B",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": 2,
+          "severity": "high",
+          "problem": "罗晋入门的宽画面中，圆镜右侧的真实后廊布帘下已经直接露出一双黑靴，观众在问话阶段就能看见第三人证据。",
+          "visible_evidence": "罗晋入门的宽画面中，圆镜右侧的真实后廊布帘下已经直接露出一双黑靴，观众在问话阶段就能看见第三人证据。",
+          "expected": "本版把发现顺序绑定闻溪：先问话与否认，随后镜4才通过圆凸镜发现黑靴；镜2文字还明确后廊被布帘挡住。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 2,
+          "severity": "high",
+          "problem": "入门格前景钱匣已经合盖，镜3又画出黑色敞开内腔，镜5再合上。",
+          "visible_evidence": "入门格前景钱匣已经合盖，镜3又画出黑色敞开内腔，镜5再合上。",
+          "expected": "开匣应连续保持到15–20秒的镜5，不能在镜2先关再自行打开。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 2,
+          "severity": "medium",
+          "problem": "门边罗晋脸上没有可辨认的圆眼镜，随后近景与转镜格中出现明显眼镜框。",
+          "visible_evidence": "门边罗晋脸上没有可辨认的圆眼镜，随后近景与转镜格中出现明显眼镜框。",
+          "expected": "人物圆眼镜连续。",
+          "repair_scope": null,
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/02-horror-a.png",
+      "sha256": "d3a630e56471e27706d9255bc06dd8bd4e74955294798d2e3e29f16d09fbe8d3",
+      "story_id": "02",
+      "variant": "A",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": 5,
+          "severity": "medium",
+          "problem": "阿芩侧脸转向铁门的图中，两只红手套仍落在车把位置；前景左边手套明显包住或搭住横把。",
+          "visible_evidence": "阿芩侧脸转向铁门的图中，两只红手套仍落在车把位置；前景左边手套明显包住或搭住横把。",
+          "expected": "该镜唯一关键帧明确要求双红手套已经离开车把，人物松手转身，车留在身后。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 6,
+          "severity": "medium",
+          "problem": "门前白布被绘成带圆头、双肩和垂地躯干轮廓的完整披布人形，轮廓从中央独立立起；侧排悬挂床单与它的连接关系不清楚。",
+          "visible_evidence": "门前白布被绘成带圆头、双肩和垂地躯干轮廓的完整披布人形，轮廓从中央独立立起；侧排悬挂床单与它的连接关系不清楚。",
+          "expected": "门边既有悬挂床单局部顶出无五官脸形，维持布面与挂架关系。",
+          "repair_scope": null,
+          "limit": "画中没有可见裸露活人；本项不声称真的新增了一个活人，只指出画面已趋于整身披布人形。"
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/02-horror-b.png",
+      "sha256": "69a08a9d27b255ff04209d03a9f65093f3ec012ba92bf6047c03f6bc42e595f4",
+      "story_id": "02",
+      "variant": "B",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": 3,
+          "severity": "medium",
+          "problem": "唯一新脚印画在右下方近前景，深度接近阿芩黑靴和布草车底部；铁门远在通道尽头，其前方大段地面为空。",
+          "visible_evidence": "唯一新脚印画在右下方近前景，深度接近阿芩黑靴和布草车底部；铁门远在通道尽头，其前方大段地面为空。",
+          "expected": "对应分镜13.6秒应为远端积水中的第一枚脚印，之后才向阿芩靠近。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 6,
+          "severity": "high",
+          "problem": "布脸位于画面右侧悬挂床单，向通道凸入较小一段；铁门正前方的中央与左侧地面仍形成明显开放通路。",
+          "visible_evidence": "布脸位于画面右侧悬挂床单，向通道凸入较小一段；铁门正前方的中央与左侧地面仍形成明显开放通路。",
+          "expected": "距门最近的床单脸阻住阿芩通向出口的路线，画面应让阻挡关系成立。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 6,
+          "severity": "medium",
+          "problem": "右侧布面脸形可辨认突出鼻梁、鼻尖和眼窝暗凹，呈现具体面部五官塑形。",
+          "visible_evidence": "右侧布面脸形可辨认突出鼻梁、鼻尖和眼窝暗凹，呈现具体面部五官塑形。",
+          "expected": "无五官脸形，面部应保持平滑匿名轮廓。",
+          "repair_scope": null,
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/03-romance-a.png",
+      "sha256": "e975555e215b4278fbdc32931eedcfb3713b971e789b5250f248fbc6701f7b86",
+      "story_id": "03",
+      "variant": "A",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": 1,
+          "severity": "high",
+          "problem": "左侧浅蓝长椅座面已经放着一盆绿色植物，同时周野仍在画右手捧另一盆罗勒走来。",
+          "visible_evidence": "左侧浅蓝长椅座面已经放着一盆绿色植物，同时周野仍在画右手捧另一盆罗勒走来。",
+          "expected": "长椅起初空着，唯一花盆在周野手里，直到镜5才被许棠放上椅面。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 5,
+          "severity": "high",
+          "problem": "许棠正面俯身的子格里，画面右侧、属于她解剖学左臂的手握着黄伞杆；画面左侧、属于她解剖学右臂的手伸向椅上花盆。",
+          "visible_evidence": "许棠正面俯身的子格里，画面右侧、属于她解剖学左臂的手握着黄伞杆；画面左侧、属于她解剖学右臂的手伸向椅上花盆。",
+          "expected": "黄伞一直由许棠右手持有，放盆和之后抓袖应由左手完成。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 3,
+          "severity": "medium",
+          "problem": "进站与离站电车主车体呈绿色或青绿色涂装，奶油色主要作为局部浅色线条。",
+          "visible_evidence": "进站与离站电车主车体呈绿色或青绿色涂装，奶油色主要作为局部浅色线条。",
+          "expected": "既定视觉锚为复古奶油色电车。",
+          "repair_scope": null,
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/03-romance-b.png",
+      "sha256": "ae3578054f92a82caa847a6b6b14fa59351a66742e73dc35e34469484a4917f6",
+      "story_id": "03",
+      "variant": "B",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": 4,
+          "severity": "high",
+          "problem": "许棠正面俯身时，身体左侧的手在画面右边握伞，身体右侧的手在画面左边扶着花盆放上长椅；与前格持伞和接盆的手分配相反。",
+          "visible_evidence": "许棠正面俯身时，身体左侧的手在画面右边握伞，身体右侧的手在画面左边扶着花盆放上长椅；与前格持伞和接盆的手分配相反。",
+          "expected": "右手始终持伞，左手放盆再抓袖。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 5,
+          "severity": "medium",
+          "problem": "镜4右侧近景是手攥橙色袖臂；镜5同一挽留动作中，许棠的手改抓周野胸前衣襟、靠近拉链的位置。",
+          "visible_evidence": "镜4右侧近景是手攥橙色袖臂；镜5同一挽留动作中，许棠的手改抓周野胸前衣襟、靠近拉链的位置。",
+          "expected": "本镜继续轻拉他的袖子，再移伞；没有安排松袖改抓衣襟。",
+          "repair_scope": null,
+          "limit": null
+        },
+        {
+          "shot": 3,
+          "severity": "medium",
+          "problem": "进站列车的前脸与主要车身是深青绿色，结尾继续为绿色车体。",
+          "visible_evidence": "进站列车的前脸与主要车身是深青绿色，结尾继续为绿色车体。",
+          "expected": "既定环境中的复古电车为奶油色主色。",
+          "repair_scope": null,
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/04-fight-a.png",
+      "sha256": "7544b334524887ae39a0067690c2b8c1d755f1d08981323bc2ee53ed80ebb3bc",
+      "story_id": "04",
+      "variant": "A",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [],
+      "needs_repair": false,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/05-gunfight-b.png",
+      "sha256": "73736cfdc5dba92bdfa772a6efe6a45f22cb67441e45ee51844b0762e451ebe8",
+      "story_id": "05",
+      "variant": "B",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [],
+      "needs_repair": false,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/06-racing-a.png",
+      "sha256": "f3913d7b50078010bbb6569116188c8accff2e28c954680a3dabf477fc1e6be8",
+      "story_id": "06",
+      "variant": "A",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [],
+      "needs_repair": false,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/06-racing-b.png",
+      "sha256": "8824b709166da16ec0d4ee80ae4ac806f9b48305764d53fdd0c53ff73d9c169b",
+      "story_id": "06",
+      "variant": "B",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "05（16–20秒）",
+          "severity": "major",
+          "problem": "破损轮胎被画在蓝车前轮，与已建立的后轮破损不一致。",
+          "visible_evidence": "破损轮胎被画在蓝车前轮，与已建立的后轮破损不一致。",
+          "expected": "外侧后轮破损导致失控；故障状态跨镜保留。",
+          "repair_scope": "保持两车停车位置及间隙，只将蓝车破损状态回到已锁定后轮，前轮保持正常；连带核对最后一格后轮状态。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/07-superpower-a.png",
+      "sha256": "065e2738737b1ceaaa730a09b91f154d3a1b8d00df68b8451bec421e4549dcbc",
+      "story_id": "07",
+      "variant": "A",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "03、04托举画格",
+          "severity": "major",
+          "problem": "手掌与棚板画成接触式支撑，隔空托举的间隙缺失。",
+          "visible_evidence": "手掌与棚板画成接触式支撑，隔空托举的间隙缺失。",
+          "expected": "先小螺栓悬停，再隔空托住大棚板；仍由能力而非手掌直接扛板。",
+          "repair_scope": "保持人物站位、用力姿态、棚板高度和身体代价，仅让双掌与棚板底面留下明确可见空隙。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    },
+    {
+      "path": "images/07-superpower-b.png",
+      "sha256": "966667e19e359a4ab74e5a0090c378eaec02066bfaa58abde24a29c0dd6e7031",
+      "story_id": "07",
+      "variant": "B",
+      "method": "actual view_image review against original story and corresponding storyboard; not a check of captions only",
+      "source_bundle": {
+        "path": "storyboards.json",
+        "sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea"
+      },
+      "issues": [
+        {
+          "shot": "05（17–22秒）",
+          "severity": "major",
+          "problem": "同一画框中出现两个贺峥，形成复制人物。",
+          "visible_evidence": "同一画框中出现两个贺峥，形成复制人物。",
+          "expected": "全场只有洛岚与一名维修工贺峥；贺峥由棚下走到她身后安全平台。",
+          "repair_scope": "此格保留一个贺峥。若表现镜尾安全状态，保留洛岚身后的贺峥，清除棚下重复人物并让危险区明确无人。",
+          "limit": null
+        },
+        {
+          "shot": "03、04托举画格",
+          "severity": "major",
+          "problem": "双掌接触棚板底面，隔空能力被画成实体托板。",
+          "visible_evidence": "双掌接触棚板底面，隔空能力被画成实体托板。",
+          "expected": "能力为隔空托举，先小物建立再救援。",
+          "repair_scope": "不改人物、衣着、棚板或剧情，恢复双掌和棚底之间清楚可见的空气间隙。",
+          "limit": null
+        }
+      ],
+      "needs_repair": true,
+      "user_acceptance": "pending"
+    }
+  ],
+  "comparisons": [
+    {
+      "story_id": "01",
+      "text": "A把末尾的克制表情与台下按键拆开，让最后一格只看主动反制；B将脸和暗处的手放在同一画面，强调她表面不动与暗中行动同时发生。两版的关键差异是结尾信息如何并置，不是镜数或术语数量。"
+    },
+    {
+      "story_id": "02",
+      "text": "A独立保留松手转头一格，末尾把白布置于门前，出口受阻的方向更集中；B把搭布后退与第一枚脚印单独展开，末尾更强调侧边床单局部凸出的近处威胁。B当前成图的中央出口仍敞开，属于这次空间呈现偏差，不能推广成整个版本能力结论。"
+    },
+    {
+      "story_id": "03",
+      "text": "A用独立湿袖特写放大许棠改变决定的具体刺激，再在同一镜中连续放盆、抓袖、移伞；B把放盆抓袖与移伞邀请分成前后两个观看段，更突出手部占用改变后关系靠近。当前两张图都在放盆子格换了持伞手，不能因图注写对就判定连续性通过。"
+    },
+    {
+      "story": "04",
+      "difference": "A把扶绳单独提出来，再在同一组全身画格里持续看让空、绊腿、跪落；B把第二次扑来与让空放一镜，绊阻及落膝另接一镜。两者都让身体因果与过桥目标可读，差别在注意力何时从上身转到脚下。"
+    },
+    {
+      "story": "06",
+      "difference": "A用脚舱刹车和驾驶者修正方向的近景，把主动避撞的选择逐项亮出来；B从肩后看危险后，较快交给固定宽景看两车减速和距离，接低位空隙图。B前后轮错位是本次出图问题，不能当作文字拍法优势。"
+    },
+    {
+      "story": "07",
+      "difference": "A以低位全身同框承重，再让略高机位看完整撤离；B更突出脚下裂砖与上身用力的接力，再用侧面关系看撤离。A/B这次出图都把隔空托举画成接触支撑，B还复制了维修工，这些应单独作为生成偏差修正。"
+    }
+  ],
+  "state": "first_pass_test_delivered_pending_user_review; known issues not silently repaired or promoted",
+  "publication_context": {
+    "record_scope": "historical_test_or_research_snapshot",
+    "current_activation": "A5.7.1 adopted through direct explicit user instruction on 2026-09-29; B optional text review",
+    "aesthetic_status": "First-round 21 boards are not an accepted batch; 15 boards contain 29 definite or scope-limited repair observations",
+    "hash_scope": "Original input/source hashes describe frozen source bytes; public file hashes are listed in publication-manifest.json."
+  }
+}

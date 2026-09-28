@@ -1,0 +1,67 @@
+{
+  "scope": "whole_suite_revision2_internal_validation_not_user_acceptance",
+  "version": "5.7.1 / 5.7.1-jev",
+  "audited_entries": 21,
+  "runtime_packages_changed": 8,
+  "runtime_files_changed": 26,
+  "repository_files_changed": 80,
+  "official_structure": {
+    "passed": 21,
+    "total": 21
+  },
+  "quality_gates": {
+    "regression": "passed",
+    "portable_repository": "passed",
+    "independent_packages": "passed",
+    "generated_guides": "passed",
+    "existing_showcase": "passed",
+    "existing_pages": "passed"
+  },
+  "unit_tests": {
+    "total": 168,
+    "passed": 164,
+    "skipped": 4,
+    "skip_reasons": [
+      "3 symlink creation tests unavailable in OS",
+      "1 opt-in real Blender smoke not enabled"
+    ]
+  },
+  "forward_behavior": {
+    "creative_ideas": "text choices, no media, main draft preserved",
+    "single_prop_prompt": "one requested prompt, no extra images",
+    "minimal_story_repair": "timing camera dialogue preserved, change presented as suggestion"
+  },
+  "isolated_storyboard_versions": {
+    "5.7.1": {
+      "ready": true,
+      "files": 14
+    },
+    "5.7.1-jev": {
+      "ready": true,
+      "files": 16
+    }
+  },
+  "new_B_live_review": {
+    "model": "jev-1.13.0",
+    "calls": 1,
+    "questions": 6,
+    "status": "no_issue_detected",
+    "record": "B包真实文字复核.json"
+  },
+  "preserved_legacy_files_and_archives": 244,
+  "rollback_preflight": "ready_both_state_guards_ready_157_files_restorable",
+  "media_generation": false,
+  "formal_activation": false,
+  "user_acceptance": null,
+  "cache_cleanup": {
+    "status": "blocked_by_execution_policy_retained",
+    "directories": 5,
+    "included_in_archives": false
+  },
+  "publication_context": {
+    "record_scope": "historical_test_or_research_snapshot",
+    "current_activation": "A5.7.1 adopted through direct explicit user instruction on 2026-09-29; B optional text review",
+    "aesthetic_status": "First-round 21 boards are not an accepted batch; 15 boards contain 29 definite or scope-limited repair observations",
+    "hash_scope": "Original input/source hashes describe frozen source bytes; public file hashes are listed in publication-manifest.json."
+  }
+}

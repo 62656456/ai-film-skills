@@ -1,6 +1,6 @@
 # war-design — unified war and military film visual advisor
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | Genre parameters, military visual advice, complete image prompts, actual images, and war-visual/sound supplements for approved shots. |
 | Cannot claim alone | Merging and installation do not replace new image/video or user-aesthetic evaluation, or certify real tactics and equipment performance. |

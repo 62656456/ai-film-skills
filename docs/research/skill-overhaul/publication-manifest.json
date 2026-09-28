@@ -1,0 +1,1446 @@
+{
+  "schema": "film-skills-publication/1",
+  "published_context_date": "2026-09-29",
+  "source_file_count": 100,
+  "public_source_mapping_count": 100,
+  "excluded_local_file_count": 116,
+  "source_groups": {
+    "seven_genres_21_boards_and_all_research": 29,
+    "current_workflow_diagrams": 12,
+    "earlier_workflow_diagrams_history": 4,
+    "fusion_and_initial_comparison_research": 14,
+    "revision2_visible_research": 9,
+    "creative_trial_superseded_history": 6,
+    "rejected_workflow_history": 16,
+    "existing_distribution_artifacts_not_new_compression": 7,
+    "root_explanations_public_adaptation_needed": 3
+  },
+  "activation": "A5.7.1 adopted by explicit user instruction; B optional text review",
+  "first_round_review": {
+    "boards": 21,
+    "shots": 149,
+    "boards_with_repair_observations": 15,
+    "observations": 29,
+    "aesthetic_acceptance": "not_granted_for_the_batch"
+  },
+  "source_root_label": "film-skills-overhaul research collection; source names below are relative provenance labels, not runtime paths",
+  "source_files": [
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/01_悬疑_新版A5.7.1.png",
+      "source_sha256": "981e0369ce0239bcf460a88d9897e2cbdf30b7663635f8bf079d026f9f8a6a6b",
+      "source_bytes": 2198408,
+      "public_file": "seven-genres/images/01-suspense-a.png",
+      "public_sha256": "981e0369ce0239bcf460a88d9897e2cbdf30b7663635f8bf079d026f9f8a6a6b",
+      "public_bytes": 2198408,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/01_悬疑_新版B5.7.1-jev.png",
+      "source_sha256": "cd8edbd97b7cadd8b02d2f89876447d7d63fb4df90b81bbe841268c1c2d8b09b",
+      "source_bytes": 2151347,
+      "public_file": "seven-genres/images/01-suspense-b.png",
+      "public_sha256": "cd8edbd97b7cadd8b02d2f89876447d7d63fb4df90b81bbe841268c1c2d8b09b",
+      "public_bytes": 2151347,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/01_悬疑_现用5.6.5.png",
+      "source_sha256": "68b63717b3d450c1e2cce6d25a20773f10d580fdf9ff676173475ac42fc4832f",
+      "source_bytes": 2159787,
+      "public_file": "seven-genres/images/01-suspense-current.png",
+      "public_sha256": "68b63717b3d450c1e2cce6d25a20773f10d580fdf9ff676173475ac42fc4832f",
+      "public_bytes": 2159787,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/02_恐怖_新版A5.7.1.png",
+      "source_sha256": "d3a630e56471e27706d9255bc06dd8bd4e74955294798d2e3e29f16d09fbe8d3",
+      "source_bytes": 2280341,
+      "public_file": "seven-genres/images/02-horror-a.png",
+      "public_sha256": "d3a630e56471e27706d9255bc06dd8bd4e74955294798d2e3e29f16d09fbe8d3",
+      "public_bytes": 2280341,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/02_恐怖_新版B5.7.1-jev.png",
+      "source_sha256": "69a08a9d27b255ff04209d03a9f65093f3ec012ba92bf6047c03f6bc42e595f4",
+      "source_bytes": 2228379,
+      "public_file": "seven-genres/images/02-horror-b.png",
+      "public_sha256": "69a08a9d27b255ff04209d03a9f65093f3ec012ba92bf6047c03f6bc42e595f4",
+      "public_bytes": 2228379,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/02_恐怖_现用5.6.5.png",
+      "source_sha256": "52493fc2bbef596b6f4fe17fa088e76976b336c95e4854523551bf49f3ea5c33",
+      "source_bytes": 2274016,
+      "public_file": "seven-genres/images/02-horror-current.png",
+      "public_sha256": "52493fc2bbef596b6f4fe17fa088e76976b336c95e4854523551bf49f3ea5c33",
+      "public_bytes": 2274016,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/03_爱情_新版A5.7.1.png",
+      "source_sha256": "e975555e215b4278fbdc32931eedcfb3713b971e789b5250f248fbc6701f7b86",
+      "source_bytes": 2549220,
+      "public_file": "seven-genres/images/03-romance-a.png",
+      "public_sha256": "e975555e215b4278fbdc32931eedcfb3713b971e789b5250f248fbc6701f7b86",
+      "public_bytes": 2549220,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/03_爱情_新版B5.7.1-jev.png",
+      "source_sha256": "ae3578054f92a82caa847a6b6b14fa59351a66742e73dc35e34469484a4917f6",
+      "source_bytes": 2588031,
+      "public_file": "seven-genres/images/03-romance-b.png",
+      "public_sha256": "ae3578054f92a82caa847a6b6b14fa59351a66742e73dc35e34469484a4917f6",
+      "public_bytes": 2588031,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/03_爱情_现用5.6.5.png",
+      "source_sha256": "dfa33fb9d4db31971a85b5da9cfeefcc8fed33fdb7086978f07ba497f53f8a22",
+      "source_bytes": 2428353,
+      "public_file": "seven-genres/images/03-romance-current.png",
+      "public_sha256": "dfa33fb9d4db31971a85b5da9cfeefcc8fed33fdb7086978f07ba497f53f8a22",
+      "public_bytes": 2428353,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/04_近身打戏_新版A5.7.1.png",
+      "source_sha256": "7544b334524887ae39a0067690c2b8c1d755f1d08981323bc2ee53ed80ebb3bc",
+      "source_bytes": 2654402,
+      "public_file": "seven-genres/images/04-fight-a.png",
+      "public_sha256": "7544b334524887ae39a0067690c2b8c1d755f1d08981323bc2ee53ed80ebb3bc",
+      "public_bytes": 2654402,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/04_近身打戏_新版B5.7.1-jev.png",
+      "source_sha256": "fa47c5be9eb04384b4cc4a01c44ea261a861c00f2e7097e36b3561144761985e",
+      "source_bytes": 2715245,
+      "public_file": "seven-genres/images/04-fight-b.png",
+      "public_sha256": "fa47c5be9eb04384b4cc4a01c44ea261a861c00f2e7097e36b3561144761985e",
+      "public_bytes": 2715245,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/04_近身打戏_现用5.6.5.png",
+      "source_sha256": "5af7258e28be883b5db74bd1654a082b2c13ce663e0349cb1b2e669ece212650",
+      "source_bytes": 2582423,
+      "public_file": "seven-genres/images/04-fight-current.png",
+      "public_sha256": "5af7258e28be883b5db74bd1654a082b2c13ce663e0349cb1b2e669ece212650",
+      "public_bytes": 2582423,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/05_枪战_新版A5.7.1.png",
+      "source_sha256": "24c7793a361926a377d0eed5f5846d1d3baeeaffaed5c023a59b4560f14da327",
+      "source_bytes": 2506856,
+      "public_file": "seven-genres/images/05-gunfight-a.png",
+      "public_sha256": "24c7793a361926a377d0eed5f5846d1d3baeeaffaed5c023a59b4560f14da327",
+      "public_bytes": 2506856,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/05_枪战_新版B5.7.1-jev.png",
+      "source_sha256": "73736cfdc5dba92bdfa772a6efe6a45f22cb67441e45ee51844b0762e451ebe8",
+      "source_bytes": 2371213,
+      "public_file": "seven-genres/images/05-gunfight-b.png",
+      "public_sha256": "73736cfdc5dba92bdfa772a6efe6a45f22cb67441e45ee51844b0762e451ebe8",
+      "public_bytes": 2371213,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/05_枪战_现用5.6.5.png",
+      "source_sha256": "fdc77b2aa4850ce9ceff156b20fab4aa7267cbb082c21b369a2a0e5200a017ec",
+      "source_bytes": 2371286,
+      "public_file": "seven-genres/images/05-gunfight-current.png",
+      "public_sha256": "fdc77b2aa4850ce9ceff156b20fab4aa7267cbb082c21b369a2a0e5200a017ec",
+      "public_bytes": 2371286,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/06_赛车追逐_新版A5.7.1.png",
+      "source_sha256": "f3913d7b50078010bbb6569116188c8accff2e28c954680a3dabf477fc1e6be8",
+      "source_bytes": 2466228,
+      "public_file": "seven-genres/images/06-racing-a.png",
+      "public_sha256": "f3913d7b50078010bbb6569116188c8accff2e28c954680a3dabf477fc1e6be8",
+      "public_bytes": 2466228,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/06_赛车追逐_新版B5.7.1-jev.png",
+      "source_sha256": "8824b709166da16ec0d4ee80ae4ac806f9b48305764d53fdd0c53ff73d9c169b",
+      "source_bytes": 2593848,
+      "public_file": "seven-genres/images/06-racing-b.png",
+      "public_sha256": "8824b709166da16ec0d4ee80ae4ac806f9b48305764d53fdd0c53ff73d9c169b",
+      "public_bytes": 2593848,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/06_赛车追逐_现用5.6.5.png",
+      "source_sha256": "585baf6f9c91edadc5352910fd1954e6d260598f1bd0add6633d1ea1a997d45c",
+      "source_bytes": 2366675,
+      "public_file": "seven-genres/images/06-racing-current.png",
+      "public_sha256": "585baf6f9c91edadc5352910fd1954e6d260598f1bd0add6633d1ea1a997d45c",
+      "public_bytes": 2366675,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/07_超能力动作_新版A5.7.1.png",
+      "source_sha256": "065e2738737b1ceaaa730a09b91f154d3a1b8d00df68b8451bec421e4549dcbc",
+      "source_bytes": 2874396,
+      "public_file": "seven-genres/images/07-superpower-a.png",
+      "public_sha256": "065e2738737b1ceaaa730a09b91f154d3a1b8d00df68b8451bec421e4549dcbc",
+      "public_bytes": 2874396,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/07_超能力动作_新版B5.7.1-jev.png",
+      "source_sha256": "966667e19e359a4ab74e5a0090c378eaec02066bfaa58abde24a29c0dd6e7031",
+      "source_bytes": 2850161,
+      "public_file": "seven-genres/images/07-superpower-b.png",
+      "public_sha256": "966667e19e359a4ab74e5a0090c378eaec02066bfaa58abde24a29c0dd6e7031",
+      "public_bytes": 2850161,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/07_超能力动作_现用5.6.5.png",
+      "source_sha256": "725adf76f48be31f07f213a934bac37e765946950f85ef6c127f15fc66802d66",
+      "source_bytes": 2763677,
+      "public_file": "seven-genres/images/07-superpower-current.png",
+      "public_sha256": "725adf76f48be31f07f213a934bac37e765946950f85ef6c127f15fc66802d66",
+      "public_bytes": 2763677,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/B文字复核结果.json",
+      "source_sha256": "a8876b28197e4eee876f412d07b0ac4a6fe044eb668b1d915d8c1bff78b0d255",
+      "source_bytes": 28859,
+      "public_file": "seven-genres/jev-text-results.json",
+      "public_sha256": "78020c303f5d9d7e65281362adb60d9e271d5cafb5dea4ff8a4c0021dc27bbc7",
+      "public_bytes": 29364,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/七个原创测试故事.md",
+      "source_sha256": "e6912800aad788fcf92875971ffbcd489c634ff15789261f4335515b3263fdbe",
+      "source_bytes": 7513,
+      "public_file": "seven-genres/stories.md",
+      "public_sha256": "58be6f3fa4c52624bda7969cbeec8d77bce349a6e2701703d64dc45945b7b624",
+      "public_bytes": 7841,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/三版分镜原稿.json",
+      "source_sha256": "aef35bd8cde98fe1fd25dadba0abbe890354eb81bdf00a24101601edd7abdaea",
+      "source_bytes": 209523,
+      "public_file": "seven-genres/storyboards.json",
+      "public_sha256": "0e55577bbf277547b22c4118db58117a9f1b65f6f9e4f33ca7db8422dc5aeeba",
+      "public_bytes": 210028,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/分镜图生成提示词.md",
+      "source_sha256": "ca037ef65913a76d654939d48918ae10deae92bf7020aab70dce0fe1666d650a",
+      "source_bytes": 211856,
+      "public_file": "seven-genres/image-prompts.md",
+      "public_sha256": "cab0d338513bc22bf25df0932c5e22892191078bd4482d50a7407832c01c30d1",
+      "public_bytes": 212181,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings",
+        "Normalize extra blank lines at EOF for clean Git patch; content unchanged"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/图片清单.json",
+      "source_sha256": "a921d03d5fad547369ab24bb9eb4ca74d8221bd436f2f02e44292b8d38604df1",
+      "source_bytes": 7346,
+      "public_file": "seven-genres/image-manifest.json",
+      "public_sha256": "b06685da4db11a68995767a7e49d61b6206d3c056f4b566c3d304095fb1837e4",
+      "public_bytes": 5460,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "local_path_mapping_or_removal",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/打开七题材三版对照.html",
+      "source_sha256": "c5a1d0a6898bbc88b748dd2f059321797e3a3c4e66e5737c9e569829cc11456e",
+      "source_bytes": 18262,
+      "public_file": "seven-genres/viewer.html",
+      "public_sha256": "8456bbcbadb7582ef6e27858f47e0111b0f3bcba2ecfd5928eb1ab242cb32921",
+      "public_bytes": 19754,
+      "byte_preserved": false,
+      "adaptations": [
+        "viewer_explicit_public_filename_map_and_historical_context"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/测试对比与逐图问题.md",
+      "source_sha256": "e1859e0bb31752842c41d7d04af4c9c78e3fd8d738ef7c59ef492bba104b2758",
+      "source_bytes": 11090,
+      "public_file": "seven-genres/report.md",
+      "public_sha256": "ba7afb15d7bfe8faffcdaac8189569395e731a5087e1df83abec79f78d0d8159",
+      "public_bytes": 11251,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "seven_genres_21_boards_and_all_research",
+      "source_file": "samples/七题材30秒对照/逐图审查结果.json",
+      "source_sha256": "460e3c0b726cf50495d508708b62cb3fb740512a7c58653d5f91dae18ca76482",
+      "source_bytes": 36887,
+      "public_file": "seven-genres/image-review.json",
+      "public_sha256": "33d632edbe843d544321a34295f816fac7a7a6b05bd5de8e3e0bc849a76973db",
+      "public_bytes": 32565,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "local_path_mapping_or_removal",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/00_全部方案与融合关系.png",
+      "source_sha256": "2371885dc921febb82bf2172ec96fa8fae13c8c744899f3dc33582f8d18dd3c5",
+      "source_bytes": 617989,
+      "public_file": "workflows/relations.png",
+      "public_sha256": "2371885dc921febb82bf2172ec96fa8fae13c8c744899f3dc33582f8d18dd3c5",
+      "public_bytes": 617989,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/00_全部方案与融合关系.svg",
+      "source_sha256": "d76e6197260c46383faaec570bc2dae1fa6e181cac58a83e04e900a1b9697ae1",
+      "source_bytes": 16295,
+      "public_file": "workflows/relations.svg",
+      "public_sha256": "d76e6197260c46383faaec570bc2dae1fa6e181cac58a83e04e900a1b9697ae1",
+      "public_bytes": 16295,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/01_现用5.6.5_完整工作流.png",
+      "source_sha256": "4c1d0acb773143427d9405c99d510d2fd41d23390b0c393849c071ada4a245fc",
+      "source_bytes": 1748829,
+      "public_file": "workflows/baseline-5.6.5.png",
+      "public_sha256": "4c1d0acb773143427d9405c99d510d2fd41d23390b0c393849c071ada4a245fc",
+      "public_bytes": 1748829,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/01_现用5.6.5_完整工作流.svg",
+      "source_sha256": "d81ec3c2b7da8a2eb51156d9e83fa91f57df67be59184a7a33c9c55346b969e3",
+      "source_bytes": 53243,
+      "public_file": "workflows/baseline-5.6.5.svg",
+      "public_sha256": "d81ec3c2b7da8a2eb51156d9e83fa91f57df67be59184a7a33c9c55346b969e3",
+      "public_bytes": 53243,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/02_新版A5.7.1_完整工作流.png",
+      "source_sha256": "7ae5d1f218e95e5175c757f956c237cfdf51bb8b9b5eb4ac32a052a2b3f73751",
+      "source_bytes": 1742843,
+      "public_file": "workflows/candidate-a-5.7.1.png",
+      "public_sha256": "7ae5d1f218e95e5175c757f956c237cfdf51bb8b9b5eb4ac32a052a2b3f73751",
+      "public_bytes": 1742843,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/02_新版A5.7.1_完整工作流.svg",
+      "source_sha256": "43a54180b3ad6ebd256dc5eefe469ca7c605c5715985890291713de63acbbb78",
+      "source_bytes": 53239,
+      "public_file": "workflows/candidate-a-5.7.1.svg",
+      "public_sha256": "43a54180b3ad6ebd256dc5eefe469ca7c605c5715985890291713de63acbbb78",
+      "public_bytes": 53239,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/03_新版B5.7.1-jev_完整工作流.png",
+      "source_sha256": "794798a2c290466ddcf5681a364073a4d5bbe45c93e632f42bfda937efe54ad1",
+      "source_bytes": 1738248,
+      "public_file": "workflows/candidate-b-5.7.1-jev.png",
+      "public_sha256": "794798a2c290466ddcf5681a364073a4d5bbe45c93e632f42bfda937efe54ad1",
+      "public_bytes": 1738248,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/03_新版B5.7.1-jev_完整工作流.svg",
+      "source_sha256": "4a9e99a1a86bbc91441965798aceb7d519e1594b6c8eab1b6f1a1142b64b1e8c",
+      "source_bytes": 53660,
+      "public_file": "workflows/candidate-b-5.7.1-jev.svg",
+      "public_sha256": "4a9e99a1a86bbc91441965798aceb7d519e1594b6c8eab1b6f1a1142b64b1e8c",
+      "public_bytes": 53660,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/04_三套完整工作流_并排总图.png",
+      "source_sha256": "627f487f516a76b135e48a333cdb3a6838bb557532c291586d82090d888bcb21",
+      "source_bytes": 1358193,
+      "public_file": "workflows/compare-all.png",
+      "public_sha256": "627f487f516a76b135e48a333cdb3a6838bb557532c291586d82090d888bcb21",
+      "public_bytes": 1358193,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/04_三套完整工作流_并排总图.svg",
+      "source_sha256": "e781e61e0a5327818c4ff32ec7c1454ff890d6d89c8a94979fd373e9c2781257",
+      "source_bytes": 161306,
+      "public_file": "workflows/compare-all.svg",
+      "public_sha256": "e781e61e0a5327818c4ff32ec7c1454ff890d6d89c8a94979fd373e9c2781257",
+      "public_bytes": 161306,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/修订2_当前技能工作流程.png",
+      "source_sha256": "d28f577afb862b21e3ff978845bde03dc0470f2693c3bed9bee41aae5fe4ef76",
+      "source_bytes": 835867,
+      "public_file": "workflows/revision2-common.png",
+      "public_sha256": "d28f577afb862b21e3ff978845bde03dc0470f2693c3bed9bee41aae5fe4ef76",
+      "public_bytes": 835867,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "current_workflow_diagrams",
+      "source_file": "工作流图/修订2_当前技能工作流程.svg",
+      "source_sha256": "c6b2b9ffe52729208e0dc4752f2dd500471ba6d587da8edcc453477f10eeadff",
+      "source_bytes": 29488,
+      "public_file": "workflows/revision2-common.svg",
+      "public_sha256": "c6b2b9ffe52729208e0dc4752f2dd500471ba6d587da8edcc453477f10eeadff",
+      "public_bytes": 29488,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "earlier_workflow_diagrams_history",
+      "source_file": "工作流图/方案A_无Jev_完整技能工作流.png",
+      "source_sha256": "940e44250ef0eda356548e9022857880e1700e95a376963372161817c8d7bd41",
+      "source_bytes": 3071032,
+      "public_file": "history/early-workflows/方案A_无Jev_完整技能工作流.png",
+      "public_sha256": "940e44250ef0eda356548e9022857880e1700e95a376963372161817c8d7bd41",
+      "public_bytes": 3071032,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "earlier_workflow_diagrams_history",
+      "source_file": "工作流图/方案A_无Jev_完整技能工作流.svg",
+      "source_sha256": "313738f7d579b9c09063f6a6ebedbd9ce399a891f2102405f2f397088926b6b6",
+      "source_bytes": 55680,
+      "public_file": "history/early-workflows/方案A_无Jev_完整技能工作流.svg",
+      "public_sha256": "313738f7d579b9c09063f6a6ebedbd9ce399a891f2102405f2f397088926b6b6",
+      "public_bytes": 55680,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "earlier_workflow_diagrams_history",
+      "source_file": "工作流图/方案B_Jev辅助复核_完整技能工作流.png",
+      "source_sha256": "0f73d0940138b5f4506c4644aa5073b14cfe76f0dc2bbcdcd5bd23f67e029cea",
+      "source_bytes": 3095746,
+      "public_file": "history/early-workflows/方案B_Jev辅助复核_完整技能工作流.png",
+      "public_sha256": "0f73d0940138b5f4506c4644aa5073b14cfe76f0dc2bbcdcd5bd23f67e029cea",
+      "public_bytes": 3095746,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "earlier_workflow_diagrams_history",
+      "source_file": "工作流图/方案B_Jev辅助复核_完整技能工作流.svg",
+      "source_sha256": "c573543a274865b95dce064596731cc3e6125b346bb8e6f1e5a4ec3880c2b9e4",
+      "source_bytes": 56216,
+      "public_file": "history/early-workflows/方案B_Jev辅助复核_完整技能工作流.svg",
+      "public_sha256": "c573543a274865b95dce064596731cc3e6125b346bb8e6f1e5a4ec3880c2b9e4",
+      "public_bytes": 56216,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/A版5.7.0_导演故事分镜_试看片.png",
+      "source_sha256": "833571500c5a0159fda8ea108c9769364ccff3b674154027dc4a95ceb8bf722f",
+      "source_bytes": 1980898,
+      "public_file": "fusion/a-5.7.0-storyboard.png",
+      "public_sha256": "833571500c5a0159fda8ea108c9769364ccff3b674154027dc4a95ceb8bf722f",
+      "public_bytes": 1980898,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/B方案_Jev真实复核_融合候选_v0.1.json",
+      "source_sha256": "c90a189be178d64e9c2f0663ac51e3fd57af45cc85c603daea1f63ca23a6cc9a",
+      "source_bytes": 161453,
+      "public_file": "fusion/B方案_Jev真实复核_融合候选_v0.1.json",
+      "public_sha256": "36f2784432530878accac8337b164667d494b39e2c8fff2d4961a03384dcdda3",
+      "public_bytes": 161342,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "local_path_mapping_or_removal",
+        "private_source_field_removed",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/B方案复核与融合选择.md",
+      "source_sha256": "c7ec78fcf48d922de62596d41b9909516ae4269d7ecc85d389ed1cc9a735e387",
+      "source_bytes": 3714,
+      "public_file": "fusion/B方案复核与融合选择.md",
+      "public_sha256": "2d2d5eab8d6d2f78fb72dce535503a3c96fb14b2ed3d8afd4e074fb54d87d8cd",
+      "public_bytes": 3890,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "local_only_inline_reference_removed",
+        "private_credential_provenance_removed",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/原版5.6.5_同题设计.md",
+      "source_sha256": "c010ffb0105b19deab498dc2ea030cd2e3463cf2700d433bcf81dc0a35d221e6",
+      "source_bytes": 5198,
+      "public_file": "fusion/原版5.6.5_同题设计.md",
+      "public_sha256": "d21f248315a8071a9541ee6947d25e98624a66f11c7824d7802f9d9370d6e102",
+      "public_bytes": 5592,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/导演故事分镜图_生成提示词.txt",
+      "source_sha256": "15ef6cb871fa1932c27b17ba2e21c324eac3955f28d6ed5a4ff09366105c860c",
+      "source_bytes": 16748,
+      "public_file": "fusion/导演故事分镜图_生成提示词.txt",
+      "public_sha256": "6cb5d17816d4fc2c81b64641ef047e238da0318830891f3cee37d6a2a775d6b1",
+      "public_bytes": 16803,
+      "byte_preserved": false,
+      "adaptations": [
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/方案A_同题设计.md",
+      "source_sha256": "bea46332dfdd4169f789a8fe83c4df8d89257aba151a156ae12bb9d2b7312d36",
+      "source_bytes": 5867,
+      "public_file": "fusion/方案A_同题设计.md",
+      "public_sha256": "c887ab995aba9fea42019308b84a29ba5bd9a3634a58d7c43a7412a12b81abbf",
+      "public_bytes": 6262,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/现场测试01_结果与待验点.md",
+      "source_sha256": "ab15fdb50008fc3e42efad6f340d1c7e04b6652cef0117e2aec7c789856ace60",
+      "source_bytes": 4399,
+      "public_file": "fusion/现场测试01_结果与待验点.md",
+      "public_sha256": "0d6cc15e2da5192f1ba2fecdf76e24ff2d653b9ac1cd632dad982ef792c5fb3c",
+      "public_bytes": 4727,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/现场测试01_街头倒影_A版首稿.md",
+      "source_sha256": "247df9c12113c3c0635b7d6742da30a1f12d1ff14fcd360b860192a3fed4510d",
+      "source_bytes": 11389,
+      "public_file": "fusion/现场测试01_街头倒影_A版首稿.md",
+      "public_sha256": "919f9fc8353242f5f5a9ac21d5202458c3532861be6b65aa1f5797887c300653",
+      "public_bytes": 11805,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/现场测试01_街头倒影_原版5.6.5.md",
+      "source_sha256": "2367366576301495edd785084f89a4233cc8551e75e523be545e59cc54b12098",
+      "source_bytes": 9313,
+      "public_file": "fusion/现场测试01_街头倒影_原版5.6.5.md",
+      "public_sha256": "bf23b48b4aabbf54f709cd86bf2093e327009553fc8a766e48895c04a9d87c5d",
+      "public_bytes": 9736,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/现场测试01_街头倒影_局部修订.md",
+      "source_sha256": "5178ead35353f6aef765d8f902439b6ee14ba09ebb373c2cde3b2eaa051ac27a",
+      "source_bytes": 11417,
+      "public_file": "fusion/现场测试01_街头倒影_局部修订.md",
+      "public_sha256": "8a309a054dc1c8321cafcc6c5192c5f69c631a500e59c200a28b3859a87588dc",
+      "public_bytes": 11833,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/现用版5.6.5_导演故事分镜_试看片.png",
+      "source_sha256": "c23c80a477632e27b764b653530fc82e238788e1ecefd3e4dd01dcf0e3362e0c",
+      "source_bytes": 1885148,
+      "public_file": "fusion/baseline-storyboard.png",
+      "public_sha256": "c23c80a477632e27b764b653530fc82e238788e1ecefd3e4dd01dcf0e3362e0c",
+      "public_bytes": 1885148,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/融合候选_分镜图生成提示词.txt",
+      "source_sha256": "657fa6b7f4d8052b4582c91867d84f5565edaf6d55e049d3a14b1a0f3660ebe1",
+      "source_bytes": 6676,
+      "public_file": "fusion/融合候选_分镜图生成提示词.txt",
+      "public_sha256": "6833d4577bb4889a640fda510cbf5339ab00b191dffca7bbf87f1820e9cce4da",
+      "public_bytes": 6698,
+      "byte_preserved": false,
+      "adaptations": [
+        "public_text_serialization_and_line_endings",
+        "Normalize extra blank lines at EOF for clean Git patch; content unchanged"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/融合候选_导演故事分镜_v0.1.png",
+      "source_sha256": "5d3e9a10a7c7742d0f1a782489eb4ede49de3aecd7ef2c203eb41d7c28f42b88",
+      "source_bytes": 2074312,
+      "public_file": "fusion/fusion-storyboard.png",
+      "public_sha256": "5d3e9a10a7c7742d0f1a782489eb4ede49de3aecd7ef2c203eb41d7c28f42b88",
+      "public_bytes": 2074312,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "fusion_and_initial_comparison_research",
+      "source_file": "samples/融合候选_街头倒影_v0.1.md",
+      "source_sha256": "6aacfcde70c558e0c362a26dfb91da96aaf9b9c71ace2067c6657c88df2d648f",
+      "source_bytes": 4054,
+      "public_file": "fusion/融合候选_街头倒影_v0.1.md",
+      "public_sha256": "c14bdc6d1d6edb22d4b493ca261de4e3c47414ac62efd3cf79dba9dba0b66a57",
+      "public_bytes": 4400,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings",
+        "Normalize extra blank lines at EOF for clean Git patch; content unchanged"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/B包真实文字复核.json",
+      "source_sha256": "5451cd3b5570001d3f01eea46e3b9a85d88e90bf9944ad53a0f2470c5433767c",
+      "source_bytes": 11636,
+      "public_file": "revision2/B包真实文字复核.json",
+      "public_sha256": "65e1124a9e9aedfa03038dfebd47cbce5b2bfaec200df4bbda20c04910425ab3",
+      "public_bytes": 12024,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "private_source_field_removed",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/README.md",
+      "source_sha256": "c1d5fb3db47585ebb475be33502b7850a8055f0bb86a25add3cd3c386348ddd8",
+      "source_bytes": 5727,
+      "public_file": "revision2/README.md",
+      "public_sha256": "7b304e892e15f467ca4d385d026f0b36e95e0137d1532d86043b9c898bb07ad7",
+      "public_bytes": 6187,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "local_only_link_replaced_by_explanatory_text",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/同题测试对比_20260929.md",
+      "source_sha256": "81477bd665e9681ce52b454f6411d898e2edc80f39c85f0bfb21dc46cbfa3d13",
+      "source_bytes": 33645,
+      "public_file": "revision2/同题测试对比_20260929.md",
+      "public_sha256": "6a22c09edfdbb4fe6b4df65526b7d0b8c522ed2ad6e992053d68e7583e264631",
+      "public_bytes": 34343,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/审计覆盖.md",
+      "source_sha256": "f34d63f806dad39c63ab7d08eebd7b38d0588b0585f0c0cc6846a771c3946b62",
+      "source_bytes": 2662,
+      "public_file": "revision2/审计覆盖.md",
+      "public_sha256": "3019976fa23f157689fd40b9a5ed36619da34160287b2b47b671925de1a5fbda",
+      "public_bytes": 3017,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings",
+        "Normalize extra blank lines at EOF for clean Git patch; content unchanged"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/本轮变更清单.json",
+      "source_sha256": "a7de65747051b221e8510825a7e9501c5308d8e82df21050aa57d7b864048dbe",
+      "source_bytes": 22730,
+      "public_file": "revision2/本轮变更清单.json",
+      "public_sha256": "6b2007b6267c00e6a08828f495230574d85c8807369c9b043046b15662f3446e",
+      "public_bytes": 23104,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "public_historical_context_added",
+        "unpublished_local_path_field_removed"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/试用01_创意镜头思路.md",
+      "source_sha256": "5c592d8b800c1915be9b144dfa7637acf815778bcf4fda6d9f43a446ce4a06ca",
+      "source_bytes": 4681,
+      "public_file": "revision2/试用01_创意镜头思路.md",
+      "public_sha256": "9fb46fe84b400c375c70101ee9bc00397b627903ab4d0c0e8866b528f9a52e85",
+      "public_bytes": 5052,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings",
+        "Normalize extra blank lines at EOF for clean Git patch; content unchanged"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/试用02_单张道具提示词.md",
+      "source_sha256": "62d996c059b87db234a47e92a72451476e3f8a0ea220cd08cef8652c21bdcf42",
+      "source_bytes": 1042,
+      "public_file": "revision2/试用02_单张道具提示词.md",
+      "public_sha256": "eb4dfe90ce44182a3946ca582563c8dc887695aecb4da009616ec6a6c96c1a26",
+      "public_bytes": 1371,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/试用03_最小矛盾修正.md",
+      "source_sha256": "70454486d01b5c0f9e209656b1d80aeed3f9233a545fe4f822e9b8137dfe9f5b",
+      "source_bytes": 975,
+      "public_file": "revision2/试用03_最小矛盾修正.md",
+      "public_sha256": "7e2a8a85791144d3f7aae2a969589fe953790b001fb3d2a7414caa8be1fcf8af",
+      "public_bytes": 1310,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "revision2_visible_research",
+      "source_file": "revision2/验证结果.json",
+      "source_sha256": "f903acfad100c4ca89f9fed1f44d953c1185dc1d37e7e802970735861974917f",
+      "source_bytes": 1740,
+      "public_file": "revision2/验证结果.json",
+      "public_sha256": "896a898ce2a34398ac048402e38bdbf22dda86661d023a87da3f8b01cf755767",
+      "public_bytes": 2245,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "public_historical_context_added"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "creative_trial_superseded_history",
+      "source_file": "creative-shot-trial/创意镜头试拍方案_v0.1.md",
+      "source_sha256": "72edcdcea3d39c925f234f59576d4b5a518f10b8b0f719abeb6529bb916d31cb",
+      "source_bytes": 7725,
+      "public_file": "history/creative-trial/创意镜头试拍方案_v0.1.md",
+      "public_sha256": "cb53e056178a3ccaf2243e94041b690bc252d3ccbb25a536e5fd21664514f70d",
+      "public_bytes": 8130,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "creative_trial_superseded_history",
+      "source_file": "creative-shot-trial/试拍01_分镜与生成说明.md",
+      "source_sha256": "47f3a1a3e0d1cf92b9ddb0d8f64bb9f034b56acc0035a1511c81a5fec37ea421",
+      "source_bytes": 6896,
+      "public_file": "history/creative-trial/试拍01_分镜与生成说明.md",
+      "public_sha256": "00a3e9a8560122b0f9798e05765d79cf33b7e2d8b929820b53f955d08b6b5555",
+      "public_bytes": 7304,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "creative_trial_superseded_history",
+      "source_file": "creative-shot-trial/试拍01_同框起始参考_静态.png",
+      "source_sha256": "b4f2b20ac583acb8ab91d78c88638384830df060e29c00bff0e0b66860c29114",
+      "source_bytes": 1878413,
+      "public_file": "history/creative-trial/试拍01_同框起始参考_静态.png",
+      "public_sha256": "b4f2b20ac583acb8ab91d78c88638384830df060e29c00bff0e0b66860c29114",
+      "public_bytes": 1878413,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "creative_trial_superseded_history",
+      "source_file": "creative-shot-trial/试拍01_文字复核.json",
+      "source_sha256": "1b52fa398bfe439906b64390d614fdf6ff49b071085f17b241b83712303de2ad",
+      "source_bytes": 18111,
+      "public_file": "history/creative-trial/试拍01_文字复核.json",
+      "public_sha256": "4bbd076e592f4d39a8d967b1f53c9bb9fba0ed1568eb570d7bed266786a17aa0",
+      "public_bytes": 18517,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "local_path_mapping_or_removal",
+        "public_historical_context_added"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "creative_trial_superseded_history",
+      "source_file": "creative-shot-trial/试拍01_文字复核_修订后.json",
+      "source_sha256": "4f26798d991ef51efeaff4597e386cbfdb7d2eb285b70498fd5b6b49ac772017",
+      "source_bytes": 14427,
+      "public_file": "history/creative-trial/试拍01_文字复核_修订后.json",
+      "public_sha256": "a9a24062c014c8b787ef982fdda32c77fe4510110c37d19f7ffedf93236fdc66",
+      "public_bytes": 14833,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy",
+        "local_path_mapping_or_removal",
+        "public_historical_context_added"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "creative_trial_superseded_history",
+      "source_file": "creative-shot-trial/起始参考图_生成提示词.txt",
+      "source_sha256": "4377581cdb8d92d5e72a0846ec78dbb9234c165fb44bbe3aa1a865b63d85d7ca",
+      "source_bytes": 4711,
+      "public_file": "history/creative-trial/起始参考图_生成提示词.txt",
+      "public_sha256": "0e5faa6e38be8eec01c71ab3141ef7bb0d775a3dd85b5e24422a76f913c16268",
+      "public_bytes": 4725,
+      "byte_preserved": false,
+      "adaptations": [
+        "public_text_serialization_and_line_endings",
+        "Normalize extra blank lines at EOF for clean Git patch; content unchanged"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/方案A_大字主图.png",
+      "source_sha256": "64bde6e6cd983bc6876b5c0adf35b11fe34ac09b3093ad89e7ac6f29744f7d07",
+      "source_bytes": 494691,
+      "public_file": "history/rejected-workflows/方案A_大字主图.png",
+      "public_sha256": "64bde6e6cd983bc6876b5c0adf35b11fe34ac09b3093ad89e7ac6f29744f7d07",
+      "public_bytes": 494691,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/方案A_大字主图.svg",
+      "source_sha256": "03b062bd92acfabf882914dd502c198ea5def52255b24bb97d8fc7d0dbf8ab46",
+      "source_bytes": 11609,
+      "public_file": "history/rejected-workflows/方案A_大字主图.svg",
+      "public_sha256": "03b062bd92acfabf882914dd502c198ea5def52255b24bb97d8fc7d0dbf8ab46",
+      "public_bytes": 11609,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/方案B_大字主图.png",
+      "source_sha256": "ab0e822d7e348a75b5990f85f5ef7f087f0f16287232fd783863ba76793a4b5e",
+      "source_bytes": 499339,
+      "public_file": "history/rejected-workflows/方案B_大字主图.png",
+      "public_sha256": "ab0e822d7e348a75b5990f85f5ef7f087f0f16287232fd783863ba76793a4b5e",
+      "public_bytes": 499339,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/方案B_大字主图.svg",
+      "source_sha256": "20d969829c3f27631e8bc55c42e1fcf4526de8306a38060ab6fc4af0fed2f998",
+      "source_bytes": 11607,
+      "public_file": "history/rejected-workflows/方案B_大字主图.svg",
+      "public_sha256": "20d969829c3f27631e8bc55c42e1fcf4526de8306a38060ab6fc4af0fed2f998",
+      "public_bytes": 11607,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图1_核心与资产职责.png",
+      "source_sha256": "0f5a15f34f075f248d2b763f1e3c82bde9a10c62d44eb9531710e86d3342a066",
+      "source_bytes": 296313,
+      "public_file": "history/rejected-workflows/详图1_核心与资产职责.png",
+      "public_sha256": "0f5a15f34f075f248d2b763f1e3c82bde9a10c62d44eb9531710e86d3342a066",
+      "public_bytes": 296313,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图1_核心与资产职责.svg",
+      "source_sha256": "38529740860bdd7365964b77e0db104f8f8e1c4d5f930530e89bac985f55e8f7",
+      "source_bytes": 3862,
+      "public_file": "history/rejected-workflows/详图1_核心与资产职责.svg",
+      "public_sha256": "38529740860bdd7365964b77e0db104f8f8e1c4d5f930530e89bac985f55e8f7",
+      "public_bytes": 3862,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图2_七种类型技能.png",
+      "source_sha256": "9dea509af31700511603660a84b9f489d2f58ded89bd3faed210bc689e10c107",
+      "source_bytes": 263417,
+      "public_file": "history/rejected-workflows/详图2_七种类型技能.png",
+      "public_sha256": "9dea509af31700511603660a84b9f489d2f58ded89bd3faed210bc689e10c107",
+      "public_bytes": 263417,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图2_七种类型技能.svg",
+      "source_sha256": "d626f8fe06f3b2c23db70436369267c3af37ac285aa4493a91799a4f472e9f3b",
+      "source_bytes": 4400,
+      "public_file": "history/rejected-workflows/详图2_七种类型技能.svg",
+      "public_sha256": "d626f8fe06f3b2c23db70436369267c3af37ac285aa4493a91799a4f472e9f3b",
+      "public_bytes": 4400,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图3_专项视觉与外部组合.png",
+      "source_sha256": "3b782b35d2bcc9141834bfb58fd4db95765b5e1110e68c488554f5432177b8c0",
+      "source_bytes": 256059,
+      "public_file": "history/rejected-workflows/详图3_专项视觉与外部组合.png",
+      "public_sha256": "3b782b35d2bcc9141834bfb58fd4db95765b5e1110e68c488554f5432177b8c0",
+      "public_bytes": 256059,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图3_专项视觉与外部组合.svg",
+      "source_sha256": "9a587c69adfdd294fa6a1246ffaf35079f96483038e5cf47aaad8baac1bce839",
+      "source_bytes": 3180,
+      "public_file": "history/rejected-workflows/详图3_专项视觉与外部组合.svg",
+      "public_sha256": "9a587c69adfdd294fa6a1246ffaf35079f96483038e5cf47aaad8baac1bce839",
+      "public_bytes": 3180,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图4_生产编排与辅助技能.png",
+      "source_sha256": "052858dd75f23e269ee01cdb29f95cdd670edbd789b53f6d33d1aa251c3d78c9",
+      "source_bytes": 356544,
+      "public_file": "history/rejected-workflows/详图4_生产编排与辅助技能.png",
+      "public_sha256": "052858dd75f23e269ee01cdb29f95cdd670edbd789b53f6d33d1aa251c3d78c9",
+      "public_bytes": 356544,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图4_生产编排与辅助技能.svg",
+      "source_sha256": "7d91f93f1339779ee6c6c44055f542f7192e16f88fbcf2bb5417b5b0bd1e48ea",
+      "source_bytes": 4392,
+      "public_file": "history/rejected-workflows/详图4_生产编排与辅助技能.svg",
+      "public_sha256": "7d91f93f1339779ee6c6c44055f542f7192e16f88fbcf2bb5417b5b0bd1e48ea",
+      "public_bytes": 4392,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图5_A与B检查差异.png",
+      "source_sha256": "6e21769c689ebd5601e5b9c70e405d0c4199c405efdd9bb54991a88298eb4b17",
+      "source_bytes": 374389,
+      "public_file": "history/rejected-workflows/详图5_A与B检查差异.png",
+      "public_sha256": "6e21769c689ebd5601e5b9c70e405d0c4199c405efdd9bb54991a88298eb4b17",
+      "public_bytes": 374389,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图5_A与B检查差异.svg",
+      "source_sha256": "45070164ae93515d6cc151152551b68018c38defd31ad383bac846c6c930d8c4",
+      "source_bytes": 6059,
+      "public_file": "history/rejected-workflows/详图5_A与B检查差异.svg",
+      "public_sha256": "45070164ae93515d6cc151152551b68018c38defd31ad383bac846c6c930d8c4",
+      "public_bytes": 6059,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图6_用户测试与正式准入.png",
+      "source_sha256": "814b3c634cf6ab87e2713798095f20912d84085509e04cab3f4fd10cda2a9042",
+      "source_bytes": 356722,
+      "public_file": "history/rejected-workflows/详图6_用户测试与正式准入.png",
+      "public_sha256": "814b3c634cf6ab87e2713798095f20912d84085509e04cab3f4fd10cda2a9042",
+      "public_bytes": 356722,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "rejected_workflow_history",
+      "source_file": "工作流图/淘汰_大字分页版/详图6_用户测试与正式准入.svg",
+      "source_sha256": "44c4c6ce3b81867490941ba4d2bfb9849ec559cd29b57e5b1e7c006b331c6aa4",
+      "source_bytes": 7083,
+      "public_file": "history/rejected-workflows/详图6_用户测试与正式准入.svg",
+      "public_sha256": "44c4c6ce3b81867490941ba4d2bfb9849ec559cd29b57e5b1e7c006b331c6aa4",
+      "public_bytes": 7083,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "revision2/packages/manifest.json",
+      "source_sha256": "3d9a4c07d475add6196105f699a1463f79a96b5c9a0a7e23c70f597aa7b3818e",
+      "source_bytes": 42092,
+      "public_file": "frozen-packages/manifest.json",
+      "public_sha256": "d03a273ff68765a13814ade7580b425fdd3f3924c238d02b91cb88548f314f38",
+      "public_bytes": 43165,
+      "byte_preserved": false,
+      "adaptations": [
+        "json_serialization_for_public_copy"
+      ],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "revision2/packages/方案A_无Jev.zip",
+      "source_sha256": "e44274b7a33b18f086d5be866d05f64c0cde58ab25c71d77db872717cd17b55a",
+      "source_bytes": 708628,
+      "public_file": "frozen-packages/方案A_无Jev.zip",
+      "public_sha256": "e44274b7a33b18f086d5be866d05f64c0cde58ab25c71d77db872717cd17b55a",
+      "public_bytes": 708628,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "revision2/packages/方案A_无Jev.zip.sha256",
+      "source_sha256": "ea35904de7c623348348307466d4ccf1059344b2ef9d13357f8fcea9e6ecbe47",
+      "source_bytes": 86,
+      "public_file": "frozen-packages/方案A_无Jev.zip.sha256",
+      "public_sha256": "ea35904de7c623348348307466d4ccf1059344b2ef9d13357f8fcea9e6ecbe47",
+      "public_bytes": 86,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "revision2/packages/方案B_Jev辅助复核.zip",
+      "source_sha256": "2286df18ed7740d5a6d48ee3fefe189397ee503b66a8ac9a9c4244ba118ae3e3",
+      "source_bytes": 716033,
+      "public_file": "frozen-packages/方案B_Jev辅助复核.zip",
+      "public_sha256": "2286df18ed7740d5a6d48ee3fefe189397ee503b66a8ac9a9c4244ba118ae3e3",
+      "public_bytes": 716033,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "revision2/packages/方案B_Jev辅助复核.zip.sha256",
+      "source_sha256": "ae184922f08442399214538431c03bf7683d3d52ddb2aab377f89ac0a435c3e1",
+      "source_bytes": 95,
+      "public_file": "frozen-packages/方案B_Jev辅助复核.zip.sha256",
+      "public_sha256": "ae184922f08442399214538431c03bf7683d3d52ddb2aab377f89ac0a435c3e1",
+      "public_bytes": 95,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "test_or_research_snapshot"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "方案A_无Jev.zip",
+      "source_sha256": "f589e543f4743385e5dbef3026b8d589da53b454c39fbec73f97f313d48caae3",
+      "source_bytes": 730967,
+      "public_file": "history/frozen-5.7.0/方案A_无Jev.zip",
+      "public_sha256": "f589e543f4743385e5dbef3026b8d589da53b454c39fbec73f97f313d48caae3",
+      "public_bytes": 730967,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "existing_distribution_artifacts_not_new_compression",
+      "source_file": "方案B_Jev辅助复核.zip",
+      "source_sha256": "6ac666e3a7f2af428b8bdc9af23cca21244e28ed373dbba8576e8cdeb6e52903",
+      "source_bytes": 738620,
+      "public_file": "history/frozen-5.7.0/方案B_Jev辅助复核.zip",
+      "public_sha256": "6ac666e3a7f2af428b8bdc9af23cca21244e28ed373dbba8576e8cdeb6e52903",
+      "public_bytes": 738620,
+      "byte_preserved": true,
+      "adaptations": [],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "root_explanations_public_adaptation_needed",
+      "source_file": "README.md",
+      "source_sha256": "8a96defd5df2a34ee822acf41c750d24da2b04820ab31a28b9723b9db220d32d",
+      "source_bytes": 1717,
+      "public_file": "history/root-explanations/README.md",
+      "public_sha256": "6201fef4495af4123310a8d85a16fe8657fec0d561cdf9f808750a53f3db057c",
+      "public_bytes": 2035,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "local_only_link_replaced_by_explanatory_text",
+        "private_credential_provenance_removed",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "root_explanations_public_adaptation_needed",
+      "source_file": "USER_TEST.md",
+      "source_sha256": "bdb696d60b7c1e6c79b0967ebde8451d70ea838190337f91c81c6729aefbacc9",
+      "source_bytes": 3682,
+      "public_file": "history/root-explanations/USER_TEST.md",
+      "public_sha256": "4ddf70fadb4be2153bef736092b284e8f1d65e13271447c224498c2ce7d8ef9a",
+      "public_bytes": 4048,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "historical_or_rejected"
+    },
+    {
+      "source_group": "root_explanations_public_adaptation_needed",
+      "source_file": "VERIFICATION.md",
+      "source_sha256": "c79c1fdeb2825df7fdf350e61f32e165e6c9730232f3016f01dd24fe181c693f",
+      "source_bytes": 4721,
+      "public_file": "history/root-explanations/VERIFICATION.md",
+      "public_sha256": "4e16ac787bbe129d1d31e451737f05ed48778be08e1d84e47b21cb9478117ca2",
+      "public_bytes": 5152,
+      "byte_preserved": false,
+      "adaptations": [
+        "historical_time_context_added",
+        "inline_file_reference_mapped",
+        "private_credential_provenance_removed",
+        "public_link_mapping",
+        "public_text_serialization_and_line_endings"
+      ],
+      "identity": "historical_or_rejected"
+    }
+  ],
+  "derived_files": [
+    {
+      "public_file": "frozen-packages/index.md",
+      "sha256": "0724942a7af0b9a0784d8f565c7a73a801d619050c4bc13e3c7939d64f0f2e3e",
+      "bytes": 748,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "fusion/index.md",
+      "sha256": "b23b7b1dfe555baccc5a9d6ab2f997da3176a42dfd91f46439ee645a1f72e73a",
+      "bytes": 1923,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "history/creative-trial/index.md",
+      "sha256": "fbf25cdc1ca47c715033bfd8e10cc2022da454d70eb6b8db49af5fef4995ed9f",
+      "bytes": 936,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "history/early-workflows/index.md",
+      "sha256": "1b7e55cce544b9cb36e10de2497a76653359430bf325ea24523b4a21d0f858bb",
+      "bytes": 684,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "history/frozen-5.7.0/index.md",
+      "sha256": "110906fda1d3f9c82644a67269369236813616ae3778d7fae2d0e9692035cfa5",
+      "bytes": 367,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "history/index.md",
+      "sha256": "865cc404746cc0f6a7c5d65baad1509e59bb6a8b57a79cedfeed41c3110b346b",
+      "bytes": 481,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "history/rejected-workflows/index.md",
+      "sha256": "a59fee2567e03d880b60de364dbfacbb0a067f9ef2c5102a9edd6559e2fc65d3",
+      "bytes": 1705,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "history/root-explanations/index.md",
+      "sha256": "47cc46533b5a18fab5ea6289d88ae4f7fc1ebf440cd24d01035e87b3973c835b",
+      "bytes": 485,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "index.md",
+      "sha256": "8d79cd889f3588caf1959d3f03bebaf91536fc29b53587ce984546666c185abd",
+      "bytes": 2424,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "revision2/index.md",
+      "sha256": "e392ad4588151dedc931f98415c8e16d6fd82459177ac1adfff3b633ad84d5db",
+      "bytes": 1186,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "seven-genres/index.md",
+      "sha256": "957df716792fd3549fc52d2e43a52105ed5262ec04ea683f2ea7fa02bec33b36",
+      "bytes": 3260,
+      "role": "public_navigation_and_context"
+    },
+    {
+      "public_file": "workflows/active-a.svg",
+      "sha256": "2aabd8ac9d18264b32093692f3a82029f992636fcd3c56003f1805fbfa579ce6",
+      "bytes": 53198,
+      "role": "current_public_projection"
+    },
+    {
+      "public_file": "workflows/index.md",
+      "sha256": "dd0da57776e3f468eea408738d4a20bcf672dbea83f8d3b13ca61b793702b1aa",
+      "bytes": 1400,
+      "role": "public_navigation_and_context"
+    }
+  ],
+  "privacy": "Private credential provenance and local input/client paths removed or mapped; no local state or rollback configuration published.",
+  "binary_policy": "PNG, existing ZIP, historical SVG and SHA files preserve source bytes; no new ZIP compression."
+}

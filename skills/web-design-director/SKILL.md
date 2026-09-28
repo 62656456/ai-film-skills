@@ -1,6 +1,8 @@
 ---
 name: web-design-director
 description: Design, implement, or review websites and application interfaces through product-specific visual direction, information architecture, interaction design, responsive behavior, accessibility, and verified frontend execution. Use for 网页设计、网站设计、界面设计、UI/UX、页面布局、前端视觉、交互设计、设计系统、响应式 and interface work on dashboards, workbenches, asset libraries or landing pages. Mere mentions of these surfaces, file/catalog management, backend-only work, README or repository updates, and maintenance of this skill do not request interface design or deployment.
+metadata:
+  version: "1.3.0"
 ---
 
 # Web Design Director

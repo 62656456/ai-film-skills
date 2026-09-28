@@ -1,6 +1,6 @@
 # produce-ai-video — qualified final video production
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | A full production and validation contract; with the required host tools and permissions, an actual reviewed final video. |
 | Cannot claim alone | Installing the Skill alone does not supply models, credits, rights, editing tools, or a qualified video. |
@@ -40,8 +40,8 @@ A full production and validation contract; with the required host tools and perm
 <!-- contract:workflow -->
 ## 5. Workflow
 
-1. Lock source, acceptance, permissions, and mode; interpret the script and make director decisions.
-2. Design shot groups and use `ai-storyboard-director` for the downstream shot and prompt contract.
+1. Enter only for an actual video request. Reuse the current director plan, storyboard and approvals; fill only missing execution decisions.
+2. Preserve the selected shot design and use this package's own compiler; no companion Skill is required.
 3. Choose a generation route, create genuine motion, edit, build sound, and render the real final file.
 4. Watch the whole render at least twice: once for story/emotion, once for technical and continuity defects.
 5. Repair blocking failures and deliver with the honest status `qualified`, `candidate`, or `unfinished/needs validation`.
@@ -71,7 +71,7 @@ A full production and validation contract; with the required host tools and perm
 <!-- contract:outputs -->
 ## 9. Outputs
 
-- An actual playable final video plus its exact status and delivery path.
+- The actual playable film, single shot or video test requested, with its verified scope and status.
 - Only the necessary supporting artifacts and a concise record of review, repairs, rights, and remaining limits.
 
 <!-- contract:boundaries -->
@@ -79,6 +79,7 @@ A full production and validation contract; with the required host tools and perm
 
 - Installing this method does not grant video models, paid credits, music rights, voice rights, or publishing authority.
 - Never describe a storyboard, prompt, generated clip, edit timeline, or unreviewed render as the finished film.
+- Creative ideas, workflow tests and requests to see text-stage results do not authorize generation; a single-shot video test stays within its explicit scope.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use

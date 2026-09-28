@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3080" height="2740" viewBox="0 0 1540 1370"><title>详图5_A与B检查差异</title>
+<rect x="0" y="0" width="1540" height="1370" rx="0" fill="#F8FAFC" stroke="#F8FAFC" stroke-width="2.5"/>
+<rect x="35" y="180" width="1470" height="103" rx="16" fill="#EEF3FB" stroke="#1D4ED8" stroke-width="2.5"/>
+<rect x="35" y="408" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#B84F15" stroke-width="2.5"/>
+<rect x="35" y="579" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#B84F15" stroke-width="2.5"/>
+<rect x="35" y="750" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#B84F15" stroke-width="2.5"/>
+<rect x="35" y="921" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#B84F15" stroke-width="2.5"/>
+<rect x="800" y="408" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#087F83" stroke-width="2.5"/>
+<rect x="800" y="579" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#087F83" stroke-width="2.5"/>
+<rect x="800" y="750" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#087F83" stroke-width="2.5"/>
+<rect x="800" y="921" width="705" height="134" rx="16" fill="#FFFFFF" stroke="#087F83" stroke-width="2.5"/>
+<rect x="25" y="1140" width="1490" height="143" rx="16" fill="#FCEFF0" stroke="#B12635" stroke-width="2.5"/>
+<polyline points="387.5,542 387.5,579" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="387.5,579 394.0,566.0 381.0,566.0" fill="#B84F15"/>
+<polyline points="387.5,713 387.5,750" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="387.5,750 394.0,737.0 381.0,737.0" fill="#B84F15"/>
+<polyline points="387.5,884 387.5,921" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="387.5,921 394.0,908.0 381.0,908.0" fill="#B84F15"/>
+<polyline points="1152.5,542 1152.5,579" fill="none" stroke="#087F83" stroke-width="4" />
+<polygon points="1152.5,579 1159.0,566.0 1146.0,566.0" fill="#087F83"/>
+<polyline points="1152.5,713 1152.5,750" fill="none" stroke="#087F83" stroke-width="4" />
+<polygon points="1152.5,750 1159.0,737.0 1146.0,737.0" fill="#087F83"/>
+<polyline points="1152.5,884 1152.5,921" fill="none" stroke="#087F83" stroke-width="4" />
+<polygon points="1152.5,921 1159.0,908.0 1146.0,908.0" fill="#087F83"/>
+<text x="35" y="95.32000000000001" font-family="Microsoft YaHei,sans-serif" font-size="61" font-weight="700" fill="#10233B">详图5｜A与B到底差在哪里</text>
+<text x="35" y="151.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">同一原文、同一初稿、同一锁定条件；B只增加可选文字复核。</text>
+<text x="60" y="252.16" font-family="Microsoft YaHei,sans-serif" font-size="43" font-weight="700" fill="#10233B">共同起点：主模型按原文自检 + 本地确定性核对</text>
+<text x="60" y="381.24" font-family="Microsoft YaHei,sans-serif" font-size="52" font-weight="700" fill="#B84F15">A｜不使用Jev</text>
+<text x="820" y="381.24" font-family="Microsoft YaHei,sans-serif" font-size="52" font-weight="700" fill="#087F83">B｜可选Jev复核</text>
+<text x="53" y="470.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#B84F15">检查实际内容</text>
+<text x="53" y="529.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">原意、空间、摄影、环境</text>
+<text x="53" y="641.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#B84F15">程序核对</text>
+<text x="53" y="700.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">已声明对白与时间区间</text>
+<text x="53" y="812.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#B84F15">定位具体问题</text>
+<text x="53" y="871.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">判断最早失效的环节</text>
+<text x="53" y="983.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#B84F15">局部修复后再查</text>
+<text x="53" y="1042.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">保住未涉及的内容</text>
+<text x="818" y="470.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#087F83">先完成与A相同的自检</text>
+<text x="818" y="529.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">不跳过原文和本地检查</text>
+<text x="818" y="641.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#087F83">需要且允许外发时</text>
+<text x="818" y="700.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">核实凭证与调用边界</text>
+<text x="818" y="812.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#087F83">Jev小批量文字窄问</text>
+<text x="818" y="871.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">支持／违反／证据不足</text>
+<text x="818" y="983.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#087F83">主流程复核并修订</text>
+<text x="818" y="1042.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">不让模型评分直接批准</text>
+<text x="47" y="1201.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="700" fill="#B12635">Jev只接收文字，不直接看图、听音或看视频。</text>
+<text x="47" y="1259.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#B12635">缺凭证、调用失败、证据不足，都不能伪装为通过。</text>
+<text x="40" y="1350.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">两版都不能替你验收；B当前真实调用仍待凭证和实测。</text>
+</svg>

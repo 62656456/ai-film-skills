@@ -1,6 +1,6 @@
 # ai-short-drama-production — short-drama control contracts
 
-| Status | Packaged; not deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts. |
 | Cannot claim alone | It does not require a companion package: its director, asset, genre, prompt, and QC rules are rewritten as local short-drama modules, while actual image/video generation still needs the host's media tools and permissions. |
@@ -43,7 +43,7 @@ Production-control orchestration and gap auditing for existing decisions, includ
 1. Obtain current director and beat decisions; do not recreate them with a generic formula.
 2. Preserve approved assets; label unresolved assets as candidates for text design, and require the applicable asset review before actual generation.
 3. Create blocking, lighting, action, and sketch-to-shot control contracts only where needed.
-4. Compile a five-column storyboard and one six-module master prompt for the requested total duration; preserve locked formats, cuts, camera paths, dialogue and timing.
+4. Compile the requested control contract, readable storyboard or six-module prompt; provide both storyboard and prompt only when requested, preserving all locks.
 5. Distinguish coherent candidate text (`ready_for_prompt`) from approved assets and verified execution conditions (`ready_for_generation`); inspect actual media after generation.
 
 <!-- contract:returns -->
@@ -63,7 +63,7 @@ Production-control orchestration and gap auditing for existing decisions, includ
 <!-- contract:pass -->
 ## 8. Pass standard and states
 
-- The requested artifact is complete; timing, actions, camera and user locks can be reconstructed from its final text, with ten information categories covered inside six modules.
+- The requested artifact is complete and preserves timing, action and user locks; only prompt delivery uses six modules with applicable information coverage.
 - Text readiness, generation readiness, actual video review and user acceptance are separate states.
 
 > A pass below means this module's stated gates were met. Structural validity, real-task evidence, and user acceptance remain separate states.
@@ -78,7 +78,8 @@ Production-control orchestration and gap auditing for existing decisions, includ
 ## 10. Boundaries, dependencies, and permissions
 
 - It can organize approved decisions or audit missing controls by itself; it does not copy every directing, asset, genre, generation, or QC capability into one module.
-- This package's independent handoff was aligned with the 5.6.0 format on 2026-09-07 and retains a five-column storyboard plus a six-module prompt. It has not adopted 5.6.4's single fused output or its persistence engine. That historical alignment does not establish deployment or actual-video acceptance.
+- The standalone handoff follows the current delivery stage: storyboard or prompt, both only when requested. It retains its own production controls without importing another package's state engine.
+- Offer creative shot ideas as separate text choices with story purpose, visible process, handoff and tradeoffs. Adoption changes only the selected design and never authorizes generation by itself.
 
 <!-- contract:agents -->
 ## 11. Cross-Agent use

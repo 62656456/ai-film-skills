@@ -8,7 +8,7 @@
 | 色彩逻辑 | 下方类型表与 `independent-production-core.md` | 色彩关系和区域分配；不补造具体色值 |
 | 导演参考 | `independent-production-core.md` 的可观察判断 | 只取镜头、空间、光线、动作和声音方法 |
 | 转化、质检、反例 | `control-contracts.md` 与本 Skill 质量门 | 参数化铁律、假电影感检查、反面案例 |
-| 结构表达 | 当前 Skill 的六类内部合同与 `production-handoff.md` | 默认五列人读＋六模块外层；数字10仅作内部覆盖，保留用户合法锁定结构 |
+| 结构表达 | 当前 Skill 的六类内部合同与 `production-handoff.md` | 按请求交分镜或六模块提示词，两者都要才分别交；数字10仅作内部适用性覆盖，保留用户锁定结构 |
 | 错误库 | 当前 Skill 的回炉层级 | 失败回到最早责任层 |
 
 ## 本次已核验类型条目

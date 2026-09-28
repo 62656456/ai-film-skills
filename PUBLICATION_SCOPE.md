@@ -2,47 +2,69 @@
 
 ## Current source inventory
 
-The current source tree contains **18 regular packages and 3 opt-in experimental packages: 21 modules, with 42 generated English / Simplified Chinese guides**. The regular complete-studio archive includes only the 18 packages under `skills/`. Individual builds additionally include the three packages under `experimental/`.
+The source tree contains **18 regular packages and 3 opt-in experimental packages: 21 modules, with 42 generated English / Simplified Chinese guides**. The regular complete-studio distribution includes the 18 packages under `skills/`; the three `experimental/` packages retain their explicit opt-in boundary.
 
-The 21 repository modules comprise 20 filmmaking modules and one web-interface helper. The [complete workflow](docs/WORKFLOW.md) also lists the external `xianxia-visual-director`, giving 21 filmmaking responsibilities plus one web helper. The external entry does not increase repository package or guide counts.
+The 21 repository modules comprise 20 filmmaking modules and one web-interface helper. The [complete workflow](docs/WORKFLOW.md) also links the external `xianxia-visual-director`, giving 21 filmmaking responsibilities plus one web helper without adding its source to this repository.
 
-Included material consists of authored Skill instructions and local runtime resources, public documentation and diagrams, build/install/validation tooling, and authorized original demonstration media. Human guides explain each module; runtime authority remains its `SKILL.md` and package-local resources.
+Included material consists of authored Skill instructions and package-local resources, public documentation and diagrams, build/install/validation tooling, and authorized original demonstration media. Human guides explain each module; runtime authority remains its `SKILL.md` and package-local references. Storyboard, prompt, creative-idea and actual-media requests retain separate delivery stages according to the current task.
 
-The [September 21 source audit](docs/research/SOURCE_INVENTORY.md) accounts for all 21 packages, current synchronization and deliberate public-package adaptations. The short-drama controller retains its independent five-column storyboard plus six-module prompt contract, established against 5.6.0 on 2026-09-07; it has not adopted the storyboard module's 5.6.4 single fused output.
+The [September 21 source audit](docs/research/SOURCE_INVENTORY.md) remains a dated record. The [September 29 overhaul research](docs/research/skill-overhaul/index.md) records the later workflows, comparison designs, test images, review limits and known repairs. Later activation does not rewrite what a historical test proved.
 
-Personal and commercial permissions for original and clearly owner-generated content are explained in [Commercial use and copyright](COMMERCIAL_USE.md). That explanation preserves the existing Apache 2.0 LICENSE and does not grant rights to excluded external source or clear arbitrary inputs. Third-party file notices retain their own scope.
+Original personal and commercial permissions are explained in [Commercial use and copyright](COMMERCIAL_USE.md). The existing Apache 2.0 LICENSE and third-party file notices retain their respective scopes.
 
-## Source, release, and preview
+## Authorized public research and media
 
-- Current `skills/ai-storyboard-director/` source is 5.6, selected for daily use by the maintainer's user.
-- Public Release **v1.3.0** is a historical distribution snapshot containing Storyboard Director **5.4.4** and the older inventory. Its ZIPs are not rewritten by a source update.
-- The separately labeled 5.6 standalone Preview remains a distinct artifact. Its label does not rename the current source entry or imply a new complete-studio Release.
-- This documentation update does not by itself publish a new Release. Read the actual source ref and archive manifest before installation.
+### Seven-genre, three-version storyboard study
 
-`hard-sci-fi-visual-director` and `whitebox-previs-executor` stay under `experimental/` and outside default complete-studio installation. Experimental distribution is not a denial of recorded successful examples: hard-science-fiction has user-accepted images, while previs has bounded camera/blocking and contact-gate evidence. Neither establishes universal reliability or arbitrary complete-fight support.
+The [seven-genre study](docs/research/skill-overhaul/seven-genres/index.md) contains seven original stories, 21 thirty-second storyboard plans with 149 shots, 21 first-round image boards, generation instructions and image-review findings. The [viewer](docs/research/skill-overhaul/seven-genres/viewer.html) lets readers compare versions by story. Original first-round results are preserved rather than replaced with later successful attempts.
 
-## Authorized public media
+These 21 boards are **not an aesthetically accepted batch**. The recorded review contains 29 definite or scope-limited repair observations affecting 15 boards; six boards had no confirmed hard conflict found in that review, which is not a pass. Still frames do not establish camera-motion execution, action continuity, speech delivery or a completed video. The comparison is not a strict blind test or a quantitative ranking of skill versions.
 
-The primary [showcase](docs/showcase/manifest.json) contains 21 previously accepted outputs: 19 generated stills and two original interface screenshots. Their full aspect ratios are preserved. The public manifest records provenance, versions and review boundaries without copying private task histories or local runtime paths.
+A and B share a creative core. B's optional Jev calls evaluate text requirements; their results do not establish pixel review or aesthetic approval. Model responses, usage and public test text may be published after removing private credential-source context and local-machine paths. Credentials themselves are excluded.
 
-The older [style gallery](docs/style-gallery/manifest.json) and [previs evidence](docs/media/media-manifest.json) remain historical records with their own original status. They are not silently reclassified as part of the 21 accepted outputs. No old-version same-prompt A/B comparison was performed; do not claim a measured before/after improvement.
+The [workflow diagrams](docs/research/skill-overhaul/workflows/index.md) and [same-story fusion research](docs/research/skill-overhaul/fusion/index.md) retain their selected, candidate and historical distinctions. The user's adoption of the direct live-character final shot is a specific design decision, not acceptance of every shot or the entire suite.
 
-## Excluded
+### Previously accepted showcase
+
+The primary [showcase](docs/showcase/manifest.json) contains a separate set of **21 previously accepted outputs: 19 generated stills and two original interface screenshots**. Their full aspect ratios, original PNGs and original acceptance scope remain available. This accepted-art batch is distinct from the 21 new storyboard test boards and was not originally an old/new same-prompt A/B study.
+
+The older [style gallery](docs/style-gallery/manifest.json) and [previs evidence](docs/media/media-manifest.json) remain historical records with their own original status. They are not silently reclassified as new accepted tests.
+
+### Earlier visual and previs research
+
+The [September 21 research pages](docs/RESEARCH.md) preserve 26 original image candidates, seven experimental/comparison showcases with eight MP4 files, source prompts, editable previs projects and a file-level media inventory. Their publication does not promote a candidate or rejected experiment into accepted production material. Third-party voice/music in the composed comparison retain the separate [media notice](docs/research/whitebox/MEDIA_LICENSE.md).
+
+Rejected workflow layouts and superseded experiments may be retained as clearly labeled history, outside the default current-results view. Backups of the maintainer's machine are not research artifacts.
+
+## Excluded private and third-party material
 
 - `sci-fi-design`: retired and not restored.
-- [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director): external upstream whose README does not grant verified redistribution permission; link only, no copied source or ZIP.
+- [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director): external upstream without verified source redistribution permission; link only, no copied source or ZIP.
 - Third-party reference images, course material, film stills or screenshots without verified redistribution rights.
-- System, connector and plugin Skills outside this authored project; private projects, client work, local runtime state, credentials, private reviews and caches.
+- System, connector and plugin Skills outside this authored project; private projects, client work, credentials, private conversation history, local runtime state and caches.
+- Raw local baseline, capture, activation and rollback snapshots; absolute user-machine paths and private credential-recovery provenance.
 - Third-party `frontend-design` source: not republished as original work.
 
-The former separate storyboard motion-lab entry remains retired. Its useful camera-design concepts belong in the single storyboard entry, not a second automatically loaded Skill.
+Public research copies use repository-relative references and retain the relevant source/output hashes. Local governance manifests remain local. Removing a local path does not permit editing a historical result or upgrading its acceptance status.
+
+The former separate storyboard motion-lab entry remains retired. Its useful camera-design concepts belong to the single storyboard entry.
 
 ## Languages and evidence
 
 Repository entry pages exist in English, Simplified Chinese, Japanese and Korean. All 21 per-module guides are available in English and Simplified Chinese, 42 pages total; Japanese and Korean are overview pages only.
 
-Structural validity, successful loading, actual task results, media review and explicit user acceptance are separate evidence. Three different accepted real tasks are needed before the maintainer labels a Skill practice-validated. Packaging, CI, file creation and internal review cannot manufacture that state. Accepted images remain accepted examples; they do not prove stable output across all models or hosts.
+Structural validity, successful loading, actual task results, media review and explicit user acceptance are separate evidence. Three different accepted real tasks are needed before the maintainer labels a Skill practice-validated. Packaging, CI, publication and internal review do not manufacture that state. Previously accepted images remain accepted examples without proving stable output across all models or hosts.
 
-## September 21 research addition
+Hard-science-fiction, whitebox previs and guofeng retain their experimental distribution status. Existing accepted hard-science-fiction images and bounded previs examples keep their original success scopes; they do not establish arbitrary complete-fight support or final-video reliability.
 
-The [research pages](docs/RESEARCH.md) add 26 original image candidates, seven experimental/comparison showcases (eight MP4 files), source prompts and a file-level media inventory. They are authorized for research publication in this update; publication does not turn a candidate or rejected experiment into accepted production material. All previous showcase and historical media files remain available. The new guofeng 0.1.1 source remains experimental. Third-party voice/music in the composed comparison retain the separate [media notice](docs/research/whitebox/MEDIA_LICENSE.md).
+## 2026-09-29 activation and version update
+
+**A5.7.1 is selected as the default through the user's direct, explicit activation instruction. B5.7.1-jev remains optional text review.** This activation is a use decision, not an aesthetic pass for the first-round boards or an assertion that all 21 modules are practice-validated. Known image-repair observations remain published.
+
+The update clarifies independent creative ideas, stage-specific storyboard/prompt delivery, inheritance of approved directing decisions, and story-driven shot timing. It publishes the workflow, comparison and fusion records together with their limits. See the [overhaul research](docs/research/skill-overhaul/index.md) and [release workflow](docs/RELEASE_WORKFLOW.md) for the current source and evidence boundaries.
+
+- Current `skills/ai-storyboard-director/` source is **A5.7.1**.
+- The “current 5.6.5” labels inside the study identify the default at test time; original boards are not relabeled as A outputs.
+- Public Release **v1.3.0** remains a historical distribution snapshot containing Storyboard Director **5.4.4**. Source changes do not rewrite its ZIPs.
+- The separately labeled **5.6 standalone Preview** remains its own artifact and does not imply a new complete-studio Release. See [installation/version selection](docs/INSTALLATION.md).
+- Publishing updated source does not by itself create a new Release. Install from the intended branch/commit and verify the actual Skill version and archive manifest.

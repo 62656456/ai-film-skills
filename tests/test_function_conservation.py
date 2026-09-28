@@ -70,7 +70,10 @@ class FunctionConservationTests(unittest.TestCase):
         self.assertIn("user's own material within the current authorized task", entry)
         self.assertIn("public or otherwise unauthorized repositories", entry)
         self.assertIn("approved `DIRECTOR_PLAN`", workbench)
-        self.assertIn("outside this Skill's entrypoint", workbench)
+        # An approved plan may use the local compiler when this package must
+        # deliver independently; it no longer requires an external entrypoint.
+        self.assertIn("production-storyboard-compiler.md", workbench)
+        self.assertTrue((ROOT / "skills/director-agent/references/production-storyboard-compiler.md").is_file())
         self.assertIn("已有获批的 `DIRECTOR_PLAN`", storyboard)
         self.assertIn("静态场景参考图", knowledge_map)
 

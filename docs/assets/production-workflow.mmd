@@ -8,18 +8,20 @@ flowchart TB
     S --> D["导演方案<br/>director-agent<br/>表演·视觉概念·声音·剪辑"]
     S -. "明确需要时" .-> X["AI执行剧本编译<br/>director-agent 的条件模式"]
     D --> V["按需选择视觉风格<br/>赛博朋克·史诗·奇幻·恐怖·黑色<br/>爱情·战争·武侠·仙侠·硬科幻·古风"]
-    V --> A["人物／场景／道具资产<br/>character-asset · scene-asset · prop-asset<br/>图片提示词 → 生成参考图 → 审阅锁定"]
+    V --> A["人物／场景／道具资产<br/>character-asset · scene-asset · prop-asset<br/>按请求交设计／提示词或参考图<br/>图片经用户审阅后锁定"]
     A -. "需要调整时" .-> V
-    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.6"]
+    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.7.1"]
     A --> B
     X --> B
-    B <--> R["5.6 保存与恢复<br/>导演意图·已选镜头·场景状态"]
-    B --> P["一条融合六段镜头母稿<br/>第六段镜头时间轴·十项内部核对"]
-    P -. "需要先看空间与节奏时" .-> PRE["3D白模预演<br/>whitebox-previs-executor"]
+    B <--> R["保存与恢复<br/>导演意图·已选镜头·场景状态"]
+    B -. "需要创意思路时" .-> C["创意镜头文字候选<br/>观看过程·作用·取舍<br/>不自动生成或写入主方案"]
+    C -. "用户明确采用后局部合并" .-> B
+    B --> P["按请求交分镜或提示词<br/>分镜可读设计·提示词六模块"]
+    P -. "明确要求实际白模预演时" .-> PRE["3D白模预演<br/>whitebox-previs-executor"]
     PRE -. "修改机位或节奏" .-> B
-    PRE --> G["实际视频生成<br/>produce-ai-video 统筹制作<br/>调用视频模型与生成工具"]
-    P --> G
+    PRE -. "已明确要求实际视频时" .-> G["实际视频生成<br/>produce-ai-video 统筹制作<br/>调用视频模型与生成工具"]
+    P -. "明确要求实际视频时" .-> G
     G --> E["选片·剪辑·对白／音效／音乐"]
     E --> Q["完整播放审查与修复"]
     Q --> F["用户验收与成片交付"]
-    T -. "专项编排，尚未部署" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>五列分镜＋六模块母提示词"]
+    T -. "专项编排，尚未部署" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>按请求分镜或六模块提示词"]

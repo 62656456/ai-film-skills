@@ -24,21 +24,24 @@ This is not a claim that those projects are locally installed or fully adopted. 
 
 ## Core Principle
 
-Never one-shot a film project, but do not force a fixed production pipeline onto pure screenplay writing. Choose the path by task:
+Choose only the rooms needed by the requested artifact and reuse decisions already supplied. A project workflow does not require every room on every turn. Choose the path by task:
 
 ```text
 Pure script creation or repair:
 Project facts when needed -> bundled Writer Room -> state/causality audit -> cold-read protocol with honest evidence label -> readable screenplay
 
 Director design for an approved script:
-Approved screenplay -> Director Room -> Asset Bible -> Scene Board
+Approved screenplay -> missing Director Room decisions -> requested director plan
 
-Production storyboard owned by this Skill only while director decisions are unresolved:
-Approved screenplay + newly completed DIRECTOR_PLAN -> Asset Bible -> Scene Board -> Shot Board -> handoff
+Explicit storyboard request:
+Approved screenplay + existing/new DIRECTOR_PLAN -> storyboard handoff
+Self-contained fallback when needed -> necessary anchors and scene decisions -> Shot Board
 ```
 
 Do not send a screenplay with unresolved causal or dialogue blockers downstream to Director Room or Shot Board.
-If the user already has an approved `DIRECTOR_PLAN` and asks only for shot expansion, do not rebuild, reinterpret, or route that request through this workbench. Preserve the approved plan and hand the task to the matching storyboard-production entrypoint when one is available.
+If the user already has an approved `DIRECTOR_PLAN` and asks only for shot expansion, preserve it and use the matching storyboard entrypoint when available. If this Skill must deliver independently, use `production-storyboard-compiler.md` without rebuilding the workbench or changing approved decisions.
+
+For creative-shot or transition ideas, use `director-thinking-spine.md` to provide concrete text candidates beside the main plan. The user decides whether to incorporate a candidate; selection is not permission to generate media. Do not send an ideas-only task to the Asset Bible, Animatic or Generation rooms.
 
 ## Workbench Rooms
 
@@ -168,6 +171,8 @@ Hard gate: a scene may end unresolved, but it may not end unchanged. The next sc
 
 Purpose: prepare a complete director package for shot production or visual preproduction.
 
+Shot descriptions, board images and playable animatics are distinct artifacts. Use text to check the planned sequence during storyboard work; create images or a timed animatic only when that medium is requested. A note about a possible animatic is not an executed test.
+
 For each shot candidate:
 
 - Board ID.
@@ -190,6 +195,8 @@ Storyboarder-inspired check:
 - Does any shot require a hidden cut inside one generated clip?
 
 ### 8. Generation Handoff
+
+Activate this room only when the user requests generation prompts or an authorized workflow reaches video generation. A storyboard-only request ends with the human-readable Shot Board. Prompt preparation is text work; tool submission needs the current request to authorize the corresponding media. Unselected creative candidates are excluded from the main production handoff.
 
 Purpose: make downstream production possible.
 
@@ -264,7 +271,7 @@ When the user asks to create a director Agent workflow, project workflow, or reu
 - If only one scene is being handled and project continuity matters, use a lightweight version of the relevant room; otherwise deliver the requested scene directly.
 - If the user wants pure writing and not production, use Writer Room only. Add Director Room only when the user also asks for interpretation, staging, performance, sound, edit, or visual design.
 - For pure screenplay requests, keep internal state ledgers out of the delivered reading copy unless the user asks to inspect them.
-- If the user wants full分镜 and the director layer is unresolved, complete Project/Director/Asset/Scene/Shot cards first and include the complete shot-production constraint block in the same package. If an approved `DIRECTOR_PLAN` already exists and only shot expansion is requested, stop at the handoff boundary and do not regenerate those cards.
+- If the user wants full分镜, complete only missing director decisions, preserve the selected plan and deliver the human-readable Shot Board through the available storyboard entrypoint or bundled compiler fallback. Do not attach a generation-prompt template or the full workbench unless requested.
 
 ## Anti-Overbuild Rule
 
@@ -273,5 +280,6 @@ Do not force the full workbench on tiny requests.
 - One screenplay scene: Writer Room only; add project facts only when continuity depends on them.
 - Rewrite one paragraph: Writer Room only unless the user explicitly asks for a director note.
 - Full short film / short drama / sequence requested as pure writing: Writer Room + state audit + cold-read protocol. Use `INDEPENDENT COLD READ` only when an explicitly available and allowed fresh reader or isolated context satisfies the protocol; otherwise label it `SELF-AUDIT ONLY`.
-- Full production design for a short film / short drama / sequence: full workbench.
-- Production分镜 with unresolved director decisions: full workbench through Shot Board, then AG-CLIP handoff. Approved-plan shot expansion is outside this Skill's entrypoint.
+- Full production design for a short film / short drama / sequence: cover the requested stages with the necessary rooms, inheriting completed decisions; show the full workbench only when requested.
+- 分镜 with unresolved director decisions: complete the missing director decisions, then hand off or use the bundled storyboard fallback. Generation handoff is a separate stage.
+- Creative-shot ideas: concrete text candidates and their story function; no asset generation, platform setup or animatic requirement.

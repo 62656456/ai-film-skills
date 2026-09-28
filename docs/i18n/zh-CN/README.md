@@ -2,41 +2,59 @@
 
 # 开放影视技能｜Open Film Skills
 
-**从点子与剧本，到导演、资产、镜头、提示词、视频和实际验收。**
+**从故事、导演与资产，到具体镜头、生成提示词和实际制作。**
 
 [完整中文主页](../../../README.md) · [English](../../../README.md#english-overview) · [日本語](../ja/README.md) · [한국어](../ko/README.md)
 
 </div>
 
-![完整AI影视工作流](../../assets/workflow-overview.svg)
+## 1. 技能介绍与完整工作流程
 
-[完整流程图、原始Mermaid和职责表](../../WORKFLOW.md) · [21张用户接受视觉成果](../../../README.md#本轮21张用户接受视觉成果) · [21模块目录](../../../SKILL_CATALOG.md) · [42份中英指南](../../skills/INDEX.md)
+这套技能把影视创作分成能直接使用的结果：剧本与对白、导演方案、人物场景道具、视觉方向、分镜摄影、提示词、按需预演、实际生成与完整看片。点子、小说、剧本、图片和已定镜头都能作为输入；已有成果从对应阶段继续。
 
-## 当前源码与发布快照
+当前源码包含 **18项常规＋3项实验＝21个独立模块**，配有42份中英指南。工作流另列外部仙侠，合计21项影视职责＋1项网页辅助；外部入口不增加源码包数量。
 
-本仓库当前源码含 **18项常规＋3项实验＝21个独立模块**，对应42份英文/简体中文指南。21个模块中有20项影视技能和1项网页辅助；工作流另列外部仙侠，因此共21项影视职责＋1项网页辅助，外部项不计入源码包和指南数。
+![A方案完整技能工作流程：入口、职责、交接物和返回路径](../../research/skill-overhaul/workflows/active-a.svg)
 
-- 当前分镜源码为 **5.6**，已选择日常使用；明确作品目录时保存恢复导演意图、选中镜头与场景状态。
-- [公开v1.3.0 Release](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0)仍是含 **5.4.4** 的历史快照，不因源码改变而更新。
-- 另行标记的5.6独立Preview有自己的范围，不等于新完整套装Release。
+[完整工作流与方案关系](../../research/skill-overhaul/workflows/index.md) · [三套流程并排总图](../../research/skill-overhaul/workflows/compare-all.svg) · [逐节点职责](../../WORKFLOW.md)
 
-本轮说明源码刷新，不声称已发布新Release。[安装版本选择](../../INSTALLATION.md)
+创意思路、可读分镜、视频提示词与实际媒体分别交付。采用创意后才并入主方案；查看分镜不自动授权实际生成，最终视频需要完整播放、修复和用户验收。
 
-## 按结果选入口
+## 2. 功能、实现目的与实际成果
 
-| 结果 | Skill |
+| 要完成的事 | 直接入口 |
 |---|---|
-| 可读剧本、对白修订或导演方案 | [director-agent](../../skills/zh-CN/director-agent.md) |
-| 分镜、摄影设计和完整母提示词 | [ai-storyboard-director](../../skills/zh-CN/ai-storyboard-director.md) |
-| 人物、场景和道具参考 | [character-asset](../../skills/zh-CN/character-asset.md)、[scene-asset](../../skills/zh-CN/scene-asset.md)、[prop-asset](../../skills/zh-CN/prop-asset.md) |
-| 八种类型、硬科幻或仙侠方向 | [类型目录](../../../SKILL_CATALOG.md#genre-visual-language)、[硬科幻实验](../../skills/zh-CN/hard-sci-fi-visual-director.md)、[外部仙侠](https://github.com/liyue-aigc/xianxia-visual-director) |
-| 生成前看3D机位与基础走位 | [whitebox-previs-executor](../../skills/zh-CN/whitebox-previs-executor.md)，实验包 |
-| 实际生成、剪辑、声音和完整看片 | [produce-ai-video](../../skills/zh-CN/produce-ai-video.md) |
-| 选题研究、批准后知识写入、网页工作台 | [完整目录](../../../SKILL_CATALOG.md#production-product-and-research) |
+| 写剧本、改对白、梳理人物行动和导演方案 | [director-agent](../../skills/zh-CN/director-agent.md) |
+| 设计人物、场景、道具与可复用状态 | [人物](../../skills/zh-CN/character-asset.md) · [场景](../../skills/zh-CN/scene-asset.md) · [道具](../../skills/zh-CN/prop-asset.md) |
+| 设计观看顺序、摄影调度和完整提示词 | [分镜与摄影](../../skills/zh-CN/ai-storyboard-director.md) |
+| 按题材设计光色、材料、尺度与构图 | [全部类型](../../../SKILL_CATALOG.md#genre-visual-language) · [硬科幻实验](../../skills/zh-CN/hard-sci-fi-visual-director.md) · [外部仙侠](https://github.com/liyue-aigc/xianxia-visual-director) |
+| 生成前查看3D机位、视差与基础走位 | [白模实验包](../../skills/zh-CN/whitebox-previs-executor.md) |
+| 组织真实生成、剪辑、声音与看片返修 | [produce-ai-video](../../skills/zh-CN/produce-ai-video.md) |
+| 市场研究、批准后知识写入、网页创作工具 | [完整21技能目录](../../../SKILL_CATALOG.md) |
 
-已有材料从对应阶段继续，不要求每次重做全流程。短剧控制器已封装但未部署，五列分镜与单条六模块母提示词已对齐当前5.6交付结构；文本样本最终通过，实际视频仍待验证。
+[查看全部21个独立技能及用途](../../../README.md#全部21个独立技能) · [42份中英指南](../../skills/INDEX.md)
 
-## 安装当前检出的源码
+### 七题材三版：21张首轮分镜测试图
+
+七个新故事分别设计30秒分镜，得到21套方案、149镜和21张实际图片。测试时默认5.6.5、A5.7.1、B5.7.1-jev的原稿、图像、生成说明和逐图问题全部保留。
+
+| 测试时默认5.6.5 | A5.7.1 | B5.7.1-jev |
+|---|---|---|
+| [![悬疑首轮分镜：测试时默认5.6.5](../../research/skill-overhaul/seven-genres/images/01-suspense-current.png)](../../research/skill-overhaul/seven-genres/images/01-suspense-current.png) | [![悬疑首轮分镜：A5.7.1](../../research/skill-overhaul/seven-genres/images/01-suspense-a.png)](../../research/skill-overhaul/seven-genres/images/01-suspense-a.png) | [![悬疑首轮分镜：B5.7.1-jev](../../research/skill-overhaul/seven-genres/images/01-suspense-b.png)](../../research/skill-overhaul/seven-genres/images/01-suspense-b.png) |
+
+[按题材切换高清三版](../../research/skill-overhaul/seven-genres/viewer.html) · [七题材全部21图与审查报告](../../research/skill-overhaul/seven-genres/index.md)
+
+**这批尚未获整批审美通过。** 15张包含明确或限定范围的待修观察，共29条；其余6张本轮未发现可确认硬冲突，也不视作通过。A/B共享创作核心，B只增加可选文字核对；Jev没有直接检查这些图片像素。图像模型造成的偏差、文本设计和技能版本能力分别判断。
+
+### 同题融合与既有研究
+
+![修表铺外融合候选分镜：用户已选直接真人末镜，其余决定与效果分别待验](../../research/skill-overhaul/fusion/fusion-storyboard.png)
+
+[旧版、A、修订和融合过程](../../research/skill-overhaul/fusion/index.md) · [全部整改研究](../../research/skill-overhaul/index.md)
+
+此前的[21张已接受作品](../../../README.md#本轮21张用户接受视觉成果)包含19张原创静帧和2张LUMEN界面截图，与本次21张分镜测试是不同批次。原接受范围和原始PNG继续可查。另保留[26张视觉研究候选](../../research/visual/index.md)、[白模与实际生成对照](../../research/whitebox/index.md)和[研究结论](../../RESEARCH.md)，不把有限预演写成任意完整打斗或最终AI成片。
+
+### 安装与使用
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
@@ -46,18 +64,26 @@ python scripts/install_skill.py --list
 python scripts/install_skill.py ai-storyboard-director --platform codex
 ```
 
-安装前检查所选分支/提交与Skill版本。未推送本地更新不会自动出现在公共默认分支。其他宿主、历史ZIP、实验包主动安装及覆盖边界见[安装指南](../../INSTALLATION.md)和[兼容说明](../../COMPATIBILITY.md)。完整文件夹可读不等于每个宿主已原生加载或实际运行。
+安装前核对分支、提交与Skill版本。先请求可读分镜；要提示词时，再明确编译同一方案；实际生图、视频与预演按任务单独授权。
 
-## 实际成果与方法边界
+[完整安装方式](../../INSTALLATION.md) · [宿主兼容边界](../../COMPATIBILITY.md) · [源码与公开范围](../../../PUBLICATION_SCOPE.md) · [许可](../../../LICENSE)
 
-本轮21张视觉成果均经用户接受，包括19张原创生成静帧和2张原创网页原型截图；主页按原比例展示并提供原始PNG，[清单](../../showcase/manifest.json)保留逐图证据。没有旧版同题A/B，不声称量化提升、全题材稳定或跨设备真人可用性。
+外部仙侠只链接上游，没有已核实再分发许可时不复制源码。文件存在、内部检查、真实执行和用户接受分别记录。
 
-新增画面关系方法先看观看重点，再设计明暗、色彩、材质与空间。它不把暖光、浅景深、霓虹、磨损或前景人物当通用要求；二维动画、三维动画与摄影写实分别选择负向。单图请求不自动变多格，只有文本时不假称像素验收。
+## 3. 版本更新内容
 
-白模只证明已实现代理和已过动作门的预演解释，不证明任意完整打斗或视频模型将生成相同画面。5.6记录程序不评审美。最终视频仍需实际生成、完整播放、修复和用户验收。
+### 2026-09-29：A5.7.1明确启用
 
-## 来源与许可
+依据用户本轮直接、明确的启用授权，**A5.7.1设为默认方案，B5.7.1-jev保留为可选文字复核方案**。启用属于使用决定，不代表新21张测试图审美通过，已知29条观察仍公开保留。
 
-外部仙侠只列[上游链接](https://github.com/liyue-aigc/xianxia-visual-director)，没有已核实再分发许可，因此不复制源码或进入ZIP。本仓库原创内容按[Apache License 2.0](../../../LICENSE)分发；参考媒体和私人项目不随包发布。
+本次更新重点是创意思路独立交付、分镜与提示词按阶段衔接、保留已有导演决定、取消预定镜数和类型固定切片，并公开工作流、融合过程和逐图问题。[完整更新与测试资料](../../research/skill-overhaul/index.md)
 
-[审核总则](../../SKILL_DESIGN_SYSTEM.md) · [分发范围](../../../PUBLICATION_SCOPE.md) · [反馈](https://github.com/62656456/ai-film-skills/issues)
+| 版本入口 | 范围 |
+|---|---|
+| [当前源码A5.7.1](../../../skills/ai-storyboard-director/SKILL.md) | 默认方案；本轮明确授权启用，审美验收与已知待修另列 |
+| B5.7.1-jev | 同一创作核心，可选Jev文字核对，不代替看图 |
+| 测试图中的5.6.5 | 实验开始时的默认版本，保留历史标签和原始输出 |
+| [v1.3.0 Release](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | 含5.4.4的旧发布快照，不随源码变化重写 |
+| 5.6独立Preview | 独立预览范围，见[安装版本说明](../../INSTALLATION.md)，不等同于当前源码或新完整Release |
+
+源码更新与创建Release分别进行。内部21包结构核对、质量门、文本试用和回归记录按原执行范围公开，不能据此宣称整套技能实战稳定。[检查方式](../../SEMANTIC_REVIEW.md) · [部署与回退](../../RELEASE_WORKFLOW.md)

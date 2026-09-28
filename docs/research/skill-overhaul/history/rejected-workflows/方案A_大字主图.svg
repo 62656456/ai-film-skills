@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3080" height="2820" viewBox="0 0 1540 1410"><title>方案A_大字主图</title>
+<rect x="0" y="0" width="1540" height="1410" rx="0" fill="#F8FAFC" stroke="#F8FAFC" stroke-width="2.5"/>
+<rect x="25" y="180" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="405" y="180" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="785" y="180" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="1165" y="180" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="1165" y="450" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="785" y="450" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="405" y="450" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="25" y="450" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="25" y="930" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="405" y="930" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="785" y="930" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="1165" y="930" width="350" height="190" rx="16" fill="#FFFFFF" stroke="#16733E" stroke-width="2.5"/>
+<rect x="25" y="690" width="350" height="150" rx="16" fill="#FFFFFF" stroke="#16733E" stroke-width="2.5"/>
+<rect x="1035" y="690" width="480" height="150" rx="16" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2.5"/>
+<rect x="25" y="1160" width="1490" height="140" rx="16" fill="#EAF3EE" stroke="#16733E" stroke-width="2.5"/>
+<polyline points="375,275.0 405,275.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="405,275.0 392.0,268.5 392.0,281.5" fill="#B84F15"/>
+<polyline points="755,275.0 785,275.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="785,275.0 772.0,268.5 772.0,281.5" fill="#B84F15"/>
+<polyline points="1135,275.0 1165,275.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="1165,275.0 1152.0,268.5 1152.0,281.5" fill="#B84F15"/>
+<polyline points="1165,545.0 1135,545.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="1135,545.0 1148.0,551.5 1148.0,538.5" fill="#B84F15"/>
+<polyline points="785,545.0 755,545.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="755,545.0 768.0,551.5 768.0,538.5" fill="#B84F15"/>
+<polyline points="405,545.0 375,545.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="375,545.0 388.0,551.5 388.0,538.5" fill="#B84F15"/>
+<polyline points="375,1025.0 405,1025.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="405,1025.0 392.0,1018.5 392.0,1031.5" fill="#B84F15"/>
+<polyline points="755,1025.0 785,1025.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="785,1025.0 772.0,1018.5 772.0,1031.5" fill="#B84F15"/>
+<polyline points="1135,1025.0 1165,1025.0" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="1165,1025.0 1152.0,1018.5 1152.0,1031.5" fill="#B84F15"/>
+<polyline points="1340.0,370 1340.0,450" fill="none" stroke="#B84F15" stroke-width="4" />
+<polygon points="1340.0,450 1346.5,437.0 1333.5,437.0" fill="#B84F15"/>
+<polyline points="960,450 960,435 200,435 200,450" fill="none" stroke="#1D4ED8" stroke-width="4" stroke-dasharray="13 9"/>
+<polygon points="200,450 206.5,437.0 193.5,437.0" fill="#1D4ED8"/>
+<polyline points="200.0,640 200.0,690" fill="none" stroke="#16733E" stroke-width="4" />
+<polygon points="200.0,690 206.5,677.0 193.5,677.0" fill="#16733E"/>
+<polyline points="25,595 9,595 9,1025 25,1025" fill="none" stroke="#B84F15" stroke-width="4" stroke-dasharray="13 9"/>
+<polygon points="25,1025 12.0,1018.5 12.0,1031.5" fill="#B84F15"/>
+<polyline points="580,640 580,664 1275,664 1275,690" fill="none" stroke="#1D4ED8" stroke-width="4" stroke-dasharray="13 9"/>
+<polygon points="1275,690 1281.5,677.0 1268.5,677.0" fill="#1D4ED8"/>
+<polyline points="1035,748 397,748 397,606 375,606" fill="none" stroke="#1D4ED8" stroke-width="4" stroke-dasharray="13 9"/>
+<polygon points="375,606 388.0,612.5 388.0,599.5" fill="#1D4ED8"/>
+<text x="35" y="95.32000000000001" font-family="Microsoft YaHei,sans-serif" font-size="61" font-weight="700" fill="#10233B">方案A｜无Jev的完整创作流程</text>
+<text x="35" y="151.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">按当前任务进入，只交付需要的阶段。虚线表示按需进入。</text>
+<text x="43" y="242.04000000000002" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">01 用户输入</text>
+<text x="43" y="301.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">故事／已有材料</text>
+<text x="43" y="352.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">从需要处开始</text>
+<text x="423" y="242.04000000000002" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">02 确定范围</text>
+<text x="423" y="301.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">本次交付范围</text>
+<text x="423" y="352.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">保住已定内容</text>
+<text x="803" y="242.04000000000002" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">03 剧本创作</text>
+<text x="803" y="301.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">人物目标因果</text>
+<text x="803" y="352.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">对白行动后果</text>
+<text x="1183" y="242.04000000000002" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">04 导演方案</text>
+<text x="1183" y="301.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">观众发现顺序</text>
+<text x="1183" y="352.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">表演声音节奏</text>
+<text x="1183" y="512.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">05 视觉资产</text>
+<text x="1183" y="571.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">类型世界外观</text>
+<text x="1183" y="622.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">人物场景道具</text>
+<text x="803" y="512.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">06 分镜设计</text>
+<text x="803" y="571.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">机位调度切镜</text>
+<text x="803" y="622.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">环境动作连续</text>
+<text x="423" y="512.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">07 提示词编译</text>
+<text x="423" y="571.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">保全既定设计</text>
+<text x="423" y="622.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">不重新导演</text>
+<text x="43" y="512.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">08 内容检查</text>
+<text x="43" y="571.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">主模型检查</text>
+<text x="43" y="622.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">对白时间核对</text>
+<text x="43" y="992.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">09 生成前确认</text>
+<text x="43" y="1051.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">资产工具规格</text>
+<text x="43" y="1102.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">权限成本可行</text>
+<text x="423" y="992.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">10 生成与后期</text>
+<text x="423" y="1051.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">素材筛选修复</text>
+<text x="423" y="1102.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">剪辑对白声音</text>
+<text x="803" y="992.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#10233B">11 连续回放</text>
+<text x="803" y="1051.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">真看画面听声</text>
+<text x="803" y="1102.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">问题局部返修</text>
+<text x="1183" y="992.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#16733E">12 作品验收</text>
+<text x="1183" y="1051.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">由你评判成品</text>
+<text x="1183" y="1102.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">不通过再修改</text>
+<text x="340" y="417.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#1D4ED8">只要分镜：直接到08</text>
+<text x="43" y="752.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#16733E">文本交付出口</text>
+<text x="43" y="811.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">核对后即交付</text>
+<text x="38" y="906.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#B84F15">实际视频才继续</text>
+<text x="1053" y="752.04" font-family="Microsoft YaHei,sans-serif" font-size="42" font-weight="700" fill="#1D4ED8">按需白模预演</text>
+<text x="1053" y="811.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#10233B">发现问题回分镜</text>
+<text x="464" y="720.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#1D4ED8">分镜／提示词后</text>
+<text x="464" y="822.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#1D4ED8">按需检查空间和节奏</text>
+<text x="47" y="1221.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="700" fill="#16733E">技能版本：你实际测试通过 → 核对版本 → 才升正式</text>
+<text x="47" y="1279.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="400" fill="#16733E">未通过就返修重测；正式后异常，可恢复备份。</text>
+<text x="35" y="1370.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">A/B仍为测试候选；当前默认5.6.5。完整技能职责见分区详图。</text>
+</svg>

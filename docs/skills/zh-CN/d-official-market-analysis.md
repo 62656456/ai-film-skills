@@ -1,6 +1,6 @@
 # d-official-market-analysis｜官方影视市场研究
 
-| 状态 | 已部署 |
+| 状态 | 当前源码为隔离整改候选；既有安装记录与用户接受另列。 |
 |---|---|
 | 单独可交付 | 由本包独立完成的来源计划、校验数据集、证据表、分析报告和单独标记的待批准记录。 |
 | 单独不能声称 | 离线时不能补造当前市场事实，报告完成也不授权语义层写入。 |
@@ -20,6 +20,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 - 只说当前公开可验证证据能支持的结论，推断与官方事实分开。
 - 每个结论都携带数据日期、统计周期、地区、平台、口径和来源等级。
 - 报告可以生成知识候选，但只有后续明确批准才能授权语义层写入。
+- 窄问题只使用相关证据与时窗，完整市场报告保留全部研究合同。
 
 <!-- contract:standalone -->
 ## 3. 适合单独使用的范围
@@ -103,6 +104,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 - [`references/connector-contract.md`](../../../skills/d-official-market-analysis/references/connector-contract.md)
 - [`references/data-contract.md`](../../../skills/d-official-market-analysis/references/data-contract.md)
 - [`references/evidence-and-sources.md`](../../../skills/d-official-market-analysis/references/evidence-and-sources.md)
+- [`references/full-market-research.md`](../../../skills/d-official-market-analysis/references/full-market-research.md)
 - [`references/platform-metrics.md`](../../../skills/d-official-market-analysis/references/platform-metrics.md)
 
 **确定性辅助脚本**

@@ -1,0 +1,1073 @@
+{
+  "artifacts": [
+    {
+      "bytes": 708628,
+      "file": "方案A_无Jev.zip",
+      "profile": "A",
+      "sha256": "e44274b7a33b18f086d5be866d05f64c0cde58ab25c71d77db872717cd17b55a",
+      "version": "5.7.1"
+    },
+    {
+      "bytes": 716033,
+      "file": "方案B_Jev辅助复核.zip",
+      "profile": "B",
+      "sha256": "2286df18ed7740d5a6d48ee3fefe189397ee503b66a8ac9a9c4244ba118ae3e3",
+      "version": "5.7.1-jev"
+    }
+  ],
+  "common_core_digest": "647c1f53a7d0f276a96516453720cc4cb5968323fca1f8708f3114777ee6e2c7",
+  "common_core_files": [
+    {
+      "path": "experimental/guofeng-visual-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/SKILL.md",
+      "sha256": "27a8ca643e319e5b6f432040140fdaaaa3b9460484231be05a423456b9a2cb94"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/agents/openai.yaml",
+      "sha256": "44181e8d5859de27acb9ba23aa2aaf3468cce9e44430e155b2bf421a31b3094f"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/references/cultural-grounding.md",
+      "sha256": "f671363b6aca4219c4401e2eeb4a40f471700da51ea5c44eebf134b9badf6d31"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/references/image-direction.md",
+      "sha256": "7b3ff35be23d3577957dbaf738f0d151ec39b7c6b61c93b1a6b0be1f25be7b9f"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/references/people-and-objects.md",
+      "sha256": "670fff5d0e55671218887a57004627a3c50491ac03930d1a6eb72c6ed356ceeb"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/references/prompt-and-review.md",
+      "sha256": "4b4a904c0b10001606f403d740a55b7cc4f2e199a517fc6581b118f80e9ab4fb"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/references/world-and-space.md",
+      "sha256": "28dff865e88416921a25fa2e9e019cf6ca38da4e3957c0d1a52a051d73e5172f"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/SKILL.md",
+      "sha256": "4d23f3476cba229a7671760790f2ccecbe8c5cb29070c57b0e7daace2d78ca8d"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/agents/openai.yaml",
+      "sha256": "1395f7bd587a668950a1dedc2622e311e272f69376fe1e0a4bbf8db330b48f23"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/aesthetic-audit.md",
+      "sha256": "f55944f8ec0e2f18746c4962ce18ff6cb3e886158cdae57c6f04e6f2a1fc75c1"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/cinematic-image-direction.md",
+      "sha256": "feff6dea5d12cf7da186967a5f3795b6f44d1ab66d0172ad862b774b5cce6631"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/combat-mecha-aesthetic.md",
+      "sha256": "e90238f7eb9e120b272c6277223d77de03897d23dbdb57f205ce35182ccc0b25"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/combat-mecha-form-direction.md",
+      "sha256": "3ee1e8140773cd7942115e7bd41410246e1a88156479adaf9f3da907e47e04de"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/full-design-workflow.md",
+      "sha256": "5a6e27ca839d74f83334c337bdcfa08cb35c7a63ce707a3c38fe135c52d9c821"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/future-interface-systems.md",
+      "sha256": "fc64a0a1a1b017ec1d1831cbea8f75b059b60f1d65496fc19476856b8c922f6d"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/future-weapon-systems.md",
+      "sha256": "5e911ac7a7b8eb0abb6b97c618de8e5a772617589c8806137f8b218d39a356a3"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/inspiration-engine.md",
+      "sha256": "d32564a3117833b36e06666f9e2f6fdacb013aa750b36eb0ff9ade6f85adffe8"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/live-action-cinematography.md",
+      "sha256": "0d1432bd7707c82f1950432255a547bf76f13d1284863328317c439b3d5815a0"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/mecha-and-megafauna.md",
+      "sha256": "972de5094aa3fab690a440ee0a3abd186477f076a0564cef7e0229ff02a405e2"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/organism-and-ecology.md",
+      "sha256": "aedcb70d5ac6241f6764ef3e2462eda15d9d52efa46751a7fb21b03234fa4d51"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/physics-and-engineering.md",
+      "sha256": "2747e654c904111951663417c249e2fac67cfd764883194c6ea2a0f4cf2ec900"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/production-design.md",
+      "sha256": "744abfbcb0edb978e5cae9db17c2453f7c50299fdfd54def203a95c4fb2861d9"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/prompt-examples.md",
+      "sha256": "831d9e6128e5640ea28530235838a65311735b00d25e4e332722c166e176a26b"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/scene-routes.md",
+      "sha256": "2c34afee79d3ce5473bce4288b5682d49df52674202f46d88ad4141c14a71ed0"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/scene-world-design.md",
+      "sha256": "4018d1f91efa5fb5c76f30a68f745bfeb6fbdb94e4f9d42dedc1c363f72130ac"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/script-to-visual-derivation.md",
+      "sha256": "7a94606e55672e0e2b1087cbc758bcc193663c125cd828fbf4d418b20fdf5b0d"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/style-color-system.md",
+      "sha256": "f33d776e20d3a093a79ed78b6a3b5b56635400b3a0cbe27e203d83b5f14659b7"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/references/visual-continuity.md",
+      "sha256": "fdc5a4ec468172b4f11c7b615a0e47454bd9384887e54296339df436c40abc46"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/SKILL.md",
+      "sha256": "d8e8d0b9d6f0a8b7d448ad692960c4d4b552b6ebc2484d25f597c5d6ebc9e93e"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/agents/openai.yaml",
+      "sha256": "00951818c7f5f6c07f17b4a7cc5f452323a7edbd58da713ed6c01ed1edfc7ce2"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/assets/sample-previs.json",
+      "sha256": "e3f68de5d64c8938e34f1359f4fc3067d42600f26202597cdf426298e5ede5f6"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/references/previs-spec.md",
+      "sha256": "4b281a1db6499baf1fd5ca4a068588da833ade6dcec697f3ca42030f1b8858dd"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/references/prompt-to-previs.md",
+      "sha256": "51698311efa6894f5dbaba31ab56094be012e89cbae01ecc14404f8e25b57d84"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/blender_previs_adapter.py",
+      "sha256": "9f6324340de0a18f36dfbc1c5751746eb8798d60ec082248be6040a2d79cfcda"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/blender_rigged_fight_adapter.py",
+      "sha256": "b815c9f9e6136c0edf031ee5b4c74bfc67b9aaac6e8c09951ad8e693bf30f97e"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/render_previs.py",
+      "sha256": "035b2e44536265240dae04ae3d5a8fc6b74595b0aac904573b8eaa8b7a16c020"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/run_blender_previs.py",
+      "sha256": "c58806d662fe0414fcdb0d2a50af77d300285fea358157159c3b4bfeb74db77f"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/run_blender_rigged_fight.py",
+      "sha256": "4cf7edcb4d93288065a1c8fc75437ce6a77a7a6414d58344c194931c5d3bac59"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/validate_compiled_previs.py",
+      "sha256": "81e03ae93c0560859c8b7f74c3fe6e6d849d5e47dac5b7c04b3b245b8b96634d"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/scripts/validate_spec.py",
+      "sha256": "39e08ab46b4d3d633285ed873654ec674a9e3124453c8b76c480a6c7d8130f44"
+    },
+    {
+      "path": "skills/ai-short-drama-production/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/ai-short-drama-production/SKILL.md",
+      "sha256": "e7f96f45fecf5b2a69bf0d9a4ba0584a3dc40b339c0222828267c58927aadc00"
+    },
+    {
+      "path": "skills/ai-short-drama-production/agents/openai.yaml",
+      "sha256": "17ca325ec1c223ec612dde3ab17d85c07854707d2b1b843dc224e3f2c79be686"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/SOURCE-LEDGER.md",
+      "sha256": "8ec37bf31991c54a93527492d401731cdfdbed0543120cf90f779939c27a9396"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/control-contracts.md",
+      "sha256": "b2d927298d5b266e0c08ab75466dc0c5b49fce1f38898af10abe4443fb1e8f89"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/independent-production-core.md",
+      "sha256": "9f2c3e37d499d31a0abe429d49b1cd8ff9e029278a187c1c2fcd9370065b89a2"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/production-handoff.md",
+      "sha256": "774dab18be6959efcff42a800ea94381b95239e7290cc9fb9821cb19eb7f88bc"
+    },
+    {
+      "path": "skills/ai-storyboard-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/ai-storyboard-director/SKILL.md",
+      "sha256": "87dbcd2a3de4d5fd49626229e405e9e51f8efd1308f57c945ce87e977b018749"
+    },
+    {
+      "path": "skills/ai-storyboard-director/agents/openai.yaml",
+      "sha256": "73d8a32f0ce54e81595d314d6b38fc50a6c04ff9db6add1c3f525bc8e374b274"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/camera-motion-diagnostics.md",
+      "sha256": "d1c3efe9f94a531b624636826d72d140dcf43a05ba0b4b43f490e67699ebbaf7"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/cinematography-design-engine.md",
+      "sha256": "5ccaec2900c481cbb04aee4777f36fec89da4a69ced61afecb64ab11e92031f8"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/creative-shot-ideas.md",
+      "sha256": "fcf17e77cf7fa984391d1bf702d7a0c1f8457ee99693bf075f7e1587564a4f29"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/delivery-mode-guard.md",
+      "sha256": "ecdb147704a41d34ec7d4ad4c0cd3a14e0ba783f0f8ff1441031671a49f9ab93"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/design-memory-protocol.md",
+      "sha256": "ce49c470e31fa56cec7cebcd8a0640d902a8ef2f0386a1362da6ac0a67325e02"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/fight-design.md",
+      "sha256": "1a1f7fe2579fdd6da8e1b5ca6f4838b9b10929f5d75199e6abddebd509ac5d30"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/fight-reference-case.md",
+      "sha256": "04f4bc1e7e069ad8bdc72c402f349f5bbf0b4ec33e304ae741f2fb25ac745ce0"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/framing-and-axis.md",
+      "sha256": "95d59767391e7f58e67a0fcb15f4a25d2b05ff6558da1c8c667262669b2b11fb"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/production-contract.md",
+      "sha256": "b2a8ab33eeb5259b2bda8962f9f873766020303aba26694ef4195f4a28751fd0"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/shot-design-engine.md",
+      "sha256": "b5528028a33ca0cb3f404ef4587917c8a46a743fa466aee33c69fb43576d0991"
+    },
+    {
+      "path": "skills/ai-storyboard-director/scripts/design_memory.py",
+      "sha256": "3ad69d03fd24bd916f887539da803979187d599314d5e2bbdc5a6ee899f54c8b"
+    },
+    {
+      "path": "skills/character-asset/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/character-asset/SKILL.md",
+      "sha256": "d85791ded2d99b53aaa313423747d84c76166d4387e6ab67083100ddfdbd76b2"
+    },
+    {
+      "path": "skills/character-asset/agents/openai.yaml",
+      "sha256": "a7e8d276f3c726dac65f4e8afa535e5213effee2c820c76d03130da0510a9600"
+    },
+    {
+      "path": "skills/character-asset/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ec9ab1a23d45ce5592fbc30fcc458a794c2698e555a74ab58144d6bc9141bf67"
+    },
+    {
+      "path": "skills/character-asset/references/cinematic-image-direction.md",
+      "sha256": "7ff539ccf286fdfc90c3b6edc1785ae80ece779747941d1f8fb101886efbf1ce"
+    },
+    {
+      "path": "skills/character-asset/references/female-character-charm.md",
+      "sha256": "39313a6117c1ca615c01b8a1460a1bb40f415b58efc2d2fb94d4be3f155aaf19"
+    },
+    {
+      "path": "skills/cyberpunk-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/cyberpunk-design/SKILL.md",
+      "sha256": "202c57f7403ec950cc5fb6c9f551d77063ebd50e31f273769c899e75bc3031e1"
+    },
+    {
+      "path": "skills/cyberpunk-design/agents/openai.yaml",
+      "sha256": "8ac554e56378019c5e6bdd8a9b6804d6863e4c9ba582fcc92dea064e5db52350"
+    },
+    {
+      "path": "skills/cyberpunk-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/cyberpunk-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/cyberpunk-design/references/SOURCE-LEDGER.md",
+      "sha256": "d0dd20b3c8e7ea8bb26f970520cd3b97f96c3e4d263dce4e125b0c5e62e6bdc7"
+    },
+    {
+      "path": "skills/cyberpunk-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/cyberpunk-design/references/genre-presets.md",
+      "sha256": "bfa2b06e03571f2c5bb262884fe96a145228107646c62f700293b0da08e0495f"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/SKILL.md",
+      "sha256": "28a5c09121a006ab1a59ea37c360baad4179911b14311bb4e63950df1b40d93d"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/agents/openai.yaml",
+      "sha256": "6182dc1bfe82c2554f444478ec75361146174f834a61e4451169a0f5c77a6af4"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/evidence.md",
+      "sha256": "24d47a87bad4f907e40596e09215275d2b3c4c77fd62b344530249773640392c"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/records-v1.0.0.json",
+      "sha256": "30e87fd6a5351309559ee075197cdbb2a25578295da1fe088320fd51c4e28a0d"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/semantic-contract.md",
+      "sha256": "94f6fab1ad52a5f58cb4741e07a388c2b060a16ca56f200188754c45d0eb8307"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/semantic-layer.md",
+      "sha256": "653dd695b9532d7d2c49c4763d2884d7132e057202e2ea3b0bfbfb1a38eab28e"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/semantic-write-contract.md",
+      "sha256": "de7f09894b71c5dd9d4899095bd4b846a150fb018e14ac5c98ca832db8b26e53"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/source-inventory.md",
+      "sha256": "fd59b57a4feb95d45cb027ee40972c27e679257898e37a837452f1f468b717b8"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/references/versioning-and-expiry.md",
+      "sha256": "aa5632652bdef114698a0ebc1d7e7932ffca2cfe007923540caa5935977a7ecb"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/scripts/validate_candidate.py",
+      "sha256": "ed516fc1c29942e2ec80c347471ead1c8b2b7fae31c6dcff545357aa33954c4a"
+    },
+    {
+      "path": "skills/d-official-market-analysis/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/d-official-market-analysis/SKILL.md",
+      "sha256": "c998c6af52fb013260438a0528ca9a49bf2b07ce8c7fefa1ea8c9768f57da9b9"
+    },
+    {
+      "path": "skills/d-official-market-analysis/agents/openai.yaml",
+      "sha256": "cb9dfaa3f992b0078ddc3df2fefe2dd6ac537464ad75e9e39c3a00d487f47218"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/analysis-and-report.md",
+      "sha256": "c9711249aaf37e5ae581db720bcdbb524a11f79674088fda862f5343dc83bad2"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/analysis-capability-contract.md",
+      "sha256": "5bbbc1f51522c03d614c98b584f2275613e2843ef18eaa166827fcb800630964"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/connector-contract.md",
+      "sha256": "7d550fdb1e622cc3f9392e0dfd56a7e484e485673db0da798aea616dec5909bc"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/data-contract.md",
+      "sha256": "7f19814aeaf30a4657c241915b3d62fa44d76da2dd833404dcb19ecbf43112a9"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/evidence-and-sources.md",
+      "sha256": "5d3edc67b474516ab4ea6a54ef24c64d21ee3830c841cf979de286858f3aa520"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/full-market-research.md",
+      "sha256": "2e90d3086679b3189022166dd23e53da7bfd918790d6ecf05c8e7c6d85567bcd"
+    },
+    {
+      "path": "skills/d-official-market-analysis/references/platform-metrics.md",
+      "sha256": "2e964d2ed5ef76214f84071f48b4ff7a8fc135b834a6cbfbcdf1a044ccbbc543"
+    },
+    {
+      "path": "skills/d-official-market-analysis/scripts/validate_dataset.py",
+      "sha256": "05eb586fbebace8b571fa4cbd66858ae05ea054cd74b7acbd7715dfa404e1694"
+    },
+    {
+      "path": "skills/director-agent/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/director-agent/SKILL.md",
+      "sha256": "5d4b14f80cc54aa519a5dc2329d4069e67dbe7c18e0b10e503d4365bc3bac355"
+    },
+    {
+      "path": "skills/director-agent/agents/openai.yaml",
+      "sha256": "e6956681141cef7d251eb5399876e025728955c8b67a36545229fd817e1a8033"
+    },
+    {
+      "path": "skills/director-agent/references/anti-laziness-contract.md",
+      "sha256": "14c549b200d036f2f5bcb44b49f1706f327a1ad54030d50e64f56f4381d010da"
+    },
+    {
+      "path": "skills/director-agent/references/director-thinking-spine.md",
+      "sha256": "c80764e0e895ba93bd004f839d90db7f00859c97cf30d860272ef0227b5c91b9"
+    },
+    {
+      "path": "skills/director-agent/references/director-workbench-protocol.md",
+      "sha256": "5a4c8c481d54a4e8d5aef084153c07daeeef6a8ca31cca8d77c692f6d7072f14"
+    },
+    {
+      "path": "skills/director-agent/references/github-project-watchlist.md",
+      "sha256": "220f37a2caba945f2450f2b4e3cf857ad281e9f3533f6739209aec83d72b8c3e"
+    },
+    {
+      "path": "skills/director-agent/references/local-knowledge-map.md",
+      "sha256": "8b2398dfc1f2a0ec0287641fbd0b551780a6044ad03f42be6fa02514006b145f"
+    },
+    {
+      "path": "skills/director-agent/references/production-storyboard-compiler.md",
+      "sha256": "5c74c611d46ea7147eec6c981de226975e59365a225851dea48763e6a90ab001"
+    },
+    {
+      "path": "skills/director-agent/references/research-update-protocol.md",
+      "sha256": "2c77e05d880886122c8ea5f5987c3bc94d82d64076a4b75310e2436db9e2e4c7"
+    },
+    {
+      "path": "skills/director-agent/references/screenplay-ai-execution-compiler.md",
+      "sha256": "633059e1366c0e815732f42bc3069d951c4310ee7e2716f8cdad24a53a6e69a5"
+    },
+    {
+      "path": "skills/director-agent/references/screenplay-cold-read-protocol.md",
+      "sha256": "db7c432d04c935de73658df9381f92824dc9a489f08d7ce79d7981e3367d2f0c"
+    },
+    {
+      "path": "skills/director-agent/references/screenplay-exemplar-benchmarks.md",
+      "sha256": "55186c00e144bd1c8bdb1aaf147b966ddf06512e443b82b8ba2d8cbd55795d26"
+    },
+    {
+      "path": "skills/director-agent/references/screenplay-state-engine.md",
+      "sha256": "8ffa836f096e866a7652c71d8019d667b355b76a42e47f1a54ed5a2e44225332"
+    },
+    {
+      "path": "skills/director-agent/references/screenplay-writing-core.md",
+      "sha256": "9f59bc2c30d02cbaa85affe6a75c3cc0c764dc4c0e8c9f37ebd66f983d4080d1"
+    },
+    {
+      "path": "skills/director-agent/references/verified-director-logic.md",
+      "sha256": "b3802ec041ec5fb18cfcef575fcb7efb2a20a656defd74c4b72722df4e43da90"
+    },
+    {
+      "path": "skills/epic-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/epic-design/SKILL.md",
+      "sha256": "b73ddd4b29a56f8e53fa449ab3a00cfc4dfe2d211dca5886be8a93dbb26c3ea2"
+    },
+    {
+      "path": "skills/epic-design/agents/openai.yaml",
+      "sha256": "008a74f8bd15368034bb9deb8a10f627666b5b30587df701bca9490136df0c12"
+    },
+    {
+      "path": "skills/epic-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/epic-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/epic-design/references/SOURCE-LEDGER.md",
+      "sha256": "a3da489edbeb5648d63450c434712b2158ec44254df58dcaff12994420bf915f"
+    },
+    {
+      "path": "skills/epic-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/epic-design/references/genre-presets.md",
+      "sha256": "f34f1c3da561933ffdd0f772f027904e0648cfcfc4b834e912cfb09248ead8f7"
+    },
+    {
+      "path": "skills/fantasy-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/fantasy-design/SKILL.md",
+      "sha256": "4ff9920443c5409b837023b0dc58503386d7003498e2284218397c95fecf72d3"
+    },
+    {
+      "path": "skills/fantasy-design/agents/openai.yaml",
+      "sha256": "2be75e7795c4911e8243df0729f1d9c0af7539630e93cbbd7113cd912efc6ff6"
+    },
+    {
+      "path": "skills/fantasy-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/fantasy-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/fantasy-design/references/SOURCE-LEDGER.md",
+      "sha256": "2d8ad466e3ad58d64cc4ca5a87c9e838541014ff6779e4da8ee53741d8f4e737"
+    },
+    {
+      "path": "skills/fantasy-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/fantasy-design/references/genre-presets.md",
+      "sha256": "d6a9c71740307a82200d11cbe55315022171122b4e49755a52300b467168a421"
+    },
+    {
+      "path": "skills/horror-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/horror-design/SKILL.md",
+      "sha256": "959a31111d366fc040b00c19f5c62397c28beecdd9d47859a07599faf96a8c52"
+    },
+    {
+      "path": "skills/horror-design/agents/openai.yaml",
+      "sha256": "782cba2e767afba2fe5a28f26e2e215787877890717c7099f1bca5fa864219cf"
+    },
+    {
+      "path": "skills/horror-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/horror-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/horror-design/references/SOURCE-LEDGER.md",
+      "sha256": "1d49f247193c8ce9fce88125d71b8e10d21255ae0faee4fe1887eba1066a1b7c"
+    },
+    {
+      "path": "skills/horror-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/horror-design/references/genre-presets.md",
+      "sha256": "5a0f0f53f8e3a43208523d08e37fa184852d69b55fd278106d861e33a8342736"
+    },
+    {
+      "path": "skills/noir-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/noir-design/SKILL.md",
+      "sha256": "b10e3dac7965830cc5382f97ed9754f042a109f940b9cb3f8b6dfb016827fb8c"
+    },
+    {
+      "path": "skills/noir-design/agents/openai.yaml",
+      "sha256": "e9d7a240f84863e0473c85003d7b7cfd82904c05bc7984b438296ade98ad3ecf"
+    },
+    {
+      "path": "skills/noir-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/noir-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/noir-design/references/SOURCE-LEDGER.md",
+      "sha256": "91a6dffc36ffb892116d1b71ee2cd9d8e4a475ab3521e929615876edfa4d23aa"
+    },
+    {
+      "path": "skills/noir-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/noir-design/references/genre-presets.md",
+      "sha256": "c656919e071373102824ebfba627e57947a0193fef32dbeb96d4a67ccbf78db0"
+    },
+    {
+      "path": "skills/produce-ai-video/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/produce-ai-video/SKILL.md",
+      "sha256": "a77badae3557c45ee9e25972ef0fe37dbb4ee759351184c80c67febe98793d0c"
+    },
+    {
+      "path": "skills/produce-ai-video/agents/openai.yaml",
+      "sha256": "fda92e1f0ed9bebdd876e2c01139f836d94bcb83538aec71ad3f8fde0d28a1de"
+    },
+    {
+      "path": "skills/produce-ai-video/references/autonomous-production-workflow.md",
+      "sha256": "026c0d89981cfd79ac15424cda36762f722ff5c65a17e04d56a22a42dd756ad5"
+    },
+    {
+      "path": "skills/produce-ai-video/references/qualified-video-acceptance.md",
+      "sha256": "e5ebb6c978ca3b0ce56a339de218dfeb2e627ae4302159b25449b01fbde1ae60"
+    },
+    {
+      "path": "skills/produce-ai-video/references/storyboard-prompt-compiler.md",
+      "sha256": "a18a3fcf2b2f81df61909511cff2a5cc4c6fea70b9782a1006ac23b74193e7b8"
+    },
+    {
+      "path": "skills/prop-asset/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/prop-asset/SKILL.md",
+      "sha256": "8fc378d1782280ca0388e56f80409fa105826c690c87aeeda5b77e4cfa600b69"
+    },
+    {
+      "path": "skills/prop-asset/agents/openai.yaml",
+      "sha256": "a007a9763e7bbcc88cf05e5a5b492d9ad5621ef582b90425ece906ce0ce12520"
+    },
+    {
+      "path": "skills/prop-asset/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ec9ab1a23d45ce5592fbc30fcc458a794c2698e555a74ab58144d6bc9141bf67"
+    },
+    {
+      "path": "skills/prop-asset/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/romance-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/romance-design/SKILL.md",
+      "sha256": "c4cb7f2f34c6e50eab33bb233d7babf7bb00d07005a6afd107bc407a41a1502d"
+    },
+    {
+      "path": "skills/romance-design/agents/openai.yaml",
+      "sha256": "681960574f09fa1fbc9dde4f9d271e2a2c0af909eb4d61eb16797c843786ca5e"
+    },
+    {
+      "path": "skills/romance-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/romance-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/romance-design/references/SOURCE-LEDGER.md",
+      "sha256": "92cec944acd69654a2c545fd52e733659b0c0df0ef3c240a8d0a82e5bed2efec"
+    },
+    {
+      "path": "skills/romance-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/romance-design/references/genre-presets.md",
+      "sha256": "88dadcd10fd6e3d85a3c406caa7827aebca477143d1d66baf2edb3380ef94151"
+    },
+    {
+      "path": "skills/scene-asset/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/scene-asset/SKILL.md",
+      "sha256": "68ef6fdd37555f6eee9e8c926ebf44dc9b7df9d6054cb95d0fc319adaa6c6e12"
+    },
+    {
+      "path": "skills/scene-asset/agents/openai.yaml",
+      "sha256": "7ffb6718d97e5858e5070dbf6e1330a7118f817c372dcb43da6ebb2949c16084"
+    },
+    {
+      "path": "skills/scene-asset/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ec9ab1a23d45ce5592fbc30fcc458a794c2698e555a74ab58144d6bc9141bf67"
+    },
+    {
+      "path": "skills/scene-asset/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/war-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/war-design/SKILL.md",
+      "sha256": "b843af3ae7ea8aa131b3c61cb98d1decc57eb5c1d774a20c75e5e5106e6b6565"
+    },
+    {
+      "path": "skills/war-design/agents/openai.yaml",
+      "sha256": "4447956f49edbb2f72986dc9ecfc795416be385148071d1f9c29d0c917ac8e79"
+    },
+    {
+      "path": "skills/war-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "a10e10befb0053c10605cefb18641b67c334927c4428850ee7f60c5c1621258c"
+    },
+    {
+      "path": "skills/war-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "7b47f082fc7828c00ac75649a84f1251dced3478488e47adfd3af09afdbf992c"
+    },
+    {
+      "path": "skills/war-design/references/SOURCE-LEDGER.md",
+      "sha256": "c1dc80b71dae1e7f41966bb7e739ccadd6120bd10e7e671c5b599226412807da"
+    },
+    {
+      "path": "skills/war-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/war-design/references/combat-visual.md",
+      "sha256": "fc376342afdc938c851626e900f3aae309296671b6028a297610b52d0529e34d"
+    },
+    {
+      "path": "skills/war-design/references/sources.md",
+      "sha256": "419bb59ea83368f0fb731c585818852ed4a6b955fc85a6db51ad49db185b1c6e"
+    },
+    {
+      "path": "skills/war-design/references/squad-cinematography.md",
+      "sha256": "0365733761ab1c51d193f40c633143c32917f20a7386017db5405a1c698a4e4e"
+    },
+    {
+      "path": "skills/war-design/references/story-visual.md",
+      "sha256": "1405c0153a571b313573f173bca6f75c100018855bb46c47a98f4af66370c0f4"
+    },
+    {
+      "path": "skills/war-design/references/visual-design.md",
+      "sha256": "59a0227b2627a26b975c243e252ddc00ba572fa21a76b9e31461a90037e0e15d"
+    },
+    {
+      "path": "skills/war-design/references/visual-review.md",
+      "sha256": "b39fd1fb269485696b418b74894bb4d0fad43d7b226776aaf16f8c4ed5d1c40d"
+    },
+    {
+      "path": "skills/war-design/references/war-visual-presets.md",
+      "sha256": "44a8eb28f0bf6f61324870ec092067af1302dd0aefe62c651f6ee472b087c7ef"
+    },
+    {
+      "path": "skills/web-design-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/web-design-director/SKILL.md",
+      "sha256": "6e957187a9b6fe211953414fd26f08a0581afbe576305fdeacfb31f76acb70f8"
+    },
+    {
+      "path": "skills/web-design-director/agents/openai.yaml",
+      "sha256": "adaa1d3c0e0896cd4ae06bd581a79468bd4372a00b669068bfc235923c5e5711"
+    },
+    {
+      "path": "skills/web-design-director/references/creative-direction.md",
+      "sha256": "52cac9acdc02d949a062e8fda5a096f7275ea2ecddf0a9c421c155a446d2631d"
+    },
+    {
+      "path": "skills/web-design-director/references/design-rubric.md",
+      "sha256": "c1f6e69f91f4b937b2e3f53d7665bbecfd4c71676c248f509d578bb40c163b48"
+    },
+    {
+      "path": "skills/web-design-director/references/interaction-design.md",
+      "sha256": "7e35456edf68d936047b2a00dd9a1f1a8f3363f46a1281832defe53a71d4954f"
+    },
+    {
+      "path": "skills/web-design-director/references/material-and-motion.md",
+      "sha256": "b2f8d0d012d781029d89db2be1fbde4dc65d0b812cd8a6628a40b8dd7fdfcce9"
+    },
+    {
+      "path": "skills/web-design-director/references/research-to-design.md",
+      "sha256": "7390439ffb60fe4ccad4557010a50be7d4a78f9017e04e9935725c49bec0d8d9"
+    },
+    {
+      "path": "skills/web-design-director/references/web-quality-checklist.md",
+      "sha256": "ae773f5daffa03ba0e8ad258b4b79bca4eed467166582739dda608d2a5f3c0f0"
+    },
+    {
+      "path": "skills/wuxia-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "skills/wuxia-design/SKILL.md",
+      "sha256": "8a94d21d5f404496e058d16e7f652348e4cf85615553339a54614451991bfc90"
+    },
+    {
+      "path": "skills/wuxia-design/agents/openai.yaml",
+      "sha256": "d7280c331cf1d708b85190a6808fae3c7e891475c749eeb2a7a43a0e2523608d"
+    },
+    {
+      "path": "skills/wuxia-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b"
+    },
+    {
+      "path": "skills/wuxia-design/references/NEGATIVE-CASE-BOOK.md",
+      "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+    },
+    {
+      "path": "skills/wuxia-design/references/SOURCE-LEDGER.md",
+      "sha256": "423c3d51a844337bfcee180ab98b91363aa25507e8d36d34c4d28ccc706451c8"
+    },
+    {
+      "path": "skills/wuxia-design/references/cinematic-image-direction.md",
+      "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+    },
+    {
+      "path": "skills/wuxia-design/references/genre-presets.md",
+      "sha256": "b57f0e623de53f0b88ac80854359d5c9f65ed2d34d636870e60f2c24dba91b5b"
+    }
+  ],
+  "default_network": false,
+  "licenses": [
+    {
+      "path": "skills/ai-short-drama-production/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "ai-short-drama-production",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/ai-storyboard-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "ai-storyboard-director",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/character-asset/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "character-asset",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/cyberpunk-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "cyberpunk-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/d-data-analysis-semantic-layer/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "d-data-analysis-semantic-layer",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/d-official-market-analysis/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "d-official-market-analysis",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/director-agent/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "director-agent",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/epic-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "epic-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/fantasy-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "fantasy-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/horror-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "horror-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/noir-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "noir-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/produce-ai-video/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "produce-ai-video",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/prop-asset/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "prop-asset",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/romance-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "romance-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/scene-asset/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "scene-asset",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/war-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "war-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/web-design-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "web-design-director",
+      "source": "repository_default"
+    },
+    {
+      "path": "skills/wuxia-design/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "wuxia-design",
+      "source": "repository_default"
+    },
+    {
+      "path": "experimental/guofeng-visual-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "guofeng-visual-director",
+      "source": "repository_default"
+    },
+    {
+      "path": "experimental/hard-sci-fi-visual-director/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "hard-sci-fi-visual-director",
+      "source": "repository_default"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "skill": "whitebox-previs-executor",
+      "source": "repository_default"
+    }
+  ],
+  "packages": [
+    {
+      "distribution": "skills",
+      "name": "ai-short-drama-production",
+      "path": "skills/ai-short-drama-production"
+    },
+    {
+      "distribution": "skills",
+      "name": "ai-storyboard-director",
+      "path": "skills/ai-storyboard-director"
+    },
+    {
+      "distribution": "skills",
+      "name": "character-asset",
+      "path": "skills/character-asset"
+    },
+    {
+      "distribution": "skills",
+      "name": "cyberpunk-design",
+      "path": "skills/cyberpunk-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "d-data-analysis-semantic-layer",
+      "path": "skills/d-data-analysis-semantic-layer"
+    },
+    {
+      "distribution": "skills",
+      "name": "d-official-market-analysis",
+      "path": "skills/d-official-market-analysis"
+    },
+    {
+      "distribution": "skills",
+      "name": "director-agent",
+      "path": "skills/director-agent"
+    },
+    {
+      "distribution": "skills",
+      "name": "epic-design",
+      "path": "skills/epic-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "fantasy-design",
+      "path": "skills/fantasy-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "horror-design",
+      "path": "skills/horror-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "noir-design",
+      "path": "skills/noir-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "produce-ai-video",
+      "path": "skills/produce-ai-video"
+    },
+    {
+      "distribution": "skills",
+      "name": "prop-asset",
+      "path": "skills/prop-asset"
+    },
+    {
+      "distribution": "skills",
+      "name": "romance-design",
+      "path": "skills/romance-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "scene-asset",
+      "path": "skills/scene-asset"
+    },
+    {
+      "distribution": "skills",
+      "name": "war-design",
+      "path": "skills/war-design"
+    },
+    {
+      "distribution": "skills",
+      "name": "web-design-director",
+      "path": "skills/web-design-director"
+    },
+    {
+      "distribution": "skills",
+      "name": "wuxia-design",
+      "path": "skills/wuxia-design"
+    },
+    {
+      "distribution": "experimental",
+      "name": "guofeng-visual-director",
+      "path": "experimental/guofeng-visual-director"
+    },
+    {
+      "distribution": "experimental",
+      "name": "hard-sci-fi-visual-director",
+      "path": "experimental/hard-sci-fi-visual-director"
+    },
+    {
+      "distribution": "experimental",
+      "name": "whitebox-previs-executor",
+      "path": "experimental/whitebox-previs-executor"
+    }
+  ],
+  "schema_version": 1,
+  "status": "candidate",
+  "user_test_status": "pending",
+  "version": "5.7.1"
+}

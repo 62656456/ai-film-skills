@@ -1,0 +1,163 @@
+{
+  "test": "七题材30秒三版首轮导演故事分镜图",
+  "image_count": 21,
+  "total_shots": 149,
+  "acceptance": "pending_user_review",
+  "runtime_changes": false,
+  "default_version": "5.6.5",
+  "images": [
+    {
+      "path": "images/01-suspense-current.png",
+      "sha256": "68b63717b3d450c1e2cce6d25a20773f10d580fdf9ff676173475ac42fc4832f",
+      "story_id": "01",
+      "variant": "现用5.6.5",
+      "needs_repair": false
+    },
+    {
+      "path": "images/02-horror-current.png",
+      "sha256": "52493fc2bbef596b6f4fe17fa088e76976b336c95e4854523551bf49f3ea5c33",
+      "story_id": "02",
+      "variant": "现用5.6.5",
+      "needs_repair": true
+    },
+    {
+      "path": "images/03-romance-current.png",
+      "sha256": "dfa33fb9d4db31971a85b5da9cfeefcc8fed33fdb7086978f07ba497f53f8a22",
+      "story_id": "03",
+      "variant": "现用5.6.5",
+      "needs_repair": true
+    },
+    {
+      "path": "images/04-fight-current.png",
+      "sha256": "5af7258e28be883b5db74bd1654a082b2c13ce663e0349cb1b2e669ece212650",
+      "story_id": "04",
+      "variant": "现用5.6.5",
+      "needs_repair": false
+    },
+    {
+      "path": "images/05-gunfight-current.png",
+      "sha256": "fdc77b2aa4850ce9ceff156b20fab4aa7267cbb082c21b369a2a0e5200a017ec",
+      "story_id": "05",
+      "variant": "现用5.6.5",
+      "needs_repair": true
+    },
+    {
+      "path": "images/07-superpower-current.png",
+      "sha256": "725adf76f48be31f07f213a934bac37e765946950f85ef6c127f15fc66802d66",
+      "story_id": "07",
+      "variant": "现用5.6.5",
+      "needs_repair": true
+    },
+    {
+      "path": "images/06-racing-current.png",
+      "sha256": "585baf6f9c91edadc5352910fd1954e6d260598f1bd0add6633d1ea1a997d45c",
+      "story_id": "06",
+      "variant": "现用5.6.5",
+      "needs_repair": true
+    },
+    {
+      "path": "images/04-fight-b.png",
+      "sha256": "fa47c5be9eb04384b4cc4a01c44ea261a861c00f2e7097e36b3561144761985e",
+      "story_id": "04",
+      "variant": "新版B5.7.1-jev",
+      "needs_repair": true
+    },
+    {
+      "path": "images/05-gunfight-a.png",
+      "sha256": "24c7793a361926a377d0eed5f5846d1d3baeeaffaed5c023a59b4560f14da327",
+      "story_id": "05",
+      "variant": "新版A5.7.1",
+      "needs_repair": false
+    },
+    {
+      "path": "images/01-suspense-a.png",
+      "sha256": "981e0369ce0239bcf460a88d9897e2cbdf30b7663635f8bf079d026f9f8a6a6b",
+      "story_id": "01",
+      "variant": "A",
+      "needs_repair": true
+    },
+    {
+      "path": "images/01-suspense-b.png",
+      "sha256": "cd8edbd97b7cadd8b02d2f89876447d7d63fb4df90b81bbe841268c1c2d8b09b",
+      "story_id": "01",
+      "variant": "B",
+      "needs_repair": true
+    },
+    {
+      "path": "images/02-horror-a.png",
+      "sha256": "d3a630e56471e27706d9255bc06dd8bd4e74955294798d2e3e29f16d09fbe8d3",
+      "story_id": "02",
+      "variant": "A",
+      "needs_repair": true
+    },
+    {
+      "path": "images/02-horror-b.png",
+      "sha256": "69a08a9d27b255ff04209d03a9f65093f3ec012ba92bf6047c03f6bc42e595f4",
+      "story_id": "02",
+      "variant": "B",
+      "needs_repair": true
+    },
+    {
+      "path": "images/03-romance-a.png",
+      "sha256": "e975555e215b4278fbdc32931eedcfb3713b971e789b5250f248fbc6701f7b86",
+      "story_id": "03",
+      "variant": "A",
+      "needs_repair": true
+    },
+    {
+      "path": "images/03-romance-b.png",
+      "sha256": "ae3578054f92a82caa847a6b6b14fa59351a66742e73dc35e34469484a4917f6",
+      "story_id": "03",
+      "variant": "B",
+      "needs_repair": true
+    },
+    {
+      "path": "images/04-fight-a.png",
+      "sha256": "7544b334524887ae39a0067690c2b8c1d755f1d08981323bc2ee53ed80ebb3bc",
+      "story_id": "04",
+      "variant": "A",
+      "needs_repair": false
+    },
+    {
+      "path": "images/05-gunfight-b.png",
+      "sha256": "73736cfdc5dba92bdfa772a6efe6a45f22cb67441e45ee51844b0762e451ebe8",
+      "story_id": "05",
+      "variant": "B",
+      "needs_repair": false
+    },
+    {
+      "path": "images/06-racing-a.png",
+      "sha256": "f3913d7b50078010bbb6569116188c8accff2e28c954680a3dabf477fc1e6be8",
+      "story_id": "06",
+      "variant": "A",
+      "needs_repair": false
+    },
+    {
+      "path": "images/06-racing-b.png",
+      "sha256": "8824b709166da16ec0d4ee80ae4ac806f9b48305764d53fdd0c53ff73d9c169b",
+      "story_id": "06",
+      "variant": "B",
+      "needs_repair": true
+    },
+    {
+      "path": "images/07-superpower-a.png",
+      "sha256": "065e2738737b1ceaaa730a09b91f154d3a1b8d00df68b8451bec421e4549dcbc",
+      "story_id": "07",
+      "variant": "A",
+      "needs_repair": true
+    },
+    {
+      "path": "images/07-superpower-b.png",
+      "sha256": "966667e19e359a4ab74e5a0090c378eaec02066bfaa58abde24a29c0dd6e7031",
+      "story_id": "07",
+      "variant": "B",
+      "needs_repair": true
+    }
+  ],
+  "publication_context": {
+    "record_scope": "historical_test_or_research_snapshot",
+    "current_activation": "A5.7.1 adopted through direct explicit user instruction on 2026-09-29; B optional text review",
+    "aesthetic_status": "First-round 21 boards are not an accepted batch; 15 boards contain 29 definite or scope-limited repair observations",
+    "hash_scope": "Original input/source hashes describe frozen source bytes; public file hashes are listed in publication-manifest.json."
+  }
+}

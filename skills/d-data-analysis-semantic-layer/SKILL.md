@@ -11,6 +11,8 @@ description: 审核并版本化写入 D｜数据分析知识语义层，只用�
 
 执行D市场分析、剧本市场评估或查询既有市场结论时，先读取 [semantic-layer.md](references/semantic-layer.md)，再按其中的有效期、证据等级和来源边界使用。结构化记录位于 [records-v1.0.0.json](references/records-v1.0.0.json)，来源覆盖位于 [source-inventory.md](references/source-inventory.md)，逐条证据状态位于 [evidence.md](references/evidence.md)。保存结论不能替代时效性核验；到达复查日期后必须重新抓取或标记待复查。
 
+只读与写入分开：用户明确查询既有记录时，只读取相关条目及其有效期/证据，不执行下方写入步骤；“分析市场”不自动调用写入流程。任何新增、替代或历史迁移仍须满足本轮明确批准的写入闸门。
+
 ## 写入闸门
 
 1. 确认本轮对话中用户已经看到报告与候选内容，并明确批准写入。

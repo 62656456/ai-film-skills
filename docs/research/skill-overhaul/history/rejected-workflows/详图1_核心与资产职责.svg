@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3080" height="2500" viewBox="0 0 1540 1250"><title>详图1_核心与资产职责</title>
+<rect x="0" y="0" width="1540" height="1250" rx="0" fill="#F8FAFC" stroke="#F8FAFC" stroke-width="2.5"/>
+<rect x="35" y="190" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="370" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="550" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="730" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="910" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="25" y="1110" width="1490" height="98" rx="16" fill="#EAF3EE" stroke="#16733E" stroke-width="2.5"/>
+<text x="35" y="95.32000000000001" font-family="Microsoft YaHei,sans-serif" font-size="61" font-weight="700" fill="#10233B">详图1｜核心与资产怎样配合</text>
+<text x="35" y="151.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">保留完整职责，把每个技能写成可以直接阅读的一行。</text>
+<text x="60" y="251.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">导演：剧本与观看体验</text>
+<text x="60" y="297.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">director-agent</text>
+<text x="60" y="346.68" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">人物、因果、对白、表演与导演方案；必要时另编AI执行剧本。</text>
+<text x="60" y="431.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">分镜：摄影与提示词</text>
+<text x="60" y="477.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">ai-storyboard-director</text>
+<text x="60" y="526.6800000000001" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">组织观众观看；保住空间、环境、动作、摄影与声音。</text>
+<text x="60" y="611.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">人物资产</text>
+<text x="60" y="657.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">character-asset</text>
+<text x="60" y="706.6800000000001" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">身份、外观、服装与状态；按现行合同提供必要视图。</text>
+<text x="60" y="791.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">场景资产</text>
+<text x="60" y="837.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">scene-asset</text>
+<text x="60" y="886.6800000000001" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">用途、出入口、地标、光源与使用痕迹，固定同一世界。</text>
+<text x="60" y="971.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">道具资产</text>
+<text x="60" y="1017.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">prop-asset</text>
+<text x="60" y="1066.68" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">形体、尺寸、材质、持有者、用途与变化后的状态。</text>
+<text x="47" y="1171.8" font-family="Microsoft YaHei,sans-serif" font-size="40" font-weight="700" fill="#16733E">未审资产可支持候选文本；正式生成前审阅相应资产。</text>
+</svg>

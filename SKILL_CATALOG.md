@@ -4,7 +4,7 @@
 
 [完整工作流](docs/WORKFLOW.md) · [全部双语指南](docs/skills/INDEX.md) · [安装](docs/INSTALLATION.md) · [原创版权与商用](COMMERCIAL_USE.md)
 
-版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜源码明确为5.6.4。常规/实验是分发状态，不是全部能力通过实战的声明。
+版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜A5.7.1已按明确用户指令采用，已知测试问题与用户审美验收另列。常规/实验是分发状态，不是全部能力通过实战的声明。
 
 ## 当前源码与历史下载
 
@@ -23,7 +23,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) · [EN](docs/skills/en/director-agent.md) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 将可用剧本设计为一条融合六段母稿，第六段含完整镜头时间轴；在作品目录保存恢复镜头决定 | 5.6.4 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 按请求设计可读分镜或编译六模块提示词；在作品目录保存恢复镜头决定 | 5.7.1 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) |
 
 ## Asset definition
 
@@ -58,7 +58,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 |---|---|---|---|---|
 | `produce-ai-video`<br/>实际视频生产 | 统筹实际生成、选片、剪辑、对白音效、完整播放审查与修复 | — | 常规 | [运行正文](skills/produce-ai-video/SKILL.md) · [中文说明](docs/skills/zh-CN/produce-ai-video.md) · [EN](docs/skills/en/produce-ai-video.md) |
 | `ai-short-drama-production`<br/>短剧控制 | 五列分镜＋一条六模块母提示词；5.6结构已对齐，文本验证通过，实片待验 | — | 常规；未部署 | [运行正文](skills/ai-short-drama-production/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-short-drama-production.md) · [EN](docs/skills/en/ai-short-drama-production.md) |
-| `web-design-director`<br/>网页辅助 | 明确网页或应用界面任务时设计与审核；仓库README维护不触发建站 | — | 常规 | [运行正文](skills/web-design-director/SKILL.md) · [中文说明](docs/skills/zh-CN/web-design-director.md) · [EN](docs/skills/en/web-design-director.md) |
+| `web-design-director`<br/>网页辅助 | 明确网页或应用界面任务时设计与审核；仓库README维护不触发建站 | 1.3.0 | 常规 | [运行正文](skills/web-design-director/SKILL.md) · [中文说明](docs/skills/zh-CN/web-design-director.md) · [EN](docs/skills/en/web-design-director.md) |
 | `d-official-market-analysis`<br/>市场研究 | 根据当前可验证来源研究题材、平台、受众与制作机会，保留数据局限 | — | 常规 | [运行正文](skills/d-official-market-analysis/SKILL.md) · [中文说明](docs/skills/zh-CN/d-official-market-analysis.md) · [EN](docs/skills/en/d-official-market-analysis.md) |
 | `d-data-analysis-semantic-layer`<br/>知识审核与写入 | 用户批准后校验来源、版本、有效期与冲突，写入明确目标并回读 | — | 常规 | [运行正文](skills/d-data-analysis-semantic-layer/SKILL.md) · [中文说明](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) · [EN](docs/skills/en/d-data-analysis-semantic-layer.md) |
 

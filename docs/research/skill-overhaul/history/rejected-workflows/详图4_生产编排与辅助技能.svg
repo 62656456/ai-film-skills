@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3080" height="2720" viewBox="0 0 1540 1360"><title>详图4_生产编排与辅助技能</title>
+<rect x="0" y="0" width="1540" height="1360" rx="0" fill="#F8FAFC" stroke="#F8FAFC" stroke-width="2.5"/>
+<rect x="35" y="180" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="360" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="540" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="720" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="900" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<rect x="35" y="1080" width="1470" height="166" rx="16" fill="#FFFFFF" stroke="#BFCBDA" stroke-width="2.5"/>
+<text x="35" y="95.32000000000001" font-family="Microsoft YaHei,sans-serif" font-size="61" font-weight="700" fill="#10233B">详图4｜生产、编排和辅助技能</text>
+<text x="35" y="151.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">按当前目标调用；不要求每次把所有模块跑一遍。</text>
+<text x="60" y="241.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">真实视频生产</text>
+<text x="60" y="287.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">produce-ai-video</text>
+<text x="60" y="336.68" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">生成、筛选、修复、剪辑、声音与完整回放，交真实成片。</text>
+<text x="60" y="421.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">短剧专项编排〔未安装〕</text>
+<text x="60" y="467.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">ai-short-drama-production</text>
+<text x="60" y="516.6800000000001" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">节拍、资产、调度、布光、动作和草图的必要交接。</text>
+<text x="60" y="601.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">可选3D白模预演〔实验〕</text>
+<text x="60" y="647.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">whitebox-previs-executor</text>
+<text x="60" y="696.6800000000001" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">看机位、走位、路径和节奏；不能冒充最终视频效果。</text>
+<text x="60" y="781.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">市场研究</text>
+<text x="60" y="827.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">d-official-market-analysis</text>
+<text x="60" y="876.6800000000001" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">提供当前可核验证据，帮助立项、受众与平台判断。</text>
+<text x="60" y="961.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">市场知识写入</text>
+<text x="60" y="1007.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">d-data-analysis-semantic-layer</text>
+<text x="60" y="1056.68" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">用户明确批准后，检查来源、冲突、版本，写入并回读。</text>
+<text x="60" y="1141.28" font-family="Microsoft YaHei,sans-serif" font-size="44" font-weight="700" fill="#1D4ED8">作品呈现与界面</text>
+<text x="60" y="1187.32" font-family="Microsoft YaHei,sans-serif" font-size="36" font-weight="400" fill="#42566F">web-design-director</text>
+<text x="60" y="1236.68" font-family="Microsoft YaHei,sans-serif" font-size="39" font-weight="400" fill="#10233B">网站、作品展示页、素材浏览及审阅界面。</text>
+<text x="40" y="1332.56" font-family="Microsoft YaHei,sans-serif" font-size="38" font-weight="400" fill="#42566F">详图1—4覆盖全部21个仓库技能；外部仙侠另外列出。</text>
+</svg>

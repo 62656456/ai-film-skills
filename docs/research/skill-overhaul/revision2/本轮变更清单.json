@@ -1,0 +1,491 @@
+{
+  "changes": [
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "change": "modified",
+      "before_sha256": "460052c522eede113ed60c28a0407b6296f2f5abed62134226b4b68d9ef02031",
+      "after_sha256": "3db5355ab7a8929bf3e15d7907623a5aefe63a3e98d3bc65d253aaece0b29fa5"
+    },
+    {
+      "path": "docs/assets/production-workflow.mmd",
+      "change": "modified",
+      "before_sha256": "095c1cd2996d993193465c8aa357a6a9b33c51a0c954eccc225ef6b802ed407c",
+      "after_sha256": "f7b1d769c344304f4421087bdb0eb275d7787e9f4cfdc9942da4fbd43e65f64c"
+    },
+    {
+      "path": "docs/assets/workflow-overview.svg",
+      "change": "modified",
+      "before_sha256": "67d7078f8a3be54a5a4f39a55eada6317093e7db9d66aedc9e53339e218b1aa7",
+      "after_sha256": "84cc4e41dd4b5330d6297e61bc8b69b8ef1636632be5ba403e912ecb8e58d9f9"
+    },
+    {
+      "path": "docs/i18n/ja/README.md",
+      "change": "modified",
+      "before_sha256": "5b01dd41f6e4485414bfc7e55e7d650c088939857a705c1b59bb9ae7209d5782",
+      "after_sha256": "bb69c5f84c48a7a3182c9df8fffc2ec407d4771ca6d13e17ae8b7807ad7b78e0"
+    },
+    {
+      "path": "docs/i18n/ko/README.md",
+      "change": "modified",
+      "before_sha256": "0d71222cdd32be4a2f5a0f02bcc9f3e115e7c87ff80e939581ecbe83a620c3c7",
+      "after_sha256": "581697badd8c456e15545668187070707cb7890021e78e7fa22886f040bc4e27"
+    },
+    {
+      "path": "docs/i18n/zh-CN/README.md",
+      "change": "modified",
+      "before_sha256": "dddd51aafd5ba88093b26c6603f992e12be30cc417ed0bfdc90d34b4c9916f0a",
+      "after_sha256": "73409209e8d792c122715a039a4cf3f15b4dc2a6471c28fa83c09e6253d74cb6"
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "change": "modified",
+      "before_sha256": "a4a842a02523222230cd4a1fa6e6af4f9f49fe646ecccbac967e121b74876e33",
+      "after_sha256": "aa9019755b9dfae265c5adeb37552b2138d77ece419d9a045b9769a9cd72c1fc"
+    },
+    {
+      "path": "docs/RELEASE_WORKFLOW.md",
+      "change": "modified",
+      "before_sha256": "8e4601762aaa44b65082a8eebc505877816b9903b86194f0d8329750abda9e05",
+      "after_sha256": "59c5245065756f9bb62b3be329103bc6a5393adcd01ac213193d62b117b04311"
+    },
+    {
+      "path": "docs/skill-contracts.json",
+      "change": "modified",
+      "before_sha256": "e2f5fd93068f9f17e530d7cc5c9b3c34d766cba7dfc652499e99ee2e144d0209",
+      "after_sha256": "44c2456f1e87f10cd4b31b767c5357be60427f1ff640b275d9d396fb1b13b597"
+    },
+    {
+      "path": "docs/skills/en/ai-short-drama-production.md",
+      "change": "modified",
+      "before_sha256": "91e283b339557b42377c8cebf16104701466357b0505c47d1138967022692b36",
+      "after_sha256": "3fab0ac789c102a9773287882250c1046aaf59415f60abe70e5e611af75b1b65"
+    },
+    {
+      "path": "docs/skills/en/ai-storyboard-director.md",
+      "change": "modified",
+      "before_sha256": "f45bb54ba13e42b76af107fe85d591ef64487acd7055ff74e0ab15e6b719e7a1",
+      "after_sha256": "4d58696f6015181a293f2a94183df2fd24bd5d58e1c53715d01bb95b88b197db"
+    },
+    {
+      "path": "docs/skills/en/character-asset.md",
+      "change": "modified",
+      "before_sha256": "c6b60d12efffd8829d3fc0cad488115229f67acd4a27d450980664500ab787ca",
+      "after_sha256": "a05ffd07a6ee2c03cdd2cf36261d9d1587b161e37377219ffb13d1c96529a652"
+    },
+    {
+      "path": "docs/skills/en/cyberpunk-design.md",
+      "change": "modified",
+      "before_sha256": "7a91900c4c0f5cd91d95c2c5dcabb4050b133e45ae7b69e96a7cef1f1679452e",
+      "after_sha256": "f1cb12d8608c50fa35b8b85a3e94ddc263f2953912bcb08199dfb884535bdd4d"
+    },
+    {
+      "path": "docs/skills/en/d-data-analysis-semantic-layer.md",
+      "change": "modified",
+      "before_sha256": "48116b4ac4b4facc4b495c569fa15d87482974fb06cef4970dde4c3357cae388",
+      "after_sha256": "730ef67822d551e869faca1d081cd4b5ddc0beeea8c5d029d65a7595eea2ada5"
+    },
+    {
+      "path": "docs/skills/en/d-official-market-analysis.md",
+      "change": "modified",
+      "before_sha256": "be7792f370e65032ffdd67e371fab96f4e13da21040fd80ad6292f2c16d6e356",
+      "after_sha256": "eee526a0d17c5f5de78e6d48d629ff71e3fb71a954405b882925df8e2defb89a"
+    },
+    {
+      "path": "docs/skills/en/director-agent.md",
+      "change": "modified",
+      "before_sha256": "614e5ae33c451a4094faddf17d594278e5edffc373aec5a7212083c7a500061f",
+      "after_sha256": "c53e13f9e92c6d3cf51eb6d63bfb667e498e903c760eb9fff9e962748dac80ef"
+    },
+    {
+      "path": "docs/skills/en/epic-design.md",
+      "change": "modified",
+      "before_sha256": "a748bd15d4c288934810fd48080d61b693efe62fd317b4c9c892559f2ba88b60",
+      "after_sha256": "740be7fe947d202e77845c73e34ef9d2d915263b8f4a2b5ac3a6f00ee76582cc"
+    },
+    {
+      "path": "docs/skills/en/fantasy-design.md",
+      "change": "modified",
+      "before_sha256": "82c8d40d0f0c6a6b99dd7b51b577d05683f7bb8a4e952e9c22650141d23ab6c9",
+      "after_sha256": "30fda5bce3e02556aa58af63e5aed44e0eac4f3dc4b87e7f9416780e9a17593f"
+    },
+    {
+      "path": "docs/skills/en/horror-design.md",
+      "change": "modified",
+      "before_sha256": "3f7648e4e2eb1b8ba6570aa0359255cf8538421dfd7a8a647f79bbcdda900a30",
+      "after_sha256": "cfacdfae78ebdc012296dcd9c25d854ea4d6f0a222329e20651ec1e937770043"
+    },
+    {
+      "path": "docs/skills/en/noir-design.md",
+      "change": "modified",
+      "before_sha256": "3250402ef9217f99d58d35baca98bcf50356f41ba16d4edebce710da370ab163",
+      "after_sha256": "ebb70624715537693d3c82a7a22712f52697ba70f640c55d5a611975a1d1b416"
+    },
+    {
+      "path": "docs/skills/en/produce-ai-video.md",
+      "change": "modified",
+      "before_sha256": "f2a21537538ee29b7d977848255ebc25e86e997a2c03ef5237735b76a84d59db",
+      "after_sha256": "1b5e8664505204b9b26d4b136d9236b93bd8f787c2c887079cca6cbea3966851"
+    },
+    {
+      "path": "docs/skills/en/prop-asset.md",
+      "change": "modified",
+      "before_sha256": "bed1d02b79ebf7478774d0782814662de5379311e45b78354a329d491b996d8a",
+      "after_sha256": "f13057cf7f912af220246c36ea7813da3abb7107a1f043daed3b04742f418e94"
+    },
+    {
+      "path": "docs/skills/en/romance-design.md",
+      "change": "modified",
+      "before_sha256": "a0784ce3cb9c34511abe25c7401da0323c5f05fd2c187383b39efe7f607de2d8",
+      "after_sha256": "bc0ab41e235040bd17ee209df7861c6ecfecfbc75f60131b611ec36158f8a2da"
+    },
+    {
+      "path": "docs/skills/en/scene-asset.md",
+      "change": "modified",
+      "before_sha256": "795e0c8445d4b9a2fe9811754120da0c6452324a98c94d28119a76967fd1397a",
+      "after_sha256": "3c69bd32033984b9a2b699a9e94416127cd734b986f75196703fc34ab1f03a2b"
+    },
+    {
+      "path": "docs/skills/en/war-design.md",
+      "change": "modified",
+      "before_sha256": "b1f1d141516aef0c80b316345826e680a8da42353a5f6a0f228e7cccb5fded64",
+      "after_sha256": "8e629a229fe2ea0b823343427498600ec1a6d128b137ecf520859863e91b8963"
+    },
+    {
+      "path": "docs/skills/en/web-design-director.md",
+      "change": "modified",
+      "before_sha256": "ed12404a68c5ac3ad3929a96ab8f2230c4e45df6527923aa67ac5ccc0d0ddd40",
+      "after_sha256": "20659b0cbb7e4b0becadc079acf5f10166da6ac612f8c0f74a32582f99b21526"
+    },
+    {
+      "path": "docs/skills/en/whitebox-previs-executor.md",
+      "change": "modified",
+      "before_sha256": "61bd5831cfc28a43e770001ea4b306c1b45e59cbc8573b08e6d3e264b100466f",
+      "after_sha256": "c468bc7ebf7cd886632fb5288143ba2e4e8ae70044df66c1221a381b8daf1053"
+    },
+    {
+      "path": "docs/skills/en/wuxia-design.md",
+      "change": "modified",
+      "before_sha256": "de90d63838e35c0841e291ddb71f1b1bac75c4394bfc7c183efe58a8a35d8950",
+      "after_sha256": "7a9c06a34c751ff0cf9a291d731d94a6a80efe2a370c445610acb1cec2e4ac9e"
+    },
+    {
+      "path": "docs/skills/INDEX.md",
+      "change": "modified",
+      "before_sha256": "c61217f0d8c36196a63e16f92c9926bb625e81fbf6ef8c5e0d0f6b6c13869609",
+      "after_sha256": "12f9af27f0b920dc807611f20462be534a2becb1b24cda99e5d46ad87509635e"
+    },
+    {
+      "path": "docs/skills/zh-CN/ai-short-drama-production.md",
+      "change": "modified",
+      "before_sha256": "39079db368a0c98397f5324b6c46d44faafa339e0007bf8da191479f59fe87cf",
+      "after_sha256": "4b4147e6f3bd881d6f9a49f0fdd5455c6f50e04856d38e8a38dc890c4041c2e8"
+    },
+    {
+      "path": "docs/skills/zh-CN/ai-storyboard-director.md",
+      "change": "modified",
+      "before_sha256": "df82efa7f649e176288601304aef52bdb25ecd594fbe2ccbd29d6245d371475c",
+      "after_sha256": "77a7860a73cdc22c30def5c0731a98de65a2fbe5f0d349c9e82c121dcda8ddc6"
+    },
+    {
+      "path": "docs/skills/zh-CN/character-asset.md",
+      "change": "modified",
+      "before_sha256": "5c910d4dede70ac25a0968c406b385d0a288fa39831cd502cf954bd6dee0d0c3",
+      "after_sha256": "4125b6d161ab6475114d0b49f032c559ae7aa6257250d554e9a7db4fec934fe3"
+    },
+    {
+      "path": "docs/skills/zh-CN/cyberpunk-design.md",
+      "change": "modified",
+      "before_sha256": "55f12364f7c4165a0e98138e6d9a9ad1ba76d8b615b2f47a5269b52c72bd126f",
+      "after_sha256": "b160ebe71626e2a047993c28e475a9588cfc2fedf4659f0ca7765e2b9a19f923"
+    },
+    {
+      "path": "docs/skills/zh-CN/d-data-analysis-semantic-layer.md",
+      "change": "modified",
+      "before_sha256": "171b1f4b583da1eb1e3f9939d8ca5c126ca910bc130ded6af0ba2624bc6f505a",
+      "after_sha256": "94c6a7d72776db95ce98ac10d0f2ff86dfbd414c201f2c54dc1712523f73e129"
+    },
+    {
+      "path": "docs/skills/zh-CN/d-official-market-analysis.md",
+      "change": "modified",
+      "before_sha256": "86c807c91777413cadadf81039c802fc31740263fe37fa34dfdf53a8f7b91222",
+      "after_sha256": "4157d329832f0cca1fa02910a90cb990d58277872d2f8a7c0e51b8a9a1c5efb0"
+    },
+    {
+      "path": "docs/skills/zh-CN/director-agent.md",
+      "change": "modified",
+      "before_sha256": "f25d676902b22ae3702cea1ba545f4557f6914c0085bbfde8f9aca879d68d363",
+      "after_sha256": "2b5bcfa884d93c7ac12438575a88ac7d9a1a28fa4237413f02f28f1f1e24ac72"
+    },
+    {
+      "path": "docs/skills/zh-CN/epic-design.md",
+      "change": "modified",
+      "before_sha256": "13321c5e065f74327d91607d5b6c5ef00c7bc95cff44fad747c42f906a78cf4d",
+      "after_sha256": "3027074ece3b1a691bfb14934c7ec16cb14df34c5d72c0aae3f3ddc29817a3cf"
+    },
+    {
+      "path": "docs/skills/zh-CN/fantasy-design.md",
+      "change": "modified",
+      "before_sha256": "ea706cd54ece2a0ce7b63fb769389a50ba6368f42c5ee7e32b65eaf50e92d6c0",
+      "after_sha256": "9544fcb45b6206467217e17ef5f9f0d24ddf7899b0653ca97f321205e53f528e"
+    },
+    {
+      "path": "docs/skills/zh-CN/horror-design.md",
+      "change": "modified",
+      "before_sha256": "ea5b9e7932790f6a021a0300bc697b0685ff169d614d08edd0dc1239e86f2b33",
+      "after_sha256": "f978fa7d90f7bc58a2d1565dbb8c7314dfa71017ff542d9191b8088870f0eb58"
+    },
+    {
+      "path": "docs/skills/zh-CN/noir-design.md",
+      "change": "modified",
+      "before_sha256": "63436ffe5ac1223b273eb60b98e7991f6fc41e5557a072148724f2e442d80053",
+      "after_sha256": "3a1803b0682febaabd0c9f6c46759290a263fecac693b0a09ebf4469bfd6b054"
+    },
+    {
+      "path": "docs/skills/zh-CN/produce-ai-video.md",
+      "change": "modified",
+      "before_sha256": "454a34da37a792f33558ad902ced84751a2ce2d7b4e061e033bd6c2543847d20",
+      "after_sha256": "4a4282c7c0f19d8e723959c119113490caa69b88ccb70f29c067bbabd733aa63"
+    },
+    {
+      "path": "docs/skills/zh-CN/prop-asset.md",
+      "change": "modified",
+      "before_sha256": "56218d2f896a50ff317aa5dbbcd989f9ed10e49cecf4bc4f8ef7c4584d128a7b",
+      "after_sha256": "ab3b58122b5f49729bbfa089ff1bc1722922b4f7fe0a9c0aa5e953c6ed0a6000"
+    },
+    {
+      "path": "docs/skills/zh-CN/romance-design.md",
+      "change": "modified",
+      "before_sha256": "a0e445f351c1ce61292c50b5dd595885d2fafe43c47b8e051d847c69c1ecbe0c",
+      "after_sha256": "203a80dce3add3f123edb241fd2503f63650985f2a01ae78233a1c4a06a0d554"
+    },
+    {
+      "path": "docs/skills/zh-CN/scene-asset.md",
+      "change": "modified",
+      "before_sha256": "a6b747b2a412549d4ae9190b38a36616fd4ae9ed59a764d296e8eaadd7a518eb",
+      "after_sha256": "8320ad81358a23da47e59e02a79411760738b4f0f1eb612c8a8f581a6881ce7e"
+    },
+    {
+      "path": "docs/skills/zh-CN/war-design.md",
+      "change": "modified",
+      "before_sha256": "de39da1514b8aa36a8101fe3118953011c9ac455028269396224abe4b9c77882",
+      "after_sha256": "032785efab2edfb1a60255982fdf6cc1478b371a7e63b32339379417e821e33f"
+    },
+    {
+      "path": "docs/skills/zh-CN/web-design-director.md",
+      "change": "modified",
+      "before_sha256": "a49258374b499fe585f2c3823d548ebdb857b19628e7caf30a59601fbd517bb4",
+      "after_sha256": "8353c34d4575765eccf237ca74a21f4e836d508b8d39cf29c49405d9c04f233f"
+    },
+    {
+      "path": "docs/skills/zh-CN/whitebox-previs-executor.md",
+      "change": "modified",
+      "before_sha256": "450dfefb280b04636797e4ed6279edd88576fba808a5f68c99cf72dabc70a4dd",
+      "after_sha256": "c55415cef793739322395d1445c80a8c81ca96c8996127dac6e3062e9f985f91"
+    },
+    {
+      "path": "docs/skills/zh-CN/wuxia-design.md",
+      "change": "modified",
+      "before_sha256": "95c9de2925c1618ce4ea40400eccfede77b3a33771a016dc78af9c264d6f232d",
+      "after_sha256": "c043c138822e8cb47f540ff6c2f2165a1ffa189dd39d044f0205882eb40d8f09"
+    },
+    {
+      "path": "docs/WORKFLOW.md",
+      "change": "modified",
+      "before_sha256": "78bac30a3eb041e631fb36c1182fd43f44d84000a9f20930dca84c026063c456",
+      "after_sha256": "881e62d580668fa7c3cd9e6e11bcdcc54fc66e8e6d904c822e7074985622bbb9"
+    },
+    {
+      "path": "experimental/whitebox-previs-executor/SKILL.md",
+      "change": "modified",
+      "before_sha256": "11b1c5d9b428b78f6f6ae4ae8211b9c8e5cc7378a34078bce6bc7963175f492f",
+      "after_sha256": "d8e8d0b9d6f0a8b7d448ad692960c4d4b552b6ebc2484d25f597c5d6ebc9e93e"
+    },
+    {
+      "path": "README.md",
+      "change": "modified",
+      "before_sha256": "9387db40f4999af53cf0a3934c1d1aea30b86ee131e0eb8eefc2f4275f3e7e86",
+      "after_sha256": "a494233ca45b0568c884360288344e70fb497a43b720c6449243e90ce60d0969"
+    },
+    {
+      "path": "scripts/build_review_profiles.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "876fc45b4c20baee0567566ef87d4f165f57bd21c4a40b41a80f617cc68891bb"
+    },
+    {
+      "path": "SKILL_CATALOG.md",
+      "change": "modified",
+      "before_sha256": "c561eea16c66c4f529237f00cf08ebe36cbe61d8f632b853d08c09ee3c122060",
+      "after_sha256": "b619790204ba5248aa94d8b2151a7d6c5685add0939d407c2d799cf42710b6b1"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/control-contracts.md",
+      "change": "modified",
+      "before_sha256": "df98911237e4439516b5392b08519589fbaef58660783e8cd3c2b64783b36536",
+      "after_sha256": "b2d927298d5b266e0c08ab75466dc0c5b49fce1f38898af10abe4443fb1e8f89"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/independent-production-core.md",
+      "change": "modified",
+      "before_sha256": "c98af1244b3d3fc5bb6786a783579f535a47bcbdedd1aba3174f47a10de3f1e2",
+      "after_sha256": "9f2c3e37d499d31a0abe429d49b1cd8ff9e029278a187c1c2fcd9370065b89a2"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/production-handoff.md",
+      "change": "modified",
+      "before_sha256": "be96430040a015b6c1372609e31976e051c414d05a035fd9fd48a9cd48e2900c",
+      "after_sha256": "774dab18be6959efcff42a800ea94381b95239e7290cc9fb9821cb19eb7f88bc"
+    },
+    {
+      "path": "skills/ai-short-drama-production/SKILL.md",
+      "change": "modified",
+      "before_sha256": "3c6fae868b955662b37e2ca613a60edf14a11a2b99fe4351204ca2814cb1fb88",
+      "after_sha256": "e7f96f45fecf5b2a69bf0d9a4ba0584a3dc40b339c0222828267c58927aadc00"
+    },
+    {
+      "path": "skills/ai-storyboard-director/agents/openai.yaml",
+      "change": "modified",
+      "before_sha256": "5cc4767c2c059104df0dcb49f304a07fb45c980e9e834f04eb147ab827c39a18",
+      "after_sha256": "73d8a32f0ce54e81595d314d6b38fc50a6c04ff9db6add1c3f525bc8e374b274"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/cinematography-design-engine.md",
+      "change": "modified",
+      "before_sha256": "877ae4972ac60df8348790df39739f36b11fd80bb952808862caa2b35118edb9",
+      "after_sha256": "5ccaec2900c481cbb04aee4777f36fec89da4a69ced61afecb64ab11e92031f8"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/creative-shot-ideas.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "fcf17e77cf7fa984391d1bf702d7a0c1f8457ee99693bf075f7e1587564a4f29"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/delivery-mode-guard.md",
+      "change": "modified",
+      "before_sha256": "a823e2f293197c9bc244fe180a1f13061361c4a870677edff772238af61ebfd1",
+      "after_sha256": "ecdb147704a41d34ec7d4ad4c0cd3a14e0ba783f0f8ff1441031671a49f9ab93"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/design-memory-protocol.md",
+      "change": "modified",
+      "before_sha256": "d854dedbbc163770d23b50beb69eb5b8910d4563c53bbcac18135cc7ad749186",
+      "after_sha256": "ce49c470e31fa56cec7cebcd8a0640d902a8ef2f0386a1362da6ac0a67325e02"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/production-contract.md",
+      "change": "modified",
+      "before_sha256": "8b7671bdfbb7d426466e722c9a49db9fb09d9a40fe58fb68d2a753123fcfab5e",
+      "after_sha256": "b2a8ab33eeb5259b2bda8962f9f873766020303aba26694ef4195f4a28751fd0"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/shot-design-engine.md",
+      "change": "modified",
+      "before_sha256": "22314a211c4b809e18b60293338acbe297a683f919f26a99ee4fa2a68f98890a",
+      "after_sha256": "b5528028a33ca0cb3f404ef4587917c8a46a743fa466aee33c69fb43576d0991"
+    },
+    {
+      "path": "skills/ai-storyboard-director/scripts/design_memory.py",
+      "change": "modified",
+      "before_sha256": "954268fe6abfb85cf4b9cabd5a9d74bedd5da852765ce69a7e8c26204b19d105",
+      "after_sha256": "3ad69d03fd24bd916f887539da803979187d599314d5e2bbdc5a6ee899f54c8b"
+    },
+    {
+      "path": "skills/ai-storyboard-director/SKILL.md",
+      "change": "modified",
+      "before_sha256": "883a7af764cabc71f631371810a98875ffd2a5be3de9dca0934ed63b38b8a42b",
+      "after_sha256": "87dbcd2a3de4d5fd49626229e405e9e51f8efd1308f57c945ce87e977b018749"
+    },
+    {
+      "path": "skills/character-asset/SKILL.md",
+      "change": "modified",
+      "before_sha256": "2ccf3a4e937976cc2af3ef49c96b21df1d1b9d16c613f28e55cf2b4202f9e915",
+      "after_sha256": "d85791ded2d99b53aaa313423747d84c76166d4387e6ab67083100ddfdbd76b2"
+    },
+    {
+      "path": "skills/director-agent/references/director-thinking-spine.md",
+      "change": "modified",
+      "before_sha256": "c304b3e8eca5f836ad66d8a01db86c94649594d7787b12aaf83c858980a4981b",
+      "after_sha256": "c80764e0e895ba93bd004f839d90db7f00859c97cf30d860272ef0227b5c91b9"
+    },
+    {
+      "path": "skills/director-agent/references/director-workbench-protocol.md",
+      "change": "modified",
+      "before_sha256": "207f91280844aa8925eb6af3061a0eb5884628b46f6ee64d7cf5ea8d46a610bd",
+      "after_sha256": "5a4c8c481d54a4e8d5aef084153c07daeeef6a8ca31cca8d77c692f6d7072f14"
+    },
+    {
+      "path": "skills/director-agent/references/local-knowledge-map.md",
+      "change": "modified",
+      "before_sha256": "b70d9cbadffb44877258b0ff1cc03c2b0b0c7230c78a11752fc311003c59bf8e",
+      "after_sha256": "8b2398dfc1f2a0ec0287641fbd0b551780a6044ad03f42be6fa02514006b145f"
+    },
+    {
+      "path": "skills/director-agent/references/production-storyboard-compiler.md",
+      "change": "modified",
+      "before_sha256": "9ce8d5c069aa97401d34f053a16da27b0a4f1a0e1623807afe0483e80351f8f2",
+      "after_sha256": "5c74c611d46ea7147eec6c981de226975e59365a225851dea48763e6a90ab001"
+    },
+    {
+      "path": "skills/director-agent/SKILL.md",
+      "change": "modified",
+      "before_sha256": "4d14b4fea6791edc4521d5e67d2226599ef1d2940943875f35958d7cc4829a43",
+      "after_sha256": "5d4b14f80cc54aa519a5dc2329d4069e67dbe7c18e0b10e503d4365bc3bac355"
+    },
+    {
+      "path": "skills/produce-ai-video/references/autonomous-production-workflow.md",
+      "change": "modified",
+      "before_sha256": "44b69db4ff5fe4274f606849d0eed58c54e38ccf5bf9a21fb4cd907db30bf75a",
+      "after_sha256": "026c0d89981cfd79ac15424cda36762f722ff5c65a17e04d56a22a42dd756ad5"
+    },
+    {
+      "path": "skills/produce-ai-video/references/qualified-video-acceptance.md",
+      "change": "modified",
+      "before_sha256": "ad67542f5ac5b1cc0bdb2de8c9e0cda05dcf92154a3894ba60021ebb404a251d",
+      "after_sha256": "e5ebb6c978ca3b0ce56a339de218dfeb2e627ae4302159b25449b01fbde1ae60"
+    },
+    {
+      "path": "skills/produce-ai-video/references/storyboard-prompt-compiler.md",
+      "change": "modified",
+      "before_sha256": "0b153f2bc1a2c39fde2e2441d49fcc0069a129620b8600e233f0b079fa7340e6",
+      "after_sha256": "a18a3fcf2b2f81df61909511cff2a5cc4c6fea70b9782a1006ac23b74193e7b8"
+    },
+    {
+      "path": "skills/produce-ai-video/SKILL.md",
+      "change": "modified",
+      "before_sha256": "b3f354dd71e9c8e0b2f3cde83ebce4fa18da2e7f2efe51fab0843c604546cc18",
+      "after_sha256": "a77badae3557c45ee9e25972ef0fe37dbb4ee759351184c80c67febe98793d0c"
+    },
+    {
+      "path": "skills/prop-asset/SKILL.md",
+      "change": "modified",
+      "before_sha256": "3d23c0c3c55e3548bcaf5c5b0f657db4fe6a7d45bb3678e235e33918be3598f3",
+      "after_sha256": "8fc378d1782280ca0388e56f80409fa105826c690c87aeeda5b77e4cfa600b69"
+    },
+    {
+      "path": "skills/scene-asset/SKILL.md",
+      "change": "modified",
+      "before_sha256": "81be898330e8ea27f9e699203dd39d8fd1bbdf13fa8bf1f3cfdff599ee1c8681",
+      "after_sha256": "68ef6fdd37555f6eee9e8c926ebf44dc9b7df9d6054cb95d0fc319adaa6c6e12"
+    },
+    {
+      "path": "tests/test_function_conservation.py",
+      "change": "modified",
+      "before_sha256": "e94bcfbb532af2f74b93d42c2ce5334a88bb754fba14ea967b3ad9fb0b7f209f",
+      "after_sha256": "1fc145cf967242d1724dbcbd2cfbafd26c2aa1193d1b95f124511dfcdc1aa3ad"
+    },
+    {
+      "path": "tests/test_review_profiles.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "fb0738edf164bee17fe12bfae27a51df160a6c7e34e47b7738ab695daa8284bd"
+    }
+  ],
+  "count": 80,
+  "publication_context": {
+    "record_scope": "historical_test_or_research_snapshot",
+    "current_activation": "A5.7.1 adopted through direct explicit user instruction on 2026-09-29; B optional text review",
+    "aesthetic_status": "First-round 21 boards are not an accepted batch; 15 boards contain 29 definite or scope-limited repair observations",
+    "hash_scope": "Original input/source hashes describe frozen source bytes; public file hashes are listed in publication-manifest.json."
+  }
+}

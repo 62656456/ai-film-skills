@@ -1,6 +1,6 @@
 # cyberpunk-design｜赛博朋克视觉参数
 
-| 状态 | 已部署 |
+| 状态 | 当前源码为隔离整改候选；既有安装记录与用户接受另列。 |
 |---|---|
 | 单独可交付 | 赛博朋克 `style_route`、提示词字段、负向约束、声音/连续状态和 QC 合同。 |
 | 单独不能声称 | 不创作剧本或资产，也不会让多色霓虹自动变得合理。 |
@@ -44,8 +44,8 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 1. 先读包内电影画面关系判断，选择成像媒介，建立可见命题和注意力层次，再选预设。
 2. 推导有功能的色彩、光源、空间结构和场景参数。
 3. 补材质、接触和状态连续性；仅视频加入运镜、时间和声音，保留已有批准资产。
-4. 编译数字10信息和平台转译，不改变上游决定。
-5. 执行共享与类型专项审核，输出 `ready_for_prompt` 或具体字段的 `rework`。
+4. 交付当前所需媒介；预设按需读取，不规定固定时长、镜数或输出模板。
+5. 集中检查适用画面关系并交付创作结果；真实交接需要时才输出结构化风格或QC记录。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚
@@ -73,7 +73,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 <!-- contract:outputs -->
 ## 9. 输出
 
-- 可独立使用的类型 `style_route`、`style_module` 和 `qc_contract` 视觉参数包。
+- 直接可用的视觉设计或提示词；明确结构化交接时仍提供style_route、style_module及qc_contract。
 - 可进入场景生产的提示词字段、负向约束、连续性状态和声音提示。
 
 <!-- contract:boundaries -->
@@ -104,6 +104,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 
 - [`references/cinematic-image-direction.md`](../../../skills/cyberpunk-design/references/cinematic-image-direction.md)
 - [`references/COMMON-12-SECTION-PROTOCOL.md`](../../../skills/cyberpunk-design/references/COMMON-12-SECTION-PROTOCOL.md)
+- [`references/genre-presets.md`](../../../skills/cyberpunk-design/references/genre-presets.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/cyberpunk-design/references/NEGATIVE-CASE-BOOK.md)
 - [`references/SOURCE-LEDGER.md`](../../../skills/cyberpunk-design/references/SOURCE-LEDGER.md)
 

@@ -1,0 +1,862 @@
+{
+  "scope": "Actual Jev text calls only; no image pixels or video sent; user acceptance unchanged.",
+  "results": [
+    {
+      "id": "01",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "no_issue_detected",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 0.627049,
+        "request_latency_seconds": 0.626849,
+        "usage": {
+          "input_tokens": 6460,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.93,
+              "probabilities": {
+                "insufficient_evidence": 0.04,
+                "yes": 0.96,
+                "no": 0.0
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.96,
+              "probabilities": {
+                "insufficient_evidence": 0.02,
+                "yes": 0.98,
+                "no": 0.0
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.95,
+              "probabilities": {
+                "insufficient_evidence": 0.03,
+                "yes": 0.97,
+                "no": 0.0
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.95,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.97,
+                "insufficient_evidence": 0.03
+              }
+            }
+          }
+        ],
+        "request_sha256": "a1f356a8388f85cb8b621e336ffca339bb9dd5c2e1ed013d371da3e41a94a682",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "03fb474c148049bbb1c8c263d633ea3f681e6bb69f317b488c3dbb058ff8cfa6",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "悬疑来自同伙故意遮掉证据，不是鬼怪。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "红色报警按钮先存在，末尾由闻溪主动按下；不出现警察抵达。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "第三人只露黑靴，不新增持械动作。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "镜面朝墙后不再显示任何反射。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    },
+    {
+      "id": "02",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "review_required",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 0.729879,
+        "request_latency_seconds": 0.7297,
+        "usage": {
+          "input_tokens": 5970,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.9,
+              "probabilities": {
+                "no": 0.0,
+                "insufficient_evidence": 0.06,
+                "yes": 0.94
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.95,
+              "probabilities": {
+                "no": 0.0,
+                "insufficient_evidence": 0.03,
+                "yes": 0.97
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.95,
+              "probabilities": {
+                "no": 0.0,
+                "insufficient_evidence": 0.03,
+                "yes": 0.97
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "review_required",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.83,
+              "probabilities": {
+                "no": 0.02,
+                "insufficient_evidence": 0.09,
+                "yes": 0.89
+              }
+            }
+          }
+        ],
+        "request_sha256": "222065fb9f8838ccc92a2d199e36ca2aa5d0ee4ba49305f68471c6391065acb9",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "f256779f93fd9bd1ef6b7f8696ee234ebc0c50503cca4c0e0a29349497ce30bc",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "全程不关灯，不用黑场替代恐怖变化。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "脚印由远到近逐步出现，不是一开始就铺满地面。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "先确认布后无人，再发生床单呼吸及布脸。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "没有血腥、追杀或接触；没有新增活人。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    },
+    {
+      "id": "03",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "review_required",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 0.630127,
+        "request_latency_seconds": 0.629927,
+        "usage": {
+          "input_tokens": 6115,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "review_required",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.71,
+              "probabilities": {
+                "no": 0.01,
+                "yes": 0.81,
+                "insufficient_evidence": 0.18
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.94,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.97,
+                "insufficient_evidence": 0.03
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.97,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.98,
+                "insufficient_evidence": 0.02
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.97,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.98,
+                "insufficient_evidence": 0.02
+              }
+            }
+          }
+        ],
+        "request_sha256": "f01b70f127c1774a5e998881a48ff8b63a7de977cc3eef9113c4c549f0cdc6c2",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "3a8bf64788229f8053563c6f33e2cb231f9c313f0b8a39e142f9258bd7603fc9",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "两人都为成年人，关系变化由许棠的主动挽留发生。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "接花盆、放长椅、腾手、拉袖的顺序可追踪。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "黄伞一直由许棠右手拿着；不凭空换手或消失。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "结尾两人留下，电车离开；没有亲吻、求婚或新台词。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    },
+    {
+      "id": "04",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "review_required",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 0.674592,
+        "request_latency_seconds": 0.674387,
+        "usage": {
+          "input_tokens": 6908,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "review_required",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.69,
+              "probabilities": {
+                "no": 0.02,
+                "yes": 0.79,
+                "insufficient_evidence": 0.19
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "review_required",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.83,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.89,
+                "insufficient_evidence": 0.11
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.92,
+              "probabilities": {
+                "no": 0.01,
+                "yes": 0.95,
+                "insufficient_evidence": 0.04
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.88,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.92,
+                "insufficient_evidence": 0.08
+              }
+            }
+          }
+        ],
+        "request_sha256": "cb81b9e918c030e6eddc201a8601ec4bca81d415e3e61123e27fdecc1eeb0033",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "d043414880b2e9444a5979d4a4b6255f54dbb869aed4da3cef9a3ff193517289",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "只两名成人徒手，禁止突然出现刀枪或飞檐法术。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "接触、失衡、回摆、支撑和结果必须连得上；对手不是无故自己摔倒。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "段魁跪倒在桥面，不能掉下山涧；岑舟不胜利摆拍。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "皮匣全程不被夺走，结尾岑舟过桥，对手留桥面。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    },
+    {
+      "id": "05",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "review_required",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 1.967673,
+        "request_latency_seconds": 1.967473,
+        "usage": {
+          "input_tokens": 6897,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "review_required",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.68,
+              "probabilities": {
+                "insufficient_evidence": 0.19,
+                "no": 0.02,
+                "yes": 0.79
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.85,
+              "probabilities": {
+                "insufficient_evidence": 0.09,
+                "no": 0.0,
+                "yes": 0.91
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.93,
+              "probabilities": {
+                "insufficient_evidence": 0.04,
+                "no": 0.0,
+                "yes": 0.96
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.92,
+              "probabilities": {
+                "no": 0.0,
+                "insufficient_evidence": 0.05,
+                "yes": 0.95
+              }
+            }
+          }
+        ],
+        "request_sha256": "6ab0c3ea0e28d1c9cb005ede67870b4ef7ddb663e3ce922715e99780b8c6ec2b",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "2ab74e442ca65192fa2ed4c7d6bc1134884e7586d1e3a1bf1a74e16306168093",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "三名成人，非血腥；不增加倒地死亡或爆炸。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "两边火线与掩体位置稳定，不让陆川枪口指向杜莎。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "杜莎左腿受伤持续，靠搀扶进入，不突然奔跑。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "蓝门结尾关闭，射击余声来自门外；不让弹迹穿过完好厚门打中人。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    },
+    {
+      "id": "06",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "no_issue_detected",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 0.630234,
+        "request_latency_seconds": 0.63004,
+        "usage": {
+          "input_tokens": 6816,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.95,
+              "probabilities": {
+                "no": 0.01,
+                "yes": 0.97,
+                "insufficient_evidence": 0.02
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.97,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.98,
+                "insufficient_evidence": 0.02
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.94,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.96,
+                "insufficient_evidence": 0.04
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.98,
+              "probabilities": {
+                "no": 0.0,
+                "yes": 0.98,
+                "insufficient_evidence": 0.02
+              }
+            }
+          }
+        ],
+        "request_sha256": "7a591735643befd3241765781d7167e5986f2882cbefbb7f7175a6d4c5b10d67",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "02db4d0a6225ea7583ae61670853e1fc2f97bbb41dee510285e0b20b583b38a0",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "车辆分别始终为黄色与深蓝双门跑车；同一封闭赛道、同一行进方向。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "失控由已出现的蓝车后轮破损触发；黄色车是主动制动避撞。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "没有相撞、翻车、跳崖、爆炸；司机都活着。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "结尾二车停在终点前，不能改成黄车夺冠或继续追逐。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    },
+    {
+      "id": "07",
+      "result": {
+        "schema": "film-skills.semantic-review/v1",
+        "provider": "typesafe",
+        "status": "no_issue_detected",
+        "scope": "text_only_not_aesthetic_acceptance",
+        "request_attempted": true,
+        "model": "jev-1.13.0",
+        "latency_seconds": 1.501738,
+        "request_latency_seconds": 1.501522,
+        "usage": {
+          "input_tokens": 7615,
+          "output_tokens": 175
+        },
+        "checks": [],
+        "findings": [
+          {
+            "fact_index": 0,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.97,
+              "probabilities": {
+                "insufficient_evidence": 0.02,
+                "no": 0.0,
+                "yes": 0.98
+              }
+            }
+          },
+          {
+            "fact_index": 1,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.94,
+              "probabilities": {
+                "insufficient_evidence": 0.04,
+                "no": 0.0,
+                "yes": 0.96
+              }
+            }
+          },
+          {
+            "fact_index": 2,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.96,
+              "probabilities": {
+                "insufficient_evidence": 0.03,
+                "no": 0.0,
+                "yes": 0.97
+              }
+            }
+          },
+          {
+            "fact_index": 3,
+            "location": "/deliverable/text",
+            "severity": "major",
+            "status": "no_issue_detected",
+            "signal": {
+              "type": "choice",
+              "choice": "yes",
+              "confidence": 0.96,
+              "probabilities": {
+                "insufficient_evidence": 0.02,
+                "no": 0.0,
+                "yes": 0.98
+              }
+            }
+          }
+        ],
+        "request_sha256": "b7c735a2267944788d603cfb82d45fe5d7e337160b096f5fef1c5a08a6db53a4",
+        "question_count": 4,
+        "semantic_review": "performed_on_text"
+      },
+      "reviewed_text_sha256": "0e3b6537f4dfac01f28454e129c64e3ee47d3e0c9aa008753b111aa8feb0650f",
+      "locked_facts": [
+        {
+          "id": "fact_1",
+          "text": "能力为隔空托举：先以小螺栓建立，再用于棚板；不是时间停止。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_2",
+          "text": "洛岚救人要付出身体用力的代价，不临时增加飞行、传送或其他能力。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_3",
+          "text": "贺峥先退出到安全平台，棚板才落在空桥面；不压中任何人。",
+          "severity": "major",
+          "target": "deliverable"
+        },
+        {
+          "id": "fact_4",
+          "text": "周围城市与车流继续运动；只受能力影响的小范围物体可悬浮。",
+          "severity": "major",
+          "target": "deliverable"
+        }
+      ],
+      "input_source_sha256": "ff796544e1dba1a11c55868b90fa803a2b63f5d5b2bfdec636296ddb72b6385b",
+      "credential_persisted": false
+    }
+  ],
+  "question_count": 28,
+  "review_required_count": 5,
+  "manual_followup": {
+    "scope": "B02/B03 Jev review_required 后的人工原文复核",
+    "status": "no_text_violation_found_by_source_recheck",
+    "changed_design": false,
+    "checks": [
+      {
+        "story": "02",
+        "lock": "没有血腥、追杀或接触；没有新增活人。",
+        "reported_jev_choice": "yes",
+        "reported_jev_confidence": 0.83,
+        "evidence": [
+          "镜2（5–10秒）：阿芩掀开床单，布后只有空架子和墙；停一拍确认无人。",
+          "镜3–4（10–20秒）：无人通道中逐次出现脚印；画面没有实体追逐者或新活人。",
+          "镜6（24–30秒）：床单顶出没有五官的脸形，阿芩停住，没有撞上也没有被触碰；终点保留二者可见间隔。"
+        ],
+        "finding": "全案只有阿芩这名可见人物；异动由脚印与床单表现，没有新增血腥、追杀、身体接触或活人。依实际文本不需改稿。"
+      },
+      {
+        "story": "03",
+        "lock": "两人都为成年人，关系变化由许棠的主动挽留发生。",
+        "reported_jev_choice": "yes",
+        "reported_jev_confidence": 0.71,
+        "evidence": [
+          "源stories.json明确许棠27岁、周野29岁；分镜沿用同名同服饰人物，没有改年龄或另设未成年。",
+          "镜4（16–22秒）：许棠先把盆放长椅，随后用腾出的左手拉住正准备离开的周野袖子。",
+          "镜5（22–26秒）：许棠右手把黄伞移过去，主动说“下一班吧”；周野没有先开口求和。",
+          "镜6（26–30秒）：电车驶离后两人留下，周野仅靠近一点。"
+        ],
+        "finding": "主动挽留的因果清晰保留。年龄属于共同源文视觉锚，分镜未逐镜重抄，不能把未重复年龄判作改成未成年。出图必须继续携带源文人物年龄锚，真实图像年龄观感尚待看图。"
+      }
+    ],
+    "limits": "人工回读仅判断本次文本；不将Jev概率当准确率，不证明实际图像、视频或用户接受。"
+  },
+  "additional_source_recheck": {
+    "04": "原文成人身份保留；镜3肩撞压栏使桥摆、镜4左手支撑顺回摆让开、镜5侧面绊住前移腿后跪跌，未发现确定文字违约。",
+    "05": "沿用三名成人；无新增死亡或爆炸，枪口指向远侧袭击者，左腿伤与持续搀扶保留，末镜厚门完好闭合。该结论不是图像验收。"
+  },
+  "publication_context": {
+    "record_scope": "historical_test_or_research_snapshot",
+    "current_activation": "A5.7.1 adopted through direct explicit user instruction on 2026-09-29; B optional text review",
+    "aesthetic_status": "First-round 21 boards are not an accepted batch; 15 boards contain 29 definite or scope-limited repair observations",
+    "hash_scope": "Original input/source hashes describe frozen source bytes; public file hashes are listed in publication-manifest.json."
+  }
+}

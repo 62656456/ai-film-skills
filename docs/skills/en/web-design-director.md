@@ -1,6 +1,6 @@
 # web-design-director — product-native interface direction
 
-| Status | Deployed |
+| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
 |---|---|
 | Can deliver alone | A complete interface direction or review; with code and browser access, a verified implementation slice. |
 | Cannot claim alone | Without actual rendering and interaction review, it cannot claim visual implementation or user acceptance passed. |

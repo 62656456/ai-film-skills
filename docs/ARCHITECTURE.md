@@ -6,7 +6,7 @@
 
 ```text
 skills/<name>/                18 regular, self-contained packages
-experimental/<name>/          2 opt-in packages; excluded from the complete-studio ZIP
+experimental/<name>/          3 opt-in packages; excluded from the complete-studio ZIP
 docs/skill-contracts.json      reviewed bilingual documentation and inventory contract
 docs/skills/en/               21 generated English guides
 docs/skills/zh-CN/            21 generated Simplified Chinese guides
@@ -35,15 +35,15 @@ Edit runtime instructions and the reviewed contract where needed, then regenerat
 
 The current request selects one primary Skill. The Skill establishes its inputs, produces the requested artifact and applies its own review gates. A second Skill is useful only when it consumes a named handoff and delivers a different necessary result. Failure returns to the earliest responsible decision while preserving approved facts.
 
-The director owns story and interpretation. Asset contracts own approved appearance and state. Genre modules supply observable visual choices. Storyboard 5.6 designs camera and timing and, inside an explicitly identified work directory, saves and restores the decisions in `.director_design`. Those records do not replace the project's overall state or new user instructions. The helper checks recorded versions, inheritance, timing and explicit geometry; it does not score aesthetics or make every chat invocation unavoidable.
+The director owns story and interpretation. Asset contracts own approved appearance and state. Genre modules supply observable visual choices. The storyboard candidate designs camera and timing and, inside an explicitly identified work directory, saves and restores the decisions in `.director_design`. Those records do not replace the project's overall state or new user instructions. The helper checks recorded versions, inheritance, timing and explicit geometry; it does not score aesthetics or make every chat invocation unavoidable.
 
-Production consumes approved material and actual model/tool capability. Whitebox previs is optional and limited to implemented proxies and passed action gates. Market analysis supplies evidence; semantic writing requires its own explicit approval and target.
+Creative shot ideas are separate text choices; adopting one is not generation consent. Production begins only for an actual video request and consumes the selected material and verified model/tool capability. Whitebox previs is optional and limited to implemented proxies and passed action gates. Market analysis supplies evidence; semantic writing requires its own explicit approval and target.
 
 ## Counting and distribution
 
 The 21 repository modules are 20 filmmaking modules plus `web-design-director`. An external xianxia link adds one workflow responsibility, not a bundled module. Thus the complete workflow shows 21 filmmaking responsibilities plus one web helper, while the repository still builds 18 regular and 3 experimental packages.
 
-Current source, old published archives and standalone Preview artifacts have different refs. Source Storyboard Director is 5.6; Release v1.3.0 preserves 5.4.4. See [Installation](INSTALLATION.md) before choosing a distribution.
+Current source, old published archives and standalone Preview artifacts have different refs. Source Storyboard Director is the 5.7.1 overhaul candidate; Release v1.3.0 preserves 5.4.4. See [Installation](INSTALLATION.md) before choosing a distribution.
 
 ## Evidence
 
