@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "skill": "ai-storyboard-director-preview",
+  "version": "5.6.0-rc.1",
+  "parent_version": "5.5.0",
+  "status": "prerelease_explicit_only_real_production_pending",
+  "self_contained": true,
+  "cross_version_runtime_references_allowed": false,
+  "hash_algorithm": "SHA-256",
+  "runtime_files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "DC34C4EB66E50B3595C9C8F27850A0901EA44EBEF4D88F58E18F284D86F9BFA1"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "0CD9DE82FB06E2D928066B37446EDDE0EACD7276A9B3AAFC0D40C7866C94FD06"
+    },
+    {
+      "path": "references/cinematography-design-engine.md",
+      "sha256": "F667DB447734DBF7778E099E6A4388FE0AE0F377C94E52D54D53A0D2D6E02E0D"
+    },
+    {
+      "path": "references/delivery-mode-guard.md",
+      "sha256": "A26F075936909EBC5133C9E50E13D9A901E7FC820DA3EC192B3347500525EAFE"
+    },
+    {
+      "path": "references/design-memory-protocol.md",
+      "sha256": "EB30FCFFE11D24A4E875E091298D94EF41232442DDF229CC3E2089441D17544A"
+    },
+    {
+      "path": "references/framing-and-axis.md",
+      "sha256": "85827F612659C4F56F05B0CA2FDD3D25A6A8EC9510D28BB518C30176325088EA"
+    },
+    {
+      "path": "references/production-contract.md",
+      "sha256": "FA0307146B0498990AD2ACFA474F849FC5B42E1A6DD7C835DACADDF77CA687E6"
+    },
+    {
+      "path": "references/shot-design-engine.md",
+      "sha256": "CA6F7C676D89104E3AD9C965D8F655F13B6EE7D3B95DEFB73A3AD2C206636710"
+    },
+    {
+      "path": "scripts/design_memory.py",
+      "sha256": "670486D5936871DD25C9449F03FBA8223DB472D8AB57EDDDE1D124C261CD2D78"
+    }
+  ],
+  "source_skill_version": "5.6.0",
+  "daily_baseline": "5.4.4",
+  "automatic_promotion": false
+}

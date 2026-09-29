@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI分镜导演 · 5.6测试候选"
+  short_description: "独立测试镜头决定保存、局部恢复与构图轴线检查，保留日常主版本。"
+  default_prompt: "Use $ai-storyboard-director-preview to test shot design and continuation in a separate project copy."
+policy:
+  allow_implicit_invocation: false
