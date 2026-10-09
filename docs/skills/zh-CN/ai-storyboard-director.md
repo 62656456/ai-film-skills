@@ -1,13 +1,13 @@
 # ai-storyboard-director｜剧本转分镜与提示词
 
-| 状态 | 源码A5.7.1已按明确用户指令采用；已知图像问题与审美验收分别保留；历史ZIP不变。 |
+| 状态 | 按明确更新指令采用A5.7.2维护版；回归证据与图片、视频、审美验收分开。 |
 |---|---|
 | 单独可交付 | 按当前阶段交创意镜头思路、可读分镜或可复制提示词；点名多种产物才分别交付。 |
 | 单独不能声称 | 不改写剧本、不直接生成视频，也不证明平台生成成功。 |
 
-[运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0旧ZIP包含5.4.4；当前源码为单独采用的A5.7.1。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -62,6 +62,7 @@ v1.3.0旧ZIP包含5.4.4；当前源码为单独采用的A5.7.1。
 - [ ] 镜头保留剧本事实、人物目的、动作结果、台词和用户锁定顺序。
 - [ ] 摄影机、调度、纵深、焦点、运动与剪辑形成镜头句，而不是轮换术语。
 - [ ] 时长闭合；台词、世界投影、出框主体、光向、道具和尾帧状态连续。
+- [ ] 保存场景的检查与导出按所选场景核几何，仍校验整体结构；内部状态文件不能作为剧本来源。
 
 <!-- contract:pass -->
 ## 8. 过关标准与状态

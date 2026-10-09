@@ -5,9 +5,9 @@
 | 单独可交付 | 类型参数、军事视觉顾问设计、完整图像提示词、实际图片，以及已定镜头的战争视觉与声音补充。 |
 | 单独不能声称 | 合并与安装不能替代新的图像、视频或用户审美验收，也不认证真实战术和装备性能。 |
 
-[运行正文 `SKILL.md`](../../../skills/war-design/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/war-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/war-design/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/war-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

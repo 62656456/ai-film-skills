@@ -5,9 +5,9 @@
 | 单独可交付 | 本包自带完整审批、校验、版本、冲突、写入、回读和待写入合同；宿主只需提供本次写入目标或直接数据句柄。 |
 | 单独不能声称 | 没有本轮批准或可写目标时，不能声称已经写入，只能交付完整待写入包。 |
 
-[运行正文 `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/d-data-analysis-semantic-layer.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/d-data-analysis-semantic-layer.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

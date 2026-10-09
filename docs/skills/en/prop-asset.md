@@ -1,13 +1,13 @@
 # prop-asset — prop identity and state contract
 
-| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
+| Status | Current local rule patch included in v1.4.0; generated-image review and user acceptance remain separate. |
 |---|---|
-| Can deliver alone | A prop reference task, interaction/state views, locked handling rules, negative constraints, and JSON contract. |
+| Can deliver alone | A prop reference task and contract with overall form plus useful structural details; add interaction or changed-state views only when justified. |
 | Cannot claim alone | It does not choreograph the full scene or prove correct handling until actual reference and shot images are reviewed. |
 
-[Runtime `SKILL.md`](../../../skills/prop-asset/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/prop-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/prop-asset/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/prop-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 snapshot; differs from current source where updated.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -29,7 +29,7 @@ Define a prop's identity, scale, materials, usable faces, interfaces, holder, or
 
 Use this module by itself when the requested result stays inside the following boundary:
 
-A prop reference task, interaction/state views, locked handling rules, negative constraints, and JSON contract.
+A prop reference task and contract with overall form plus useful structural details; add interaction or changed-state views only when justified.
 
 **Cannot claim alone:** It does not choreograph the full scene or prove correct handling until actual reference and shot images are reviewed.
 
@@ -106,6 +106,7 @@ A prop reference task, interaction/state views, locked handling rules, negative 
 
 - [`references/cinematic-image-direction.md`](../../../skills/prop-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/prop-asset/references/NEGATIVE-CASE-BOOK.md)
+- [`references/prop-design-and-reference.md`](../../../skills/prop-asset/references/prop-design-and-reference.md)
 
 **Distribution notices in new ZIP builds**
 

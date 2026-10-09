@@ -5,9 +5,9 @@
 | Can deliver alone | Genre parameters, military visual advice, complete image prompts, actual images, and war-visual/sound supplements for approved shots. |
 | Cannot claim alone | Merging and installation do not replace new image/video or user-aesthetic evaluation, or certify real tactics and equipment performance. |
 
-[Runtime `SKILL.md`](../../../skills/war-design/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/war-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/war-design/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/war-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 snapshot; differs from current source where updated.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose

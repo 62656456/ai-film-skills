@@ -1,6 +1,6 @@
 # How every Skill is designed
 
-A Skill owns a bounded result and the evidence needed to judge it. The [20 module guides](skills/INDEX.md) explain the current source in English and Simplified Chinese; each links its exact runtime files. The [full workflow](WORKFLOW.md) explains how those results can be handed to the next stage without loading every Skill at once.
+A Skill owns a bounded result and the evidence needed to judge it. The [21 module guides](skills/INDEX.md) explain the current source in English and Simplified Chinese; each links its exact runtime files. The [full workflow](WORKFLOW.md) explains how those results can be handed to the next stage without loading every Skill at once.
 
 ## The design contract
 
@@ -79,6 +79,6 @@ These states attach to their exact scope. A user-accepted image is not a complet
 
 ## Maintaining the documentation
 
-`docs/skill-contracts.json` contains the reviewed bilingual explanations and distribution links. `scripts/generate_skill_guides.py` generates 40 guides and an index from that registry plus the actual packaged resources. Edit the registry or runtime truth, regenerate, and validate; do not hand-edit derived pages.
+`docs/skill-contracts.json` contains the reviewed bilingual explanations and distribution links. `scripts/generate_skill_guides.py` generates 42 guides and an index from that registry plus the actual packaged resources. Edit the registry or runtime truth, regenerate, and validate; do not hand-edit derived pages.
 
 A useful maintenance change keeps the runtime and guide in agreement, keeps dependencies inside the standalone package, preserves approved behavior, and identifies a concrete rollback or repair route. Read [Publication scope](../PUBLICATION_SCOPE.md), [Architecture](ARCHITECTURE.md) and [Contributing](../CONTRIBUTING.md).

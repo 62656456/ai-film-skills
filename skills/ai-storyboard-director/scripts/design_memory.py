@@ -134,6 +134,8 @@ def identify(items, name, fields):
 
 def read_source(root, source):
     path = inside(root, source)
+    require(not path.is_relative_to(inside(root, ".director_design")),
+            "RESERVED_SOURCE", "Script source cannot target internal design memory files")
     require(path.is_file(), "SOURCE_MISSING", "Script source must be an existing file")
     data = path.read_bytes()
     try:
@@ -453,7 +455,7 @@ def commit(args, root):
 def check(args, root):
     state, sha256 = load_state(root)
     scene = selected(state, args.scene)
-    reviews = validate_state(state)
+    reviews = [scene_id for scene_id in validate_state(state) if scene_id == scene["scene_id"]]
     return result(state, sha256, scene_sha256=scene_digest(scene),
                   status="needs_geometry_review" if reviews else "machine_constraints_passed",
                   ready=not reviews, needs_geometry_review=reviews)
@@ -464,13 +466,13 @@ def export(args, root):
         state, sha256 = load_state(root)
         cas(state, sha256, args)
         scene = selected(state, args.scene)
-        reviews = validate_state(state)
+        reviews = [scene_id for scene_id in validate_state(state) if scene_id == scene["scene_id"]]
         if args.allow_unverified_geometry:
             text_field(args.review_note, "--review-note")
         else:
             require(not args.review_note, "REVIEW_FLAG_REQUIRED", "--review-note requires --allow-unverified-geometry")
             require(not reviews, "NEEDS_GEOMETRY_REVIEW", "Design retained; review geometry or explicitly export an unverified candidate")
-        geometry_verified = not reviews and all(item["axis"]["status"] == "defined" for item in state["scenes"])
+        geometry_verified = not reviews and scene["axis"]["status"] == "defined"
         text_path = inside(root, args.text)
         payload = text_path.read_bytes()
         try:

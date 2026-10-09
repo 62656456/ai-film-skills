@@ -12,8 +12,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from generate_skill_guides import download_link
-from validate_pages_site import SiteParser, markup_errors, has_previs_nonfilm_boundary
-from validate_repository import validate_public_counts
+from validate_pages_site import (SiteParser, markup_errors, has_previs_nonfilm_boundary,
+                                 has_linked_image, gif_metadata, preview_metadata_errors)
+from validate_repository import (validate_public_counts, public_count_files,
+                                 validate_launch_assets, validate_director_example,
+                                 REQUIRED_LAUNCH_ASSETS)
 from validate_style_gallery import validate_showcase, webp_dimensions
 
 
@@ -27,6 +30,100 @@ class PublicContractTests(unittest.TestCase):
         self.assertEqual(validate_public_counts("20 modules and 40 bilingual guides", 20), [])
         self.assertTrue(validate_public_counts("19 modules and 38 guides", 20))
         self.assertEqual(validate_public_counts("Historical v1.3.0: 19 modules and 38 guides", 20), [])
+
+    def test_regular_experimental_and_multilingual_counts_follow_inventory(self):
+        samples = ("18 regular and 3 experimental packages; 21 modules; 42 guides",
+                   "18项常规＋3项实验＝21个独立模块；42份中英指南",
+                   "通常18＋実験3＝21モジュール; 計42ページ", "일반 18개＋실험 3개＝21개 모듈; 42개 가이드",
+                   "regular_packages-18 experimental_packages-3 bilingual_guides-42")
+        for text in samples:
+            with self.subTest(text=text):
+                self.assertEqual(validate_public_counts(text, 21, 18, 3), [])
+                self.assertTrue(validate_public_counts(text, 22, 18, 4))
+        self.assertTrue(validate_public_counts("两项隔离实验。", 21, 18, 3))
+        self.assertEqual(validate_public_counts("21 generated English guides; 21 generated Simplified Chinese guides", 21, 18, 3), [])
+        self.assertTrue(validate_public_counts("20 module guides", 21, 18, 3))
+
+    def test_historical_sections_preserve_counts_but_do_not_hide_current_sections(self):
+        history = "## Historical v1.2.0\n20 modules and 40 guides\n### Details\n2 experimental packages\n"
+        self.assertEqual(validate_public_counts(history, 21, 18, 3), [])
+        self.assertTrue(validate_public_counts(history + "## Current release\n20 modules\n", 21, 18, 3))
+
+    def test_public_counts_include_catalog_scope_and_all_overview_languages(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            names = ("SKILL_CATALOG.md", "PUBLICATION_SCOPE.md", "docs/index.html", "docs/skills/INDEX.md",
+                     "docs/i18n/ja/README.md", "docs/i18n/ko/README.md", "docs/i18n/zh-CN/README.md")
+            for name in names:
+                path = root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("21 modules", encoding="utf-8")
+            checked = {p.relative_to(root).as_posix() for p in public_count_files(root)}
+            self.assertTrue(set(names) <= checked)
+
+    def test_missing_director_example_reports_error_without_a_traceback(self):
+        with tempfile.TemporaryDirectory() as raw:
+            errors = validate_director_example(Path(raw))
+            self.assertEqual(len(errors), 1)
+            self.assertIn("cannot read", errors[0])
+
+    def test_launch_assets_reject_missing_or_duplicate_entries(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            folder = root / "docs/assets"
+            folder.mkdir(parents=True)
+            entries = []
+            for name in sorted(REQUIRED_LAUNCH_ASSETS):
+                data = (b"\x89PNG\r\n\x1a\n" + b"\0\0\0\rIHDR" + struct.pack(">II", 4, 3)
+                        if name.endswith(".png") else b"<svg/>")
+                (folder / name).write_bytes(data)
+                entries.append({"path": name, "sha256": hashlib.sha256(data).hexdigest(), "width": 4, "height": 3})
+            path = folder / "launch-assets.json"
+            path.write_text(json.dumps({"assets": entries}), encoding="utf-8")
+            self.assertEqual(validate_launch_assets(root), [])
+            for changed, expected in ((entries[:-1], "inventory mismatch"), (entries + [entries[0]], "duplicate paths")):
+                path.write_text(json.dumps({"assets": changed}), encoding="utf-8")
+                self.assertTrue(any(expected in e for e in validate_launch_assets(root)))
+
+    def test_clickable_preview_requires_image_inside_the_original_video_link(self):
+        source, video = "docs/media/poster.png", "https://example.org/clip.mp4"
+        good = f'<a href="{video}"><img src="{source}" alt="Preview" /></a>'
+        self.assertTrue(has_linked_image(good, source, video))
+        self.assertTrue(has_linked_image(f"[![Preview]({source})]({video})", source, video))
+        for text in (f'<a href="{video}">{source}</a>', f'<img src="{source}"><a href="{video}">Play</a>',
+                     good.replace(video, "https://example.org/other.mp4"), "```html\n" + good + "\n```"):
+            with self.subTest(text=text):
+                self.assertFalse(has_linked_image(text, source, video))
+
+    def test_gif_metadata_counts_image_blocks_and_real_delays(self):
+        # Container metadata fixtures do not claim full pixel decoding or visual validity.
+        header = b"GIF89a" + struct.pack("<HH", 4, 3) + b"\0\0\0"
+        loop = b"\x21\xff\x0bNETSCAPE2.0\x03\x01\0\0\0"
+        descriptor = b"\x2c" + struct.pack("<HHHH", 0, 0, 4, 3) + b"\0\x02"
+        image_data = b"\x06\x21\xf9\x04abc\0"
+        first = b"\x21\xf9\x04\0\x0c\0\0\0" + descriptor + image_data
+        second = b"\x21\xf9\x04\0\x0d\0\0\0" + descriptor + b"\x02\x44\x01\0"
+        payload = header + loop + first + second + b"\x3b"
+        self.assertEqual(gif_metadata(payload), {"width": 4, "height": 3, "frames": 2, "duration_ms": 250, "loop": 0})
+        item = {"preview_width": 4, "preview_height": 3, "preview_frames": 2, "preview_duration_ms": 250}
+        self.assertEqual(preview_metadata_errors(payload, item), [])
+        for field in item:
+            changed = dict(item, **{field: 999999})
+            self.assertTrue(preview_metadata_errors(payload, changed), field)
+        for broken in (payload[:-1], payload[:-5], b"GIF89a", header + b"\x3b"):
+            with self.subTest(broken=broken), self.assertRaises(ValueError):
+                gif_metadata(broken)
+
+    def test_published_snapshot_links_exact_release_and_rejects_wrong_asset(self):
+        page = ROOT / "docs/skills/en/example.md"
+        item = {"name": "example", "download": {"state": "published_snapshot", "tag": "v1.4.0",
+                "asset": "example.zip", "note": {"en": "Published source snapshot."}}}
+        link, _ = download_link(item, page, "en")
+        self.assertIn("releases/download/v1.4.0/example.zip", link)
+        self.assertNotIn("Historical", link)
+        item["download"]["asset"] = "another.zip"
+        with self.assertRaises(ValueError):
+            download_link(item, page, "en")
 
     def test_downloads_distinguish_current_source_and_historical_assets(self):
         page = ROOT / "docs/skills/en/example.md"

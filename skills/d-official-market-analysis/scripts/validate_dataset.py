@@ -20,7 +20,7 @@ REQUIRED = [
 DATE_FIELDS = ["published_at", "retrieved_at", "data_period_start", "data_period_end"]
 LEVELS = {"S", "A", "B", "C", "D"}
 DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-CORE_FIELDS = ("source_name", "publisher", "source_url", "metric_name", "evidence_level")
+CORE_FIELDS = ("source_name", "publisher", "source_url", "evidence_level")
 
 
 def load_records(path: Path) -> list[object]:
@@ -80,6 +80,8 @@ def validate(records: list[object]) -> tuple[list[str], list[str]]:
                 errors.append(f"row {index}: {field} is required for a usable record")
         if is_blank(row.get("metric_value")) and is_blank(row.get("raw_excerpt")):
             errors.append(f"row {index}: provide metric_value or raw_excerpt")
+        if not is_blank(row.get("metric_value")) and is_blank(row.get("metric_name")):
+            errors.append(f"row {index}: metric_name is required when metric_value is provided")
         for field in DATE_FIELDS:
             value = row.get(field)
             if not is_blank(value):

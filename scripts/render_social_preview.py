@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Render the exact Open Film Skills social preview as a 1280x640 PNG."""
+"""Render a new Open Film Skills preview using pinned font inputs."""
 
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import os
 from pathlib import Path
 
@@ -12,6 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "docs" / "assets" / "social-preview.png"
+PINNED_FONT_DIR = ROOT / "docs" / "assets" / "fonts"
 
 COLORS = {
     "slate": "#0B0F14",
@@ -27,27 +30,20 @@ COLORS = {
 }
 
 
-def font_dir_default() -> Path | None:
+def font_dir_default() -> Path:
     configured = os.environ.get("OPEN_FILM_SKILLS_FONT_DIR")
     if configured:
         return Path(configured)
-    windows = os.environ.get("WINDIR")
-    if windows:
-        return Path(windows) / "Fonts"
-    return None
+    return PINNED_FONT_DIR
 
 
 def font(size: int, bold: bool = False, font_dir: Path | None = None) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    names = ("segoeuib.ttf", "arialbd.ttf", "DejaVuSans-Bold.ttf") if bold else ("segoeui.ttf", "arial.ttf", "DejaVuSans.ttf")
-    for name in names:
-        candidates = [font_dir / name] if font_dir else []
-        candidates.append(Path(name))
-        for candidate in candidates:
-            try:
-                return ImageFont.truetype(str(candidate), size)
-            except OSError:
-                continue
-    return ImageFont.load_default()
+    name = "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf"
+    candidate = (font_dir or PINNED_FONT_DIR) / name
+    expected = json.loads((PINNED_FONT_DIR / "manifest.json").read_text(encoding="utf-8"))["files"][name]
+    if hashlib.sha256(candidate.read_bytes()).hexdigest() != expected:
+        raise ValueError(f"Font must match the pinned DejaVu Sans 2.37 input: {name}")
+    return ImageFont.truetype(str(candidate), size)
 
 
 def render(output: Path, font_dir: Path | None) -> None:

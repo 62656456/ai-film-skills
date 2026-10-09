@@ -5,9 +5,9 @@
 | 单独可交付 | 爱情 `style_route`、亲密与光影参数、负向约束和 QC 合同。 |
 | 单独不能声称 | 不能用粉色滤镜、全程柔焦或无动机拥抱制造亲密。 |
 
-[运行正文 `SKILL.md`](../../../skills/romance-design/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/romance-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/romance-design/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/romance-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

@@ -1,6 +1,10 @@
 from __future__ import annotations
 
 import importlib.util
+import json
+import subprocess
+import sys
+import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
@@ -96,8 +100,29 @@ class CandidateValidatorTests(unittest.TestCase):
         )
         self.assertEqual(CANDIDATE.validate(records, as_of=date(2026, 8, 25)), [])
 
+    def test_pending_review_status_matches_both_prose_views(self) -> None:
+        references = ROOT / "skills/d-data-analysis-semantic-layer/references"
+        records = CANDIDATE.load(references / "records-v1.0.0.json")
+        record = next(item for item in records if item["record_id"] == "D-07-2026-URBAN-ROMANCE-SATURATION")
+        self.assertEqual(record["status"], "待复查")
+        evidence = (references / "evidence.md").read_text(encoding="utf-8")
+        row = next(line for line in evidence.splitlines() if record["record_id"] in line)
+        self.assertEqual(row.split("|")[6].strip(), record["status"])
+        semantic = (references / "semantic-layer.md").read_text(encoding="utf-8")
+        section = semantic.split("### 都市情感需求稳定，但同质化风险突出", 1)[1].split("###", 1)[0]
+        self.assertIn(f"- 状态：{record['status']}。", section)
+
 
 class DatasetValidatorTests(unittest.TestCase):
+    def call(self, row: dict[str, object]) -> subprocess.CompletedProcess[str]:
+        with tempfile.TemporaryDirectory() as raw:
+            path = Path(raw) / "dataset.jsonl"
+            path.write_text(json.dumps(row, ensure_ascii=False) + "\n", encoding="utf-8")
+            process = subprocess.run([sys.executable, "-B", str(ROOT / "skills/d-official-market-analysis/scripts/validate_dataset.py"),
+                                      str(path)], capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=15)
+            self.assertFalse(process.stderr.strip(), process.stderr)
+            return process
+
     def test_all_blank_record_fails(self) -> None:
         row = {field: "" for field in DATASET.REQUIRED}
         errors, _ = DATASET.validate([row])
@@ -118,6 +143,27 @@ class DatasetValidatorTests(unittest.TestCase):
     def test_valid_record_passes(self) -> None:
         errors, _ = DATASET.validate([valid_dataset_row()])
         self.assertEqual(errors, [])
+
+    def test_qualitative_excerpt_does_not_require_an_invented_metric(self) -> None:
+        row = valid_dataset_row()
+        row.update(metric_name="", metric_value="", metric_unit="", raw_excerpt="The platform announced a bounded policy change.")
+        process = self.call(row)
+        self.assertEqual(process.returncode, 0, process.stdout)
+        self.assertEqual(json.loads(process.stdout.splitlines()[-1])["errors"], 0)
+
+    def test_numeric_value_still_requires_a_metric_name_even_with_an_excerpt(self) -> None:
+        row = valid_dataset_row()
+        row.update(metric_name="", metric_value=0, raw_excerpt="The source also contains a qualitative statement.")
+        process = self.call(row)
+        self.assertEqual(process.returncode, 1, process.stdout)
+        self.assertIn("metric_name is required when metric_value is provided", process.stdout)
+
+    def test_qualitative_record_still_needs_the_full_column_schema(self) -> None:
+        row = valid_dataset_row()
+        row["metric_value"] = ""
+        del row["metric_name"]
+        errors, _ = DATASET.validate([row])
+        self.assertIn("missing columns: metric_name", "\n".join(errors))
 
 
 if __name__ == "__main__":

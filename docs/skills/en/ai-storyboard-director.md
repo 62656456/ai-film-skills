@@ -1,13 +1,13 @@
 # ai-storyboard-director — script to shots and prompts
 
-| Status | Source A 5.7.1 adopted by explicit user instruction; known image-test issues and aesthetic acceptance remain separate; historical ZIPs unchanged. |
+| Status | A 5.7.2 maintenance update selected by explicit instruction; regression evidence is separate from image, video and aesthetic acceptance. |
 |---|---|
 | Can deliver alone | Creative shot ideas, a readable storyboard or copy-ready prompts, according to the requested stage; multiple artifacts only when requested. |
 | Cannot claim alone | It does not rewrite the script, directly generate the video, or prove platform success. |
 
-[Runtime `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/ai-storyboard-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 ZIP contains 5.4.4; current source is the separately adopted A 5.7.1.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -62,6 +62,7 @@ Creative shot ideas, a readable storyboard or copy-ready prompts, according to t
 - [ ] The shots preserve script facts, character purpose, action results, dialogue, and user-locked order.
 - [ ] Camera, blocking, depth, focus, movement, and editing form shot sentences rather than rotate terminology.
 - [ ] Duration closes exactly; dialogue timing, world projection, off-frame subjects, light direction, props, and end states remain continuous.
+- [ ] Saved-scene checks and export use the selected scene geometry while retaining whole-state structural validation; internal state files cannot become screenplay sources.
 
 <!-- contract:pass -->
 ## 8. Pass standard and states

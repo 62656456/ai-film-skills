@@ -5,9 +5,9 @@
 | 单独可交付 | 人物参考图任务、视图计划、锁定特征清单、负向约束和 JSON 合同。 |
 | 单独不能声称 | 没有生图工具和视觉审核时，不能声称人物图已存在或已批准。 |
 
-[运行正文 `SKILL.md`](../../../skills/character-asset/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/character-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/character-asset/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/character-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

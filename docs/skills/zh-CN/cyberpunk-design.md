@@ -5,9 +5,9 @@
 | 单独可交付 | 赛博朋克 `style_route`、提示词字段、负向约束、声音/连续状态和 QC 合同。 |
 | 单独不能声称 | 不创作剧本或资产，也不会让多色霓虹自动变得合理。 |
 
-[运行正文 `SKILL.md`](../../../skills/cyberpunk-design/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/cyberpunk-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/cyberpunk-design/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/cyberpunk-design.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

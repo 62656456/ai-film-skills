@@ -240,6 +240,13 @@ def main() -> int:
         (staging / "manifest.json").write_text(
             json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
+        checksum_files = sorted([item["file"] for item in packages] + ["manifest.json"])
+        (staging / "SHA256SUMS.txt").write_text(
+            "".join(
+                f"{hashlib.sha256((staging / name).read_bytes()).hexdigest()}  {name}\n"
+                for name in checksum_files
+            ), encoding="utf-8"
+        )
         commit_staging_output(staging, output)
     except Exception as exc:
         if staging.exists():

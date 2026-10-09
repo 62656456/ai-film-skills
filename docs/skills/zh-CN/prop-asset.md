@@ -1,13 +1,13 @@
 # prop-asset｜道具身份与状态合同
 
-| 状态 | 当前源码为隔离整改候选；既有安装记录与用户接受另列。 |
+| 状态 | 现行本地规则补丁已纳入v1.4.0；实图审查与用户接受另列。 |
 |---|---|
-| 单独可交付 | 道具参考图任务、交互/状态视图、锁定持用规则、负向约束和 JSON 合同。 |
+| 单独可交付 | 道具参考任务与合同交代整体形制和有用途的结构局部；依据成立时才扩展交互或变化状态视图。 |
 | 单独不能声称 | 不负责完整场面调度，也不能在真实参考图和镜头未审时证明持用正确。 |
 
-[运行正文 `SKILL.md`](../../../skills/prop-asset/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/prop-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/prop-asset/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/prop-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -29,7 +29,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 
 当点名结果落在以下边界内时，可以只拿这一个模块使用：
 
-道具参考图任务、交互/状态视图、锁定持用规则、负向约束和 JSON 合同。
+道具参考任务与合同交代整体形制和有用途的结构局部；依据成立时才扩展交互或变化状态视图。
 
 **单独不能声称:** 不负责完整场面调度，也不能在真实参考图和镜头未审时证明持用正确。
 
@@ -106,6 +106,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 
 - [`references/cinematic-image-direction.md`](../../../skills/prop-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/prop-asset/references/NEGATIVE-CASE-BOOK.md)
+- [`references/prop-design-and-reference.md`](../../../skills/prop-asset/references/prop-design-and-reference.md)
 
 **新构建 ZIP 的分发许可文件**
 

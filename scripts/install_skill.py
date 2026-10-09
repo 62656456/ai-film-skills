@@ -11,7 +11,9 @@ import tempfile
 import uuid
 from pathlib import Path
 
-from repository_safety import SafetyError, is_link_like, is_within, safe_source_files
+from repository_safety import (
+    SafetyError, is_link_like, is_within, package_source_files, safe_source_files,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,7 +47,7 @@ def default_target(platform: str) -> Path | None:
 
 
 def install(source: Path, target_root: Path, force: bool) -> Path:
-    safe_source_files(source)
+    source_files = package_source_files(source)
     target_root = target_root.expanduser().resolve()
     destination = target_root / source.name
     if not is_within(destination.resolve(strict=False), target_root):
@@ -65,27 +67,40 @@ def install(source: Path, target_root: Path, force: bool) -> Path:
     staging = staging_parent / source.name
     backup = target_root / f".{source.name}.backup-{uuid.uuid4().hex}"
     try:
-        shutil.copytree(
-            source,
-            staging,
-            symlinks=True,
-            ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", "*.pyc", "*.pyo"),
-        )
+        staging.mkdir()
+        for path in source_files:
+            target = staging / path.relative_to(source)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, target, follow_symlinks=False)
         safe_source_files(staging)
         if not (staging / "SKILL.md").is_file():
             raise RuntimeError("staged package is missing SKILL.md")
         if destination.exists():
             destination.rename(backup)
         staging.rename(destination)
-        if backup.exists():
-            shutil.rmtree(backup)
     except Exception:
         if backup.exists() and not destination.exists():
             backup.rename(destination)
         raise
     finally:
         if staging_parent.exists():
-            shutil.rmtree(staging_parent)
+            try:
+                shutil.rmtree(staging_parent)
+            except OSError as exc:
+                print(
+                    f"Warning: installation staging cleanup failed; "
+                    f"remaining directory at {staging_parent}: {exc}",
+                    file=sys.stderr,
+                )
+    if backup.exists():
+        try:
+            shutil.rmtree(backup)
+        except OSError as exc:
+            print(
+                f"Warning: installation committed at {destination}; backup cleanup "
+                f"failed; remaining backup at {backup}: {exc}",
+                file=sys.stderr,
+            )
     return destination
 
 

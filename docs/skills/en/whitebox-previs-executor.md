@@ -5,9 +5,9 @@
 | Can deliver alone | An MP4 preview and its compiled/validation contract when the host has the required runtime. |
 | Cannot claim alone | It cannot promise arbitrary actors, complete untested fights, final-film quality or the pixels a separate AI-video model will generate. |
 
-[Runtime `SKILL.md`](../../../experimental/whitebox-previs-executor/SKILL.md) · [Install current source](../../INSTALLATION.md#experimental-packages) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../experimental/whitebox-previs-executor/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/whitebox-previs-executor.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-New source package; no v1.3.0 release asset.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose

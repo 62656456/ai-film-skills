@@ -5,9 +5,9 @@
 | Can deliver alone | Research-driven visual diagnosis, derivation, bible, directing plan, and copy-ready prompt package for a defined scene or asset. |
 | Cannot claim alone | Accepted examples do not turn the experimental package into universal engineering validation, stable generation performance or an accepted final film. |
 
-[Runtime `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/hard-sci-fi-visual-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/hard-sci-fi-visual-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 snapshot; differs from current source where updated.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose

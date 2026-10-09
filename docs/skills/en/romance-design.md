@@ -5,9 +5,9 @@
 | Can deliver alone | A romance `style_route`, intimacy and light parameters, negative constraints, and QC contract. |
 | Cannot claim alone | It does not manufacture intimacy with a pink filter, constant soft focus, or an unmotivated embrace. |
 
-[Runtime `SKILL.md`](../../../skills/romance-design/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/romance-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/romance-design/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/romance-design.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 snapshot; differs from current source where updated.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose

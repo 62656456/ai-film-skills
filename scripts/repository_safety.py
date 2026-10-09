@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import sys
 import tempfile
 import uuid
 from pathlib import Path
@@ -16,8 +17,30 @@ MARKER_PAYLOAD = {
     "owner": "open-film-skills",
     "purpose": "generated-package-output",
 }
-EXCLUDED_SOURCE_PARTS = {"__pycache__", ".pytest_cache"}
-EXCLUDED_SOURCE_SUFFIXES = {".pyc", ".pyo"}
+# Distribution is opt-in by file type. These are source documents, executable
+# helpers, declared configuration, and reference media; unknown local files do
+# not become public merely because they were left in a Skill directory.
+PACKAGE_SOURCE_SUFFIXES = {
+    ".md", ".rst", ".txt", ".json", ".jsonl", ".yaml", ".yml", ".toml",
+    ".py", ".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx", ".sh", ".ps1",
+    ".bat", ".cmd", ".html", ".css", ".svg", ".csv", ".tsv",
+    ".png", ".jpg", ".jpeg", ".webp", ".gif", ".ico", ".pdf",
+    ".wav", ".mp3", ".ogg", ".mp4", ".webm", ".woff", ".woff2", ".ttf",
+    ".otf", ".glb", ".gltf", ".obj", ".mtl", ".blend", ".stl",
+}
+PACKAGE_SOURCE_NAMES = {
+    "license", "licence", "copying", "unlicense", "notice", "authors",
+}
+EXCLUDED_SOURCE_PARTS = {
+    ".git", ".hg", ".svn", ".idea", ".vscode", ".venv", "venv",
+    "node_modules", "__pycache__", ".pytest_cache", ".mypy_cache",
+    ".ruff_cache", ".cache", ".tox", ".nox", ".hypothesis", "coverage",
+    "htmlcov", "build", "dist", "log", "logs", "tmp", "temp",
+}
+PRIVATE_SOURCE_NAMES = {
+    "credentials", "credential", "secrets", "secret", "private-key",
+    "private_key", "id_rsa", "id_dsa", "id_ecdsa", "id_ed25519",
+}
 
 
 class SafetyError(RuntimeError):
@@ -68,14 +91,31 @@ def safe_source_files(root: Path) -> list[Path]:
 
 
 def package_source_files(root: Path) -> list[Path]:
-    """Return safe source files while excluding local interpreter/test caches."""
+    """Return the explicit public file set shared by packaging and installation.
 
-    return [
-        path
-        for path in safe_source_files(root)
-        if not (set(path.relative_to(root).parts) & EXCLUDED_SOURCE_PARTS)
-        and path.suffix.lower() not in EXCLUDED_SOURCE_SUFFIXES
-    ]
+    The policy also applies to exported folders without Git metadata, and does
+    not trust tracked or ignored status to make credentials distributable.
+    """
+
+    def distributable(path: Path) -> bool:
+        parts = [part.casefold() for part in path.relative_to(root).parts]
+        if any(
+            part in EXCLUDED_SOURCE_PARTS or part.startswith(".env")
+            or part in PRIVATE_SOURCE_NAMES
+            or part.split(".", 1)[0] in PRIVATE_SOURCE_NAMES
+            for part in parts
+        ):
+            return False
+        name = parts[-1]
+        if name.startswith(".") or name.endswith("~"):
+            return False
+        return (
+            path.suffix.casefold() in PACKAGE_SOURCE_SUFFIXES
+            or name in PACKAGE_SOURCE_NAMES
+            or (name.startswith(("license-", "licence-")) and not path.suffix)
+        )
+
+    return [path for path in safe_source_files(root) if distributable(path)]
 
 
 def write_output_marker(directory: Path) -> None:
@@ -170,4 +210,13 @@ def commit_staging_output(staging: Path, output: Path) -> None:
             backup.rename(output)
         raise
     if backup is not None and backup.exists():
-        remove_owned_output(backup)
+        try:
+            remove_owned_output(backup)
+        except (OSError, SafetyError) as exc:
+            # The new output has already committed. Cleanup failure must not
+            # claim that the valid replacement was rolled back or failed.
+            print(
+                f"Warning: output committed at {output}; backup cleanup failed; "
+                f"remaining backup at {backup}: {exc}",
+                file=sys.stderr,
+            )

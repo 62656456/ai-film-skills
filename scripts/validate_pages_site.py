@@ -68,6 +68,113 @@ def has_previs_nonfilm_boundary(text: str) -> bool:
     return bool(re.search(r"(?:not|不证明|不是|不代表|不等于)[^\n]{0,100}(?:finished\s+AI\s+films|final\s+AI\s+films|(?:最终|完整)\s*AI\s*成片)", text, re.I))
 
 
+def has_linked_image(text: str, image_source: str, video_url: str) -> bool:
+    """Require an actual image inside the link that opens its original video."""
+    text = re.sub(r"^\s*(`{3,}|~{3,})[^\n]*\n.*?^\s*\1\s*$", "", text, flags=re.M | re.S)
+    text = re.sub(r"`[^`\n]*`", "", text)
+    class LinkedImageParser(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.links: list[str] = []
+            self.found = False
+
+        def handle_starttag(self, tag, attrs):
+            values = dict(attrs)
+            if tag == "a":
+                self.links.append(values.get("href", ""))
+            elif tag == "img" and values.get("src") == image_source and video_url in self.links:
+                self.found = True
+
+        def handle_endtag(self, tag):
+            if tag == "a" and self.links:
+                self.links.pop()
+
+    parser = LinkedImageParser()
+    parser.feed(text)
+    if parser.found:
+        return True
+    return bool(re.search(r"\[!\[[^\]]*\]\(<?" + re.escape(image_source) +
+                          r">?\)\]\(<?" + re.escape(video_url) + r">?\)", text))
+
+
+def gif_metadata(payload: bytes) -> dict[str, int | None]:
+    """Read GIF blocks, never mistaking compressed bytes for frame controls."""
+    if len(payload) < 13 or payload[:6] not in {b"GIF87a", b"GIF89a"}:
+        raise ValueError("invalid or truncated GIF header")
+    width, height = int.from_bytes(payload[6:8], "little"), int.from_bytes(payload[8:10], "little")
+    if not width or not height:
+        raise ValueError("GIF canvas dimensions must be positive")
+    offset = 13
+
+    def take(size: int) -> bytes:
+        nonlocal offset
+        if offset + size > len(payload):
+            raise ValueError("truncated GIF block")
+        data = payload[offset:offset + size]
+        offset += size
+        return data
+
+    def subblocks() -> bytes:
+        chunks = bytearray()
+        while True:
+            size = take(1)[0]
+            if size == 0:
+                return bytes(chunks)
+            chunks.extend(take(size))
+
+    packed = payload[10]
+    if packed & 128:
+        take(3 * 2 ** ((packed & 7) + 1))
+    frames, duration, delay, loop = 0, 0, 0, None
+    while offset < len(payload):
+        marker = take(1)[0]
+        if marker == 0x3B:
+            if not frames:
+                raise ValueError("GIF has no image frames")
+            return {"width": width, "height": height, "frames": frames,
+                    "duration_ms": duration, "loop": loop}
+        if marker == 0x21:
+            label = take(1)[0]
+            if label == 0xF9:
+                if take(1)[0] != 4:
+                    raise ValueError("invalid GIF graphic control size")
+                control = take(4)
+                if take(1)[0] != 0:
+                    raise ValueError("unterminated GIF graphic control")
+                delay = int.from_bytes(control[1:3], "little") * 10
+            else:
+                data = subblocks()
+                if label == 0xFF and data[:11] in {b"NETSCAPE2.0", b"ANIMEXTS1.0"}:
+                    if len(data) != 14 or data[11] != 1:
+                        raise ValueError("invalid GIF animation loop extension")
+                    loop = int.from_bytes(data[12:14], "little")
+        elif marker == 0x2C:
+            descriptor = take(9)
+            if not int.from_bytes(descriptor[4:6], "little") or not int.from_bytes(descriptor[6:8], "little"):
+                raise ValueError("GIF frame dimensions must be positive")
+            if descriptor[8] & 128:
+                take(3 * 2 ** ((descriptor[8] & 7) + 1))
+            take(1)  # LZW minimum code size; the image data itself is not decoded here.
+            subblocks()
+            frames += 1
+            duration += delay
+            delay = 0
+        else:
+            raise ValueError(f"unknown GIF block marker: {marker:#x}")
+    raise ValueError("GIF is missing its trailer")
+
+
+def preview_metadata_errors(payload: bytes, item: dict) -> list[str]:
+    try:
+        actual = gif_metadata(payload)
+    except ValueError as exc:
+        return [f"invalid archived GIF preview: {exc}"]
+    pairs = (("width", "preview_width"), ("height", "preview_height"),
+             ("frames", "preview_frames"), ("duration_ms", "preview_duration_ms"))
+    return [f"archived GIF {key} mismatch: expected {item.get(field)}, found {actual[key]}"
+            for key, field in pairs if actual[key] != item.get(field)]
+
+
 def main() -> int:
     errors: list[str] = []
     for required in (INDEX, CSS, DOCS / ".nojekyll"):
@@ -183,22 +290,19 @@ def main() -> int:
             if field != "readme_preview" and str(relative) not in html:
                 errors.append(f"media evidence is not linked from Pages HTML: {relative}")
             if field == "readme_preview":
-                if str(relative) not in readme:
-                    errors.append(f"media preview is not embedded in README: {relative}")
-                payload = path.read_bytes()
-                if not payload.startswith((b"GIF87a", b"GIF89a")):
-                    errors.append(f"README preview is not a GIF: {relative}")
-                elif len(payload) >= 10:
-                    width = int.from_bytes(payload[6:8], "little")
-                    height = int.from_bytes(payload[8:10], "little")
-                    if width != item.get("preview_width") or height != item.get("preview_height"):
-                        errors.append(f"README preview dimensions mismatch: {relative}")
-                    frame_count = payload.count(b"\x21\xf9\x04")
-                    if frame_count != item.get("preview_frames"):
-                        errors.append(f"README preview frame count mismatch: {relative}")
+                errors.extend(f"{relative}: {error}" for error in preview_metadata_errors(path.read_bytes(), item))
+        if item.get("readme_display") != "poster_link_to_video":
+            errors.append(f"media README display must be a static poster linked to video: {item.get('id')}")
+        source = "docs/media/" + str(item.get("poster"))
+        video_url = "https://62656456.github.io/ai-film-skills/media/" + str(item.get("video"))
+        if not has_linked_image(readme, source, video_url):
+            errors.append(f"media poster is not an image linked to its original video in README: {source}")
         for boundary_field in ("status", "proves", "does_not_prove", "preview_derivation"):
             if not str(item.get(boundary_field, "")).strip():
                 errors.append(f"media evidence item missing {boundary_field}: {item.get('id')}")
+
+    if re.search(r"<img\b[^>]*\bsrc\s*=\s*[\"'][^\"']+\.gif[\"']|!\[[^\]]*\]\([^)]*\.gif\)", readme, re.I):
+        errors.append("README must use static posters, with animation opened by the user")
 
     for required_readme_term in (
         "https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4",

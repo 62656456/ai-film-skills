@@ -18,7 +18,7 @@ This route was verified with `skills` 1.5.23. It discovers the 18 stable modules
 
 Live directory: https://skills.sh/62656456/ai-film-skills
 
-## Short English launch post
+## Historical v1.3.0 English launch post
 
 AI storyboards often name the event but hide the camera plan.
 
@@ -30,7 +30,7 @@ https://github.com/62656456/ai-film-skills
 
 Structural validation and packaging passed. Video-model execution and user visual acceptance remain separate evidence states.
 
-## 中文发布短文
+## 历史v1.3.0中文发布短文
 
 很多 AI 分镜写了大量运镜词，却没有让人看清摄影机究竟在哪里、怎样移动、焦点交给谁、最后落到什么动作结果。
 
@@ -44,7 +44,7 @@ https://github.com/62656456/ai-film-skills
 
 ## Directory submission entry
 
-**Open Film Skills** — 19 standalone Agent Skills for script-to-screen AI filmmaking, including directing, reusable character/scene/prop assets, cinematic storyboards, generation prompts, production, and evidence-aware review across Codex and Claude Code.
+**Open Film Skills** — 21 standalone Agent Skills for script-to-screen AI filmmaking, including directing, reusable character/scene/prop assets, cinematic storyboards, generation prompts, production, and evidence-aware review across compatible Agent hosts. Current distribution: v1.4.0 with Storyboard Director A5.7.2.
 
 ## Evidence links
 

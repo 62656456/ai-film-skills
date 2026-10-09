@@ -1514,12 +1514,12 @@
         "zh-CN": "不把导演分析冒充完整分镜；已有获批导演方案直接继承。创意思路不授权媒体生成，也不证明用户接受。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "director-agent.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -1528,8 +1528,8 @@
       "family": "storyboard",
       "status": "packaged",
       "status_label": {
-        "en": "Source A 5.7.1 adopted by explicit user instruction; known image-test issues and aesthetic acceptance remain separate; historical ZIPs unchanged.",
-        "zh-CN": "源码A5.7.1已按明确用户指令采用；已知图像问题与审美验收分别保留；历史ZIP不变。"
+        "en": "A 5.7.2 maintenance update selected by explicit instruction; regression evidence is separate from image, video and aesthetic acceptance.",
+        "zh-CN": "按明确更新指令采用A5.7.2维护版；回归证据与图片、视频、审美验收分开。"
       },
       "title": {
         "en": "ai-storyboard-director — script to shots and prompts",
@@ -1548,15 +1548,21 @@
         "zh-CN": "不改写剧本、不直接生成视频，也不证明平台生成成功。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "ai-storyboard-director.zip",
         "note": {
-          "en": "Historical v1.3.0 ZIP contains 5.4.4; current source is the separately adopted A 5.7.1.",
-          "zh-CN": "v1.3.0旧ZIP包含5.4.4；当前源码为单独采用的A5.7.1。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
-      "source_version": "5.7.1"
+      "source_version": "5.7.2",
+      "extra_review": [
+        {
+          "en": "Saved-scene checks and export use the selected scene geometry while retaining whole-state structural validation; internal state files cannot become screenplay sources.",
+          "zh-CN": "保存场景的检查与导出按所选场景核几何，仍校验整体结构；内部状态文件不能作为剧本来源。"
+        }
+      ]
     },
     {
       "name": "character-asset",
@@ -1595,12 +1601,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "character-asset.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -1609,8 +1615,8 @@
       "family": "asset",
       "status": "packaged",
       "status_label": {
-        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
-        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
+        "en": "Current local rule patch included in v1.4.0; generated-image review and user acceptance remain separate.",
+        "zh-CN": "现行本地规则补丁已纳入v1.4.0；实图审查与用户接受另列。"
       },
       "title": {
         "en": "scene-asset — environment and spatial contract",
@@ -1621,8 +1627,8 @@
         "zh-CN": "用布局、出入口、固定标志、尺度、光源、材质、摄影机可达区和连续状态定义可复用场景。"
       },
       "standalone": {
-        "en": "A scene reference task, spatial anchor and reverse-view plan, lighting/material rules, and JSON contract.",
-        "zh-CN": "场景参考图任务、空间锚点与反向视图计划、光影材质规则和 JSON 合同。"
+        "en": "A main reference plus a separate reverse view by default; expand to multi-camera views or a nine-view sheet only when requested, preserving one space and state.",
+        "zh-CN": "默认一张主图加一张独立反打图；按请求扩展多机位或九宫格，保持同一空间与状态。"
       },
       "cannot": {
         "en": "It does not decide story blocking or prove that generated scene images are spatially consistent without inspection.",
@@ -1641,12 +1647,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "scene-asset.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -1655,8 +1661,8 @@
       "family": "asset",
       "status": "packaged",
       "status_label": {
-        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
-        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
+        "en": "Current local rule patch included in v1.4.0; generated-image review and user acceptance remain separate.",
+        "zh-CN": "现行本地规则补丁已纳入v1.4.0；实图审查与用户接受另列。"
       },
       "title": {
         "en": "prop-asset — prop identity and state contract",
@@ -1667,8 +1673,8 @@
         "zh-CN": "定义道具身份、尺度、材质、可用面、接口、持有人、朝向、磨损、操作和状态变化。"
       },
       "standalone": {
-        "en": "A prop reference task, interaction/state views, locked handling rules, negative constraints, and JSON contract.",
-        "zh-CN": "道具参考图任务、交互/状态视图、锁定持用规则、负向约束和 JSON 合同。"
+        "en": "A prop reference task and contract with overall form plus useful structural details; add interaction or changed-state views only when justified.",
+        "zh-CN": "道具参考任务与合同交代整体形制和有用途的结构局部；依据成立时才扩展交互或变化状态视图。"
       },
       "cannot": {
         "en": "It does not choreograph the full scene or prove correct handling until actual reference and shot images are reviewed.",
@@ -1687,12 +1693,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "prop-asset.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -1727,12 +1733,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "cyberpunk-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -1773,12 +1779,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "epic-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -1819,12 +1825,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "fantasy-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -1865,12 +1871,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "horror-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -1911,12 +1917,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "noir-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -1957,12 +1963,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "romance-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -2003,12 +2009,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "war-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -2050,12 +2056,12 @@
         }
       ],
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "wuxia-design.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       },
       "extra_boundaries": [
@@ -2090,12 +2096,12 @@
         "zh-CN": "只安装 Skill 不会自动获得模型、额度、版权、剪辑工具或合格成片。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "produce-ai-video.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2124,12 +2130,12 @@
         "zh-CN": "不需要配套技能包：导演、资产、类型、提示词和 QC 规则均按短剧用途重写为本地模块；真实图片和视频生成仍需要宿主媒体工具与权限。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "ai-short-drama-production.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2159,12 +2165,12 @@
       },
       "version": "1.3.0",
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "web-design-director.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2193,12 +2199,12 @@
         "zh-CN": "离线时不能补造当前市场事实，报告完成也不授权语义层写入。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "d-official-market-analysis.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2227,12 +2233,12 @@
         "zh-CN": "没有本轮批准或可写目标时，不能声称已经写入，只能交付完整待写入包。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "d-data-analysis-semantic-layer.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2261,12 +2267,12 @@
         "zh-CN": "接受图例不把实验包升级为普遍工程验证、稳定生成性能或已验收成片。"
       },
       "download": {
-        "state": "historical_snapshot",
-        "tag": "v1.3.0",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
         "asset": "hard-sci-fi-visual-director.zip",
         "note": {
-          "en": "Historical v1.3.0 snapshot; differs from current source where updated.",
-          "zh-CN": "v1.3.0历史快照；已更新模块与当前源码不同。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2295,11 +2301,12 @@
         "zh-CN": "不能承诺任意主体、未经测试的完整打斗、成片质量或其他AI视频模型会生成的像素。"
       },
       "download": {
-        "state": "source_only",
-        "source_install": "docs/INSTALLATION.md#experimental-packages",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
+        "asset": "whitebox-previs-executor.zip",
         "note": {
-          "en": "New source package; no v1.3.0 release asset.",
-          "zh-CN": "新增源码包；v1.3.0没有此发布附件。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     },
@@ -2329,11 +2336,12 @@
         "zh-CN": "不自动证明历史准确、用户接受或视频成片。"
       },
       "download": {
-        "state": "source_only",
-        "source_install": "docs/INSTALLATION.md#experimental-packages",
+        "state": "published_snapshot",
+        "tag": "v1.4.0",
+        "asset": "guofeng-visual-director.zip",
         "note": {
-          "en": "Candidate source; no historical v1.3.0 ZIP.",
-          "zh-CN": "候选源码；历史v1.3.0无此ZIP。"
+          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
+          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
     }

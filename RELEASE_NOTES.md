@@ -1,6 +1,15 @@
 # Release notes
 
-## 2026-09-21 — Research showcase and current source refresh
+## v1.4.0 — 2026-10-09 maintenance and distribution sync
+
+- Advance the single current Storyboard Director runtime to A5.7.2. Scope saved-scene geometry checks and exports correctly and reject internal state files as screenplay sources.
+- Include the local scene main/reverse-view and prop structural-detail contracts in public source and archives.
+- Address all 23 still-applicable issues from the 33 historical review comments: safe package/install inputs, accurate post-commit cleanup reporting, YAML and data validation, independence detection, public counts, launch evidence, example causality, GIF timing and static video entry points.
+- Pin Pillow and licensed DejaVu font inputs for future rendering; preserve existing published image, video, GIF, SVG and frozen study archive bytes.
+- Publish 21 standalone Skill ZIPs, one complete archive of 18 regular packages, manifest and SHA-256 checksums. Experiments remain opt-in; historical v1.3.0 and 5.6 Preview remain available.
+- Keep regression, actual-media and user-acceptance evidence separate. See the [33-item review closure](docs/maintenance/2026-10-09-review-closure.md).
+
+## Historical 2026-09-21 — Research showcase and current source refresh
 
 - Preserve all existing accepted images, historical gallery, whitebox demonstrations, examples and release archives.
 - Put new visible research on the repository homepage: two complete animated whitebox previews, the narrated generated-video comparison, six material/style directions and three new Chinese-period scenes.
@@ -12,7 +21,7 @@
 This is a source and showcase update. Historical release tags and their ZIPs remain unchanged; download the current source or build the selected package locally.
 
 
-## Unreleased source refresh — 2026-09-11
+## Historical unreleased source refresh — 2026-09-11
 
 This section describes the current source changes. It is **not a claim that a new GitHub Release or updated release ZIP has been published**. Public v1.3.0 remains the historical 5.4.4 snapshot; the separately labeled 5.6 standalone Preview is a different artifact.
 
@@ -35,7 +44,7 @@ This section describes the current source changes. It is **not a claim that a ne
 
 Validation, source synchronization, actual media inspection, accepted examples, Git push and Release publication remain separate evidence. The prior release notes below are historical snapshots; their module counts and version descriptions are not the current source inventory.
 
-## v1.3.0 — 2026-09-01
+## Historical v1.3.0 — 2026-09-01
 
 Single-entry storyboard 5.4.4 and standalone-package completion.
 
@@ -58,7 +67,7 @@ Single-entry storyboard 5.4.4 and standalone-package completion.
 
 This update proves repository structure, standalone closure, deterministic validation, and the recorded 5.4.4 text behavior. It does not claim successful video-model generation or explicit user acceptance of the resulting storyboard output.
 
-## v1.2.0 — 2026-08-25
+## Historical v1.2.0 — 2026-08-25
 
 Safety hardening and 5.4.3 testing-candidate release.
 
@@ -80,7 +89,7 @@ Safety hardening and 5.4.3 testing-candidate release.
 
 This release proves repository structure, negative safety properties, deterministic packaging within the declared toolchain, and explicit experimental isolation. It does not claim that 5.4.3 has passed video-model generation, real-project evaluation, or user acceptance.
 
-## v1.1.0 — 2026-08-16
+## Historical v1.1.0 — 2026-08-16
 
 Cross-Agent, standalone packaging and GitHub-reading release.
 
@@ -106,7 +115,7 @@ Pre-release validation now requires all 19 Skill folders, all 38 bilingual desig
 
 Structural portability and a module-level pass do not claim identical output quality across models or hosts. Real-project validation and user-acceptance status remain separate in [SKILL_CATALOG.md](SKILL_CATALOG.md) and [PUBLICATION_SCOPE.md](PUBLICATION_SCOPE.md).
 
-## v1.0.0 — 2026-08-16
+## Historical v1.0.0 — 2026-08-16
 
 Initial public packaging of the personal AI filmmaking Skill system.
 

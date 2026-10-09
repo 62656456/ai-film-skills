@@ -190,8 +190,8 @@ A/B共用创作核心。A由当前主模型检查，B可选增加Jev对明确文
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="docs/research/whitebox/action-reblock-30s.mp4"><img src="docs/research/whitebox/action-reblock-30s.gif" width="100%" alt="30秒动作重排与连续摄影机预演，完整时长低帧率预览" /></a><br/><strong>动作重排 · 30 秒 · 9/19</strong><br/>重新安排脚步、转身、手势与队伍展开，检查它们和连续运镜是否接得上。<br/><a href="docs/research/whitebox/action-reblock-30s.mp4">观看完整 MP4</a></td>
-<td width="50%" valign="top"><a href="docs/research/whitebox/minimal-shots-30s.mp4"><img src="docs/research/whitebox/minimal-shots-30s.gif" width="100%" alt="30秒11镜极简白模，完整时长低帧率预览" /></a><br/><strong>极简分镜 · 30 秒 / 11 镜 · 9/18</strong><br/>用必要的代理形体检查站位、视线、走位、切镜和注意力变化。<br/><a href="docs/research/whitebox/minimal-shots-30s.mp4">观看完整 MP4</a></td>
+<td width="50%" valign="top"><a href="docs/research/whitebox/action-reblock-30s.mp4"><img src="docs/research/whitebox/action-reblock-30s.jpg" width="100%" alt="30秒动作重排与连续摄影机预演，点击静态封面观看完整视频" /></a><br/><strong>动作重排 · 30 秒 · 9/19</strong><br/>重新安排脚步、转身、手势与队伍展开，检查它们和连续运镜是否接得上。<br/><a href="docs/research/whitebox/action-reblock-30s.mp4">观看完整 MP4</a></td>
+<td width="50%" valign="top"><a href="docs/research/whitebox/minimal-shots-30s.mp4"><img src="docs/research/whitebox/minimal-shots-30s.jpg" width="100%" alt="30秒11镜极简白模，点击静态封面观看完整视频" /></a><br/><strong>极简分镜 · 30 秒 / 11 镜 · 9/18</strong><br/>用必要的代理形体检查站位、视线、走位、切镜和注意力变化。<br/><a href="docs/research/whitebox/minimal-shots-30s.mp4">观看完整 MP4</a></td>
 </tr>
 </table>
 
@@ -258,7 +258,7 @@ https://github.com/user-attachments/assets/fef933aa-eee3-40b9-8930-feb019b4e507
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 按请求设计可读分镜或编译六模块提示词；在作品目录保存恢复镜头决定 | 5.7.1 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 按请求设计可读分镜或编译六模块提示词；在作品目录保存恢复镜头决定 | 5.7.2 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
 | `character-asset`<br/>人物资产 | 人物身份、外形、必要视图、表情与可变状态的参考任务和资产合同 | — | 常规 | [运行正文](skills/character-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/character-asset.md) |
 | `scene-asset`<br/>场景资产 | 场景拓扑、空间锚点、光源、材质和连续性参考图/提示词 | — | 常规 | [运行正文](skills/scene-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/scene-asset.md) |
 | `prop-asset`<br/>道具资产 | 道具结构、比例、可见面、持用和新旧状态；按要求交单图或必要视图 | — | 常规 | [运行正文](skills/prop-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/prop-asset.md) |
@@ -321,8 +321,8 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4"><img src="docs/media/previs-blocking-preview.gif" width="100%" alt="5秒基础3D摄影机和走位预演" /></a><br /><strong>基础机位与走位 · 5秒</strong></td>
-<td width="50%" valign="top"><a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4"><img src="docs/media/rigged-contact-preview.gif" width="100%" alt="2.8秒骨骼接触动作门" /></a><br /><strong>骨骼接触动作门 · 2.8秒</strong></td>
+<td width="50%" valign="top"><a href="https://62656456.github.io/ai-film-skills/media/previs-blocking-5s.mp4"><img src="docs/media/previs-blocking-poster.png" width="100%" alt="5秒基础3D摄影机和走位预演，点击静态封面播放" /></a><br /><strong>基础机位与走位 · 5秒</strong></td>
+<td width="50%" valign="top"><a href="https://62656456.github.io/ai-film-skills/media/rigged-contact-gate-2.8s.mp4"><img src="docs/media/rigged-contact-poster.png" width="100%" alt="2.8秒骨骼接触动作门，点击静态封面播放" /></a><br /><strong>骨骼接触动作门 · 2.8秒</strong></td>
 </tr>
 </table>
 
@@ -350,7 +350,7 @@ The [seven-genre study](docs/research/skill-overhaul/seven-genres/index.md) publ
 
 ### 2026-09-29：明确启用A，公开测试与待修问题
 
-**本轮依据用户直接、明确的启用授权，将A5.7.1设为默认方案；B5.7.1-jev保留为可选文字复核方案。** 启用是使用决定，不代表21张首轮测试图已通过审美验收，也不把已发现的待修项改成完成。
+**当前维护更新为A5.7.2，正式分发为v1.4.0；B5.7.1-jev保留为历史可选文字复核方案。** 本次逐项处理33条历史评审，修复23条仍适用问题；已解决、退出机制及旧预览范围分别记录。[逐项处理记录](docs/maintenance/2026-10-09-review-closure.md) 启用是使用决定，不代表21张首轮测试图已通过审美验收，也不把已发现的待修项改成完成。
 
 - **创意思路独立交付**：说明拍法、叙事作用、前后衔接与取舍，采用后再并入主方案；不默认生图或生成视频。
 - **阶段与交接更明确**：可读分镜、视频提示词和实际媒体按当前请求分别执行，已有导演决定和局部修改范围继续保留。
@@ -364,12 +364,14 @@ The [seven-genre study](docs/research/skill-overhaul/seven-genres/index.md) publ
 
 ### 当前源码与下载版本
 
+[v1.4.0正式发布与完整下载](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0)：分镜A5.7.2；场景/道具本地规则补丁已同步。
+
 | 入口 | 当前用途与边界 |
 |---|---|
-| [当前分镜源码](skills/ai-storyboard-director/SKILL.md) | **A5.7.1默认方案**；本轮明确授权启用，按阶段交付；已知待修和审美状态另列 |
+| [当前分镜源码](skills/ai-storyboard-director/SKILL.md) | **A5.7.2默认方案**；本轮明确授权更新，按阶段交付；已知待修和审美状态另列 |
 | B5.7.1-jev | 共用A创作核心，可选Jev文字核对；不会自动看图、采用创意或决定审美，详见[方案说明](docs/research/skill-overhaul/index.md) |
 | 测试图中的“现用5.6.5” | 指本次对照实验开始时的默认版本，是历史测试标签；保留原图与原稿，不改贴为A结果 |
 | [已发布v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | **历史Release快照**，分镜为5.4.4；源码更新不会重写旧ZIP |
 | 5.6独立Preview | 独立预览包，保留自身标签、清单和范围；从[安装版本说明](docs/INSTALLATION.md)查看，与当前源码和v1.3.0分别记录 |
 
-本次更新源码、研究成果和展示入口，不以推送源码冒充创建新Release。此前21张已接受作品、9月视觉研究、白模实验与旧版本案例继续按各自原始状态保留。后续修图与重测会标明具体对象和范围，保留可回看的首轮证据。
+本次v1.4.0提供当前21个独立技能ZIP、18项常规技能的完整套装、归档清单与校验和；旧v1.3.0和5.6预览包保留自身标签与字节。此前21张已接受作品、9月视觉研究、白模实验与旧版本案例继续按各自原始状态保留。后续修图与重测会标明具体对象和范围，保留可回看的首轮证据。

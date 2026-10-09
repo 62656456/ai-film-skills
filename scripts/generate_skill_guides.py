@@ -59,7 +59,7 @@ def download_link(item: dict[str, object], page: Path, locale: str) -> tuple[str
     if not isinstance(download, dict):
         raise ValueError(f"{item['name']}: explicit download state is required")
     note = local(download.get("note"), locale)
-    if download.get("state") == "historical_snapshot":
+    if download.get("state") in {"historical_snapshot", "published_snapshot"}:
         tag = download.get("tag")
         asset = download.get("asset")
         if not isinstance(tag, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", tag):
@@ -67,7 +67,10 @@ def download_link(item: dict[str, object], page: Path, locale: str) -> tuple[str
         if asset != f"{item['name']}.zip":
             raise ValueError(f"{item['name']}: historical asset must name this Skill ZIP")
         url = f"https://github.com/62656456/ai-film-skills/releases/download/{quote(tag)}/{quote(asset)}"
-        label = f"{tag} historical ZIP" if locale == "en" else f"{tag} 历史 ZIP"
+        if download.get("state") == "historical_snapshot":
+            label = f"{tag} historical ZIP" if locale == "en" else f"{tag} 历史 ZIP"
+        else:
+            label = f"{tag} ZIP"
     elif download.get("state") == "source_only":
         raw = download.get("source_install")
         if not isinstance(raw, str) or not raw:

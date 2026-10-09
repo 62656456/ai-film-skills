@@ -83,8 +83,15 @@ REQUIRED_REPOSITORY_FILES = {
     "requirements-dev.txt",
 }
 PUBLIC_COUNT_PATTERNS = {
-    "modules": re.compile(r"\b(\d+)\s+(?:standalone\s+)?(?:modules|skills)\b|(\d+)\s*个模块|(\d+)개 모듈", re.I),
-    "guides": re.compile(r"\b(\d+)\s+(?:bilingual\s+)?(?:pages|guides)\b|(\d+)\s*个(?:逐模块页面|设计说明)|(\d+)개 상세 페이지", re.I),
+    "modules": re.compile(r"\b(\d+)\s+(?:(?:standalone|self-contained|independent|Agent|repository)\s+)*(?:modules|skills)\b|\b(\d+)\s+module guides\b|(\d+)\s*个(?:独立)?模块|(\d+)개\s*모듈|(\d+)\s*モジュール|本仓库\s*(\d+)\s*个?(?:源码)?包", re.I),
+    "guides": re.compile(r"\b(\d+)\s+(?:bilingual\s+)?(?:pages|guides)\b|(\d+)\s*(?:个(?:逐模块页面|设计说明)|份(?:英文[／/]\s*简体中文|中英|双语)?指南)|(\d+)개\s*(?:상세 페이지|가이드)|计\s*(\d+)\s*页|計\s*(\d+)\s*ページ|\b(\d+)ガイド|bilingual_guides-(\d+)", re.I),
+    "regular": re.compile(r"\b(\d+)\s+(?:stable|regular)\b|(\d+)\s*项常规|通常\s*(\d+)|일반\s*(\d+)개|regular_packages-(\d+)", re.I),
+    "experimental": re.compile(r"\b(\d+)\s+(?:opt-in\s+)?(?:experimental|experiments)\b|\b(\d+)\s+opt-in packages\b|([一二两三四五六七八九十\d]+)\s*项(?:隔离)?实验|実験\s*(\d+)|실험\s*(\d+)개|experimental_packages-(\d+)", re.I),
+    "locale_guides": re.compile(r"\b(\d+)\s+(?:generated\s+)?(?:English|Simplified Chinese)\s+guides\b", re.I),
+}
+REQUIRED_LAUNCH_ASSETS = {
+    "social-preview.svg", "social-preview.png",
+    "storyboard-544-proof.svg", "storyboard-544-proof.png",
 }
 REQUIRED_COMPATIBILITY_TERMS = {
     ".codex/skills",
@@ -123,6 +130,13 @@ def _construct_unique_mapping(
     mapping: dict[object, object] = {}
     for key_node, value_node in node.value:
         key = loader.construct_object(key_node, deep=deep)
+        try:
+            hash(key)
+        except TypeError as exc:
+            raise ConstructorError(
+                "while constructing a mapping", node.start_mark,
+                "found unhashable key", key_node.start_mark,
+            ) from exc
         if key in mapping:
             raise ConstructorError(
                 "while constructing a mapping",
@@ -224,9 +238,9 @@ def png_dimensions(path: Path) -> tuple[int, int]:
     return struct.unpack(">II", header[16:24])
 
 
-def validate_launch_assets() -> list[str]:
+def validate_launch_assets(root: Path = ROOT) -> list[str]:
     errors: list[str] = []
-    manifest_path = ROOT / "docs" / "assets" / "launch-assets.json"
+    manifest_path = root / "docs" / "assets" / "launch-assets.json"
     try:
         payload = json.loads(manifest_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
@@ -234,6 +248,11 @@ def validate_launch_assets() -> list[str]:
     assets = payload.get("assets")
     if not isinstance(assets, list) or not assets:
         return ["launch asset manifest must contain a non-empty assets list"]
+    paths = [item.get("path") for item in assets if isinstance(item, dict) and isinstance(item.get("path"), str)]
+    if len(paths) != len(set(paths)):
+        errors.append("launch asset manifest contains duplicate paths")
+    if set(paths) != REQUIRED_LAUNCH_ASSETS:
+        errors.append(f"launch asset inventory mismatch: missing={sorted(REQUIRED_LAUNCH_ASSETS - set(paths))}, unexpected={sorted(set(paths) - REQUIRED_LAUNCH_ASSETS)}")
     for item in assets:
         if not isinstance(item, dict):
             errors.append("launch asset entry must be an object")
@@ -292,10 +311,10 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
             errors.append(f"SKILL_CATALOG.md missing runtime SKILL.md route for {name}")
         item = by_name.get(name, {})
         download = item.get("download", {})
-        if download.get("state") == "historical_snapshot":
+        if download.get("state") in {"historical_snapshot", "published_snapshot"}:
             route = f"releases/download/{download.get('tag')}/{name}.zip"
             if route not in catalog:
-                errors.append(f"SKILL_CATALOG.md missing tagged historical ZIP route for {name}")
+                errors.append(f"SKILL_CATALOG.md missing tagged release ZIP route for {name}")
         elif download.get("state") == "source_only":
             if str(download.get("source_install", "")) not in catalog:
                 errors.append(f"SKILL_CATALOG.md missing current source-install route for {name}")
@@ -319,19 +338,64 @@ def validate_public_reading_routes(skills: list[Path]) -> list[str]:
     return errors
 
 
-def validate_public_counts(text: str, skill_count: int) -> list[str]:
+def validate_public_counts(text: str, skill_count: int, regular_count: int | None = None,
+                           experimental_count: int | None = None) -> list[str]:
     errors: list[str] = []
+    expected_counts = {"modules": skill_count, "guides": skill_count * 2,
+                       "regular": regular_count, "experimental": experimental_count,
+                       "locale_guides": skill_count}
+    history_level: int | None = None
     for line in text.splitlines():
+        heading = re.match(r"^(#{1,6})\s+(.+)", line)
+        if heading:
+            level = len(heading.group(1))
+            if history_level is not None and level <= history_level:
+                history_level = None
+            if re.search(r"historical|history|历史|過去", heading.group(2), re.I):
+                history_level = level
+        if history_level is not None:
+            continue
         # Explicitly dated historical release counts remain valid historical evidence.
         if re.search(r"historical|previous release|历史|이전|v1\.3\.0", line, re.I):
             continue
         for kind, pattern in PUBLIC_COUNT_PATTERNS.items():
-            expected = skill_count * (2 if kind == "guides" else 1)
+            expected = expected_counts[kind]
+            if expected is None:
+                continue
             for match in pattern.finditer(line):
-                found = int(next(value for value in match.groups() if value is not None))
+                value = next(value for value in match.groups() if value is not None)
+                if value.isdecimal():
+                    found = int(value)
+                else:
+                    digits = {"一": 1, "二": 2, "两": 2, "三": 3, "四": 4, "五": 5,
+                              "六": 6, "七": 7, "八": 8, "九": 9}
+                    if "十" in value:
+                        tens, ones = value.split("十", 1)
+                        found = (digits.get(tens, 1) * 10) + digits.get(ones, 0)
+                    else:
+                        found = digits.get(value, -1)
                 if found != expected:
                     errors.append(f"public {kind} count {found} differs from registered {expected}")
     return errors
+
+
+def public_count_files(root: Path = ROOT) -> list[Path]:
+    """Check current public entry points while keeping research history separate."""
+    paths = set(root.glob("*.md")) | set((root / "docs").glob("*.md"))
+    paths.update((root / "docs" / "i18n").glob("*/README.md"))
+    paths.update({root / "docs" / "skills" / "INDEX.md", root / "docs" / "index.html"})
+    return sorted(paths)
+
+
+def validate_director_example(root: Path = ROOT) -> list[str]:
+    path = root / "examples" / "director-agent-before-after.md"
+    try:
+        text = path.read_text(encoding="utf-8-sig")
+    except OSError as exc:
+        return [f"cannot read director-agent public example: {exc}"]
+    required = ("### Earliest break", "## Upstream repair", "## Revised screenplay",
+                "## Self-audit only", "SELF-AUDIT ONLY", "No independent cold reader was used")
+    return [f"director-agent public example missing evidence term: {term}" for term in required if term not in text]
 
 
 def validate_download_contracts() -> list[str]:
@@ -447,30 +511,17 @@ def main() -> int:
     errors.extend(validate_download_contracts())
     errors.extend(validate_launch_assets())
 
-    director_example = (ROOT / "examples" / "director-agent-before-after.md").read_text(
-        encoding="utf-8-sig"
-    )
-    for required in (
-        "### Earliest break",
-        "## Upstream repair",
-        "## Revised screenplay",
-        "## Self-audit only",
-        "SELF-AUDIT ONLY",
-        "No independent cold reader was used",
-    ):
-        if required not in director_example:
-            errors.append(f"director-agent public example missing evidence term: {required}")
-
-    public_count_files = (
-        ROOT / "README.md",
-        ROOT / "CONTRIBUTING.md",
-        ROOT / "docs" / "ARCHITECTURE.md",
-        ROOT / "docs" / "i18n" / "zh-CN" / "README.md",
-        ROOT / "docs" / "i18n" / "ko" / "README.md",
-    )
-    for path in public_count_files:
-        text = path.read_text(encoding="utf-8-sig")
-        errors.extend(f"{path.relative_to(ROOT)}: {error}" for error in validate_public_counts(text, len(skills)))
+    errors.extend(validate_director_example())
+    stable_count = sum(1 for path in skills if path.parent.name == "skills")
+    experimental_count = sum(1 for path in skills if path.parent.name == "experimental")
+    for path in public_count_files():
+        try:
+            text = path.read_text(encoding="utf-8-sig")
+        except OSError as exc:
+            errors.append(f"cannot read public count entry {path.relative_to(ROOT)}: {exc}")
+            continue
+        errors.extend(f"{path.relative_to(ROOT)}: {error}" for error in
+                      validate_public_counts(text, len(skills), stable_count, experimental_count))
 
     repository_paths = [
         path

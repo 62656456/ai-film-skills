@@ -5,9 +5,9 @@
 | 单独可交付 | 完整视觉方案、图像提示词、受控变体或诊断。 |
 | 单独不能声称 | 不自动证明历史准确、用户接受或视频成片。 |
 
-[运行正文 `SKILL.md`](../../../experimental/guofeng-visual-director/SKILL.md) · [安装当前源码](../../INSTALLATION.md#experimental-packages) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../experimental/guofeng-visual-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/guofeng-visual-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-候选源码；历史v1.3.0无此ZIP。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

@@ -1,13 +1,13 @@
 # scene-asset — environment and spatial contract
 
-| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
+| Status | Current local rule patch included in v1.4.0; generated-image review and user acceptance remain separate. |
 |---|---|
-| Can deliver alone | A scene reference task, spatial anchor and reverse-view plan, lighting/material rules, and JSON contract. |
+| Can deliver alone | A main reference plus a separate reverse view by default; expand to multi-camera views or a nine-view sheet only when requested, preserving one space and state. |
 | Cannot claim alone | It does not decide story blocking or prove that generated scene images are spatially consistent without inspection. |
 
-[Runtime `SKILL.md`](../../../skills/scene-asset/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/scene-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/scene-asset/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/scene-asset.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 snapshot; differs from current source where updated.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -29,7 +29,7 @@ Define a reusable environment through layout, entrances, exits, landmarks, scale
 
 Use this module by itself when the requested result stays inside the following boundary:
 
-A scene reference task, spatial anchor and reverse-view plan, lighting/material rules, and JSON contract.
+A main reference plus a separate reverse view by default; expand to multi-camera views or a nine-view sheet only when requested, preserving one space and state.
 
 **Cannot claim alone:** It does not decide story blocking or prove that generated scene images are spatially consistent without inspection.
 
@@ -106,6 +106,7 @@ A scene reference task, spatial anchor and reverse-view plan, lighting/material 
 
 - [`references/cinematic-image-direction.md`](../../../skills/scene-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/scene-asset/references/NEGATIVE-CASE-BOOK.md)
+- [`references/scene-multiview-design.md`](../../../skills/scene-asset/references/scene-multiview-design.md)
 
 **Distribution notices in new ZIP builds**
 

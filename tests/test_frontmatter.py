@@ -36,6 +36,15 @@ class FrontmatterTests(unittest.TestCase):
             self.assertIsNotNone(error)
             self.assertIn("duplicate key", error or "")
 
+    def test_sequence_and_mapping_yaml_keys_report_normal_errors(self) -> None:
+        for key in ("[name, other]", "{name: other}"):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as raw:
+                path = Path(raw) / "SKILL.md"
+                path.write_text(f"---\n? {key}\n: value\n---\n", encoding="utf-8")
+                _, _, error = parse_frontmatter(path)
+                self.assertIn("invalid YAML frontmatter", error or "")
+                self.assertIn("unhashable key", error or "")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -13,7 +13,7 @@ import tempfile
 import zipfile
 
 import build_skill_packages as packages
-from repository_safety import SafetyError, is_link_like, validate_output_target
+from repository_safety import SafetyError, is_link_like, safe_source_files, validate_output_target
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = "5.7.1"
@@ -92,6 +92,10 @@ def collect_core(repo: Path) -> tuple[dict[str, bytes], list[dict], list[dict]]:
                 reject_links(skill)
                 if packages.independence.frontmatter_name(skill) != skill.name:
                     raise SafetyError(f"package identity differs from directory: {skill.name}")
+                # Review profiles refuse private sources even when the regular
+                # distribution filter would omit them from the archive.
+                for source in safe_source_files(skill):
+                    public_bytes(source, source.relative_to(skill).as_posix())
                 entries, notices = packages.archive_files(skill)
                 prefix = f"{area}/{skill.name}/"
                 for source, relative in entries:

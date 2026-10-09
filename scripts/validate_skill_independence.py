@@ -28,9 +28,12 @@ POSIX_LOCAL_PATH = re.compile(r"(?:^|[\s`'\"(])(?:~[/\\]|/(?:home|Users|tmp|var|
 MACHINE_PLACEHOLDER = re.compile(
     r"(?i)<(?:knowledge-repository|user-configured-workbench|local-knowledge|private-[^>]+)>"
 )
+RUNTIME_ACTION = (
+    r"(?:\b(?:read|load|retrieve|sync|call|route|hand\s*off|depend)\b|"
+    r"读取|加载|检索|同步|调用|路由|转交|交给|依赖)"
+)
 EXTERNAL_RUNTIME = re.compile(
-    r"(?i)(?:read|load|retrieve|sync|call|route|hand\s*off|depend|"
-    r"读取|加载|检索|同步|调用|路由|转交|交给|依赖)[^;；.。]{0,60}?"
+    r"(?i)" + RUNTIME_ACTION + r"(?:(?!" + RUNTIME_ACTION + r")[^;；.。，,]){0,60}?"
     r"(?:knowledge\s*base|private\s*repository|知识库|知识卡|工作台|共享目录|旧版本)"
 )
 LEGACY_RUNTIME = re.compile(
@@ -45,14 +48,19 @@ TEXT_SUFFIXES.update({".toml", ".ini", ".cfg", ".csv", ".tsv"})
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)#]+)")
 BACKTICK_FILE = re.compile(
     r"`((?:(?:references|scripts|assets|agents)/)?[A-Za-z0-9_.\-/]+"
-    r"\.(?:md|json|jsonl|yaml|yml|py|ps1|txt|toml|ini|cfg|csv|tsv))`"
+    r"\.(?:md|json|jsonl|yaml|yml|py|ps1|sh|txt|toml|ini|cfg|csv|tsv))`"
 )
 REFERENCE_ACTION = re.compile(r"(?i)(?:read|load|open|see|follow|use|读取|加载|打开|参见|详见|按|使用)")
 WRITE_CONTEXT = re.compile(r"(?i)(?:write|output|save|create|export|写入|写进|输出|保存|创建|导出)")
-NEGATED_RUNTIME = re.compile(r"(?i)(?:do not|does not|never|must not|不得|不读取|不加载|无需|不需要|禁止)")
+NEGATED_RUNTIME = re.compile(
+    r"(?i)(?:\b(?:(?:do|does|must)\s+not|never|not)|不得|无需|不需要|禁止|不)"
+    r"(?:\s+(?:ever|directly|automatically))?\s*$"
+)
+COORDINATED_RUNTIME = re.compile(r"(?i)" + RUNTIME_ACTION + r"\s*(?:and|or|nor|或|和|及|以及)\s*$")
 GENERIC_SKILL_REFERENCE = re.compile(
-    r"(?i)(?:call|use|read|load|route|hand\s*off|调用|使用|读取|加载|路由|转交|交给)"
-    r".{0,30}[`$]?([a-z][a-z0-9-]*-skill)[`]?"
+    r"(?P<action>(?i:\b(?:call|use|read|load|route|hand\s*off)\b|调用|使用|读取|加载|路由|转交|交给))"
+    r"\s*(?i:the\s+)?(?P<qualifier>(?i:Skill)\s+)?(?P<marker>[`$]?)"
+    r"(?P<name>[a-z][a-z0-9]*(?:-[a-z0-9]+)+)(?![A-Za-z0-9_/-]|\.[A-Za-z0-9])`?"
 )
 PERSONAL_SKILL_NAMES = {
     "01-sketch-to-film", "02-action-choreography", "03-cinematic-lighting",
@@ -101,6 +109,31 @@ def prose_for_links(text: str, suffix: str) -> str:
         # Preserve conservative scanning of invalid source; syntax validation is separate.
         return text
     return "\n".join(strings + comments)
+
+
+def runtime_is_negated(line: str, start: int) -> bool:
+    """Only negation attached to this verb (or a coordinated bare verb) applies."""
+    prefix = line[:start]
+    while True:
+        if NEGATED_RUNTIME.search(prefix):
+            return True
+        coordinated = COORDINATED_RUNTIME.search(prefix)
+        if not coordinated:
+            return False
+        prefix = prefix[:coordinated.start()]
+
+
+def refers_to_skill(match: re.Match[str], line: str) -> bool:
+    """Call/route targets are names; ordinary hyphenated type words are not."""
+    action = match.group("action").casefold()
+    if action not in {"use", "read", "load", "使用", "读取", "加载"}:
+        return True
+    if match.group("qualifier") or match.group("marker") == "$":
+        return True
+    if match.group("name").endswith(("-skill", "-agent")):
+        return True
+    tail = line[match.end():]
+    return bool(re.match(r"(?i)\s+(?:Skill\b|for\s+(?:its|their)\b)", tail))
 
 
 def validate_skill(skill: Path, known_names: set[str]) -> list[str]:
@@ -152,10 +185,7 @@ def validate_skill(skill: Path, known_names: set[str]) -> list[str]:
             if MACHINE_PLACEHOLDER.search(line):
                 errors.append(f"{name}: machine-specific placeholder: {relative}:{line_no}")
             for runtime_match in EXTERNAL_RUNTIME.finditer(line):
-                clause_start = max(line.rfind(separator, 0, runtime_match.start()) for separator in (";", "；", ".", "。")) + 1
-                prefix = line[clause_start:runtime_match.start()]
-                # Chinese negation can be immediately attached to the matched verb.
-                if not (NEGATED_RUNTIME.search(prefix) or prefix.endswith("不")):
+                if not runtime_is_negated(line, runtime_match.start()):
                     errors.append(f"{name}: external runtime instruction: {relative}:{line_no}")
                     break
             if LEGACY_RUNTIME.search(line):
@@ -167,9 +197,11 @@ def validate_skill(skill: Path, known_names: set[str]) -> list[str]:
                 if other.casefold() in lowered:
                     errors.append(f"{name}: references sibling Skill {other}: {relative}:{line_no}")
                     break
-            generic = GENERIC_SKILL_REFERENCE.search(line)
-            if generic and generic.group(1).casefold() != name.casefold():
-                errors.append(f"{name}: references unregistered Skill {generic.group(1)}: {relative}:{line_no}")
+            for generic in GENERIC_SKILL_REFERENCE.finditer(line):
+                other = generic.group("name")
+                if (other.casefold() != name.casefold() and refers_to_skill(generic, line)
+                        and not runtime_is_negated(line, generic.start())):
+                    errors.append(f"{name}: references unregistered Skill {other}: {relative}:{line_no}")
     return errors
 
 
@@ -181,6 +213,8 @@ def main() -> int:
     skills = skill_dirs(bases)
     names = {frontmatter_name(skill) for skill in skills}
     errors: list[str] = []
+    if args.roots:
+        errors.extend(f"explicit root contains no Skills: {base}" for base in bases if not skill_dirs((base,)))
     if not args.roots:
         contracts = json.loads((ROOT / "docs" / "skill-contracts.json").read_text(encoding="utf-8"))
         expected = {item["name"] for item in contracts.get("skills", [])}

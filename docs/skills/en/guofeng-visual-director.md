@@ -5,9 +5,9 @@
 | Can deliver alone | A complete visual brief, image prompt, controlled variant or diagnosis. |
 | Cannot claim alone | It does not certify historical accuracy, user acceptance or finished video. |
 
-[Runtime `SKILL.md`](../../../experimental/guofeng-visual-director/SKILL.md) · [Install current source](../../INSTALLATION.md#experimental-packages) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../experimental/guofeng-visual-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/guofeng-visual-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Candidate source; no historical v1.3.0 ZIP.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose

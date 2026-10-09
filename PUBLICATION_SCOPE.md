@@ -68,3 +68,7 @@ The update clarifies independent creative ideas, stage-specific storyboard/promp
 - Public Release **v1.3.0** remains a historical distribution snapshot containing Storyboard Director **5.4.4**. Source changes do not rewrite its ZIPs.
 - The separately labeled **5.6 standalone Preview** remains its own artifact and does not imply a new complete-studio Release. See [installation/version selection](docs/INSTALLATION.md).
 - Publishing updated source does not by itself create a new Release. Install from the intended branch/commit and verify the actual Skill version and archive manifest.
+
+## 2026-10-09 maintenance release
+
+The current maintenance source is A5.7.2, distributed in v1.4.0 with 21 individual Skill archives and the 18-regular-package complete archive. The scene and prop rule patches are included. Historical v1.3.0, 5.6 Preview, comparison boards, accepted media and frozen study packages retain their original bytes and evidence state. The [review closure](docs/maintenance/2026-10-09-review-closure.md) records all 33 historical review comments and the current scope of each correction.

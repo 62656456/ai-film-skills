@@ -5,9 +5,9 @@
 | 单独可交付 | 按请求交剧本、诊断、导演方案或分镜前设计；明确要完整分镜且导演判断未定时，用本包编译器独立交付可读分镜。 |
 | 单独不能声称 | 不把导演分析冒充完整分镜；已有获批导演方案直接继承。创意思路不授权媒体生成，也不证明用户接受。 |
 
-[运行正文 `SKILL.md`](../../../skills/director-agent/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/director-agent.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/director-agent/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/director-agent.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

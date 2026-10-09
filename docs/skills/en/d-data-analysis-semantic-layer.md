@@ -5,9 +5,9 @@
 | Can deliver alone | The package contains the complete approval, validation, version, conflict, write, readback, and pending-write contracts; the host supplies only the current write target or direct data handle. |
 | Cannot claim alone | Without current approval or a writable target it cannot claim a write; it returns a complete pending-write package instead. |
 
-[Runtime `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [v1.3.0 historical ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/d-data-analysis-semantic-layer.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/d-data-analysis-semantic-layer/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/d-data-analysis-semantic-layer.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Historical v1.3.0 snapshot; differs from current source where updated.
+Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
 
 <!-- contract:purpose -->
 ## 1. Purpose

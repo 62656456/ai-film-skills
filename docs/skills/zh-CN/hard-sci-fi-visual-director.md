@@ -5,9 +5,9 @@
 | 单独可交付 | 针对明确场景或资产的研究驱动视觉诊断、推导、圣经、导演方案和可复制提示词包。 |
 | 单独不能声称 | 接受图例不把实验包升级为普遍工程验证、稳定生成性能或已验收成片。 |
 
-[运行正文 `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/hard-sci-fi-visual-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../experimental/hard-sci-fi-visual-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/hard-sci-fi-visual-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

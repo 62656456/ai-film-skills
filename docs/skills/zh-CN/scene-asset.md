@@ -1,13 +1,13 @@
 # scene-asset｜场景与空间资产合同
 
-| 状态 | 当前源码为隔离整改候选；既有安装记录与用户接受另列。 |
+| 状态 | 现行本地规则补丁已纳入v1.4.0；实图审查与用户接受另列。 |
 |---|---|
-| 单独可交付 | 场景参考图任务、空间锚点与反向视图计划、光影材质规则和 JSON 合同。 |
+| 单独可交付 | 默认一张主图加一张独立反打图；按请求扩展多机位或九宫格，保持同一空间与状态。 |
 | 单独不能声称 | 不替代剧情调度，也不能在未检查真实图片时证明场景空间一致。 |
 
-[运行正文 `SKILL.md`](../../../skills/scene-asset/SKILL.md) · [v1.3.0 历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.3.0/scene-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/scene-asset/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/scene-asset.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.3.0历史快照；已更新模块与当前源码不同。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -29,7 +29,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 
 当点名结果落在以下边界内时，可以只拿这一个模块使用：
 
-场景参考图任务、空间锚点与反向视图计划、光影材质规则和 JSON 合同。
+默认一张主图加一张独立反打图；按请求扩展多机位或九宫格，保持同一空间与状态。
 
 **单独不能声称:** 不替代剧情调度，也不能在未检查真实图片时证明场景空间一致。
 
@@ -106,6 +106,7 @@ v1.3.0历史快照；已更新模块与当前源码不同。
 
 - [`references/cinematic-image-direction.md`](../../../skills/scene-asset/references/cinematic-image-direction.md)
 - [`references/NEGATIVE-CASE-BOOK.md`](../../../skills/scene-asset/references/NEGATIVE-CASE-BOOK.md)
+- [`references/scene-multiview-design.md`](../../../skills/scene-asset/references/scene-multiview-design.md)
 
 **新构建 ZIP 的分发许可文件**
 

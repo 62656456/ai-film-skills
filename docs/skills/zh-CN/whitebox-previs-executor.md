@@ -5,9 +5,9 @@
 | 单独可交付 | 宿主具备运行条件时的MP4预演及编译/验证合同。 |
 | 单独不能声称 | 不能承诺任意主体、未经测试的完整打斗、成片质量或其他AI视频模型会生成的像素。 |
 
-[运行正文 `SKILL.md`](../../../experimental/whitebox-previs-executor/SKILL.md) · [安装当前源码](../../INSTALLATION.md#experimental-packages) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../experimental/whitebox-previs-executor/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/whitebox-previs-executor.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-新增源码包；v1.3.0没有此发布附件。
+v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
 
 <!-- contract:purpose -->
 ## 1. 设计目的

@@ -47,7 +47,7 @@ The scene has no concrete dramatic transaction. Mara says the clock is important
 ## Upstream repair
 
 - **Mara's immediate result:** recover their mother's carriage clock before its pawn ticket expires at 7:00 p.m.
-- **Why now:** the pawn shop transfers expired items at closing; the apartment handover happens at the same time.
+- **Why now:** the pawn shop transfers expired items at closing; the apartment handover happens at the same time, and the incoming tenant's movers cannot wait.
 - **Joel's opposition:** he pawned the clock to cover their mother's final pharmacy bill and concealed it to protect his pride.
 - **Obvious alternatives tested on the page:** call the shop, ask for a hold, drive there herself, or delay the apartment handover.
 - **Why the split is necessary:** the shop refuses a hold; Mara is the named tenant required for the handover; Joel can reach the shop only if Mara gives him the redemption money and her car.
@@ -56,7 +56,7 @@ The scene has no concrete dramatic transaction. Mara says the clock is important
 ## Revised screenplay
 
 ```screenplay
-INT. MOTHER'S APARTMENT - KITCHEN - 6:38 P.M.
+INT. MOTHER'S APARTMENT - KITCHEN - 6:32 P.M.
 
 The apartment is nearly empty. A pale square marks the wall above the sink.
 
@@ -112,6 +112,16 @@ The first week was.
 
 Her phone buzzes: BUILDING MANAGER — “Lobby at 6:50. Handover at 7. Named tenant must sign.”
 
+Mara calls the manager. A truck's reversing alarm sounds behind his voice.
+
+MARA
+Can we push it half an hour?
+
+BUILDING MANAGER (V.O.)
+No. Their movers are at the gate. The lift's booked for seven. I need you here to sign.
+
+Mara ends the call.
+
 MARA
 You could've called me.
 
@@ -157,8 +167,10 @@ He meets her eyes. She lets go of the money and the key.
 
 Joel leaves. Mara retapes the crooked box.
 
+The time on her phone is 6:35.
 
-EXT. APARTMENT BUILDING - CURB - 7:08 P.M.
+
+EXT. APARTMENT BUILDING - CURB - 7:20 P.M.
 
 The building manager locks the front door behind Mara and walks away with the keys. Mara holds the deposit check and the last box.
 
@@ -205,10 +217,10 @@ They lift together.
 
 | Check | Result |
 |---|---|
-| Plain-language causal story | Mara discovers the pawn receipt, tests the direct alternative, chooses to trust Joel with money and transport, and recovers the clock before the apartment closes |
+| Plain-language causal story | Mara discovers the pawn receipt, asks the shop for a hold and the manager for a delayed handover, then trusts Joel with money and transport; he redeems the clock before seven and returns after the apartment handover |
 | Scene 1 exit state | Joel has admitted the pawn and left with money/key; Mara must complete the handover alone |
 | Scene 2 inheritance | The handover is complete; Joel's return proves or breaks the new trust |
-| Obvious alternatives | Calling, holding the item, driving herself, and delaying handover are addressed in the scene |
+| Obvious alternatives | The shop refuses a hold and the manager refuses Mara's delay request; leaving herself would miss the handover, so she sends Joel |
 | Supporting-character agency | Joel protects pride, chooses partial truth, then returns the object and change |
 | Dialogue response chain | Consequential lines answer a receipt, call, message, prior wording, money handoff, or returned object |
 | Prop function | Receipt changes knowledge; money/key change options; clock recovery changes the physical result |
