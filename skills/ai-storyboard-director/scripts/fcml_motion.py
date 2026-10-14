@@ -209,6 +209,9 @@ def adapt(motion: dict, context: dict) -> str:
 
 
 def main() -> int:
+    # The JSON CLI emits readable Chinese even when a Windows pipe defaults to a legacy codec.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     subs = parser.add_subparsers(dest="command", required=True)
     find = subs.add_parser("search", help="Read a small shortlist; does not adopt a shot")

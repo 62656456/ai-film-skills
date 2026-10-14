@@ -253,6 +253,31 @@ class FCMLMotionTests(unittest.TestCase):
         with self.assertRaises(motion.LibraryError):
             motion.adapt(item, context)
 
+    def test_cli_preserves_chinese_json_with_legacy_stdout_encoding(self):
+        env = dict(os.environ, PYTHONIOENCODING="cp1252", PYTHONUTF8="0", PYTHONDONTWRITEBYTECODE="1")
+        probe = subprocess.run([sys.executable, "-B", "-c", "import sys; print(sys.stdout.encoding)"],
+                               env=env, capture_output=True, text=True, encoding="ascii", timeout=15)
+        self.assertEqual(probe.returncode, 0, probe.stderr)
+        self.assertEqual(probe.stdout.strip().lower(), "cp1252")
+        cli = PACKAGE / "scripts/fcml_motion.py"
+        for args in (("get", "--id", "fcml-049"), ("search", "--query", "跟随"),
+                     ("audit",), ("validate",), ("get", "--id", "不存在")):
+            with self.subTest(args=args):
+                result = subprocess.run([sys.executable, "-B", str(cli), *args], env=env,
+                                        capture_output=True, timeout=15)
+                body = result.stdout.decode("utf-8")
+                self.assertFalse(result.stderr, result.stderr)
+                payload = json.loads(body)
+                self.assertEqual(result.returncode, int(args[-1] == "不存在"), body)
+                if args[:2] == ("get", "--id") and result.returncode == 0:
+                    expected = motion.get_motion(self.library, "fcml-049")
+                    self.assertEqual(payload["motions"][0], expected)
+                    self.assertIn(expected["name"].encode("utf-8"), result.stdout)
+                elif args[0] == "validate":
+                    self.assertTrue(payload["passed"])
+                elif result.returncode:
+                    self.assertEqual(payload["error"], "Unknown or unmapped mechanism: 不存在")
+
     def test_isolated_package_lookup_and_audit_work_with_network_blocked(self):
         with tempfile.TemporaryDirectory() as raw:
             destination = Path(raw) / "isolated-skill"
