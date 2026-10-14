@@ -1,0 +1,82 @@
+{
+  "cross_version_runtime_references_allowed": false,
+  "default_network": false,
+  "hash_algorithm": "SHA-256",
+  "profile": "A",
+  "runtime_files": [
+    {
+      "path": "LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "dd72443386214fa5d06db7368424bf56576f8f99102fd043e5775f4434094ea6"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "375edffbdaeab3a5ec10c1d9098f39a518000d4c461651cf05881327c3b1119d"
+    },
+    {
+      "path": "references/camera-motion-diagnostics.md",
+      "sha256": "20cafa65abef0c7f44497565c303a3d2a52f141235a2202d32201e2f625d497f"
+    },
+    {
+      "path": "references/cinematography-design-engine.md",
+      "sha256": "228e874f1eb460f9396dadc77e112cd8bb1e206dea79e2d29e9ba6d7eebd1542"
+    },
+    {
+      "path": "references/creative-shot-ideas.md",
+      "sha256": "fcf17e77cf7fa984391d1bf702d7a0c1f8457ee99693bf075f7e1587564a4f29"
+    },
+    {
+      "path": "references/delivery-mode-guard.md",
+      "sha256": "f9b07c27975645c84695427fb642a5382c80c0ea303402013f496fea90650565"
+    },
+    {
+      "path": "references/design-memory-protocol.md",
+      "sha256": "614c0f9825b5a32efdaf5a130101bf5ed1aa7aa2c5ef7a3ad517f3b2a50c79a9"
+    },
+    {
+      "path": "references/fight-design.md",
+      "sha256": "ca25bfb88f6e747f9f256fbaa4df4dac2929c7754980d8a1cd84c92eb40a1ce0"
+    },
+    {
+      "path": "references/fight-reference-case.md",
+      "sha256": "04f4bc1e7e069ad8bdc72c402f349f5bbf0b4ec33e304ae741f2fb25ac745ce0"
+    },
+    {
+      "path": "references/framing-and-axis.md",
+      "sha256": "ed232ae3c1cef514229cc0b543588ee01d85669bf68ec6d190712dda63f3fe80"
+    },
+    {
+      "path": "references/production-contract.md",
+      "sha256": "d496fdf9a81902e6e7217d177bd9c86c0c1dad1189c67d0d4dab06fc354d4038"
+    },
+    {
+      "path": "references/shot-design-engine.md",
+      "sha256": "c370b87c431a8c975b3f64b3b4a34c4daec09b4b5ae66d28a97ee318fefcc0bc"
+    },
+    {
+      "path": "scripts/design_memory.py",
+      "sha256": "919936768f1454f8b0c2f49d43c26ee1835f08eaead82fa2882d310f1920c2a2"
+    },
+    {
+      "path": "references/color-and-image-formation.md",
+      "sha256": "e2f2f9e15264fe4d32ae6dda06ef21a0b15efd7037edeffcf3a400e7ba70f52a"
+    },
+    {
+      "path": "references/reference-design-and-handoff.md",
+      "sha256": "d5d718450b98f48d2853484165a2efc4373aadf84a22cb85be8f4793cca5bc99"
+    }
+  ],
+  "schema_version": "1.0",
+  "self_contained": true,
+  "skill": "ai-storyboard-director",
+  "status": "proactive_action_real_light_space_local_maintenance",
+  "user_test_status": "independent_text_behavior_reviewed_media_and_user_acceptance_pending",
+  "version": "5.7.7",
+  "parent_version": "5.7.6",
+  "maintenance_date": "2026-10-12",
+  "authorization_scope": "explicit current user instruction to incorporate reciprocal exchange, impact, camera speed variation, real lighting and spatial continuity into the director skill",
+  "remote_publication": "not_performed"
+}
