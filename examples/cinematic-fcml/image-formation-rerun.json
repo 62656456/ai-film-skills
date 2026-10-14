@@ -1,0 +1,1239 @@
+{
+  "schema": "image-formation-rerun/1",
+  "started_date": "2026-10-10",
+  "completed_date": "2026-10-11",
+  "baseline_version": "5.8.1",
+  "candidate_version": "5.8.2",
+  "inputs": {
+    "A": "只交一条完整静态场景提示词，16:9、摄影写实，现代小型阅览室，初夏上午，无人、整洁、新维护、干燥。世界坐标：房间南北8m、东西6m；南墙中央入口，东墙两扇落地窗，北墙书架，中央一张浅木长桌，长桌东端一把墨绿色椅，西墙白墙，无其他装饰。只用这些物件，不添加人、事件、烟雾或破损。",
+    "B": "只交一条完整静态场景提示词，16:9、摄影写实，同一阅览室布局，雨夜。东窗关闭；窗外冷白庭院灯，室内长桌西端一盏暖白台灯亮；地面保持干燥，雨只在窗外和玻璃外侧，不添加人、事件或新光源。",
+    "C": "只交一条12秒16:9完整六模块视频母提示词，摄影写实。人物林岚穿深灰外套、拿一张白纸，从南侧走廊进入上述阅览室，最后停在中央长桌南侧说唯一原句“就是这里。”（9.0–10.5秒，正常轻声）；其他时间无台词，不加配乐。走廊南北长5m、宽2m，北端门已敞开，连接阅览室南门；人物从走廊中段出发走到桌边。空场景，仅林岚；东窗上午柔光，地面干燥，窗帘和植物均无。摄影机可在走廊/门洞/长桌西南侧空通道移动，不能穿墙或穿家具。不锁定具体镜头，要求同一条连续镜头自然揭示房间及末尾白纸落桌状态。纸在10.5–12秒放到桌面；不加入第二个人、声音事件或物件。"
+  },
+  "baseline_run": {
+    "kind": "frozen previous actual skill text execution; no resampling",
+    "source": "examples/cinematic-fcml/substantive-rerun.json",
+    "sha256": "98cb8933afdbdfc2ebcc38feac80ab06f41151102d41757de3b86f615a853a58",
+    "outputs": {
+      "A": "16:9单幅摄影写实。初夏上午的现代小型阅览室，南北8米、东西6米，无人、整洁、新维护，室内干燥。摄影机位于东窗内侧、长桌东南侧的空地，约1.1米高，斜向西北观察。东端唯一一把墨绿色椅靠近机位，椅背占据画面中央偏右的近景，形成明确的近大色块，下部椅脚自然出框；中央浅木长桌从椅旁向画面左方退远，远段逐渐缩小，桌沿将视线从近椅带入房间。西墙的无装饰白面在远桌后形成大片安静留白，北墙书架只在画面右缘留下较小的远景片段，保留可辨空间而不过多竞争。第一眼由近处墨绿椅背的体量与浅色背景之间的反差抓住，随后沿退远的桌体读到留白和书架。柔和上午光来自画外东侧两扇落地窗，照亮椅的迎窗表面与桌面东段，阴影向世界西侧减弱；白墙保持自然白、木面保留浅木本色，墨绿集中于这唯一椅子，整体明亮而不罩蓝黄滤色。近椅表面哑光，木纹随观看距离变细，地面干燥、反射克制，桌体与椅子保持真实比例。南墙中央入口和东墙双窗保留原位、处于当前取景外；桌、椅、北书架与西白墙均不搬动，不增加陈设、人物、事件、烟雾或破损。",
+      "B": "16:9单幅摄影写实。现代小型阅览室，南北8米、东西6米，雨夜，无人、整洁、新维护，室内干燥。摄影机在长桌西侧空通道靠北位置，离地约1.3米，略向东南俯望桌面；西端亮着的暖白台灯靠近画面右侧前景，灯下椭圆形暖亮桌面成为第一落点，浅木桌面向画面中央偏左的唯一墨绿色椅延伸，桌中段的柔暗区域把近处暖光与远处冷白窗区隔开。东墙两扇落地窗完整关闭，竖直玻璃位于后景，北侧窗在画面左，南侧窗在画面右；窗外冷白庭院灯照出玻璃外侧的细雨滴与下滑水痕，冷白光透窗落在长桌东端和椅背临窗一侧。保留这两处光源：台灯暖白光集中在长桌西端，庭院灯冷白光在远处窗区更弱，其他区域由它们的反射形成渐暗层次。以居中白平衡保留近处柔暖、远处清冷，浅木仍辨本色，墨绿椅仍辨墨绿，不把室内整体染蓝。桌面细木纹在灯下可见，椅脚接地，干燥地面保持哑光，雨只在窗外及玻璃外侧，室内无水痕、积水或湿面反射。中央一张东西向长桌、东端一把椅保持不变；南墙中央入口、北墙书架与西墙白墙保留于画框外。无人物、额外陈设、烟雾、破损或新光源。",
+      "C": "【进入阅览室】\n一、生成任务\n总时长12秒，16:9，摄影写实；同一条连续镜头，无切镜或隐藏拼接。其他时间无台词，全段不加配乐或另设声音事件。\n\n二、主要主体\n只有林岚，穿深灰外套，初始在南侧走廊中段，面朝北端敞开的门。左手拿一张白纸，纸在身前腰部以上可见；进入和停步时始终拿着同一张纸，直到规定的末段放上桌面。\n\n三、场景状态\n走廊南北长5米、宽2米，北端已敞开的门连接阅览室南墙中央入口。阅览室南北8米、东西6米，东墙两扇落地窗、北墙书架、中央浅木长桌、长桌东端唯一一把墨绿色椅、西墙白墙，除此无新增陈设。上午柔光由东窗进入，室内整洁、新维护、地面干燥，无窗帘、植物或其他人。长桌南侧留有林岚走到桌边的位置，摄影机的路线只经过走廊、真实门洞和桌西南侧空通道，不穿墙、门框或家具。\n\n四、情绪目标\n先认清林岚手中的白纸，再随着入室看清桌与窗的关系；说话时保留人物与空桌面同框，最后看见白纸确实留在桌上，让这一段由行进自然落到安静的完成状态。\n\n五、视觉风格\n固定焦距的适度广角，稳定、平顺的摄影，保持自然比例。浅木桌、淡色墙面和日光为大面积基底，深灰外套与墨绿椅分别保留固有色，白纸不发光；白平衡保持上午日光自然，不作全图冷染或暖染。东窗方向的柔亮表面与室内较暗区域有缓和过渡；桌面有细而克制的木纹，地面为干燥哑光。清晰度优先留给林岚及其身前白纸，末段侧脸、手和邻近桌面落点处于足够的清晰范围，不以大幅移焦代替可见动作。\n\n六、分段脚本\n[0.0–3.0秒｜走廊中景，摄影机在林岚前方｜面向人物退行，通过敞开门洞]\n画面：起始框内是林岚的正面、深灰外套和身前左手拿着的白纸，两侧走廊墙面向其身后延伸。林岚从走廊中段朝北端门自然前行；摄影机面向她沿走廊向北退行，先经过真实敞开的门洞进入室内，保持面部与白纸可辨。摄影机通过时门框从画面两侧掠过，不遮满画面；至3.0秒，林岚来到门口，仍拿着纸。\n台词：无。\n\n[3.0–6.8秒｜从门内到长桌西南侧的中景｜向西北斜退并持续转向人物与桌面]\n画面：林岚越过门槛后沿长桌南侧的空路线继续走向桌边。摄影机在她前方先向房间西侧让开，再沿桌西南侧空通道向北斜退，朝向随她的位置连续转动，始终不经过桌子内部。南门和走廊逐渐移到取景外；林岚不再被锁在画面正中，后半段桌面南缘从画面左侧进入，东窗的柔亮窗面在右后方显出。面部、持纸和桌的先后露出来自真实位移与转向，固定焦距，不变焦或突然跳视点。\n台词：无。\n\n[6.8–9.0秒｜桌边侧面中景｜机位停止移动，随最后几步轻缓转向后定住]\n画面：摄影机停在长桌西南侧空通道，林岚继续最后几步，至8.5秒停在桌南侧，身体面向桌面。随着她接近，摄影机轻缓转向，至8.5秒中心与朝向均固定：林岚位于画面右半部，左侧留出桌面南缘和她将放纸的空桌面；从其西侧看见侧脸，左手和白纸位于身体近摄影机的一侧，没有被躯干挡住。墨绿椅在桌东端的较远处，东窗光持续照入；纸仍在手中，桌面尚未出现纸。\n台词：无。\n\n[9.0–10.5秒｜保持侧脸、左手白纸与桌面同框｜摄影机完全固定]\n画面：林岚在桌南侧站定，按正常轻声的发声节奏开口，持纸的左手保持在身前，尚不放纸。既有桌边构图和上午光照保持。\n台词：林岚／现场正常轻声｜9.0–10.5秒｜“就是这里。”\n表达情绪：平常地确认当前位置，字词清楚、音量轻，不作异常加速或额外拖长。\n\n[10.5–12.0秒｜同一桌边中景｜摄影机保持固定，完整观察纸的接触与尾态]\n画面：原句结束后，林岚才将左手中的白纸朝画面左侧的桌面南缘内侧放下；纸从手持状态转为平放，手指解除接触，至11.6秒纸已静止贴在浅木桌面上。最后0.4秒保留纸、桌面和林岚的同框状态，近侧桌沿不挡住纸，手已离开纸面，白纸没有弹起、漂浮或再次回到手中。\n台词：无。"
+    }
+  },
+  "candidate_run": {
+    "scene": {
+      "schema": "cinematic_scene_text_run_r3.v1",
+      "provenance": "implementation_author_revision_run_not_blind",
+      "executed_at_utc": "2026-10-11T04:34:56Z",
+      "executor": "/root/image_formation_r3",
+      "execution_mode": "active_assistant_applies_current_skill_to_original_input_and_compiles_selected_design",
+      "context_exposure": {
+        "knows_prior_5_8_1_prompts": true,
+        "authored_current_scene_source_revision": true,
+        "external_model_api_used": false,
+        "independent_first_draft_claim": false,
+        "prewritten_pass_samples_used": false
+      },
+      "source_files": {
+        "skills/scene-asset/SKILL.md": {
+          "sha256": "cc88d0eb4767c18200c07a8671a42d386aacc09feaf9c10a08b6754c1d5df197",
+          "read_status": "complete"
+        },
+        "skills/scene-asset/references/cinematic-image-direction.md": {
+          "sha256": "8e9fe75e77af684aa1763a2d49088149900fbed5c3538a0229844c927cdd8d3e",
+          "read_status": "complete"
+        },
+        "skills/scene-asset/references/scene-multiview-design.md": {
+          "sha256": "0430df21ee74d2808ae9fa7df20219d242d64411bde05b43b01e93c1edd79ad6",
+          "read_status": "complete"
+        },
+        "skills/scene-asset/scripts/check_view_projection.py": {
+          "sha256": "9375c196ee3ae697491d1d153731352769ea7399297618083f48f5ad223401d4",
+          "read_status": "complete"
+        }
+      },
+      "inputs": {
+        "A": "只交一条完整静态场景提示词，16:9、摄影写实，现代小型阅览室，初夏上午，无人、整洁、新维护、干燥。世界坐标：房间南北8m、东西6m；南墙中央入口，东墙两扇落地窗，北墙书架，中央一张浅木长桌，长桌东端一把墨绿色椅，西墙白墙，无其他装饰。只用这些物件，不添加人、事件、烟雾或破损。",
+        "B": "只交一条完整静态场景提示词，16:9、摄影写实，同一阅览室布局，雨夜。东窗关闭；窗外冷白庭院灯，室内长桌西端一盏暖白台灯亮；地面保持干燥，雨只在窗外和玻璃外侧，不添加人、事件或新光源。"
+      },
+      "outputs": {
+        "A": "16:9单幅摄影写实。初夏上午，现代小型阅览室，无人、整洁、新维护、干燥。房间南北8米、东西6米，南墙中央入口，东墙两扇落地窗，北墙书架，中央一张浅木长桌，东端唯一一把墨绿色椅，西墙无装饰白墙。摄影机在房间西南侧约1.9米高，斜向东北略俯看，以桌面和椅子为主要取景：长桌西端从画面左下缘进入，向右上方退远，墨绿椅在右侧形成紧凑的深色块，北墙书架只在上缘露出一段，不要求所有门窗完整入镜。东窗透入定向晨光，在浅木桌面切出一块边界清楚的斜四边形亮面，未被直射的桌段留在较淡的阴影里；窗边干地面承接同方向光区，椅子的接触阴影朝世界西侧延伸。第一眼看见亮桌面与墨绿块的相接，随后沿桌沿读到较远的书架。画面以明亮的暖白日光区和浅木色面为主，阴影保留淡灰，墨绿集中于唯一椅子；白平衡使直射光稍暖，不把整室染黄。曝光保留受光木纹和椅背颜色，暗区可辨而不被提成等亮；桌面的薄层清漆在迎光边缘有窄柔光泽，玻璃保持透明反射，干地面没有水膜。家具、门窗与墙体位置不变，无新增陈设、人物、事件、烟雾或破损。",
+        "B": "16:9单幅摄影写实。雨夜的现代小型阅览室，无人、整洁、新维护，室内干燥。房间南北8米、东西6米，南墙中央入口，东墙两扇关闭的落地窗，北墙书架，中央浅木长桌、东端唯一墨绿椅及西墙白墙保持原位。摄影机在西北侧空通道约1.25米高，朝东南观察：两扇窗并列构成后景的宽幅亮面，北窗在画面左、南窗在右；长桌以横向深色体量占据下半部，东端椅在中央略偏右，台灯留在画外的桌西端。窗外冷白庭院灯成为主要可见光，照出玻璃外侧的雨滴和下滑水痕；较亮的玻璃与桌、椅的暗轮廓相接，先读到雨被关在窗外，再读到室内桌面。以庭院冷白光为白平衡依据，使窗区呈清冷的近白灰，暖白台灯在桌面右缘只留下小片偏琥珀的照明，暖区不扩成全桌主光。曝光保留外侧雨痕与玻璃亮面，桌中段处于深暗但仍辨体量；一条冷白窗光反射擦过干燥木面的迎窗部分，纹理在这条光泽内显出，椅的受光边缘仍辨墨绿。台灯一直亮着，暗区来自两源的覆盖与曝光取舍，不添加补光。入口、书架和西白墙保留于当前取景外；雨只在窗外和玻璃外侧，室内无水痕、积水或湿地反光，无人物、事件、额外陈设或新光源。"
+      },
+      "selected_designs": {
+        "A": {
+          "image_purpose": "scene_master_single_static_prompt",
+          "viewing_purpose": "从桌面明暗切面与墨绿椅块读取空阅览室的使用中心；整洁空间的秩序由图像大形成立，不依靠陈设数量或事件。",
+          "locked_world": [
+            "16:9摄影写实单幅",
+            "初夏上午",
+            "无人、整洁、新维护、干燥",
+            "南北8米东西6米",
+            "南墙中央入口",
+            "东墙两扇落地窗",
+            "北墙书架",
+            "中央浅木长桌",
+            "桌东端唯一墨绿色椅",
+            "西白墙无装饰",
+            "仅这些物件、无新增事件或烟雾破损"
+          ],
+          "open_choices": [
+            "可达机位、取景及观看距离",
+            "未指定的日光软硬与方向",
+            "受光形状及面积",
+            "曝光、白平衡意图",
+            "尚未锁定的表面微观响应"
+          ],
+          "design_assumptions": [
+            "东窗上午采用有方向的直射晨光与环境回填；这是本轮照明设计，原输入未锁柔光或太阳角。",
+            "长桌东西向、候选包络x=1.5至4.5米，椅位x=4.9米；用于投影的尺寸和位置细化属于设计值。",
+            "两窗中心候选y=2.6和5.9米；原输入仅定东墙双窗。",
+            "新维护浅木桌面采用薄层清漆响应，未改变浅木材料与固有色。"
+          ],
+          "decision_record": {
+            "scope": "同输入的实施作者整改，未获用户审美接受",
+            "alternatives": [
+              {
+                "id": "A1",
+                "composition_sketch": "西南略高俯看，桌面斜四边形直射亮区与右侧紧凑墨绿块相接，书架退成上缘结构。",
+                "viewing_effect": "第一眼是光切出的工作面及唯一使用位置，空间秩序通过亮形与深色块成立。"
+              },
+              {
+                "id": "A2",
+                "composition_sketch": "东南低位近看椅背，天空散射铺亮浅色背景，桌体退远、白墙留空。",
+                "viewing_effect": "第一眼仍主要由近椅体量与浅背景分离，照明负责物件可辨，接近上一轮的成像关系。"
+              }
+            ],
+            "selected": "A1",
+            "selection_basis": "利用开放的晨光成像选择，把画面主导从近椅轮廓转为桌面光切面和深色块相接；同时保持明亮、维护良好及空场。",
+            "structural_delta": [
+              "旧稿近椅背支配中右近景，现椅退为紧凑右侧色块、工作面成为主导面积。",
+              "旧稿柔窗光使木、墙均自然可辨，现直射亮形、非直射淡影及接触阴影有清楚边界和面积分工。",
+              "旧稿统一克制哑光，现木面窄柔清漆光泽与玻璃透明反射分别可见，干燥边界不变。"
+            ]
+          },
+          "critical_retention": [
+            "单幅16:9摄影写实",
+            "空场明亮维护良好干燥",
+            "西南略高俯看与桌西端左下、椅右侧的投影关系",
+            "东窗定向晨光形成桌面斜四边形亮区，非直射桌段较淡阴影",
+            "暖白和浅木为主要亮色面积、墨绿为紧凑色块",
+            "保留木纹和椅色的曝光，直射稍暖的白平衡",
+            "干表面成立的材料光泽，玻璃无虚构装饰",
+            "世界门窗家具不搬动，无人、事件、烟雾破损"
+          ],
+          "projection_input": "scene-A-projection-input.json",
+          "projection_result": "scene-A-projection-result.json",
+          "projection_interpretation": "声明点投影核对：桌西端左、桌东端及椅右、书架左上、南窗更靠右；实际裁幅可不纳入全部点，脚本不证明视野或遮挡。",
+          "semantic_reconstruction": "仅从最终文本可还原：高于桌面的西南视点、左下到右上的桌体、右侧紧凑椅块、桌面明确受光边界、直射稍暖但非全室染黄、木面与玻璃分别响应，且原世界和空场状态持续。",
+          "physical_limits": [
+            "声明点投影不证明FOV、遮挡、真实光斑或美术质量。",
+            "照明的光斑边界、实际色温和材质效果尚无媒体执行验证。"
+          ],
+          "text_self_check": "performed_without_claiming_media_or_user_acceptance",
+          "projection_record": {
+            "ok": true,
+            "points": {
+              "桌面西端": {
+                "facing": "in_front",
+                "depth": 2.2788339369400163,
+                "screen_x_over_depth": -0.46271088375191444,
+                "screen_y_over_depth": -0.2046851498069496,
+                "side": "left"
+              },
+              "桌面东端": {
+                "facing": "in_front",
+                "depth": 4.216617896923023,
+                "screen_x_over_depth": 0.2719811908985205,
+                "screen_y_over_depth": 0.03924913554513493,
+                "side": "right"
+              },
+              "东端墨绿椅": {
+                "facing": "in_front",
+                "depth": 4.45948681990756,
+                "screen_x_over_depth": 0.3229844789195415,
+                "screen_y_over_depth": 0.06666543697251041,
+                "side": "right"
+              },
+              "北墙书架": {
+                "facing": "in_front",
+                "depth": 5.766845064909429,
+                "screen_x_over_depth": -0.4514585613793309,
+                "screen_y_over_depth": 0.23491932902738882,
+                "side": "left"
+              },
+              "东墙南窗": {
+                "facing": "in_front",
+                "depth": 4.0228395009247215,
+                "screen_x_over_depth": 0.7951231988148549,
+                "screen_y_over_depth": 0.18231000357096463,
+                "side": "right"
+              },
+              "东墙北窗": {
+                "facing": "in_front",
+                "depth": 6.324926845384534,
+                "screen_x_over_depth": 0.15124388498622302,
+                "screen_y_over_depth": 0.2346511039506483,
+                "side": "right"
+              },
+              "南门": {
+                "facing": "in_front",
+                "depth": 0.34880111279694104,
+                "screen_x_over_depth": 7.923804628869128,
+                "screen_y_over_depth": -2.086336248429166,
+                "side": "right"
+              },
+              "西墙中部": {
+                "facing": "in_front",
+                "depth": 1.1704215118297363,
+                "screen_x_over_depth": -1.841287308999946,
+                "screen_y_over_depth": -0.30295898976304103,
+                "side": "left"
+              }
+            },
+            "basis": {
+              "forward": [
+                0.6459279866610023,
+                0.6976022255938825,
+                -0.3100454335972811
+              ],
+              "right": [
+                0.7337606740181694,
+                -0.679408031498305,
+                0.0
+              ],
+              "up": [
+                0.2106473577153672,
+                0.22749914633259655,
+                0.9507217411553572
+              ]
+            },
+            "scope": "Declared point projection only; not field-of-view, occlusion, collision, light, image quality or user acceptance",
+            "coordinates_are": "Caller-declared design values; not measured reference-image facts"
+          },
+          "output_sha256": "3aa8075013b51201deb5f3475456dff9a7c34064baa282d1be63e6b8a3a5ad00"
+        },
+        "B": {
+          "image_purpose": "scene_master_single_static_prompt",
+          "viewing_purpose": "先读被关闭玻璃隔在外面的雨，再读室内保持干燥的桌面；用外亮内暗与小暖区建立空间分隔。",
+          "locked_world": [
+            "16:9摄影写实单幅",
+            "同A空间布局和仅这些物件",
+            "雨夜、东窗关闭",
+            "窗外冷白庭院灯",
+            "桌西端暖白台灯一直亮",
+            "室内干燥",
+            "雨仅窗外与玻璃外侧",
+            "无人物、事件或新光源"
+          ],
+          "open_choices": [
+            "可达机位与取景",
+            "两源未指定的相对强弱与覆盖",
+            "曝光与白平衡依据",
+            "干木和雨玻璃的可见材料响应"
+          ],
+          "design_assumptions": [
+            "庭院冷白灯相对主导窗区亮度，暖白台灯覆盖局限在桌西端；输入未锁定源强弱。",
+            "采用较低但高于桌面的西北机位，东窗大面积保留、台灯本体裁在画外；源仍位于桌西端。",
+            "薄层清漆浅木桌的反射来自既有冷白窗区，不把木面或地面变湿。",
+            "窗、桌、椅的候选设计坐标与A一致，台灯候选x=1.5,y=4,z=1.1米。"
+          ],
+          "decision_record": {
+            "scope": "同输入的实施作者整改，未获用户审美接受",
+            "alternatives": [
+              {
+                "id": "B1",
+                "composition_sketch": "西北看向关闭双窗，窗玻璃为宽幅亮面、桌为下半部暗体量，台灯画外只在右缘留下小片暖照。",
+                "viewing_effect": "雨与干室内首先由玻璃隔界被读到，外光支配明区，暖光作为局部而非观众落点。"
+              },
+              {
+                "id": "B2",
+                "composition_sketch": "靠桌西端近看台灯暖光椭圆桌面，窗雨退成较弱远处冷面。",
+                "viewing_effect": "先读室内暖光和木面，再发现远处窗雨，与旧稿近暖远冷的主次相同。"
+              }
+            ],
+            "selected": "B1",
+            "selection_basis": "不移动或新增源，利用开放的强弱、曝光、取景与白平衡，让雨玻璃成为主导面积；原台灯仍在世界中亮着。",
+            "structural_delta": [
+              "旧稿台灯暖亮桌面为第一落点，现双窗外侧雨痕为主要亮面，桌体退到下半部暗体量。",
+              "旧稿以中间白平衡维持近暖远冷，现以庭院冷白为相对中性依据，暖光只占小片局部。",
+              "旧稿干燥统一哑光，现干木迎窗部分保留窄冷光反射，雨玻璃透射和表面水痕分开。"
+            ]
+          },
+          "critical_retention": [
+            "完整同世界布局与关闭双窗",
+            "西北低于A的可达机位，北窗左、南窗右、椅略右、灯在画外西端",
+            "冷白庭院光主导窗区、玻璃外侧雨痕可读",
+            "桌体下半部深色面积与右缘小暖照",
+            "以庭院冷白为白平衡依据、曝光保留窗雨并使桌中段退暗",
+            "台灯一直亮，不补第三光源",
+            "冷窗区在干木面形成成立的反射，室内绝无水膜或湿地反光",
+            "仅既有雨，无新增人物或事件"
+          ],
+          "projection_input": "scene-B-projection-input.json",
+          "projection_result": "scene-B-projection-result.json",
+          "projection_interpretation": "声明点投影：北窗左(-0.3995)、南窗右(0.1693)、椅略右(0.0549)、台灯更靠右(1.0859)；后者可裁在画外，源位置保持。脚本不证明实际FOV或遮挡。",
+          "semantic_reconstruction": "仅从最终文本可还原：关闭双窗主导冷白亮面、雨在玻璃外侧、桌体下半部暗、台灯画外仍亮且暖照只在右缘、庭院光被作为相对中性依据、木反射不代表湿地，以及原家具布局无变。",
+          "physical_limits": [
+            "声明点投影不证明取景、可见面积、光强、实际反射路径或媒体效果。",
+            "庭院灯高度和实际配光未由原输入规定，画面设计仍须在媒体阶段核对光与反射。"
+          ],
+          "text_self_check": "performed_without_claiming_media_or_user_acceptance",
+          "projection_record": {
+            "ok": true,
+            "points": {
+              "桌面西端台灯": {
+                "facing": "in_front",
+                "depth": 1.561663392575796,
+                "screen_x_over_depth": 1.0858680764729645,
+                "screen_y_over_depth": -0.124996553007022,
+                "side": "right"
+              },
+              "桌面西端": {
+                "facing": "in_front",
+                "depth": 1.5515508636691997,
+                "screen_x_over_depth": 1.0929454289266989,
+                "screen_y_over_depth": -0.3512978097890141,
+                "side": "right"
+              },
+              "桌面东端": {
+                "facing": "in_front",
+                "depth": 4.267487198583628,
+                "screen_x_over_depth": 0.09934185770711533,
+                "screen_y_over_depth": -0.1461189103950262,
+                "side": "right"
+              },
+              "东端墨绿椅": {
+                "facing": "in_front",
+                "depth": 4.631056690225542,
+                "screen_x_over_depth": 0.05492570716442484,
+                "screen_y_over_depth": -0.1261156393257244,
+                "side": "right"
+              },
+              "北墙书架": {
+                "facing": "in_front",
+                "depth": 1.275623289217787,
+                "screen_x_over_depth": -1.9381439954521176,
+                "screen_y_over_depth": 0.0887336801808778,
+                "side": "left"
+              },
+              "东墙南窗": {
+                "facing": "in_front",
+                "depth": 6.236059492401035,
+                "screen_x_over_depth": 0.16933710549815717,
+                "screen_y_over_depth": -0.012862542213704305,
+                "side": "right"
+              },
+              "东墙北窗": {
+                "facing": "in_front",
+                "depth": 4.837641209317436,
+                "screen_x_over_depth": -0.3995297294397849,
+                "screen_y_over_depth": -0.008225142411889496,
+                "side": "left"
+              },
+              "南门": {
+                "facing": "in_front",
+                "depth": 4.614684024376766,
+                "screen_x_over_depth": 1.0147197828973218,
+                "screen_y_over_depth": -0.06142351739994815,
+                "side": "right"
+              },
+              "西墙中部": {
+                "facing": "in_front",
+                "depth": 0.20658451909189543,
+                "screen_x_over_depth": 11.28676337180071,
+                "screen_y_over_depth": -0.27103778341782564,
+                "side": "right"
+              }
+            },
+            "basis": {
+              "forward": [
+                0.9053121116381425,
+                -0.4237631160859391,
+                0.02889293973313219
+              ],
+              "right": [
+                -0.4239401060486308,
+                -0.9056902265584386,
+                0.0
+              ],
+              "up": [
+                -0.026168053132839805,
+                0.012248875934520759,
+                0.999582511868619
+              ]
+            },
+            "scope": "Declared point projection only; not field-of-view, occlusion, collision, light, image quality or user acceptance",
+            "coordinates_are": "Caller-declared design values; not measured reference-image facts"
+          },
+          "output_sha256": "3bd99f6dae9651453c3f5a6ff75c5949b5c43f703749b7907a9dabdc4bad89ef"
+        }
+      },
+      "commands": [
+        {
+          "command": "Get-Content -LiteralPath skills/scene-asset/SKILL.md -Raw",
+          "purpose": "读取当前完整主入口",
+          "result": "completed; truncated末段已用单独读取补齐"
+        },
+        {
+          "command": "Get-Content -LiteralPath skills/scene-asset/references/cinematic-image-direction.md -Raw",
+          "purpose": "读取当前完整画面设计参考",
+          "result": "completed"
+        },
+        {
+          "command": "Get-Content -LiteralPath skills/scene-asset/references/scene-multiview-design.md -Raw",
+          "purpose": "读取完整同空间参考",
+          "result": "completed"
+        },
+        {
+          "command": "Get-Content -LiteralPath <local-path omitted> -Raw",
+          "purpose": "读取逐字同题输入",
+          "result": "completed"
+        },
+        {
+          "command": "python -B skills/scene-asset/scripts/check_view_projection.py --input <local-path omitted>",
+          "purpose": "核对A声明坐标中的左右",
+          "exit_code": 0,
+          "result": "ok true"
+        },
+        {
+          "command": "python -B skills/scene-asset/scripts/check_view_projection.py --input <local-path omitted>",
+          "purpose": "核对B声明坐标中的左右",
+          "exit_code": 0,
+          "result": "ok true"
+        }
+      ],
+      "execution_boundary": {
+        "text_workflow": "executed_by_current_implementation_author_assistant",
+        "script_projection": "executed",
+        "independent_first_draft": "not_executed",
+        "external_api_text_run": "not_executed",
+        "image_generation": "not_executed",
+        "media_review": "not_executed",
+        "user_aesthetic_acceptance": "pending"
+      },
+      "input_source": {
+        "path": "inputs-only.json",
+        "sha256": "b9e9157ae7d159e742189540a324824a6f56ea72a57549e6180f5492c72aecf5",
+        "verbatim_equality": true
+      }
+    },
+    "camera": {
+      "inputs": {
+        "C": "只交一条12秒16:9完整六模块视频母提示词，摄影写实。人物林岚穿深灰外套、拿一张白纸，从南侧走廊进入上述阅览室，最后停在中央长桌南侧说唯一原句“就是这里。”（9.0–10.5秒，正常轻声）；其他时间无台词，不加配乐。走廊南北长5m、宽2m，北端门已敞开，连接阅览室南门；人物从走廊中段出发走到桌边。空场景，仅林岚；东窗上午柔光，地面干燥，窗帘和植物均无。摄影机可在走廊/门洞/长桌西南侧空通道移动，不能穿墙或穿家具。不锁定具体镜头，要求同一条连续镜头自然揭示房间及末尾白纸落桌状态。纸在10.5–12秒放到桌面；不加入第二个人、声音事件或物件。"
+      },
+      "outputs": {
+        "C": "【纸与阅览室】\n一、生成任务\n12秒，16:9，摄影写实，一条连续镜头，无切镜或隐藏拼接。除指定原句外无台词，不加配乐或其他声音事件。\n\n二、主要主体\n只有林岚，深灰外套，初始站在南侧走廊中段、面向北端敞开的门，左手在身前拿着一张白纸。没有实际附带参考图；身份与房间事实由本稿承担。\n\n三、场景状态\n走廊南北长5米、宽2米，北端敞开的门连接阅览室南墙中央入口。阅览室南北8米、东西6米：中央一张东西向浅木长桌，东端唯一一把墨绿色椅，东墙两扇落地窗，北墙书架，西墙无装饰白墙。室内整洁、新维护、干燥，无窗帘、植物或其他人。上午柔光从东窗进入，经房间与敞开门口反射到走廊；全段照明稳定。摄影机只走走廊、真实门洞及桌西南侧空通道。\n\n四、情绪目标\n从手里一张具体的纸开始，随后把持纸的人放回所进入的空间；结尾回到同一张纸与桌面的接触，使“拿着进入”与“已放下”的变化可直接看见。人物的普通确认保持平常，不另造秘密或异常反应。\n\n五、视觉风格\n固定焦距的自然透视，靠真实距离变化扩大和收紧画框。白纸与深灰衣料先形成集中的亮暗关系；入室后，东侧柔亮面、浅木桌面与较暗桌下共同交代体量，墨绿只落在既有椅子上，墙面保留自然白。保护纸面、肤色与木面的亮部细节，不抹平柔光下的面向差异。清晰对象随纸、人物和桌面接力，既有背景在出画后仍留在原位；干燥材料保留符合观看角的微弱光泽。\n\n六、分段脚本\n[0.0–1.5秒｜走廊内低机位近特写｜近距伴行→白纸与持纸手]\n画面：摄影机在林岚前方偏西，约与持纸手同高、距手不到一米；白纸占据画面中央的大块浅色，左手抓住的纸边和深灰外套局部清楚，脸与房间尚在画框外。林岚按原行动向北走，摄影机在走廊西半侧短距离退行，保持这一近距关系，不改变她的动作；纸没有放下。\n台词：无。\n\n[1.5–4.0秒｜近特写展开至人物中景｜加快退行并升高→持纸的人]\n画面：林岚继续前进，摄影机沿走廊北退得比她更快，逐渐拉开到约两米，同时从手部高度升至胸肩高度并上转视向。画框从纸和外套扩大到林岚的上身与面部，纸缩小后仍在身前；焦点随观察距离接到人物，不能以变焦冒充后退。摄影机先从既有敞开门洞进入阅览室，门框沿画面边缘掠过，林岚随后跨过门槛，没有黑场遮挡或跳点。\n台词：无。\n\n[4.0–8.5秒｜门内中景展开为人物与桌窗同框｜向桌西南侧斜退并转向→阅览室关系]\n画面：林岚从门口沿长桌南侧空地走向桌边。摄影机从门内向世界西侧让开，再沿桌西南侧空通道向北斜退，连续转向她与长桌，把侧后方原在画外的桌面和东窗纳入画框；人物相对变小，桌的延伸与明亮窗面开始承担空间主次。镜头不绕到桌后，不穿过桌体或门框。至8.5秒，林岚停在长桌南侧，摄影机在她西南侧停住，以侧面中景同时保留面部、近摄影机侧的左手白纸和可及桌面。上午柔光和固定地标延续，纸始终拿在手中。\n台词：无。\n\n[8.5–10.5秒｜桌边侧面中景｜固定观察→原句说完]\n画面：林岚已站定，摄影机位置、朝向和焦距保持，空桌面与未放下的白纸同框；9.0秒开始正常现场发声，持纸手不先行落桌。\n台词：林岚／现场正常轻声｜9.0–10.5秒｜“就是这里。”\n表达情绪：平常而清楚地确认所在位置，正常语速、轻声，句尾自然收住。\n\n[10.5–12.0秒｜手与桌面近景｜沿南侧空通道短距接近并降视点→纸已落桌]\n画面：原句结束后，林岚才将左手中的纸向前放到长桌南缘内侧。摄影机在桌南沿外向持纸手短距靠近，同时降到略高于桌面的视点并下转朝向；面部退出上缘，手、完整白纸和浅木桌面的接触占据主画面，焦点跟着这次真实下降接到纸面。摄影机始终在桌沿外，纸下落与接触过程没有被遮掉。至11.5秒手指松开，纸平放贴住桌面，手离开；镜头停住，最后0.5秒清楚保留纸的完整轮廓、接触阴影和已经空出的手。\n台词：无。"
+      },
+      "provenance": "root actual skill text design and compilation with prior weak output known; not blind; not external model API",
+      "source_receipts": [
+        {
+          "path": "skills/ai-storyboard-director/SKILL.md",
+          "sha256": "1b3a7309202f59f5dec267892c6f353353edf6c70fc01cf38219a6da5ca27d4c",
+          "reading": "full current text; unchanged material reused in this task"
+        },
+        {
+          "path": "skills/ai-storyboard-director/references/shot-design-engine.md",
+          "sha256": "60cd0a815a4bdd75aed66fa7fd259cc57d48323d87711fc8cb238d688c8a7033",
+          "reading": "full current text; unchanged material reused in this task"
+        },
+        {
+          "path": "skills/ai-storyboard-director/references/cinematography-design-engine.md",
+          "sha256": "819414b707bb438cad8010e1a447cf92b6b419655e82b4ceb9c7153e64b896df",
+          "reading": "full current text; unchanged material reused in this task"
+        },
+        {
+          "path": "skills/ai-storyboard-director/references/production-contract.md",
+          "sha256": "ecf119d663cd956a105bbade42cc0e38de82cbab25ba9c77c0ff6bb7f81546a4",
+          "reading": "full current text; unchanged material reused in this task"
+        },
+        {
+          "path": "skills/ai-storyboard-director/references/framing-and-axis.md",
+          "sha256": "95d59767391e7f58e67a0fcb15f4a25d2b05ff6558da1c8c667262669b2b11fb",
+          "reading": "full current text; unchanged material reused in this task"
+        },
+        {
+          "path": "skills/ai-storyboard-director/references/fcml-motion-index.md",
+          "sha256": "a8b1600db705f8936c7ac384cfd59420286718512896db6e94c1bb242d27acb4",
+          "reading": "full current text; unchanged material reused in this task"
+        }
+      ],
+      "selected_design": {
+        "viewing_task": "Read paper at close range, restore its holder and destination, then observe real contact at close range",
+        "camera": {
+          "decision_record": {
+            "alternatives": [
+              {
+                "id": "constant-distance",
+                "frames": [
+                  "person and paper medium",
+                  "person and room medium",
+                  "paper small beside person"
+                ],
+                "tradeoff": "Continuously visible person; hand/result remain subordinate"
+              },
+              {
+                "id": "changing-distance",
+                "frames": [
+                  "paper and fingers close",
+                  "holder then room enter enlarged frame",
+                  "paper contact close"
+                ],
+                "tradeoff": "Contact and held object become readable; face is initially and finally outside frame"
+              }
+            ],
+            "selected": "changing-distance",
+            "selection_basis": "The sole physical result is this paper changing from held to resting; give it actual image scale"
+          },
+          "path": [
+            [
+              -0.55,
+              -2.0,
+              1.0
+            ],
+            [
+              -0.55,
+              -0.1,
+              1.5
+            ],
+            [
+              -0.6,
+              0.5,
+              1.5
+            ],
+            [
+              -1.6,
+              2.0,
+              1.5
+            ],
+            [
+              -1.6,
+              2.6,
+              1.4
+            ],
+            [
+              -0.65,
+              2.9,
+              1.2
+            ]
+          ],
+          "coordinates": "Design envelopes only: x east, y north; room south door y=0; table south edge assumed y=3.2. Not measured geometry.",
+          "end_view_assumption": {
+            "paper_center": [
+              -0.2,
+              3.35,
+              0.75
+            ],
+            "reason": "Actual close distance and elevated downward view retain a full lying paper contour; camera remains south of the assumed tabletop edge"
+          }
+        },
+        "motion": {
+          "fcml_ids": [
+            "fcml-048",
+            "fcml-029",
+            "fcml-001"
+          ],
+          "operations": [
+            {
+              "type": "translation",
+              "mode": "lead"
+            },
+            {
+              "type": "translation",
+              "mode": "up"
+            },
+            {
+              "type": "translation",
+              "mode": "forward"
+            },
+            {
+              "type": "orientation",
+              "mode": "track"
+            },
+            {
+              "type": "focus",
+              "mode": "track"
+            }
+          ],
+          "stages": [
+            {
+              "start": 0,
+              "end": 1.5,
+              "watch": "held paper close"
+            },
+            {
+              "start": 1.5,
+              "end": 4,
+              "watch": "actual increased separation and raised center reveal holder"
+            },
+            {
+              "start": 4,
+              "end": 8.5,
+              "watch": "western route and turning reveal room"
+            },
+            {
+              "start": 8.5,
+              "end": 10.5,
+              "watch": "stationary face and paper; speech only 9–10.5"
+            },
+            {
+              "start": 10.5,
+              "end": 12,
+              "watch": "actual approach/downward center and tilt reveal paper contact"
+            }
+          ]
+        },
+        "critical_retention": [
+          "Initial paper scale excludes face",
+          "Retreat faster than actor increases actual distance",
+          "Raise center separately from tilt",
+          "Use original doorway and southwest aisle",
+          "Soft east-window light continuous",
+          "Original sentence and 9.0–10.5 window",
+          "Contact only 10.5–12; stationary paper and hand released before ending"
+        ],
+        "ending": "Paper on tabletop, hand released, full contour and contact visible for final half second"
+      },
+      "commands": [
+        {
+          "command": "python -B skills/ai-storyboard-director/scripts/fcml_motion.py search --query 后退 --operation translation --limit 3",
+          "exit_code": 0,
+          "candidates": [
+            "fcml-002",
+            "fcml-004",
+            "fcml-048"
+          ]
+        },
+        {
+          "command": "python -B skills/ai-storyboard-director/scripts/fcml_motion.py get --id fcml-048 --id fcml-029 --id fcml-001",
+          "exit_code": 0,
+          "read_selected_motions": [
+            {
+              "id": "fcml-048",
+              "name": "面向人物后退引领",
+              "aliases": [
+                "引领镜头（反向追踪）"
+              ],
+              "source_ids": [
+                "yj048"
+              ],
+              "extraction_status": "full_prompt_read_original_adaptation",
+              "purpose": "同时观察前进者的面部与身后关系",
+              "attention_change": "同时观察前进者的面部与身后关系",
+              "applicable_space": [
+                "人物原定向前移动且相机退路可走"
+              ],
+              "not_applicable": [
+                "缺少条目要求的既有观看对象/路径/时刻；不以模板创造缺项。"
+              ],
+              "operation_types": [
+                "translation",
+                "orientation",
+                "focus"
+              ],
+              "operations": [
+                {
+                  "type": "translation",
+                  "mode": "lead"
+                },
+                {
+                  "type": "orientation",
+                  "mode": "track"
+                },
+                {
+                  "type": "focus",
+                  "mode": "track"
+                }
+              ],
+              "start_state": {
+                "framing": "{起始构图}",
+                "world_relation": "由当前场景合同和已选机位推导，不复制原站固定场景。"
+              },
+              "phases": [
+                {
+                  "stage": "start",
+                  "watching_task": "先完成起始构图中必须辨认的信息",
+                  "camera_state": "{起始构图}"
+                },
+                {
+                  "stage": "process",
+                  "watching_task": "同时观察前进者的面部与身后关系",
+                  "camera_and_attention": "摄影机在{主体}前方沿{后退路径}退行，按{跟随距离}匹配其已有前进；朝向及焦点持续给到{表演对象}"
+                },
+                {
+                  "stage": "end",
+                  "watching_task": "落点交付新信息并承接下一段",
+                  "camera_state": "{终点构图}",
+                  "environment_state": "{环境承接}"
+                }
+              ],
+              "trigger": "使用模板中已有动作/既定节点；没有触发要求时按本段观看节奏，不新增事件或声音。",
+              "speed_and_pauses": "按当前动作、对白、辨认和停顿确定，再分配路径阶段；原站示例秒数、角度、倍率不是默认。",
+              "focus_handoff": "所选操作含focus时落实条目清晰对象及节点；其余沿用已锁定焦点，不自动加移焦。",
+              "end_state": {
+                "framing": "{终点构图}",
+                "continuity": "{环境承接}"
+              },
+              "variables": [
+                "起始构图",
+                "主体",
+                "后退路径",
+                "跟随距离",
+                "表演对象",
+                "终点构图",
+                "环境承接"
+              ],
+              "template_zh": "{起始构图}。摄影机在{主体}前方沿{后退路径}退行，按{跟随距离}匹配其已有前进；朝向及焦点持续给到{表演对象}。最终{终点构图}；{环境承接}。",
+              "constraints": [
+                "明确世界路径、净空及起终位置；位移的视差/遮挡与焦距改变分开。",
+                "记录pan/tilt/roll对应轴；中心不变的转向不创造绕遮挡后方的新视面。",
+                "清晰对象及交接节点明确；移焦不等于镜头呼吸造成的视角变化。",
+                "人物原定向前移动且相机退路可走",
+                "沿用人物、台词、布局、镜序、时长、画幅和指定媒介；背景持续不因停机或近景重置。"
+              ],
+              "common_errors": [
+                "人物倒走或背景任意滑移；机械居中覆盖表演",
+                "机位未动只放大影像；临时挪墙或物件让路径通过。",
+                "横移混为摇摄；升降混为俯仰；滚转混为主体环绕。",
+                "所有深度全清晰又写焦外过渡；焦点循环被变成缩放。"
+              ],
+              "complexity": "high",
+              "implementation_options": [
+                "稳定器、轨道或虚拟摄影机"
+              ],
+              "effect_policy": {
+                "kind": "none",
+                "requires_explicit_adoption": false,
+                "photorealism_independent": true,
+                "state": "not_adopted_by_default"
+              },
+              "medium_policy": {
+                "preserve_locked_medium": true,
+                "explicit_transition_required": false
+              },
+              "evidence": {
+                "mechanism": "由实际读取的来源机制和操作定义核对后原创改写",
+                "source_ids": [
+                  "yj048"
+                ],
+                "definition_sources": [
+                  "translation",
+                  "orientation",
+                  "focus"
+                ]
+              },
+              "validation": {
+                "source_read_date": "2026-10-10T07:32:07Z",
+                "platform": null,
+                "model_version": null,
+                "media_test": "not_run",
+                "user_acceptance": "not_requested",
+                "text_adaptation": "deterministic_binding_only_not_artistic_acceptance"
+              }
+            },
+            {
+              "id": "fcml-029",
+              "name": "垂直抬升视点",
+              "aliases": [
+                "台座上升"
+              ],
+              "source_ids": [
+                "yj029"
+              ],
+              "extraction_status": "full_prompt_read_original_adaptation",
+              "purpose": "从下方细节看向更高部位",
+              "attention_change": "从下方细节看向更高部位",
+              "applicable_space": [
+                "有升降净空；另需俯仰时显式叠加"
+              ],
+              "not_applicable": [
+                "缺少条目要求的既有观看对象/路径/时刻；不以模板创造缺项。"
+              ],
+              "operation_types": [
+                "translation"
+              ],
+              "operations": [
+                {
+                  "type": "translation",
+                  "mode": "up"
+                }
+              ],
+              "start_state": {
+                "framing": "{起始构图}",
+                "world_relation": "由当前场景合同和已选机位推导，不复制原站固定场景。"
+              },
+              "phases": [
+                {
+                  "stage": "start",
+                  "watching_task": "先完成起始构图中必须辨认的信息",
+                  "camera_state": "{起始构图}"
+                },
+                {
+                  "stage": "process",
+                  "watching_task": "从下方细节看向更高部位",
+                  "camera_and_attention": "摄影机中心沿{垂直通道}上升，焦距保持，朝向按{朝向策略}记录；从{下部对象}到{上部对象}，近景高度遮挡随位移改变"
+                },
+                {
+                  "stage": "end",
+                  "watching_task": "落点交付新信息并承接下一段",
+                  "camera_state": "{终点构图}",
+                  "environment_state": "{环境承接}"
+                }
+              ],
+              "trigger": "使用模板中已有动作/既定节点；没有触发要求时按本段观看节奏，不新增事件或声音。",
+              "speed_and_pauses": "按当前动作、对白、辨认和停顿确定，再分配路径阶段；原站示例秒数、角度、倍率不是默认。",
+              "focus_handoff": "所选操作含focus时落实条目清晰对象及节点；其余沿用已锁定焦点，不自动加移焦。",
+              "end_state": {
+                "framing": "{终点构图}",
+                "continuity": "{环境承接}"
+              },
+              "variables": [
+                "起始构图",
+                "垂直通道",
+                "朝向策略",
+                "下部对象",
+                "上部对象",
+                "终点构图",
+                "环境承接"
+              ],
+              "template_zh": "{起始构图}。摄影机中心沿{垂直通道}上升，焦距保持，朝向按{朝向策略}记录；从{下部对象}到{上部对象}，近景高度遮挡随位移改变。最终{终点构图}；{环境承接}。",
+              "constraints": [
+                "明确世界路径、净空及起终位置；位移的视差/遮挡与焦距改变分开。",
+                "有升降净空；另需俯仰时显式叠加",
+                "沿用人物、台词、布局、镜序、时长、画幅和指定媒介；背景持续不因停机或近景重置。"
+              ],
+              "common_errors": [
+                "仅上摇视线却称台座上升",
+                "机位未动只放大影像；临时挪墙或物件让路径通过。"
+              ],
+              "complexity": "low",
+              "implementation_options": [
+                "升降台、吊臂或虚拟摄影机"
+              ],
+              "effect_policy": {
+                "kind": "none",
+                "requires_explicit_adoption": false,
+                "photorealism_independent": true,
+                "state": "not_adopted_by_default"
+              },
+              "medium_policy": {
+                "preserve_locked_medium": true,
+                "explicit_transition_required": false
+              },
+              "evidence": {
+                "mechanism": "由实际读取的来源机制和操作定义核对后原创改写",
+                "source_ids": [
+                  "yj029"
+                ],
+                "definition_sources": [
+                  "translation"
+                ]
+              },
+              "validation": {
+                "source_read_date": "2026-10-10T07:32:07Z",
+                "platform": null,
+                "model_version": null,
+                "media_test": "not_run",
+                "user_acceptance": "not_requested",
+                "text_adaptation": "deterministic_binding_only_not_artistic_acceptance"
+              }
+            },
+            {
+              "id": "fcml-001",
+              "name": "缓进细节",
+              "aliases": [
+                "慢速推进"
+              ],
+              "source_ids": [
+                "yj001"
+              ],
+              "extraction_status": "full_prompt_read_original_adaptation",
+              "purpose": "从整体筛出已存在的关键细节",
+              "attention_change": "从整体筛出已存在的关键细节",
+              "applicable_space": [
+                "有向主体接近的净空与纵深；不是只能拍小物"
+              ],
+              "not_applicable": [
+                "缺少条目要求的既有观看对象/路径/时刻；不以模板创造缺项。"
+              ],
+              "operation_types": [
+                "translation"
+              ],
+              "operations": [
+                {
+                  "type": "translation",
+                  "mode": "forward"
+                }
+              ],
+              "start_state": {
+                "framing": "{起始构图}",
+                "world_relation": "由当前场景合同和已选机位推导，不复制原站固定场景。"
+              },
+              "phases": [
+                {
+                  "stage": "start",
+                  "watching_task": "先完成起始构图中必须辨认的信息",
+                  "camera_state": "{起始构图}"
+                },
+                {
+                  "stage": "process",
+                  "watching_task": "从整体筛出已存在的关键细节",
+                  "camera_and_attention": "摄影机沿{可走路径}缓慢接近{主体}，保持焦距，前后景视差逐渐展开；速度服从辨认时间"
+                },
+                {
+                  "stage": "end",
+                  "watching_task": "落点交付新信息并承接下一段",
+                  "camera_state": "{终点构图}",
+                  "environment_state": "{环境承接}"
+                }
+              ],
+              "trigger": "使用模板中已有动作/既定节点；没有触发要求时按本段观看节奏，不新增事件或声音。",
+              "speed_and_pauses": "按当前动作、对白、辨认和停顿确定，再分配路径阶段；原站示例秒数、角度、倍率不是默认。",
+              "focus_handoff": "所选操作含focus时落实条目清晰对象及节点；其余沿用已锁定焦点，不自动加移焦。",
+              "end_state": {
+                "framing": "{终点构图}",
+                "continuity": "{环境承接}"
+              },
+              "variables": [
+                "起始构图",
+                "可走路径",
+                "主体",
+                "终点构图",
+                "环境承接"
+              ],
+              "template_zh": "{起始构图}。摄影机沿{可走路径}缓慢接近{主体}，保持焦距，前后景视差逐渐展开；速度服从辨认时间。最终{终点构图}；{环境承接}。",
+              "constraints": [
+                "明确世界路径、净空及起终位置；位移的视差/遮挡与焦距改变分开。",
+                "有向主体接近的净空与纵深；不是只能拍小物",
+                "沿用人物、台词、布局、镜序、时长、画幅和指定媒介；背景持续不因停机或近景重置。"
+              ],
+              "common_errors": [
+                "仅放大所有像素而未改变遮挡",
+                "机位未动只放大影像；临时挪墙或物件让路径通过。"
+              ],
+              "complexity": "low",
+              "implementation_options": [
+                "滑轨、稳定器或虚拟摄影机"
+              ],
+              "effect_policy": {
+                "kind": "none",
+                "requires_explicit_adoption": false,
+                "photorealism_independent": true,
+                "state": "not_adopted_by_default"
+              },
+              "medium_policy": {
+                "preserve_locked_medium": true,
+                "explicit_transition_required": false
+              },
+              "evidence": {
+                "mechanism": "由实际读取的来源机制和操作定义核对后原创改写",
+                "source_ids": [
+                  "yj001"
+                ],
+                "definition_sources": [
+                  "translation"
+                ]
+              },
+              "validation": {
+                "source_read_date": "2026-10-10T07:32:07Z",
+                "platform": null,
+                "model_version": null,
+                "media_test": "not_run",
+                "user_acceptance": "not_requested",
+                "text_adaptation": "deterministic_binding_only_not_artistic_acceptance"
+              }
+            }
+          ]
+        }
+      ],
+      "semantic_review": {
+        "method": "root reconstructs actual start/change/end from complete compiled prompt and compares with input and plan",
+        "preservation": "supported at text level",
+        "creative_delta": "Actual close-medium-room-close scale sequence replaces constant medium observation",
+        "independent_review": "not executed; attempted new contexts remained pending_init and followup hit agent thread limit"
+      },
+      "not_verified": [
+        "continuous collision-free camera and performer volumes",
+        "actual lens field of view and focus depth",
+        "generation model execution",
+        "media output",
+        "aesthetic improvement",
+        "user acceptance"
+      ]
+    },
+    "B_compilation_correction": {
+      "outputs": {
+        "B": "16:9单幅摄影写实。雨夜的现代小型阅览室，无人、整洁、新维护，室内干燥。房间南北8米、东西6米，南墙中央入口，东墙两扇关闭的落地窗，北墙书架，中央浅木长桌、东端唯一墨绿椅及西墙白墙保持原位。摄影机在西北侧空通道约1.25米高，朝东南观察：后景两扇透明窗并列，透窗可见的庭院灯照明与外侧雨水高光构成较亮的冷白区域，北窗在画面左、南窗在右；长桌以横向深色体量占据下半部，东端椅在中央略偏右，台灯留在画外的桌西端。窗外冷白庭院灯成为主要可见光，照出玻璃外侧的雨滴和下滑水痕；窗外亮区与桌、椅的暗轮廓相接，玻璃本体不发光，先读到雨被关在窗外，再读到室内桌面。以庭院冷白光为白平衡依据，使窗区呈清冷的近白灰，暖白台灯在桌面右缘只留下小片偏琥珀的照明，暖区不扩成全桌主光。曝光保留外侧雨痕和透窗可见的亮区，仍看得出玻璃的透明性，桌中段处于深暗但仍辨体量；一条冷白窗光反射擦过干燥木面的迎窗部分，纹理在这条光泽内显出，椅的受光边缘仍辨墨绿。台灯一直亮着，暗区来自两源的覆盖与曝光取舍，不添加补光。入口、书架和西白墙保留于当前取景外；雨只在窗外和玻璃外侧，室内无水痕、积水或湿地反光，无人物、事件、额外陈设或新光源。"
+      },
+      "provenance": "root local compilation correction after independent round1; preserves actual author run unchanged",
+      "source_receipt": {
+        "path": "skills/scene-asset/references/cinematic-image-direction.md",
+        "sha256": "6d90f395723ae2643f4e7bbcd398628c2ee06e961a4f8306b4dd6c51adc66e0f"
+      },
+      "reason": "Resolve luminous-glass ambiguity; preserve selected source hierarchy, areas and dry interior",
+      "first_run_retained": true
+    }
+  },
+  "final_outputs": {
+    "A": "16:9单幅摄影写实。初夏上午，现代小型阅览室，无人、整洁、新维护、干燥。房间南北8米、东西6米，南墙中央入口，东墙两扇落地窗，北墙书架，中央一张浅木长桌，东端唯一一把墨绿色椅，西墙无装饰白墙。摄影机在房间西南侧约1.9米高，斜向东北略俯看，以桌面和椅子为主要取景：长桌西端从画面左下缘进入，向右上方退远，墨绿椅在右侧形成紧凑的深色块，北墙书架只在上缘露出一段，不要求所有门窗完整入镜。东窗透入定向晨光，在浅木桌面切出一块边界清楚的斜四边形亮面，未被直射的桌段留在较淡的阴影里；窗边干地面承接同方向光区，椅子的接触阴影朝世界西侧延伸。第一眼看见亮桌面与墨绿块的相接，随后沿桌沿读到较远的书架。画面以明亮的暖白日光区和浅木色面为主，阴影保留淡灰，墨绿集中于唯一椅子；白平衡使直射光稍暖，不把整室染黄。曝光保留受光木纹和椅背颜色，暗区可辨而不被提成等亮；桌面的薄层清漆在迎光边缘有窄柔光泽，玻璃保持透明反射，干地面没有水膜。家具、门窗与墙体位置不变，无新增陈设、人物、事件、烟雾或破损。",
+    "B": "16:9单幅摄影写实。雨夜的现代小型阅览室，无人、整洁、新维护，室内干燥。房间南北8米、东西6米，南墙中央入口，东墙两扇关闭的落地窗，北墙书架，中央浅木长桌、东端唯一墨绿椅及西墙白墙保持原位。摄影机在西北侧空通道约1.25米高，朝东南观察：后景两扇透明窗并列，透窗可见的庭院灯照明与外侧雨水高光构成较亮的冷白区域，北窗在画面左、南窗在右；长桌以横向深色体量占据下半部，东端椅在中央略偏右，台灯留在画外的桌西端。窗外冷白庭院灯成为主要可见光，照出玻璃外侧的雨滴和下滑水痕；窗外亮区与桌、椅的暗轮廓相接，玻璃本体不发光，先读到雨被关在窗外，再读到室内桌面。以庭院冷白光为白平衡依据，使窗区呈清冷的近白灰，暖白台灯在桌面右缘只留下小片偏琥珀的照明，暖区不扩成全桌主光。曝光保留外侧雨痕和透窗可见的亮区，仍看得出玻璃的透明性，桌中段处于深暗但仍辨体量；一条冷白窗光反射擦过干燥木面的迎窗部分，纹理在这条光泽内显出，椅的受光边缘仍辨墨绿。台灯一直亮着，暗区来自两源的覆盖与曝光取舍，不添加补光。入口、书架和西白墙保留于当前取景外；雨只在窗外和玻璃外侧，室内无水痕、积水或湿地反光，无人物、事件、额外陈设或新光源。",
+    "C": "【纸与阅览室】\n一、生成任务\n12秒，16:9，摄影写实，一条连续镜头，无切镜或隐藏拼接。除指定原句外无台词，不加配乐或其他声音事件。\n\n二、主要主体\n只有林岚，深灰外套，初始站在南侧走廊中段、面向北端敞开的门，左手在身前拿着一张白纸。没有实际附带参考图；身份与房间事实由本稿承担。\n\n三、场景状态\n走廊南北长5米、宽2米，北端敞开的门连接阅览室南墙中央入口。阅览室南北8米、东西6米：中央一张东西向浅木长桌，东端唯一一把墨绿色椅，东墙两扇落地窗，北墙书架，西墙无装饰白墙。室内整洁、新维护、干燥，无窗帘、植物或其他人。上午柔光从东窗进入，经房间与敞开门口反射到走廊；全段照明稳定。摄影机只走走廊、真实门洞及桌西南侧空通道。\n\n四、情绪目标\n从手里一张具体的纸开始，随后把持纸的人放回所进入的空间；结尾回到同一张纸与桌面的接触，使“拿着进入”与“已放下”的变化可直接看见。人物的普通确认保持平常，不另造秘密或异常反应。\n\n五、视觉风格\n固定焦距的自然透视，靠真实距离变化扩大和收紧画框。白纸与深灰衣料先形成集中的亮暗关系；入室后，东侧柔亮面、浅木桌面与较暗桌下共同交代体量，墨绿只落在既有椅子上，墙面保留自然白。保护纸面、肤色与木面的亮部细节，不抹平柔光下的面向差异。清晰对象随纸、人物和桌面接力，既有背景在出画后仍留在原位；干燥材料保留符合观看角的微弱光泽。\n\n六、分段脚本\n[0.0–1.5秒｜走廊内低机位近特写｜近距伴行→白纸与持纸手]\n画面：摄影机在林岚前方偏西，约与持纸手同高、距手不到一米；白纸占据画面中央的大块浅色，左手抓住的纸边和深灰外套局部清楚，脸与房间尚在画框外。林岚按原行动向北走，摄影机在走廊西半侧短距离退行，保持这一近距关系，不改变她的动作；纸没有放下。\n台词：无。\n\n[1.5–4.0秒｜近特写展开至人物中景｜加快退行并升高→持纸的人]\n画面：林岚继续前进，摄影机沿走廊北退得比她更快，逐渐拉开到约两米，同时从手部高度升至胸肩高度并上转视向。画框从纸和外套扩大到林岚的上身与面部，纸缩小后仍在身前；焦点随观察距离接到人物，不能以变焦冒充后退。摄影机先从既有敞开门洞进入阅览室，门框沿画面边缘掠过，林岚随后跨过门槛，没有黑场遮挡或跳点。\n台词：无。\n\n[4.0–8.5秒｜门内中景展开为人物与桌窗同框｜向桌西南侧斜退并转向→阅览室关系]\n画面：林岚从门口沿长桌南侧空地走向桌边。摄影机从门内向世界西侧让开，再沿桌西南侧空通道向北斜退，连续转向她与长桌，把侧后方原在画外的桌面和东窗纳入画框；人物相对变小，桌的延伸与明亮窗面开始承担空间主次。镜头不绕到桌后，不穿过桌体或门框。至8.5秒，林岚停在长桌南侧，摄影机在她西南侧停住，以侧面中景同时保留面部、近摄影机侧的左手白纸和可及桌面。上午柔光和固定地标延续，纸始终拿在手中。\n台词：无。\n\n[8.5–10.5秒｜桌边侧面中景｜固定观察→原句说完]\n画面：林岚已站定，摄影机位置、朝向和焦距保持，空桌面与未放下的白纸同框；9.0秒开始正常现场发声，持纸手不先行落桌。\n台词：林岚／现场正常轻声｜9.0–10.5秒｜“就是这里。”\n表达情绪：平常而清楚地确认所在位置，正常语速、轻声，句尾自然收住。\n\n[10.5–12.0秒｜手与桌面近景｜沿南侧空通道短距接近并降视点→纸已落桌]\n画面：原句结束后，林岚才将左手中的纸向前放到长桌南缘内侧。摄影机在桌南沿外向持纸手短距靠近，同时降到略高于桌面的视点并下转朝向；面部退出上缘，手、完整白纸和浅木桌面的接触占据主画面，焦点跟着这次真实下降接到纸面。摄影机始终在桌沿外，纸下落与接触过程没有被遮掉。至11.5秒手指松开，纸平放贴住桌面，手离开；镜头停住，最后0.5秒清楚保留纸的完整轮廓、接触阴影和已经空出的手。\n台词：无。"
+  },
+  "independent_review": {
+    "schema": "independent-image-direction-review/v1",
+    "reviewer": "/root/aesthetic_review_r3",
+    "evidence": {
+      "input_file": "<local-path omitted>",
+      "baseline_version": "5.8.1",
+      "baseline_origin": "examples/cinematic-fcml/substantive-rerun.json",
+      "basis": "完整读取同题raw inputs、冻结5.8.1旧稿及本轮最终完整提示词；未读取scene/camera内部选型或作者说明。",
+      "media_viewed": false,
+      "user_acceptance": "pending_revision"
+    },
+    "baseline_diagnosis": {
+      "overall": "这些文本不是空白设计，A 已有近椅/退远桌/留白关系，B 已有近暖/中暗/远冷分区，C 已有真实门洞和桌边终态。但是三者的成像落地仍集中在自然本色、柔缓明暗、克制木纹与哑光地面；电影画面的全图亮暗形状、材质之间的光学差别，以及镜头中观看距离的改变都很弱。机位关系的改变可以被核实，却不能据此推导整体画面明显更有辨识度。仅凭这份冻结文本，不能复核它相对更早版本的差异，也不能判定实际生成图像一定无差别。",
+      "A": {
+        "already_effective": [
+          "近处墨绿椅与远处浅木桌的尺度关系明确",
+          "西白墙留白，北书架不与近椅平分注意力",
+          "空场景、既有布局、干燥整洁边界完整"
+        ],
+        "why_effect_can_feel_same": [
+          "第一落点主要由椅靠近和固有色反差承担，照明仍是没有具体亮区形状的柔窗光",
+          "桌、白墙、地面都被处理成柔和、中性、哑光，缺少有来源的光形或材质受光差别",
+          "观众仍在阅读一张安静的房间展示图；只再调整椅占比或焦段数值不构成新的全图造型"
+        ],
+        "open_decisions": [
+          "真实可达机位、高度、观看方向和裁切边界",
+          "未锁定的上午日照软硬、相对强弱与可见覆盖；采用方向性日照时需解释由既有东窗形成的实际光形",
+          "亮区、过渡区与暗区的形状和面积，以及它们与椅、桌和白墙的联系",
+          "保持固有色条件下的白平衡、曝光与饱和度关系",
+          "既有材质在观察距离和具体入光方向下的反射、阴影与透射呈现"
+        ],
+        "locks": [
+          "16:9摄影写实；初夏上午；无人、整洁、新维护、干燥",
+          "8米南北、6米东西及全部已定门窗地标位置",
+          "只有一张中央浅木长桌、桌东端一把墨绿椅、北书架、西白墙；无额外陈设",
+          "不增人物、事件、烟雾或破损"
+        ]
+      },
+      "B": {
+        "already_effective": [
+          "台灯西端与外庭院灯东侧的空间因果成立",
+          "暖亮桌面、中段较暗、远处冷窗的三区有具体落点",
+          "外侧雨与室内干燥分开"
+        ],
+        "why_effect_can_feel_same": [
+          "仍以近灯暖亮、远窗冷亮的常见观看结构作为主要变化，影调选择没有明显不同的源主导关系",
+          "玻璃外侧湿面被用于雨滴描述，桌、椅、地面仍统一克制哑光，具体反射方向和可见强度有限",
+          "居中白平衡和整体自然本色再次作为默认，光区被写出来但其全图面积与形状仍不够鲜明"
+        ],
+        "open_decisions": [
+          "既有两源的相对强度、覆盖和衰减，可选择其中一源主导全图、另一源承担局部信息，但必须保留两源",
+          "曝光与白平衡意图，以及干燥木面、玻璃外侧雨痕和墨绿椅各自的可见响应",
+          "亮暗大形、局部暖色面积与外界冷色面积的比例",
+          "真实机位与遮挡次序，不能以搬动台灯、桌、椅、窗达成",
+          "清晰对象与空间可读范围"
+        ],
+        "locks": [
+          "同一阅览室布局，雨夜，东窗关闭",
+          "室内台灯在长桌西端且暖白，庭院灯在窗外且冷白；不增新源",
+          "室内地面干燥，雨只在窗外与玻璃外侧",
+          "无人，不增事件或物件"
+        ]
+      },
+      "C": {
+        "already_effective": [
+          "单条连续镜头通过既有敞开门洞与允许通道",
+          "纸全程为同一张，9.0至10.5秒原句与10.5至12秒放纸顺序守恒",
+          "尾态包含纸平放、手解除接触、人物桌面同框",
+          "固定末段有明确观看任务，没有为运镜而擅加运动"
+        ],
+        "why_effect_can_feel_same": [
+          "从中景开始，入室和桌边仍以中景为主，观看距离与尺度顺序几乎没有变化",
+          "人物、纸和房间依次完整可辨，主要信息随前行线性出现，没有由观看机制产生的鲜明先后关系",
+          "固定焦距、平顺摄影、自然本色和缓和明暗再次形成普通跟随展示的共同表面",
+          "若新版仍只把前方退行改成另一侧跟行或增加路径术语，拍法实质增益不足"
+        ],
+        "open_decisions": [
+          "起点距离、主体画面尺度、起点可见与暂不可见的信息",
+          "前进或后退、观看方向、机位高度与焦距意图，以及不同阶段是否改变观看距离",
+          "真实门框或主体遮挡的次序；焦点交接是否有必要",
+          "房间揭示与面部、手纸辨认的先后时机，不增加故事事实",
+          "末段观察距离、构图和停留方式，仍完整呈现规定的对白与放纸终态"
+        ],
+        "locks": [
+          "12秒16:9摄影写实，六模块完整母稿，同一连续镜头",
+          "林岚深灰外套、拿一张白纸，从走廊中段到桌南侧；只有该人物",
+          "9.0至10.5秒正常轻声唯一原句‘就是这里。’，其他时间无对白、无配乐、无新增声音事件",
+          "纸在10.5至12秒放到桌面，不提前",
+          "5米长2米宽走廊、真实敞开门洞、阅览室既有布局",
+          "只走允许的走廊、门洞、桌西南空通道，不穿墙或家具",
+          "东窗上午柔光；干燥，无窗帘植物；该题光软度已锁，不应继承A的新日照选择"
+        ]
+      }
+    },
+    "review_policy": {
+      "preservation_and_gain_separate": true,
+      "not_sufficient_for_substantial_gain": [
+        "字数增长",
+        "摄影术语或数字增多",
+        "仅换画面左右或重复物件清单",
+        "仅命名第一落点而未改变实际注意力条件",
+        "仅宣布电影感、写实或更清楚"
+      ],
+      "text_gain_basis": [
+        "A/B比较全图亮暗大形、色彩面积、具体来源和材质可见反馈",
+        "C比较观看尺度与信息时机、实际路径和终态，不强制使用某个手法",
+        "变化服务输入任务而不是为了制造差别",
+        "缺空间尺寸、视场或执行证据时保留几何与模型执行不确定性"
+      ],
+      "media_status": "not_run",
+      "user_acceptance_status": "not_accepted",
+      "no_automatic_passing_example": true
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "reviewed_at_utc": "2026-10-11T04:39:41.756698+00:00",
+        "candidate_file": "<local-path omitted>",
+        "candidate_sha256": "bef2b31c8e484a270e46536afbc9a0ef3847ddc2473952a956a2770c169cdcd0",
+        "baseline_sha256": "351663e045aa3c7926fd98d1338aaa543c1224e6ecfce182744d5d7bef994c5a",
+        "same_raw_inputs": true,
+        "reviewer_blind_to_internal_rationale": true,
+        "authors_knew_baseline": true,
+        "is_blind_first_draft_test": false,
+        "overall_text_result": "partial_pending_B_source_clarification",
+        "cases": {
+          "A": {
+            "preservation_result": "pass_text",
+            "substantial_design_change_result": "pass_text",
+            "actual_change": "旧稿由近墨绿椅的体量对比与柔光留白主导；新版由既有东窗形成的有边界斜四边形受光桌面，与较淡阴影桌段、紧凑墨绿块相接。光形而非新增物件成为观看入口，曝光保留亮暗差别，清漆窄光泽让木面受光区别于固有色块。",
+            "why_it_has_a_function": "在无人、明亮、整洁的同一室内，现有桌椅之间的明暗形状提供视觉主次，随后沿桌体到书架；不靠烟雾、破损或加戏制造氛围。",
+            "locks_checked": [
+              "画幅、写实媒介、时刻、无人及维护干燥状态",
+              "房间尺寸、门窗方向、固定地标及物件数量",
+              "墨绿椅与浅木桌固有色",
+              "没有新增叙事事件或物件"
+            ],
+            "limits": [
+              "东窗直射光是未锁定光软度的设计选择，不是经参考图测量得到的事实。",
+              "窗尺寸、桌尺寸和太阳仰角未给定；斜四边形光斑的精确面积、双窗光斑是否同时入框尚未几何或媒体验证。"
+            ],
+            "required_text_fix": null,
+            "aesthetic_quality_result": "not_established_without_media_or_user_acceptance"
+          },
+          "B": {
+            "preservation_result": "pass_text",
+            "substantial_design_change_result": "pass_text_with_source_ambiguity",
+            "actual_change": "旧稿的第一落点是近处台灯照出的暖桌面，远冷窗较弱；新版把窗区设为宽幅主亮部，桌椅成为下半部暗体量，台灯退到画外且仅留小块暖光。主导光源、亮部面积、暖色面积和物体剪影关系均改变，已超出机位或措辞变化。",
+            "why_it_has_a_function": "观众先看窗外雨与室内隔开的边界，再读到干燥室内桌椅；小暖区仍保留台灯持续存在的事实。",
+            "locks_checked": [
+              "雨夜、同一世界布局、窗已关闭",
+              "台灯仍在长桌西端且亮着，庭院灯仍在窗外",
+              "没有第三光源、人物或叙事事件",
+              "雨只在窗外与玻璃外侧，地面干燥"
+            ],
+            "required_text_fix": "正文把两扇窗称为宽幅亮面，又说保留玻璃亮面，容易把透明玻璃本体编译成均匀发亮面板。须在最终提示词内厘清窗区亮度来自既有庭院灯照亮的窗外雨和外侧水痕，或明确其可见反射；玻璃仍透明，不能用作者内部说明补足。保留宽窗亮区/室内暗体量及小暖光的既定效果，不增加新的窗外物件或光源。",
+            "severity": "source_to_visible_result_ambiguity",
+            "limits": [
+              "不能仅凭稿件核实单盏庭院灯实际是否能形成所选宽窗主亮面积；光位、照射范围及参考图未给定。",
+              "冷白窗光擦过木面的反射带是具体设计，但未有相机和光源高度证据证明其精确位置。",
+              "从西北朝东南观察时，桌西端在画面右方可以成立；仅凭文字无法核对实际裁切是否恰好将台灯留在画外而保留其受光区。"
+            ],
+            "aesthetic_quality_result": "not_established_without_media_or_user_acceptance"
+          },
+          "C": {
+            "preservation_result": "pass_text",
+            "substantial_design_change_result": "pass_text",
+            "actual_change": "旧稿基本为中景退行入室、桌边固定中景；新版先以纸和手近特写排除脸与房间，真实拉开距离并升高后认出人物，再斜退转向揭示桌窗，原句期间固定中景，结束后回到纸与桌面的接触近景。近/中/空间展开/接触近景构成不同的观看尺度与信息次序。",
+            "why_it_has_a_function": "同一张纸承担起点与完成状态的首尾关系；人和空间在中间逐次建立，末段近景只确认规定的放纸动作，不新增秘密、反应或叙事情节。每个复合运动阶段都有具体观看任务，未退化成一句跟拍。",
+            "locks_checked": [
+              "七个指定标题各一次及单条完整母稿",
+              "总长12秒，连续镜头，不拆生成条",
+              "唯一人物、外套、唯一白纸与既有房间事实",
+              "唯一原句完全一致，9.0至10.5秒现场正常轻声；其他时间无对白",
+              "10.5秒之后才放纸，末帧纸平放及手离开",
+              "无配乐、新增声音事件、人物或物件",
+              "东窗上午柔光、稳定光照与干燥环境",
+              "路线使用走廊、敞开门洞和桌西南侧空通道，未写穿墙或桌体"
+            ],
+            "geometric_status": "plausible_at_text_level_not_simulated",
+            "limits": [
+              "末段1.5秒同时执行靠近、降低、俯仰、移焦和放纸，需实际模型或预演验证动作及稳定终帧能否完成；文本没有宣称已验证。",
+              "固定焦距但未给定视场、桌高、纸尺寸和具体移动距离，不能据此证明近景完整纸轮廓和桌沿遮挡关系必然成立。",
+              "从桌西南侧靠近人物左手可保持在允许区域，执行时须保留这个范围，不能将沿南侧通道解释为跨到桌东侧。"
+            ],
+            "required_text_fix": null,
+            "aesthetic_quality_result": "not_established_without_media_or_user_acceptance"
+          }
+        },
+        "summary": "A与C有可从正文重建的画面/拍法改变；B的源主导和色彩面积改变也是真实设计，但需修正透明玻璃与窗区亮度来源的表述歧义。三题均未用扩写或术语数量作为增益依据。文本差别成立不代表实际图像/视频质量已提高，更不代表用户已接受。",
+        "media_test": "not_run",
+        "user_acceptance": "pending"
+      },
+      {
+        "round": 2,
+        "reviewed_at_utc": "2026-10-11T04:41:39.681634+00:00",
+        "scope": "B_final_prompt_only",
+        "candidate_file": "<local-path omitted>",
+        "candidate_sha256": "33c3c641f11f62486e1de774bbdaba99ef1b01e7e0835705b31d43a64303dea1",
+        "B_text_sha256": "3e32ead64baf7f021f114ec9faf5cffa83e9e1096978fc701d3c5faaa9a438be",
+        "reviewer_blind_to_internal_rationale": true,
+        "original_round_preserved": true,
+        "B": {
+          "source_causality_result": "pass_text",
+          "substantial_design_change_result": "pass_text",
+          "preservation_result": "pass_text",
+          "reason": "新版最终正文将较亮冷白区域明确承载在透窗可见的庭院灯照明、外侧雨水高光与水痕上，并直接保留透明玻璃、不让玻璃本体发光。第一轮宽幅玻璃亮面歧义已消除。",
+          "gain_preserved": "冷窗区域为主要可见亮区、桌椅为下半部暗体量、画外西端台灯只在桌面右缘形成小片琥珀照明的关系没有丢失；未回退成旧稿近处暖桌面主导。",
+          "locks_preserved": [
+            "只保留原冷白庭院灯与原暖白西端台灯，两源仍亮着，无补光或新光源",
+            "透明东窗关闭，雨只在窗外和玻璃外侧",
+            "室内地面与木面干燥，无积水或湿地反光",
+            "原布局、地标、家具数量、无人和不增事件边界保持"
+          ],
+          "remaining_text_fix": null,
+          "limits_carried_forward": [
+            "未以参考图或照度验证单盏庭院灯实际覆盖与窗区亮度面积。",
+            "木面冷光反射带、台灯出框与局部受光的精确关系仍需相机/光源/桌面几何或媒体核验。"
+          ]
+        },
+        "A_C": "按本轮范围不重读、不重审，沿用round1文本结论与未预演风险；没有用B修订替换原首测。",
+        "overall_after_scoped_fix": "pass_text_design_and_preservation_with_execution_limits",
+        "is_blind_first_draft_test": false,
+        "media_test": "not_run",
+        "user_acceptance": "pending",
+        "aesthetic_quality": "not_established"
+      }
+    ]
+  },
+  "startup_failures": {
+    "new_scene_context": "pending_init; canceled before execution",
+    "new_camera_context": "pending_init; canceled before execution",
+    "camera_author_followup": "agent thread limit reached; root performed actual C workflow"
+  },
+  "execution_boundary": {
+    "actual_skill_text_workflow": true,
+    "blind_new_author_run": false,
+    "external_model_API_run": false,
+    "media_generation": "not_run",
+    "media_review": "not_run",
+    "user_acceptance": "pending",
+    "universal_first_draft_or_aesthetic_gain": "not_established"
+  },
+  "text_lengths": {
+    "A": {
+      "old_characters": 441,
+      "new_characters": 441
+    },
+    "B": {
+      "old_characters": 443,
+      "new_characters": 501
+    },
+    "C": {
+      "old_characters": 1565,
+      "new_characters": 1569
+    }
+  },
+  "public_projection_note": "Historical validation record; local filesystem paths omitted from this public view. Original private record and its original inputs remain preserved."
+}

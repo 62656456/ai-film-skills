@@ -1,13 +1,13 @@
 # director-agent｜剧本与导演设计
 
-| 状态 | 当前源码为隔离整改候选；既有安装记录与用户接受另列。 |
+| 状态 | 维护源码已接入场景交接、具体观看备选和编译保全；实际媒体与用户接受另列。 |
 |---|---|
 | 单独可交付 | 按请求交剧本、诊断、导演方案或分镜前设计；明确要完整分镜且导演判断未定时，用本包编译器独立交付可读分镜。 |
 | 单独不能声称 | 不把导演分析冒充完整分镜；已有获批导演方案直接继承。创意思路不授权媒体生成，也不证明用户接受。 |
 
 [运行正文 `SKILL.md`](../../../skills/director-agent/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/director-agent.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
+历史v1.4.0归档早于本次交接维护。现行director-agent使用仓库源码，不编造独立版本号。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -45,6 +45,7 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 3. 选择创作、诊断、导演方案、工作台或分镜前设计模式。
 4. 从因果判断生成视觉概念、表演动作、声音、时间、剪辑、主题和潜台词。
 5. 审核真实剧本并披露隔离等级，修复最早上游断裂，优先交付可读成品；仅明确需要时另编译AI执行层。
+6. 将已选空间、视觉、环境和拍摄条件传入导演交接；重要开放选择比较具体画框关系，编译保留选中决定。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚
@@ -115,8 +116,6 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 - [`references/screenplay-writing-core.md`](../../../skills/director-agent/references/screenplay-writing-core.md)
 - [`references/verified-director-logic.md`](../../../skills/director-agent/references/verified-director-logic.md)
 
-**新构建 ZIP 的分发许可文件**
+**其他随包文件**
 
-新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
-
-- [`LICENSE`](../../../LICENSE)
+- [`LICENSE`](../../../skills/director-agent/LICENSE)

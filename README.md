@@ -2,11 +2,15 @@
 
 # Open Film Skills｜开放影视技能
 
-**把故事变成可执行的导演、资产、镜头与制作方案，让每个阶段都有能直接使用的结果。**
+**把故事，拍成看得懂的镜头。**
+
+从剧本与导演判断，到人物场景道具、分镜摄影、生成提示词和实际视频制作。已有决定直接接续，要哪一步，就交付哪一步。
 
 *Independent Agent Skills for story, directing, visual assets, cinematography and AI-film production.*
 
-[技能与工作流程](#overview) · [功能与实际成果](#features) · [版本更新](#updates) · [完整技能目录](SKILL_CATALOG.md)
+[技能与工作流程](#overview) · [功能与实际成果](#features) · [开始使用](#开始使用当前源码中的一个skill) · [版本更新](#updates)
+
+[打开完整介绍页 →](https://62656456.github.io/ai-film-skills/) · [全部21个技能](SKILL_CATALOG.md)
 
 **简体中文** · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md) · [English overview](#english-overview)
 
@@ -31,9 +35,9 @@
 
 **输入 → 剧本与导演判断 → 视觉方向与资产 → 分镜与摄影 → 生成提示词 → 按需预演或实际生成 → 剪辑、声音、完整看片与修复。**
 
-<a href="docs/research/skill-overhaul/workflows/active-a.svg"><img src="docs/research/skill-overhaul/workflows/active-a.svg" width="100%" alt="A方案完整技能工作流程：各阶段入口、职责、交接物、检查与返回路径；点击查看可放大的SVG" /></a>
+<a href="docs/research/skill-overhaul/workflows/active-a.svg"><img src="docs/research/skill-overhaul/workflows/active-a.svg" width="100%" alt="历史A方案完整技能工作流程：各阶段入口、职责、交接物、检查与返回路径；点击查看可放大的SVG，当前源码变化见页面末尾" /></a>
 
-[打开完整工作流与三版关系](docs/research/skill-overhaul/workflows/index.md) · [三套工作流并排总图](docs/research/skill-overhaul/workflows/compare-all.svg) · [逐节点职责说明](docs/WORKFLOW.md) · [原始Mermaid源图](docs/assets/production-workflow.mmd)
+[打开历史工作流与三版关系](docs/research/skill-overhaul/workflows/index.md) · [三套工作流并排总图](docs/research/skill-overhaul/workflows/compare-all.svg) · [逐节点职责说明](docs/WORKFLOW.md) · [原始Mermaid源图](docs/assets/production-workflow.mmd)
 
 已有可用导演方案就直接编排分镜；已有锁定镜头就沿用其摄影和动作。创意思路、可读分镜、视频提示词、实际媒体分别交付，后续阶段按明确请求进入。实际视频还需要可调用的生成工具、相应授权、完整播放检查和用户验收。
 
@@ -53,6 +57,20 @@
 | 生成前检查机位、视差和基础走位 | 把已写好的镜头做成有限范围的可播放3D预演 | [白模实验包](experimental/whitebox-previs-executor/SKILL.md) · [实际预演](docs/research/whitebox/index.md) |
 | 交付可观看的AI视频 | 组织生成、选片、剪辑、声音、完整看片和返修 | [实际视频生产](docs/skills/zh-CN/produce-ai-video.md) |
 | 研究题材或搭建创作工具 | 基于可验证来源研究市场；按请求处理知识写入或网页界面 | [市场研究](docs/skills/zh-CN/d-official-market-analysis.md) · [知识审核](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) · [网页辅助](docs/skills/zh-CN/web-design-director.md) |
+
+### 分镜与摄影：先比较画框，再选择拍法
+
+同一故事、同一动作、同一时长，可以组织出不同的观看顺序。分镜导演先比较具体起点、转折与终点：**人物多大，哪些关系同时可见，什么被遮挡，信息何时显露。** 选定方案后，再设计机位、路径、朝向、焦点接力、速度和切点。
+
+| 创作问题 | 当前方法 | 可以读取的正文 |
+|---|---|---|
+| 两种拍法是否真的不同？ | 比较对象大小、距离、空区、遮挡和信息顺序，保留相同剧情、动作与时长 | [观看方案设计](skills/ai-storyboard-director/references/shot-design-engine.md) |
+| 怎样找到支持方案的摄影机制？ | 从包内FCML的115个机制中检索，再绑定当前人物、空间、动作和摄影条件 | [镜头机制库](skills/ai-storyboard-director/references/fcml-motion-index.md) |
+| 光、肤色与材料能否处在同一现场？ | 从实际光路、遮挡、反射、白平衡和呈色因果检查画面 | [色调与成像](skills/ai-storyboard-director/references/color-and-image-formation.md) |
+| 打戏的应答、打击和空间能否成立？ | 保留攻防因果、持物交接、双方反作用及人物、道具、摄影机共同占位 | [打戏设计](skills/ai-storyboard-director/references/fight-design.md) · [画框、轴线与空间](skills/ai-storyboard-director/references/framing-and-axis.md) |
+| 编译以后还能还原已选镜头吗？ | 保存关键决定与摄影阶段，从最终文本反向重建画框、路径和终态 | [摄影设计](skills/ai-storyboard-director/references/cinematography-design-engine.md) |
+
+镜头库提供创作素材；机制条目仍保留媒体未测状态。设计、文字保全、实际图像与连续视频的执行分别检验，下面的历史作品继续保留原版本与原验收范围。
 
 ### 分镜与摄影：七题材、三版、21张首轮测试图
 
@@ -195,7 +213,7 @@ A/B共用创作核心。A由当前主模型检查，B可选增加Jev对明确文
 </tr>
 </table>
 
-两条均为历史研究候选；GIF 保留完整时长，降低帧率与分辨率便于首页观看。它们展示简化关节代理和摄影实验，动作与审美仍待审；不证明最终 AI 成片。20 秒早期失败实验也保留在[研究演进页](docs/research/whitebox/index.md)。
+两条均为历史研究候选；首页使用静态封面，点击观看完整MP4。它们展示简化关节代理和摄影实验，动作与审美仍待审；不证明最终 AI 成片。20 秒早期失败实验也保留在[研究演进页](docs/research/whitebox/index.md)。
 
 #### 从白模到生成片：看哪里继承、哪里偏离
 
@@ -258,7 +276,7 @@ https://github.com/user-attachments/assets/fef933aa-eee3-40b9-8930-feb019b4e507
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 按请求设计可读分镜或编译六模块提示词；在作品目录保存恢复镜头决定 | 5.7.2 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 按请求设计可读分镜或编译六模块提示词；比较观看方案，检索FCML机制，保全摄影光色、打戏空间与镜头决定 | 5.8.3 | 常规源码 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) |
 | `character-asset`<br/>人物资产 | 人物身份、外形、必要视图、表情与可变状态的参考任务和资产合同 | — | 常规 | [运行正文](skills/character-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/character-asset.md) |
 | `scene-asset`<br/>场景资产 | 场景拓扑、空间锚点、光源、材质和连续性参考图/提示词 | — | 常规 | [运行正文](skills/scene-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/scene-asset.md) |
 | `prop-asset`<br/>道具资产 | 道具结构、比例、可见面、持用和新旧状态；按要求交单图或必要视图 | — | 常规 | [运行正文](skills/prop-asset/SKILL.md) · [中文说明](docs/skills/zh-CN/prop-asset.md) |
@@ -283,7 +301,7 @@ https://github.com/user-attachments/assets/fef933aa-eee3-40b9-8930-feb019b4e507
 
 外部[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)只作为仙侠工作流入口，不属于这21个源码包、不进本仓库ZIP；《云海钟境》是本项目自主生成并已接受的示例图，图的发布不等于再分发外部技能源码。
 
-### 安装并使用当前源码中的一个Skill
+### 开始使用当前源码中的一个Skill
 
 ```bash
 git clone https://github.com/62656456/ai-film-skills.git
@@ -348,30 +366,43 @@ The [seven-genre study](docs/research/skill-overhaul/seven-genres/index.md) publ
 
 ## 3. 版本更新内容
 
-### 2026-09-29：明确启用A，公开测试与待修问题
+### 2026-10-14：分镜导演5.8.3，合入镜头库与观看方案设计
 
-**当前维护更新为A5.7.2，正式分发为v1.4.0；B5.7.1-jev保留为历史可选文字复核方案。** 本次逐项处理33条历史评审，修复23条仍适用问题；已解决、退出机制及旧预览范围分别记录。[逐项处理记录](docs/maintenance/2026-10-09-review-closure.md) 启用是使用决定，不代表21张首轮测试图已通过审美验收，也不把已发现的待修项改成完成。
+**5.8.3以本机5.7.7为基础，加入5.8.2的镜头机制与观看方案设计。** 新旧两支的有效内容在同一源码中衔接，合并前版本冻结保留用于回退。[本轮合并、保全检查与同步记录](docs/maintenance/2026-10-14-director-5.8.3-merge.md)
 
-- **创意思路独立交付**：说明拍法、叙事作用、前后衔接与取舍，采用后再并入主方案；不默认生图或生成视频。
-- **阶段与交接更明确**：可读分镜、视频提示词和实际媒体按当前请求分别执行，已有导演决定和局部修改范围继续保留。
-- **摄影与时间服务具体故事**：不预定镜数，不用固定时间切片约束题材；保留空间、人物支撑、环境持续、摄影起点与落点。
-- **公开完整研究材料**：三版工作流、同题原稿与融合、七题材21张首轮图、生成说明和逐图问题一起可查。
-- **已知待修继续可见**：新21图共29条明确或限定范围的观察，涉及15张；图像错误与文字设计分别追查，修复前保留首轮结果。
-
-内部记录包括21包结构核对、6项仓库质量门和168项回归（164通过、4跳过），并有独立前向文本试用。它们的原始执行范围和日期保留在[整改研究](docs/research/skill-overhaul/index.md)中，不等同于21包跨任务稳定、视频执行成功或整套用户接受。
-
-[两种检查方式与边界](docs/SEMANTIC_REVIEW.md) · [检查、部署和回退方法](docs/RELEASE_WORKFLOW.md) · [七题材逐图问题与待修](docs/research/skill-overhaul/seven-genres/index.md)
-
-### 当前源码与下载版本
-
-[v1.4.0正式发布与完整下载](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0)：分镜A5.7.2；场景/道具本地规则补丁已同步。
-
-| 入口 | 当前用途与边界 |
+| 本轮合入 | 保留与具体作用 |
 |---|---|
-| [当前分镜源码](skills/ai-storyboard-director/SKILL.md) | **A5.7.2默认方案**；本轮明确授权更新，按阶段交付；已知待修和审美状态另列 |
-| B5.7.1-jev | 共用A创作核心，可选Jev文字核对；不会自动看图、采用创意或决定审美，详见[方案说明](docs/research/skill-overhaul/index.md) |
-| 测试图中的“现用5.6.5” | 指本次对照实验开始时的默认版本，是历史测试标签；保留原图与原稿，不改贴为A结果 |
-| [已发布v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | **历史Release快照**，分镜为5.4.4；源码更新不会重写旧ZIP |
-| 5.6独立Preview | 独立预览包，保留自身标签、清单和范围；从[安装版本说明](docs/INSTALLATION.md)查看，与当前源码和v1.3.0分别记录 |
+| 包内FCML镜头机制库 | 115个可检索机制与来源映射，先选观看方案，再绑定当前场景变量 |
+| 观看方案与画框比较 | 同剧情、同动作、同时长比较对象尺度、距离、遮挡、信息顺序与起中终画框 |
+| 关键设计保存与保真编译 | 保存已选决定、摄影阶段与画框候选，从最终提示词重建路径、焦点、光色与终态 |
+| 5.7.7摄影、光色、打戏与空间规则 | 保留整段摄影节奏、真实光路与白平衡呈色、攻防应答、持物、双方反作用、共同占位与参考图职责 |
+| 导演Agent三处同步 | 场景交接保全、观看方案比较、编译后的反向复核；沿用既有剧本与提示词格式 |
 
-本次v1.4.0提供当前21个独立技能ZIP、18项常规技能的完整套装、归档清单与校验和；旧v1.3.0和5.6预览包保留自身标签与字节。此前21张已接受作品、9月视觉研究、白模实验与旧版本案例继续按各自原始状态保留。后续修图与重测会标明具体对象和范围，保留可回看的首轮证据。
+创意思路、可读分镜、生成提示词和实际媒体继续按当前请求分别交付。源码与规则检查不能代替真实图像、连续视频的执行或用户审美接受；FCML条目的媒体未测状态、旧图待修记录和历史作品的原接受范围继续保留。
+
+### 当前源码与历史下载
+
+| 入口 | 版本与用途 |
+|---|---|
+| [分镜导演当前源码](skills/ai-storyboard-director/SKILL.md) | **5.8.3**；使用当前Git检出内容，见[源码安装说明](docs/INSTALLATION.md) |
+| [导演Agent当前源码](skills/director-agent/SKILL.md) | 三处交接与编译规则一并同步；未声明独立版本号，以实际提交与完整文件识别 |
+| [v1.4.0冻结下载](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0) | **历史Release快照，分镜为A5.7.2**；含21个单包、18项常规包套装、清单与校验和，旧归档字节保持不变 |
+| [v1.3.0历史下载](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | 分镜为5.4.4；旧导演案例保持`SELF-AUDIT ONLY`原标识 |
+| 5.6独立Preview | 独立预览包，保留原标签、清单和范围；从[安装版本说明](docs/INSTALLATION.md)查看 |
+
+下载旧Release得到旧冻结版本；安装当前源码读取当前检出的版本。本轮源码更新没有重新包装或替换历史Release附件。
+
+<details>
+<summary>展开先前版本、维护与研究记录</summary>
+
+2026-09-29明确启用A后，可读分镜、视频提示词和实际媒体按请求分别执行；创意思路采用后才并入主方案。三版工作流、同题原稿与融合、七题材21张首轮图、生成说明与逐图问题继续可查。测试图中的“现用5.6.5”指实验开始时的默认版本，保留原标签。B5.7.1-jev为历史可选文字复核，不接管图像审美或创意采用。
+
+历史记录包括21包结构核对、6项仓库质量门和168项回归（164通过、4跳过），以及独立前向文本试用。这些数字只对应当时的执行范围与日期，见[整改研究](docs/research/skill-overhaul/index.md)；本轮检查见5.8.3合并记录。
+
+2026-10-09维护记录保留33条历史评审、23条仍适用问题的处理；5.8.0来源整合、5.8.1观看方案与5.8.2成像整改保留各自原文、同题重跑和验证边界。此前21张已接受作品、9月视觉研究、白模实验与旧版本案例继续按各自原始状态保留。
+
+[10月9日维护](docs/maintenance/2026-10-09-review-closure.md) · [5.8.0来源整合](docs/maintenance/2026-10-10-cinematic-fcml-upgrade.md) · [5.8.1观看方案](docs/maintenance/2026-10-10-substantive-cinematic-revision.md) · [5.8.2色调与成像](docs/maintenance/2026-10-10-image-formation-revision.md)
+
+[A/B检查方式与边界](docs/SEMANTIC_REVIEW.md) · [检查、启用和回退方法](docs/RELEASE_WORKFLOW.md) · [七题材逐图问题与待修](docs/research/skill-overhaul/seven-genres/index.md)
+
+</details>

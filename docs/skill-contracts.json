@@ -1494,8 +1494,8 @@
       "family": "director",
       "status": "packaged",
       "status_label": {
-        "en": "Current source is an isolated overhaul candidate; installation history and user acceptance are separate.",
-        "zh-CN": "当前源码为隔离整改候选；既有安装记录与用户接受另列。"
+        "en": "Maintained source with scene handoff, concrete viewing alternatives and compilation retention; actual media and user acceptance are separate.",
+        "zh-CN": "维护源码已接入场景交接、具体观看备选和编译保全；实际媒体与用户接受另列。"
       },
       "title": {
         "en": "director-agent — script and directing design",
@@ -1518,18 +1518,24 @@
         "tag": "v1.4.0",
         "asset": "director-agent.zip",
         "note": {
-          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
-          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
+          "en": "Historical v1.4.0 archive predates this handoff update. Use repository source for the maintained director-agent; no independent version number is claimed.",
+          "zh-CN": "历史v1.4.0归档早于本次交接维护。现行director-agent使用仓库源码，不编造独立版本号。"
         }
-      }
+      },
+      "extra_workflow": [
+        {
+          "en": "Pass selected spatial, visual, environment and filming conditions into the director handoff. Compare material frame relationships at consequential open choices and preserve them during compilation.",
+          "zh-CN": "将已选空间、视觉、环境和拍摄条件传入导演交接；重要开放选择比较具体画框关系，编译保留选中决定。"
+        }
+      ]
     },
     {
       "name": "ai-storyboard-director",
       "family": "storyboard",
       "status": "packaged",
       "status_label": {
-        "en": "A 5.7.2 maintenance update selected by explicit instruction; regression evidence is separate from image, video and aesthetic acceptance.",
-        "zh-CN": "按明确更新指令采用A5.7.2维护版；回归证据与图片、视频、审美验收分开。"
+        "en": "Current merged source 5.8.3, based on 5.7.7 with offline camera mechanisms and concrete frame alternatives; media effects and user acceptance remain separate.",
+        "zh-CN": "当前合并源码5.8.3：以5.7.7为基础，加入离线摄影机制与具体画框备选；媒体效果与用户接受另列。"
       },
       "title": {
         "en": "ai-storyboard-director — script to shots and prompts",
@@ -1552,15 +1558,25 @@
         "tag": "v1.4.0",
         "asset": "ai-storyboard-director.zip",
         "note": {
-          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
-          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
+          "en": "Historical v1.4.0 archive contains Storyboard 5.7.2. Install current 5.8.3 from the repository source; this update does not replace frozen release archives.",
+          "zh-CN": "历史v1.4.0归档包含分镜5.7.2。当前5.8.3从仓库源码安装；本次更新不替换冻结发布归档。"
         }
       },
-      "source_version": "5.7.2",
+      "source_version": "5.8.3",
       "extra_review": [
         {
-          "en": "Saved-scene checks and export use the selected scene geometry while retaining whole-state structural validation; internal state files cannot become screenplay sources.",
-          "zh-CN": "保存场景的检查与导出按所选场景核几何，仍校验整体结构；内部状态文件不能作为剧本来源。"
+          "en": "Reconstruct selected framing, four speed layers, real light paths, held-object/contact continuity and shared character/prop/camera occupancy from the actual final output.",
+          "zh-CN": "从实际成品重建选中画框、四种速度、真实光路、持物接触连续性以及人物/道具/机位共同占位。"
+        }
+      ],
+      "extra_workflow": [
+        {
+          "en": "Preserve the current cinematic photography, motivated light and reciprocal-action rules. At important open choices compare beginning, change and ending frames at actual viewing distances before retrieving supporting offline mechanisms.",
+          "zh-CN": "保留电影摄影、真实光影和相互应答规则。重要开放选择先比较实际观看距离下的起中终画框，再查支持方案的离线机制。"
+        },
+        {
+          "en": "Store selected frame decisions, critical retention items and adopted motion phases in optional schema-1 records. The library and memory checks do not prove model execution or taste.",
+          "zh-CN": "以可选schema-1记录保存选中画框、关键保留项和已采用摄影阶段；机制库与记录检查不证明模型执行或审美。"
         }
       ]
     },
@@ -2351,7 +2367,7 @@
     "experimental_packages": 3,
     "total_packages": 21,
     "bilingual_guides": 42,
-    "source_storyboard_version": "5.7.0",
+    "source_storyboard_version": "5.8.3",
     "historical_release": "v1.3.0",
     "historical_release_storyboard_version": "5.4.4",
     "preview": "Separately labeled 5.6 standalone Preview; not the current complete-studio Release",

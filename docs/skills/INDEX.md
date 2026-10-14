@@ -8,8 +8,8 @@ The English and Simplified Chinese pages are generated from the same reviewed co
 
 | Skill | State | English | 简体中文 | Runtime |
 |---|---|---|---|---|
-| `director-agent` | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. | [Design guide](en/director-agent.md) | [设计说明](zh-CN/director-agent.md) | [`SKILL.md`](../../skills/director-agent/SKILL.md) |
-| `ai-storyboard-director` | A 5.7.2 maintenance update selected by explicit instruction; regression evidence is separate from image, video and aesthetic acceptance. | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
+| `director-agent` | Maintained source with scene handoff, concrete viewing alternatives and compilation retention; actual media and user acceptance are separate. | [Design guide](en/director-agent.md) | [设计说明](zh-CN/director-agent.md) | [`SKILL.md`](../../skills/director-agent/SKILL.md) |
+| `ai-storyboard-director` | Current merged source 5.8.3, based on 5.7.7 with offline camera mechanisms and concrete frame alternatives; media effects and user acceptance remain separate. | [Design guide](en/ai-storyboard-director.md) | [设计说明](zh-CN/ai-storyboard-director.md) | [`SKILL.md`](../../skills/ai-storyboard-director/SKILL.md) |
 | `character-asset` | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. | [Design guide](en/character-asset.md) | [设计说明](zh-CN/character-asset.md) | [`SKILL.md`](../../skills/character-asset/SKILL.md) |
 | `scene-asset` | Current local rule patch included in v1.4.0; generated-image review and user acceptance remain separate. | [Design guide](en/scene-asset.md) | [设计说明](zh-CN/scene-asset.md) | [`SKILL.md`](../../skills/scene-asset/SKILL.md) |
 | `prop-asset` | Current local rule patch included in v1.4.0; generated-image review and user acceptance remain separate. | [Design guide](en/prop-asset.md) | [设计说明](zh-CN/prop-asset.md) | [`SKILL.md`](../../skills/prop-asset/SKILL.md) |

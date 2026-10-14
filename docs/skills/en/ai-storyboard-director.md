@@ -1,13 +1,13 @@
 # ai-storyboard-director — script to shots and prompts
 
-| Status | A 5.7.2 maintenance update selected by explicit instruction; regression evidence is separate from image, video and aesthetic acceptance. |
+| Status | Current merged source 5.8.3, based on 5.7.7 with offline camera mechanisms and concrete frame alternatives; media effects and user acceptance remain separate. |
 |---|---|
 | Can deliver alone | Creative shot ideas, a readable storyboard or copy-ready prompts, according to the requested stage; multiple artifacts only when requested. |
 | Cannot claim alone | It does not rewrite the script, directly generate the video, or prove platform success. |
 
 [Runtime `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
+Historical v1.4.0 archive contains Storyboard 5.7.2. Install current 5.8.3 from the repository source; this update does not replace frozen release archives.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -48,6 +48,8 @@ Creative shot ideas, a readable storyboard or copy-ready prompts, according to t
 5. When ideas are requested, show genuinely different viewing choices as separate candidates; keep unadopted ideas out of the shot sequence and prompt.
 6. Deliver a readable storyboard for storyboard requests; compile one six-module master only for prompt requests or authorized video production.
 7. Run the current package completion gates and reverse-check that prompt formatting preserved the selected camera design; return the requested creative artifact and actual limits.
+8. Preserve the current cinematic photography, motivated light and reciprocal-action rules. At important open choices compare beginning, change and ending frames at actual viewing distances before retrieving supporting offline mechanisms.
+9. Store selected frame decisions, critical retention items and adopted motion phases in optional schema-1 records. The library and memory checks do not prove model execution or taste.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -62,7 +64,7 @@ Creative shot ideas, a readable storyboard or copy-ready prompts, according to t
 - [ ] The shots preserve script facts, character purpose, action results, dialogue, and user-locked order.
 - [ ] Camera, blocking, depth, focus, movement, and editing form shot sentences rather than rotate terminology.
 - [ ] Duration closes exactly; dialogue timing, world projection, off-frame subjects, light direction, props, and end states remain continuous.
-- [ ] Saved-scene checks and export use the selected scene geometry while retaining whole-state structural validation; internal state files cannot become screenplay sources.
+- [ ] Reconstruct selected framing, four speed layers, real light paths, held-object/contact continuity and shared character/prop/camera occupancy from the actual final output.
 
 <!-- contract:pass -->
 ## 8. Pass standard and states
@@ -107,21 +109,25 @@ Creative shot ideas, a readable storyboard or copy-ready prompts, according to t
 
 - [`references/camera-motion-diagnostics.md`](../../../skills/ai-storyboard-director/references/camera-motion-diagnostics.md)
 - [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
+- [`references/color-and-image-formation.md`](../../../skills/ai-storyboard-director/references/color-and-image-formation.md)
 - [`references/creative-shot-ideas.md`](../../../skills/ai-storyboard-director/references/creative-shot-ideas.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/design-memory-protocol.md`](../../../skills/ai-storyboard-director/references/design-memory-protocol.md)
+- [`references/fcml-motion-index.md`](../../../skills/ai-storyboard-director/references/fcml-motion-index.md)
 - [`references/fight-design.md`](../../../skills/ai-storyboard-director/references/fight-design.md)
 - [`references/fight-reference-case.md`](../../../skills/ai-storyboard-director/references/fight-reference-case.md)
 - [`references/framing-and-axis.md`](../../../skills/ai-storyboard-director/references/framing-and-axis.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
+- [`references/reference-design-and-handoff.md`](../../../skills/ai-storyboard-director/references/reference-design-and-handoff.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)
 
 **Deterministic helpers**
 
 - [`scripts/design_memory.py`](../../../skills/ai-storyboard-director/scripts/design_memory.py)
+- [`scripts/fcml_motion.py`](../../../skills/ai-storyboard-director/scripts/fcml_motion.py)
+- [`scripts/fcml_source_audit.py`](../../../skills/ai-storyboard-director/scripts/fcml_source_audit.py)
 
-**Distribution notices in new ZIP builds**
+**Other packaged files**
 
-New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
-
-- [`LICENSE`](../../../LICENSE)
+- [`assets/fcml-motion-library.json`](../../../skills/ai-storyboard-director/assets/fcml-motion-library.json)
+- [`LICENSE`](../../../skills/ai-storyboard-director/LICENSE)

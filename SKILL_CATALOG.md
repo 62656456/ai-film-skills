@@ -1,14 +1,16 @@
 # 全部技能目录 / Skill catalog
 
+当前分镜源码为 **5.8.3**：以5.7.7为基础，保留摄影、光色、打戏和空间规则，加入FCML离线机制与起中终画框比较。当前版本通过仓库源码安装；v1.4.0归档仍冻结为5.7.2，不能用旧归档代表现行源码。
+
 **本仓库21个源码包：18项常规＋3项实验；42份英文/简体中文指南。** 此页列出每包实际用途、源码版本和直接文件入口，GitHub仓库首页是[README](README.md)。
 
 [完整工作流](docs/WORKFLOW.md) · [全部双语指南](docs/skills/INDEX.md) · [安装](docs/INSTALLATION.md) · [原创版权与商用](COMMERCIAL_USE.md)
 
-版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜A5.7.2已按明确用户指令采用，已知测试问题与用户审美验收另列。常规/实验是分发状态，不是全部能力通过实战的声明。
+版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜5.8.3源码（v1.4.0归档仍为5.7.2）已按明确用户指令采用，已知测试问题与用户审美验收另列。常规/实验是分发状态，不是全部能力通过实战的声明。
 
 ## 当前源码与历史下载
 
-当前源码、已发布归档和独立Preview分别记录。[公开v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0)是含分镜5.4.4及旧清单的历史快照；5.6独立Preview是另行标记的分发物。当前正式分发为[v1.4.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0)，分镜为A5.7.2，含21个单包及仅含18项常规包的完整套装；历史发布原样保留。
+当前源码、已发布归档和独立Preview分别记录。[公开v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0)是含分镜5.4.4及旧清单的历史快照；5.6独立Preview是另行标记的分发物。历史冻结分发为[v1.4.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0)，分镜为A5.7.2，含21个单包及仅含18项常规包的完整套装；历史发布原样保留。
 
 ```bash
 python scripts/install_skill.py <skill-name> --platform codex
@@ -22,8 +24,8 @@ python scripts/install_skill.py <skill-name> --platform codex
 
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
-| `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) · [EN](docs/skills/en/director-agent.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/director-agent.zip) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 按请求设计可读分镜或编译六模块提示词；在作品目录保存恢复镜头决定 | 5.7.2 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) |
+| `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) · [EN](docs/skills/en/director-agent.md) · [v1.4.0历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/director-agent.zip) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 设计起中终观看画框、摄影和六模块提示词；按需查询FCML并保存恢复选中决定 | 5.8.3 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) · [v1.4.0历史 ZIP（5.7.2）](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) |
 
 ## Asset definition
 

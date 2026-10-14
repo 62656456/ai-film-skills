@@ -1,5 +1,17 @@
 # Release notes
 
+## Current source update — 2026-10-14 / Storyboard 5.8.3
+
+- Merge the offline FCML library and concrete viewing-frame design into the complete 5.7.7 runtime, preserving cinematic photography, real lighting, reciprocal action, shared spatial occupancy and compilation checks.
+- Keep the five-column storyboard, six-module prompt, explicit stage boundaries and existing locked decisions. The 115 offline mechanisms support selection; they do not certify generated-video execution.
+- Preserve optional schema-1 records for selected frame decisions, critical retention and adopted motion stages; retain meaningful storage and library regressions.
+- Synchronize director-agent scene handoff, concrete frame alternatives and compilation retention.
+- Refresh the repository introduction and existing Pages presentation. Historical stills, research boards, previs clips and all prior release archives retain their original acceptance boundaries.
+- Keep 5.7.7 and earlier complete local rollback versions. Source/installation checks, actual media and user acceptance are separate; this change does not claim new video or aesthetic acceptance.
+- v1.4.0 remains a frozen historical distribution with Storyboard 5.7.2. Current source installs Storyboard 5.8.3; no new release archive is created by this source update.
+
+See [the merge and validation record](docs/maintenance/2026-10-14-director-5.8.3-merge.md).
+
 ## v1.4.0 — 2026-10-09 maintenance and distribution sync
 
 - Advance the single current Storyboard Director runtime to A5.7.2. Scope saved-scene geometry checks and exports correctly and reject internal state files as screenplay sources.

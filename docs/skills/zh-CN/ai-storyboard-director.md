@@ -1,13 +1,13 @@
 # ai-storyboard-director｜剧本转分镜与提示词
 
-| 状态 | 按明确更新指令采用A5.7.2维护版；回归证据与图片、视频、审美验收分开。 |
+| 状态 | 当前合并源码5.8.3：以5.7.7为基础，加入离线摄影机制与具体画框备选；媒体效果与用户接受另列。 |
 |---|---|
 | 单独可交付 | 按当前阶段交创意镜头思路、可读分镜或可复制提示词；点名多种产物才分别交付。 |
 | 单独不能声称 | 不改写剧本、不直接生成视频，也不证明平台生成成功。 |
 
 [运行正文 `SKILL.md`](../../../skills/ai-storyboard-director/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
+历史v1.4.0归档包含分镜5.7.2。当前5.8.3从仓库源码安装；本次更新不替换冻结发布归档。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -48,6 +48,8 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 5. 用户要创意思路时，实际展示观看策略不同的候选；未采用内容不进入主镜序与提示词。
 6. 分镜请求交可读设计；提示词请求或已授权视频生成阶段才编译一条六模块母稿。
 7. 执行当前包完成门，反向核对提示词格式化是否保留已选摄影设计；只交付点名创作成果与真实边界。
+8. 保留电影摄影、真实光影和相互应答规则。重要开放选择先比较实际观看距离下的起中终画框，再查支持方案的离线机制。
+9. 以可选schema-1记录保存选中画框、关键保留项和已采用摄影阶段；机制库与记录检查不证明模型执行或审美。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚
@@ -62,7 +64,7 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 - [ ] 镜头保留剧本事实、人物目的、动作结果、台词和用户锁定顺序。
 - [ ] 摄影机、调度、纵深、焦点、运动与剪辑形成镜头句，而不是轮换术语。
 - [ ] 时长闭合；台词、世界投影、出框主体、光向、道具和尾帧状态连续。
-- [ ] 保存场景的检查与导出按所选场景核几何，仍校验整体结构；内部状态文件不能作为剧本来源。
+- [ ] 从实际成品重建选中画框、四种速度、真实光路、持物接触连续性以及人物/道具/机位共同占位。
 
 <!-- contract:pass -->
 ## 8. 过关标准与状态
@@ -107,21 +109,25 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 
 - [`references/camera-motion-diagnostics.md`](../../../skills/ai-storyboard-director/references/camera-motion-diagnostics.md)
 - [`references/cinematography-design-engine.md`](../../../skills/ai-storyboard-director/references/cinematography-design-engine.md)
+- [`references/color-and-image-formation.md`](../../../skills/ai-storyboard-director/references/color-and-image-formation.md)
 - [`references/creative-shot-ideas.md`](../../../skills/ai-storyboard-director/references/creative-shot-ideas.md)
 - [`references/delivery-mode-guard.md`](../../../skills/ai-storyboard-director/references/delivery-mode-guard.md)
 - [`references/design-memory-protocol.md`](../../../skills/ai-storyboard-director/references/design-memory-protocol.md)
+- [`references/fcml-motion-index.md`](../../../skills/ai-storyboard-director/references/fcml-motion-index.md)
 - [`references/fight-design.md`](../../../skills/ai-storyboard-director/references/fight-design.md)
 - [`references/fight-reference-case.md`](../../../skills/ai-storyboard-director/references/fight-reference-case.md)
 - [`references/framing-and-axis.md`](../../../skills/ai-storyboard-director/references/framing-and-axis.md)
 - [`references/production-contract.md`](../../../skills/ai-storyboard-director/references/production-contract.md)
+- [`references/reference-design-and-handoff.md`](../../../skills/ai-storyboard-director/references/reference-design-and-handoff.md)
 - [`references/shot-design-engine.md`](../../../skills/ai-storyboard-director/references/shot-design-engine.md)
 
 **确定性辅助脚本**
 
 - [`scripts/design_memory.py`](../../../skills/ai-storyboard-director/scripts/design_memory.py)
+- [`scripts/fcml_motion.py`](../../../skills/ai-storyboard-director/scripts/fcml_motion.py)
+- [`scripts/fcml_source_audit.py`](../../../skills/ai-storyboard-director/scripts/fcml_source_audit.py)
 
-**新构建 ZIP 的分发许可文件**
+**其他随包文件**
 
-新构建会将下列文件附在 ZIP 内的 Skill 目录，不修改运行源码；既有历史 Release 附件不变。
-
-- [`LICENSE`](../../../LICENSE)
+- [`assets/fcml-motion-library.json`](../../../skills/ai-storyboard-director/assets/fcml-motion-library.json)
+- [`LICENSE`](../../../skills/ai-storyboard-director/LICENSE)

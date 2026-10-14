@@ -1,0 +1,3726 @@
+{
+  "schema": "cinematic-fcml-verification/1",
+  "result": "pass",
+  "python": "3.14.6",
+  "baseline": {
+    "commit": "35d071d8a40ad7a62887efca77eccf72370d5951",
+    "tests": 218,
+    "skipped": 4,
+    "exit_code": 0
+  },
+  "candidate": {
+    "version": "5.8.0",
+    "command": "python -B -m unittest discover -s tests -v",
+    "tests": 244,
+    "skipped": 4,
+    "failures": 0,
+    "exit_code": 0,
+    "library_sha256": "7f157e542fad59443dc56a5806a841e40619a4f940922fa54936a08e0dc53621"
+  },
+  "preservation": {
+    "checked_tracked_files": 547,
+    "changed_tracked_files": 38,
+    "mismatches": [],
+    "preserved_files": [
+      {
+        "path": ".gitattributes",
+        "sha256": "807d0b4da3961c867140550697689c5352d3584a55d1794058047d9d0e8e1974",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "807d0b4da3961c867140550697689c5352d3584a55d1794058047d9d0e8e1974"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/config.yml",
+        "sha256": "f4e9e4b2fa064b1e1b8451e949319b0b4165c0c162c2f6f76afea24e869cba8b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f4e9e4b2fa064b1e1b8451e949319b0b4165c0c162c2f6f76afea24e869cba8b"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/showcase.yml",
+        "sha256": "cb8635e880ffc99ed57e86a340f4b17476376f9477bb9428a8481cec11be764a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cb8635e880ffc99ed57e86a340f4b17476376f9477bb9428a8481cec11be764a"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/skill-bug.yml",
+        "sha256": "29672389bdca677670ec221e42c2a7a644d1e2085fb116c132ff46765ecd5e13",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "29672389bdca677670ec221e42c2a7a644d1e2085fb116c132ff46765ecd5e13"
+      },
+      {
+        "path": ".github/ISSUE_TEMPLATE/skill-proposal.yml",
+        "sha256": "4303f051319898005417caef776c3ca38abbbf9bdbcc7908a88068ddf7992565",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4303f051319898005417caef776c3ca38abbbf9bdbcc7908a88068ddf7992565"
+      },
+      {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "sha256": "6acdac46de3ba046fe94b40a2c345c2129b9b5dce4a66f83d0f742e4cba58b85",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6acdac46de3ba046fe94b40a2c345c2129b9b5dce4a66f83d0f742e4cba58b85"
+      },
+      {
+        "path": ".github/workflows/package-release.yml",
+        "sha256": "cf111390e06dfd6f274ffd670fab881680d66070f01ad5713a747cd5b0c5a74b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cf111390e06dfd6f274ffd670fab881680d66070f01ad5713a747cd5b0c5a74b"
+      },
+      {
+        "path": ".github/workflows/validate.yml",
+        "sha256": "5b838048c560ee44e33a095142468dbb22ce8ced28628f0dcf8d03337cd22725",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5b838048c560ee44e33a095142468dbb22ce8ced28628f0dcf8d03337cd22725"
+      },
+      {
+        "path": ".gitignore",
+        "sha256": "49b452d6739108270cff92bb92007c36bae03f2db9e3c525a267fa41fc5cd486",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "49b452d6739108270cff92bb92007c36bae03f2db9e3c525a267fa41fc5cd486"
+      },
+      {
+        "path": "COMMERCIAL_USE.md",
+        "sha256": "ad32c488f79eafc46fc86c1fbe17f5c673c4fbc3af1e56a06b4da017488262d6",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ad32c488f79eafc46fc86c1fbe17f5c673c4fbc3af1e56a06b4da017488262d6"
+      },
+      {
+        "path": "CONTACT.md",
+        "sha256": "7739b4e091fcdc7fb707f3b1099d074d703321a7fd065eca607541c826a369bd",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7739b4e091fcdc7fb707f3b1099d074d703321a7fd065eca607541c826a369bd"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "sha256": "34e8f7ccd6ac803f3d7f178c1e1be419477151677d2b13801605a5bf4a8bccb3",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "f824128020427ff2ce57690251458b99a634fbc860216e383823ef9c0f79fb04"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      },
+      {
+        "path": "PUBLICATION_SCOPE.md",
+        "sha256": "6ed777f50560d670c2dd26943219d7cad4e05e3f64acff2844d69db03f952ed8",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6ed777f50560d670c2dd26943219d7cad4e05e3f64acff2844d69db03f952ed8"
+      },
+      {
+        "path": "SECURITY.md",
+        "sha256": "3e079f8f1f082c87a5ba38f365ebba05c59d37eadf051cb91b6924bede646624",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "3e079f8f1f082c87a5ba38f365ebba05c59d37eadf051cb91b6924bede646624"
+      },
+      {
+        "path": "docs/.nojekyll",
+        "sha256": "652cabf0de6cd70f66f72b17d6409203b84909be9864261feb614943f2e6cc62",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "652cabf0de6cd70f66f72b17d6409203b84909be9864261feb614943f2e6cc62"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "sha256": "3db5355ab7a8929bf3e15d7907623a5aefe63a3e98d3bc65d253aaece0b29fa5",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "a05a747ad92cac4be6b2430dc90a16c865a48811bdb1f70d5aba21336e209238"
+      },
+      {
+        "path": "docs/COMPATIBILITY.md",
+        "sha256": "89322b24019357c7431ce060f518fef59537ab739f1f4b1a608f97edc4703aac",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "89322b24019357c7431ce060f518fef59537ab739f1f4b1a608f97edc4703aac"
+      },
+      {
+        "path": "docs/FEEDBACK.md",
+        "sha256": "2a33d45cb06831cb804b501e054d9e2774e4364550b8760ec3c4484dff5b3ba2",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2a33d45cb06831cb804b501e054d9e2774e4364550b8760ec3c4484dff5b3ba2"
+      },
+      {
+        "path": "docs/LAUNCH_KIT.md",
+        "sha256": "c81ae8b5fca51033656b95de72f441bc7363aac6b204f01eac64f905eb5020d4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c81ae8b5fca51033656b95de72f441bc7363aac6b204f01eac64f905eb5020d4"
+      },
+      {
+        "path": "docs/RELEASE_WORKFLOW.md",
+        "sha256": "4c534ba5379b189006e99f18601d050777fb11780117616fe07b8af3926d594a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4c534ba5379b189006e99f18601d050777fb11780117616fe07b8af3926d594a"
+      },
+      {
+        "path": "docs/RESEARCH.md",
+        "sha256": "e60f000929a288bfa8f7af7dfa9dc227b4b4686507fcc7614ea10d3e3ba630f7",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "400870fc3f7b8f17cc7f04ca15fb80af2daec79cfd0967ade9cbf48b4cf0f0e9"
+      },
+      {
+        "path": "docs/SEMANTIC_REVIEW.md",
+        "sha256": "303dadeb010f9c51f6092f23154d1606759832d19a011cda438a2ec062ca523c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "303dadeb010f9c51f6092f23154d1606759832d19a011cda438a2ec062ca523c"
+      },
+      {
+        "path": "docs/SKILL_DESIGN_SYSTEM.md",
+        "sha256": "d7d50b21fd6e300521569f89cbb27d4740d3c427362dec701c309aa1fdef323f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d7d50b21fd6e300521569f89cbb27d4740d3c427362dec701c309aa1fdef323f"
+      },
+      {
+        "path": "docs/WORKFLOW.md",
+        "sha256": "0d19aeaeaeefc1be752152b365ab37ef214d4d45b8b23e02b40bf26f6e250295",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "beccbe423fac1948415c32a7bfeb1acb9a40488cb2f3f8a97489b5a4904bbb8b"
+      },
+      {
+        "path": "docs/assets/fonts/DejaVuSans-Bold.ttf",
+        "sha256": "e6476c1b80502924294eed40894c5b18e06c181444ca953e5334262df9c27724",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e6476c1b80502924294eed40894c5b18e06c181444ca953e5334262df9c27724"
+      },
+      {
+        "path": "docs/assets/fonts/DejaVuSans.ttf",
+        "sha256": "7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7da195a74c55bef988d0d48f9508bd5d849425c1770dba5d7bfc6ce9ed848954"
+      },
+      {
+        "path": "docs/assets/fonts/LICENSE",
+        "sha256": "7a083b136e64d064794c3419751e5c7dd10d2f64c108fe5ba161eae5e5958a93",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7a083b136e64d064794c3419751e5c7dd10d2f64c108fe5ba161eae5e5958a93"
+      },
+      {
+        "path": "docs/assets/fonts/manifest.json",
+        "sha256": "73dbe2ab101c070b0cb13b0930fa30982081bc93a5a1fbface21ef5f581bc3ba",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "73dbe2ab101c070b0cb13b0930fa30982081bc93a5a1fbface21ef5f581bc3ba"
+      },
+      {
+        "path": "docs/assets/hero.svg",
+        "sha256": "5533fc03957d5f0d2d6308d7bb74ab0504ffd50b2cbb20da84c1d02f27ea20cb",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5533fc03957d5f0d2d6308d7bb74ab0504ffd50b2cbb20da84c1d02f27ea20cb"
+      },
+      {
+        "path": "docs/assets/launch-assets.json",
+        "sha256": "f164a0f4bf5dfcc01b101418c46f54a33d5eef189d1ee5f62e295a7c79e0d99b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f164a0f4bf5dfcc01b101418c46f54a33d5eef189d1ee5f62e295a7c79e0d99b"
+      },
+      {
+        "path": "docs/assets/production-workflow.mmd",
+        "sha256": "f7b1d769c344304f4421087bdb0eb275d7787e9f4cfdc9942da4fbd43e65f64c",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "4bf84ea098af687547939076ee5be97608823ab5bcb862d04fd82699f1b06069"
+      },
+      {
+        "path": "docs/assets/review-loop.svg",
+        "sha256": "c91ed2cf327450c68cd7df57b4288d7cf5488d89db0a170334c114113736f90c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c91ed2cf327450c68cd7df57b4288d7cf5488d89db0a170334c114113736f90c"
+      },
+      {
+        "path": "docs/assets/skill-map.svg",
+        "sha256": "1fa6a701b48b14e54f7a00f5b73455f145baf67274be5162dbea11dc43c0fbbe",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "1fa6a701b48b14e54f7a00f5b73455f145baf67274be5162dbea11dc43c0fbbe"
+      },
+      {
+        "path": "docs/assets/social-preview.png",
+        "sha256": "221fba942c6995748c2a566bcd0ed9bf840731dbd2894e5ab11cf1a96623ff10",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "221fba942c6995748c2a566bcd0ed9bf840731dbd2894e5ab11cf1a96623ff10"
+      },
+      {
+        "path": "docs/assets/social-preview.svg",
+        "sha256": "73f343bf4cfa72467a98191e26eb182d60499e9ccd5e5c54fbd2de376431c515",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "73f343bf4cfa72467a98191e26eb182d60499e9ccd5e5c54fbd2de376431c515"
+      },
+      {
+        "path": "docs/assets/storyboard-544-proof.png",
+        "sha256": "ef40e6dcef3136423055003d09ef3e0903a2275f286c269b5f1fdcfb61e9d1ef",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ef40e6dcef3136423055003d09ef3e0903a2275f286c269b5f1fdcfb61e9d1ef"
+      },
+      {
+        "path": "docs/assets/storyboard-544-proof.svg",
+        "sha256": "889cd0c7c58b346f5bb8062e56f9603c3317508a5416c9a59f6174f9e0a25827",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "889cd0c7c58b346f5bb8062e56f9603c3317508a5416c9a59f6174f9e0a25827"
+      },
+      {
+        "path": "docs/assets/workflow-overview.svg",
+        "sha256": "84cc4e41dd4b5330d6297e61bc8b69b8ef1636632be5ba403e912ecb8e58d9f9",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "c51acf8716dfdc1e76c4fee31e3f0fd675d4fc36a7d5c92878870749305abf85"
+      },
+      {
+        "path": "docs/i18n/ja/README.md",
+        "sha256": "bb69c5f84c48a7a3182c9df8fffc2ec407d4771ca6d13e17ae8b7807ad7b78e0",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "4ea7ad2f1411ce988cf44d5a955a686866b56721593d93644b432a4910b6fca3"
+      },
+      {
+        "path": "docs/i18n/ko/README.md",
+        "sha256": "581697badd8c456e15545668187070707cb7890021e78e7fa22886f040bc4e27",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "7794ec60d38aa3c221d7526a890b71e74a8b4c6591dc26207463020c761c691e"
+      },
+      {
+        "path": "docs/i18n/zh-CN/README.md",
+        "sha256": "4235d6b6d2579077cba4c8ccb9d1828ed1b3e428015b30922a3b480d881c2a6b",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "af6b6f4532a2d08e0e8a8cfdc84d0a550f6ed3471a3e93727bdcde5f4f903d79"
+      },
+      {
+        "path": "docs/index.html",
+        "sha256": "baaf863dc07b2be14b7162868a869df1f8ae0e6f7053c5fe22060fd2d002c007",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "baaf863dc07b2be14b7162868a869df1f8ae0e6f7053c5fe22060fd2d002c007"
+      },
+      {
+        "path": "docs/maintenance/2026-10-09-review-closure.md",
+        "sha256": "097f8d706a89c18eb21dde5034d5c75bf75c1c5937822364e6ae10032526d692",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "097f8d706a89c18eb21dde5034d5c75bf75c1c5937822364e6ae10032526d692"
+      },
+      {
+        "path": "docs/media/media-manifest.json",
+        "sha256": "1ef55967273d460e8f5065713aaece82fb7fd4b8a13eb86a727de6c4543f8435",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "1ef55967273d460e8f5065713aaece82fb7fd4b8a13eb86a727de6c4543f8435"
+      },
+      {
+        "path": "docs/media/previs-blocking-5s.mp4",
+        "sha256": "149f62bc45625878ff9b4254ecd7bdfb09a64dfee08f3b8ff0be2232df0eb86a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "149f62bc45625878ff9b4254ecd7bdfb09a64dfee08f3b8ff0be2232df0eb86a"
+      },
+      {
+        "path": "docs/media/previs-blocking-poster.png",
+        "sha256": "6f6dec0284076de4a6c63253af8fd8d568dbb312c4ef052d03c5d2982d7a03ac",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6f6dec0284076de4a6c63253af8fd8d568dbb312c4ef052d03c5d2982d7a03ac"
+      },
+      {
+        "path": "docs/media/previs-blocking-preview.gif",
+        "sha256": "d7142afdd9571b02cc04419ad1b1b8bfa6b37ae5d805052cab2358fcdca7fdcf",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d7142afdd9571b02cc04419ad1b1b8bfa6b37ae5d805052cab2358fcdca7fdcf"
+      },
+      {
+        "path": "docs/media/rigged-contact-gate-2.8s.mp4",
+        "sha256": "3bf941c9080463c58dd915bac86c74422c6e4315b7c6d3a3946153144bc11a63",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "3bf941c9080463c58dd915bac86c74422c6e4315b7c6d3a3946153144bc11a63"
+      },
+      {
+        "path": "docs/media/rigged-contact-poster.png",
+        "sha256": "2437dcb14ee41398facbabf44433cc189389ce88981f28e05f8e7048c7738884",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2437dcb14ee41398facbabf44433cc189389ce88981f28e05f8e7048c7738884"
+      },
+      {
+        "path": "docs/media/rigged-contact-preview.gif",
+        "sha256": "122c699d28a60b87d55376375ba1f465f65b229f07e152a7f7fce2985ba1a7dc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "122c699d28a60b87d55376375ba1f465f65b229f07e152a7f7fce2985ba1a7dc"
+      },
+      {
+        "path": "docs/research/SOURCE_INVENTORY.md",
+        "sha256": "205a29f139ec7ef85c521b08f12880af4f2072fbf1ff10afa41e569f20947e62",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "94851b7f2dcc3dee2a6353bd7a7f6467c84a8fab8449136219b96298b30384bc"
+      },
+      {
+        "path": "docs/research/skill-overhaul/frozen-packages/index.md",
+        "sha256": "0724942a7af0b9a0784d8f565c7a73a801d619050c4bc13e3c7939d64f0f2e3e",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "d8ea5cb3a430cbf77e5f0fe9ee57d17c0c609988ccfbfcad8cb121c3d59232ab"
+      },
+      {
+        "path": "docs/research/skill-overhaul/frozen-packages/manifest.json",
+        "sha256": "d03a273ff68765a13814ade7580b425fdd3f3924c238d02b91cb88548f314f38",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "3d9a4c07d475add6196105f699a1463f79a96b5c9a0a7e23c70f597aa7b3818e"
+      },
+      {
+        "path": "docs/research/skill-overhaul/frozen-packages/方案A_无Jev.zip",
+        "sha256": "e44274b7a33b18f086d5be866d05f64c0cde58ab25c71d77db872717cd17b55a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e44274b7a33b18f086d5be866d05f64c0cde58ab25c71d77db872717cd17b55a"
+      },
+      {
+        "path": "docs/research/skill-overhaul/frozen-packages/方案A_无Jev.zip.sha256",
+        "sha256": "ea35904de7c623348348307466d4ccf1059344b2ef9d13357f8fcea9e6ecbe47",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "8afd6648512ba11b2b4761507cb6770464e37f26814d742ad6fb705e341bb6a9"
+      },
+      {
+        "path": "docs/research/skill-overhaul/frozen-packages/方案B_Jev辅助复核.zip",
+        "sha256": "2286df18ed7740d5a6d48ee3fefe189397ee503b66a8ac9a9c4244ba118ae3e3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2286df18ed7740d5a6d48ee3fefe189397ee503b66a8ac9a9c4244ba118ae3e3"
+      },
+      {
+        "path": "docs/research/skill-overhaul/frozen-packages/方案B_Jev辅助复核.zip.sha256",
+        "sha256": "ae184922f08442399214538431c03bf7683d3d52ddb2aab377f89ac0a435c3e1",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "7cc192167ea537fa27785f1a55183580839fd0c12f44bbf566264c6f85e7c22c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/B方案_Jev真实复核_融合候选_v0.1.json",
+        "sha256": "36f2784432530878accac8337b164667d494b39e2c8fff2d4961a03384dcdda3",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9bf6f76df4f4f80f52a1fba193605b430fc1057896ffd4f28843fb992a40246d"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/B方案复核与融合选择.md",
+        "sha256": "2d2d5eab8d6d2f78fb72dce535503a3c96fb14b2ed3d8afd4e074fb54d87d8cd",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "f1b0ddc0593df37a5cf67d38f847311083b673c5885d1a1a9438d308d7d8ac8f"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/a-5.7.0-storyboard.png",
+        "sha256": "833571500c5a0159fda8ea108c9769364ccff3b674154027dc4a95ceb8bf722f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "833571500c5a0159fda8ea108c9769364ccff3b674154027dc4a95ceb8bf722f"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/baseline-storyboard.png",
+        "sha256": "c23c80a477632e27b764b653530fc82e238788e1ecefd3e4dd01dcf0e3362e0c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c23c80a477632e27b764b653530fc82e238788e1ecefd3e4dd01dcf0e3362e0c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/fusion-storyboard.png",
+        "sha256": "5d3e9a10a7c7742d0f1a782489eb4ede49de3aecd7ef2c203eb41d7c28f42b88",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5d3e9a10a7c7742d0f1a782489eb4ede49de3aecd7ef2c203eb41d7c28f42b88"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/index.md",
+        "sha256": "b23b7b1dfe555baccc5a9d6ab2f997da3176a42dfd91f46439ee645a1f72e73a",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "fbe7f83742002d69e90a2ba9217a0420813d4cc82023a2b4b68099a3de97a08c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/原版5.6.5_同题设计.md",
+        "sha256": "d21f248315a8071a9541ee6947d25e98624a66f11c7824d7802f9d9370d6e102",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "e6c0a9bf890b4a7f6fc7aad09a75f9ec472058a36bdc53a0a9b448152bf00597"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/导演故事分镜图_生成提示词.txt",
+        "sha256": "6cb5d17816d4fc2c81b64641ef047e238da0318830891f3cee37d6a2a775d6b1",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "15ef6cb871fa1932c27b17ba2e21c324eac3955f28d6ed5a4ff09366105c860c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/方案A_同题设计.md",
+        "sha256": "c887ab995aba9fea42019308b84a29ba5bd9a3634a58d7c43a7412a12b81abbf",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9cde10120033a18c2d90115e6c689ee4e8e88cc7dac47a7534651d95b7525d7f"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/现场测试01_结果与待验点.md",
+        "sha256": "0d6cc15e2da5192f1ba2fecdf76e24ff2d653b9ac1cd632dad982ef792c5fb3c",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "740239061dfe500a052259be829bc8e371aeb910fda4bb1a6c67f025d9fe3ef3"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/现场测试01_街头倒影_A版首稿.md",
+        "sha256": "919f9fc8353242f5f5a9ac21d5202458c3532861be6b65aa1f5797887c300653",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "cdb4a3f55be89a79bd3d0c354a5e5dad12080a411a6ba101b42aaa8445308b59"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/现场测试01_街头倒影_原版5.6.5.md",
+        "sha256": "bf23b48b4aabbf54f709cd86bf2093e327009553fc8a766e48895c04a9d87c5d",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "3f902d90ea5e5ec4f04f8a065de85858466f34e32419828719a8bf6c1339c288"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/现场测试01_街头倒影_局部修订.md",
+        "sha256": "8a309a054dc1c8321cafcc6c5192c5f69c631a500e59c200a28b3859a87588dc",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9e93f390748f43540947942d6f246564b2499ece08c63ade7b4ee31e9bd2eb13"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/融合候选_分镜图生成提示词.txt",
+        "sha256": "6833d4577bb4889a640fda510cbf5339ab00b191dffca7bbf87f1820e9cce4da",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "7475d6e1638f38b76970bec38913298492d36c38dcdfae1391cb492841a99296"
+      },
+      {
+        "path": "docs/research/skill-overhaul/fusion/融合候选_街头倒影_v0.1.md",
+        "sha256": "c14bdc6d1d6edb22d4b493ca261de4e3c47414ac62efd3cf79dba9dba0b66a57",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "80d26f93cef4d011a101722c031e8a9be5e15623f30cbe2f9ce5ac88d4a40eea"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/index.md",
+        "sha256": "fbf25cdc1ca47c715033bfd8e10cc2022da454d70eb6b8db49af5fef4995ed9f",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "7c5d84a0e39b9574bdf61896904d19a109f0ca2062d897b2a8adb7adf8f82318"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/创意镜头试拍方案_v0.1.md",
+        "sha256": "cb53e056178a3ccaf2243e94041b690bc252d3ccbb25a536e5fd21664514f70d",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "d3febbf55021b9397ad688b3170ffa6d3f67bb4abb448daa121b44abf2b6de53"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/试拍01_分镜与生成说明.md",
+        "sha256": "00a3e9a8560122b0f9798e05765d79cf33b7e2d8b929820b53f955d08b6b5555",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "db6e29e53861525012de86527a64d6c90d3adc7112e0909ea5e0287bc5206a34"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/试拍01_同框起始参考_静态.png",
+        "sha256": "b4f2b20ac583acb8ab91d78c88638384830df060e29c00bff0e0b66860c29114",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b4f2b20ac583acb8ab91d78c88638384830df060e29c00bff0e0b66860c29114"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/试拍01_文字复核.json",
+        "sha256": "4bbd076e592f4d39a8d967b1f53c9bb9fba0ed1568eb570d7bed266786a17aa0",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "7dcd14303ca5289e9ec95d5c2ec949de2ccb3e956b26dc0f7359db2ddcffdc7e"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/试拍01_文字复核_修订后.json",
+        "sha256": "a9a24062c014c8b787ef982fdda32c77fe4510110c37d19f7ffedf93236fdc66",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "18908e568b9a628ae89651dbef2d886b054ec3d9e2876063cb79e104e34aaf1f"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/creative-trial/起始参考图_生成提示词.txt",
+        "sha256": "0e5faa6e38be8eec01c71ab3141ef7bb0d775a3dd85b5e24422a76f913c16268",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "eabcde18fe6a5957757e3121d936a7b30cbc72f841ecbfb8e308275e5d395e74"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/early-workflows/index.md",
+        "sha256": "1b7e55cce544b9cb36e10de2497a76653359430bf325ea24523b4a21d0f858bb",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "3ffeeb9e0ddd6de8f01df5c302c4a6af141642b364cc66a147ebf04f8591e723"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/early-workflows/方案A_无Jev_完整技能工作流.png",
+        "sha256": "940e44250ef0eda356548e9022857880e1700e95a376963372161817c8d7bd41",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "940e44250ef0eda356548e9022857880e1700e95a376963372161817c8d7bd41"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/early-workflows/方案A_无Jev_完整技能工作流.svg",
+        "sha256": "313738f7d579b9c09063f6a6ebedbd9ce399a891f2102405f2f397088926b6b6",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "1f7c4677ac9eeec8d36cbf9cf55e625406d23e53ebfe106fc3e7703d401c7b23"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/early-workflows/方案B_Jev辅助复核_完整技能工作流.png",
+        "sha256": "0f73d0940138b5f4506c4644aa5073b14cfe76f0dc2bbcdcd5bd23f67e029cea",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0f73d0940138b5f4506c4644aa5073b14cfe76f0dc2bbcdcd5bd23f67e029cea"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/early-workflows/方案B_Jev辅助复核_完整技能工作流.svg",
+        "sha256": "c573543a274865b95dce064596731cc3e6125b346bb8e6f1e5a4ec3880c2b9e4",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "32553fcea5aaf4702650c18d34c7517b363fba54b261452e07eacf4301ceebe2"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/frozen-5.7.0/index.md",
+        "sha256": "110906fda1d3f9c82644a67269369236813616ae3778d7fae2d0e9692035cfa5",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "22fe5b08243e044a38d98e109f20aa65109452cffec28fc387f7a78216c5f66d"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/frozen-5.7.0/方案A_无Jev.zip",
+        "sha256": "f589e543f4743385e5dbef3026b8d589da53b454c39fbec73f97f313d48caae3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f589e543f4743385e5dbef3026b8d589da53b454c39fbec73f97f313d48caae3"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/frozen-5.7.0/方案B_Jev辅助复核.zip",
+        "sha256": "6ac666e3a7f2af428b8bdc9af23cca21244e28ed373dbba8576e8cdeb6e52903",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6ac666e3a7f2af428b8bdc9af23cca21244e28ed373dbba8576e8cdeb6e52903"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/index.md",
+        "sha256": "865cc404746cc0f6a7c5d65baad1509e59bb6a8b57a79cedfeed41c3110b346b",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "ae8b4210b4fbb191dfe30fb161173efc23dd90b9f5895dc60e5f128e0f9754b3"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/index.md",
+        "sha256": "a59fee2567e03d880b60de364dbfacbb0a067f9ef2c5102a9edd6559e2fc65d3",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9fd3e20b4fd679fb3ff1244fb6ab3f34993f7957e4fd99e36df2a0fe426edfab"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/方案A_大字主图.png",
+        "sha256": "64bde6e6cd983bc6876b5c0adf35b11fe34ac09b3093ad89e7ac6f29744f7d07",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "64bde6e6cd983bc6876b5c0adf35b11fe34ac09b3093ad89e7ac6f29744f7d07"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/方案A_大字主图.svg",
+        "sha256": "03b062bd92acfabf882914dd502c198ea5def52255b24bb97d8fc7d0dbf8ab46",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "7511353f68702a6787bf40c85055c5527287a8731611e376ed3f1f14cb8a6e1d"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/方案B_大字主图.png",
+        "sha256": "ab0e822d7e348a75b5990f85f5ef7f087f0f16287232fd783863ba76793a4b5e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ab0e822d7e348a75b5990f85f5ef7f087f0f16287232fd783863ba76793a4b5e"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/方案B_大字主图.svg",
+        "sha256": "20d969829c3f27631e8bc55c42e1fcf4526de8306a38060ab6fc4af0fed2f998",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "ae816d14f2e57ae86e75180c665575cdd26ad92a28107b96da8b232a4096fd12"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图1_核心与资产职责.png",
+        "sha256": "0f5a15f34f075f248d2b763f1e3c82bde9a10c62d44eb9531710e86d3342a066",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0f5a15f34f075f248d2b763f1e3c82bde9a10c62d44eb9531710e86d3342a066"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图1_核心与资产职责.svg",
+        "sha256": "38529740860bdd7365964b77e0db104f8f8e1c4d5f930530e89bac985f55e8f7",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "2c836afa3cbbd115bdcf2793569ef5eaad3158ec63c6e4634d2f0c037b0f723c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图2_七种类型技能.png",
+        "sha256": "9dea509af31700511603660a84b9f489d2f58ded89bd3faed210bc689e10c107",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9dea509af31700511603660a84b9f489d2f58ded89bd3faed210bc689e10c107"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图2_七种类型技能.svg",
+        "sha256": "d626f8fe06f3b2c23db70436369267c3af37ac285aa4493a91799a4f472e9f3b",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "3c9ac69d6bb73a1929445fe14d93a4951fb16772098f7aca56cd1a06755d7151"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图3_专项视觉与外部组合.png",
+        "sha256": "3b782b35d2bcc9141834bfb58fd4db95765b5e1110e68c488554f5432177b8c0",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "3b782b35d2bcc9141834bfb58fd4db95765b5e1110e68c488554f5432177b8c0"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图3_专项视觉与外部组合.svg",
+        "sha256": "9a587c69adfdd294fa6a1246ffaf35079f96483038e5cf47aaad8baac1bce839",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "4f64f17f8d7580053db4494f8932ae5f9e4a71130df705d7a897eb666ee92677"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图4_生产编排与辅助技能.png",
+        "sha256": "052858dd75f23e269ee01cdb29f95cdd670edbd789b53f6d33d1aa251c3d78c9",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "052858dd75f23e269ee01cdb29f95cdd670edbd789b53f6d33d1aa251c3d78c9"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图4_生产编排与辅助技能.svg",
+        "sha256": "7d91f93f1339779ee6c6c44055f542f7192e16f88fbcf2bb5417b5b0bd1e48ea",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9a00e10e8d458026cb2d78af29d5a5284704d68623b1d9a2545d8cec1d0c9785"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图5_A与B检查差异.png",
+        "sha256": "6e21769c689ebd5601e5b9c70e405d0c4199c405efdd9bb54991a88298eb4b17",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6e21769c689ebd5601e5b9c70e405d0c4199c405efdd9bb54991a88298eb4b17"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图5_A与B检查差异.svg",
+        "sha256": "45070164ae93515d6cc151152551b68018c38defd31ad383bac846c6c930d8c4",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "ba2ac66e8f3e7fdbe44ac106d5841faf2a79d0adf84503082d1000cc8f7b8730"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图6_用户测试与正式准入.png",
+        "sha256": "814b3c634cf6ab87e2713798095f20912d84085509e04cab3f4fd10cda2a9042",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "814b3c634cf6ab87e2713798095f20912d84085509e04cab3f4fd10cda2a9042"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/rejected-workflows/详图6_用户测试与正式准入.svg",
+        "sha256": "44c4c6ce3b81867490941ba4d2bfb9849ec559cd29b57e5b1e7c006b331c6aa4",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "53346ffc3ca3504dff53786a64565bf71ef78f304560257165d80e7cf1d28de7"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/root-explanations/README.md",
+        "sha256": "6201fef4495af4123310a8d85a16fe8657fec0d561cdf9f808750a53f3db057c",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "645f00bd8015fa333f9cae831a12643d6c0e1493ce0c840412f7a1442353e197"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/root-explanations/USER_TEST.md",
+        "sha256": "4ddf70fadb4be2153bef736092b284e8f1d65e13271447c224498c2ce7d8ef9a",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9798828b47c1f79156a639dd8c7545ae9f1a9f0b45fa67e6b6abe3a414b3fc72"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/root-explanations/VERIFICATION.md",
+        "sha256": "4e16ac787bbe129d1d31e451737f05ed48778be08e1d84e47b21cb9478117ca2",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "0a7637198dd44b523fe5ccf3dd25e714ea55e6af131a7cfab9306e2b926e8cc5"
+      },
+      {
+        "path": "docs/research/skill-overhaul/history/root-explanations/index.md",
+        "sha256": "47cc46533b5a18fab5ea6289d88ae4f7fc1ebf440cd24d01035e87b3973c835b",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "fe1571fc3547d0e7b400656c3d281aa0752a0f842d52a5dd40dd3edd88185e98"
+      },
+      {
+        "path": "docs/research/skill-overhaul/index.md",
+        "sha256": "8d79cd889f3588caf1959d3f03bebaf91536fc29b53587ce984546666c185abd",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "ccbfcfd2f134dda777876c09518bc1191af90148c23de72acad0d4f814710a7b"
+      },
+      {
+        "path": "docs/research/skill-overhaul/publication-manifest.json",
+        "sha256": "5c71b9d574a5c5c6d9c33822b53800af9681d83554588ef1147d69b59922c149",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9b70f5adaa42f5de17bac90c47bd90db822ce172a5b7a9cff3b756ae648580ae"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/B包真实文字复核.json",
+        "sha256": "65e1124a9e9aedfa03038dfebd47cbce5b2bfaec200df4bbda20c04910425ab3",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "0b1c07d768ff431e7ef2c6644c9f37eb1a7e9e4dabebd61e66e89b3718726b95"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/README.md",
+        "sha256": "7b304e892e15f467ca4d385d026f0b36e95e0137d1532d86043b9c898bb07ad7",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "e729b86cdebb94e2209450751142c14dcb2c9dffb9a3e06136b2b84830b0a68b"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/index.md",
+        "sha256": "e392ad4588151dedc931f98415c8e16d6fd82459177ac1adfff3b633ad84d5db",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "a94961ddda66f07feb7cd75deb4121861ade3b60678bfd96dade27a5bbdeefce"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/同题测试对比_20260929.md",
+        "sha256": "6a22c09edfdbb4fe6b4df65526b7d0b8c522ed2ad6e992053d68e7583e264631",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "64da762c6eb1ec6cfce3a8fc8af8ac3bc80be60850643b96c0e17757f8c7222c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/审计覆盖.md",
+        "sha256": "3019976fa23f157689fd40b9a5ed36619da34160287b2b47b671925de1a5fbda",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "03557380d58a39100e55a7d4cdfdb21509dd81619b07af91e3797bf308f1fa3d"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/本轮变更清单.json",
+        "sha256": "6b2007b6267c00e6a08828f495230574d85c8807369c9b043046b15662f3446e",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "5ba3df797f619152812306418e9567aafbd8edd427e7e7589a04c13eff6276d8"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/试用01_创意镜头思路.md",
+        "sha256": "9fb46fe84b400c375c70101ee9bc00397b627903ab4d0c0e8866b528f9a52e85",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "ab1f30cb828eea2ad5be8737df64c01d1195c5e106d353b63a1b43d889533294"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/试用02_单张道具提示词.md",
+        "sha256": "eb4dfe90ce44182a3946ca582563c8dc887695aecb4da009616ec6a6c96c1a26",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "0c7679013af79a86854ae2afb6ae261a51a674e15eee4b380ae4d99edaefc8c9"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/试用03_最小矛盾修正.md",
+        "sha256": "7e2a8a85791144d3f7aae2a969589fe953790b001fb3d2a7414caa8be1fcf8af",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "21f09557c22f64015d5e69da1d265530016c4a800d824eacbf44e068d488bb7a"
+      },
+      {
+        "path": "docs/research/skill-overhaul/revision2/验证结果.json",
+        "sha256": "896a898ce2a34398ac048402e38bdbf22dda86661d023a87da3f8b01cf755767",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "ac4ab4e2279e2a42c67e7536126e090c9b150e2bf7d70bf916c80a1d643f46f1"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/image-manifest.json",
+        "sha256": "b06685da4db11a68995767a7e49d61b6206d3c056f4b566c3d304095fb1837e4",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "03bd359926a2d77eb1ee7593e668fb91f64745c0c04385ff7b0728585d093277"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/image-prompts.md",
+        "sha256": "cab0d338513bc22bf25df0932c5e22892191078bd4482d50a7407832c01c30d1",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "a19a2c398dd4c7e16caedfdb7f39fe8110d9d7dc7ba4b1ca0ad4ba63dc8e2ad8"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/image-review.json",
+        "sha256": "33d632edbe843d544321a34295f816fac7a7a6b05bd5de8e3e0bc849a76973db",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "a1cdce27b812f96e1a36bc667d70dae6c4d414d5c2327d4be50a27169d12e781"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/01-suspense-a.png",
+        "sha256": "981e0369ce0239bcf460a88d9897e2cbdf30b7663635f8bf079d026f9f8a6a6b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "981e0369ce0239bcf460a88d9897e2cbdf30b7663635f8bf079d026f9f8a6a6b"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/01-suspense-b.png",
+        "sha256": "cd8edbd97b7cadd8b02d2f89876447d7d63fb4df90b81bbe841268c1c2d8b09b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cd8edbd97b7cadd8b02d2f89876447d7d63fb4df90b81bbe841268c1c2d8b09b"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/01-suspense-current.png",
+        "sha256": "68b63717b3d450c1e2cce6d25a20773f10d580fdf9ff676173475ac42fc4832f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "68b63717b3d450c1e2cce6d25a20773f10d580fdf9ff676173475ac42fc4832f"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/02-horror-a.png",
+        "sha256": "d3a630e56471e27706d9255bc06dd8bd4e74955294798d2e3e29f16d09fbe8d3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d3a630e56471e27706d9255bc06dd8bd4e74955294798d2e3e29f16d09fbe8d3"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/02-horror-b.png",
+        "sha256": "69a08a9d27b255ff04209d03a9f65093f3ec012ba92bf6047c03f6bc42e595f4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "69a08a9d27b255ff04209d03a9f65093f3ec012ba92bf6047c03f6bc42e595f4"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/02-horror-current.png",
+        "sha256": "52493fc2bbef596b6f4fe17fa088e76976b336c95e4854523551bf49f3ea5c33",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "52493fc2bbef596b6f4fe17fa088e76976b336c95e4854523551bf49f3ea5c33"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/03-romance-a.png",
+        "sha256": "e975555e215b4278fbdc32931eedcfb3713b971e789b5250f248fbc6701f7b86",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e975555e215b4278fbdc32931eedcfb3713b971e789b5250f248fbc6701f7b86"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/03-romance-b.png",
+        "sha256": "ae3578054f92a82caa847a6b6b14fa59351a66742e73dc35e34469484a4917f6",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ae3578054f92a82caa847a6b6b14fa59351a66742e73dc35e34469484a4917f6"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/03-romance-current.png",
+        "sha256": "dfa33fb9d4db31971a85b5da9cfeefcc8fed33fdb7086978f07ba497f53f8a22",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "dfa33fb9d4db31971a85b5da9cfeefcc8fed33fdb7086978f07ba497f53f8a22"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/04-fight-a.png",
+        "sha256": "7544b334524887ae39a0067690c2b8c1d755f1d08981323bc2ee53ed80ebb3bc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7544b334524887ae39a0067690c2b8c1d755f1d08981323bc2ee53ed80ebb3bc"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/04-fight-b.png",
+        "sha256": "fa47c5be9eb04384b4cc4a01c44ea261a861c00f2e7097e36b3561144761985e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fa47c5be9eb04384b4cc4a01c44ea261a861c00f2e7097e36b3561144761985e"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/04-fight-current.png",
+        "sha256": "5af7258e28be883b5db74bd1654a082b2c13ce663e0349cb1b2e669ece212650",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5af7258e28be883b5db74bd1654a082b2c13ce663e0349cb1b2e669ece212650"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/05-gunfight-a.png",
+        "sha256": "24c7793a361926a377d0eed5f5846d1d3baeeaffaed5c023a59b4560f14da327",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "24c7793a361926a377d0eed5f5846d1d3baeeaffaed5c023a59b4560f14da327"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/05-gunfight-b.png",
+        "sha256": "73736cfdc5dba92bdfa772a6efe6a45f22cb67441e45ee51844b0762e451ebe8",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "73736cfdc5dba92bdfa772a6efe6a45f22cb67441e45ee51844b0762e451ebe8"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/05-gunfight-current.png",
+        "sha256": "fdc77b2aa4850ce9ceff156b20fab4aa7267cbb082c21b369a2a0e5200a017ec",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fdc77b2aa4850ce9ceff156b20fab4aa7267cbb082c21b369a2a0e5200a017ec"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/06-racing-a.png",
+        "sha256": "f3913d7b50078010bbb6569116188c8accff2e28c954680a3dabf477fc1e6be8",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f3913d7b50078010bbb6569116188c8accff2e28c954680a3dabf477fc1e6be8"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/06-racing-b.png",
+        "sha256": "8824b709166da16ec0d4ee80ae4ac806f9b48305764d53fdd0c53ff73d9c169b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8824b709166da16ec0d4ee80ae4ac806f9b48305764d53fdd0c53ff73d9c169b"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/06-racing-current.png",
+        "sha256": "585baf6f9c91edadc5352910fd1954e6d260598f1bd0add6633d1ea1a997d45c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "585baf6f9c91edadc5352910fd1954e6d260598f1bd0add6633d1ea1a997d45c"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/07-superpower-a.png",
+        "sha256": "065e2738737b1ceaaa730a09b91f154d3a1b8d00df68b8451bec421e4549dcbc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "065e2738737b1ceaaa730a09b91f154d3a1b8d00df68b8451bec421e4549dcbc"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/07-superpower-b.png",
+        "sha256": "966667e19e359a4ab74e5a0090c378eaec02066bfaa58abde24a29c0dd6e7031",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "966667e19e359a4ab74e5a0090c378eaec02066bfaa58abde24a29c0dd6e7031"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/images/07-superpower-current.png",
+        "sha256": "725adf76f48be31f07f213a934bac37e765946950f85ef6c127f15fc66802d66",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "725adf76f48be31f07f213a934bac37e765946950f85ef6c127f15fc66802d66"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/index.md",
+        "sha256": "957df716792fd3549fc52d2e43a52105ed5262ec04ea683f2ea7fa02bec33b36",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "b56a8e0a76e279044e51ede72ff875339bc97dbade4d68a8f4779c73fa4a3f25"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/jev-text-results.json",
+        "sha256": "78020c303f5d9d7e65281362adb60d9e271d5cafb5dea4ff8a4c0021dc27bbc7",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "534b11ec1a124e974ffec4bb0ac1d2d5442b18f7ee82bee68d5d386b06988bc0"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/report.md",
+        "sha256": "ba7afb15d7bfe8faffcdaac8189569395e731a5087e1df83abec79f78d0d8159",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "0485c814f8e14743bf1c8d4577f28ea829844a8cd8dcdb557db1b72943471044"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/stories.md",
+        "sha256": "58be6f3fa4c52624bda7969cbeec8d77bce349a6e2701703d64dc45945b7b624",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "910f9195f629241fcdb4b51df864c20374f8bd8f879bf1e15e86904eca1dcbef"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/storyboards.json",
+        "sha256": "0e55577bbf277547b22c4118db58117a9f1b65f6f9e4f33ca7db8422dc5aeeba",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "73525fe9b20e685fef18d123498a5442a8e870e78a3f43351eee4458e5ecb3cf"
+      },
+      {
+        "path": "docs/research/skill-overhaul/seven-genres/viewer.html",
+        "sha256": "8456bbcbadb7582ef6e27858f47e0111b0f3bcba2ecfd5928eb1ab242cb32921",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "f74b52cd1e3e53051461dd287a6e64f8ff45c7f291d4d2fc692c30cdbe84f28d"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/active-a.svg",
+        "sha256": "2aabd8ac9d18264b32093692f3a82029f992636fcd3c56003f1805fbfa579ce6",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "8405a079aca8f354efa4aa6e60968c172a69eb3f3823075c6f37482c8bb90a71"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/baseline-5.6.5.png",
+        "sha256": "4c1d0acb773143427d9405c99d510d2fd41d23390b0c393849c071ada4a245fc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4c1d0acb773143427d9405c99d510d2fd41d23390b0c393849c071ada4a245fc"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/baseline-5.6.5.svg",
+        "sha256": "d81ec3c2b7da8a2eb51156d9e83fa91f57df67be59184a7a33c9c55346b969e3",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "cfc593355e2255c5b4d9aa01eba7219e5e6a4d972a35c31d699da0588db91997"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/candidate-a-5.7.1.png",
+        "sha256": "7ae5d1f218e95e5175c757f956c237cfdf51bb8b9b5eb4ac32a052a2b3f73751",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7ae5d1f218e95e5175c757f956c237cfdf51bb8b9b5eb4ac32a052a2b3f73751"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/candidate-a-5.7.1.svg",
+        "sha256": "43a54180b3ad6ebd256dc5eefe469ca7c605c5715985890291713de63acbbb78",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "593ce7b5e715c94215155262c7d07632f6bd87e2d71f484b32708d31fbe3c7de"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/candidate-b-5.7.1-jev.png",
+        "sha256": "794798a2c290466ddcf5681a364073a4d5bbe45c93e632f42bfda937efe54ad1",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "794798a2c290466ddcf5681a364073a4d5bbe45c93e632f42bfda937efe54ad1"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/candidate-b-5.7.1-jev.svg",
+        "sha256": "4a9e99a1a86bbc91441965798aceb7d519e1594b6c8eab1b6f1a1142b64b1e8c",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "44246b594f88e2213d5a1ea48afdc2f3d3ff3120d17ed57a6a1dfd7266a0f423"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/compare-all.png",
+        "sha256": "627f487f516a76b135e48a333cdb3a6838bb557532c291586d82090d888bcb21",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "627f487f516a76b135e48a333cdb3a6838bb557532c291586d82090d888bcb21"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/compare-all.svg",
+        "sha256": "e781e61e0a5327818c4ff32ec7c1454ff890d6d89c8a94979fd373e9c2781257",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9bddb5cb9a08cde396f2d3b245b02813baa0b1e57ed9cb65121baf409fdb6b76"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/index.md",
+        "sha256": "dd0da57776e3f468eea408738d4a20bcf672dbea83f8d3b13ca61b793702b1aa",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "5d23d2d4cbb41576f870293989532aabb6bcf8b39214641fa763fc999cb311f7"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/relations.png",
+        "sha256": "2371885dc921febb82bf2172ec96fa8fae13c8c744899f3dc33582f8d18dd3c5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2371885dc921febb82bf2172ec96fa8fae13c8c744899f3dc33582f8d18dd3c5"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/relations.svg",
+        "sha256": "d76e6197260c46383faaec570bc2dae1fa6e181cac58a83e04e900a1b9697ae1",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "5c591d8ef0779109b43d57446e8e5b759bc4c3e354ea4b20d8ad64eed84a4534"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/revision2-common.png",
+        "sha256": "d28f577afb862b21e3ff978845bde03dc0470f2693c3bed9bee41aae5fe4ef76",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d28f577afb862b21e3ff978845bde03dc0470f2693c3bed9bee41aae5fe4ef76"
+      },
+      {
+        "path": "docs/research/skill-overhaul/workflows/revision2-common.svg",
+        "sha256": "c6b2b9ffe52729208e0dc4752f2dd500471ba6d587da8edcc453477f10eeadff",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "505a4552819d3fb6d0d07564b51db409c70294c9da1a970ef2076b31ff0c5d07"
+      },
+      {
+        "path": "docs/research/visual/index.md",
+        "sha256": "db4d9761db33bb2a9532f7f4a0a325e5e456e7b360f3ccb3e8eecaead5205adb",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9fc410f2e2c8c49a65c9ec1c0585a84c59d372b59b43c06ab080c3d0f3f34a75"
+      },
+      {
+        "path": "docs/research/visual/manifest.json",
+        "sha256": "b2599e19c6af9b85cc8f24665c001cbda1d137cc508ae76de21f337c91342242",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "9aca741d03dd4d2f95aec8344ac365c144016fb07303a43c717d9bfe3f064008"
+      },
+      {
+        "path": "docs/research/visual/originals/character-animated-mechanic.png",
+        "sha256": "fa3a5e02e71cc1a0eecb4cfcd703111f7104c1d5101468bbc93243653506bfa4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fa3a5e02e71cc1a0eecb4cfcd703111f7104c1d5101468bbc93243653506bfa4"
+      },
+      {
+        "path": "docs/research/visual/originals/character-guofeng-glance.png",
+        "sha256": "9fca30f26316fda1b0a177b2c5cacf8cdcc5687b27eb3f84eb4849864072f0ef",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9fca30f26316fda1b0a177b2c5cacf8cdcc5687b27eb3f84eb4849864072f0ef"
+      },
+      {
+        "path": "docs/research/visual/originals/character-mature-captain.png",
+        "sha256": "a037ed73f3baf3c533be179b08a35e16bc9f4864e779078f6ff1e01e06b7c190",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a037ed73f3baf3c533be179b08a35e16bc9f4864e779078f6ff1e01e06b7c190"
+      },
+      {
+        "path": "docs/research/visual/originals/character-outdoor-leader.png",
+        "sha256": "0faf514d7555d33dd8d4d38147ca1ffb4f1c4c9493dd1301a6f598857e4b0ffc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0faf514d7555d33dd8d4d38147ca1ffb4f1c4c9493dd1301a6f598857e4b0ffc"
+      },
+      {
+        "path": "docs/research/visual/originals/character-window-portrait.png",
+        "sha256": "ef1542980f292f5d8c6d2bf2214fb49e10feaad3bb35bbc9bc6c4fd22e5a8838",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ef1542980f292f5d8c6d2bf2214fb49e10feaad3bb35bbc9bc6c4fd22e5a8838"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-han-border-soldier-original.png",
+        "sha256": "89468de5979e65fb64a82cdb401b68452db8e11aeb8c747354b96922e77bf794",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "89468de5979e65fb64a82cdb401b68452db8e11aeb8c747354b96922e77bf794"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-han-border-soldier-revised.png",
+        "sha256": "477a92a183f4cc3abea3f3eddeff38f42b6d3251bd5da7685a4949de47e9c95c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "477a92a183f4cc3abea3f3eddeff38f42b6d3251bd5da7685a4949de47e9c95c"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-market-eaves.png",
+        "sha256": "bb9d12b3d8db2b58cdaad0369b4a8c8ed53893f5a3312a20e152f76d0f314bd2",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bb9d12b3d8db2b58cdaad0369b4a8c8ed53893f5a3312a20e152f76d0f314bd2"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-ming-potter-original.png",
+        "sha256": "0f328773ecbfd42c36b64502b5459d593712bb49809484f9099d82e473c53d09",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0f328773ecbfd42c36b64502b5459d593712bb49809484f9099d82e473c53d09"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-ming-potter-revised.png",
+        "sha256": "c08068e5db4c10425e10dfc18e6cc1bb4f168727041095da7ca55b26e894fc83",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c08068e5db4c10425e10dfc18e6cc1bb4f168727041095da7ca55b26e894fc83"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-qing-emperor-original.png",
+        "sha256": "ecf59346b98c057109158b2251454e8c70d7a85db355422ca964b8659e0c6837",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ecf59346b98c057109158b2251454e8c70d7a85db355422ca964b8659e0c6837"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-qing-emperor-revised.png",
+        "sha256": "2d81919a2e7f9fc85c90e239195981687225cc71d5829c212878905f417721b5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2d81919a2e7f9fc85c90e239195981687225cc71d5829c212878905f417721b5"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-seedling-handoff.png",
+        "sha256": "6e653a08b28c047a877817d1a89f84414409a09b9695deee2f4dea73b73c2bf1",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6e653a08b28c047a877817d1a89f84414409a09b9695deee2f4dea73b73c2bf1"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-song-scholar-original.png",
+        "sha256": "14bbf99b7f36d23b1ec7a920fcb10ea48d80dfd58694aa3bb76595875b8fbf64",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "14bbf99b7f36d23b1ec7a920fcb10ea48d80dfd58694aa3bb76595875b8fbf64"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-song-scholar-revised.png",
+        "sha256": "6822e47af65916e36156fdb80a200ebdf6807f27b999eba5eaae44dca52eceb2",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6822e47af65916e36156fdb80a200ebdf6807f27b999eba5eaae44dca52eceb2"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-tang-noblewoman-original.png",
+        "sha256": "9ebdf794ab7c25e9aec2a139adc1c19406612529047cd0e520e6b4b0000e8caf",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9ebdf794ab7c25e9aec2a139adc1c19406612529047cd0e520e6b4b0000e8caf"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-tang-noblewoman-revised.png",
+        "sha256": "17bdd9831f16fbe80a92344f782b5a092af3183f6632064de6e0ec7f08286cf6",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "17bdd9831f16fbe80a92344f782b5a092af3183f6632064de6e0ec7f08286cf6"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-window-letter.png",
+        "sha256": "eca1e5a2d2ac482d8ecb7f9ff85e9c4b8ddce639e3a8f748b5f4ddb3258d0c51",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "eca1e5a2d2ac482d8ecb7f9ff85e9c4b8ddce639e3a8f748b5f4ddb3258d0c51"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-yuan-herder-original.png",
+        "sha256": "227c414971207e7b7f68320ce70b846d0eadf3ad7fd1dd350d62fea15c494242",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "227c414971207e7b7f68320ce70b846d0eadf3ad7fd1dd350d62fea15c494242"
+      },
+      {
+        "path": "docs/research/visual/originals/guofeng-yuan-herder-revised.png",
+        "sha256": "94a1bcaf57849b5377917adbea92e73bb6b01fc5cce97036326c0f9c29311ecc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "94a1bcaf57849b5377917adbea92e73bb6b01fc5cce97036326c0f9c29311ecc"
+      },
+      {
+        "path": "docs/research/visual/originals/style-copperplate-etching.png",
+        "sha256": "b3027676c0b5ebc614de8378157c5f9fcec10417b58916ad903fe726c12e1b5c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b3027676c0b5ebc614de8378157c5f9fcec10417b58916ad903fe726c12e1b5c"
+      },
+      {
+        "path": "docs/research/visual/originals/style-film-realism.png",
+        "sha256": "ce3269ab4970b56008ff3e2b6e894fd42a64d29d2a1a5e389a1f6d4e651d6547",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ce3269ab4970b56008ff3e2b6e894fd42a64d29d2a1a5e389a1f6d4e651d6547"
+      },
+      {
+        "path": "docs/research/visual/originals/style-glazed-porcelain.png",
+        "sha256": "d7f8866729e557aef730046d14727d6e19cc2da3f3e97c80918d9230a523af53",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d7f8866729e557aef730046d14727d6e19cc2da3f3e97c80918d9230a523af53"
+      },
+      {
+        "path": "docs/research/visual/originals/style-mineral-painting.png",
+        "sha256": "a66c3cc28a65bd71536677c785a20ad4c7be08dd9af289bc21403d07ee7d2f25",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a66c3cc28a65bd71536677c785a20ad4c7be08dd9af289bc21403d07ee7d2f25"
+      },
+      {
+        "path": "docs/research/visual/originals/style-needle-felt-v2.png",
+        "sha256": "803e3b3858927b3ecc9bd6e807a0f20431589f6aba3755871a0a419da59364cd",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "803e3b3858927b3ecc9bd6e807a0f20431589f6aba3755871a0a419da59364cd"
+      },
+      {
+        "path": "docs/research/visual/originals/style-paper-theatre.png",
+        "sha256": "188a675dc1f2f3a46818cfae5a5f372bbf900ec78c57a3bb5f15e46ead5fa1eb",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "188a675dc1f2f3a46818cfae5a5f372bbf900ec78c57a3bb5f15e46ead5fa1eb"
+      },
+      {
+        "path": "docs/research/visual/previews/character-animated-mechanic.webp",
+        "sha256": "c76bcfbeb0acac41479ec40f37c2fb91ff8f7a56c092e8b247eb015eb1c507bf",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c76bcfbeb0acac41479ec40f37c2fb91ff8f7a56c092e8b247eb015eb1c507bf"
+      },
+      {
+        "path": "docs/research/visual/previews/character-guofeng-glance.webp",
+        "sha256": "5827867d0f526240e01506f34e589a867566d7a588b43b824ed7389b392ac2d5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5827867d0f526240e01506f34e589a867566d7a588b43b824ed7389b392ac2d5"
+      },
+      {
+        "path": "docs/research/visual/previews/character-mature-captain.webp",
+        "sha256": "46abccaa85521b817509b676bdd2ec209d8c457c44ceb17801474ecccd7b6393",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "46abccaa85521b817509b676bdd2ec209d8c457c44ceb17801474ecccd7b6393"
+      },
+      {
+        "path": "docs/research/visual/previews/character-outdoor-leader.webp",
+        "sha256": "cb6e37ca6f46b3f0ad4005e46051a9f63994943213760a58fe64f59997a0038e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cb6e37ca6f46b3f0ad4005e46051a9f63994943213760a58fe64f59997a0038e"
+      },
+      {
+        "path": "docs/research/visual/previews/character-window-portrait.webp",
+        "sha256": "e48bdee403296d2d24bcc0af3b18886a75be2672bf99ef4e3225de93640797d6",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e48bdee403296d2d24bcc0af3b18886a75be2672bf99ef4e3225de93640797d6"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-han-border-soldier-original.webp",
+        "sha256": "d507816e0e6b730e9535a8781c2fc9de4fc0e019c255e00ce836113d3c9bf3d5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d507816e0e6b730e9535a8781c2fc9de4fc0e019c255e00ce836113d3c9bf3d5"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-han-border-soldier-revised.webp",
+        "sha256": "c45a60461e5ae82baa5915e914a0947acd9bd9c6c7cb173119fdfc0d02206036",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c45a60461e5ae82baa5915e914a0947acd9bd9c6c7cb173119fdfc0d02206036"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-market-eaves.webp",
+        "sha256": "b5763ecd1855bc1fed77617e21289e08b2729fa701c9904c508e032c9b619497",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b5763ecd1855bc1fed77617e21289e08b2729fa701c9904c508e032c9b619497"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-ming-potter-original.webp",
+        "sha256": "6b74fc0b0d6989472ce348860889deab5224ea0a6c4b09a1b776a324b9dc8d27",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6b74fc0b0d6989472ce348860889deab5224ea0a6c4b09a1b776a324b9dc8d27"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-ming-potter-revised.webp",
+        "sha256": "2b19914ae69b73a1239484844556407a69449b1aa67e23638297ab7fc74efc14",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2b19914ae69b73a1239484844556407a69449b1aa67e23638297ab7fc74efc14"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-qing-emperor-original.webp",
+        "sha256": "30b95f596fbf05c8a176d2dfc827aa9e8be55c3082e43cf0e697443d625ad11c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "30b95f596fbf05c8a176d2dfc827aa9e8be55c3082e43cf0e697443d625ad11c"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-qing-emperor-revised.webp",
+        "sha256": "aac9d9b0e741cc5e87a1b9de2fff087f04e9ea5c3a04cfdc41a4478737cc6075",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "aac9d9b0e741cc5e87a1b9de2fff087f04e9ea5c3a04cfdc41a4478737cc6075"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-seedling-handoff.webp",
+        "sha256": "39bd34fc78f4e07f48c2e642f61f3263fe1b207972a6d047a432c6725bdd4612",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "39bd34fc78f4e07f48c2e642f61f3263fe1b207972a6d047a432c6725bdd4612"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-song-scholar-original.webp",
+        "sha256": "2a62e1115693deac752eb9fbd5e74e352202af183909d57144dc1ad68405418c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2a62e1115693deac752eb9fbd5e74e352202af183909d57144dc1ad68405418c"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-song-scholar-revised.webp",
+        "sha256": "f1ca4fa2284d55b1be88c49c0bb2e37d2988c880ae846a4aaf31ecef831ad089",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f1ca4fa2284d55b1be88c49c0bb2e37d2988c880ae846a4aaf31ecef831ad089"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-tang-noblewoman-original.webp",
+        "sha256": "c04b413ab5ba66885ec0bf6c6a2a7e80bad74f774069bbf5ce81b1d25bf10d63",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c04b413ab5ba66885ec0bf6c6a2a7e80bad74f774069bbf5ce81b1d25bf10d63"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-tang-noblewoman-revised.webp",
+        "sha256": "3c53b976c46be6d0f72af685573042993140872788c12289878ca307c416b6d4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "3c53b976c46be6d0f72af685573042993140872788c12289878ca307c416b6d4"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-window-letter.webp",
+        "sha256": "d03db4564e7e7ac4cdd238e8786f16c562d100ae143233b4367779c7f3a35e65",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d03db4564e7e7ac4cdd238e8786f16c562d100ae143233b4367779c7f3a35e65"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-yuan-herder-original.webp",
+        "sha256": "ba2b7f78c31ca0c2b1e3e9af5f756ef032a837db55dfa371197a91ae48545f22",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ba2b7f78c31ca0c2b1e3e9af5f756ef032a837db55dfa371197a91ae48545f22"
+      },
+      {
+        "path": "docs/research/visual/previews/guofeng-yuan-herder-revised.webp",
+        "sha256": "94ad6803ada0aeadf1fd4e8fb490f9f8a7a0d4ce32965587a096ef42b65bc34f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "94ad6803ada0aeadf1fd4e8fb490f9f8a7a0d4ce32965587a096ef42b65bc34f"
+      },
+      {
+        "path": "docs/research/visual/previews/style-copperplate-etching.webp",
+        "sha256": "bf236e041bd104a1a6a567a03b3d0fb817e5d76e3e7a36f135f308b562883501",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bf236e041bd104a1a6a567a03b3d0fb817e5d76e3e7a36f135f308b562883501"
+      },
+      {
+        "path": "docs/research/visual/previews/style-film-realism.webp",
+        "sha256": "247b01079aaf30398b43ff6a3071818ba44265d1b68e1dcf6cddbc3a9030a761",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "247b01079aaf30398b43ff6a3071818ba44265d1b68e1dcf6cddbc3a9030a761"
+      },
+      {
+        "path": "docs/research/visual/previews/style-glazed-porcelain.webp",
+        "sha256": "92e37c944b9a5ab593af40acb568482d64a3ea3157eed598ce40bbe3c2774e4e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "92e37c944b9a5ab593af40acb568482d64a3ea3157eed598ce40bbe3c2774e4e"
+      },
+      {
+        "path": "docs/research/visual/previews/style-mineral-painting.webp",
+        "sha256": "a30011e179fabaeeadde802091e224d2ec4b161d9c041278131fbb0b7b7dd939",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a30011e179fabaeeadde802091e224d2ec4b161d9c041278131fbb0b7b7dd939"
+      },
+      {
+        "path": "docs/research/visual/previews/style-needle-felt-v2.webp",
+        "sha256": "416beb1a36c3eb72aa6007dc97f8415810bfbd4750bff2493a0b5ddace53de77",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "416beb1a36c3eb72aa6007dc97f8415810bfbd4750bff2493a0b5ddace53de77"
+      },
+      {
+        "path": "docs/research/visual/previews/style-paper-theatre.webp",
+        "sha256": "d6879e4b0754a3b0f8ac91f1958f4745934883a9b79498ac2cf139af25873b07",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d6879e4b0754a3b0f8ac91f1958f4745934883a9b79498ac2cf139af25873b07"
+      },
+      {
+        "path": "docs/research/visual/prompts.md",
+        "sha256": "411b81a414e1b1698104e38ef8834d2ea7a8f42a8d54d36ac9554b19bdf4d540",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "301fa897375ad8fea3265e12dc44be7a49821b7c4b7c24cf24ffee107ac787ea"
+      },
+      {
+        "path": "docs/research/visual/style-notes.md",
+        "sha256": "fd0e48255e75a1cd9c95e445711e07dc0cf52532c7b99a7da193316ddb108d67",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "3463e2c2b8440cb24d0ed726b5b072f209a8d55178739d92c4f4945bb3224788"
+      },
+      {
+        "path": "docs/research/whitebox/MEDIA_LICENSE.md",
+        "sha256": "b9ac235e1f7180a054077bd4ac74b7afd3294df88b9be0430fc3d29df003cceb",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b9ac235e1f7180a054077bd4ac74b7afd3294df88b9be0430fc3d29df003cceb"
+      },
+      {
+        "path": "docs/research/whitebox/action-reblock-30s.blend",
+        "sha256": "00b638408be711224b3e18b114c50bf0612dd836def681b5cab32344b71069ea",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "00b638408be711224b3e18b114c50bf0612dd836def681b5cab32344b71069ea"
+      },
+      {
+        "path": "docs/research/whitebox/action-reblock-30s.gif",
+        "sha256": "7d7f8d0b9580eb3773b5e723c53548418982a469339e3b8f36a2d362bfc4d85b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7d7f8d0b9580eb3773b5e723c53548418982a469339e3b8f36a2d362bfc4d85b"
+      },
+      {
+        "path": "docs/research/whitebox/action-reblock-30s.jpg",
+        "sha256": "13aa531966f74f63e88e35a4f1e28b25559c50432e2dda4019a086e25869c984",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "13aa531966f74f63e88e35a4f1e28b25559c50432e2dda4019a086e25869c984"
+      },
+      {
+        "path": "docs/research/whitebox/action-reblock-30s.mp4",
+        "sha256": "8fee9dff75e237858031780d03dc3c157b5182fcbb2d347c7e5695e196097ed6",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8fee9dff75e237858031780d03dc3c157b5182fcbb2d347c7e5695e196097ed6"
+      },
+      {
+        "path": "docs/research/whitebox/action-reblock-30s.verification.json",
+        "sha256": "b069060e5439003eac6328018ad5b3490ba3d78541949d89781f3684edfb4e1e",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "b8ef9334ea1df37738d3d69266582b090ef9cf9e446335aa3d18f9240259a400"
+      },
+      {
+        "path": "docs/research/whitebox/chase-comparison/README.md",
+        "sha256": "680c68e3acc253c74adf5e2eef2513efbcb6b89e60c5eac42344e41116ead26c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "680c68e3acc253c74adf5e2eef2513efbcb6b89e60c5eac42344e41116ead26c"
+      },
+      {
+        "path": "docs/research/whitebox/chase-comparison/comparison-v2.mp4",
+        "sha256": "e9e94eca55fa57973d5c1bf8e2fff81e9dcc7a5cc3c38db64af2bdee033a4ee2",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e9e94eca55fa57973d5c1bf8e2fff81e9dcc7a5cc3c38db64af2bdee033a4ee2"
+      },
+      {
+        "path": "docs/research/whitebox/chase-comparison/generated-full.mp4",
+        "sha256": "8b04797804ef7f9cb6752a51ef2b532dd38953c008563c50beaad91e7938860d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8b04797804ef7f9cb6752a51ef2b532dd38953c008563c50beaad91e7938860d"
+      },
+      {
+        "path": "docs/research/whitebox/chase-comparison/mapping.json",
+        "sha256": "75de2c4f5edb417d22ffd28329ed4da74da5863e2bee9cdd5c37f03c96114704",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "3ba2af62bc9cd430407ccd95fd34438913a40cdbd4bd30a1e0b3f65d947402e6"
+      },
+      {
+        "path": "docs/research/whitebox/chase-comparison/preview.jpg",
+        "sha256": "fe1f4e8fa4cb29e534e529ac02a1524f0cde416d75f1059d8fc2071aaad72eee",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fe1f4e8fa4cb29e534e529ac02a1524f0cde416d75f1059d8fc2071aaad72eee"
+      },
+      {
+        "path": "docs/research/whitebox/chase/preview.jpg",
+        "sha256": "006e8793dc71e75cbbdd073b86ddc266731cb4125665a46777ec95f5b6e52089",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "006e8793dc71e75cbbdd073b86ddc266731cb4125665a46777ec95f5b6e52089"
+      },
+      {
+        "path": "docs/research/whitebox/chase/prompt.md",
+        "sha256": "1f301cccb82187f00881caf93c0cc4bf13d5bf9dfab79a3d662100b865e16012",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "09ceb5daab100a804ad0e58315a22f11d5a9fe71f76f751bce169a61ec3be851"
+      },
+      {
+        "path": "docs/research/whitebox/chase/reference.png",
+        "sha256": "8e7f8f8c866d4b6ff28405a79590c58e9abbef6c4708009bd5786cfa82fbfafd",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8e7f8f8c866d4b6ff28405a79590c58e9abbef6c4708009bd5786cfa82fbfafd"
+      },
+      {
+        "path": "docs/research/whitebox/chase/whitebox.mp4",
+        "sha256": "e3cda2ec66c569bcd502c6ae42f2b06df758b321899af350c969ef948b19c746",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e3cda2ec66c569bcd502c6ae42f2b06df758b321899af350c969ef948b19c746"
+      },
+      {
+        "path": "docs/research/whitebox/complex-camera-20s.blend",
+        "sha256": "9225649d6b42cc162bacb95c8fe3f2a5faceb0ccbd598be1becb3ddf57972ae5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9225649d6b42cc162bacb95c8fe3f2a5faceb0ccbd598be1becb3ddf57972ae5"
+      },
+      {
+        "path": "docs/research/whitebox/complex-camera-20s.jpg",
+        "sha256": "6efdaa2ae2aff6fa825054dc60163af809baf54d6db51d0ab6fef76380864496",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6efdaa2ae2aff6fa825054dc60163af809baf54d6db51d0ab6fef76380864496"
+      },
+      {
+        "path": "docs/research/whitebox/complex-camera-20s.mp4",
+        "sha256": "d223d4f7005548019d99d34072c0a9eeb0de1dd93bafc8140efe96b988811fe4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d223d4f7005548019d99d34072c0a9eeb0de1dd93bafc8140efe96b988811fe4"
+      },
+      {
+        "path": "docs/research/whitebox/complex-camera-20s.verification.json",
+        "sha256": "f3850bc68b3b309dd247ea4ff2570f07ded7089a5f16df155d4f1558be9bdf67",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "6c63458ae00e95185f8d059d32823d0ba5bc7f20787b0b7317b3643ee631b93e"
+      },
+      {
+        "path": "docs/research/whitebox/fight/preview.jpg",
+        "sha256": "03d9e336acd3bb4894e7863c9c33e1522ccc6455bd165b55c05e67de0e6331d1",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "03d9e336acd3bb4894e7863c9c33e1522ccc6455bd165b55c05e67de0e6331d1"
+      },
+      {
+        "path": "docs/research/whitebox/fight/prompt.md",
+        "sha256": "78ef9914dfb412698c860181baf304b2adfe35b31b5cb5a3bf4b9c70254a9e59",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "78ef9914dfb412698c860181baf304b2adfe35b31b5cb5a3bf4b9c70254a9e59"
+      },
+      {
+        "path": "docs/research/whitebox/fight/reference.png",
+        "sha256": "30bed2673dfa1fd0017143f00c3bb33c058e4bb18b350cc3deaef40acd57f1aa",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "30bed2673dfa1fd0017143f00c3bb33c058e4bb18b350cc3deaef40acd57f1aa"
+      },
+      {
+        "path": "docs/research/whitebox/fight/whitebox.mp4",
+        "sha256": "d012c9afefedbe4352b84623dc39a7a5eaedf9b2ca6485facc9e8fa400d3fb6e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d012c9afefedbe4352b84623dc39a7a5eaedf9b2ca6485facc9e8fa400d3fb6e"
+      },
+      {
+        "path": "docs/research/whitebox/index.md",
+        "sha256": "dd5c64ed7e0256daba4ef0ca3a7dfaef38869d4af3a9da46273b77cf1f7571da",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "dd5c64ed7e0256daba4ef0ca3a7dfaef38869d4af3a9da46273b77cf1f7571da"
+      },
+      {
+        "path": "docs/research/whitebox/media-manifest.json",
+        "sha256": "d967875f07a8b813c4054a99b897c3e57b5e36c6d8f2d293ab3c3432340898ea",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "03b007b5387932fa93a208726a9a356529d47edff80407c53235bc9fb8531915"
+      },
+      {
+        "path": "docs/research/whitebox/minimal-shots-30s.blend",
+        "sha256": "cd96c73c60135a61dbfdc474f6be2e8227e849b632a2a3f3bdaad7041de68d97",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cd96c73c60135a61dbfdc474f6be2e8227e849b632a2a3f3bdaad7041de68d97"
+      },
+      {
+        "path": "docs/research/whitebox/minimal-shots-30s.gif",
+        "sha256": "50aa61205410883b56fef99b8d6d18cc7e4892c663c1bddb0fdda93f3ce5f24a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "50aa61205410883b56fef99b8d6d18cc7e4892c663c1bddb0fdda93f3ce5f24a"
+      },
+      {
+        "path": "docs/research/whitebox/minimal-shots-30s.jpg",
+        "sha256": "c8be7dd7e175761ae5d7088349b9455abf567a1fad546e615b89104b9c6816a7",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c8be7dd7e175761ae5d7088349b9455abf567a1fad546e615b89104b9c6816a7"
+      },
+      {
+        "path": "docs/research/whitebox/minimal-shots-30s.mp4",
+        "sha256": "f5befa19ec06445ffab0d23f71f2e9da10e53b40b9d8101d3e38f5d7b2272f5f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f5befa19ec06445ffab0d23f71f2e9da10e53b40b9d8101d3e38f5d7b2272f5f"
+      },
+      {
+        "path": "docs/research/whitebox/minimal-shots-30s.verification.json",
+        "sha256": "465b81ffbc701a125b40de8c0c7db074d108cd41147a793e29071e57a69518a5",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "e7a82826837704d299f504d694638ac3b8cc5d8fd85cbc88412f4e099e296494"
+      },
+      {
+        "path": "docs/research/whitebox/power/preview.jpg",
+        "sha256": "6a9cec06c98f378897a4a21b9a1ad8274d24b6dc9175c03ed00eb234c12b44b7",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6a9cec06c98f378897a4a21b9a1ad8274d24b6dc9175c03ed00eb234c12b44b7"
+      },
+      {
+        "path": "docs/research/whitebox/power/prompt.md",
+        "sha256": "1181d66e2532e76de19ef794c68f26135b98c825a8c91f511679001381870514",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "849a0e86f915bbc12f608a95340fc92bba9055b62d20166036e4b1f1a342e6d7"
+      },
+      {
+        "path": "docs/research/whitebox/power/reference.png",
+        "sha256": "30172ceacee15016d0d5c6570c09cc5aa874a8e9ff238834927529dce3cd5273",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "30172ceacee15016d0d5c6570c09cc5aa874a8e9ff238834927529dce3cd5273"
+      },
+      {
+        "path": "docs/research/whitebox/power/whitebox.mp4",
+        "sha256": "5f9ad6eb8f8fd4556b43404cf712a4d59b9ee6d77de9cc15f3b169419ff4cd4b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5f9ad6eb8f8fd4556b43404cf712a4d59b9ee6d77de9cc15f3b169419ff4cd4b"
+      },
+      {
+        "path": "docs/showcase/cyberpunk-after-the-new-eye.webp",
+        "sha256": "f1108bed7c98e68ac2a52f89dfbcd41028d87f32a895d73b4aaae958d68a7a6e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f1108bed7c98e68ac2a52f89dfbcd41028d87f32a895d73b4aaae958d68a7a6e"
+      },
+      {
+        "path": "docs/showcase/epic-open-gates.webp",
+        "sha256": "42554bf92fa3ccda00285de99abeb3cea61a973355267d48a2b52f80d3817096",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "42554bf92fa3ccda00285de99abeb3cea61a973355267d48a2b52f80d3817096"
+      },
+      {
+        "path": "docs/showcase/fantasy-mending-the-bridge.webp",
+        "sha256": "e3a2238a187885e92c59778cc4b22dd9d4cf74e523a502db246b31c9e973772f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e3a2238a187885e92c59778cc4b22dd9d4cf74e523a502db246b31c9e973772f"
+      },
+      {
+        "path": "docs/showcase/hard-scifi-europa-underice.webp",
+        "sha256": "f671f9b896ab0aecb2b94388330b2f4a96490bc804a2d1d8cfe3887b8411f1b1",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f671f9b896ab0aecb2b94388330b2f4a96490bc804a2d1d8cfe3887b8411f1b1"
+      },
+      {
+        "path": "docs/showcase/hard-scifi-lunar-lightfield.webp",
+        "sha256": "b7cb4eabfee299b6eb642e8ebf229be7d1b8cc5aca072a05fa228bbdf623cf19",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b7cb4eabfee299b6eb642e8ebf229be7d1b8cc5aca072a05fa228bbdf623cf19"
+      },
+      {
+        "path": "docs/showcase/hard-scifi-mars-first-harvest.webp",
+        "sha256": "10afae143a22e5458ed3c2e5b37849130f51b387c3d47181f87de4231a4ff231",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "10afae143a22e5458ed3c2e5b37849130f51b387c3d47181f87de4231a4ff231"
+      },
+      {
+        "path": "docs/showcase/hard-scifi-orbital-morning.webp",
+        "sha256": "eba3eddd44a2b7364c28c6813f94538d2744a86edaf40abb122b0f4601f88943",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "eba3eddd44a2b7364c28c6813f94538d2744a86edaf40abb122b0f4601f88943"
+      },
+      {
+        "path": "docs/showcase/hard-scifi-titan-harbor.webp",
+        "sha256": "37a01015fd47daa05cea72febd5db213ef046d40c9b23482bcf9bd7d2a338605",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "37a01015fd47daa05cea72febd5db213ef046d40c9b23482bcf9bd7d2a338605"
+      },
+      {
+        "path": "docs/showcase/horror-upstairs-visitor.webp",
+        "sha256": "475368b54d1c3615e67c6694d1cbf7a2827e4537e3a06121b50f86a009f0a2e5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "475368b54d1c3615e67c6694d1cbf7a2827e4537e3a06121b50f86a009f0a2e5"
+      },
+      {
+        "path": "docs/showcase/manifest.json",
+        "sha256": "912404383abc263c8903fc43955f6a3857e4f9775fb82ee18cb2d5e19bbfdcac",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "912404383abc263c8903fc43955f6a3857e4f9775fb82ee18cb2d5e19bbfdcac"
+      },
+      {
+        "path": "docs/showcase/noir-before-the-money.webp",
+        "sha256": "037497c7f98bfe3fb62ef11b876ebb01281f5fa4c7e37903c2ebe92e2083042a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "037497c7f98bfe3fb62ef11b876ebb01281f5fa4c7e37903c2ebe92e2083042a"
+      },
+      {
+        "path": "docs/showcase/originals/cyberpunk-after-the-new-eye.png",
+        "sha256": "aad1ead0a0fa067fb7a03ddaff87655781c08aeea01802e050ee845387a4f98e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "aad1ead0a0fa067fb7a03ddaff87655781c08aeea01802e050ee845387a4f98e"
+      },
+      {
+        "path": "docs/showcase/originals/epic-open-gates.png",
+        "sha256": "194e08dc6987eea6296b6bf1bca502faa409c4b3bfca135ad8ec12d34f15a89f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "194e08dc6987eea6296b6bf1bca502faa409c4b3bfca135ad8ec12d34f15a89f"
+      },
+      {
+        "path": "docs/showcase/originals/fantasy-mending-the-bridge.png",
+        "sha256": "fcf28e9b9c802d99fc2f3309ad2cd3579301993f7f4bd4cc169d436e50bb075a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fcf28e9b9c802d99fc2f3309ad2cd3579301993f7f4bd4cc169d436e50bb075a"
+      },
+      {
+        "path": "docs/showcase/originals/hard-scifi-europa-underice.png",
+        "sha256": "bd986317630294378d07ac90336c0ce06546de7829b43f4778a35563993d22bc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bd986317630294378d07ac90336c0ce06546de7829b43f4778a35563993d22bc"
+      },
+      {
+        "path": "docs/showcase/originals/hard-scifi-lunar-lightfield.png",
+        "sha256": "874884bb280c2ec33d0ab6ccd6ac180fdb1541c86d46f5de574a71d90ed373fe",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "874884bb280c2ec33d0ab6ccd6ac180fdb1541c86d46f5de574a71d90ed373fe"
+      },
+      {
+        "path": "docs/showcase/originals/hard-scifi-mars-first-harvest.png",
+        "sha256": "6b2f88e552efa4abc944a7059214bd0f340c96f1b856cec4436bff8edc4dd221",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6b2f88e552efa4abc944a7059214bd0f340c96f1b856cec4436bff8edc4dd221"
+      },
+      {
+        "path": "docs/showcase/originals/hard-scifi-orbital-morning.png",
+        "sha256": "fb480b561bc2bed1d1ed04529a2f2717c39341c191e9a9c971d0ed11a94088e5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fb480b561bc2bed1d1ed04529a2f2717c39341c191e9a9c971d0ed11a94088e5"
+      },
+      {
+        "path": "docs/showcase/originals/hard-scifi-titan-harbor.png",
+        "sha256": "2a7944c171362788746e651e272db4242aa280fe55bcfcea0b1c3688b4dff614",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2a7944c171362788746e651e272db4242aa280fe55bcfcea0b1c3688b4dff614"
+      },
+      {
+        "path": "docs/showcase/originals/horror-upstairs-visitor.png",
+        "sha256": "0600b21664ca27fe80117dc52a4285ad6e1fbdd41623064143024130b00cce64",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0600b21664ca27fe80117dc52a4285ad6e1fbdd41623064143024130b00cce64"
+      },
+      {
+        "path": "docs/showcase/originals/noir-before-the-money.png",
+        "sha256": "59ca1f6aa43dfc3af278ba2ac7f5d109ed2ed9f8416e3f947c44071a9d515105",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "59ca1f6aa43dfc3af278ba2ac7f5d109ed2ed9f8416e3f947c44071a9d515105"
+      },
+      {
+        "path": "docs/showcase/originals/romance-tilted-umbrella.png",
+        "sha256": "ef521ebe689d09da0c558febac20057665f214c9ffa819a157a8a054dfa5d914",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "ef521ebe689d09da0c558febac20057665f214c9ffa819a157a8a054dfa5d914"
+      },
+      {
+        "path": "docs/showcase/originals/war-bold-black-shadow-advance.png",
+        "sha256": "bf05e22c3c2a74962d272a4617b97f96527b28d845c550733f6b7b189d09e652",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bf05e22c3c2a74962d272a4617b97f96527b28d845c550733f6b7b189d09e652"
+      },
+      {
+        "path": "docs/showcase/originals/war-bold-floodgate-blue.png",
+        "sha256": "bc77fe762a8e6ba41699d1b9fa98289405fc944306931cc66e89a51e62b7f191",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bc77fe762a8e6ba41699d1b9fa98289405fc944306931cc66e89a51e62b7f191"
+      },
+      {
+        "path": "docs/showcase/originals/war-bold-red-sand-contact.png",
+        "sha256": "f3dc0d912b8e2d3bed0da281018798a2dbdcd092a6832f6d6fcb70b28866f5c3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f3dc0d912b8e2d3bed0da281018798a2dbdcd092a6832f6d6fcb70b28866f5c3"
+      },
+      {
+        "path": "docs/showcase/originals/war-bold-snowline-backlight.png",
+        "sha256": "4b9b062bb4435109d83ef933a86e622ddfe41b9d0aec7de515831b2118f8367a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4b9b062bb4435109d83ef933a86e622ddfe41b9d0aec7de515831b2118f8367a"
+      },
+      {
+        "path": "docs/showcase/originals/war-bold-suspended-city-landing.png",
+        "sha256": "9b527877f629b533b4463de835fcc45316c8df7ff01441bada421264c458ecb5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9b527877f629b533b4463de835fcc45316c8df7ff01441bada421264c458ecb5"
+      },
+      {
+        "path": "docs/showcase/originals/war-river-crossing.png",
+        "sha256": "0b194858bd26a8a19cb53ebf1974efcee9f1038d5a6fc021628826c02d366c1a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0b194858bd26a8a19cb53ebf1974efcee9f1038d5a6fc021628826c02d366c1a"
+      },
+      {
+        "path": "docs/showcase/originals/web-design-lumen-desktop-confirmed.png",
+        "sha256": "0e5c3b76e1a904dee937f9108104638258dc34c633567c9307db67e9aefb6e44",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0e5c3b76e1a904dee937f9108104638258dc34c633567c9307db67e9aefb6e44"
+      },
+      {
+        "path": "docs/showcase/originals/web-design-lumen-mobile-favorites.png",
+        "sha256": "c713f1a9f02a300347507157e0ed9fe88091c68ef4eaec3dcf77f89e0d3cc92f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c713f1a9f02a300347507157e0ed9fe88091c68ef4eaec3dcf77f89e0d3cc92f"
+      },
+      {
+        "path": "docs/showcase/originals/wuxia-tea-still-warm.png",
+        "sha256": "a17708dfb7d4764901268d30fe6e84ee32a8b243345772fcca3d68134831596d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a17708dfb7d4764901268d30fe6e84ee32a8b243345772fcca3d68134831596d"
+      },
+      {
+        "path": "docs/showcase/originals/xianxia-cloud-bell.png",
+        "sha256": "88ba22d311e1dde6eb69a135c4ab59bf24c37d0ddaaf3462f2f17145e8ffacd3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "88ba22d311e1dde6eb69a135c4ab59bf24c37d0ddaaf3462f2f17145e8ffacd3"
+      },
+      {
+        "path": "docs/showcase/romance-tilted-umbrella.webp",
+        "sha256": "b63208d47c121b9c47da6506d14adffbd918c42aedaba6d32439328a3664169f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b63208d47c121b9c47da6506d14adffbd918c42aedaba6d32439328a3664169f"
+      },
+      {
+        "path": "docs/showcase/war-bold-black-shadow-advance.webp",
+        "sha256": "7c1a470b4e00d239de453818af5f523e49a431074ba648dcff817a76c2022a82",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7c1a470b4e00d239de453818af5f523e49a431074ba648dcff817a76c2022a82"
+      },
+      {
+        "path": "docs/showcase/war-bold-floodgate-blue.webp",
+        "sha256": "8c320463cdd9c9b1a2e8cfd71136bd3c61cec86a72d5e769557f17a468aeabbc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8c320463cdd9c9b1a2e8cfd71136bd3c61cec86a72d5e769557f17a468aeabbc"
+      },
+      {
+        "path": "docs/showcase/war-bold-red-sand-contact.webp",
+        "sha256": "8cdb8f5cdab9f7dc36221fa6d198714118e6087d361fddcc1e0930efec615e56",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8cdb8f5cdab9f7dc36221fa6d198714118e6087d361fddcc1e0930efec615e56"
+      },
+      {
+        "path": "docs/showcase/war-bold-snowline-backlight.webp",
+        "sha256": "8fb7c7698bceaf550153b086a698aace9ab786da650ed82cf4feb3ea86c77f2a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "8fb7c7698bceaf550153b086a698aace9ab786da650ed82cf4feb3ea86c77f2a"
+      },
+      {
+        "path": "docs/showcase/war-bold-suspended-city-landing.webp",
+        "sha256": "fa8dc0833b5449865babd440b5b38a500118aa4fcf0eeb1b66711434cad967a7",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fa8dc0833b5449865babd440b5b38a500118aa4fcf0eeb1b66711434cad967a7"
+      },
+      {
+        "path": "docs/showcase/war-river-crossing.webp",
+        "sha256": "995727221334fb3034a089857cb568c80939b6e239ef68f4e36ce22339611252",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "995727221334fb3034a089857cb568c80939b6e239ef68f4e36ce22339611252"
+      },
+      {
+        "path": "docs/showcase/web-design-lumen-desktop-confirmed.webp",
+        "sha256": "90253416d96d1acb53207c63641116f21a1653e77586dc18ecffad43c1b44e3d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "90253416d96d1acb53207c63641116f21a1653e77586dc18ecffad43c1b44e3d"
+      },
+      {
+        "path": "docs/showcase/web-design-lumen-mobile-favorites.webp",
+        "sha256": "a1986015551e6a8f2f20b70b1574406d880d8eeabe6e9bf748900ed5ea88c6ee",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a1986015551e6a8f2f20b70b1574406d880d8eeabe6e9bf748900ed5ea88c6ee"
+      },
+      {
+        "path": "docs/showcase/wuxia-tea-still-warm.webp",
+        "sha256": "f4e54a158097e7ebe1affa31a546d49166592cc73f44ee50042f92497f6015f4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f4e54a158097e7ebe1affa31a546d49166592cc73f44ee50042f92497f6015f4"
+      },
+      {
+        "path": "docs/showcase/xianxia-cloud-bell.webp",
+        "sha256": "326a32dc47f4a4dbb200c5a8fb826ab22e92c61657cebb32a11f177df79bf0ce",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "326a32dc47f4a4dbb200c5a8fb826ab22e92c61657cebb32a11f177df79bf0ce"
+      },
+      {
+        "path": "docs/site.css",
+        "sha256": "051333cf8d9a55512ec15207cb16442147386c129d1e37c0a49661d0e81c4cef",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "051333cf8d9a55512ec15207cb16442147386c129d1e37c0a49661d0e81c4cef"
+      },
+      {
+        "path": "docs/skills/en/ai-short-drama-production.md",
+        "sha256": "3f1f82c3547eabbb876c3b5e279e896af829471a8ade1f9fad3ecaf3d023b4da",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "3f1f82c3547eabbb876c3b5e279e896af829471a8ade1f9fad3ecaf3d023b4da"
+      },
+      {
+        "path": "docs/skills/en/character-asset.md",
+        "sha256": "e8494db8348c446595bb3195a532e0de69c99e566fa2ee0607283f4ae060935c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e8494db8348c446595bb3195a532e0de69c99e566fa2ee0607283f4ae060935c"
+      },
+      {
+        "path": "docs/skills/en/cyberpunk-design.md",
+        "sha256": "94e74d82a11ecd921c676d98b469b207d09dcc98c80aa23cdf595bff75fb6e61",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "94e74d82a11ecd921c676d98b469b207d09dcc98c80aa23cdf595bff75fb6e61"
+      },
+      {
+        "path": "docs/skills/en/d-data-analysis-semantic-layer.md",
+        "sha256": "47fb48c0df7fd24a422d85800d957e39bdd6cf3e61844411469d7e1ec6f70dd4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "47fb48c0df7fd24a422d85800d957e39bdd6cf3e61844411469d7e1ec6f70dd4"
+      },
+      {
+        "path": "docs/skills/en/d-official-market-analysis.md",
+        "sha256": "21333b273c42a88cd8ee9b91bd27894ac73a2fcc1d1518d00d139b36a2322b33",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "21333b273c42a88cd8ee9b91bd27894ac73a2fcc1d1518d00d139b36a2322b33"
+      },
+      {
+        "path": "docs/skills/en/director-agent.md",
+        "sha256": "5b3ee1ef5fba3ecb331787afadb152bde22aab87ea4ae898a3073b2c050e29a7",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5b3ee1ef5fba3ecb331787afadb152bde22aab87ea4ae898a3073b2c050e29a7"
+      },
+      {
+        "path": "docs/skills/en/epic-design.md",
+        "sha256": "af5a546a0d52226ce43e881cc757b9867df2d56665335908ce3d596c69e4ee74",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "af5a546a0d52226ce43e881cc757b9867df2d56665335908ce3d596c69e4ee74"
+      },
+      {
+        "path": "docs/skills/en/fantasy-design.md",
+        "sha256": "d3a5ca3b124d25cfd0bdbaba86d3f051941fbdaaa768fa5940f58e137de02a55",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d3a5ca3b124d25cfd0bdbaba86d3f051941fbdaaa768fa5940f58e137de02a55"
+      },
+      {
+        "path": "docs/skills/en/guofeng-visual-director.md",
+        "sha256": "0015c1d81ecac5ed07638a298dd1c0e6cdb45cc94f7e9366044fd63077217e3f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0015c1d81ecac5ed07638a298dd1c0e6cdb45cc94f7e9366044fd63077217e3f"
+      },
+      {
+        "path": "docs/skills/en/hard-sci-fi-visual-director.md",
+        "sha256": "0268db0ea5ce5bb7a78f4cae0ada1287152c5c33d729c798c580966e685821ca",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0268db0ea5ce5bb7a78f4cae0ada1287152c5c33d729c798c580966e685821ca"
+      },
+      {
+        "path": "docs/skills/en/horror-design.md",
+        "sha256": "a26fb00591cabe5ffab81b4ce30b4493d76ce28983b03e2d8ca657c3edc54392",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a26fb00591cabe5ffab81b4ce30b4493d76ce28983b03e2d8ca657c3edc54392"
+      },
+      {
+        "path": "docs/skills/en/noir-design.md",
+        "sha256": "cdabaac83d018a9992ea03c1b2a81af11d58fa70223b8f86ca39ff7a1f7b2c9f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cdabaac83d018a9992ea03c1b2a81af11d58fa70223b8f86ca39ff7a1f7b2c9f"
+      },
+      {
+        "path": "docs/skills/en/produce-ai-video.md",
+        "sha256": "e9b9821c861783005529ea10c13e69b76314f0c6ea7a042eb1f0a001e7aef94d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e9b9821c861783005529ea10c13e69b76314f0c6ea7a042eb1f0a001e7aef94d"
+      },
+      {
+        "path": "docs/skills/en/prop-asset.md",
+        "sha256": "88df8de435ab178ad59183d1c391490cc8ef7b699e343bb140c333aeb2bd4bb4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "88df8de435ab178ad59183d1c391490cc8ef7b699e343bb140c333aeb2bd4bb4"
+      },
+      {
+        "path": "docs/skills/en/romance-design.md",
+        "sha256": "f3500d846e3c7413d63a6be28006fa1568a4d73f8a3f731d3af1015f478e3c2a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f3500d846e3c7413d63a6be28006fa1568a4d73f8a3f731d3af1015f478e3c2a"
+      },
+      {
+        "path": "docs/skills/en/war-design.md",
+        "sha256": "badbf32c3bd2f2c61991d07676aa5df0fb3f3d78fd2b183200ca59ac9185daea",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "badbf32c3bd2f2c61991d07676aa5df0fb3f3d78fd2b183200ca59ac9185daea"
+      },
+      {
+        "path": "docs/skills/en/web-design-director.md",
+        "sha256": "9043faaea09aede64e665981024c6e7d76b4bb920ed3daa124512eeb7f03ac79",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9043faaea09aede64e665981024c6e7d76b4bb920ed3daa124512eeb7f03ac79"
+      },
+      {
+        "path": "docs/skills/en/whitebox-previs-executor.md",
+        "sha256": "6b0b91fbc676897c40dc52033a1b3484e3ab02f43ce749d3163a8bbf3c3b0ae3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "6b0b91fbc676897c40dc52033a1b3484e3ab02f43ce749d3163a8bbf3c3b0ae3"
+      },
+      {
+        "path": "docs/skills/en/wuxia-design.md",
+        "sha256": "bc720cf87ad5b1119fb1efb7a3585af8f1c753a75fc507beae91d0fc03528ad8",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bc720cf87ad5b1119fb1efb7a3585af8f1c753a75fc507beae91d0fc03528ad8"
+      },
+      {
+        "path": "docs/skills/zh-CN/ai-short-drama-production.md",
+        "sha256": "afc1b20acab9e8a02ec1dd0b7af1c791cb5a9ec08b04d456d3b368d4c3cb55d5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "afc1b20acab9e8a02ec1dd0b7af1c791cb5a9ec08b04d456d3b368d4c3cb55d5"
+      },
+      {
+        "path": "docs/skills/zh-CN/character-asset.md",
+        "sha256": "9f3c07ccbd5e0d8ff23e14f79d9f6ddf469451325052001defc9f4644f9a1db9",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9f3c07ccbd5e0d8ff23e14f79d9f6ddf469451325052001defc9f4644f9a1db9"
+      },
+      {
+        "path": "docs/skills/zh-CN/cyberpunk-design.md",
+        "sha256": "b5b4304b2072361d2b31ea1bbbf9dd4fc24850096e91394f773299d2a0f2d748",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b5b4304b2072361d2b31ea1bbbf9dd4fc24850096e91394f773299d2a0f2d748"
+      },
+      {
+        "path": "docs/skills/zh-CN/d-data-analysis-semantic-layer.md",
+        "sha256": "588894df24916dd9a03ff7449efcd8749573efe0a21018342c2dc50f1dbc8e8c",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "588894df24916dd9a03ff7449efcd8749573efe0a21018342c2dc50f1dbc8e8c"
+      },
+      {
+        "path": "docs/skills/zh-CN/d-official-market-analysis.md",
+        "sha256": "063a59c2547c7a941f90eb570f25da30f28d00bf68646f6394dddfe800155f2a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "063a59c2547c7a941f90eb570f25da30f28d00bf68646f6394dddfe800155f2a"
+      },
+      {
+        "path": "docs/skills/zh-CN/director-agent.md",
+        "sha256": "34e6959abbb1db5a958e4aaab3c7c17cfd14e425a581d4d690efb785b3704778",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "34e6959abbb1db5a958e4aaab3c7c17cfd14e425a581d4d690efb785b3704778"
+      },
+      {
+        "path": "docs/skills/zh-CN/epic-design.md",
+        "sha256": "f880f3558f36c64dc462cdf82dfdbe253e0d830889b3e63b91c35bff6fc462f4",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f880f3558f36c64dc462cdf82dfdbe253e0d830889b3e63b91c35bff6fc462f4"
+      },
+      {
+        "path": "docs/skills/zh-CN/fantasy-design.md",
+        "sha256": "23930f1d5be44752d961490f84d0b36601116854330ace757122d798770f2cce",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "23930f1d5be44752d961490f84d0b36601116854330ace757122d798770f2cce"
+      },
+      {
+        "path": "docs/skills/zh-CN/guofeng-visual-director.md",
+        "sha256": "a609a23261b8d8066b51622aaebcaf45a52e206bea8082199581d73a805bd7b3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a609a23261b8d8066b51622aaebcaf45a52e206bea8082199581d73a805bd7b3"
+      },
+      {
+        "path": "docs/skills/zh-CN/hard-sci-fi-visual-director.md",
+        "sha256": "89eb44df8f84dcce3a23900ad433df5cfb6bb7f2bff960629031baff466b56f5",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "89eb44df8f84dcce3a23900ad433df5cfb6bb7f2bff960629031baff466b56f5"
+      },
+      {
+        "path": "docs/skills/zh-CN/horror-design.md",
+        "sha256": "d5ac619b40a861a22ad46fe5f73a7eeb6adac083b98568f43ce245d45d529bef",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d5ac619b40a861a22ad46fe5f73a7eeb6adac083b98568f43ce245d45d529bef"
+      },
+      {
+        "path": "docs/skills/zh-CN/noir-design.md",
+        "sha256": "83d7d45520152302a6fd6564ecdcf0ffd03ac17ab899cf0bbec99ae45d37f473",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "83d7d45520152302a6fd6564ecdcf0ffd03ac17ab899cf0bbec99ae45d37f473"
+      },
+      {
+        "path": "docs/skills/zh-CN/produce-ai-video.md",
+        "sha256": "5328f24911fd5b1f4cdb566b67c5aabf9ca79dc54ba357583eb63f8f5090fe81",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5328f24911fd5b1f4cdb566b67c5aabf9ca79dc54ba357583eb63f8f5090fe81"
+      },
+      {
+        "path": "docs/skills/zh-CN/prop-asset.md",
+        "sha256": "56ac708bfa50117962476a6bae995dd94e7f1d74479d0881c45aefa8d600af61",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "56ac708bfa50117962476a6bae995dd94e7f1d74479d0881c45aefa8d600af61"
+      },
+      {
+        "path": "docs/skills/zh-CN/romance-design.md",
+        "sha256": "d6ee55ee7ffc912b6c86c23fd830c646bb0694bfd9e776c49f963cc55d33a6c3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d6ee55ee7ffc912b6c86c23fd830c646bb0694bfd9e776c49f963cc55d33a6c3"
+      },
+      {
+        "path": "docs/skills/zh-CN/war-design.md",
+        "sha256": "29a0d0139f2963093bb5c87fd0ef767111b911553538f3cad32449c3a886cb78",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "29a0d0139f2963093bb5c87fd0ef767111b911553538f3cad32449c3a886cb78"
+      },
+      {
+        "path": "docs/skills/zh-CN/web-design-director.md",
+        "sha256": "22e1a8f9640302ba337dee85976adaac9dab0aaad32f504a35c69424ba288679",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "22e1a8f9640302ba337dee85976adaac9dab0aaad32f504a35c69424ba288679"
+      },
+      {
+        "path": "docs/skills/zh-CN/whitebox-previs-executor.md",
+        "sha256": "2a418bcef1bb65368826255091252eea462d799abf93b2d63bc9b98b127bb8de",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2a418bcef1bb65368826255091252eea462d799abf93b2d63bc9b98b127bb8de"
+      },
+      {
+        "path": "docs/skills/zh-CN/wuxia-design.md",
+        "sha256": "62a4802ebbc01d5f4f44e94ea117c971e89cd695d489740302fe20c1867f8a15",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "62a4802ebbc01d5f4f44e94ea117c971e89cd695d489740302fe20c1867f8a15"
+      },
+      {
+        "path": "docs/style-gallery/cyberpunk-design.jpg",
+        "sha256": "2652d1206af317f9c6c6f6f12bb68978116093449855fd4980893be58f9d8554",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2652d1206af317f9c6c6f6f12bb68978116093449855fd4980893be58f9d8554"
+      },
+      {
+        "path": "docs/style-gallery/epic-design.jpg",
+        "sha256": "22277b1e1b497631533a3b7322346ee9e1b31255384496bde5b71ac94f099596",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "22277b1e1b497631533a3b7322346ee9e1b31255384496bde5b71ac94f099596"
+      },
+      {
+        "path": "docs/style-gallery/fantasy-design.jpg",
+        "sha256": "efa3f08d0f32cc57986d4a16cddc978270418d74987f3983ff0ff7a2aac3e60e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "efa3f08d0f32cc57986d4a16cddc978270418d74987f3983ff0ff7a2aac3e60e"
+      },
+      {
+        "path": "docs/style-gallery/hard-sci-fi-visual-director.jpg",
+        "sha256": "fba89bcef4a187e3e76a7fb2c18f0207adcf07031d80ad5e90a81bcd571b5ed0",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fba89bcef4a187e3e76a7fb2c18f0207adcf07031d80ad5e90a81bcd571b5ed0"
+      },
+      {
+        "path": "docs/style-gallery/horror-design.jpg",
+        "sha256": "4cbd0b9907f89467ba08d1579ffe7e3151103ba1b1e7e5d13cccaae12e0c40b9",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4cbd0b9907f89467ba08d1579ffe7e3151103ba1b1e7e5d13cccaae12e0c40b9"
+      },
+      {
+        "path": "docs/style-gallery/manifest.json",
+        "sha256": "cb4b4ad2c47f1a8c673d6faedd8c5ba6e22e1ef693e593e82e015d2582ac6eaf",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cb4b4ad2c47f1a8c673d6faedd8c5ba6e22e1ef693e593e82e015d2582ac6eaf"
+      },
+      {
+        "path": "docs/style-gallery/noir-design.jpg",
+        "sha256": "fb4a1a785f4ac0aab4368b1f868697c8ef4e1c266f057b6b09beb49befdd2745",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fb4a1a785f4ac0aab4368b1f868697c8ef4e1c266f057b6b09beb49befdd2745"
+      },
+      {
+        "path": "docs/style-gallery/romance-design.jpg",
+        "sha256": "a8948e0a5ef440ace48beb3f9df9304e73320af85eed1c054cdf3eee55e2abe3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a8948e0a5ef440ace48beb3f9df9304e73320af85eed1c054cdf3eee55e2abe3"
+      },
+      {
+        "path": "docs/style-gallery/war-design.jpg",
+        "sha256": "4081f1ee1d0ea0e1a2d8e8a8661d3f9916157b79f5a6449039cdb4146cc0811a",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4081f1ee1d0ea0e1a2d8e8a8661d3f9916157b79f5a6449039cdb4146cc0811a"
+      },
+      {
+        "path": "docs/style-gallery/wuxia-design.jpg",
+        "sha256": "614b42ce8ad5c494681ca594775d106d5b08cd76b4bd054d466cb74648990505",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "614b42ce8ad5c494681ca594775d106d5b08cd76b4bd054d466cb74648990505"
+      },
+      {
+        "path": "examples/director-agent-before-after.md",
+        "sha256": "bdaab1a8bb6637f173ea576edaa65d70b3d7700088928f15adae237f3893250f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bdaab1a8bb6637f173ea576edaa65d70b3d7700088928f15adae237f3893250f"
+      },
+      {
+        "path": "examples/quick-start-prompts.md",
+        "sha256": "9ce814440613224d94915ffa5b9a6a8ab3f6ad56f93547279156cd43b33d1f25",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9ce814440613224d94915ffa5b9a6a8ab3f6ad56f93547279156cd43b33d1f25"
+      },
+      {
+        "path": "examples/skills-cli-install-verification.md",
+        "sha256": "e2a713cd3812d441b091895920d8ca66da0d37085f370b0a6f662018332077bc",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e2a713cd3812d441b091895920d8ca66da0d37085f370b0a6f662018332077bc"
+      },
+      {
+        "path": "examples/skills-sh-index-verification.md",
+        "sha256": "cbdb70238c754d742017bab0bb27f29ac7c11ed9e28148a884ef05b1cb8352a1",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "cbdb70238c754d742017bab0bb27f29ac7c11ed9e28148a884ef05b1cb8352a1"
+      },
+      {
+        "path": "examples/storyboard-director-5.4.4-visible-camera-plan.md",
+        "sha256": "bad5df475ef07d6cb0f0fcd1a9f25ada71d3e1ec3c54cb41dde24bf314a68b8b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "bad5df475ef07d6cb0f0fcd1a9f25ada71d3e1ec3c54cb41dde24bf314a68b8b"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/SKILL.md",
+        "sha256": "27a8ca643e319e5b6f432040140fdaaaa3b9460484231be05a423456b9a2cb94",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "27a8ca643e319e5b6f432040140fdaaaa3b9460484231be05a423456b9a2cb94"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/agents/openai.yaml",
+        "sha256": "44181e8d5859de27acb9ba23aa2aaf3468cce9e44430e155b2bf421a31b3094f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "44181e8d5859de27acb9ba23aa2aaf3468cce9e44430e155b2bf421a31b3094f"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/references/cultural-grounding.md",
+        "sha256": "f671363b6aca4219c4401e2eeb4a40f471700da51ea5c44eebf134b9badf6d31",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f671363b6aca4219c4401e2eeb4a40f471700da51ea5c44eebf134b9badf6d31"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/references/image-direction.md",
+        "sha256": "7b3ff35be23d3577957dbaf738f0d151ec39b7c6b61c93b1a6b0be1f25be7b9f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7b3ff35be23d3577957dbaf738f0d151ec39b7c6b61c93b1a6b0be1f25be7b9f"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/references/people-and-objects.md",
+        "sha256": "670fff5d0e55671218887a57004627a3c50491ac03930d1a6eb72c6ed356ceeb",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "670fff5d0e55671218887a57004627a3c50491ac03930d1a6eb72c6ed356ceeb"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/references/prompt-and-review.md",
+        "sha256": "4b4a904c0b10001606f403d740a55b7cc4f2e199a517fc6581b118f80e9ab4fb",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4b4a904c0b10001606f403d740a55b7cc4f2e199a517fc6581b118f80e9ab4fb"
+      },
+      {
+        "path": "experimental/guofeng-visual-director/references/world-and-space.md",
+        "sha256": "28dff865e88416921a25fa2e9e019cf6ca38da4e3957c0d1a52a051d73e5172f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "28dff865e88416921a25fa2e9e019cf6ca38da4e3957c0d1a52a051d73e5172f"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/SKILL.md",
+        "sha256": "4d23f3476cba229a7671760790f2ccecbe8c5cb29070c57b0e7daace2d78ca8d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4d23f3476cba229a7671760790f2ccecbe8c5cb29070c57b0e7daace2d78ca8d"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/agents/openai.yaml",
+        "sha256": "1395f7bd587a668950a1dedc2622e311e272f69376fe1e0a4bbf8db330b48f23",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "1395f7bd587a668950a1dedc2622e311e272f69376fe1e0a4bbf8db330b48f23"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/aesthetic-audit.md",
+        "sha256": "a4dae28502e57fbc3effe0ab7ee17f610f1f79b94e916ecb8e63da94cd24d310",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "a4dae28502e57fbc3effe0ab7ee17f610f1f79b94e916ecb8e63da94cd24d310"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/cinematic-image-direction.md",
+        "sha256": "0a8dfe8eb04baa59ca1a9c6331d3e8424ec8867e640b3f0bd29dc33e11b5549d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0a8dfe8eb04baa59ca1a9c6331d3e8424ec8867e640b3f0bd29dc33e11b5549d"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/combat-mecha-aesthetic.md",
+        "sha256": "e90238f7eb9e120b272c6277223d77de03897d23dbdb57f205ce35182ccc0b25",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e90238f7eb9e120b272c6277223d77de03897d23dbdb57f205ce35182ccc0b25"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/combat-mecha-form-direction.md",
+        "sha256": "3ee1e8140773cd7942115e7bd41410246e1a88156479adaf9f3da907e47e04de",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "3ee1e8140773cd7942115e7bd41410246e1a88156479adaf9f3da907e47e04de"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/full-design-workflow.md",
+        "sha256": "5a6e27ca839d74f83334c337bdcfa08cb35c7a63ce707a3c38fe135c52d9c821",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5a6e27ca839d74f83334c337bdcfa08cb35c7a63ce707a3c38fe135c52d9c821"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/future-interface-systems.md",
+        "sha256": "fc64a0a1a1b017ec1d1831cbea8f75b059b60f1d65496fc19476856b8c922f6d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fc64a0a1a1b017ec1d1831cbea8f75b059b60f1d65496fc19476856b8c922f6d"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/future-weapon-systems.md",
+        "sha256": "5e911ac7a7b8eb0abb6b97c618de8e5a772617589c8806137f8b218d39a356a3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "5e911ac7a7b8eb0abb6b97c618de8e5a772617589c8806137f8b218d39a356a3"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/inspiration-engine.md",
+        "sha256": "d32564a3117833b36e06666f9e2f6fdacb013aa750b36eb0ff9ade6f85adffe8",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d32564a3117833b36e06666f9e2f6fdacb013aa750b36eb0ff9ade6f85adffe8"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/live-action-cinematography.md",
+        "sha256": "0d1432bd7707c82f1950432255a547bf76f13d1284863328317c439b3d5815a0",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "0d1432bd7707c82f1950432255a547bf76f13d1284863328317c439b3d5815a0"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/mecha-and-megafauna.md",
+        "sha256": "972de5094aa3fab690a440ee0a3abd186477f076a0564cef7e0229ff02a405e2",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "972de5094aa3fab690a440ee0a3abd186477f076a0564cef7e0229ff02a405e2"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/organism-and-ecology.md",
+        "sha256": "aedcb70d5ac6241f6764ef3e2462eda15d9d52efa46751a7fb21b03234fa4d51",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "aedcb70d5ac6241f6764ef3e2462eda15d9d52efa46751a7fb21b03234fa4d51"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/physics-and-engineering.md",
+        "sha256": "2747e654c904111951663417c249e2fac67cfd764883194c6ea2a0f4cf2ec900",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2747e654c904111951663417c249e2fac67cfd764883194c6ea2a0f4cf2ec900"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/production-design.md",
+        "sha256": "744abfbcb0edb978e5cae9db17c2453f7c50299fdfd54def203a95c4fb2861d9",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "744abfbcb0edb978e5cae9db17c2453f7c50299fdfd54def203a95c4fb2861d9"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/prompt-examples.md",
+        "sha256": "831d9e6128e5640ea28530235838a65311735b00d25e4e332722c166e176a26b",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "831d9e6128e5640ea28530235838a65311735b00d25e4e332722c166e176a26b"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/scene-routes.md",
+        "sha256": "2c34afee79d3ce5473bce4288b5682d49df52674202f46d88ad4141c14a71ed0",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "2c34afee79d3ce5473bce4288b5682d49df52674202f46d88ad4141c14a71ed0"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/scene-world-design.md",
+        "sha256": "4018d1f91efa5fb5c76f30a68f745bfeb6fbdb94e4f9d42dedc1c363f72130ac",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4018d1f91efa5fb5c76f30a68f745bfeb6fbdb94e4f9d42dedc1c363f72130ac"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/script-to-visual-derivation.md",
+        "sha256": "7a94606e55672e0e2b1087cbc758bcc193663c125cd828fbf4d418b20fdf5b0d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "7a94606e55672e0e2b1087cbc758bcc193663c125cd828fbf4d418b20fdf5b0d"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/style-color-system.md",
+        "sha256": "f33d776e20d3a093a79ed78b6a3b5b56635400b3a0cbe27e203d83b5f14659b7",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "f33d776e20d3a093a79ed78b6a3b5b56635400b3a0cbe27e203d83b5f14659b7"
+      },
+      {
+        "path": "experimental/hard-sci-fi-visual-director/references/visual-continuity.md",
+        "sha256": "fdc5a4ec468172b4f11c7b615a0e47454bd9384887e54296339df436c40abc46",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "fdc5a4ec468172b4f11c7b615a0e47454bd9384887e54296339df436c40abc46"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/SKILL.md",
+        "sha256": "d8e8d0b9d6f0a8b7d448ad692960c4d4b552b6ebc2484d25f597c5d6ebc9e93e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "d8e8d0b9d6f0a8b7d448ad692960c4d4b552b6ebc2484d25f597c5d6ebc9e93e"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/agents/openai.yaml",
+        "sha256": "00951818c7f5f6c07f17b4a7cc5f452323a7edbd58da713ed6c01ed1edfc7ce2",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "00951818c7f5f6c07f17b4a7cc5f452323a7edbd58da713ed6c01ed1edfc7ce2"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/assets/sample-previs.json",
+        "sha256": "e3f68de5d64c8938e34f1359f4fc3067d42600f26202597cdf426298e5ede5f6",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "e3f68de5d64c8938e34f1359f4fc3067d42600f26202597cdf426298e5ede5f6"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/references/previs-spec.md",
+        "sha256": "4b281a1db6499baf1fd5ca4a068588da833ade6dcec697f3ca42030f1b8858dd",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4b281a1db6499baf1fd5ca4a068588da833ade6dcec697f3ca42030f1b8858dd"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/references/prompt-to-previs.md",
+        "sha256": "51698311efa6894f5dbaba31ab56094be012e89cbae01ecc14404f8e25b57d84",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "51698311efa6894f5dbaba31ab56094be012e89cbae01ecc14404f8e25b57d84"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/blender_previs_adapter.py",
+        "sha256": "9f6324340de0a18f36dfbc1c5751746eb8798d60ec082248be6040a2d79cfcda",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "9f6324340de0a18f36dfbc1c5751746eb8798d60ec082248be6040a2d79cfcda"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/blender_rigged_fight_adapter.py",
+        "sha256": "b815c9f9e6136c0edf031ee5b4c74bfc67b9aaac6e8c09951ad8e693bf30f97e",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "b815c9f9e6136c0edf031ee5b4c74bfc67b9aaac6e8c09951ad8e693bf30f97e"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/render_previs.py",
+        "sha256": "035b2e44536265240dae04ae3d5a8fc6b74595b0aac904573b8eaa8b7a16c020",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "035b2e44536265240dae04ae3d5a8fc6b74595b0aac904573b8eaa8b7a16c020"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/run_blender_previs.py",
+        "sha256": "c58806d662fe0414fcdb0d2a50af77d300285fea358157159c3b4bfeb74db77f",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "c58806d662fe0414fcdb0d2a50af77d300285fea358157159c3b4bfeb74db77f"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/run_blender_rigged_fight.py",
+        "sha256": "4cf7edcb4d93288065a1c8fc75437ce6a77a7a6414d58344c194931c5d3bac59",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "4cf7edcb4d93288065a1c8fc75437ce6a77a7a6414d58344c194931c5d3bac59"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/validate_compiled_previs.py",
+        "sha256": "81e03ae93c0560859c8b7f74c3fe6e6d849d5e47dac5b7c04b3b245b8b96634d",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "81e03ae93c0560859c8b7f74c3fe6e6d849d5e47dac5b7c04b3b245b8b96634d"
+      },
+      {
+        "path": "experimental/whitebox-previs-executor/scripts/validate_spec.py",
+        "sha256": "39e08ab46b4d3d633285ed873654ec674a9e3124453c8b76c480a6c7d8130f44",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "39e08ab46b4d3d633285ed873654ec674a9e3124453c8b76c480a6c7d8130f44"
+      },
+      {
+        "path": "llms.txt",
+        "sha256": "feb4bf2bfbbb1a2f87e998091a7e457620555b67420eb2155dabea5ad933b15a",
+        "baseline_basis": "git_blob_equal_with_crlf_lf_normalization",
+        "baseline_sha256": "f52ffd40f9a04d98fc26ccb1b0e5e0b6aee34f00702c5fc3705147a6ca96eaf6"
+      },
+      {
+        "path": "requirements-dev.txt",
+        "sha256": "52a3b517c1390b5e08c812f80e4153237a2d2e8f3db46e5700811bf5bf33d5c3",
+        "baseline_basis": "git_blob_byte_equal",
+        "baseline_sha256": "52a3b517c1390b5e08c812f80e4153237a2d2e8f3db46e5700811bf5bf33d5c3"
+      },
+      {
+        "path": "scripts/build_skill_packages.py",
+        "sha256": "9487895300440cca881ce395aa24424d15bc48739129328e0e8bfe8bf7d85f87",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9487895300440cca881ce395aa24424d15bc48739129328e0e8bfe8bf7d85f87"
+      },
+      {
+        "path": "scripts/check_skill_suite.py",
+        "sha256": "2351ffce1708d95fad77e96b62f1722f018794633df513c9f509301e3a8c2cae",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2351ffce1708d95fad77e96b62f1722f018794633df513c9f509301e3a8c2cae"
+      },
+      {
+        "path": "scripts/generate_skill_guides.py",
+        "sha256": "db603f5cf9743e57f5247b31f6ff89606d9a8b6b111a59387fa25b78a64fa8da",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "db603f5cf9743e57f5247b31f6ff89606d9a8b6b111a59387fa25b78a64fa8da"
+      },
+      {
+        "path": "scripts/install_skill.py",
+        "sha256": "03f34bdfacc42880c083c2aa1ec9c8d9b4cfa059df0b433f3857c69c660a52e2",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "03f34bdfacc42880c083c2aa1ec9c8d9b4cfa059df0b433f3857c69c660a52e2"
+      },
+      {
+        "path": "scripts/render_social_preview.py",
+        "sha256": "6bc332020644fd2148ba083d9c0d899e5ec535b687e94f56e1637fc7fd0f7714",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "6bc332020644fd2148ba083d9c0d899e5ec535b687e94f56e1637fc7fd0f7714"
+      },
+      {
+        "path": "scripts/render_storyboard_proof.py",
+        "sha256": "2e1dd42ab0b4f7747d898f69dcc77b765cf2f01d5dd769a51b5d98ae6e580250",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2e1dd42ab0b4f7747d898f69dcc77b765cf2f01d5dd769a51b5d98ae6e580250"
+      },
+      {
+        "path": "scripts/repository_safety.py",
+        "sha256": "593cfa8aea7e771322bd5129066a06ba31b1a6a66bcb36f303ec951a573b8df3",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "593cfa8aea7e771322bd5129066a06ba31b1a6a66bcb36f303ec951a573b8df3"
+      },
+      {
+        "path": "scripts/semantic_review.py",
+        "sha256": "36af0cf09a7a989a89e4e91afd31c1154450cb333a5ff104030b1c53178d1380",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "36af0cf09a7a989a89e4e91afd31c1154450cb333a5ff104030b1c53178d1380"
+      },
+      {
+        "path": "scripts/skill_release.py",
+        "sha256": "9dfebea27c15bc96540788a3f70c398f6ea6c0746b6be8d8e03bdb090e60933d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9dfebea27c15bc96540788a3f70c398f6ea6c0746b6be8d8e03bdb090e60933d"
+      },
+      {
+        "path": "scripts/validate_pages_site.py",
+        "sha256": "6773e47e14d7ddd863cc164b9af84cfe2eb331ee918fd5a754bb6fa106631503",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "6773e47e14d7ddd863cc164b9af84cfe2eb331ee918fd5a754bb6fa106631503"
+      },
+      {
+        "path": "scripts/validate_repository.py",
+        "sha256": "da93240a0dfe30e1e1e3b33b895d8e84fff6f044abce4f92ff524b86fbb16c38",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "da93240a0dfe30e1e1e3b33b895d8e84fff6f044abce4f92ff524b86fbb16c38"
+      },
+      {
+        "path": "scripts/validate_skill_docs.py",
+        "sha256": "9806797175c02987dbd270e62419ecce80d36b1a568a79d2522f91c29f9475c5",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9806797175c02987dbd270e62419ecce80d36b1a568a79d2522f91c29f9475c5"
+      },
+      {
+        "path": "scripts/validate_skill_independence.py",
+        "sha256": "edea6476908767f9077bcfe657806a467f83967a991845136bbebbd27f67f70c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "edea6476908767f9077bcfe657806a467f83967a991845136bbebbd27f67f70c"
+      },
+      {
+        "path": "scripts/validate_style_gallery.py",
+        "sha256": "14a324ff4b0a4ce746dd33214a45a82a9c1ef5397bd1d476066f40b08c428610",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "14a324ff4b0a4ce746dd33214a45a82a9c1ef5397bd1d476066f40b08c428610"
+      },
+      {
+        "path": "scripts/verify_activation_authorization.py",
+        "sha256": "9bcc25c318d715113728b138ea9a26355ed3bef53decdeada24afb2ed9bd1d43",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9bcc25c318d715113728b138ea9a26355ed3bef53decdeada24afb2ed9bd1d43"
+      },
+      {
+        "path": "scripts/verify_user_acceptance.py",
+        "sha256": "8e0f457eb731741d1a21e676ce8f8f475815cf4e7f89d78b5848df955d770b5e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "8e0f457eb731741d1a21e676ce8f8f475815cf4e7f89d78b5848df955d770b5e"
+      },
+      {
+        "path": "skills/ai-short-drama-production/SKILL.md",
+        "sha256": "e7f96f45fecf5b2a69bf0d9a4ba0584a3dc40b339c0222828267c58927aadc00",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "e7f96f45fecf5b2a69bf0d9a4ba0584a3dc40b339c0222828267c58927aadc00"
+      },
+      {
+        "path": "skills/ai-short-drama-production/agents/openai.yaml",
+        "sha256": "17ca325ec1c223ec612dde3ab17d85c07854707d2b1b843dc224e3f2c79be686",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "17ca325ec1c223ec612dde3ab17d85c07854707d2b1b843dc224e3f2c79be686"
+      },
+      {
+        "path": "skills/ai-short-drama-production/references/SOURCE-LEDGER.md",
+        "sha256": "8ec37bf31991c54a93527492d401731cdfdbed0543120cf90f779939c27a9396",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "8ec37bf31991c54a93527492d401731cdfdbed0543120cf90f779939c27a9396"
+      },
+      {
+        "path": "skills/ai-short-drama-production/references/control-contracts.md",
+        "sha256": "b2d927298d5b266e0c08ab75466dc0c5b49fce1f38898af10abe4443fb1e8f89",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b2d927298d5b266e0c08ab75466dc0c5b49fce1f38898af10abe4443fb1e8f89"
+      },
+      {
+        "path": "skills/ai-short-drama-production/references/independent-production-core.md",
+        "sha256": "9f2c3e37d499d31a0abe429d49b1cd8ff9e029278a187c1c2fcd9370065b89a2",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9f2c3e37d499d31a0abe429d49b1cd8ff9e029278a187c1c2fcd9370065b89a2"
+      },
+      {
+        "path": "skills/ai-storyboard-director/agents/openai.yaml",
+        "sha256": "375edffbdaeab3a5ec10c1d9098f39a518000d4c461651cf05881327c3b1119d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "375edffbdaeab3a5ec10c1d9098f39a518000d4c461651cf05881327c3b1119d"
+      },
+      {
+        "path": "skills/ai-storyboard-director/references/creative-shot-ideas.md",
+        "sha256": "fcf17e77cf7fa984391d1bf702d7a0c1f8457ee99693bf075f7e1587564a4f29",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "fcf17e77cf7fa984391d1bf702d7a0c1f8457ee99693bf075f7e1587564a4f29"
+      },
+      {
+        "path": "skills/ai-storyboard-director/references/delivery-mode-guard.md",
+        "sha256": "f9b07c27975645c84695427fb642a5382c80c0ea303402013f496fea90650565",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "f9b07c27975645c84695427fb642a5382c80c0ea303402013f496fea90650565"
+      },
+      {
+        "path": "skills/ai-storyboard-director/references/fight-design.md",
+        "sha256": "1a1f7fe2579fdd6da8e1b5ca6f4838b9b10929f5d75199e6abddebd509ac5d30",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "1a1f7fe2579fdd6da8e1b5ca6f4838b9b10929f5d75199e6abddebd509ac5d30"
+      },
+      {
+        "path": "skills/ai-storyboard-director/references/fight-reference-case.md",
+        "sha256": "04f4bc1e7e069ad8bdc72c402f349f5bbf0b4ec33e304ae741f2fb25ac745ce0",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "04f4bc1e7e069ad8bdc72c402f349f5bbf0b4ec33e304ae741f2fb25ac745ce0"
+      },
+      {
+        "path": "skills/ai-storyboard-director/references/framing-and-axis.md",
+        "sha256": "95d59767391e7f58e67a0fcb15f4a25d2b05ff6558da1c8c667262669b2b11fb",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "95d59767391e7f58e67a0fcb15f4a25d2b05ff6558da1c8c667262669b2b11fb"
+      },
+      {
+        "path": "skills/character-asset/SKILL.md",
+        "sha256": "d85791ded2d99b53aaa313423747d84c76166d4387e6ab67083100ddfdbd76b2",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "d85791ded2d99b53aaa313423747d84c76166d4387e6ab67083100ddfdbd76b2"
+      },
+      {
+        "path": "skills/character-asset/agents/openai.yaml",
+        "sha256": "a7e8d276f3c726dac65f4e8afa535e5213effee2c820c76d03130da0510a9600",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "a7e8d276f3c726dac65f4e8afa535e5213effee2c820c76d03130da0510a9600"
+      },
+      {
+        "path": "skills/character-asset/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ec9ab1a23d45ce5592fbc30fcc458a794c2698e555a74ab58144d6bc9141bf67",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ec9ab1a23d45ce5592fbc30fcc458a794c2698e555a74ab58144d6bc9141bf67"
+      },
+      {
+        "path": "skills/character-asset/references/cinematic-image-direction.md",
+        "sha256": "7ff539ccf286fdfc90c3b6edc1785ae80ece779747941d1f8fb101886efbf1ce",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7ff539ccf286fdfc90c3b6edc1785ae80ece779747941d1f8fb101886efbf1ce"
+      },
+      {
+        "path": "skills/character-asset/references/female-character-charm.md",
+        "sha256": "a56b89e846fd90e799f33c0d6daea3f77a66562b4eb7e285ea7b305752aa4836",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "a56b89e846fd90e799f33c0d6daea3f77a66562b4eb7e285ea7b305752aa4836"
+      },
+      {
+        "path": "skills/cyberpunk-design/SKILL.md",
+        "sha256": "202c57f7403ec950cc5fb6c9f551d77063ebd50e31f273769c899e75bc3031e1",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "202c57f7403ec950cc5fb6c9f551d77063ebd50e31f273769c899e75bc3031e1"
+      },
+      {
+        "path": "skills/cyberpunk-design/agents/openai.yaml",
+        "sha256": "8ac554e56378019c5e6bdd8a9b6804d6863e4c9ba582fcc92dea064e5db52350",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "8ac554e56378019c5e6bdd8a9b6804d6863e4c9ba582fcc92dea064e5db52350"
+      },
+      {
+        "path": "skills/cyberpunk-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/cyberpunk-design/references/SOURCE-LEDGER.md",
+        "sha256": "d0dd20b3c8e7ea8bb26f970520cd3b97f96c3e4d263dce4e125b0c5e62e6bdc7",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "d0dd20b3c8e7ea8bb26f970520cd3b97f96c3e4d263dce4e125b0c5e62e6bdc7"
+      },
+      {
+        "path": "skills/cyberpunk-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/cyberpunk-design/references/genre-presets.md",
+        "sha256": "bfa2b06e03571f2c5bb262884fe96a145228107646c62f700293b0da08e0495f",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "bfa2b06e03571f2c5bb262884fe96a145228107646c62f700293b0da08e0495f"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/SKILL.md",
+        "sha256": "28a5c09121a006ab1a59ea37c360baad4179911b14311bb4e63950df1b40d93d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "28a5c09121a006ab1a59ea37c360baad4179911b14311bb4e63950df1b40d93d"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/agents/openai.yaml",
+        "sha256": "6182dc1bfe82c2554f444478ec75361146174f834a61e4451169a0f5c77a6af4",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "6182dc1bfe82c2554f444478ec75361146174f834a61e4451169a0f5c77a6af4"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/evidence.md",
+        "sha256": "758f47cd2b4cc2a84669a2f7573a51a8b605ddfd09e1b8cde3fe4b79bae94dd3",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "758f47cd2b4cc2a84669a2f7573a51a8b605ddfd09e1b8cde3fe4b79bae94dd3"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/records-v1.0.0.json",
+        "sha256": "30e87fd6a5351309559ee075197cdbb2a25578295da1fe088320fd51c4e28a0d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "30e87fd6a5351309559ee075197cdbb2a25578295da1fe088320fd51c4e28a0d"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/semantic-contract.md",
+        "sha256": "94f6fab1ad52a5f58cb4741e07a388c2b060a16ca56f200188754c45d0eb8307",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "94f6fab1ad52a5f58cb4741e07a388c2b060a16ca56f200188754c45d0eb8307"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/semantic-layer.md",
+        "sha256": "4b3aa656a0fdb5d63b405fbe7d01e0bee5526d92d0146977bcee45403d7b9884",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "4b3aa656a0fdb5d63b405fbe7d01e0bee5526d92d0146977bcee45403d7b9884"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/semantic-write-contract.md",
+        "sha256": "de7f09894b71c5dd9d4899095bd4b846a150fb018e14ac5c98ca832db8b26e53",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "de7f09894b71c5dd9d4899095bd4b846a150fb018e14ac5c98ca832db8b26e53"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/source-inventory.md",
+        "sha256": "fd59b57a4feb95d45cb027ee40972c27e679257898e37a837452f1f468b717b8",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "fd59b57a4feb95d45cb027ee40972c27e679257898e37a837452f1f468b717b8"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/references/versioning-and-expiry.md",
+        "sha256": "aa5632652bdef114698a0ebc1d7e7932ffca2cfe007923540caa5935977a7ecb",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "aa5632652bdef114698a0ebc1d7e7932ffca2cfe007923540caa5935977a7ecb"
+      },
+      {
+        "path": "skills/d-data-analysis-semantic-layer/scripts/validate_candidate.py",
+        "sha256": "ed516fc1c29942e2ec80c347471ead1c8b2b7fae31c6dcff545357aa33954c4a",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ed516fc1c29942e2ec80c347471ead1c8b2b7fae31c6dcff545357aa33954c4a"
+      },
+      {
+        "path": "skills/d-official-market-analysis/SKILL.md",
+        "sha256": "c998c6af52fb013260438a0528ca9a49bf2b07ce8c7fefa1ea8c9768f57da9b9",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c998c6af52fb013260438a0528ca9a49bf2b07ce8c7fefa1ea8c9768f57da9b9"
+      },
+      {
+        "path": "skills/d-official-market-analysis/agents/openai.yaml",
+        "sha256": "cb9dfaa3f992b0078ddc3df2fefe2dd6ac537464ad75e9e39c3a00d487f47218",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "cb9dfaa3f992b0078ddc3df2fefe2dd6ac537464ad75e9e39c3a00d487f47218"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/analysis-and-report.md",
+        "sha256": "c9711249aaf37e5ae581db720bcdbb524a11f79674088fda862f5343dc83bad2",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c9711249aaf37e5ae581db720bcdbb524a11f79674088fda862f5343dc83bad2"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/analysis-capability-contract.md",
+        "sha256": "5bbbc1f51522c03d614c98b584f2275613e2843ef18eaa166827fcb800630964",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "5bbbc1f51522c03d614c98b584f2275613e2843ef18eaa166827fcb800630964"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/connector-contract.md",
+        "sha256": "7d550fdb1e622cc3f9392e0dfd56a7e484e485673db0da798aea616dec5909bc",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7d550fdb1e622cc3f9392e0dfd56a7e484e485673db0da798aea616dec5909bc"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/data-contract.md",
+        "sha256": "7f19814aeaf30a4657c241915b3d62fa44d76da2dd833404dcb19ecbf43112a9",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7f19814aeaf30a4657c241915b3d62fa44d76da2dd833404dcb19ecbf43112a9"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/evidence-and-sources.md",
+        "sha256": "5d3edc67b474516ab4ea6a54ef24c64d21ee3830c841cf979de286858f3aa520",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "5d3edc67b474516ab4ea6a54ef24c64d21ee3830c841cf979de286858f3aa520"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/full-market-research.md",
+        "sha256": "2e90d3086679b3189022166dd23e53da7bfd918790d6ecf05c8e7c6d85567bcd",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2e90d3086679b3189022166dd23e53da7bfd918790d6ecf05c8e7c6d85567bcd"
+      },
+      {
+        "path": "skills/d-official-market-analysis/references/platform-metrics.md",
+        "sha256": "2e964d2ed5ef76214f84071f48b4ff7a8fc135b834a6cbfbcdf1a044ccbbc543",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2e964d2ed5ef76214f84071f48b4ff7a8fc135b834a6cbfbcdf1a044ccbbc543"
+      },
+      {
+        "path": "skills/d-official-market-analysis/scripts/validate_dataset.py",
+        "sha256": "c621e9a4e66b19de0aea21623e98c1836079ce879c2ebf8fd13dbd9e0693edf5",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c621e9a4e66b19de0aea21623e98c1836079ce879c2ebf8fd13dbd9e0693edf5"
+      },
+      {
+        "path": "skills/director-agent/agents/openai.yaml",
+        "sha256": "e6956681141cef7d251eb5399876e025728955c8b67a36545229fd817e1a8033",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "e6956681141cef7d251eb5399876e025728955c8b67a36545229fd817e1a8033"
+      },
+      {
+        "path": "skills/director-agent/references/anti-laziness-contract.md",
+        "sha256": "14c549b200d036f2f5bcb44b49f1706f327a1ad54030d50e64f56f4381d010da",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "14c549b200d036f2f5bcb44b49f1706f327a1ad54030d50e64f56f4381d010da"
+      },
+      {
+        "path": "skills/director-agent/references/director-workbench-protocol.md",
+        "sha256": "5a4c8c481d54a4e8d5aef084153c07daeeef6a8ca31cca8d77c692f6d7072f14",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "5a4c8c481d54a4e8d5aef084153c07daeeef6a8ca31cca8d77c692f6d7072f14"
+      },
+      {
+        "path": "skills/director-agent/references/github-project-watchlist.md",
+        "sha256": "220f37a2caba945f2450f2b4e3cf857ad281e9f3533f6739209aec83d72b8c3e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "220f37a2caba945f2450f2b4e3cf857ad281e9f3533f6739209aec83d72b8c3e"
+      },
+      {
+        "path": "skills/director-agent/references/local-knowledge-map.md",
+        "sha256": "8b2398dfc1f2a0ec0287641fbd0b551780a6044ad03f42be6fa02514006b145f",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "8b2398dfc1f2a0ec0287641fbd0b551780a6044ad03f42be6fa02514006b145f"
+      },
+      {
+        "path": "skills/director-agent/references/research-update-protocol.md",
+        "sha256": "2c77e05d880886122c8ea5f5987c3bc94d82d64076a4b75310e2436db9e2e4c7",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2c77e05d880886122c8ea5f5987c3bc94d82d64076a4b75310e2436db9e2e4c7"
+      },
+      {
+        "path": "skills/director-agent/references/screenplay-ai-execution-compiler.md",
+        "sha256": "633059e1366c0e815732f42bc3069d951c4310ee7e2716f8cdad24a53a6e69a5",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "633059e1366c0e815732f42bc3069d951c4310ee7e2716f8cdad24a53a6e69a5"
+      },
+      {
+        "path": "skills/director-agent/references/screenplay-cold-read-protocol.md",
+        "sha256": "db7c432d04c935de73658df9381f92824dc9a489f08d7ce79d7981e3367d2f0c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "db7c432d04c935de73658df9381f92824dc9a489f08d7ce79d7981e3367d2f0c"
+      },
+      {
+        "path": "skills/director-agent/references/screenplay-exemplar-benchmarks.md",
+        "sha256": "55186c00e144bd1c8bdb1aaf147b966ddf06512e443b82b8ba2d8cbd55795d26",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "55186c00e144bd1c8bdb1aaf147b966ddf06512e443b82b8ba2d8cbd55795d26"
+      },
+      {
+        "path": "skills/director-agent/references/screenplay-state-engine.md",
+        "sha256": "8ffa836f096e866a7652c71d8019d667b355b76a42e47f1a54ed5a2e44225332",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "8ffa836f096e866a7652c71d8019d667b355b76a42e47f1a54ed5a2e44225332"
+      },
+      {
+        "path": "skills/director-agent/references/screenplay-writing-core.md",
+        "sha256": "9f59bc2c30d02cbaa85affe6a75c3cc0c764dc4c0e8c9f37ebd66f983d4080d1",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9f59bc2c30d02cbaa85affe6a75c3cc0c764dc4c0e8c9f37ebd66f983d4080d1"
+      },
+      {
+        "path": "skills/director-agent/references/verified-director-logic.md",
+        "sha256": "b3802ec041ec5fb18cfcef575fcb7efb2a20a656defd74c4b72722df4e43da90",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b3802ec041ec5fb18cfcef575fcb7efb2a20a656defd74c4b72722df4e43da90"
+      },
+      {
+        "path": "skills/epic-design/SKILL.md",
+        "sha256": "b73ddd4b29a56f8e53fa449ab3a00cfc4dfe2d211dca5886be8a93dbb26c3ea2",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b73ddd4b29a56f8e53fa449ab3a00cfc4dfe2d211dca5886be8a93dbb26c3ea2"
+      },
+      {
+        "path": "skills/epic-design/agents/openai.yaml",
+        "sha256": "008a74f8bd15368034bb9deb8a10f627666b5b30587df701bca9490136df0c12",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "008a74f8bd15368034bb9deb8a10f627666b5b30587df701bca9490136df0c12"
+      },
+      {
+        "path": "skills/epic-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/epic-design/references/SOURCE-LEDGER.md",
+        "sha256": "a3da489edbeb5648d63450c434712b2158ec44254df58dcaff12994420bf915f",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "a3da489edbeb5648d63450c434712b2158ec44254df58dcaff12994420bf915f"
+      },
+      {
+        "path": "skills/epic-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/epic-design/references/genre-presets.md",
+        "sha256": "f34f1c3da561933ffdd0f772f027904e0648cfcfc4b834e912cfb09248ead8f7",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "f34f1c3da561933ffdd0f772f027904e0648cfcfc4b834e912cfb09248ead8f7"
+      },
+      {
+        "path": "skills/fantasy-design/SKILL.md",
+        "sha256": "4ff9920443c5409b837023b0dc58503386d7003498e2284218397c95fecf72d3",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "4ff9920443c5409b837023b0dc58503386d7003498e2284218397c95fecf72d3"
+      },
+      {
+        "path": "skills/fantasy-design/agents/openai.yaml",
+        "sha256": "2be75e7795c4911e8243df0729f1d9c0af7539630e93cbbd7113cd912efc6ff6",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2be75e7795c4911e8243df0729f1d9c0af7539630e93cbbd7113cd912efc6ff6"
+      },
+      {
+        "path": "skills/fantasy-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/fantasy-design/references/SOURCE-LEDGER.md",
+        "sha256": "2d8ad466e3ad58d64cc4ca5a87c9e838541014ff6779e4da8ee53741d8f4e737",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "2d8ad466e3ad58d64cc4ca5a87c9e838541014ff6779e4da8ee53741d8f4e737"
+      },
+      {
+        "path": "skills/fantasy-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/fantasy-design/references/genre-presets.md",
+        "sha256": "d6a9c71740307a82200d11cbe55315022171122b4e49755a52300b467168a421",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "d6a9c71740307a82200d11cbe55315022171122b4e49755a52300b467168a421"
+      },
+      {
+        "path": "skills/horror-design/SKILL.md",
+        "sha256": "959a31111d366fc040b00c19f5c62397c28beecdd9d47859a07599faf96a8c52",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "959a31111d366fc040b00c19f5c62397c28beecdd9d47859a07599faf96a8c52"
+      },
+      {
+        "path": "skills/horror-design/agents/openai.yaml",
+        "sha256": "782cba2e767afba2fe5a28f26e2e215787877890717c7099f1bca5fa864219cf",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "782cba2e767afba2fe5a28f26e2e215787877890717c7099f1bca5fa864219cf"
+      },
+      {
+        "path": "skills/horror-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/horror-design/references/SOURCE-LEDGER.md",
+        "sha256": "1d49f247193c8ce9fce88125d71b8e10d21255ae0faee4fe1887eba1066a1b7c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "1d49f247193c8ce9fce88125d71b8e10d21255ae0faee4fe1887eba1066a1b7c"
+      },
+      {
+        "path": "skills/horror-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/horror-design/references/genre-presets.md",
+        "sha256": "5a0f0f53f8e3a43208523d08e37fa184852d69b55fd278106d861e33a8342736",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "5a0f0f53f8e3a43208523d08e37fa184852d69b55fd278106d861e33a8342736"
+      },
+      {
+        "path": "skills/noir-design/SKILL.md",
+        "sha256": "b10e3dac7965830cc5382f97ed9754f042a109f940b9cb3f8b6dfb016827fb8c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b10e3dac7965830cc5382f97ed9754f042a109f940b9cb3f8b6dfb016827fb8c"
+      },
+      {
+        "path": "skills/noir-design/agents/openai.yaml",
+        "sha256": "e9d7a240f84863e0473c85003d7b7cfd82904c05bc7984b438296ade98ad3ecf",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "e9d7a240f84863e0473c85003d7b7cfd82904c05bc7984b438296ade98ad3ecf"
+      },
+      {
+        "path": "skills/noir-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/noir-design/references/SOURCE-LEDGER.md",
+        "sha256": "91a6dffc36ffb892116d1b71ee2cd9d8e4a475ab3521e929615876edfa4d23aa",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "91a6dffc36ffb892116d1b71ee2cd9d8e4a475ab3521e929615876edfa4d23aa"
+      },
+      {
+        "path": "skills/noir-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/noir-design/references/genre-presets.md",
+        "sha256": "c656919e071373102824ebfba627e57947a0193fef32dbeb96d4a67ccbf78db0",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c656919e071373102824ebfba627e57947a0193fef32dbeb96d4a67ccbf78db0"
+      },
+      {
+        "path": "skills/produce-ai-video/agents/openai.yaml",
+        "sha256": "fda92e1f0ed9bebdd876e2c01139f836d94bcb83538aec71ad3f8fde0d28a1de",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "fda92e1f0ed9bebdd876e2c01139f836d94bcb83538aec71ad3f8fde0d28a1de"
+      },
+      {
+        "path": "skills/produce-ai-video/references/autonomous-production-workflow.md",
+        "sha256": "026c0d89981cfd79ac15424cda36762f722ff5c65a17e04d56a22a42dd756ad5",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "026c0d89981cfd79ac15424cda36762f722ff5c65a17e04d56a22a42dd756ad5"
+      },
+      {
+        "path": "skills/produce-ai-video/references/qualified-video-acceptance.md",
+        "sha256": "e5ebb6c978ca3b0ce56a339de218dfeb2e627ae4302159b25449b01fbde1ae60",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "e5ebb6c978ca3b0ce56a339de218dfeb2e627ae4302159b25449b01fbde1ae60"
+      },
+      {
+        "path": "skills/prop-asset/SKILL.md",
+        "sha256": "86647c6045aa844ca64219dd581c54a0d646a4a9a1793b5ca04caf3c7c7c6b67",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "86647c6045aa844ca64219dd581c54a0d646a4a9a1793b5ca04caf3c7c7c6b67"
+      },
+      {
+        "path": "skills/prop-asset/agents/openai.yaml",
+        "sha256": "a007a9763e7bbcc88cf05e5a5b492d9ad5621ef582b90425ece906ce0ce12520",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "a007a9763e7bbcc88cf05e5a5b492d9ad5621ef582b90425ece906ce0ce12520"
+      },
+      {
+        "path": "skills/prop-asset/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "3f7fb8eb08e8e2e2b582daf6f9e1c013e32183103558d6d2c0afb6cf608c13d0",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "3f7fb8eb08e8e2e2b582daf6f9e1c013e32183103558d6d2c0afb6cf608c13d0"
+      },
+      {
+        "path": "skills/prop-asset/references/cinematic-image-direction.md",
+        "sha256": "06a26c065e347fc6aa0b211547ba1ec8e8a857e300751f299802f94eb9149050",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "06a26c065e347fc6aa0b211547ba1ec8e8a857e300751f299802f94eb9149050"
+      },
+      {
+        "path": "skills/prop-asset/references/prop-design-and-reference.md",
+        "sha256": "ee8828c688fea733107026f44a637cf01f3745e380a08c8420e5eb88451926f9",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ee8828c688fea733107026f44a637cf01f3745e380a08c8420e5eb88451926f9"
+      },
+      {
+        "path": "skills/romance-design/SKILL.md",
+        "sha256": "c4cb7f2f34c6e50eab33bb233d7babf7bb00d07005a6afd107bc407a41a1502d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c4cb7f2f34c6e50eab33bb233d7babf7bb00d07005a6afd107bc407a41a1502d"
+      },
+      {
+        "path": "skills/romance-design/agents/openai.yaml",
+        "sha256": "681960574f09fa1fbc9dde4f9d271e2a2c0af909eb4d61eb16797c843786ca5e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "681960574f09fa1fbc9dde4f9d271e2a2c0af909eb4d61eb16797c843786ca5e"
+      },
+      {
+        "path": "skills/romance-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/romance-design/references/SOURCE-LEDGER.md",
+        "sha256": "92cec944acd69654a2c545fd52e733659b0c0df0ef3c240a8d0a82e5bed2efec",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "92cec944acd69654a2c545fd52e733659b0c0df0ef3c240a8d0a82e5bed2efec"
+      },
+      {
+        "path": "skills/romance-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/romance-design/references/genre-presets.md",
+        "sha256": "88dadcd10fd6e3d85a3c406caa7827aebca477143d1d66baf2edb3380ef94151",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "88dadcd10fd6e3d85a3c406caa7827aebca477143d1d66baf2edb3380ef94151"
+      },
+      {
+        "path": "skills/scene-asset/agents/openai.yaml",
+        "sha256": "7ffb6718d97e5858e5070dbf6e1330a7118f817c372dcb43da6ebb2949c16084",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7ffb6718d97e5858e5070dbf6e1330a7118f817c372dcb43da6ebb2949c16084"
+      },
+      {
+        "path": "skills/scene-asset/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "69367fd44a93504facd05d3fd201515d70b74cc22e23d327326a751ba94c297c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "69367fd44a93504facd05d3fd201515d70b74cc22e23d327326a751ba94c297c"
+      },
+      {
+        "path": "skills/war-design/SKILL.md",
+        "sha256": "431acea961cd06c9ecaff4efc4d343655472b8ffe6a2f843fc2a9068f238979c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "431acea961cd06c9ecaff4efc4d343655472b8ffe6a2f843fc2a9068f238979c"
+      },
+      {
+        "path": "skills/war-design/agents/openai.yaml",
+        "sha256": "4447956f49edbb2f72986dc9ecfc795416be385148071d1f9c29d0c917ac8e79",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "4447956f49edbb2f72986dc9ecfc795416be385148071d1f9c29d0c917ac8e79"
+      },
+      {
+        "path": "skills/war-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "7b47f082fc7828c00ac75649a84f1251dced3478488e47adfd3af09afdbf992c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7b47f082fc7828c00ac75649a84f1251dced3478488e47adfd3af09afdbf992c"
+      },
+      {
+        "path": "skills/war-design/references/SOURCE-LEDGER.md",
+        "sha256": "c1dc80b71dae1e7f41966bb7e739ccadd6120bd10e7e671c5b599226412807da",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c1dc80b71dae1e7f41966bb7e739ccadd6120bd10e7e671c5b599226412807da"
+      },
+      {
+        "path": "skills/war-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/war-design/references/combat-visual.md",
+        "sha256": "fc376342afdc938c851626e900f3aae309296671b6028a297610b52d0529e34d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "fc376342afdc938c851626e900f3aae309296671b6028a297610b52d0529e34d"
+      },
+      {
+        "path": "skills/war-design/references/sources.md",
+        "sha256": "419bb59ea83368f0fb731c585818852ed4a6b955fc85a6db51ad49db185b1c6e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "419bb59ea83368f0fb731c585818852ed4a6b955fc85a6db51ad49db185b1c6e"
+      },
+      {
+        "path": "skills/war-design/references/squad-cinematography.md",
+        "sha256": "0365733761ab1c51d193f40c633143c32917f20a7386017db5405a1c698a4e4e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "0365733761ab1c51d193f40c633143c32917f20a7386017db5405a1c698a4e4e"
+      },
+      {
+        "path": "skills/war-design/references/story-visual.md",
+        "sha256": "1405c0153a571b313573f173bca6f75c100018855bb46c47a98f4af66370c0f4",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "1405c0153a571b313573f173bca6f75c100018855bb46c47a98f4af66370c0f4"
+      },
+      {
+        "path": "skills/war-design/references/visual-design.md",
+        "sha256": "59a0227b2627a26b975c243e252ddc00ba572fa21a76b9e31461a90037e0e15d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "59a0227b2627a26b975c243e252ddc00ba572fa21a76b9e31461a90037e0e15d"
+      },
+      {
+        "path": "skills/war-design/references/visual-review.md",
+        "sha256": "b39fd1fb269485696b418b74894bb4d0fad43d7b226776aaf16f8c4ed5d1c40d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b39fd1fb269485696b418b74894bb4d0fad43d7b226776aaf16f8c4ed5d1c40d"
+      },
+      {
+        "path": "skills/war-design/references/war-visual-presets.md",
+        "sha256": "44a8eb28f0bf6f61324870ec092067af1302dd0aefe62c651f6ee472b087c7ef",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "44a8eb28f0bf6f61324870ec092067af1302dd0aefe62c651f6ee472b087c7ef"
+      },
+      {
+        "path": "skills/web-design-director/SKILL.md",
+        "sha256": "752fbacb4e4b9dcf0ddb5c16580adf22359c1de572e143cae42dd7ff2374a46d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "752fbacb4e4b9dcf0ddb5c16580adf22359c1de572e143cae42dd7ff2374a46d"
+      },
+      {
+        "path": "skills/web-design-director/agents/openai.yaml",
+        "sha256": "0fefd4b54d501f3b498515abed636246eee5f3bd1725ee33b9edc3b311898dc7",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "0fefd4b54d501f3b498515abed636246eee5f3bd1725ee33b9edc3b311898dc7"
+      },
+      {
+        "path": "skills/web-design-director/references/creative-direction.md",
+        "sha256": "7841242be22e8d267dcae95fad1b95f0ffa8ec36370ad24bc929feca8c8539a3",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7841242be22e8d267dcae95fad1b95f0ffa8ec36370ad24bc929feca8c8539a3"
+      },
+      {
+        "path": "skills/web-design-director/references/design-rubric.md",
+        "sha256": "9816d7334e1ac6f84b97f265e90e482fb77b6bd52985bf4a289abfecc54c66f0",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9816d7334e1ac6f84b97f265e90e482fb77b6bd52985bf4a289abfecc54c66f0"
+      },
+      {
+        "path": "skills/web-design-director/references/interaction-design.md",
+        "sha256": "193960657fd596928cc120905f911f0729c4e7407693ea83767e04eabd77024b",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "193960657fd596928cc120905f911f0729c4e7407693ea83767e04eabd77024b"
+      },
+      {
+        "path": "skills/web-design-director/references/material-and-motion.md",
+        "sha256": "b2f8d0d012d781029d89db2be1fbde4dc65d0b812cd8a6628a40b8dd7fdfcce9",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b2f8d0d012d781029d89db2be1fbde4dc65d0b812cd8a6628a40b8dd7fdfcce9"
+      },
+      {
+        "path": "skills/web-design-director/references/research-to-design.md",
+        "sha256": "7390439ffb60fe4ccad4557010a50be7d4a78f9017e04e9935725c49bec0d8d9",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "7390439ffb60fe4ccad4557010a50be7d4a78f9017e04e9935725c49bec0d8d9"
+      },
+      {
+        "path": "skills/web-design-director/references/web-quality-checklist.md",
+        "sha256": "c9d2a4f7736298a5faeca43f53b875f32bc116b8068b49b8d1f09dfcefdbe5ae",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c9d2a4f7736298a5faeca43f53b875f32bc116b8068b49b8d1f09dfcefdbe5ae"
+      },
+      {
+        "path": "skills/wuxia-design/SKILL.md",
+        "sha256": "8a94d21d5f404496e058d16e7f652348e4cf85615553339a54614451991bfc90",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "8a94d21d5f404496e058d16e7f652348e4cf85615553339a54614451991bfc90"
+      },
+      {
+        "path": "skills/wuxia-design/agents/openai.yaml",
+        "sha256": "d7280c331cf1d708b85190a6808fae3c7e891475c749eeb2a7a43a0e2523608d",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "d7280c331cf1d708b85190a6808fae3c7e891475c749eeb2a7a43a0e2523608d"
+      },
+      {
+        "path": "skills/wuxia-design/references/NEGATIVE-CASE-BOOK.md",
+        "sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea9819faae63dcb6aff5ae083c2d467a800834816ea7e00ac9b92e2e2d244b61"
+      },
+      {
+        "path": "skills/wuxia-design/references/SOURCE-LEDGER.md",
+        "sha256": "423c3d51a844337bfcee180ab98b91363aa25507e8d36d34c4d28ccc706451c8",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "423c3d51a844337bfcee180ab98b91363aa25507e8d36d34c4d28ccc706451c8"
+      },
+      {
+        "path": "skills/wuxia-design/references/cinematic-image-direction.md",
+        "sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "80e69ebc39a16f3ad0fa1a45465b7c4486daacbdb1c168377c069411db2bf02e"
+      },
+      {
+        "path": "skills/wuxia-design/references/genre-presets.md",
+        "sha256": "b57f0e623de53f0b88ac80854359d5c9f65ed2d34d636870e60f2c24dba91b5b",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "b57f0e623de53f0b88ac80854359d5c9f65ed2d34d636870e60f2c24dba91b5b"
+      },
+      {
+        "path": "tests/__init__.py",
+        "sha256": "0a6e5dd615a8ab1da5ba8be8f54fc7893fc41c5fc352a44a6e992f11f2a1b8f9",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "0a6e5dd615a8ab1da5ba8be8f54fc7893fc41c5fc352a44a6e992f11f2a1b8f9"
+      },
+      {
+        "path": "tests/fixtures/semantic_review.json",
+        "sha256": "c702a4b0229602795d163fd4803e35a4a866c233472c6d3dac93829c3aaafd99",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c702a4b0229602795d163fd4803e35a4a866c233472c6d3dac93829c3aaafd99"
+      },
+      {
+        "path": "tests/test_activation_authorization.py",
+        "sha256": "22565bba575b18c735ef82f67261a4736fb19d6228f1cbdb71c83339dec358a1",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "22565bba575b18c735ef82f67261a4736fb19d6228f1cbdb71c83339dec358a1"
+      },
+      {
+        "path": "tests/test_data_validators.py",
+        "sha256": "6b15a168f7fcca041c0247a72039f899757d926a4910494265706e44f3488c8c",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "6b15a168f7fcca041c0247a72039f899757d926a4910494265706e44f3488c8c"
+      },
+      {
+        "path": "tests/test_frontmatter.py",
+        "sha256": "fe6802ee3953027f0c38bc67476c20f803e7f33dd112ae086f300f7688d9d700",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "fe6802ee3953027f0c38bc67476c20f803e7f33dd112ae086f300f7688d9d700"
+      },
+      {
+        "path": "tests/test_function_conservation.py",
+        "sha256": "1fc145cf967242d1724dbcbd2cfbafd26c2aa1193d1b95f124511dfcdc1aa3ad",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "1fc145cf967242d1724dbcbd2cfbafd26c2aa1193d1b95f124511dfcdc1aa3ad"
+      },
+      {
+        "path": "tests/test_package_licenses.py",
+        "sha256": "ea0ebfd51cfdf5494151eda19a66f92378f403b41118f6fd42c5bf143706a329",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ea0ebfd51cfdf5494151eda19a66f92378f403b41118f6fd42c5bf143706a329"
+      },
+      {
+        "path": "tests/test_public_contracts.py",
+        "sha256": "c853595a7723d748f1960b33ce1a275c15971382fc1d51482cdaffea489818f3",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c853595a7723d748f1960b33ce1a275c15971382fc1d51482cdaffea489818f3"
+      },
+      {
+        "path": "tests/test_quality_gate.py",
+        "sha256": "0d20d4ca886a5d47343555d9fe1f92975a4fd3b3a5e3d4bf64fee390b1ff7df6",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "0d20d4ca886a5d47343555d9fe1f92975a4fd3b3a5e3d4bf64fee390b1ff7df6"
+      },
+      {
+        "path": "tests/test_render_assets.py",
+        "sha256": "ebc348ff2edc2895d60ab3b05b55747e1f22f7b9063998a5263f6b6247dad000",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "ebc348ff2edc2895d60ab3b05b55747e1f22f7b9063998a5263f6b6247dad000"
+      },
+      {
+        "path": "tests/test_repository_safety.py",
+        "sha256": "14e29aba25f45c0c7f6858903c608894ebb9aeafbd3347e0643f648565f6f760",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "14e29aba25f45c0c7f6858903c608894ebb9aeafbd3347e0643f648565f6f760"
+      },
+      {
+        "path": "tests/test_semantic_review.py",
+        "sha256": "c774d3d903fc1cdd611d62a0051ead68888e8120481d502762a0faf52d0276d8",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "c774d3d903fc1cdd611d62a0051ead68888e8120481d502762a0faf52d0276d8"
+      },
+      {
+        "path": "tests/test_skill_independence.py",
+        "sha256": "840ae8b639aa30497bc2e568c7936ce849fcfb58ee8875927b5d04adc3a26622",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "840ae8b639aa30497bc2e568c7936ce849fcfb58ee8875927b5d04adc3a26622"
+      },
+      {
+        "path": "tests/test_skill_release.py",
+        "sha256": "fd438e60dccaa92dfb96336f6914c7d7a047d11476d889808e79836826c88bbd",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "fd438e60dccaa92dfb96336f6914c7d7a047d11476d889808e79836826c88bbd"
+      },
+      {
+        "path": "tests/test_user_acceptance.py",
+        "sha256": "f07e79dad334a577c8cdfd801b205f59d626b0a14f6dac0f3fe91b625b2a5968",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "f07e79dad334a577c8cdfd801b205f59d626b0a14f6dac0f3fe91b625b2a5968"
+      },
+      {
+        "path": "tests/test_whitebox_runtime.py",
+        "sha256": "9c4e20e6fbfec8c00aa3d422d0327a916fb34c81e4ecd82812181e0f16a7d63b",
+        "baseline_basis": "native_prechange_sha256",
+        "baseline_sha256": "9c4e20e6fbfec8c00aa3d422d0327a916fb34c81e4ecd82812181e0f16a7d63b"
+      }
+    ],
+    "boundary": "Native prechange hashes cover the initially captured runtime/tests/scripts; remaining baseline files came from HEAD Git blobs. LF/CRLF text differences are explicitly identified, not claimed as raw-byte matches."
+  },
+  "changes": [
+    {
+      "path": "README.md",
+      "before_sha256": "d935f22d60dec41ba03c397657fa78f3a15ca9e80e2ddd3fcf89e2e3eb956550",
+      "after_sha256": "56185644f7cc4a5f48f151156f6eb496ee606a872c3a11521481be4e6bdd6ebc"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "before_sha256": "b8f1b3416ddf22804e607f1c7d6e4e7802792b3a873d5e64992f0c7bb6c1d6b8",
+      "after_sha256": "41fc86216e806f36ce5e099a6803bf1dd8df5548e1bd95b95fbe0cea98d190e0"
+    },
+    {
+      "path": "SKILL_CATALOG.md",
+      "before_sha256": "513596c3a87e7fab84af403d8100effa4c7c4a858e8b30fa4ae2f596ec5dde91",
+      "after_sha256": "10a806ad48f0331047fa6cac52bfd75beae916967e55e2f4add63c8a3dd48ddf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "before_sha256": "2a20a9a174ab5edc668b401a50be4fd2a675b549381df8499c20b4417a574e7e",
+      "after_sha256": "d7ec9d1008dee9f8aebba3ab91389f895d66e061393f39063c88db09caca0d4b"
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "before_sha256": "dec3192b20e0d56a78ad6262587e05f7adf9ffa6b51ed2cc66e6052c0b404be9",
+      "after_sha256": "22da3138d32b91abf7e00e58e8538b5da269d1798c7b93911a9f935222284d0f"
+    },
+    {
+      "path": "docs/skill-contracts.json",
+      "before_sha256": "deaa65a4f3464a81c7278fe71a0ff7614e54c16e21a29daced1c110ee72d83ed",
+      "after_sha256": "44b3d8637ebb3b30d308b2ce6e777635a85259f989dbfa1593f86539db0d5564"
+    },
+    {
+      "path": "docs/skills/INDEX.md",
+      "before_sha256": "c731dc160795655976000649a94ce7f6d429edfee3cc600ddc6bcf566aa602b7",
+      "after_sha256": "8ed6ed2f1e5c52e90af4a7e85b8cf2b4bf28b3d4b8adb544954a15d2ca1a7030"
+    },
+    {
+      "path": "docs/skills/en/ai-storyboard-director.md",
+      "before_sha256": "418bf9698b8b9d79d1d611b00135bbd82783481c21005d322ede3a885d1908c5",
+      "after_sha256": "c2d56db827f0984cd5878af01ec718ca9ca4a6254d9f35a49bd23b463913d4f0"
+    },
+    {
+      "path": "docs/skills/en/scene-asset.md",
+      "before_sha256": "3c3c62d8d0786576eff9120c8b73bcb8a5b8a46dc1a9d36c885730c97a2dee18",
+      "after_sha256": "dc0efc7162e86ee7e60e997c19d9a468d239d096a4225b45880ef85c32601bd8"
+    },
+    {
+      "path": "docs/skills/zh-CN/ai-storyboard-director.md",
+      "before_sha256": "0062db2c5a9a8ea8bed5dd195600f1b8c281dee0c12b54b38dd327f402ad541e",
+      "after_sha256": "c81055ffafc9ba21a44e8d84325e5b13049339de960072c923c531d386614356"
+    },
+    {
+      "path": "docs/skills/zh-CN/scene-asset.md",
+      "before_sha256": "138b18579b156c1918608e831a8f53e35f63451e7522fa7b6820deadc70888c0",
+      "after_sha256": "92c03eb1d0ea2b8a25f80260f5396d1c07ba83ffeea9d976e8484dfb136e6191"
+    },
+    {
+      "path": "scripts/build_review_profiles.py",
+      "before_sha256": "072805e60e7f1373f9e4c40f888f413c902c77f711c5a02acb13b2307caf14f9",
+      "after_sha256": "39fdd0a94daba8b4fae7d984a873136c71e4cb12bfc9da99a084ebae20ebbd58"
+    },
+    {
+      "path": "skills/ai-short-drama-production/references/production-handoff.md",
+      "before_sha256": "774dab18be6959efcff42a800ea94381b95239e7290cc9fb9821cb19eb7f88bc",
+      "after_sha256": "d7139685ba90b124ca54df8e341f08a78937efd56933a6983484b8ace308604b"
+    },
+    {
+      "path": "skills/ai-storyboard-director/SKILL.md",
+      "before_sha256": "51044c78b302069ecf91c8c7a23461a5b8ba1fc8b3660f13f9d0052e2faf8adb",
+      "after_sha256": "5076a781675d324c947461235ce806f8f6ad2eea8cb10722f42b8b989a4a5a00"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/camera-motion-diagnostics.md",
+      "before_sha256": "20cafa65abef0c7f44497565c303a3d2a52f141235a2202d32201e2f625d497f",
+      "after_sha256": "7a38de7eedd394e27130593cef2c791c7590c3871b04d71dc44732833d6fc91f"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/cinematography-design-engine.md",
+      "before_sha256": "5ccaec2900c481cbb04aee4777f36fec89da4a69ced61afecb64ab11e92031f8",
+      "after_sha256": "c5255a62cba77141a7e6557f9ca0413f537b14b086fb00e69029a9e1b90e5937"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/design-memory-protocol.md",
+      "before_sha256": "614c0f9825b5a32efdaf5a130101bf5ed1aa7aa2c5ef7a3ad517f3b2a50c79a9",
+      "after_sha256": "beeb4d4cc663f8401b20d5f3b9f5a7a13c94fb52f81c42f8b9f6cbcd5a3a5569"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/production-contract.md",
+      "before_sha256": "b2a8ab33eeb5259b2bda8962f9f873766020303aba26694ef4195f4a28751fd0",
+      "after_sha256": "c64fed7bb7ead010cb278031343ddfe7d488c34cc29d67131de7368619ecf9df"
+    },
+    {
+      "path": "skills/ai-storyboard-director/references/shot-design-engine.md",
+      "before_sha256": "b5528028a33ca0cb3f404ef4587917c8a46a743fa466aee33c69fb43576d0991",
+      "after_sha256": "ac105e8f56d4b701169138849322c7bc0baf9be529b67fb6857cbdec2179a542"
+    },
+    {
+      "path": "skills/ai-storyboard-director/scripts/design_memory.py",
+      "before_sha256": "919936768f1454f8b0c2f49d43c26ee1835f08eaead82fa2882d310f1920c2a2",
+      "after_sha256": "a4bf20df6f40daaed386424b51187f4dc88d7d3bf0bc62380c007d618f0eeb55"
+    },
+    {
+      "path": "skills/cyberpunk-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "skills/director-agent/SKILL.md",
+      "before_sha256": "6f6bf9faa49378601e057e4bbacbeb1af091871252f06de1dcad25487d4a57c3",
+      "after_sha256": "afebed4a56baf1e41f08c1a020cab876eea48985723336193ca725c00e8b49f3"
+    },
+    {
+      "path": "skills/director-agent/references/director-thinking-spine.md",
+      "before_sha256": "c80764e0e895ba93bd004f839d90db7f00859c97cf30d860272ef0227b5c91b9",
+      "after_sha256": "e5325a784447ca52394b1cbf0611229a5b90652c08189e275f6e2e3616d6b082"
+    },
+    {
+      "path": "skills/director-agent/references/production-storyboard-compiler.md",
+      "before_sha256": "fabf7537eb9d58891ff782ad88c11637955f8d9ed5fdbd63ac3d9709895d3382",
+      "after_sha256": "90097e0f6d2b40f1975e5711c59c2cadac3da7224608a7195efc75d614da41a0"
+    },
+    {
+      "path": "skills/epic-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "skills/fantasy-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "skills/horror-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "skills/noir-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "skills/produce-ai-video/SKILL.md",
+      "before_sha256": "a77badae3557c45ee9e25972ef0fe37dbb4ee759351184c80c67febe98793d0c",
+      "after_sha256": "6c3c2fb8148b31e814a397a09d76de077373fb678753196aef293346216ef5f2"
+    },
+    {
+      "path": "skills/produce-ai-video/references/storyboard-prompt-compiler.md",
+      "before_sha256": "a18a3fcf2b2f81df61909511cff2a5cc4c6fea70b9782a1006ac23b74193e7b8",
+      "after_sha256": "8e6bcc800bb837bc381585209b91737a0400f858efc4d98a8642ea12f358bfef"
+    },
+    {
+      "path": "skills/romance-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "skills/scene-asset/SKILL.md",
+      "before_sha256": "900902c53eb529fddab7275d76d037ee5fafad2832c9d56858e663e366424601",
+      "after_sha256": "305527d5e25a5438dd8796fcf7ebc298307f5491bcd45cba136b85ce2e56f97d"
+    },
+    {
+      "path": "skills/scene-asset/references/cinematic-image-direction.md",
+      "before_sha256": "7b5e59327ddf85ca1d685e70a7efdfde237fbef78b9c13a94c3f037268358d77",
+      "after_sha256": "fd7388e4709209f16b00edfbeb358de7268a1cdd9a47ff731096e108fb041bc6"
+    },
+    {
+      "path": "skills/scene-asset/references/scene-multiview-design.md",
+      "before_sha256": "124e144c0ebaa818b7fd0181015b23c637f944a46472728a3ea8aeb37a77b1d9",
+      "after_sha256": "0430df21ee74d2808ae9fa7df20219d242d64411bde05b43b01e93c1edd79ad6"
+    },
+    {
+      "path": "skills/war-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "a10e10befb0053c10605cefb18641b67c334927c4428850ee7f60c5c1621258c",
+      "after_sha256": "f5729b956749aa6a45ba90ea4175a3d79d169a688d1aca254f73397204397cf1"
+    },
+    {
+      "path": "skills/wuxia-design/references/COMMON-12-SECTION-PROTOCOL.md",
+      "before_sha256": "8e1f7f9f67a790cde87d951a9251d7d704297c4bb2035b0ed724d69efc95c04b",
+      "after_sha256": "9b9f3b638d5cae4503bef8330830c9199af6a84f301f771287fa31c44380570a"
+    },
+    {
+      "path": "tests/test_review_profiles.py",
+      "before_sha256": "fb0738edf164bee17fe12bfae27a51df160a6c7e34e47b7738ab695daa8284bd",
+      "after_sha256": "d8776d410816a0d9c8f6dc55a2454380ee4b255f94ee7d901cb3b6c1d71274e3"
+    },
+    {
+      "path": "tests/test_storyboard_memory_cli.py",
+      "before_sha256": "179a14edef9fe7a3ea717f6e8c4a24f5d1035345a60b0476ee5578b54431435b",
+      "after_sha256": "f5306b792b1e9786782c93f11bdf39bc46ff92fb2591941e050944ad4f8ea386"
+    }
+  ],
+  "first_validation_attempts": [
+    {
+      "check": "regression",
+      "command": "python -B -m unittest discover -s tests -v",
+      "exit_code": 1,
+      "tail": [
+        "  ",
+        "  创作与本地自检沿用以上相同核心。只有当前任务已明确启用Jev文字复核时，再读 `references/semantic-review.md`，用 `scripts/semantic_review.py` 核对实际成品与少量锁定要求。安装B不授权外发素材，不自动联网、不自动改稿或采用创意候选。缺凭证、服务失败或证据不足时如实保留候选和未完成状态；文字检查不证明实际媒体、审美或用户接受。",
+        "",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 224 tests in 13.600s",
+        "",
+        "FAILED (failures=1, skipped=4)"
+      ]
+    },
+    {
+      "check": "portable_repository",
+      "command": "python -B scripts/validate_repository.py",
+      "exit_code": 1,
+      "tail": [
+        "Skills checked: 21 (stable=18, experimental=3)",
+        "Markdown files checked: 268",
+        "GitHub design guides required: 42 (21 English + 21 Simplified Chinese)",
+        "Portable hosts documented: Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy, generic",
+        "Warnings: 0",
+        "Errors: 1",
+        "ERROR: broken relative link: RELEASE_NOTES.md -> docs/maintenance/2026-10-10-cinematic-fcml-upgrade.md"
+      ]
+    },
+    {
+      "check": "independence",
+      "command": "python -B scripts/validate_skill_independence.py",
+      "exit_code": 0,
+      "tail": [
+        "Skills checked: 21",
+        "Isolation copies checked: 21",
+        "Errors: 0"
+      ]
+    },
+    {
+      "check": "guides",
+      "command": "python -B scripts/validate_skill_docs.py",
+      "exit_code": 0,
+      "tail": [
+        "Contract entries: 21",
+        "Guides expected: 42",
+        "Packaged source files covered: 188",
+        "Errors: 0"
+      ]
+    },
+    {
+      "check": "pages",
+      "command": "python -B scripts/validate_pages_site.py",
+      "exit_code": 0,
+      "tail": [
+        "Pages HTML tags checked: 207",
+        "Pages IDs checked: 14",
+        "Errors: 0"
+      ]
+    },
+    {
+      "check": "gallery",
+      "command": "python -B scripts/validate_style_gallery.py",
+      "exit_code": 0,
+      "tail": [
+        "Historical style gallery items checked: 9",
+        "Errors: 0"
+      ]
+    }
+  ],
+  "text_runs": {
+    "comparisons": 3,
+    "actual_boundary_cases": 8,
+    "source": "text-runs.json",
+    "independent_review": "independent-review.json",
+    "media": "not_run",
+    "user_acceptance": "not_requested"
+  },
+  "temporary_cleanup": {
+    "verified_absent": true,
+    "scope": "isolated task temporary directory only",
+    "removed_files": 943,
+    "removed_logical_bytes": 327668189,
+    "raw_fcml_source_and_temporary_dependencies_removed": true,
+    "delivered_artifacts_preserved": true
+  },
+  "final_checks": [
+    {
+      "check": "portable_repository",
+      "command": "python -B scripts/validate_repository.py",
+      "exit_code": 0,
+      "output": "Skills checked: 21 (stable=18, experimental=3)\nMarkdown files checked: 271\nGitHub design guides required: 42 (21 English + 21 Simplified Chinese)\nPortable hosts documented: Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy, generic\nWarnings: 0\nErrors: 0\n"
+    },
+    {
+      "check": "independence",
+      "command": "python -B scripts/validate_skill_independence.py",
+      "exit_code": 0,
+      "output": "Skills checked: 21\nIsolation copies checked: 21\nErrors: 0\n"
+    },
+    {
+      "check": "guides",
+      "command": "python -B scripts/validate_skill_docs.py",
+      "exit_code": 0,
+      "output": "Contract entries: 21\nGuides expected: 42\nPackaged source files covered: 188\nErrors: 0\n"
+    },
+    {
+      "check": "pages",
+      "command": "python -B scripts/validate_pages_site.py",
+      "exit_code": 0,
+      "output": "Pages HTML tags checked: 207\nPages IDs checked: 14\nErrors: 0\n"
+    },
+    {
+      "check": "gallery",
+      "command": "python -B scripts/validate_style_gallery.py",
+      "exit_code": 0,
+      "output": "Historical style gallery items checked: 9\nErrors: 0\n"
+    },
+    {
+      "check": "fcml_validate",
+      "command": "python -B skills/ai-storyboard-director/scripts/fcml_motion.py validate",
+      "exit_code": 0,
+      "output": "{\n  \"passed\": true,\n  \"errors\": [],\n  \"scope\": \"evidence/mapping/structure; not semantic or artistic acceptance\"\n}\n"
+    },
+    {
+      "check": "scene_quick",
+      "command": "python -B <system-skill-creator>/scripts/quick_validate.py skills/scene-asset",
+      "exit_code": 0,
+      "output": "Skill is valid!\n"
+    },
+    {
+      "check": "storyboard_quick",
+      "command": "python -B <system-skill-creator>/scripts/quick_validate.py skills/ai-storyboard-director",
+      "exit_code": 0,
+      "output": "Skill is valid!\n"
+    }
+  ],
+  "package_smoke": {
+    "archives": [
+      {
+        "skill": "scene-asset",
+        "source_files": 6,
+        "archive_files": 6,
+        "crc_verified": true,
+        "source_bytes_verified": true,
+        "sha256": "7e24cfd8251f4be13cd230e2ecdb49dd626bf5401d836bccb64e79e3b7c3827d"
+      },
+      {
+        "skill": "ai-storyboard-director",
+        "source_files": 18,
+        "archive_files": 18,
+        "crc_verified": true,
+        "source_bytes_verified": true,
+        "sha256": "783e370ae12da85d5560f38dd738e299cc9514b908370050635d805759825982"
+      }
+    ],
+    "isolated_cli": [
+      {
+        "args": [
+          "validate"
+        ],
+        "exit_code": 0,
+        "parsed_json": true
+      },
+      {
+        "args": [
+          "get",
+          "--id",
+          "yj058"
+        ],
+        "exit_code": 0,
+        "parsed_json": true
+      },
+      {
+        "args": [
+          "search",
+          "--query",
+          "跟随",
+          "--operation",
+          "translation",
+          "--limit",
+          "3"
+        ],
+        "exit_code": 0,
+        "parsed_json": true
+      }
+    ],
+    "media_generated": false,
+    "published_or_installed": false
+  },
+  "source_replay": {
+    "catalog_count": 117,
+    "full_content_available_count": 117,
+    "comparison": {
+      "added_ids": [],
+      "removed_ids": [],
+      "changed_prompt_ids": [],
+      "mapping_gaps": []
+    },
+    "bundle_sha256": "f96229938f3d9175827084763e5d07afe4a795f762ece298eb74a237bd9f2f4b",
+    "enumeration_scope": "public homepage catalog in the supplied application bundle"
+  },
+  "git_diff_check": {
+    "exit_code": 0
+  },
+  "delivery_file_check": {
+    "ready": true,
+    "code": "DECLARED_DELIVERY_CHECKS_PASS",
+    "errors": [],
+    "enforcement": "explicit_command_exit_status_only",
+    "evidence_level": "declared_kind_media_signature_file_integrity_and_artifact_bound_records; not_playback_or_semantic_verification",
+    "semantic_accuracy": "requires_content_review",
+    "user_acceptance": "unchanged",
+    "automatic_hook_activation": false,
+    "artifact_count": 48,
+    "raw_hash_preservation_count": 456
+  },
+  "project_state_check": {
+    "revision": 161,
+    "ready": true,
+    "conflicts": [],
+    "installed_version": "5.7.2",
+    "candidate_source_version": "5.8.0"
+  }
+}

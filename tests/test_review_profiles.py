@@ -59,7 +59,8 @@ class ReviewProfileTests(unittest.TestCase):
         self.assertFalse(set(a) - set(b))
         differing = {path for path in a if a[path] != b[path]}
         self.assertEqual(differing, {"PROFILE.json", builder.STORYBOARD + "SKILL.md", builder.STORYBOARD + "VERSION_MANIFEST.json", builder.STORYBOARD + "VERSION_MANIFEST.sha256"})
-        expected_b = a[builder.STORYBOARD + "SKILL.md"].decode().replace("**5.7.1**", "**5.7.1-jev**") + builder.B_SECTION
+        expected_b = a[builder.STORYBOARD + "SKILL.md"].decode().replace(
+            f"**{builder.VERSION}**", f"**{builder.VERSION}-jev**", 1) + builder.B_SECTION
         self.assertEqual(b[builder.STORYBOARD + "SKILL.md"].decode(), expected_b)
         self.assertEqual(b[builder.STORYBOARD + "scripts/semantic_review.py"], self.semantic)
         self.assertNotIn("scripts/check_skill_suite.py", a)

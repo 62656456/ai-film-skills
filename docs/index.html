@@ -1,240 +1,176 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#0b0f14" />
-    <meta
-      name="description"
-      content="Open Film Skills turns scripts into directing decisions, reusable visual assets, cinematic storyboards, prompts, and AI-video production workflows."
-    />
+    <meta name="theme-color" content="#101312" />
+    <meta name="description" content="开放影视技能：从剧本与导演判断，到人物场景道具、分镜摄影、生成提示词和实际视频制作。21个独立模块，按当前阶段交付。" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Open Film Skills" />
-    <meta
-      property="og:description"
-      content="18 regular and 3 experimental Agent Skills, 42 bilingual guides, and complete filmmaking workflow and storyboard examples."
-    />
-    <meta
-      property="og:image"
-      content="https://62656456.github.io/ai-film-skills/assets/social-preview.png"
-    />
+    <meta property="og:title" content="Open Film Skills｜开放影视技能" />
+    <meta property="og:description" content="把故事变成可执行的导演、资产、镜头与制作方案。18项常规包、3项实验包、42份中英指南；真实作品与研究过程公开可查。" />
+    <meta property="og:image" content="https://62656456.github.io/ai-film-skills/assets/social-preview.png" />
     <meta property="og:url" content="https://62656456.github.io/ai-film-skills/" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://62656456.github.io/ai-film-skills/" />
     <link rel="stylesheet" href="site.css" />
-    <title>Open Film Skills — Script to screen direction</title>
+    <title>Open Film Skills｜从故事到镜头</title>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to the main content</a>
-
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Open Film Skills home">
-        <span class="wordmark-mark" aria-hidden="true"></span>
-        <span>OPEN FILM SKILLS</span>
+      <a class="wordmark" href="#top" aria-label="开放影视技能首页">
+        <span class="wordmark-mark" aria-hidden="true">OF</span>
+        <span>OPEN FILM SKILLS<small>开放影视技能</small></span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="#top">Skills &amp; workflow</a>
-        <a href="#outcomes">What you can make</a>
-        <a href="#updates">Version updates</a>
-        <a href="https://github.com/62656456/ai-film-skills">GitHub</a>
+      <nav aria-label="主导航">
+        <a href="#workflow">技能与流程</a>
+        <a href="#outcomes">功能与作品</a>
+        <a href="#install">开始使用</a>
+        <a href="#updates">版本更新</a>
+        <a class="nav-source" href="https://github.com/62656456/ai-film-skills">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <p class="eyebrow">01 / THE SKILLS &amp; THE WORKFLOW</p>
-        <h1 id="hero-title">From an idea to a film you can review.</h1>
-        <p class="hero-copy">
-          Open Film Skills helps Codex, Claude Code, TRAE, CodeBuddy, WorkBuddy,
-          and compatible Agents write stories, lock reusable assets, design
-          cinematic shots, build prompts, and organize AI-video production.
-        </p>
-        <p class="hero-copy hero-copy-zh" lang="zh-CN">
-          从剧本和导演判断，到视觉风格、人物场景道具、分镜与提示词，再到按需生成与成片验收；已有方案直接接续，要哪一步，就交付哪一步。
-        </p>
-        <div class="hero-actions" aria-label="Start using Open Film Skills">
-          <a class="button button-primary" href="research/skill-overhaul/workflows/index.md">See the complete workflows</a>
-          <a class="button" href="#outcomes">Explore capabilities &amp; images</a>
-          <a class="text-link" href="https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md">Browse all 21 modules</a>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="signal" aria-hidden="true"></span> 为创作者而写的独立 Agent Skills</p>
+          <h1 id="hero-title"><span>把故事，拍成</span><span>看得懂的<span class="ink-accent">镜头。</span></span></h1>
+          <p class="hero-description">从一个念头到一场戏，从人物与空间到观众的观看顺序。把创作判断写成能继续制作、能实际检查的方案。</p>
+          <p class="hero-secondary">写剧本、定资产、编分镜、交提示词，或进入真实视频制作。已有决定直接接续，要哪一步，就交付哪一步。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#workflow">找到你的创作阶段 <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="#outcomes">看功能与实际作品</a>
+          </div>
+          <p class="hero-meta">独立使用 · 自带运行正文与引用 · 中文 / English</p>
         </div>
-        <dl class="status-line" aria-label="Current source module counts">
-          <div><dt>Regular modules</dt><dd>18</dd></div>
-          <div><dt>Experimental modules</dt><dd>3</dd></div>
-          <div><dt>Independent modules</dt><dd>21</dd></div>
-          <div><dt>Bilingual guides</dt><dd>42</dd></div>
+        <figure class="hero-frame">
+          <div class="frame-heading"><span>一场戏，从可见的选择开始</span><span aria-hidden="true">01 / FRAME</span></div>
+          <a href="showcase/originals/noir-before-the-money.png" aria-label="查看《收钱之前》完整原图">
+            <img src="showcase/noir-before-the-money.webp" width="1200" height="675" fetchpriority="high" alt="《收钱之前》：桌面上的交易与人物间的距离形成关系压力，历史已接受原创静帧" />
+          </a>
+          <figcaption><span><strong>《收钱之前》</strong> · 黑色类型视觉</span><a href="showcase/originals/noir-before-the-money.png">查看完整原图 <span aria-hidden="true">↗</span></a></figcaption>
+          <p class="frame-note">历史已接受的单幅作品；它展示一种观看关系，保留原来的接受范围。</p>
+        </figure>
+        <dl class="source-counts" aria-label="仓库模块与指南数量">
+          <div><dt>常规模块</dt><dd>18<span>项</span></dd></div>
+          <div><dt>实验模块</dt><dd>3<span>项</span></dd></div>
+          <div><dt>独立源码包</dt><dd>21<span>个</span></dd></div>
+          <div><dt>中英设计指南</dt><dd>42<span>份</span></dd></div>
         </dl>
       </section>
 
-      <section class="production-rail" aria-labelledby="rail-title">
-        <div class="section-heading">
-          <p class="kicker">01 / HOW THE PARTS CONNECT</p>
-          <h2 id="rail-title">Start from the material you already have.</h2>
-          <p class="section-intro">The full route connects writing, directing, visual language, assets, shots, prompts, optional previs, generation, editing, sound, playback, and user review. Existing material enters at its relevant stage.</p>
+      <section class="production-rail" id="workflow" aria-labelledby="workflow-title">
+        <div class="section-heading split-heading">
+          <div><p class="kicker">01 / 技能与完整工作流程</p><h2 id="workflow-title">从已有材料，<br />进入下一步。</h2></div>
+          <p class="section-intro">点子、小说、剧本、参考图或已选镜头，都有相应入口。每一步留下明确的交接物，下一步继承已有决定。</p>
         </div>
         <ol class="rail-list">
-          <li><span>01</span><strong>Write</strong><small>story · cause · dialogue</small></li>
-          <li><span>02</span><strong>Direct</strong><small>performance · reveal</small></li>
-          <li><span>03</span><strong>Visuals</strong><small>style · people · space · props</small></li>
-          <li><span>04</span><strong>Shots</strong><small>blocking · camera · cuts</small></li>
-          <li><span>05</span><strong>Prompts</strong><small>compile the chosen design</small></li>
-          <li><span>06</span><strong>Make &amp; review</strong><small>generate · edit · watch · repair</small></li>
+          <li><a href="skills/zh-CN/director-agent.md"><span class="step-number">01</span><strong>剧本</strong><span>人物 · 行动 · 因果 · 对白</span><small>交付：可读故事与场景</small></a></li>
+          <li><a href="skills/zh-CN/director-agent.md"><span class="step-number">02</span><strong>导演</strong><span>表演 · 情绪 · 信息揭示</span><small>交付：导演判断与方案</small></a></li>
+          <li><a href="WORKFLOW.md"><span class="step-number">03</span><strong>视觉与资产</strong><span>风格 · 人物 · 场景 · 道具</span><small>交付：设计与资产合同</small></a></li>
+          <li><a href="skills/zh-CN/ai-storyboard-director.md"><span class="step-number">04</span><strong>分镜与摄影</strong><span>画框 · 调度 · 运镜 · 切点</span><small>交付：具体镜头方案</small></a></li>
+          <li><a href="skills/zh-CN/ai-storyboard-director.md"><span class="step-number">05</span><strong>生成提示词</strong><span>编译 · 连续性 · 保全</span><small>交付：可复制的母稿</small></a></li>
+          <li><a href="skills/zh-CN/produce-ai-video.md"><span class="step-number">06</span><strong>制作与看片</strong><span>生成 · 剪辑 · 声音 · 修复</span><small>交付：可播放的实际媒体</small></a></li>
         </ol>
-        <p class="section-intro">Creative-shot ideas remain optional suggestions until selected. Text requests can finish with the text. Images, previs, and videos run when the current request explicitly calls for those media.</p>
-        <p><a class="text-link" href="research/skill-overhaul/workflows/active-a.svg">Open the current A workflow at full size</a> · <a href="research/skill-overhaul/workflows/index.md">Compare the prior workflow, revised A, and optional B</a></p>
+        <div class="workflow-bottom">
+          <p>已有导演方案就直接编分镜；已有锁定镜头就继承动作与摄影。创意思路先作为备选，采用后再进入主方案。需要白模或实际生成时，再进入对应制作阶段。</p>
+          <div class="link-stack"><a href="WORKFLOW.md">逐节点看职责与交接 <span aria-hidden="true">↗</span></a><a href="research/skill-overhaul/workflows/active-a.svg">查看历史 A 完整流程图</a><a href="research/skill-overhaul/workflows/index.md">三版流程与研究记录</a></div>
+        </div>
       </section>
 
       <section class="outcomes" id="outcomes" aria-labelledby="outcomes-title">
-        <div class="section-heading">
-          <p class="kicker">02 / CAPABILITIES, PURPOSES &amp; IMAGES</p>
-          <h2 id="outcomes-title">See what each stage helps you decide.</h2>
-          <p class="section-intro">These existing original stills illustrate visual storytelling choices. Their individual acceptance records do not approve every Skill behavior or the new comparison set.</p>
-        </div>
+        <div class="section-heading"><p class="kicker">02 / 功能、实现目的与实际作品</p><h2 id="outcomes-title">让每个创作决定，<br />有具体的落点。</h2><p class="section-intro">以下为已有原创静帧，点击可看完整原图。作品的历史接受记录与当前源码的行为验证分别保留。</p></div>
         <div class="outcome-grid">
           <article>
-            <p class="index">STORY &amp; DIRECTION</p>
-            <a href="showcase/originals/noir-before-the-money.png"><img src="showcase/noir-before-the-money.webp" width="1672" height="941" loading="lazy" alt="An original noir scene illustrating how visible action and concealed information can carry a story" /></a>
-            <h3>Turn a scene into choices</h3>
-            <p>Write or repair causality, character action, dialogue, performance, and the order in which the audience discovers information.</p>
-            <p><code>director-agent</code> delivers readable screenplays and director plans, with AI-executable compilation only when needed.</p>
-            <a href="skills/en/director-agent.md">Explore writing and directing</a>
+            <a class="image-link" href="showcase/originals/epic-open-gates.png" aria-label="查看《开门》完整原图"><img src="showcase/epic-open-gates.webp" width="1200" height="675" loading="lazy" alt="《开门》：巨大城门与行进的人群共同表达规模中的个人处境，历史已接受静帧" /></a>
+            <div class="outcome-copy"><p class="index">STORY / 编剧与导演</p><h3>先让这一场戏成立。</h3><p>人物为何行动，谁先知道真相，一句对白怎样改变关系。检查故事因果与表演，再把具体问题落实到剧本和导演方案。</p><p class="deliverable">直接交付 <strong>剧本、诊断或导演方案</strong></p><a class="text-link" href="skills/zh-CN/director-agent.md">了解导演 Agent <span aria-hidden="true">↗</span></a></div>
           </article>
           <article>
-            <p class="index">VISUALS &amp; ASSETS</p>
-            <a href="showcase/originals/romance-tilted-umbrella.png"><img src="showcase/romance-tilted-umbrella.webp" width="1672" height="941" loading="lazy" alt="An original romance image using an umbrella and the distance between two people to express their relationship" /></a>
-            <h3>Give the world continuity</h3>
-            <p>Choose a visual language, then establish the characters, places, and props the story actually needs. Reuse approved assets.</p>
-            <p>Character, scene, and prop Skills deliver designs, prompts, or requested reference images. Visual routes support them without deciding the story.</p>
-            <a href="WORKFLOW.md">Explore visual routes and the three asset Skills</a>
+            <a class="image-link" href="showcase/originals/romance-tilted-umbrella.png" aria-label="查看《把伞偏过去》完整原图"><img src="showcase/romance-tilted-umbrella.webp" width="1200" height="675" loading="lazy" alt="《把伞偏过去》：系鞋与偏伞的双向照顾表达人物关系，历史已接受静帧" /></a>
+            <div class="outcome-copy"><p class="index">WORLD / 视觉与资产</p><h3>让人和世界相互作用。</h3><p>从剧情、身份和使用方式设计人物、空间与道具。类型风格落实到构图、材料与光色，已确认资产可继续复用。</p><p class="deliverable">直接交付 <strong>资产设计、参考任务与合同</strong></p><div class="inline-links"><a href="skills/zh-CN/character-asset.md">人物</a><a href="skills/zh-CN/scene-asset.md">场景</a><a href="skills/zh-CN/prop-asset.md">道具</a><a href="research/visual/index.md">视觉研究 ↗</a></div></div>
           </article>
           <article>
-            <p class="index">SHOTS &amp; PRODUCTION</p>
-            <a href="showcase/originals/hard-scifi-orbital-morning.png"><img src="showcase/hard-scifi-orbital-morning.webp" width="1672" height="941" loading="lazy" alt="An original orbital-life image using human activity, scale, and a coherent physical environment" /></a>
-            <h3>Make the chosen view executable</h3>
-            <p>Develop camera position, movement, focus, blocking, timing, sound, and cut points. Compile selected shots into prompts without redesigning them.</p>
-            <p>Requested video production adds generation, selection, editing, sound, complete playback, and repair.</p>
-            <a href="skills/en/ai-storyboard-director.md">Explore storyboard and prompt design</a>
+            <a class="image-link" href="showcase/originals/hard-scifi-orbital-morning.png" aria-label="查看轨道生活完整原图"><img src="showcase/hard-scifi-orbital-morning.webp" width="1200" height="675" loading="lazy" alt="轨道生活中的人类活动、尺度与物理环境，历史已接受原创硬科幻静帧" /></a>
+            <div class="outcome-copy"><p class="index">CAMERA / 分镜与摄影</p><h3>决定观众怎样看见。</h3><p>把距离、对象大小、遮挡与揭示组织成观看顺序，再设计机位、运动、焦点和切点。已选镜头编译时保住动作与结果。</p><p class="deliverable">直接交付 <strong>可读分镜或六模块提示词</strong></p><a class="text-link" href="skills/zh-CN/ai-storyboard-director.md">了解分镜导演 <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
-        <p class="media-note">Eleven visual routes: cyberpunk, epic, fantasy, horror, noir, romance, war, wuxia, experimental hard science fiction, experimental guofeng, and external xianxia. External xianxia is outside the repository's 21 distributed modules. <a href="showcase/manifest.json">View the existing stills' source and acceptance records</a>.</p>
+        <p class="media-note">视觉路线包括赛博朋克、史诗、奇幻、恐怖、黑色、爱情、战争、武侠，以及实验硬科幻、实验古风和外部仙侠。外部仙侠仅作为工作流入口，未计入本仓库 21 个分发模块。<a href="showcase/manifest.json">作品来源与接受范围</a></p>
+      </section>
+
+      <section class="shot-design" aria-labelledby="shot-title">
+        <div class="shot-heading"><p class="kicker">CAMERA NOTES / 镜头怎样成为画面</p><h2 id="shot-title">先选择观看关系，<br />再选择摄影机制。</h2><p>同一故事、同一动作、同一时长，可以形成不同的观看方案。比较真正可见的画面关系，再决定哪种拍法服务这一场戏。</p><a class="text-link" href="https://github.com/62656456/ai-film-skills/blob/main/skills/ai-storyboard-director/references/shot-design-engine.md">阅读观看方案设计 <span aria-hidden="true">↗</span></a></div>
+        <div class="shot-notes">
+          <article><span class="note-number">01</span><h3>画框里，先看见什么？</h3><p>比较起点、转折与终点：人物多大，关系是否同时可见，哪块信息被遮挡，何时显露。差异落实在画面与信息顺序中。</p></article>
+          <article><span class="note-number">02</span><h3>让摄影机有理由移动。</h3><p>选择能支持当前方案的机制，写清画内触发、路径、朝向、焦点接力、速度与收稳。包内 FCML 提供 115 个可检索机制作为设计素材。</p></article>
+          <article><span class="note-number">03</span><h3>让人物、光与动作处在同一现场。</h3><p>检查真实光路、白平衡与材质呈色；打戏保留攻防应答、持物、接触和双方反作用，空间检查同时容纳人物、道具与摄影机。</p></article>
+          <article><span class="note-number">04</span><h3>写进提示词，也要保住设计。</h3><p>保存关键决定与摄影阶段，再从最终文本反向重建画框、路径和终态。文字保全与实际图像、连续视频的执行分别检验。</p></article>
+          <p class="shot-library-link"><a href="https://github.com/62656456/ai-film-skills/blob/main/skills/ai-storyboard-director/references/fcml-motion-index.md">查看 FCML 镜头机制库与使用边界 <span aria-hidden="true">↗</span></a></p>
+        </div>
       </section>
 
       <section class="proof" id="proof" aria-labelledby="proof-title">
-        <div class="proof-copy">
-          <p class="kicker">02 / THE COMPLETE NEW RESEARCH</p>
-          <h2 id="proof-title">Seven stories. Three versions. The same source.</h2>
-          <p>Compare 30-second director storyboards for suspense, horror, romance, close combat, gunfire rescue, racing, and superpower action. Each story uses the same characters, setting, dialogue, and ending across 5.6.5, A 5.7.1, and B 5.7.1-jev.</p>
-          <p>Look at what the audience sees first, the camera's relationship to the action, continuity, and the ending. Shot count alone does not determine the better design.</p>
-          <p class="boundary">The 21 new boards are static comparison images awaiting individual review. They are not 21 accepted results or proof of generated-video motion. Recorded drawing errors remain visible in the research notes.</p>
-          <p><a class="text-link" href="research/skill-overhaul/seven-genres/viewer.html">Open all 21 full-size comparison boards</a></p>
-          <p><a href="research/skill-overhaul/seven-genres/index.md">Read the seven-story comparison and observed issues</a></p>
-          <p><a href="research/skill-overhaul/index.md">Explore the complete overhaul research</a> · <a href="research/skill-overhaul/fusion/index.md">Review the 5.6.5 + A fusion direction</a></p>
+        <div class="section-heading split-heading"><div><p class="kicker">RESEARCH / 原图与过程一起公开</p><h2 id="proof-title">同一个故事，<br />看三种拍法。</h2></div><div><p class="section-intro">历史七题材研究把悬疑、恐怖、爱情、打戏、枪战、赛车与超能力动作，分别交给 5.6.5、A 5.7.1 与 B 5.7.1-jev。故事人物、场景、对白与结尾相同。</p><p class="boundary">21 张首轮分镜图仍有逐图待修记录；静图的观看效果与视频运镜分别验证。这批保留原测试标签，未改贴为 5.8.3 成果。</p></div></div>
+        <div class="comparison-strip" aria-label="悬疑故事《背过身的镜子》三版原图预览">
+          <figure><a href="research/skill-overhaul/seven-genres/images/01-suspense-current.png"><img src="research/skill-overhaul/seven-genres/images/01-suspense-current.png" width="941" height="1672" loading="lazy" alt="《背过身的镜子》测试时默认 5.6.5 首轮分镜图，点击查看完整原图" /></a><figcaption><strong>5.6.5</strong><span>测试时默认版本</span></figcaption></figure>
+          <figure><a href="research/skill-overhaul/seven-genres/images/01-suspense-a.png"><img src="research/skill-overhaul/seven-genres/images/01-suspense-a.png" width="941" height="1672" loading="lazy" alt="《背过身的镜子》A 5.7.1 首轮分镜图，点击查看完整原图" /></a><figcaption><strong>A 5.7.1</strong><span>主模型文字复核</span></figcaption></figure>
+          <figure><a href="research/skill-overhaul/seven-genres/images/01-suspense-b.png"><img src="research/skill-overhaul/seven-genres/images/01-suspense-b.png" width="941" height="1672" loading="lazy" alt="《背过身的镜子》B 5.7.1-jev 首轮分镜图，点击查看完整原图" /></a><figcaption><strong>B 5.7.1-jev</strong><span>可选 Jev 文字复核</span></figcaption></figure>
         </div>
-        <a href="research/skill-overhaul/seven-genres/viewer.html"><img src="research/skill-overhaul/seven-genres/images/01-suspense-a.png" width="941" height="1672" loading="lazy" alt="A 5.7.1 suspense storyboard for the same thirty-second antique-shop story used in the three-version comparison; open to inspect all 21 boards" /></a>
+        <div class="research-actions"><a class="button button-secondary" href="research/skill-overhaul/seven-genres/viewer.html">切换题材，查看全部 21 张高清对照 <span aria-hidden="true">↗</span></a><a href="research/skill-overhaul/seven-genres/index.md">原故事、分镜、提示词与逐图问题</a></div>
+        <div class="research-links"><a href="research/skill-overhaul/fusion/index.md">《修表铺外》融合研究</a><a href="research/skill-overhaul/index.md">完整导演整改研究</a><a href="research/visual/index.md">画风与古风真实感研究</a><a href="RESEARCH.md">研究结论与下一步问题</a></div>
       </section>
 
       <section class="media-evidence" id="media" aria-labelledby="media-title">
-        <div class="section-heading">
-          <p class="kicker">02 / OPTIONAL PREVIS &amp; ACTUAL MEDIA</p>
-          <h2 id="media-title">Check space and contact before production.</h2>
-          <p class="section-intro">
-            These original historical clips show bounded 3D previs capabilities. They are not finished AI films. The whitebox executor is available as an experimental source module; its output still needs task-specific review.
-          </p>
-        </div>
+        <div class="section-heading split-heading"><div><p class="kicker">PREVIS / 历史可播放证据</p><h2 id="media-title">先看空间与接触，<br />是否真的成立。</h2></div><p class="section-intro">按需预演让摄影机与基础走位可以播放检查。下面两条原始历史片段展示有限预演和单动作门；不是最终 AI 成片，也未作为新版本媒体验收。</p></div>
         <div class="media-grid">
           <article>
-            <video
-              controls
-              preload="metadata"
-              poster="media/previs-blocking-poster.png"
-              width="960"
-              height="540"
-              aria-label="Five-second 3D previs showing a push, actor blocking, a cut, lateral camera movement, and parallax"
-            >
-              <source src="media/previs-blocking-5s.mp4" type="video/mp4" />
-              Your browser does not support MP4 video. <a href="media/previs-blocking-5s.mp4">Download the clip.</a>
-            </video>
-            <div class="media-copy">
-              <p class="index">5.0s · 960×540 · 24fps</p>
-              <h3>Camera and blocking previs</h3>
-              <p>Shows a playable push, actor blocking, a hard cut, lateral tracking, and scene parallax in a rough 3D space.</p>
-              <p class="boundary">Historical internal visual check of this clip. It does not establish final-film quality or every camera plan's execution.</p>
-            </div>
+            <video controls preload="metadata" poster="media/previs-blocking-poster.png" width="960" height="540" aria-label="5秒历史3D白模预演，展示推进、人物走位、切镜、横移与视差"><source src="media/previs-blocking-5s.mp4" type="video/mp4" />浏览器不支持此视频。<a href="media/previs-blocking-5s.mp4">打开完整 MP4。</a></video>
+            <div class="media-copy"><p class="index">5.0s / 960 × 540 / 24fps</p><h3>基础机位与走位</h3><p>粗略 3D 空间中的推进、人物走位、硬切、横向跟随与场景视差。保留当时对这个片段的内部视觉检查范围。</p><a href="media/previs-blocking-5s.mp4">打开完整原视频 <span aria-hidden="true">↗</span></a></div>
           </article>
           <article>
-            <video
-              controls
-              preload="metadata"
-              poster="media/rigged-contact-poster.png"
-              width="960"
-              height="402"
-              aria-label="Two-point-eight-second rigged action gate showing two-hand grip, shared impact contact, hold, and recoil"
-            >
-              <source src="media/rigged-contact-gate-2.8s.mp4" type="video/mp4" />
-              Your browser does not support MP4 video. <a href="media/rigged-contact-gate-2.8s.mp4">Download the clip.</a>
-            </video>
-            <div class="media-copy">
-              <p class="index">2.8s · 960×402 · 67 frames</p>
-              <h3>Rigged contact action gate</h3>
-              <p>Shows two-hand grip geometry, final-surface contact, a held impact interval, and opposite recoil in one bounded action.</p>
-              <p class="boundary">Single-action gate only. It is not a complete fight, a final render, a production-ready 30-second sequence, or user approval.</p>
-            </div>
+            <video controls preload="metadata" poster="media/rigged-contact-poster.png" width="960" height="402" aria-label="2.8秒历史骨骼接触动作门，展示双手握持、共同接触、撞击停留与反冲"><source src="media/rigged-contact-gate-2.8s.mp4" type="video/mp4" />浏览器不支持此视频。<a href="media/rigged-contact-gate-2.8s.mp4">打开完整 MP4。</a></video>
+            <div class="media-copy"><p class="index">2.8s / 960 × 402 / 67 frames</p><h3>骨骼接触动作门</h3><p>一个限定动作中的双手握持、表面接触、撞击停留与相反方向的反冲。任意完整打斗仍需独立设计、执行与验收。</p><a href="media/rigged-contact-gate-2.8s.mp4">打开完整原视频 <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
-        <p class="media-note">
-          <a href="skills/en/whitebox-previs-executor.md">Read the experimental whitebox guide</a> · <a href="media/media-manifest.json">Inspect the unchanged clips' hashes, scope, and evidence records</a> · <a href="skills/en/produce-ai-video.md">Explore actual video production and full-playback review</a>.
-        </p>
+        <p class="media-note"><a href="research/whitebox/index.md">全部历史白模、生成片与对照</a> · <a href="skills/zh-CN/whitebox-previs-executor.md">实验白模执行器</a> · <a href="media/media-manifest.json">原文件哈希、范围与证据记录</a> · <a href="skills/zh-CN/produce-ai-video.md">实际视频生产与完整看片</a></p>
+      </section>
+
+      <section class="toolbox" aria-labelledby="toolbox-title">
+        <div class="section-heading"><p class="kicker">TOOLBOX / 按任务选入口</p><h2 id="toolbox-title">一套流程，<br />每个模块也能单独使用。</h2></div>
+        <div class="toolbox-grid">
+          <article><h3>故事与摄影</h3><ul><li><a href="skills/zh-CN/director-agent.md">编剧与导演</a><span>故事、人物与导演判断</span></li><li><a href="skills/zh-CN/ai-storyboard-director.md">分镜与摄影</a><span>观看方案、镜头与提示词</span></li><li><a href="skills/zh-CN/ai-short-drama-production.md">短剧生产控制</a><span>独立交付合同与阶段检查</span></li></ul></article>
+          <article><h3>视觉与制作</h3><ul><li><a href="WORKFLOW.md">人物 · 场景 · 道具</a><span>身份、空间与使用状态</span></li><li><a href="https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md#genre-visual-language">类型视觉与实验模块</a><span>按题材处理构图、光色与材料</span></li><li><a href="skills/zh-CN/produce-ai-video.md">实际视频生产</a><span>生成、剪辑、声音与看片修复</span></li></ul></article>
+          <article><h3>创作辅助</h3><ul><li><a href="skills/zh-CN/d-official-market-analysis.md">官方市场分析</a><span>可验证来源与研究边界</span></li><li><a href="skills/zh-CN/d-data-analysis-semantic-layer.md">知识审核与写入</a><span>批准后的来源、版本与冲突检查</span></li><li><a href="skills/zh-CN/web-design-director.md">网页与界面设计</a><span>创作工具的页面与交互</span></li></ul></article>
+        </div>
+        <p class="media-note"><a href="https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md">查看全部 21 个源码包</a> · <a href="skills/INDEX.md">42 份中英设计指南 / English guides</a> · <a href="https://github.com/62656456/ai-film-skills/discussions/7">作品展示与讨论</a></p>
       </section>
 
       <section class="install" id="install" aria-labelledby="install-title">
-        <div class="section-heading">
-          <p class="kicker">02 / USE THE CAPABILITY YOU NEED</p>
-          <h2 id="install-title">Choose one Skill and its current source.</h2>
-        </div>
+        <div class="section-heading split-heading"><div><p class="kicker">GET STARTED / 使用当前源码</p><h2 id="install-title">先选一个 Skill，<br />完成你眼前的任务。</h2></div><p class="section-intro">技能提供创作方法与交付合同。宿主、生成工具、账号和额度由实际使用环境提供；安装后的加载与任务表现分别检查。</p></div>
         <div class="install-layout">
-          <pre aria-label="Skills CLI installation commands"><code>npx --yes skills@latest add 62656456/ai-film-skills --list
+          <div><p class="code-label">查看目录，再安装分镜导演</p><pre aria-label="列出并安装当前仓库分镜导演的命令"><code>npx --yes skills@latest add 62656456/ai-film-skills --list
 
 npx --yes skills@latest add 62656456/ai-film-skills \
   --skill ai-storyboard-director \
   --agent codex \
   --copy \
-  --yes</code></pre>
-          <div class="install-notes">
-            <p>The source catalog contains 18 regular and 3 experimental modules, each with an English and a Simplified Chinese guide. Market research, approved knowledge writing, short-drama control, optional previs, and independent web work have separate entry conditions.</p>
-            <p class="boundary">Historical CLI discovery evidence is retained separately. Current host activation and real task behavior must be checked for the installed source; an old Release download is a different version.</p>
-            <ul>
-              <li><a href="https://github.com/62656456/ai-film-skills/blob/main/examples/skills-cli-install-verification.md">Inspect the historical CLI verification</a></li>
-              <li><a href="https://skills.sh/62656456/ai-film-skills">Open the skills.sh directory</a></li>
-              <li><a href="https://github.com/62656456/ai-film-skills/blob/main/docs/INSTALLATION.md">Read current-source and experimental installation instructions</a></li>
-            </ul>
-          </div>
+  --yes</code></pre><p class="media-note">此入口读取当前仓库源码。需要核对具体版本时，可检出仓库后使用自带安装器；<a href="INSTALLATION.md">完整安装说明</a>保留源码、实验包与历史归档的区别。</p></div>
+          <div class="install-notes"><p class="code-label">第一次调用，可以这样写</p><blockquote><p>使用 $ai-storyboard-director，为下面 30 秒故事设计可读分镜。</p><p>保留已确认剧情、人物、台词与结尾。逐镜写清时间、画面、摄影、台词和声音。本次先交分镜；创意拍法单独说明作用与取舍，采用后再并入。</p><p class="prompt-slot">［粘贴故事与已有约束］</p></blockquote><p>需要提示词时，再明确编译已定分镜。实际生图、视频或白模预演分别发起。</p></div>
         </div>
+        <div class="research-links"><a href="https://skills.sh/62656456/ai-film-skills">skills.sh 目录</a><a href="COMPATIBILITY.md">宿主兼容说明</a><a href="https://github.com/62656456/ai-film-skills/blob/main/examples/skills-cli-install-verification.md">历史 CLI 安装验证</a><a href="skills/INDEX.md">中文与英文指南</a></div>
       </section>
 
-      <section class="evidence" id="updates" aria-labelledby="updates-title">
-        <div class="section-heading">
-          <p class="kicker">03 / VERSION UPDATES</p>
-          <h2 id="updates-title">Current use, optional review, and history.</h2>
-          <p class="section-intro">The maintainer's current A 5.7.2 maintenance update is selected by the user's explicit instruction. This activation does not approve every comparison image or establish three-task practice stability.</p>
+      <section class="updates" id="updates" aria-labelledby="updates-title">
+        <div class="section-heading"><p class="kicker">03 / 版本更新与回退</p><h2 id="updates-title">新方法合入，<br />原有决定继续保留。</h2><p class="section-intro">当前源码、历史分发与真实媒体验收各自记录。页面中的旧静图、研究分镜和白模，保持原版本与原状态。</p></div>
+        <div class="current-update"><div class="update-version"><span>分镜导演</span><strong>5.8.3</strong><span>2026-10-14 · 当前源码</span></div><div><h3>以 5.7.7 为基础，合入镜头库与观看方案设计。</h3><p>加入 5.8.2 的包内 FCML 镜头机制、画框与尺度方案比较、关键设计保存。保留 5.7.7 的摄影节奏、真实光路与呈色、打戏应答和持物、空间共同占位、参考图交接与既有创作格式。</p><p>导演 Agent 同步三处交接与编译规则：场景信息保全、同剧情画框方案比较、最终文本反向复核。回退继续使用合并前的冻结版本。</p><p class="boundary">本轮是源码合并与规则检查；新版本连续视频的执行效果和用户审美接受仍需实际任务验证。FCML 的机制条目也保留各自媒体未测边界。</p><div class="inline-links"><a href="https://github.com/62656456/ai-film-skills/blob/main/skills/ai-storyboard-director/SKILL.md">分镜导演源码 ↗</a><a href="https://github.com/62656456/ai-film-skills/blob/main/skills/director-agent/SKILL.md">导演 Agent 源码 ↗</a><a href="maintenance/2026-10-14-director-5.8.3-merge.md">本轮合并与检查记录</a><a href="RELEASE_WORKFLOW.md">检查、启用与回退方法</a></div></div></div>
+        <div class="history-grid">
+          <article><p class="index">FROZEN DOWNLOAD</p><h3>v1.4.0 / A 5.7.2</h3><p>历史冻结 Release：21 个单包与 18 项常规包套装，清单和校验和保留。归档字节不随当前源码改变；下载此版得到的是旧分发版本。</p><a href="https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0">查看历史 v1.4.0 下载 <span aria-hidden="true">↗</span></a></article>
+          <article><p class="index">HISTORY &amp; RESEARCH</p><h3>旧版本继续可查。</h3><p>5.6.5、A 5.7.1 与 B 5.7.1-jev 保留同题研究；B 的 Jev 只核对明确文本。v1.3.0 保留 5.4.4 快照，旧导演案例仍标为 <code>SELF-AUDIT ONLY</code>。</p><div class="inline-links"><a href="SEMANTIC_REVIEW.md">A/B 复核边界</a><a href="research/skill-overhaul/index.md">完整研究</a><a href="https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0">历史 v1.3.0</a></div></article>
         </div>
-        <div class="evidence-grid">
-          <p><strong>A 5.7.2 — current maintainer default.</strong> Keeps storyboard design, prompt compilation, and actual generation in their requested stages. Creative-shot ideas stay separate until selected; shared facts and chosen shots survive local revisions. A uses the main model's text review without Jev.</p>
-          <p><strong>B 5.7.1-jev — optional text review.</strong> Uses the same creative core and adds explicitly enabled Jev checks of submitted text and locked facts. Jev does not inspect images, decide aesthetics, automatically rewrite shots, or approve a version.</p>
-          <p><strong>5.6.5 — comparison and rollback baseline.</strong> Preserved as the prior local workflow and common-story comparison baseline. The fusion direction retains selected strengths and the user's exact choices; a preferred sample does not validate every output.</p>
-          <p><strong>v1.4.0 / 5.7.2 — current maintenance Release.</strong> Includes all 21 independent packages and the 18 regular-package complete archive, with explicit manifests and checksums.</p>
-          <p><strong>v1.3.0 / 5.4.4 — historical Release.</strong> Published v1.3.0 assets contain the older 5.4.4 snapshot. Its examples, the separate 5.6 Preview, and newer source are distinct artifacts. The older Director example remains <code>SELF-AUDIT ONLY</code>.</p>
-        </div>
-        <p class="media-note"><a href="research/skill-overhaul/index.md">Read the latest changes and research</a> · <a href="https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0">Download v1.4.0</a> · <a href="RELEASE_WORKFLOW.md">Read the check, test, activation, and rollback process</a> · <a href="SEMANTIC_REVIEW.md">Read A/B review boundaries</a> · <a href="https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0">Inspect the historical v1.3.0 Release</a></p>
       </section>
     </main>
 
-    <footer>
-      <p>Open Film Skills · Apache-2.0 · Original public toolkit by 62656456</p>
-      <nav aria-label="Footer navigation">
-        <a href="https://github.com/62656456/ai-film-skills">Source</a>
-        <a href="https://github.com/62656456/ai-film-skills/discussions/7">Showcase</a>
-        <a href="https://github.com/62656456/ai-film-skills/blob/main/SKILL_CATALOG.md">Skill catalog</a>
-      </nav>
-    </footer>
+    <footer><div><a class="footer-brand" href="#top">OPEN FILM SKILLS</a><p>开放影视技能 · Apache-2.0 · 62656456 原创公开工具集</p></div><nav aria-label="页脚导航"><a href="https://github.com/62656456/ai-film-skills">源码</a><a href="skills/INDEX.md" lang="en">English guides</a><a href="https://github.com/62656456/ai-film-skills/discussions/7">作品与讨论</a><a href="#top">回到顶部 ↑</a></nav></footer>
   </body>
 </html>

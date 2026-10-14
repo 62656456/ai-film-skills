@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -15,8 +17,8 @@ CLI = ROOT / "skills/ai-storyboard-director/scripts/design_memory.py"
 
 
 class StoryboardMemoryCLITests(unittest.TestCase):
-    def call(self, root: Path, command: str, *args: str):
-        process = subprocess.run([sys.executable, "-B", str(CLI), command, "--project-root", str(root), *args],
+    def call(self, root: Path, command: str, *args: str, cli: Path = CLI):
+        process = subprocess.run([sys.executable, "-B", str(cli), command, "--project-root", str(root), *args],
                                  capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=15)
         self.assertFalse(process.stderr.strip(), process.stderr)
         return process.returncode, json.loads(process.stdout)
@@ -62,6 +64,41 @@ class StoryboardMemoryCLITests(unittest.TestCase):
         return self.call(root, "export", "--scene", scene, "--text", "delivery.txt", "--output", "receipt.json",
                          "--expected-revision", str(current["revision"]),
                          "--expected-sha256", current["state_sha256"], *extra)
+
+    @staticmethod
+    def scene_hash(scene: dict):
+        return hashlib.sha256(json.dumps(scene, ensure_ascii=False, sort_keys=True,
+                                         separators=(",", ":")).encode("utf-8")).hexdigest()
+
+    def commit_proposal(self, root: Path, current: dict, proposal: dict):
+        (root / "proposal.json").write_text(json.dumps(proposal), encoding="utf-8")
+        return self.call(root, "commit", "--input", "proposal.json",
+                         "--expected-revision", str(current["revision"]),
+                         "--expected-sha256", current["state_sha256"])
+
+    def optional_contracts(self, root: Path, current: dict):
+        state = json.loads((root / ".director_design/state.json").read_text(encoding="utf-8"))
+        for scene in state["scenes"]:
+            scene.update({
+                "spatial_contract": {"entrance": "south wall", "table": {"location": "center"}},
+                "visual_design": {"first_visual_focus": "table", "color_roles": {"accent": "dark green"},
+                                  "critical_retention": ["Keep the entrance visible"]},
+                "environment_baseline": {"time_weather": "morning", "ongoing_elements": [],
+                                         "stable_conditions": ["dry indoor floor"]},
+                "filming_conditions": {"walkable_routes": ["south entrance to table"],
+                                       "camera_accessible_regions": ["southwest aisle"],
+                                       "useful_occluders": [], "forbidden_passages": ["walls", "table"]},
+            })
+            shot = scene["shots"][0]
+            shot["critical_retention"] = ["Keep the doorway readable",
+                                          {"id": "paper-final", "description": "Paper rests on the table"}]
+            shot["motion"].update({"fcml_ids": ["fcml-001"], "operations": [{"type": "translation", "mode": "forward"}],
+                                   "stages": [{"trigger": "doorway revealed", "path": "southwest aisle",
+                                               "ending": {"paper": "table"}}]})
+        state["scenes"][1]["previous_scene"]["sha256"] = self.scene_hash(state["scenes"][0])
+        code, payload = self.commit_proposal(root, current, state)
+        self.assertEqual(code, 0, payload)
+        return payload
 
     def test_init_and_compact_context_use_the_bundled_framing_references(self):
         with tempfile.TemporaryDirectory() as raw:
@@ -205,6 +242,268 @@ class StoryboardMemoryCLITests(unittest.TestCase):
             self.assertEqual(code, 1)
             self.assertEqual(payload["error"], "RESERVED_SOURCE")
             self.assertEqual(state_path.read_bytes(), before)
+
+    def test_legacy_and_optional_records_restore_and_export_without_synthetic_fields(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.commit_scenes(root, "defined")
+            path = root / ".director_design/state.json"
+            legacy_bytes = path.read_bytes()
+            code, legacy = self.call(root, "context", "--scene", "scene-1", "--compact")
+            self.assertEqual(code, 0, legacy)
+            for field in ("spatial_contract", "visual_design", "environment_baseline", "filming_conditions"):
+                self.assertNotIn(field, legacy["scene"])
+            self.assertNotIn("critical_retention", legacy["scene"]["shots"][0])
+            self.assertEqual(legacy["scene"]["shots"][0]["motion"], {"description": "Fixed camera"})
+            self.assertEqual(path.read_bytes(), legacy_bytes)
+
+            current = self.optional_contracts(root, current)
+            stored = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(stored["schema_version"], 1)
+            self.assertEqual(set(stored), {"schema_version", "project_id", "revision", "source", "film_intent",
+                                           "locked_facts", "candidate_decisions", "scenes", "history"})
+            before = path.read_bytes()
+            for flags in ((), ("--compact",)):
+                code, restored = self.call(root, "context", "--scene", "scene-1", *flags)
+                self.assertEqual(code, 0, restored)
+                self.assertEqual(restored["scene"], stored["scenes"][0])
+                self.assertEqual(restored["scene_sha256"], self.scene_hash(stored["scenes"][0]))
+                self.assertFalse(restored["text_semantics_verified"])
+            code, exported = self.export(root, current, "scene-1")
+            self.assertEqual(code, 0, exported)
+            self.assertEqual(exported["scene"], stored["scenes"][0])
+            receipt = json.loads((root / "receipt.json").read_text(encoding="utf-8"))
+            self.assertEqual(receipt["scene"], stored["scenes"][0])
+            self.assertEqual(receipt["scene_sha256"], self.scene_hash(receipt["scene"]))
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_local_shot_edit_preserves_scene_contracts_and_other_scenes(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            path = root / ".director_design/state.json"
+            before = json.loads(path.read_text(encoding="utf-8"))
+            proposal = copy.deepcopy(before)
+            proposal["scenes"][1]["shots"][0]["framing"] = "Face and doorway share the frame"
+            code, saved = self.commit_proposal(root, current, proposal)
+            self.assertEqual(code, 0, saved)
+            code, restored = self.call(root, "context", "--scene", "scene-2", "--compact")
+            self.assertEqual(code, 0, restored)
+            after = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(after["scenes"][0], before["scenes"][0])
+            for field in ("spatial_contract", "visual_design", "environment_baseline", "filming_conditions"):
+                self.assertEqual(restored["scene"][field], before["scenes"][1][field])
+            for field in ("critical_retention", "motion", "camera"):
+                self.assertEqual(restored["scene"]["shots"][0][field], before["scenes"][1]["shots"][0][field])
+            self.assertEqual(restored["scene"]["shots"][0]["framing"], "Face and doorway share the frame")
+
+    def test_selected_library_operations_round_trip_without_a_second_motion_schema(self):
+        library = json.loads((CLI.parent.parent / "assets/fcml-motion-library.json").read_text(encoding="utf-8"))
+        chosen = next(m for m in library["motions"] if "translation" in m["operation_types"]
+                      and "orientation" in m["operation_types"])
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.commit_scenes(root, "defined")
+            baseline = json.loads((root / ".director_design/state.json").read_text(encoding="utf-8"))
+            baseline["scenes"][1]["shots"][0]["motion"].update(
+                fcml_ids=[chosen["id"]], operations=copy.deepcopy(chosen["operations"]))
+            code, saved = self.commit_proposal(root, current, baseline)
+            self.assertEqual(code, 0, saved)
+            code, restored = self.call(root, "context", "--scene", "scene-2", "--compact")
+            self.assertEqual(code, 0, restored)
+            self.assertEqual(restored["scene"]["shots"][0]["motion"]["operations"], chosen["operations"])
+            # Older operation-label lists remain readable without rewriting them.
+            baseline = json.loads((root / ".director_design/state.json").read_text(encoding="utf-8"))
+            baseline["scenes"][1]["shots"][0]["motion"]["operations"] = ["translation"]
+            code, saved = self.commit_proposal(root, saved, baseline)
+            self.assertEqual(code, 0, saved)
+            code, restored = self.call(root, "context", "--scene", "scene-2", "--compact")
+            self.assertEqual(code, 0, restored)
+            self.assertEqual(restored["scene"]["shots"][0]["motion"]["operations"], ["translation"])
+
+    def test_visual_and_camera_decisions_restore_and_export_without_reselection(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            path = root / ".director_design/state.json"
+            proposal = json.loads(path.read_text(encoding="utf-8"))
+            scene = proposal["scenes"][1]
+            scene["visual_design"]["decision_record"] = {
+                "alternatives": [{"id": "whole", "composition_sketch": "Door, table and chair share equal space"},
+                                 {"id": "boundary", "composition_sketch": "Near table edge bounds an open doorway"}],
+                "selected": "boundary", "selection_basis": "Keep the walkable entrance legible beside the table edge"}
+            scene["visual_design"]["light_sources"] = [
+                {"name": "existing east window", "world_position": "east wall",
+                 "softness": "directional with a distinct edge", "relative_intensity": "dominant",
+                 "occlusion": "existing frame divides the bright floor area"}]
+            scene["visual_design"]["camera_white_balance_intent"] = "Daylight; pale wood keeps its own color"
+            scene["visual_design"]["decision_record"]["structural_delta"] = [
+                "A defined lit floor shape beside the dark table underside replaces even illumination"]
+            scene["shots"][0]["camera"]["decision_record"] = {
+                "alternatives": [{"id": "follow", "frames": ["door", "person enters", "table"]},
+                                 {"id": "wait", "frames": ["table and door", "person approaches", "hand and table"]}],
+                "selected": "wait", "selection_basis": "Let the person change scale without moving the camera"}
+            scene["shots"][0]["camera"]["decision_record"]["selected_frames"] = [
+                {"phase": "start", "visible_scale": "full person beside doorway", "focus": ["person", "door"]},
+                {"phase": "end", "visible_scale": "hand large beside table edge", "focus": ["hand", "table"]}]
+            code, saved = self.commit_proposal(root, current, proposal)
+            self.assertEqual(code, 0, saved)
+            code, restored = self.call(root, "context", "--scene", "scene-2", "--compact")
+            self.assertEqual(code, 0, restored)
+            self.assertEqual(restored["scene"]["visual_design"]["decision_record"], scene["visual_design"]["decision_record"])
+            self.assertEqual(restored["scene"]["visual_design"], scene["visual_design"])
+            self.assertEqual(restored["scene"]["shots"][0]["camera"]["decision_record"], scene["shots"][0]["camera"]["decision_record"])
+            code, exported = self.export(root, saved, "scene-2")
+            self.assertEqual(code, 0, exported)
+            self.assertEqual(exported["scene"], restored["scene"])
+            self.assertFalse(exported["text_semantics_verified"])
+
+    def test_invalid_decision_record_types_are_rejected_without_writing(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            path = root / ".director_design/state.json"
+            before = path.read_bytes()
+            for owner, value in (("visual_design", []), ("camera", "chosen shot")):
+                proposal = json.loads(before)
+                scene = proposal["scenes"][1]
+                target = scene[owner] if owner == "visual_design" else scene["shots"][0][owner]
+                target["decision_record"] = value
+                code, rejected = self.commit_proposal(root, current, proposal)
+                self.assertEqual(code, 1, rejected)
+                self.assertEqual(path.read_bytes(), before)
+
+    def test_selected_frame_change_is_bound_to_scene_hash_and_revision(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.commit_scenes(root, "defined")
+            path = root / ".director_design/state.json"
+            proposal = json.loads(path.read_text(encoding="utf-8"))
+            previous_hash = self.scene_hash(proposal["scenes"][1])
+            proposal["scenes"][1]["shots"][0]["camera"]["decision_record"] = {
+                "selected": "Keep table and doorway simultaneously visible"}
+            code, saved = self.commit_proposal(root, current, proposal)
+            self.assertEqual(code, 0, saved)
+            code, restored = self.call(root, "context", "--scene", "scene-2", "--compact")
+            self.assertEqual(code, 0, restored)
+            self.assertNotEqual(restored["scene_sha256"], previous_hash)
+            before = path.read_bytes()
+            code, rejected = self.commit_proposal(root, current, json.loads(before))
+            self.assertEqual(code, 1, rejected)
+            self.assertEqual(rejected["error"], "STALE_REVISION")
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_invalid_optional_fields_are_rejected_before_state_write(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            path = root / ".director_design/state.json"
+            before = path.read_bytes()
+            baseline = json.loads(before)
+            cases = [("scene", field, []) for field in (
+                "spatial_contract", "visual_design", "environment_baseline", "filming_conditions")]
+            cases += [("shot", "critical_retention", "one item"),
+                      ("shot", "critical_retention", [42]),
+                      ("shot", "critical_retention", [{"id": "paper", "description": []}]),
+                      ("motion", "fcml_ids", "fcml-001"), ("motion", "fcml_ids", [42]),
+                      ("motion", "fcml_ids", ["duplicate", "duplicate"]),
+                      ("motion", "operations", {}), ("motion", "operations", [True]),
+                      ("motion", "operations", [{"type": "translation"}]),
+                      ("motion", "operations", [{"type": "translation", "mode": []}]),
+                      ("motion", "operations", ["translation", "translation"]),
+                      ("motion", "stages", {}), ("motion", "stages", ["not an object"])]
+            for owner, field, value in cases:
+                with self.subTest(owner=owner, field=field, value=value):
+                    proposal = copy.deepcopy(baseline)
+                    scene = proposal["scenes"][1]
+                    target = scene if owner == "scene" else scene["shots"][0]
+                    if owner == "motion":
+                        target = target["motion"]
+                    target[field] = value
+                    code, rejected = self.commit_proposal(root, current, proposal)
+                    self.assertEqual(code, 1, rejected)
+                    self.assertIn(rejected["error"], {"INVALID_FORMAT", "MISSING_INFORMATION", "DUPLICATE_ID"})
+                    self.assertEqual(path.read_bytes(), before)
+                    self.assertFalse((root / ".director_design/write.lock").exists())
+
+    def test_optional_scene_changes_affect_upstream_hash_and_cas(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            path = root / ".director_design/state.json"
+            before = path.read_bytes()
+            proposal = json.loads(before)
+            original_hash = self.scene_hash(proposal["scenes"][0])
+            proposal["scenes"][0]["environment_baseline"]["stable_conditions"].append("no wind")
+            changed_hash = self.scene_hash(proposal["scenes"][0])
+            self.assertNotEqual(changed_hash, original_hash)
+            code, rejected = self.commit_proposal(root, current, proposal)
+            self.assertEqual(code, 1, rejected)
+            self.assertEqual(rejected["error"], "STALE_UPSTREAM")
+            self.assertEqual(path.read_bytes(), before)
+            proposal["scenes"][1]["previous_scene"]["sha256"] = changed_hash
+            code, saved = self.commit_proposal(root, current, proposal)
+            self.assertEqual(code, 0, saved)
+            self.assertNotEqual(saved["state_sha256"], current["state_sha256"])
+            self.assertEqual(saved["revision"], current["revision"] + 1)
+            after = path.read_bytes()
+            code, stale = self.commit_proposal(root, current, proposal)
+            self.assertEqual(code, 1, stale)
+            self.assertEqual(stale["error"], "STALE_REVISION")
+            self.assertEqual(path.read_bytes(), after)
+
+    def test_concurrent_writers_keep_one_cas_winner_and_preserve_optional_contracts(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            current = self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            path = root / ".director_design/state.json"
+            baseline = json.loads(path.read_text(encoding="utf-8"))
+            processes = []
+            for index in (1, 2):
+                proposal = copy.deepcopy(baseline)
+                proposal["scenes"][1]["shots"][0]["framing"] = f"Writer {index} revised framing"
+                filename = f"proposal-{index}.json"
+                (root / filename).write_text(json.dumps(proposal), encoding="utf-8")
+                processes.append(subprocess.Popen(
+                    [sys.executable, "-B", str(CLI), "commit", "--project-root", str(root),
+                     "--input", filename, "--expected-revision", str(current["revision"]),
+                     "--expected-sha256", current["state_sha256"]],
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8"))
+            outcomes = []
+            for process in processes:
+                stdout, stderr = process.communicate(timeout=15)
+                self.assertFalse(stderr.strip(), stderr)
+                outcomes.append((process.returncode, json.loads(stdout)))
+            self.assertEqual(sorted(code for code, _ in outcomes), [0, 1], outcomes)
+            rejected = next(payload for code, payload in outcomes if code == 1)
+            self.assertIn(rejected["error"], {"LOCK_EXISTS", "STALE_REVISION"})
+            stored = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(stored["revision"], current["revision"] + 1)
+            self.assertEqual(stored["scenes"][0], baseline["scenes"][0])
+            for field in ("spatial_contract", "visual_design", "environment_baseline", "filming_conditions"):
+                self.assertEqual(stored["scenes"][1][field], baseline["scenes"][1][field])
+            self.assertFalse((root / ".director_design/write.lock").exists())
+
+    def test_isolated_bundle_motion_and_visual_context_returns_readable_local_references(self):
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            self.optional_contracts(root, self.commit_scenes(root, "defined"))
+            bundle = root / "bundle/ai-storyboard-director"
+            shutil.copytree(CLI.parent.parent, bundle)
+            code, restored = self.call(root, "context", "--scene", "scene-1", "--compact",
+                                       "--topics", "motion", "visual", cli=bundle / "scripts/design_memory.py")
+            self.assertEqual(code, 0, restored)
+            names = [Path(entry["path"]).name for entry in restored["knowledge"]]
+            self.assertIn("fcml-motion-index.md", names)
+            self.assertEqual(names.count("fcml-motion-index.md"), 1)
+            self.assertTrue(all(not name.endswith(".json") for name in names))
+            for entry in restored["knowledge"]:
+                reference = Path(entry["path"])
+                self.assertTrue(reference.is_relative_to(bundle))
+                self.assertTrue(reference.is_file())
+                self.assertEqual(hashlib.sha256(reference.read_bytes()).hexdigest(), entry["sha256"])
+            self.assertIn("production-contract.md", names)
+            self.assertIn("spatial_contract", restored["scene"])
 
 
 if __name__ == "__main__":

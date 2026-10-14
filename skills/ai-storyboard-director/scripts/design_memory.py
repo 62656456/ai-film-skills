@@ -17,7 +17,8 @@ LOCK = ".director_design/write.lock"
 TOPICS = {
     "framing": ["framing-and-axis.md", "cinematography-design-engine.md"],
     "continuity": ["framing-and-axis.md", "production-contract.md"],
-    "motion": ["cinematography-design-engine.md", "shot-design-engine.md"],
+    "motion": ["cinematography-design-engine.md", "shot-design-engine.md", "fcml-motion-index.md"],
+    "visual": ["cinematography-design-engine.md", "production-contract.md"],
     "optics": ["cinematography-design-engine.md"],
     "blocking": ["shot-design-engine.md", "framing-and-axis.md"],
     "delivery": ["production-contract.md"],
@@ -132,6 +133,63 @@ def identify(items, name, fields):
             text_field(item[field], f"{name}.{field}")
 
 
+def optional_scene_contracts(scene, name):
+    # Preserve supplied scene contract objects without creating a second schema.
+    for field in ("spatial_contract", "visual_design", "environment_baseline", "filming_conditions"):
+        if field in scene:
+            object_field(scene[field], f"{name}.{field}")
+    visual = scene.get("visual_design", {})
+    if "decision_record" in visual:
+        object_field(visual["decision_record"], f"{name}.visual_design.decision_record")
+
+
+def optional_shot_contracts(shot, name):
+    if "decision_record" in shot["camera"]:
+        object_field(shot["camera"]["decision_record"], f"{name}.camera.decision_record")
+    if "critical_retention" in shot:
+        items = shot["critical_retention"]
+        require(isinstance(items, list), "INVALID_FORMAT", f"{name}.critical_retention must be a list")
+        found = set()
+        for item in items:
+            if isinstance(item, str):
+                text_field(item, f"{name}.critical_retention")
+                identity = item
+            else:
+                required_keys(item, ["id", "description"], f"{name}.critical_retention")
+                text_field(item["id"], f"{name}.critical_retention.id")
+                text_field(item["description"], f"{name}.critical_retention.description")
+                identity = item["id"]
+            require(identity not in found, "DUPLICATE_ID", f"Duplicate critical_retention id: {identity}")
+            found.add(identity)
+    motion = shot["motion"]
+    if "fcml_ids" in motion:
+        values = motion["fcml_ids"]
+        require(isinstance(values, list), "INVALID_FORMAT", f"{name}.motion.fcml_ids must be a list")
+        for value in values:
+            text_field(value, f"{name}.motion.fcml_ids")
+        require(len(values) == len(set(values)), "DUPLICATE_ID", f"Duplicate {name}.motion.fcml_ids")
+    if "operations" in motion:
+        values = motion["operations"]
+        require(isinstance(values, list), "INVALID_FORMAT", f"{name}.motion.operations must be a list")
+        identities = set()
+        for value in values:
+            if isinstance(value, str):
+                text_field(value, f"{name}.motion.operations")
+                identity = (value, None)
+            else:
+                required_keys(value, ["type", "mode"], f"{name}.motion.operations")
+                text_field(value["type"], f"{name}.motion.operations.type")
+                text_field(value["mode"], f"{name}.motion.operations.mode")
+                identity = (value["type"], value["mode"])
+            require(identity not in identities, "DUPLICATE_ID", f"Duplicate {name}.motion.operations")
+            identities.add(identity)
+    if "stages" in motion:
+        stages = motion["stages"]
+        require(isinstance(stages, list), "INVALID_FORMAT", f"{name}.motion.stages must be a list")
+        for stage in stages:
+            object_field(stage, f"{name}.motion.stages")
+
+
 def read_source(root, source):
     path = inside(root, source)
     require(not path.is_relative_to(inside(root, ".director_design")),
@@ -240,6 +298,7 @@ def validate_state(state, allow_empty=False):
             text_field(scene[key], f"{sid}.{key}")
         for key in ("enter_state", "exit_state"):
             object_field(scene[key], f"{sid}.{key}")
+        optional_scene_contracts(scene, sid)
         line_range = scene["source_lines"]
         require(isinstance(line_range, list) and len(line_range) == 2 and
                 all(type(item) is int for item in line_range) and
@@ -276,6 +335,7 @@ def validate_state(state, allow_empty=False):
             for key in ("camera", "motion"):
                 object_field(shot[key], f"{shot_id}.{key}")
                 require(bool(shot[key]), "MISSING_INFORMATION", f"{shot_id}.{key} cannot be empty")
+            optional_shot_contracts(shot, shot_id)
             for key in ("enter_state", "exit_state"):
                 object_field(shot[key], f"{shot_id}.{key}")
             number(shot["start"], "shot.start")
@@ -483,6 +543,7 @@ def export(args, root):
         output = inside(root, args.output)
         require(not output.is_relative_to(inside(root, ".director_design")), "RESERVED_OUTPUT", "Exports cannot target internal memory files")
         receipt = result(state, sha256, scene_id=scene["scene_id"], scene_sha256=scene_digest(scene),
+                         scene=scene,
                          source=state["source"], text_sha256=digest(payload),
                          text_path=text_path.relative_to(root).as_posix(), text=body,
                          ready=not reviews, geometry_verified=geometry_verified,
@@ -505,7 +566,7 @@ def main(argv=None):
         if name in ("context", "check", "export"):
             sub.add_argument("--scene", required=name != "context")
         if name == "context":
-            sub.add_argument("--topics", nargs="+", choices=("framing", "continuity", "motion", "optics", "blocking"))
+            sub.add_argument("--topics", nargs="+", choices=("framing", "continuity", "motion", "optics", "blocking", "visual"))
             sub.add_argument("--compact", action="store_true",
                              help="Restore current scene and global decisions without full state/history bodies")
         if name in ("commit", "export"):

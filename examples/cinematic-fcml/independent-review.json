@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent_motion_review",
+  "first_observation": {
+    "recorded_at_utc": "2026-10-10T07:48:51.080043+00:00",
+    "library_sha256": "62b7821655c7fe7c57279fedc390c40d9de0c5781603b096fa694ef80c8dc69e",
+    "source_bundle_sha256": "f96229938f3d9175827084763e5d07afe4a795f762ece298eb74a237bd9f2f4b",
+    "source_mechanisms_read_count": 117,
+    "canonical_count": 115,
+    "method": "用包内extract_catalog安全读取目录；逐项读取原机制并与规范operation/template/effect/implementation并排判断；对疑点补读phases/variables/constraints等；未执行下载JS。",
+    "coverage_checks": {
+      "source_ids_equal": true,
+      "prompt_hashes_equal": true,
+      "mapping_gaps": [],
+      "merged_groups": [
+        [
+          "yj043",
+          "yj058"
+        ],
+        [
+          "yj073",
+          "yj117"
+        ]
+      ],
+      "exact_prompt_duplicate_only": true
+    },
+    "positive_preservation": [
+      "实体穿透与正常开口穿行区分。",
+      "光学变焦、移动透视、原地转向、滚转与主体环绕区分。",
+      "冻结后恢复与冻结持续到结尾保留不同终态。",
+      "慢动作、局部不同速率与普通主体跟拍保留不同采用需求。",
+      "复合转场推进/匹配/退出，以及媒介变换的随后环绕阶段多数保留。",
+      "未见原案例场景、固定10秒、4K/60fps等站点统一前缀灌入规范模板。",
+      "静态旧例A/B保持世界布局、指定光源和干燥边界。"
+    ],
+    "issues": [
+      {
+        "id": "MR-001",
+        "severity": "medium",
+        "source_ids": [
+          "yj093"
+        ],
+        "canonical_ids": [
+          "fcml-093"
+        ],
+        "failed_fields": [
+          "template_zh",
+          "phases[1].camera_and_attention",
+          "variables",
+          "constraints"
+        ],
+        "finding": "呼吸相位仅绑定速度，没有保留吸气退离、呼气接近的源方向关系；微移方向变量与已有呼吸阶段变量相互独立，绑定时可以反向而仍形式通过。",
+        "source_mechanism_paraphrase": "小幅前后位移随呼吸周期，吸气阶段退离，呼气阶段接近。",
+        "current_evidence": "摄影机沿{微移方向}做小幅前后位移，速度与{已有呼吸阶段}对齐。",
+        "repair": "单列呼吸相位到位移方向的关系及可采用变体；不得补呼吸声、次数、秒数。"
+      },
+      {
+        "id": "MR-002",
+        "severity": "medium",
+        "source_ids": [
+          "yj094"
+        ],
+        "canonical_ids": [
+          "fcml-094"
+        ],
+        "failed_fields": [
+          "template_zh",
+          "phases[1].camera_and_attention",
+          "variables",
+          "constraints"
+        ],
+        "finding": "逐脉冲推进/短促震动保留，但源节律逐渐加快与运动幅度同步提高的递进因果没有保留，节律与幅度的关系无法从当前记录恢复。",
+        "source_mechanism_paraphrase": "每个既有脉冲对应一次短促反应；脉冲加密时反应幅度同步递增。",
+        "current_evidence": "依据{已有或已采用节律}做{微幅推进阶段}和短促姿态反应；节律变化有明确节点。",
+        "repair": "记录脉冲频率与反应幅度的阶段对应关系；幅度受表演可读性上限约束，不新增音轨。"
+      },
+      {
+        "id": "MR-003",
+        "severity": "medium",
+        "source_ids": [
+          "yj028",
+          "yj040",
+          "yj054",
+          "yj056",
+          "yj070",
+          "yj075",
+          "yj076"
+        ],
+        "canonical_ids": [
+          "fcml-028",
+          "fcml-040",
+          "fcml-054",
+          "fcml-056",
+          "fcml-070",
+          "fcml-075",
+          "fcml-076"
+        ],
+        "failed_fields": [
+          "phases",
+          "template_zh",
+          "end_state",
+          "variables",
+          "constraints"
+        ],
+        "finding": "复合运动的环绕/滚转仍保留，但部分源完整回环或半周换侧的路径覆盖与起终关系丢到任意路径/终点构图变量内；yj028慢-快-慢顺序也只有通用速度阶段而无保全规则。",
+        "source_mechanism_paraphrase": "yj028:慢快慢完整回环；yj040:广域完整回环；yj054:慢动作配合半周换侧；yj056:前进配合一个完整光轴滚转；yj070:全场冻结中完整回环并保持终态冻结；yj075:在多次暂停期间步进环绕完整一周；yj076:极短动作延展期间完成细节回环。",
+        "current_evidence": "模板分别使用{环绕路径}、{空中环绕路径}、{滚转阶段}、{步进路径}、{细节绕行路径}，所有终态仅为{终点构图}/{环境承接}；各条目其他字段没有覆盖或回合关系。yj070持续冻结终态已保留。",
+        "repair": "保留源归一化阶段结构与起终方位/滚转覆盖关系，可独立标注可采用变体；不将源秒数或数值角度设为默认。"
+      },
+      {
+        "id": "MR-004",
+        "severity": "medium",
+        "source_ids": [
+          "yj079"
+        ],
+        "canonical_ids": [
+          "fcml-079"
+        ],
+        "failed_fields": [
+          "template_zh",
+          "phases[1].camera_and_attention",
+          "variables",
+          "constraints"
+        ],
+        "finding": "位置相关时间场类型保留，但源中心暂停、外围逐层加快、观察路径向外扩张的三者关系被泛化为任意速率梯度和普通绕行。",
+        "source_mechanism_paraphrase": "时间场中心暂停，离中心越远流速越高；观察路径随向外扩散逐步外绕。",
+        "current_evidence": "以{时间场中心}建立{采用的速率梯度}；摄影机沿{观察路径}绕行。",
+        "repair": "单列中心速率、径向梯度方向和相机径向进度的关系，允许已采用变体但不抹去原机制。"
+      },
+      {
+        "id": "MR-005",
+        "severity": "medium",
+        "source_ids": [
+          "yj042"
+        ],
+        "canonical_ids": [
+          "fcml-042"
+        ],
+        "failed_fields": [
+          "phases[0]",
+          "template_zh",
+          "speed_and_pauses"
+        ],
+        "finding": "源先高位静止辨认、再疾降、再稳住的三级时序中，起始静止阶段被通用辨认任务替代，模板可以从首帧立即俯冲。",
+        "source_mechanism_paraphrase": "高位先静止建立空间，随后急降，最终稳住近距离落点。",
+        "current_evidence": "摄影机从{高位起点}沿{俯冲通道}急降；start只写先完成必须辨认信息。",
+        "repair": "明确先稳住-俯冲-落稳的相位顺序，具体停顿时长由当前段分配。"
+      },
+      {
+        "id": "MR-006",
+        "severity": "medium",
+        "source_ids": [],
+        "artifact": "text-old.json",
+        "case_id": "C",
+        "failed_fields": [
+          "outputs.C.5.5–9.0秒",
+          "outputs.C.9.0–10.5秒"
+        ],
+        "finding": "人物站桌南侧朝北面向桌内，摄影机仍在桌西南侧朝东北，却要求侧前方面部与嘴部可读；按已有世界方位摄影机通常落人物后側，面部正向关系未自洽。",
+        "evidence": "人物面向桌子与室内；摄影机停长桌西南侧，镜头斜向东北；又写侧前方面部/发声嘴部可读。",
+        "repair": "用明确可走偏置落实前侧视面，或沿用已存在且能成立的主体朝向，不靠可读自述证明。",
+        "boundary": "未给桌精确长宽与人物坐标，无法断言全部西南侧位置均不可见，但当前文本缺少足以支持前侧面的证据。"
+      }
+    ],
+    "unverified": [
+      "所有媒体执行、平台特性、实际拍摄/生成效果和用户审美接受均未执行。",
+      "text-new.json已开始生成但首次观察时尚未读取。",
+      "未审查开发智能体修改理由或预期答案。"
+    ]
+  },
+  "followup_observations": [
+    {
+      "recorded_at_utc": "2026-10-10T07:50:29.783947+00:00",
+      "artifact": "text-new.json",
+      "artifact_sha256": "3bfb5d131ce696057879ebe00ebd8017bb443390262526b70a6c2fd29c491c1e",
+      "read_scope": [
+        "inputs",
+        "outputs",
+        "behavioral_cases"
+      ],
+      "judgment_basis": "独立逐条核对输入锁定条件、世界关系、阶段动作与真实输出正文；不以关键词、自检或验证摘要计分。",
+      "findings": [
+        {
+          "case_ids": [
+            "A",
+            "B",
+            "D"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "两幅/反打均从南入口、东双窗、北书架、中央桌和东端唯一椅推出可站立机位；反打东窗由画面右变左而世界东光未改；雨只在玻璃外侧且室内地面保持干燥。",
+          "limitations": "机位角度、具体家具尺寸未量化，不能等同实际图像构图验收。"
+        },
+        {
+          "case_ids": [
+            "E"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "镜头中心/朝向/焦距/焦点全段固定，背景单人左门入、背墙前进、右门出，读者不察觉；前景焦点锁定下允许背景轮廓可读，注意变化来自动作而非移焦。",
+          "limitations": "真实景深或生成后的背景辨认度未知。"
+        },
+        {
+          "case_ids": [
+            "F"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "8句分别将中心位移与焦距/朝向/光轴滚转区分；轨迹、视差、遮挡、取框和新视面后果与分类一致。",
+          "limitations": "无真实运动执行。"
+        },
+        {
+          "case_ids": [
+            "G"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "两镜、唯一6秒切点、人物3秒停住；自行车32m/2m每秒推至6秒20m与12秒8m；10–12秒后撤为镜内回露，背景不回起点。",
+          "limitations": "场景及速度为新方案的显式假设，非现场测量。"
+        },
+        {
+          "case_ids": [
+            "H"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "整稿二维水彩；唯一椅由墨绿改深红，空间位置、镜位、观看顺序及世界东光西向柔影延续A基线。",
+          "limitations": "没有独立已确认水彩原稿，文字基线保全可判断，原图像素保全未知。"
+        },
+        {
+          "case_ids": [
+            "I"
+          ],
+          "result": "insufficient_locked_input",
+          "evidence": "输入仅说既定人物动作保持却不给动作正文；输出诚实声明走两步是未确认假设，但该假设无法证明原动作未改变。",
+          "repair": "I_retest必须提供明确且非该走两步假设的锁定动作正文，真正重生成后逐节点核对。"
+        },
+        {
+          "case_ids": [
+            "J"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "采用摄影写实VFX完整保留；3–5秒仅纸片位置/姿态冻结，人物继续自然步态；5秒从冻结原位姿态与之前速度方向恢复，8秒落地，未改全局慢动作或删效果。",
+          "limitations": "实际VFX支持、合成、轨迹、审看与用户接受均未知。"
+        },
+        {
+          "case_ids": [
+            "C"
+          ],
+          "result": "pending",
+          "evidence": "首次评审时outputs.C为null。"
+        }
+      ],
+      "media_execution": "not_run",
+      "user_acceptance": "not_requested"
+    },
+    {
+      "recorded_at_utc": "2026-10-10T07:52:41.182175+00:00",
+      "artifact": "fcml-motion-library.json",
+      "kind": "nonblocking_adaptation_suggestion",
+      "source_ids": [
+        "yj027",
+        "yj049"
+      ],
+      "canonical_ids": [
+        "fcml-027",
+        "fcml-049"
+      ],
+      "fields": [
+        "template_zh",
+        "variables"
+      ],
+      "finding": "一般宽弧換側/后方跟随被额外绑定必须经地标露出揭示对象；源基本机制可仅换观察角度或稳定跟随同一始终可见主体。",
+      "actual_risk": "当前禁止添加对象的约束仍有效，因此主要是有效基本实例可能被拒绝或被迫寻找额外观看对象；未观察实际偷偷新增对象。",
+      "suggestion": "将揭示分句条件化，仅当前方案已有遮挡对象或揭示任务时才绑定，不扩大场景。"
+    },
+    {
+      "recorded_at_utc": "2026-10-10T07:55:58.818424+00:00",
+      "kind": "final_independent_text_recheck",
+      "library_sha256": "7f157e542fad59443dc56a5806a841e40619a4f940922fa54936a08e0dc53621",
+      "text_artifact_sha256": "67d08673b1e289aeb831ea624ebb79b5c1c66e8f9f4d56096b7c595f5c90f4bb",
+      "source_checks": {
+        "source_count": 117,
+        "canonical_count": 115,
+        "mapping_gaps": [],
+        "source_hash_differences": [],
+        "merge_groups": [
+          [
+            "yj043",
+            "yj058"
+          ],
+          [
+            "yj073",
+            "yj117"
+          ]
+        ]
+      },
+      "issue_resolution": [
+        {
+          "id": "MR-001",
+          "status": "resolved_in_library_text",
+          "evidence": "mechanism_invariants.phase_direction明确吸气退离/呼气接近，template和process一致。"
+        },
+        {
+          "id": "MR-002",
+          "status": "resolved_in_library_text",
+          "evidence": "每脉冲一次反应、节律加密与幅度递增同步，template和阶段字段一致。"
+        },
+        {
+          "id": "MR-003",
+          "status": "resolved_in_library_text",
+          "evidence": "7条分别保持整周回合/半周换侧、步进累计回合、慢快慢次序以及冻结持续终态；template/过程/末阶段mechanism_relation一致。"
+        },
+        {
+          "id": "MR-004",
+          "status": "resolved_in_library_text",
+          "evidence": "时间中心暂停、外围渐快、观察路径随边界外扩同时出现在template和机制不变量。"
+        },
+        {
+          "id": "MR-005",
+          "status": "resolved_in_library_text",
+          "evidence": "高位先静止->既定节点疾降->制动->稳定落点完整保留，不设默认秒数。"
+        },
+        {
+          "id": "MR-006",
+          "status": "baseline_limitation_mitigated_in_new_C",
+          "evidence": "新版先后方跟随后错到西侧，明确人物头部略向桌西侧偏转为未锁定表演细节，使侧脸有可成立候选关系；精确可见程度尚无真实机位/视频。"
+        }
+      ],
+      "additional_recheck": [
+        {
+          "source_ids": [
+            "yj027",
+            "yj049"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "没有揭示变量时实际adapt运行成功，只形成原主体换侧/后方跟随；049模板不再无条件加停步。",
+          "bound_outputs": [
+            "同一主体左侧中景。摄影机沿主体前方可达净空中的左前到右前弧段绕林岚移动并按持续朝林岚取景，使同一主体的可见侧面由起始侧逐步转向终侧。最终林岚右侧中景；主体位置与既有背景连续。",
+            "林岚背部与前路同框。摄影机在林岚后方沿已定通道前行，与其保持一步；人物始终可读，原定动作和路线连续，摄影机在本段终点保持约定的相对关系。最终人物持续前行至切点；通道地标和人物当前动作继续。"
+          ]
+        },
+        {
+          "case_ids": [
+            "C"
+          ],
+          "result": "text_behavior_supported_with_spatial_execution_boundary",
+          "evidence": "1条连续12秒；从后方跟随、真实门洞、向西错开；唯一原句9–10.5秒，10.5后放唯一纸，末帧平放且已松手；镜头中心保持时俯仰与一次移焦完成落桌注意交接，无穿墙/穿桌。",
+          "limitations": "侧脸可见是通过未锁定的头部略向西偏转落实的候选表演细节；实际角度、精确通道尺寸及生成执行未验证。"
+        },
+        {
+          "case_ids": [
+            "I_retest"
+          ],
+          "result": "text_behavior_supported",
+          "evidence": "0–3秒站桌边看唯一白纸，3–5秒仅右手拿起并停住，尾态纸离桌且仍持在右手；全程固定中心/朝向/焦距/脸部焦点，手桌可读依景深；无台词/音乐/其他声音，未采用穿墙与局部冻结未进入正式段。",
+          "limitations": "真实接触动作、景深及视频连续性未验证。"
+        }
+      ],
+      "overall_result": "117源记录映射和哈希保全；发现的机制缺口已按当前实际库文本修复。A/B/C/D/E/F/G/H/J及动作明确的I_retest在当前文本中满足各自锁定条件；首轮I维持输入不足的历史事实。",
+      "not_certified": [
+        "媒体实际生成或拍摄执行",
+        "模型/平台支持及跨平台能力",
+        "图像像素一致与视频观看质量",
+        "用户审美接受",
+        "Skill或防复发机制实战稳定"
+      ]
+    }
+  ]
+}

@@ -51,6 +51,8 @@ Creative-shot ideas are optional design candidates for the user. Describe the sp
 
 Pass the source scope, user locks, selected audience/viewing order, performance and world states, sound/edit decisions, and the few unresolved choices needed by the next stage. Reuse an existing usable `DIRECTOR_PLAN` rather than making the user repeat it or rebuilding its decisions. The storyboard stage expands those decisions; prompt compilation preserves selected shots; media execution begins only within the current user's authorized generation scope. A missing generation service does not block delivery of ideas, a director plan, a storyboard or a platform-neutral prompt.
 
+When a scene asset contract is supplied, pass through its optional `spatial_contract`, `visual_design`, `environment_baseline` and `filming_conditions`: viewing purpose and focal area, color roles, world light sources, white-balance intent, visible warm/cool relation, material response, ongoing conditions and camera access. Legacy contracts remain readable without these keys; do not invent missing locked facts. Record selected photographic stages and `critical_retention` with the director handoff instead of rebuilding a second scene or motion taxonomy here. Input data crosses stages; no sibling package internals are runtime dependencies.
+
 ## Deliver the requested result
 
 - **写剧本**: deliver the readable screenplay for the named scope. Keep planning, ledgers and execution syntax internal. A complete-script request cannot silently become a sample scene.

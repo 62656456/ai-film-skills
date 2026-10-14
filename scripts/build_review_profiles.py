@@ -16,7 +16,7 @@ import build_skill_packages as packages
 from repository_safety import SafetyError, is_link_like, safe_source_files, validate_output_target
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "5.7.1"
+VERSION = "5.8.3"
 REGULAR = frozenset("ai-short-drama-production ai-storyboard-director character-asset cyberpunk-design d-data-analysis-semantic-layer d-official-market-analysis director-agent epic-design fantasy-design horror-design noir-design produce-ai-video prop-asset romance-design scene-asset war-design web-design-director wuxia-design".split())
 EXPERIMENTAL = frozenset("guofeng-visual-director hard-sci-fi-visual-director whitebox-previs-executor".split())
 STORYBOARD = "skills/ai-storyboard-director/"

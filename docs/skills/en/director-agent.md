@@ -1,13 +1,13 @@
 # director-agent — script and directing design
 
-| Status | Current source is an isolated overhaul candidate; installation history and user acceptance are separate. |
+| Status | Maintained source with scene handoff, concrete viewing alternatives and compilation retention; actual media and user acceptance are separate. |
 |---|---|
 | Can deliver alone | A script, diagnosis, treatment or pre-storyboard design; when explicitly requested and directing is unresolved, a complete readable storyboard using the local compiler. |
 | Cannot claim alone | Director analysis alone is not a complete storyboard. Reuse an existing approved director plan; creative ideas do not authorize media generation or establish user acceptance. |
 
 [Runtime `SKILL.md`](../../../skills/director-agent/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/director-agent.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
+Historical v1.4.0 archive predates this handoff update. Use repository source for the maintained director-agent; no independent version number is claimed.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -45,6 +45,7 @@ A script, diagnosis, treatment or pre-storyboard design; when explicitly request
 3. Choose creation, diagnosis, treatment, workbench, or pre-storyboard mode.
 4. Build the visual idea, actor actions, sound, time, editing, theme, and subtext from the causal reading.
 5. Review the actual screenplay, disclose the isolation level, repair the earliest upstream failure, and deliver the requested readable artifact first. Compile a separate AI-execution layer only when explicitly needed.
+6. Pass selected spatial, visual, environment and filming conditions into the director handoff. Compare material frame relationships at consequential open choices and preserve them during compilation.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback
@@ -115,8 +116,6 @@ A script, diagnosis, treatment or pre-storyboard design; when explicitly request
 - [`references/screenplay-writing-core.md`](../../../skills/director-agent/references/screenplay-writing-core.md)
 - [`references/verified-director-logic.md`](../../../skills/director-agent/references/verified-director-logic.md)
 
-**Distribution notices in new ZIP builds**
+**Other packaged files**
 
-New builds attach these files inside the Skill folder without editing its runtime source. Historical release archives are unchanged.
-
-- [`LICENSE`](../../../LICENSE)
+- [`LICENSE`](../../../skills/director-agent/LICENSE)
