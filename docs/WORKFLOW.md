@@ -2,7 +2,12 @@
 
 这里把每一步的输入、交付和返回关系放在一张图中。可以从已有剧本、参考图、导演方案或镜头继续，不必每次从头运行；只有当前交付需要时才进入下一层。
 
-![从输入、剧本、导演、视觉资产、分镜提示词到视频验收的完整流程](assets/workflow-overview.svg)
+<details>
+<summary>查看历史概览原图（当前职责和版本以下文为准）</summary>
+
+![历史流程概览，保留原研究时版本标签](assets/workflow-overview.svg)
+
+</details>
 
 [下载完整 Mermaid 源图](assets/production-workflow.mmd) · [全部模块](../SKILL_CATALOG.md) · [当前源码安装](INSTALLATION.md#install-from-a-clone) · [21张用户接受视觉成果及证据](showcase/manifest.json)
 
@@ -23,7 +28,7 @@ flowchart TB
     D --> V["按需选择视觉风格<br/>赛博朋克·史诗·奇幻·恐怖·黑色<br/>爱情·战争·武侠·仙侠·硬科幻·古风"]
     V --> A["人物／场景／道具资产<br/>character-asset · scene-asset · prop-asset<br/>按请求交设计／提示词或参考图<br/>图片经用户审阅后锁定"]
     A -. "需要调整时" .-> V
-    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.7.1"]
+    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.8.3"]
     A --> B
     X --> B
     B <--> R["保存与恢复<br/>导演意图·已选镜头·场景状态"]
@@ -37,7 +42,7 @@ flowchart TB
     G --> E["选片·剪辑·对白／音效／音乐"]
     E --> Q["完整播放审查与修复"]
     Q --> F["用户验收与成片交付"]
-    T -. "专项编排，尚未部署" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>按请求分镜或六模块提示词"]
+    T -. "按需选择专项生产编排" .-> SHORT["短剧生产控制合同<br/>ai-short-drama-production<br/>按请求分镜或六模块提示词"]
 ```
 
 ## 每个阶段实际交付什么
@@ -62,7 +67,7 @@ flowchart TB
 | # | Skill | 职责与交付 | 分发/使用边界 |
 |---|---|---|---|
 | 1 | [director-agent](skills/zh-CN/director-agent.md) | 剧本创作、编辑、诊断；导演方案；明确需要时另编译AI执行剧本 | 常规；已有批准导演方案不重新导演 |
-| 2 | [ai-storyboard-director](skills/zh-CN/ai-storyboard-director.md) | 5.7.1分镜、观众体验与摄影、分阶段提示词、作品内保存与恢复 | 当前A5.7.1按明确用户指令采用；待修和审美状态另列，旧Release ZIP未更新 |
+| 2 | [ai-storyboard-director](skills/zh-CN/ai-storyboard-director.md) | 5.8.3分镜、观看画框与摄影、FCML按需检索、分阶段提示词、作品内保存与恢复 | 当前源码5.8.3；媒体与用户审美状态另列，v1.4.0 ZIP仍冻结为5.7.2 |
 | 3 | [character-asset](skills/zh-CN/character-asset.md) | 人物主参考、必要视图、身份和状态合同 | 按请求交提示词或实际图；用户审阅后锁定 |
 | 4 | [scene-asset](skills/zh-CN/scene-asset.md) | 场景结构、空间锚点、光源与必要参考图 | 不因换机位重建场景 |
 | 5 | [prop-asset](skills/zh-CN/prop-asset.md) | 道具结构、材质、比例和状态参考 | 单图不自动扩成多格；保留真实塑料、新物和设计发光 |
@@ -72,13 +77,13 @@ flowchart TB
 | 9 | [horror-design](skills/zh-CN/horror-design.md) | 威胁、异常证据、显露与空间不安 | 不依靠死黑或血腥 |
 | 10 | [noir-design](skills/zh-CN/noir-design.md) | 秘密、犯罪、关系压力和明暗信息 | 不等于黑白滤镜 |
 | 11 | [romance-design](skills/zh-CN/romance-design.md) | 距离、视线、动作与关系变化 | 不强制粉色、暖光或拥抱 |
-| 12 | [war-design](skills/zh-CN/war-design.md) | 地形、协同、负荷、行动与后果 | 不用装饰爆炸替代战争处境 |
+| 12 | [war-design](skills/zh-CN/war-design.md) | 战争光色空间、军事人物装备、场景道具、战斗与小队画面、图像提示词及实际审查 | 完整剧本与逐镜编排仍按相应阶段处理 |
 | 13 | [wuxia-design](skills/zh-CN/wuxia-design.md) | 兵器、步法、支撑、接触与东方空间 | 静态交叉不证明动态攻防通过 |
 | 14 | [hard-sci-fi-visual-director](skills/zh-CN/hard-sci-fi-visual-director.md) | 物理、功能、制造、环境及原创硬科幻视觉 | 本仓库实验包；有用户接受图例，未证明所有任务稳定 |
 | 15 | [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director) | 东方仙侠世界、天宫巨构与写实摄影 | 外部上游；无已核实再分发许可，不复制源码或打包 |
 | 16 | [whitebox-previs-executor](skills/zh-CN/whitebox-previs-executor.md) | 提示词到可播放3D基础预演 | 实验包；人形和已实现代理，打斗必须逐动作过门 |
 | 17 | [produce-ai-video](skills/zh-CN/produce-ai-video.md) | 统筹实际生成、选片、剪辑、声音、完整看片与修复 | 需要实际工具、模型与相应权限；不内置免费模型 |
-| 18 | [ai-short-drama-production](skills/zh-CN/ai-short-drama-production.md) | 短剧节拍、资产、调度、光线、动作与QC控制合同 | 独立合同按请求交分镜或提示词；未安装，实际视频待验证 |
+| 18 | [ai-short-drama-production](skills/zh-CN/ai-short-drama-production.md) | 短剧节拍、资产、调度、光线、动作与QC控制合同 | 独立合同按请求交分镜或提示词；实片效果待验，宿主启用需实际安装确认 |
 | 19 | [d-official-market-analysis](skills/zh-CN/d-official-market-analysis.md) | 选题与平台研究、来源、数据、结论与独立待批准记录 | 按需研究；报告不授权知识写入 |
 | 20 | [d-data-analysis-semantic-layer](skills/zh-CN/d-data-analysis-semantic-layer.md) | 用户批准后校验、版本化写入与回读 | 目标和批准来自当前任务；已存知识仍检查时效 |
 | 21 | [guofeng-visual-director](skills/zh-CN/guofeng-visual-director.md) | 古风文化、空间、人物器物、构图光色与完整图像提示词 | 候选实验包；不自动视为历史准确还原 |
@@ -90,4 +95,4 @@ flowchart TB
 
 本轮21张视觉成果均已由用户接受，其中19张为原创生成静帧，2张为原创网页原型的真实浏览器截图；原幅展示及逐文件状态见[展示清单](showcase/manifest.json)。这只证明这些具体结果已被接受；没有旧版同题A/B，也没有跨任务稳定性或真人可用性研究。完整视频仍须生成、完整播放、修复并单独验收。
 
-当前源码的分镜入口为A5.7.1，已按明确用户指令采用；首轮测试中的已知问题与审美接受状态分别保留。公开v1.3.0 Release是含5.4.4的旧快照；另行分发的5.6独立Preview有自己的标签和范围。更新源码、构建ZIP、推送Git和发布新Release是不同动作，见[安装说明](INSTALLATION.md)。
+当前源码的分镜入口为5.8.3，已按明确用户指令采用；首轮测试中的已知问题与审美接受状态分别保留。v1.4.0 Release仍是含5.7.2的冻结快照，v1.3.0是含5.4.4的更早快照；另行分发的5.6独立Preview有自己的标签和范围。更新源码、构建ZIP、推送Git和发布新Release是不同动作，见[安装说明](INSTALLATION.md)。

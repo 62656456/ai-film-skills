@@ -10,7 +10,7 @@ Current repository source contains **Storyboard Director 5.8.3**, merged from th
 | Distribution | What it contains | How to use it |
 |---|---|---|
 | [v1.4.0 historical release snapshot](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0) | Storyboard Director A 5.7.2, 21 standalone ZIPs and an 18-regular-package complete archive, manifest and SHA-256 checksums | Choose one complete ZIP; experimental packages remain opt-in |
-| Current source tree | Storyboard Director A 5.7.2, adopted by explicit maintainer instruction; updated visual contracts and 21 modules: 18 regular plus 3 experimental. Known image-test issues remain documented. | Clone or download the intended source ref and use the local installer |
+| Current source tree | Storyboard Director 5.8.3, based on the complete 5.7.7 runtime with the offline camera library and viewing-frame design; 21 modules: 18 regular plus 3 experimental. Media effects and user acceptance are recorded separately. | Clone or download the intended source ref and use the local installer |
 | [Published v1.3.0](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | Historical snapshot with Storyboard Director 5.4.4 and the older 19-module inventory | Use when deliberately reproducing that release; its ZIP does not track current source |
 | Separately labeled 5.6 standalone Preview | An independently labeled preview artifact with its own manifest | Read that artifact's label and scope; do not treat it as a new complete-studio release |
 
