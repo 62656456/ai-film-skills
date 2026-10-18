@@ -143,7 +143,7 @@ flowchart TB
 
 导演 Agent 处理人物为什么行动、对白改变什么、场景怎样把状态传到下一场。分镜导演处理观众从哪里看、先知道什么、何时看见关键变化。已有的表演、情绪或镜头被认可后，局部改稿继续保留它们。
 
-当前分镜 5.8.3 先比较同剧情下的起点、转折和终点：对象在框内多大，哪些关系同时可见，空区和遮挡怎样影响信息。选定观看方案后，才安排摄影机制；包内 **115 个 FCML 机制**用于按需检索与绑定，不代替创作选择。
+当前分镜 5.8.6 先比较同剧情下的起点、转折和终点：对象在框内多大，哪些关系同时可见，空区和遮挡怎样影响信息。选定观看方案后，才安排摄影机制；包内 **115 个 FCML 机制**用于按需检索与绑定，不代替创作选择。
 
 ### 让人物、场景、道具在不同镜头中仍属于同一个世界
 
@@ -493,7 +493,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 Open Film Skills is a repository of **21 independent Agent Skills: 18 regular and 3 experimental**, with 42 English/Simplified Chinese guides. It covers screenplay writing and directing, reusable character/scene/prop assets, eight genre visual routes, cinematography and prompts, actual video production, short-drama control, market research, approved knowledge updates, web interfaces, hard science fiction, guofeng and bounded 3D previs.
 
-Choose a Skill by the task and deliverable listed above. Existing approved decisions pass to the next stage. Current Storyboard Director source is **5.8.3**; the frozen **v1.4.0** archive still contains **5.7.2**. Native host support, actual media execution and user acceptance are verified separately. External xianxia is linked upstream and is not part of the 21 redistributed packages.
+Choose a Skill by the task and deliverable listed above. Existing approved decisions pass to the next stage. Current Storyboard Director source and the new release are **5.8.6**; the frozen **v1.4.0** archive still contains **5.7.2**. Native host support, actual media execution and user acceptance are verified separately. External xianxia is linked upstream and is not part of the 21 redistributed packages.
 
 [English guides](docs/skills/INDEX.md) · [Installation](docs/INSTALLATION.md) · [Source catalog](SKILL_CATALOG.md)
 
@@ -511,6 +511,12 @@ Choose a Skill by the task and deliverable listed above. Existing approved decis
 
 本次按整个仓库重写README：前置21个技能的适用任务和直接交付，补齐阶段交接与三种调用示例；完整作品与研究重新分组，保留原图、视频和验收状态。当前介绍由本仓库首页直接承载。
 
+### 2026-10-18 · 分镜导演5.8.6与专业光学默认选型
+
+六模块保持，视觉风格放第二；生成任务具体写媒介、风格参照与摄影方式且不限一句，第二模块再次强化同一摄影方向，末尾集中负面提示词。按观看需要主动选择普通微距、探针/潜望、分焦、移轴、变焦或具体镜组，专业名称与实际画面过程一起表达；不固定三镜、不将所有微距套成探针。制作编译入口同步，场景设计本轮不改。
+
+[版本与验证记录](docs/maintenance/2026-10-18-storyboard-5.8.6.md) · [当前发布下载](https://github.com/62656456/ai-film-skills/releases/tag/ai-storyboard-director-v5.8.6)
+
 ### 2026-10-14 · 分镜导演5.8.3与导演Agent同步
 
 以完整5.7.7为基础，合入5.8.2的FCML离线镜头库、观看距离与起中终画框设计、可选设计保存和编译保全。原电影摄影、四种速度、真实光影、对招、持物、共同空间及格式规则保留；导演Agent的场景交接、观看方案比较和编译复核同步。
@@ -519,7 +525,8 @@ Choose a Skill by the task and deliverable listed above. Existing approved decis
 
 | 获取入口 | 实际版本与用途 |
 |---|---|
-| [当前仓库源码](skills/ai-storyboard-director/SKILL.md) | 分镜导演 **5.8.3**；其他包以实际源码和声明的版本为准。当前安装使用检出的源码 |
+| [当前仓库源码](skills/ai-storyboard-director/SKILL.md) | 分镜导演 **5.8.6**；其他包以实际源码和声明的版本为准。当前安装使用检出的源码 |
+| [分镜5.8.6当前下载](https://github.com/62656456/ai-film-skills/releases/tag/ai-storyboard-director-v5.8.6) | 与当前分镜源码一致；包括六模块新顺序、电影摄影和按任务选择专业光学，以及制作编译衔接 |
 | [v1.4.0历史冻结下载](https://github.com/62656456/ai-film-skills/releases/tag/v1.4.0) | 分镜 **5.7.2**；21个单包与18常规包套装。旧归档不随当前源码更新 |
 | [v1.3.0历史下载](https://github.com/62656456/ai-film-skills/releases/tag/v1.3.0) | 分镜 **5.4.4**及旧清单，旧案例保留 `SELF-AUDIT ONLY` 原标识 |
 | 5.6独立Preview | 单独标记的历史预览物，按其自身清单和范围使用，见[版本说明](docs/INSTALLATION.md) |
@@ -529,7 +536,7 @@ Choose a Skill by the task and deliverable listed above. Existing approved decis
 
 2026-09-29明确启用A后，可读分镜、视频提示词和实际媒体按请求分别执行；创意思路采用后才并入主方案。三版工作流、同题原稿与融合、七题材21张首轮图、生成说明与逐图问题继续可查。测试图中的“现用5.6.5”指实验开始时的默认版本，保留原标签。B5.7.1-jev为历史可选文字复核，不接管图像审美或创意采用。
 
-历史记录包括21包结构核对、6项仓库质量门和168项回归（164通过、4跳过），以及独立前向文本试用。这些数字只对应当时的执行范围与日期，见[整改研究](docs/research/skill-overhaul/index.md)；本轮检查见5.8.3合并记录。
+历史记录包括21包结构核对、6项仓库质量门和168项回归（164通过、4跳过），以及独立前向文本试用。这些数字只对应当时的执行范围与日期，见[整改研究](docs/research/skill-overhaul/index.md)；本轮检查见[5.8.6版本记录](docs/maintenance/2026-10-18-storyboard-5.8.6.md)。
 
 2026-10-09维护记录保留33条历史评审、23条仍适用问题的处理；5.8.0来源整合、5.8.1观看方案与5.8.2成像整改保留各自原文、同题重跑和验证边界。此前21张已接受作品、9月视觉研究、白模实验与旧版本案例继续按各自原始状态保留。
 

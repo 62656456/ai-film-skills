@@ -1,12 +1,12 @@
 # 全部技能目录 / Skill catalog
 
-当前分镜源码为 **5.8.3**：以5.7.7为基础，保留摄影、光色、打戏和空间规则，加入FCML离线机制与起中终画框比较。当前版本通过仓库源码安装；v1.4.0归档仍冻结为5.7.2，不能用旧归档代表现行源码。
+当前分镜源码为 **5.8.6**：以5.7.7为基础，保留摄影、光色、打戏和空间规则，加入FCML离线机制与起中终画框比较。当前版本通过仓库源码安装；v1.4.0归档仍冻结为5.7.2，不能用旧归档代表现行源码。
 
 **本仓库21个源码包：18项常规＋3项实验；42份英文/简体中文指南。** 此页列出每包实际用途、源码版本和直接文件入口，GitHub仓库首页是[README](README.md)。
 
 [完整工作流](docs/WORKFLOW.md) · [全部双语指南](docs/skills/INDEX.md) · [安装](docs/INSTALLATION.md) · [原创版权与商用](COMMERCIAL_USE.md)
 
-版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜5.8.3源码（v1.4.0归档仍为5.7.2）已按明确用户指令采用，已知测试问题与用户审美验收另列。常规/实验是分发状态，不是全部能力通过实战的声明。
+版本列“—”表示`SKILL.md`未声明独立技能版本，按实际Git提交和完整文件识别；不据模板或协议字段编造版本。当前分镜5.8.6源码（v1.4.0归档仍为5.7.2）已按明确用户指令采用，已知测试问题与用户审美验收另列。常规/实验是分发状态，不是全部能力通过实战的声明。
 
 ## 当前源码与历史下载
 
@@ -25,7 +25,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
 | `director-agent`<br/>编剧与导演 | 写作、改稿、对白与人物因果诊断；导演方案和条件式AI执行剧本 | — | 常规 | [运行正文](skills/director-agent/SKILL.md) · [中文说明](docs/skills/zh-CN/director-agent.md) · [EN](docs/skills/en/director-agent.md) · [v1.4.0历史 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/director-agent.zip) |
-| `ai-storyboard-director`<br/>分镜与摄影 | 设计起中终观看画框、摄影和六模块提示词；按需查询FCML并保存恢复选中决定 | 5.8.3 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) · [v1.4.0历史 ZIP（5.7.2）](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-storyboard-director.zip) |
+| `ai-storyboard-director`<br/>分镜与摄影 | 设计起中终观看画框、摄影和六模块提示词；按需查询FCML并保存恢复选中决定 | 5.8.6 | 常规 | [运行正文](skills/ai-storyboard-director/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-storyboard-director.md) · [EN](docs/skills/en/ai-storyboard-director.md) · [5.8.6 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/ai-storyboard-director.zip) |
 
 ## Asset definition
 
@@ -58,8 +58,8 @@ python scripts/install_skill.py <skill-name> --platform codex
 
 | 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
 |---|---|---|---|---|
-| `produce-ai-video`<br/>实际视频生产 | 统筹实际生成、选片、剪辑、对白音效、完整播放审查与修复 | — | 常规 | [运行正文](skills/produce-ai-video/SKILL.md) · [中文说明](docs/skills/zh-CN/produce-ai-video.md) · [EN](docs/skills/en/produce-ai-video.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/produce-ai-video.zip) |
-| `ai-short-drama-production`<br/>短剧控制 | 五列分镜＋一条六模块母提示词；5.6结构已对齐，文本验证通过，实片待验 | — | 常规；未部署 | [运行正文](skills/ai-short-drama-production/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-short-drama-production.md) · [EN](docs/skills/en/ai-short-drama-production.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-short-drama-production.zip) |
+| `produce-ai-video`<br/>实际视频生产 | 统筹实际生成、选片、剪辑、对白音效、完整播放审查与修复 | — | 常规 | [运行正文](skills/produce-ai-video/SKILL.md) · [中文说明](docs/skills/zh-CN/produce-ai-video.md) · [EN](docs/skills/en/produce-ai-video.md) · [5.8.6同步发布 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/produce-ai-video.zip) |
+| `ai-short-drama-production`<br/>短剧控制 | 五列分镜＋一条六模块母提示词；现行六模块已对齐，文本验证通过，实片待验 | — | 常规；未部署 | [运行正文](skills/ai-short-drama-production/SKILL.md) · [中文说明](docs/skills/zh-CN/ai-short-drama-production.md) · [EN](docs/skills/en/ai-short-drama-production.md) · [5.8.6同步发布 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/ai-short-drama-production.zip) |
 | `web-design-director`<br/>网页辅助 | 明确网页或应用界面任务时设计与审核；仓库README维护不触发建站 | 1.3.0 | 常规 | [运行正文](skills/web-design-director/SKILL.md) · [中文说明](docs/skills/zh-CN/web-design-director.md) · [EN](docs/skills/en/web-design-director.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/web-design-director.zip) |
 | `d-official-market-analysis`<br/>市场研究 | 根据当前可验证来源研究题材、平台、受众与制作机会，保留数据局限 | — | 常规 | [运行正文](skills/d-official-market-analysis/SKILL.md) · [中文说明](docs/skills/zh-CN/d-official-market-analysis.md) · [EN](docs/skills/en/d-official-market-analysis.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/d-official-market-analysis.zip) |
 | `d-data-analysis-semantic-layer`<br/>知识审核与写入 | 用户批准后校验来源、版本、有效期与冲突，写入明确目标并回读 | — | 常规 | [运行正文](skills/d-data-analysis-semantic-layer/SKILL.md) · [中文说明](docs/skills/zh-CN/d-data-analysis-semantic-layer.md) · [EN](docs/skills/en/d-data-analysis-semantic-layer.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/d-data-analysis-semantic-layer.zip) |

@@ -1,6 +1,16 @@
 # Release notes
 
-## Current source update — 2026-10-14 / Storyboard 5.8.3
+## Storyboard 5.8.6 — 2026-10-18
+
+- Make concrete cinematic imaging and task-driven professional optics the default for storyboard and video-prompt requests across genres.
+- Preserve six main modules with visual style second; keep detailed medium/style/photography in the first module without a one-sentence limit, reinforce it in the second and append an unnumbered negative prompt.
+- Distinguish ordinary macro, wide probe and fixed-angle periscope, split diopters, tilt/shift, cinema zoom and lens character; optical names retain viewing position, focus and visible action. Do not invent mechanical capabilities or impose a fixed shot quota.
+- Align video-production and short-drama prompt compilers; preserve the existing scene-design implementation and unrelated working changes.
+- Keep package checks, independent text trials, user-reported improvement of individual clips and untested optical/video behavior separate. No new media was generated for this release.
+
+See [scope and checks](docs/maintenance/2026-10-18-storyboard-5.8.6.md).
+
+## Historical source update — 2026-10-14 / Storyboard 5.8.3
 
 - Merge the offline FCML library and concrete viewing-frame design into the complete 5.7.7 runtime, preserving cinematic photography, real lighting, reciprocal action, shared spatial occupancy and compilation checks.
 - Keep the five-column storyboard, six-module prompt, explicit stage boundaries and existing locked decisions. The 115 offline mechanisms support selection; they do not certify generated-video execution.

@@ -28,7 +28,7 @@ flowchart TB
     D --> V["按需选择视觉风格<br/>赛博朋克·史诗·奇幻·恐怖·黑色<br/>爱情·战争·武侠·仙侠·硬科幻·古风"]
     V --> A["人物／场景／道具资产<br/>character-asset · scene-asset · prop-asset<br/>按请求交设计／提示词或参考图<br/>图片经用户审阅后锁定"]
     A -. "需要调整时" .-> V
-    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.8.3"]
+    V --> B["分镜与摄影设计<br/>ai-storyboard-director 5.8.6"]
     A --> B
     X --> B
     B <--> R["保存与恢复<br/>导演意图·已选镜头·场景状态"]
@@ -67,7 +67,7 @@ flowchart TB
 | # | Skill | 职责与交付 | 分发/使用边界 |
 |---|---|---|---|
 | 1 | [director-agent](skills/zh-CN/director-agent.md) | 剧本创作、编辑、诊断；导演方案；明确需要时另编译AI执行剧本 | 常规；已有批准导演方案不重新导演 |
-| 2 | [ai-storyboard-director](skills/zh-CN/ai-storyboard-director.md) | 5.8.3分镜、观看画框与摄影、FCML按需检索、分阶段提示词、作品内保存与恢复 | 当前源码5.8.3；媒体与用户审美状态另列，v1.4.0 ZIP仍冻结为5.7.2 |
+| 2 | [ai-storyboard-director](skills/zh-CN/ai-storyboard-director.md) | 5.8.6分镜、观看画框与摄影、FCML按需检索、分阶段提示词、作品内保存与恢复 | 当前源码5.8.6；媒体与用户审美状态另列，[5.8.6发布](https://github.com/62656456/ai-film-skills/releases/tag/ai-storyboard-director-v5.8.6)与当前分镜源码一致；v1.4.0仍冻结为5.7.2 |
 | 3 | [character-asset](skills/zh-CN/character-asset.md) | 人物主参考、必要视图、身份和状态合同 | 按请求交提示词或实际图；用户审阅后锁定 |
 | 4 | [scene-asset](skills/zh-CN/scene-asset.md) | 场景结构、空间锚点、光源与必要参考图 | 不因换机位重建场景 |
 | 5 | [prop-asset](skills/zh-CN/prop-asset.md) | 道具结构、材质、比例和状态参考 | 单图不自动扩成多格；保留真实塑料、新物和设计发光 |
@@ -95,4 +95,4 @@ flowchart TB
 
 本轮21张视觉成果均已由用户接受，其中19张为原创生成静帧，2张为原创网页原型的真实浏览器截图；原幅展示及逐文件状态见[展示清单](showcase/manifest.json)。这只证明这些具体结果已被接受；没有旧版同题A/B，也没有跨任务稳定性或真人可用性研究。完整视频仍须生成、完整播放、修复并单独验收。
 
-当前源码的分镜入口为5.8.3，已按明确用户指令采用；首轮测试中的已知问题与审美接受状态分别保留。v1.4.0 Release仍是含5.7.2的冻结快照，v1.3.0是含5.4.4的更早快照；另行分发的5.6独立Preview有自己的标签和范围。更新源码、构建ZIP、推送Git和发布新Release是不同动作，见[安装说明](INSTALLATION.md)。
+当前源码的分镜入口为5.8.6，已按明确用户指令采用；首轮测试中的已知问题与审美接受状态分别保留。v1.4.0 Release仍是含5.7.2的冻结快照，v1.3.0是含5.4.4的更早快照；另行分发的5.6独立Preview有自己的标签和范围。更新源码、构建ZIP、推送Git和发布新Release是不同动作，见[安装说明](INSTALLATION.md)。

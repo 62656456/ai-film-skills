@@ -1,5 +1,9 @@
 # Publication scope
 
+## 2026-10-18 Storyboard 5.8.6 publication
+
+This update publishes the current Storyboard Director and its six-module/optical handoff changes. It includes its already effective package-local project-style reference. Changes authored concurrently for scene design and other Skill packages remain outside this publication. Private local project state, user conversations, credentials and local verification paths are not redistributed. Historical releases and media retain their existing scope.
+
 ## Current source inventory
 
 The source tree contains **18 regular packages and 3 opt-in experimental packages: 21 modules, with 42 generated English / Simplified Chinese guides**. The regular complete-studio distribution includes the 18 packages under `skills/`; the three `experimental/` packages retain their explicit opt-in boundary.

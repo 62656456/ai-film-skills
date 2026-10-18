@@ -5,9 +5,9 @@
 | 单独可交付 | 针对已有决定的生产控制编排与缺口审计，也可单独交付六类控制合同中的任意一类。 |
 | 单独不能声称 | 不需要配套技能包：导演、资产、类型、提示词和 QC 规则均按短剧用途重写为本地模块；真实图片和视频生成仍需要宿主媒体工具与权限。 |
 
-[运行正文 `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-short-drama-production.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [ai-storyboard-director-v5.8.6 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/ai-short-drama-production.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
+本发布快照统一分镜5.8.6提示词合同及制作交接；历史归档保持原内容。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -45,6 +45,7 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 3. 按需建立调度、布光、动作和草图转镜头控制合同。
 4. 编译点名控制合同、可读分镜或六模块提示词；两者都要才交分镜与提示词，保留全部锁定。
 5. 区分文本自洽的 ready_for_prompt 与资产审阅、执行条件齐全的 ready_for_generation；生成后再检查真实媒体。
+6. 按视觉风格第二、末尾附不编号负面提示词的现行六模块顺序保全已选摄影，专业光学名称与可见过程一同交接。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚

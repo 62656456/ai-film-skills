@@ -5,9 +5,9 @@
 | Can deliver alone | A full production and validation contract; with the required host tools and permissions, an actual reviewed final video. |
 | Cannot claim alone | Installing the Skill alone does not supply models, credits, rights, editing tools, or a qualified video. |
 
-[Runtime `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/produce-ai-video.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [ai-storyboard-director-v5.8.6 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/produce-ai-video.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
+This release snapshot aligns the Storyboard 5.8.6 prompt contract and its production handoffs. Historical archives keep their original contents.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -45,6 +45,7 @@ A full production and validation contract; with the required host tools and perm
 3. Choose a generation route, create genuine motion, edit, build sound, and render the real final file.
 4. Watch the whole render at least twice: once for story/emotion, once for technical and continuity defects.
 5. Repair blocking failures and deliver with the honest status `qualified`, `candidate`, or `unfinished/needs validation`.
+6. Preserve the selected photography in the current six-module order with visual style second and an unnumbered negative prompt at the end. Keep professional optical names together with their visible action.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback

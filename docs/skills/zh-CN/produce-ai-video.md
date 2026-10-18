@@ -5,9 +5,9 @@
 | 单独可交付 | 完整生产与验收合同；宿主工具和权限齐全时，可交付真实审核后的最终视频。 |
 | 单独不能声称 | 只安装 Skill 不会自动获得模型、额度、版权、剪辑工具或合格成片。 |
 
-[运行正文 `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/produce-ai-video.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
+[运行正文 `SKILL.md`](../../../skills/produce-ai-video/SKILL.md) · [ai-storyboard-director-v5.8.6 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/produce-ai-video.zip) · [安装说明](../../INSTALLATION.md) · [兼容说明](../../COMPATIBILITY.md) · [设计总则](../../SKILL_DESIGN_SYSTEM.md)
 
-v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。
+本发布快照统一分镜5.8.6提示词合同及制作交接；历史归档保持原内容。
 
 <!-- contract:purpose -->
 ## 1. 设计目的
@@ -45,6 +45,7 @@ v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态�
 3. 选择生成路线，产生真实运动，完成剪辑、声音和最终文件渲染。
 4. 至少完整观看两遍：一遍看故事与情绪，一遍看技术与连续性。
 5. 修复阻塞问题，并以“合格成片 / 候选成片 / 未完成或待验证”诚实交付。
+6. 按视觉风格第二、末尾附不编号负面提示词的现行六模块顺序保全已选摄影，专业光学名称与可见过程一同交接。
 
 <!-- contract:returns -->
 ## 6. 退回、重做与版本回滚

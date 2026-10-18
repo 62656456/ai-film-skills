@@ -5,9 +5,9 @@
 | Can deliver alone | Production-control orchestration and gap auditing for existing decisions, including any one of its six control contracts. |
 | Cannot claim alone | It does not require a companion package: its director, asset, genre, prompt, and QC rules are rewritten as local short-drama modules, while actual image/video generation still needs the host's media tools and permissions. |
 
-[Runtime `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/ai-short-drama-production.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
+[Runtime `SKILL.md`](../../../skills/ai-short-drama-production/SKILL.md) · [ai-storyboard-director-v5.8.6 ZIP](https://github.com/62656456/ai-film-skills/releases/download/ai-storyboard-director-v5.8.6/ai-short-drama-production.zip) · [Install](../../INSTALLATION.md) · [Compatibility](../../COMPATIBILITY.md) · [Design system](../../SKILL_DESIGN_SYSTEM.md)
 
-Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.
+This release snapshot aligns the Storyboard 5.8.6 prompt contract and its production handoffs. Historical archives keep their original contents.
 
 <!-- contract:purpose -->
 ## 1. Purpose
@@ -45,6 +45,7 @@ Production-control orchestration and gap auditing for existing decisions, includ
 3. Create blocking, lighting, action, and sketch-to-shot control contracts only where needed.
 4. Compile the requested control contract, readable storyboard or six-module prompt; provide both storyboard and prompt only when requested, preserving all locks.
 5. Distinguish coherent candidate text (`ready_for_prompt`) from approved assets and verified execution conditions (`ready_for_generation`); inspect actual media after generation.
+6. Preserve the selected photography in the current six-module order with visual style second and an unnumbered negative prompt at the end. Keep professional optical names together with their visible action.
 
 <!-- contract:returns -->
 ## 6. Return, rework, and rollback

@@ -162,6 +162,10 @@
       ],
       "workflow": [
         {
+          "en": "Before character, scene or prop design, obtain explicit user approval for the project visual-style template and its full master prompt. Until then, deliver only the style proposal and authorized style trials; reuse existing valid approval.",
+          "zh-CN": "人物、场景、道具设计之前，先由用户明确通过项目统一风格模板及完整母提示词；未通过时只推进风格提案和已授权试样，已有有效批准直接复用。"
+        },
+        {
           "en": "Read causality, character goals, relationships, emotion, space, action, and continuity.",
           "zh-CN": "先读因果、人物目标、关系、情绪、空间、动作和连续性。"
         },
@@ -192,6 +196,10 @@
       ],
       "returns": [
         {
+          "en": "A failed image is diagnostic-only. Inspect the actual prompt and references, rewrite the complete prompt, and regenerate from approved clean originals. Exclude the failed image and its derivatives from subsequent image/video inputs.",
+          "zh-CN": "失败图只用于诊断；检查实际提示词与参考，重写完整提示词，从合格原始基准重生成，失败图及其派生图不进入后续图像或视频输入。"
+        },
+        {
           "en": "Story or director failures return upstream; spatial, blocking, camera, timing, or prompt-encoding failures return to their responsible design stage.",
           "zh-CN": "故事或导演问题退回上游；空间、调度、摄影机、时长或提示词编译问题退回对应设计阶段。"
         },
@@ -216,6 +224,10 @@
         {
           "en": "Duration closes exactly; dialogue timing, world projection, off-frame subjects, light direction, props, and end states remain continuous.",
           "zh-CN": "时长闭合；台词、世界投影、出框主体、光向、道具和尾帧状态连续。"
+        },
+        {
+          "en": "Judge visible dominant color, light/shadow form, differentiated materials and coherent imaging. Purposeful IMAX, camera, film and lens references are allowed; their names and static checks do not prove media quality.",
+          "zh-CN": "按实际主色、明暗塑形、材质差异和统一成像判断质感；允许有目的地使用IMAX、摄影机、胶片与镜头参照，名称和静态检查不能证明画质。"
         }
       ],
       "pass": [
@@ -1534,8 +1546,8 @@
       "family": "storyboard",
       "status": "packaged",
       "status_label": {
-        "en": "Current merged source 5.8.3, based on 5.7.7 with offline camera mechanisms and concrete frame alternatives; media effects and user acceptance remain separate.",
-        "zh-CN": "当前合并源码5.8.3：以5.7.7为基础，加入离线摄影机制与具体画框备选；媒体效果与用户接受另列。"
+        "en": "Current Storyboard Director 5.8.6: automatic task-driven optics, detailed cinematic direction and the revised six-module prompt. Package/text checks and generated-media acceptance remain separate.",
+        "zh-CN": "当前分镜5.8.6：默认按观看任务选择专业光学，具体表达电影摄影，并使用新版六模块。包/文字检查与实际媒体接受分别记录。"
       },
       "title": {
         "en": "ai-storyboard-director — script to shots and prompts",
@@ -1555,14 +1567,14 @@
       },
       "download": {
         "state": "published_snapshot",
-        "tag": "v1.4.0",
+        "tag": "ai-storyboard-director-v5.8.6",
         "asset": "ai-storyboard-director.zip",
         "note": {
-          "en": "Historical v1.4.0 archive contains Storyboard 5.7.2. Install current 5.8.3 from the repository source; this update does not replace frozen release archives.",
-          "zh-CN": "历史v1.4.0归档包含分镜5.7.2。当前5.8.3从仓库源码安装；本次更新不替换冻结发布归档。"
+          "en": "This release snapshot aligns the Storyboard 5.8.6 prompt contract and its production handoffs. Historical archives keep their original contents.",
+          "zh-CN": "本发布快照统一分镜5.8.6提示词合同及制作交接；历史归档保持原内容。"
         }
       },
-      "source_version": "5.8.3",
+      "source_version": "5.8.6",
       "extra_review": [
         {
           "en": "Reconstruct selected framing, four speed layers, real light paths, held-object/contact continuity and shared character/prop/camera occupancy from the actual final output.",
@@ -1577,6 +1589,14 @@
         {
           "en": "Store selected frame decisions, critical retention items and adopted motion phases in optional schema-1 records. The library and memory checks do not prove model execution or taste.",
           "zh-CN": "以可选schema-1记录保存选中画框、关键保留项和已采用摄影阶段；机制库与记录检查不证明模型执行或审美。"
+        },
+        {
+          "en": "Use the default video prompt order: task, visual style, subjects, scene state, emotional goal, segmented script; append an unnumbered negative prompt. The first two modules reinforce one coherent imaging direction.",
+          "zh-CN": "视频提示词默认顺序：生成任务、视觉风格、主要主体、场景状态、情绪目标、分段脚本；末尾附不编号负面提示词。前两模块共同强化同一成像方向。"
+        },
+        {
+          "en": "Choose focal length, optical category, viewing position, focus and motion together. Distinguish ordinary macro, wide probe and fixed-angle periscope, split diopters, tilt/shift and cinema zoom; preserve known mechanical limits and user-locked shots.",
+          "zh-CN": "联合选择焦距、光学类别、观察位置、焦点与运动；区分普通微距、广角探针、固定视向潜望、分焦、移轴和电影变焦，保留真实机械边界及用户锁定镜头。"
         }
       ]
     },
@@ -2113,13 +2133,19 @@
       },
       "download": {
         "state": "published_snapshot",
-        "tag": "v1.4.0",
+        "tag": "ai-storyboard-director-v5.8.6",
         "asset": "produce-ai-video.zip",
         "note": {
-          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
-          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
+          "en": "This release snapshot aligns the Storyboard 5.8.6 prompt contract and its production handoffs. Historical archives keep their original contents.",
+          "zh-CN": "本发布快照统一分镜5.8.6提示词合同及制作交接；历史归档保持原内容。"
         }
-      }
+      },
+      "extra_workflow": [
+        {
+          "en": "Preserve the selected photography in the current six-module order with visual style second and an unnumbered negative prompt at the end. Keep professional optical names together with their visible action.",
+          "zh-CN": "按视觉风格第二、末尾附不编号负面提示词的现行六模块顺序保全已选摄影，专业光学名称与可见过程一同交接。"
+        }
+      ]
     },
     {
       "name": "ai-short-drama-production",
@@ -2147,13 +2173,19 @@
       },
       "download": {
         "state": "published_snapshot",
-        "tag": "v1.4.0",
+        "tag": "ai-storyboard-director-v5.8.6",
         "asset": "ai-short-drama-production.zip",
         "note": {
-          "en": "Fixed v1.4.0 release snapshot. Check the archive manifest and Skill version; experimental status is unchanged.",
-          "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
+          "en": "This release snapshot aligns the Storyboard 5.8.6 prompt contract and its production handoffs. Historical archives keep their original contents.",
+          "zh-CN": "本发布快照统一分镜5.8.6提示词合同及制作交接；历史归档保持原内容。"
         }
-      }
+      },
+      "extra_workflow": [
+        {
+          "en": "Preserve the selected photography in the current six-module order with visual style second and an unnumbered negative prompt at the end. Keep professional optical names together with their visible action.",
+          "zh-CN": "按视觉风格第二、末尾附不编号负面提示词的现行六模块顺序保全已选摄影，专业光学名称与可见过程一同交接。"
+        }
+      ]
     },
     {
       "name": "web-design-director",
@@ -2367,7 +2399,7 @@
     "experimental_packages": 3,
     "total_packages": 21,
     "bilingual_guides": 42,
-    "source_storyboard_version": "5.8.3",
+    "source_storyboard_version": "5.8.6",
     "historical_release": "v1.3.0",
     "historical_release_storyboard_version": "5.4.4",
     "preview": "Separately labeled 5.6 standalone Preview; not the current complete-studio Release",
