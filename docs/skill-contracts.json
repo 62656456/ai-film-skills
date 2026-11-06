@@ -1498,6 +1498,124 @@
         "en": "The visual parameter and QC package is text-only and host-neutral. Actual image or video output requires the host's media tools, model access, permissions, and visual review.",
         "zh-CN": "视觉参数与质检包是宿主无关的文本合同；真实图片或视频另需媒体工具、模型权限和视觉审核。"
       }
+    },
+    "female-photography": {
+      "principles": [
+        {
+          "en": "Design the entire image through expression, purposeful action, styling, setting, props, light and photographic rendering.",
+          "zh-CN": "以整幅美感统筹神态、有动因的动作、造型、场景、道具、光色和摄影成像。"
+        },
+        {
+          "en": "Turn emotion into visible gaze, facial tension, body lines and material response; keep each still image to one moment.",
+          "zh-CN": "把情绪落实到视线、面部张力、身体线条与材质反应；每张静帧只容纳一个时刻。"
+        },
+        {
+          "en": "Choose optical softness, bokeh, motion traces or contrast for a visible purpose; a camera name alone is not an effect.",
+          "zh-CN": "按具体观看目的选择柔焦、散景、运动痕迹或反差，不以器材名称代替实际成像。"
+        },
+        {
+          "en": "Keep approved identity and design decisions; distinguish independent themes, identity variants and images in one story.",
+          "zh-CN": "继承已确认的身份和设计，区分独立主题、同身份变体及同故事不同图。"
+        }
+      ],
+      "inputs": [
+        {
+          "en": "The requested deliverable, subject or theme, intended use and existing generation or publication authorization.",
+          "zh-CN": "点名交付物、主体或主题、用途，以及已有的生成和发布授权。"
+        },
+        {
+          "en": "Any approved references and the exact roles they play in identity, wardrobe, composition, light or mood.",
+          "zh-CN": "已确认参考图，以及它们对身份、服装、构图、光色或情绪的具体职责。"
+        }
+      ],
+      "workflow": [
+        {
+          "en": "Recover existing design decisions and decide whether the request needs discussion, prompts, actual images or sharing copy.",
+          "zh-CN": "恢复已有设计决定，辨明本次需要讨论、提示词、实际图片还是分享文案。"
+        },
+        {
+          "en": "State one concrete visual proposition and coordinate silhouette, color areas, depth, materials and exposure around it.",
+          "zh-CN": "形成具体画面主张，围绕它统筹轮廓、色块、纵深、材质和曝光。"
+        },
+        {
+          "en": "Write a complete prompt with expression, action cause, physical effects, composition and lighting; use references only for their stated roles.",
+          "zh-CN": "把神态、动作成因、物理表现、构图和光线写入完整提示词，按明确职责使用参考。"
+        },
+        {
+          "en": "Generate only within the active authorization, inspect the actual result and repair concrete failures from an eligible original basis.",
+          "zh-CN": "按当前授权生成，实际审看结果，发现具体失败时回到合格原始基准修订。"
+        },
+        {
+          "en": "Deliver the requested images or text with the complete actual prompts and an accurate account of reference use.",
+          "zh-CN": "交付点名图片或文字，并附完整实际提示词及准确的参考使用说明。"
+        }
+      ],
+      "returns": [
+        {
+          "en": "For weak beauty or tension, revise the few dominant causes in expression, lines, light, styling or spatial design.",
+          "zh-CN": "美感或张力不足时，修订神态、线条、光色、造型或空间中的少量主因。"
+        },
+        {
+          "en": "A failed image is diagnostic only; return to an approved original reference or complete text rather than a chain of failed edits.",
+          "zh-CN": "失败图只作诊断；回到合格原始参考或完整文字，不沿失败编辑链继续修。"
+        }
+      ],
+      "review": [
+        {
+          "en": "The whole image has a coherent attraction, visual hierarchy and deliberate photographic expression.",
+          "zh-CN": "整幅吸引力、主次秩序和摄影表达相互一致。"
+        },
+        {
+          "en": "Shoulder, elbow, forearm, wrist, hand, contact and held objects form a credible chain.",
+          "zh-CN": "肩、肘、前臂、腕、手、接触与持物形成可信动作链。"
+        },
+        {
+          "en": "Wind, rain, fabric weight, shadows, reflections and depth of field support the intended moment.",
+          "zh-CN": "风雨、衣料重量、阴影、反射及景深支持同一个定格瞬间。"
+        },
+        {
+          "en": "Prompts, actual reference inputs, generated results and user decisions are accurately distinguished.",
+          "zh-CN": "准确区分提示词、实际参考输入、生成结果与用户决定。"
+        }
+      ],
+      "pass": [
+        {
+          "en": "Text delivery is complete and executable; image delivery includes actual generated images that were inspected.",
+          "zh-CN": "文字交付完整可执行；图片交付包含真实生成且实际审看的图片。"
+        },
+        {
+          "en": "Structural checks, a published example and explicit aesthetic acceptance remain different evidence states.",
+          "zh-CN": "结构检查、公开案例与明确审美接受分别举证。"
+        }
+      ],
+      "outputs": [
+        {
+          "en": "Complete photographic design and image prompts; actual images when authorized tools are available.",
+          "zh-CN": "完整摄影设计与图像提示词；工具和授权具备时交实际图片。"
+        },
+        {
+          "en": "Optional image-plus-prompt sharing copy with AI disclosure and precise reference-use notes.",
+          "zh-CN": "按需交图片加提示词分享文案，附 AI 说明和准确的参考使用记录。"
+        }
+      ],
+      "boundaries": [
+        {
+          "en": "Subjects in this module are adults. A portrait request does not become a mandatory multi-view character-asset task.",
+          "zh-CN": "本模块设计成年人物；普通肖像请求不扩成强制多视图人物资产任务。"
+        },
+        {
+          "en": "Writing, image generation and external publication retain their own active authorization; existing authorization is reused.",
+          "zh-CN": "文字、出图与对外发布分别遵守当前授权，已有授权持续沿用。"
+        },
+        {
+          "en": "Do not claim real-world shooting, unperformed retouching, exact optical reproduction or universal stable output.",
+          "zh-CN": "不冒称真实拍摄、未执行的修图、精确镜头复现或全题材稳定效果。"
+        }
+      ],
+      "requires": {
+        "en": "A host that can read the complete folder can use the design method. Actual images require its image tool and visual inspection; platform publication additionally requires an authorized account workflow.",
+        "zh-CN": "能读取完整文件夹的宿主可使用设计方法；实际图片需要生图工具和视觉审看，对外发布还需要已授权账号流程。"
+      }
     }
   },
   "skills": [
@@ -2392,13 +2510,46 @@
           "zh-CN": "v1.4.0固定发布快照。请核对归档清单与技能版本；实验状态保持。"
         }
       }
+    },
+    {
+      "name": "female-image-aesthetics",
+      "family": "female-photography",
+      "status": "packaged",
+      "status_label": {
+        "en": "Current v0.3.0 source; published examples are task-specific evidence, not a reliability guarantee.",
+        "zh-CN": "当前 v0.3.0 源码；公开案例只对应具体任务，不代表通用稳定性保证。"
+      },
+      "title": {
+        "en": "female-image-aesthetics — aesthetics-led portrait photography",
+        "zh-CN": "female-image-aesthetics｜女性影像美学导演"
+      },
+      "purpose": {
+        "en": "Create compelling adult female photographic imagery by coordinating expression, action cause, styling, physical response, composition, lighting and rendering.",
+        "zh-CN": "联合神态、动作成因、造型、物理表现、构图、光线与成像，创作有吸引力的成年女性摄影影像。"
+      },
+      "standalone": {
+        "en": "Photographic concepts, complete actual prompts, authorized generated images and optional sharing copy.",
+        "zh-CN": "摄影设计、完整实际提示词、已授权生成的图片及可选分享文案。"
+      },
+      "cannot": {
+        "en": "The folder does not include a model or account and does not itself authorize image generation or publication.",
+        "zh-CN": "技能包不内置模型或账号，也不因安装而自动授权出图或发布。"
+      },
+      "download": {
+        "state": "source_only",
+        "source_install": "docs/INSTALLATION.md",
+        "note": {
+          "en": "Install the complete current source folder. Existing release ZIPs do not contain this newly published module.",
+          "zh-CN": "请安装完整的当前源码文件夹；既有 Release ZIP 不含本次新增模块。"
+        }
+      }
     }
   ],
   "distribution": {
-    "regular_packages": 18,
+    "regular_packages": 19,
     "experimental_packages": 3,
-    "total_packages": 21,
-    "bilingual_guides": 42,
+    "total_packages": 22,
+    "bilingual_guides": 44,
     "source_storyboard_version": "5.8.6",
     "historical_release": "v1.3.0",
     "historical_release_storyboard_version": "5.4.4",

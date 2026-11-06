@@ -1,14 +1,18 @@
 # Publication scope
 
+## 2026-11-06 Female image aesthetics 0.3.0 publication
+
+This update publishes the complete `female-image-aesthetics` v0.3.0 instruction folder, six reference documents and optional interface metadata, together with its English and Simplified Chinese design guides. The public copy retains the working method while omitting private trial chronology. Generation and publication still follow each task's active authorization. This is a source publication, not a new complete-studio release; historical archives and unrelated Skill versions are unchanged.
+
 ## 2026-10-18 Storyboard 5.8.6 publication
 
 This update publishes the current Storyboard Director and its six-module/optical handoff changes. It includes its already effective package-local project-style reference. Changes authored concurrently for scene design and other Skill packages remain outside this publication. Private local project state, user conversations, credentials and local verification paths are not redistributed. Historical releases and media retain their existing scope.
 
 ## Current source inventory
 
-The source tree contains **18 regular packages and 3 opt-in experimental packages: 21 modules, with 42 generated English / Simplified Chinese guides**. The regular complete-studio distribution includes the 18 packages under `skills/`; the three `experimental/` packages retain their explicit opt-in boundary.
+The source tree contains **19 regular packages and 3 opt-in experimental packages: 22 modules, with 44 generated English / Simplified Chinese guides**. The regular complete-studio distribution includes the 19 packages under `skills/`; the three `experimental/` packages retain their explicit opt-in boundary.
 
-The 21 repository modules comprise 20 filmmaking modules and one web-interface helper. The [complete workflow](docs/WORKFLOW.md) also links the external `xianxia-visual-director`, giving 21 filmmaking responsibilities plus one web helper without adding its source to this repository.
+The 22 repository modules comprise 21 filmmaking modules and one web-interface helper. The [complete workflow](docs/WORKFLOW.md) also links the external `xianxia-visual-director`, giving 22 filmmaking responsibilities plus one web helper without adding its source to this repository.
 
 Included material consists of authored Skill instructions and package-local resources, public documentation and diagrams, build/install/validation tooling, and authorized original demonstration media. Human guides explain each module; runtime authority remains its `SKILL.md` and package-local references. Storyboard, prompt, creative-idea and actual-media requests retain separate delivery stages according to the current task.
 
@@ -55,7 +59,7 @@ The former separate storyboard motion-lab entry remains retired. Its useful came
 
 ## Languages and evidence
 
-Repository entry pages exist in English, Simplified Chinese, Japanese and Korean. All 21 per-module guides are available in English and Simplified Chinese, 42 pages total; Japanese and Korean are overview pages only.
+Repository entry pages exist in English, Simplified Chinese, Japanese and Korean. All 22 per-module guides are available in English and Simplified Chinese, 44 pages total; Japanese and Korean are overview pages only.
 
 Structural validity, successful loading, actual task results, media review and explicit user acceptance are separate evidence. Three different accepted real tasks are needed before the maintainer labels a Skill practice-validated. Packaging, CI, publication and internal review do not manufacture that state. Previously accepted images remain accepted examples without proving stable output across all models or hosts.
 

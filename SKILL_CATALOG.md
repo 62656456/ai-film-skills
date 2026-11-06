@@ -2,7 +2,7 @@
 
 当前分镜源码为 **5.8.6**：以5.7.7为基础，保留摄影、光色、打戏和空间规则，加入FCML离线机制与起中终画框比较。当前版本通过仓库源码安装；v1.4.0归档仍冻结为5.7.2，不能用旧归档代表现行源码。
 
-**本仓库21个源码包：18项常规＋3项实验；42份英文/简体中文指南。** 此页列出每包实际用途、源码版本和直接文件入口，GitHub仓库首页是[README](README.md)。
+**本仓库22个源码包：19项常规＋3项实验；44份英文/简体中文指南。** 此页列出每包实际用途、源码版本和直接文件入口，GitHub仓库首页是[README](README.md)。
 
 [完整工作流](docs/WORKFLOW.md) · [全部双语指南](docs/skills/INDEX.md) · [安装](docs/INSTALLATION.md) · [原创版权与商用](COMMERCIAL_USE.md)
 
@@ -51,6 +51,12 @@ python scripts/install_skill.py <skill-name> --platform codex
 | `romance-design`<br/>爱情 | 距离、视线、接触和双向行动表达关系，不固定粉色、暖光或拥抱 | — | 常规 | [运行正文](skills/romance-design/SKILL.md) · [中文说明](docs/skills/zh-CN/romance-design.md) · [EN](docs/skills/en/romance-design.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/romance-design.zip) |
 | `war-design`<br/>战争电影视觉顾问 | 战争光色与空间、军事服装装备、场景道具、故事战斗、小队画面和实际审查；保留类型参数接口 | 1.0.0 | 常规 | [运行正文](skills/war-design/SKILL.md) · [中文说明](docs/skills/zh-CN/war-design.md) · [EN](docs/skills/en/war-design.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/war-design.zip) |
 | `wuxia-design`<br/>武侠 | 兵器、步法、支撑、衣发反馈与东方空间的可观察参数 | — | 常规 | [运行正文](skills/wuxia-design/SKILL.md) · [中文说明](docs/skills/zh-CN/wuxia-design.md) · [EN](docs/skills/en/wuxia-design.md) · [v1.4.0 ZIP](https://github.com/62656456/ai-film-skills/releases/download/v1.4.0/wuxia-design.zip) |
+
+## Portrait photography / 女性影像美学
+
+| 技能 / 职责 | 逐项用途 | 当前源码版本 | 分发 | 入口 |
+|---|---|---|---|---|
+| `female-image-aesthetics`<br/>女性影像美学导演 | 联合神态、动作成因、服装场景、光色与摄影表现，交完整提示词及已授权图片 | 0.3.0 | 常规；当前源码 | [运行正文](skills/female-image-aesthetics/SKILL.md) · [中文说明](docs/skills/zh-CN/female-image-aesthetics.md) · [EN](docs/skills/en/female-image-aesthetics.md) |
 
 ## Production, product, and research
 
@@ -106,7 +112,7 @@ python scripts/install_skill.py <skill-name> --platform codex
 
 [xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)只提供上游链接，不再分发其源码或ZIP；上游尚无已核实再分发许可。十种视觉路线为八项常规类型、实验硬科幻和外部仙侠。
 
-本仓库21包＝20项影视＋1项网页辅助；另计外部仙侠后，完整工作流是21项影视职责＋1项网页辅助。外部项不计入21包或42份指南。
+本仓库22包＝21项影视＋1项网页辅助；另计外部仙侠后，完整工作流是22项影视职责＋1项网页辅助。外部项不计入22包或44份指南。
 
 ## 实际证据与返修
 

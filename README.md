@@ -6,15 +6,15 @@
 
 为 AI 影视、短片与剧情视频创作者准备的独立 Agent Skills。按当前要解决的问题选一个入口，也可以把已确认的创作决定沿流程交给下一阶段。
 
-**21 个独立源码包 · 18 项常规 + 3 项实验 · 42 份中英说明**
+**22 个独立源码包 · 19 项常规 + 3 项实验 · 44 份中英说明**
 
 [全部技能](#skills) · [完整工作流程](#workflow) · [功能与作品](#features) · [安装与调用](#install) · [证据与边界](#evidence) · [版本更新](#updates)
 
 **简体中文** · [English](#english-overview) · [日本語](docs/i18n/ja/README.md) · [한국어](docs/i18n/ko/README.md)
 
-![Regular packages](https://img.shields.io/badge/regular_packages-18-FF6B35?style=flat-square)
+![Regular packages](https://img.shields.io/badge/regular_packages-19-FF6B35?style=flat-square)
 ![Experimental packages](https://img.shields.io/badge/experimental_packages-3-D6A756?style=flat-square)
-![Bilingual guides](https://img.shields.io/badge/bilingual_guides-42-7ED6A5?style=flat-square)
+![Bilingual guides](https://img.shields.io/badge/bilingual_guides-44-7ED6A5?style=flat-square)
 [![Validate Skills](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/62656456/ai-film-skills/actions/workflows/validate.yml)
 [![skills.sh](https://skills.sh/b/62656456/ai-film-skills)](https://skills.sh/62656456/ai-film-skills)
 [![License](https://img.shields.io/badge/license-Apache--2.0-5B8CFF?style=flat-square)](LICENSE)
@@ -39,9 +39,9 @@
 
 <a id="skills"></a>
 
-## 全部 21 个技能：什么时候用，拿到什么
+## 全部 22 个技能：什么时候用，拿到什么
 
-下列 18 项常规包和 3 项实验包都在仓库中。每一项均可单独选择，链接直接打开对应中文说明；[完整源码与版本目录](SKILL_CATALOG.md)和[英文说明](docs/skills/INDEX.md)另列。
+下列 19 项常规包和 3 项实验包都在仓库中。每一项均可单独选择，链接直接打开对应中文说明；[完整源码与版本目录](SKILL_CATALOG.md)和[英文说明](docs/skills/INDEX.md)另列。
 
 ### 编剧与导演 · 2 项
 
@@ -73,6 +73,12 @@
 | [战争与军事视觉](docs/skills/zh-CN/war-design.md)<br/>`war-design` | 军事人物装备、场景道具、战斗与小队画面 | 军事视觉顾问设计、完整图像提示词、按请求生成的实际图片与画面审查；为已定镜头补充视觉和声音要求 |
 | [武侠](docs/skills/zh-CN/wuxia-design.md)<br/>`wuxia-design` | 兵器、步法、支撑、发力及东方空间 | 兵器路径、接触反应、衣发反馈、材质和动作节奏的视觉设计与提示词参数 |
 
+### 女性影像与摄影美学 · 1 项
+
+| 技能 | 什么时候用 | 直接交付什么 |
+|---|---|---|
+| [女性影像美学导演](docs/skills/zh-CN/female-image-aesthetics.md)<br/>`female-image-aesthetics` | 设计成年女性摄影、主题人像、幻想造型真人化或图片加提示词分享 | 联合神态、动作、造型、场景和光色的摄影设计，完整实际提示词，以及在工具和授权具备时生成的图片；当前源码 v0.3.0 |
+
 ### 制作与短剧控制 · 2 项
 
 | 技能 | 什么时候用 | 直接交付什么 |
@@ -103,7 +109,7 @@
 | [3D 白模预演](docs/skills/zh-CN/whitebox-previs-executor.md)<br/>`whitebox-previs-executor` | 已有镜头，要检查真实 3D 机位、视差、基础走位或已支持的短动作 | 运行条件齐全时交可播放 MP4、编译与验证记录，可选工程；打斗限定已实现代理和已通过动作门的规格 |
 | [古风视觉](docs/skills/zh-CN/guofeng-visual-director.md)<br/>`guofeng-visual-director` | 设计古风人物服饰、建筑器物、生活空间和光色 | 完整视觉方案、图像提示词、受控变体或诊断；区分历史还原、架空和风格化，当前为 0.1.1 实验候选 |
 
-**外部仙侠入口**：[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)用于仙侠世界、天宫巨构与写实摄影。本仓库只链接上游，不分发它的源码或 ZIP。它不计入上述 21 个包和 42 份指南；仓库本身是 **20 项影视相关技能 + 1 项网页辅助技能**。
+**外部仙侠入口**：[xianxia-visual-director](https://github.com/liyue-aigc/xianxia-visual-director)用于仙侠世界、天宫巨构与写实摄影。本仓库只链接上游，不分发它的源码或 ZIP。它不计入上述 22 个包和 44 份指南；仓库本身是 **21 项影视相关技能 + 1 项网页辅助技能**。
 
 <a id="workflow"></a>
 <a id="从输入到成片完整工作流"></a>
@@ -437,7 +443,7 @@ npx --yes skills@latest add 62656456/ai-film-skills --list
 npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-director --agent codex --copy --yes
 ```
 
-[完整安装说明](docs/INSTALLATION.md) · [宿主兼容与实际验证范围](docs/COMPATIBILITY.md) · [42份中英指南](docs/skills/INDEX.md)
+[完整安装说明](docs/INSTALLATION.md) · [宿主兼容与实际验证范围](docs/COMPATIBILITY.md) · [44份中英指南](docs/skills/INDEX.md)
 
 ### 三种常见起点
 
@@ -491,9 +497,9 @@ npx --yes skills@latest add 62656456/ai-film-skills --skill ai-storyboard-direct
 
 ## English overview
 
-Open Film Skills is a repository of **21 independent Agent Skills: 18 regular and 3 experimental**, with 42 English/Simplified Chinese guides. It covers screenplay writing and directing, reusable character/scene/prop assets, eight genre visual routes, cinematography and prompts, actual video production, short-drama control, market research, approved knowledge updates, web interfaces, hard science fiction, guofeng and bounded 3D previs.
+Open Film Skills is a repository of **22 independent Agent Skills: 19 regular and 3 experimental**, with 44 English/Simplified Chinese guides. It covers screenplay writing and directing, reusable character/scene/prop assets, eight genre visual routes, cinematography and prompts, actual video production, short-drama control, market research, approved knowledge updates, web interfaces, hard science fiction, guofeng and bounded 3D previs.
 
-Choose a Skill by the task and deliverable listed above. Existing approved decisions pass to the next stage. Current Storyboard Director source and the new release are **5.8.6**; the frozen **v1.4.0** archive still contains **5.7.2**. Native host support, actual media execution and user acceptance are verified separately. External xianxia is linked upstream and is not part of the 21 redistributed packages.
+Choose a Skill by the task and deliverable listed above. Existing approved decisions pass to the next stage. Current Storyboard Director source and the new release are **5.8.6**; the frozen **v1.4.0** archive still contains **5.7.2**. Native host support, actual media execution and user acceptance are verified separately. External xianxia is linked upstream and is not part of the 22 redistributed packages.
 
 [English guides](docs/skills/INDEX.md) · [Installation](docs/INSTALLATION.md) · [Source catalog](SKILL_CATALOG.md)
 

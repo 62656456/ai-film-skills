@@ -1,0 +1,4 @@
+interface:
+  display_name: "女性影像美学导演"
+  short_description: "以摄影师的光学、虚实和光色表现统筹女性美感，创作多风格影像与X图词"
+  default_prompt: "用 $female-image-aesthetics 像摄影师一样选择光学、虚实与光色表现，创作有美感的女性影像，并交付完整实际提示词。"

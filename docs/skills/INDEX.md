@@ -29,6 +29,7 @@ The English and Simplified Chinese pages are generated from the same reviewed co
 | `hard-sci-fi-visual-director` | Experimental distribution; user-accepted image examples; broad reliability unproven | [Design guide](en/hard-sci-fi-visual-director.md) | [设计说明](zh-CN/hard-sci-fi-visual-director.md) | [`SKILL.md`](../../experimental/hard-sci-fi-visual-director/SKILL.md) |
 | `whitebox-previs-executor` | Experimental; implemented basic previs and individually qualified action gates | [Design guide](en/whitebox-previs-executor.md) | [设计说明](zh-CN/whitebox-previs-executor.md) | [`SKILL.md`](../../experimental/whitebox-previs-executor/SKILL.md) |
 | `guofeng-visual-director` | Candidate 0.1.1; opt-in experiment; image review pending | [Design guide](en/guofeng-visual-director.md) | [设计说明](zh-CN/guofeng-visual-director.md) | [`SKILL.md`](../../experimental/guofeng-visual-director/SKILL.md) |
+| `female-image-aesthetics` | Current v0.3.0 source; published examples are task-specific evidence, not a reliability guarantee. | [Design guide](en/female-image-aesthetics.md) | [设计说明](zh-CN/female-image-aesthetics.md) | [`SKILL.md`](../../skills/female-image-aesthetics/SKILL.md) |
 
 ## Common review logic / 共同审核逻辑
 
